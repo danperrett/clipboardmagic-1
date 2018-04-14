@@ -1,0 +1,199 @@
+CFB613DE86353254E0433CC411ACFD01
+
+CFB613DE86363254E0433CC411ACFD01
+
+CFB613DE86353254E0433CC411ACFD01
+
+D25095020BE37952E0433CC411ACA994
+
+D2509501F32B7952E0433CC411ACA994
+
+INSERT INTO VMS_DEFINITION
+
+2B6797F5ABCE2F7FE053802011AC53A5
+
+INSERT INTO VMS_DYNAMIC
+
+INSERT INTO VMS_DYNAMIC ( SYSTEMCODENUMBER, LASTUPDATED, MSGTXT ) VALUES( 'CFB613DE7F813254E0433CC411ACFD01', TO_DATE('2016-11-01 11:33:22','yyyy-mm-dd hh24:mi:ss'), '      M18 J5 DONCASTER SERVICES      NO FUEL ')
+
+Number of Units in
+
+ProcessVmsData
+
+Number of VMS/Matrix Units in payloa
+
+16245
+
+INSERT INTO TL_DEFINITION
+
+Processing NTIS_Network_Links
+
+Possible invalid LocationByReference
+
+NTIS_HATRIS_Section_HS50002551
+
+200040683
+
+200039605
+
+118039401
+
+118039201
+
+118039401
+
+m_dataTable
+
+log.Info("SqlQuery: " + m_sqlQuery);
+
+InitRecords
+
+New NtisModelNotificationService received
+
+NTISModel-2016-11-01-v5.11.zip
+
+connectionString="Data Source=192.168.50.41/CUTLAS2;User Id=syits_datex01;Password=syits_datex01;" 
+	providerName="System.Data.OracleClient" />
+
+199079901
+
+DataTableFilter
+
+8200018
+
+DatabaseName
+
+DatabasePrePendValue
+
+m_databasePrepend
+
+ strb.Append(m_databasePrepend);
+
+m_databasePrepend + 
+
+adminutmc
+
+Looking at the code, it looks like it goes quite further than perhaps first thought.
+Information from the database gets selected with 'adminutmc' appended to the beginning of the view name, this will pull it from the table.
+The code should use the views only as a result we get everything in the SCN including '[SY]'.
+Also within the code there are cases where the regionalisation is tried to be accounted for by directly looking at the user table, which should never happen. 
+So these thing need to be corrected in this Jira.
+
+GetDBQueryString
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from tl_definition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from tl_definition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+        sql.Append(@"with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = ");
+            sql.Append(m_datasourceTypeID);
+            sql.Append(@" and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)))) ");
+
+            if (scn.Length != 0)
+            {
+                string xscn = EscapeSqlString(scn, BaseManager.EscapeSize.SCN_NAME);
+                sql.Append(@" and a.systemcodenumber= 
+                    case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                        when '[]' then '");
+                sql.Append(xscn);
+                sql.Append(@"else region.globalisescn('");
+                sql.Append(xscn);
+                sql.Append(@"', (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) ) end)  ");
+            }
+
+            sql.Append(@" ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def");
+
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+        sql.Append(@"with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = ");
+            sql.Append(m_datasourceTypeID);
+            sql.Append(@" and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)))) ");
+
+            if (scn.Length != 0)
+            {
+                string xscn = EscapeSqlString(scn, BaseManager.EscapeSize.SCN_NAME);
+                sql.Append(@" and a.systemcodenumber= 
+                    case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                        when '[]' then '");
+                sql.Append(xscn);
+                sql.Append(@"else region.globalisescn('");
+                sql.Append(xscn);
+                sql.Append(@"', (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) ) end)  ");
+            }
+
+            sql.Append(@" ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def");
+
+
+adminutmc.tbltransportlinkdefinition
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+

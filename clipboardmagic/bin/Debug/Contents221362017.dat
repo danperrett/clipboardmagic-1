@@ -1,0 +1,42 @@
+p = Runtime.getRuntime().exec("host -t a " + domain);
+    p.waitFor();
+
+public static void main(String[] args) throws IOException {
+
+    String[] cmd = {"/bin/bash","-c","echo password| sudo -S ls"};
+    Process pb = Runtime.getRuntime().exec(cmd);
+
+    String line;
+    BufferedReader input = new BufferedReader(new InputStreamReader(pb.getInputStream()));
+    while ((line = input.readLine()) != null) {
+        System.out.println(line);
+    }
+    input.close();
+}
+
+ insert into Users (name, password, email)
+
+('ddpp', 'images', 'danperrett07087@yahoo.com')
+
+www.astrachat.com/get
+
+
+www.astrachat.com/get
+
+
+
+NewUserHandler.jar
+nwu_KJkECNpYuFZwmnFt33rwVXG8pZY1Suwx0nqkQXg
+public_html
+rails
+Servlets
+sslcerts
+startupscripts
+workspace
+www.codinggain.com_private_key.key
+x.dat
+xmpp.log
+dperrett@ubuntu-512mb-lon1-01:~$ vi get.2
+<html>
+
+

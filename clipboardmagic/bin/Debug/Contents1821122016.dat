@@ -1,0 +1,165 @@
+#include <string>
+
+c\clipboardmagic\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\bin\Debug
+
+OleAut32.lib
+User32.lib
+Advapi32.lib
+
+omniORB420_rt.lib
+omniDynamic420_rt.lib
+omnithread40_rt.lib
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.2.0\lib\x86_win32
+
+cdbManager = CDBInterfaceManager::createManager("HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Imtech\\ImCity\\Services\\Cutlas20");
+
+cdbManager->logon(username.c_str(), password.c_str());
+
+#include "../AdapterCore/cdbinterfacemanager.h"
+
+#include <stdio.h>      /* puts, printf */
+#include <time.h> 
+#include <vector>
+#include <windows.h>
+
+OleAut32.lib
+User32.lib
+Advapi32.lib
+
+(System::String  ^username, System::String ^password)
+
+System.BadImageFormatException
+
+const __wchar_t __pin * str1 = PtrToStringChars(str);
+
+char* str2 = (char*)(void*)Marshal::StringToHGlobalAnsi(str);
+
+using namespace System::Runtime::InteropServices;
+
+(char*)(void*)Marshal::StringToHGlobalAnsi(_username);
+
+A first chance exception of type 'System.IO.FileNotFoundException' occurred in mscorlib.dll
+
+testcdbwrapper
+
+CdbInterfaceWrapper
+
+ ManagedClass tycoInterface = new ManagedClass();
+            tycoInterface.Initialise();
+            tycoInterface.Logon("10.164.114.163", "admin", "");
+            int num = tycoInterface.InitiliseNumberOfCameras();
+
+using ManagedDll;
+
+
+vshost32.exe
+
+  for (int n = 0; n < num; n++)
+            {
+               // string id = tycoInterface.getId(n);
+                tycoInterface.StartVideo(n);
+            }
+
+
+int cam = tycoInterface.GetCameraNumberFromName("PREDATOR_HD");
+            if (cam > -1)
+            {
+
+        /*        int numberOfPreset = tycoInterface.GetNumberOfPresets(cam);
+                for (int n = 1; n < 9; n++)
+                {
+                    if(!tycoInterface.GotoPreset(cam, n))
+                    {
+                        Console.WriteLine("Could not move camera to defined preset!");
+                    }
+
+              //      Thread.Sleep(13000);
+                }*/
+                //tycoInterface.GotoLocation(cam, 180, 0, 2);
+                //Thread.Sleep(200);
+                tycoInterface.GetSnapshot(cam);
+            }
+
+10.164.114.163
+
+   startTime = DateTime.Now.AddHours(-24);
+                    endTime = DateTime.Now;
+
+    startTime = TimeZone.CurrentTimeZone.ToUniversalTime(startTime);
+            endTime = TimeZone.CurrentTimeZone.ToUniversalTime(endTime);
+
+IVideoInSceneEntity
+
+  m_ThumbnailsSession.GetThumbnails(stratTime, thumbnailsInterval, MAX_AMOUNT_OF_THUMBNAILS_PER_PAGE);   
+
+thumbs
+
+thumbnail
+
+  MemoryStream ms = new MemoryStream();
+                            image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            image.Save(@"C:\Temp\Temp.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
+streamingEvent
+
+MemoryStream ms
+
+streamingEvent
+
+imagelocker
+
+   streamingEvent.Set();
+
+http://www.bbc.co.uk/news/uk-politics-38390150
+
+championed by Brexit Secretary David Davis
+
+10.164.114.163
+
+/usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.SL2321 --address :24800
+
+
+10.164.114.163
+
+IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+
+System.Net.
+
+ipAddress
+
+GetDirectSnapShot
+
+"http://" + ipAddress[cameraNum] + "/snapshot.jpg");
+
+Stream stream = client.OpenRead(imageUrl);
+
+client.DownloadFi
+
+http://192.168.16.102/snapshot.jpg
+
+ to memorystream
+
+FileInfo file = new FileInfo("C:\\temp\\temp2.jpg");
+                FileStream stream = file.OpenWrite();
+                stream.Write(arr, 0, arr.Length);
+                stream.Close()
+
+ tycoInterface.GetDirectSnapShot(cam);
+
+ FileInfo file = new FileInfo("C:\\temp\\temp2.jpg");
+                FileStream stream = file.OpenWrite();
+                stream.Write(arr, 0, arr.Length);
+                stream.Close();
+
+byte[] arr = tycoInterface.GetDirectSnapShot(cam);
+
+                    FileInfo file = new FileInfo("C:\\temp\\temp" + n + ".jpg");
+                    FileStream stream = file.OpenWrite();
+                    stream.Write(arr, 0, arr.Length);
+                    stream.Close();
+
+8276
+

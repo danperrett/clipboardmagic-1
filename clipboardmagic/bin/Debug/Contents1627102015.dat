@@ -1,0 +1,16 @@
+CRCTextBox
+
+{ value & 0xff, value >> 8 };
+
+crc
+
+  System::Void Append(UInt16 val)
+        {
+            messageText += val.ToString("x4");
+            messageText += " ";
+        }
+
+AppendUInt
+
+C:\srif\GETS_Simulator with LAN dw\Release
+

@@ -1,0 +1,195 @@
+ProcedureEnded
+
+HandleBearerActivationFailure
+
+68658
+
+62603
+
+69375
+
+LoadScenario
+
+   List<ElementData> listElementData = scriptStorage.FindAllTheNodesOfType(typeof(PostProcessList), null);
+
+if (listElementData.Count > 0)
+                {
+                    Anite.Sequencer.Utils.SeqMessageBox.ShowError("Error cannot insert more than one Post Process Element into script.");
+                    passedValidation = false;
+                }
+
+Load2G3GScenario
+
+List<ElementData> listElementData = scriptStorage.FindAllTheNodesOfType(typeof(LoadScenario), null);
+                if (listElementData.Count > 0)
+                {
+                    Anite.Sequencer.Utils.SeqMessageBox.ShowError("Error cannont insert mode than one Load Scenario into script.");
+                    passedValidation = false;
+                }
+
+Load2G3GScenario
+
+List<ElementData> listElementData = scriptStorage.FindAllTheNodesOfType(typeof(PostProcessList), null);
+
+
+                listElementData = scriptStorage.FindAllTheNodesOfType(typeof(ActivateCellData), null);
+                if (listElementData.Count > 0)
+                {
+                    listElementData[0].
+                }
+
+IndexOfElement
+
+Anite.Sequencer.Utils.SeqMessageBox.ShowError("Error cannont insert mode than one Load Scenario into script.");
+                    passedValidation = false;
+
+Activate2G3GCell
+
+listElementData = scriptStorage.FindAllTheNodesOfType(typeof(ActivateCellData), null);
+                    if (listElementData.Count > 0)
+                    {
+                        int activeIndex = scriptStorage.IndexOfElement(listElementData[0]);
+                        if (index > activeIndex)
+                        {
+                            Anite.Sequencer.Utils.SeqMessageBox.ShowError("Error cannont insert Load Scenario after Activate Cell.");
+                            passedValidation = false;
+                        }
+                    }
+
+Activate2G3GCell
+
+ActivateLteCell
+
+  List<ElementData> listElementData = scriptStorage.FindAllTheNodesOfType(typeof(Load2G3GScenario), null);
+                if (listElementData.Count > 0)
+                {
+                    Anite.Sequencer.Utils.SeqMessageBox.ShowError("Error cannot insert mode than one Load Scenario into script.");
+                    passedValidation = false;
+                }
+                else
+                {
+                    listElementData = scriptStorage.FindAllTheNodesOfType(typeof(Activate2G3GCell), null);
+                    if (listElementData.Count > 0)
+                    {
+                        int activeIndex = scriptStorage.IndexOfElement(listElementData[0]);
+                        if (index > activeIndex)
+                        {
+                            Anite.Sequencer.Utils.SeqMessageBox.ShowError("Error cannot insert Load Scenario after Activate Cell.");
+                            passedValidation = false;
+                        }
+                    }
+                }
+
+ValidateActivate2G3GCell
+
+  private bool ValidateActivate2G3GCell()
+        {
+            bool validateResult = true;
+
+
+            ResetErrorHighlighting();
+
+            List<ElementData> Load2G3GScenario = scriptStorage.FindAllTheNodesOfType(typeof(Load2G3GScenario), null);
+            List<ElementData> Activate2G3GCell = scriptStorage.FindAllTheNodesOfType(typeof(Activate2G3GCell), null);
+
+            if (Load2G3GScenario.Count == 0)
+            {
+                if (Activate2G3GCell.Count > 0)
+                {
+                    int FirstActivateIndex = scriptStorage.IndexOfElement(Activate2G3GCell[0]);
+                    errorDictionary.Add(FirstActivateIndex, "You need to Load a 2G3G Scenario before Activating a cell");
+                    errorlistViewItems.Add(scriptListView.Items[FirstActivateIndex]);
+                    validateResult = false;
+                }
+            }
+            else
+            {
+                if (Activate2G3GCell.Count > 0)
+                { //search to make sure the Load2G3GScenario element if before this one.
+                    int FirstActivateIndex = scriptStorage.IndexOfElement(Activate2G3GCell[0]);
+                    int FirstLoad2G3GIndex = scriptStorage.IndexOfElement(Load2G3GScenario[0]);
+                    if (FirstLoad2G3GIndex > FirstActivateIndex)
+                    {
+                        errorDictionary.Add(FirstActivateIndex, "Cell Activated before Scenario Loaded");
+                        errorlistViewItems.Add(scriptListView.Items[FirstActivateIndex]);
+                        validateResult = false;
+                    }
+                }
+            }
+
+            if (errorDictionary.Count != 0 || varErrorsDictionary.Count != 0)
+            {
+                HighlightErrors();
+                validateResult = false;
+            }
+            else
+            {
+                validateResult = true;
+            }
+
+            return validateResult;
+        }
+
+LoadLTEScenario
+
+ActivateLteCell
+
+LoadLTEScenario
+
+ValidateActivateLTECell()
+
+ValidateActivate2G3GCell()
+
+   return DialogResult.No;
+
+SASLTEProgrammedPlayEditor
+
+EditorThreadRun
+
+editScriptToolStripMenuItem
+
+onscriptEditorClose
+
+m_RunManager.scriptModeMain.
+
+m_RunManager.scriptModeMain.onscriptEditorClose
+
+new ScriptedModeMain.OnscriptEditorClose(scriptModeMain_onscriptEditorClose);
+
+editScriptToolStripMenuItem.Enabled
+
+BeginInvoke
+
+ScriptedModeMain
+
+scriptModeMain_onscriptEditorClose
+
+if (scriptView != null)
+            {
+                scriptView.disableEnableButtons(true, ScriptLoaded);
+                LoadFileToEngine(ScriptFile);
+            }
+
+56357
+
+        void scriptModeMain_onscriptEditorClose(bool flag)
+
+
+scriptModeMain_onscriptEditorClose
+
+SubscribeToEvents
+
+ m_RunManager.scriptModeMain.onscriptEditorClose += new ScriptedModeMain.OnscriptEditorClose(scriptModeMain_onscriptEditorClose);
+
+SubscribeToEvents
+
+ m_RunManager.scriptModeMain.onscriptEditorClose += new ScriptedModeMain.OnscriptEditorClose(scriptModeMain_onscriptEditorClose);
+
+
+
+ m_RunManager.scriptModeMain.onscriptEditorClose -= new ScriptedModeMain.OnscriptEditorClose(scriptModeMain_onscriptEditorClose);
+
+scriptModeMain_onscriptEditorClose
+
+editScriptToolStripMenuItem
+

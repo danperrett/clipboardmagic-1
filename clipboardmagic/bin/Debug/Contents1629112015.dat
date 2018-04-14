@@ -1,0 +1,111 @@
+<Envelope><Body><Header><Version><MessageFormat>messagev01</MessageFormat><Data>datav01</Data><Software>softwarev1001</Software></Version><Time><Current>2015-11-26T16:38:55Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1151956812</Monotonic></Time><SequenceNumber>10001</SequenceNumber><SourceUnitID>srif1unit1</SourceUnitID><LogicalSourceID>srif1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>H1SMA-1-Unit-A</DestinationUnitID><LogicalDestinationID>H1SMA-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>Keighley</UniqueID><SSIID>O4</SSIID><SPAD><SignalMap>CqMPAAUARXepRAAAAACqVRAAAQAAAPPNJHap/QAAAAAAAAAAAAAAAAAAAAD10g==</SignalMap></SPAD><Indications>CqMLAAEAQ3epRAAAAACqVcABAQAAAABIOk8yggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1rg==</Indications><ControlRequestsResponse>CqMMAAIAR3epRAAAAACqVQAAAQAAAAMzMsqOcg14</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMASHepRAAAAACqVQAAAQAAAHmN0lGEG9bB</ARSSubAreaStatusResponse><StatusByte>CqMOAAQARHepRAAAAACqVQEAAQAAAFIpiD0cpwAKBA==</StatusByte></Interlocking><EmergencyAlarms>CqMQAAYASXepRAAAAACqVRQAAQAAANAm7dFnzAAAAAAAAAAAAAAAAAAAAAAAAAAAf84=</EmergencyAlarms></Body></Body><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>421iyIxdE6vBPQfmAV2tidXp04g=</DigestValue></Reference></SignedInfo><SignatureValue>sFAKXIRs2cNI5LW+2Wry5ev9E9bmJq+zqtVg/u+p+s7Dl03FxGKEQawBmfZUCqtlM7YOwpUKc1Tfx25QKt5aBD3TbG+GlmK7deEL9n8yImVLTs2cx4tbyMnBa4ZsqVDVGCYM7AZyPH9iCM/XSTQaDTLuuK8Dx4lBo4M95Ad9HKs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>
+
+<Envelope><Body><Header><Version><MessageFormat>messagev01</MessageFormat><Data>datav01</Data><Software>softwarev1001</Software></Version><Time><Current>2015-11-26T16:46:47Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1152428550</Monotonic></Time><SequenceNumber>10003</SequenceNumber><SourceUnitID>srif1unit1</SourceUnitID><LogicalSourceID>srif1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>H1SMA-1-Unit-A</DestinationUnitID><LogicalDestinationID>H1SMA-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>Keighley</UniqueID><SSIID>O4</SSIID><SPAD><SignalMap>CqMPAAUA8qmwRAAAAACqVRAAAQAAAGAu5abymAAAAAAAAAAAAAAAAAAAAACN/Q==</SignalMap></SPAD><Indications>CqMLAAEA6amwRAAAAACqVcABAQAAAI29ECK5TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEQw==</Indications><ControlRequestsResponse>CqMMAAIA96mwRAAAAACqVQAAAQAAAD5FQCebKdxx</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMA+6mwRAAAAACqVQAAAQAAACsJiw4w0W2O</ARSSubAreaStatusResponse><StatusByte>CqMOAAQA7qmwRAAAAACqVQEAAQAAAHYLSs1WXQDW7w==</StatusByte></Interlocking><EmergencyAlarms>CqMQAAYAAKqwRAAAAACqVRQAAQAAAA4cHP2w/wAAAAAAAAAAAAAAAAAAAAAAAAAA+Jc=</EmergencyAlarms></Body></Body><Signature><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>COn9EZAXRd8l6M9I7FErDpYB7lw=</DigestValue></Reference></SignedInfo><SignatureValue>GKJYysYvualQ/bKxVza8BL0NC49xzDuj7glM+Tty1i1qh/xP9ZTHT8xjcZlUvLAmcnA2CLd7L6IwVysT+U9nv7XuZnLEe6GSUawDOvzZliVg65GRmb4F9M6EgzSLJfcCmY5CrHuj1w0l5X4XrFGwt0SoSXGADeK0sXgkmt74yZ0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>
+
+<Envelope><Body><Header><Version><MessageFormat>messagev01</MessageFormat><Data>datav01</Data><Software>softwarev1001</Software></Version><Time><Current>2015-11-26T16:46:47Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1152428550</Monotonic></Time><SequenceNumber>10003</SequenceNumber><SourceUnitID>srif1unit1</SourceUnitID><LogicalSourceID>srif1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>H1SMA-1-Unit-A</DestinationUnitID><LogicalDestinationID>H1SMA-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>Keighley</UniqueID><SSIID>O4</SSIID><SPAD><SignalMap>CqMPAAUA8qmwRAAAAACqVRAAAQAAAGAu5abymAAAAAAAAAAAAAAAAAAAAACN/Q==</SignalMap></SPAD><Indications>CqMLAAEA6amwRAAAAACqVcABAQAAAI29ECK5TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEQw==</Indications><ControlRequestsResponse>CqMMAAIA96mwRAAAAACqVQAAAQAAAD5FQCebKdxx</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMA+6mwRAAAAACqVQAAAQAAACsJiw4w0W2O</ARSSubAreaStatusResponse><StatusByte>CqMOAAQA7qmwRAAAAACqVQEAAQAAAHYLSs1WXQDW7w==</StatusByte></Interlocking><EmergencyAlarms>CqMQAAYAAKqwRAAAAACqVRQAAQAAAA4cHP2w/wAAAAAAAAAAAAAAAAAAAAAAAAAA+Jc=</EmergencyAlarms></Body></Body><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>COn9EZAXRd8l6M9I7FErDpYB7lw=</DigestValue></Reference></SignedInfo><SignatureValue>GKJYysYvualQ/bKxVza8BL0NC49xzDuj7glM+Tty1i1qh/xP9ZTHT8xjcZlUvLAmcnA2CLd7L6IwVysT+U9nv7XuZnLEe6GSUawDOvzZliVg65GRmb4F9M6EgzSLJfcCmY5CrHuj1w0l5X4XrFGwt0SoSXGADeK0sXgkmt74yZ0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>
+
+<Envelope><Body><Header><Version><MessageFormat>messagev01</MessageFormat><Data>datav01</Data><Software>softwarev1001</Software></Version><Time><Current>2015-11-26T16:50:44Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1152666109</Monotonic></Time><SequenceNumber>10035</SequenceNumber><SourceUnitID>srif1unit1</SourceUnitID><LogicalSourceID>srif1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>H1SMA-1-Unit-A</DestinationUnitID><LogicalDestinationID>H1SMA-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>Keighley</UniqueID><SSIID>O4</SSIID><SPAD><SignalMap>CqMPAAUA60m0RAAAAACqVRAAAQAAAO95r/VlywAAAAAAAAAAAAAAAAAAAAAhnw==</SignalMap></SPAD><Indications>CqMLAAEA4Em0RAAAAACqVcABAQAAABB2Fu6OJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcfQ==</Indications><ControlRequestsResponse>CqMMAAIA8Em0RAAAAACqVQAAAQAAABk5PyKFb19o</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMA9Em0RAAAAACqVQAAAQAAAJApPYoVdvGf</ARSSubAreaStatusResponse><StatusByte>CqMOAAQA5Um0RAAAAACqVQEAAQAAAKiBvFg+RgBNKg==</StatusByte></Interlocking><EmergencyAlarms>CqMQAAYA+Em0RAAAAACqVRQAAQAAAMdMx6sXzwAAAAAAAAAAAAAAAAAAAAAAAAAAQQo=</EmergencyAlarms></Body></Body><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>gQt3Ym1DgN0dcgQ2mJ7qymY2/dw=</DigestValue></Reference></SignedInfo><SignatureValue>sP7dTVYVRr7ag2ZcPJGIqru600MOfRZ1ytZesYrC2ZlCTFjF1JTiWZXwLbW/bkUu2o0ykhLTaXcH8F07FoW25fvlXmjfIMakTrCPNretWpd/7+YJfXqi73NQkwC4vueiFxR7ZlbXcUFLAJCCbr60lm2T5Sdf+aW4Ejoa1wrSBK8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>
+
+TextReader reader = new StringReader(input);
+            XmlSerializer ser = new XmlSerializer(typeof(Envelope));
+            return (Envelope)ser.Deserialize(reader);
+
+deserialiseMessage
+
+<Envelope><Message><Header><Version><MessageFormat>messagev01</MessageFormat><Data>datav01</Data><Software>softwarev1001</Software></Version><Time><Current>2015-11-26T16:56:27Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1153008875</Monotonic></Time><SequenceNumber>10001</SequenceNumber><SourceUnitID>srif1unit1</SourceUnitID><LogicalSourceID>srif1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>H1SMA-1-Unit-A</DestinationUnitID><LogicalDestinationID>H1SMA-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>Keighley</UniqueID><SSIID>O4</SSIID><SPAD><SignalMap>CqMPAAUA54S5RAAAAACqVRAAAQAAAGCy9lbl3QAAAAAAAAAAAAAAAAAAAABuNw==</SignalMap></SPAD><Indications>CqMLAAEA5YS5RAAAAACqVcABAQAAADW9MaQ83QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASiA==</Indications><ControlRequestsResponse>CqMMAAIA6IS5RAAAAACqVQAAAQAAAIa3InePQimL</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMA6IS5RAAAAACqVQAAAQAAAEEJxJ8ius4R</ARSSubAreaStatusResponse><StatusByte>CqMOAAQA5YS5RAAAAACqVQEAAQAAAKh3mC140QAK7g==</StatusByte></Interlocking><EmergencyAlarms>CqMQAAYA6YS5RAAAAACqVRQAAQAAAMnfWZ1SVAAAAAAAAAAAAAAAAAAAAAAAAAAAaso=</EmergencyAlarms></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>m2dldkv5nT6+J0UdWySuE+8v+zg=</DigestValue></Reference></SignedInfo><SignatureValue>i1RJyOiXhuWahyUDT0HyJipEaxMVbafom5gAilOgi9wwuv+8QpT/5A6TzyFjBCoOvsj2AIEBtbv50GTSnwL4YMn1x1MGf7VdaxcTn8LR/KkhAG8NKb/F1aMnO6ZRdRdb+B47hBw+4bUnQvb3KQaCEm2hak0joErag9DjbtFhMsA=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>
+
+NVFB3 Setting echo counter
+
+E:\SourceCode_1126\exampleWin32Proj\DoProcess_sjs.cpp
+
+E:\SourceCode_1126\exampleWin32Proj\MCS_PS9_sjs.C
+
+E:\SourceCode_1126\exampleWin32Proj\MCS_if_sjs.c
+
+E:\SourceCode_1126\exampleWin32Proj\DecodeICONISIFMessage_sjs.cpp
+
+E:\SourceCode_1126\exampleWin32Proj\DecodeICONIDIFMessage.h
+
+E:\SourceCode_1126\exampleWin32Proj\DecodeICONIDIFMessage_sjs.h
+
+E:\SourceCode_1126\exampleWin32Proj\DecodeNVFB3Data_sjs.cpp
+
+E:\SourceCode_1126\exampleWin32Proj\NVFB3_sjs.c
+
+E:\SourceCode_1126\exampleWin32Proj\MCS_IF_sjs.h
+
+E:\SourceCode_1126\exampleWin32Proj\EncodeNVFB3Data_sjs.cpp
+
+E:\SourceCode_1126\exampleWin32Proj\NVFB3_sjs.h
+
+            if (
+
+
+
+
+
+interlocking->Interlocking[n].SPAD.SPAD[k].SPADData.length
+
+                PopulateXMLTextField(SPAD, doc, "SignalMap", interlocking->Interlocking[n].SPAD.SPAD[k].SignalMap.value);
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+CONNECT_STATUS
+
+void ShowText(DISPLAY_Location_e location, const char *otxt)
+
+ShowText
+
+CONNECT_STATUS
+
+D:\srif\MCSCORUN.INI
+
+timliness
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+ConnectionList[n].connectionInformation.SourceUnitID.value
+
+Link Active
+
+ ShowText(CONNECT_STATUS, debug);
+
+connectionInformation->connectionInformation
+
+ConnectionList[n].connectionInformation.SourceUnitID.value
+
+connectionInformation->
+
+    else
+    {
+        logger("NVFB3 decode failure in incoming control request", ALWAYS);
+    }
+
+
+        logger("NVFB3 decode failed of responsemessage", LOGMASK_NVFB3);
+
+
+        logger("NVFB3 decode failed of ARS subarea message", LOGMASK_NVFB3);
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+element_type
+
+UniqueID
+
+        logger_1("Authenticity Failed on channel: ", element_type, ALWAYS);
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+D:\srif\SRIFInputInterfaceDebug.txt
+
+TxPeriod
+

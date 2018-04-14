@@ -1,0 +1,21 @@
+variablesGridView_CellFormatting
+
+BEGINInlineSubScriptCmdData
+
+element
+
+ElementData
+
+ Type type = element.ElementData.GetType();
+
+scriptElement
+
+ProgrammingData progData = data as ProgrammingData;
+            string tt = progData.ProgrammingCmdData.ToString();
+
+scriptElement[n].ElementData
+
+"Anite.Sequencer.ENDInlineSubScriptCmdData"
+
+subscriptEndIndex
+

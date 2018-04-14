@@ -1,0 +1,292 @@
+C:\Development\SASSandboxes\SAS-48.0-A\Code\NS\SAS.zip
+
+S:\SAS\07 - Test and Development Builds\SAS2g3g
+
+DoLayer3Sequence
+
+C:\Development\SASSandboxes\SAS-47.1\Code\NS\SAS471.zip
+
+m_pCommonFormControls->m_PlaybackInfo.ErrorOccurred
+
+DoRun
+
+J:\Temp\_1028144300_001.pdf
+
+LOCATION UPDATE failed due to a timeout
+
+failed due to a timeout
+
+Unexpected Uplink Message
+
+   if (m_pCommonFormControls->CellManagerThreadRunning)
+    {
+        SendMsg(TID_CELL_MANAGER, TID_MMI_MAIN, WM_ABORT_L3_SEQUENCE, 0, NULL);
+    }
+
+  if (CommandObject->RecordType == SAS_L3P)
+        {
+
+ if (m_pCommonFormControls->CellManagerThreadRunning)
+    {
+
+
+SendMsg(TID_CELL_MANAGER, TID_MMI_MAIN, WM_ABORT_L3_SEQUENCE, 0, NULL);
+
+C:\Development\SASSandboxes\SAS-47.1\Code\NS\SAS471.zip
+
+WM_ABORT_L3_SEQUENCE
+
+FailLayer3Sequence
+
+m_PlaybackInfo.supressL3Failure
+
+m_pCommonFormControls->
+
+ m_pCommonFormControls->m_PlaybackInfo.supressL3Failure
+
+m_pCommonFormControls->m_PlaybackInfo.supressL3Failure
+
+C:\Development\SASSandboxes\SAS-47.1\Code\NS\SAS471.zip
+
+Anite.Sequencer
+
+ProgrammingCmdData
+
+   ProgrammingCmdData copyOfEndLoopCmdData = null;
+
+        public override Color ListViewFontColor
+        {
+            get
+            {
+                return UserPreferences.LoopEndLoopColor;
+            }
+        }
+
+        public override string GetDataTypeString()
+        {
+            string dataTypeName = ELEMENTANDDBTREE.ENDLOOPCondition.ToUpper();
+
+            return dataTypeName;
+        }
+
+        public override ProgrammingCmdData GetUpdatedProgCmdData()
+        {
+            copyOfEndLoopCmdData = new ENDLOOPCmdData();
+            return copyOfEndLoopCmdData;
+        }
+
+        public override bool CanBeAddedToDataBase
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public override DialogResult DisplayProgCmdData()
+        {
+            DialogResult dlgResult = DialogResult.OK;
+            return dlgResult;
+        }
+
+        public override Programming_Cmd_Data GetDataInDriverFormat()
+        {
+            Programming_Cmd_Data commandData = new Programming_Cmd_Data();
+            commandData.programmingData = ELEMENTANDDBTREE.ENDLOOPCondition.ToUpper();
+            commandData.commandType = Command_type_enum.ENDLOOP;
+            return commandData;
+        }
+
+
+        public override ProgrammingCmdData GetProgrammingDataCopy()
+        {
+            ENDLOOPCmdData copyOfEndLoop = new ENDLOOPCmdData();
+            return copyOfEndLoop;
+        }
+
+copyBREAKCmdData
+
+using System.Windows.Forms;
+using Anite.Sequencer.Interfaces;
+using System.Drawing;
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2010. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/10/23 14:27:22BST $
+ * $Revision: 1.1 $
+ * $Source: Code/LTE-InteractiveScript-Editor/Code/SequencerGUI/ElementDataHandlers/ProgrammingCommands/HandleELSECommand.cs $
+ *
+ ****************************************************************************/
+
+BREAK
+
+messageToCountCommandNode.ImageIndex = 2;
+            messageToCountCommandNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(messageToCountCommandNode);
+
+BreakCommandNode
+
+????????
+
+T?kun
+
+Release 29.0.0.0 {0183}
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/10/02 10:58:30BST $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V15_3_to_V15_4.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V15_3_to_V15_4 : ConvertFromBase
+    {
+        public ConvertFrom_V15_3_to_V15_4(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("15.3", "15.4", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                //ADD TO NEW Convert file
+                scriptElements = _ScriptElementList.ToArray();    
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+
+ConvertFrom_V15_4_to_V16_0
+
+(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.4");
+
+74111
+
+IR74111
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS48.0-A\Code\SequencerScriptDefinitions\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS48.0-A\Code\SequencerScriptDefinitions\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS48.0-A\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS48.0-A\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS48.0-A\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_4_to_V16_0.cs
+
+new ConvertFrom_V15_3_to_V15_4(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.4");
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS48.0-A\Code\LTE-InteractiveScript-Editor\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_4_to_V16_0.cs
+
+namespace Anite.Script.Utils
+
+using Anite.Sequencer;
+
+
+new ConvertFrom_V15_3_to_V15_4(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.4");
+
+ string text = SearchTextBox.Text;
+             startPos = 0;
+             if (!string.IsNullOrEmpty(text))
+             {
+                 music = client.GetMusicInfo(text, startPos);
+                 update();
+                 
+             }
+
+this.ResultListView.Items.Clear();
+
+string url = "http://www.danperrett.com/updateMusix?id=" + id + "&mood=" + mood;
+            string music = setUpWeb(url);
+            return true;
+
+m_pCommonFormControls->m_PlaybackInfo.supressL3Failure
+
+CommandObject
+
+m_pCommonFormControls
+
+WM_ABORT_L3_SEQUENCE
+
+        bBadCommand = ReceivedGeneralNotificationFromLTE(message);
+
+
+ReceivedGeneralNotificationFromLTE
+
+WM_RECEIVED_ANYMESSAGE_LTE
+
+OnRemoteAnyMessageReceived
+
+ReceiveAnyLTEMessage
+
+WM_RECEIVED_ANYMESSAGE_LTE
+
+ReceivedGenericNotificationLTEMessage
+
+ SendMsg(TID_CELL_MANAGER, TID_MMI_MAIN, WM_ABORT_L3_SEQUENCE, 0, NULL);
+
+WM_ABORT_L3_SEQUENCE
+
+AbortLayer3SequenceOnAllActiveCells
+
+GetIsNomessageReceived
+
+SetIsNomessageReceived
+
+GetIsNomessageReceived
+
+ AbortLayer3SequenceOnAllActiveCells(NULL);// abort all l3 procedure first 
+
+WM_LAYER3_SEQUENCE_FAILED
+
+ReportToMMI
+
+suppressMMIMessage
+
+:
+    suppressMMIMessage(false)
+
+suppressMMIMessage
+
+ m_pCommonFormControls->m_PlaybackInfo.supressL3Failure = true;
+
+<SAS-MKS-Check-In> : <sas47.1> : <LTE SEQ Sequencer> : IR <73230>
+
+ReasonL3Timeout
+
+FailReason
+
+ReasonL3Timeout
+
+ReasonL3Fail
+
+m_bLayer3SequenceInProgress
+

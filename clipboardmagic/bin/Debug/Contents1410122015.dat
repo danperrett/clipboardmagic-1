@@ -1,0 +1,3 @@
+  free(message.Body.DiagnosticAlarms);
+                free(message.Body.GeneratedAlarms);
+

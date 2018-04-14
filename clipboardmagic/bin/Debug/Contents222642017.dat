@@ -1,0 +1,12 @@
+  Random rand = new Random();
+                int r = rand.Next();
+                UserCredentialsStore store = UserCredentialsStore.GetInstance();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.Password, false, 56);
+
+rand.Next();
+                UserCredentialsStore store = UserCredentialsStore.GetInstance();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.Password, false, 56);
+
+

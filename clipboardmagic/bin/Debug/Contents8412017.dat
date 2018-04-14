@@ -1,0 +1,116 @@
+mediaUri
+
+uriField = "http://www.gwelltimes.com/manage/Upload/Pic/20147914514701.jpg"
+
+"http://www.gwelltimes.com/manage/Upload/Pic/20147914514701.jpg
+
+1.0 (Release)
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+					
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+CAANPRFaultInterfaceAdapter.docx
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter\ClearviewCounterAdapter.docx
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\CA-ANPR-JTMS\CAANPRFaultInterfaceAdapter.docx
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter
+
+0.2	2016-06-17	A Newman	Update after proofreading review	
+
+0.1				
+
+
+
+
+Mersey Gateway Project
+
+PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification
+
+CAANPRFaultInterfaceAdapter.docx
+
+PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter
+
+ClearviewCounterAdapter.docx
+
+Ball, John - UK <John.Ball@dynniq.co.uk>
+
+GetSnapshotUri
+
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Header><VsDebuggerCausalityData xmlns="http://schemas.microsoft.com/vstudio/diagnostics/servicemodelsink">uIDPo1AntcHNWSxKlfJyMoLj8U4AAAAA3YFnL9KfN0K4LPh8ZmUmSRjJhnWTrf1MnVz0s21Bm2cACQAA</VsDebuggerCausalityData></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri></s:Body></s:Envelope>
+
+<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GotoPreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\"><ProfileToken>main</ProfileToken><PresetToken>P00{0}</PresetToken><Speed><PanTilt x=\"1\" y=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /><Zoom x=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /></Speed></GotoPreset></soap:Body></soap:Envelope>"
+
+<GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri>
+
+ string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GotoPreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\"><ProfileToken>main</ProfileToken><PresetToken>P00{0}</PresetToken><Speed><PanTilt x=\"1\" y=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /><Zoom x=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /></Speed></GotoPreset></soap:Body></soap:Envelope>", preset);
+
+<GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri>
+
+MediaClient
+
+ClientCredentials
+
+AuthenticationScheme = AuthenticationSchemes.Basic;
+
+    and
+
+
+[2017-01-03T14:51:42] INFO: switch from "ukdt0348" to "UKLT1086" at 1439,352
+[2017-01-03T14:51:42] INFO: leaving screen
+[2017-01-03T14:52:49] INFO: switch from "UKLT1086" to "ukdt0348" at 4,850
+[2017-01-03T14:52:49] INFO: entering screen
+[2017-01-03T14:52:57] INFO: switch from "ukdt0348" to "UKLT1086" at 1439,656
+[2017-01-03T14:52:57] INFO: leaving screen
+[2017-01-03T14:54:06] INFO: screen "UKLT1086" grabbed clipboard 0 from "ukdt0348"
+[2017-01-03T14:54:06] INFO: screen "UKLT1086" grabbed clipboard 1 from "ukdt0348"
+
+
+string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>main</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>");
+
+using (WebClient client = new WebClient())
+            {
+                client.Headers[HttpRequestHeader.UserAgent] = "Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 4.0.30319.42000)";
+                client.Headers[HttpRequestHeader.ContentType] = "application/soap+xml; charset=utf-8; action=\"http://www.onvif.org/ver20/ptz/wsdl/GotoPreset\"";
+                string result = client.UploadString("http://192.168.16.102/onvif/services", param);
+            }
+
+http://www.onvif.org/ver10/media/wsdl/GetSnapshotUri
+
+  string url = GetSnapShotURL(2);
+
+GetSnapshotUriResponse
+
+cameraNum
+
+http://stackoverflow.com/questions/25798200/java-record-mic-to-byte-array-and-play-sound
+
+: j.saarelainen
+
+/home/daniel.perrett/workspaceneon
+

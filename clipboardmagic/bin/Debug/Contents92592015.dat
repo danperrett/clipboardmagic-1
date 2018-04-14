@@ -1,0 +1,2157 @@
+		result	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-15T09:18:28.341691+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>83441175</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests><ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>YUUqU2hZPfGiJMXQsr3mbqIPzCg=</DigestValue></Reference></SignedInfo><SignatureValue>dt6T4cZQ4/nYBzDMINaVK3H5HhtoNsXj+Fqs7/ufPg1irVV3PklUthMV/33rlXVKQs2pjQhWSL90Q3+LFZjCBCrGANGK3BYkFPvxXLKPHYS6X+7MBPZKXg0kfqZ/9F1vuC2SdX/3Juq7owHHHdy7RMPoIsAZxHKsJS84ywD/22c=</SignatureValue></Signature></Envelope>"	string
+
+
+<Message>
+		<Header>
+			<Version>
+				<MessageFormat>message-v0.1</MessageFormat>
+				<Data>data-v0.1</Data>
+				<Software>software-v1</Software>
+			</Version>
+			<Time>
+				<Current>2015-01-18T14:54:23.423Z</Current>
+				<TimeStatus>SYNCHRONISED</TimeStatus>
+				<Monotonic>1436175143</Monotonic>
+			</Time>
+			<SequenceNumber>746</SequenceNumber>
+			<SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+			<LogicalSourceID>SRIF-1</LogicalSourceID>
+			<SourceStatus>MASTER</SourceStatus>
+			<SourceLinkStatus>UP</SourceLinkStatus>
+			<DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+			<LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+		</Header>
+
+		<Body>
+			<DiagnosticAlarms>
+				<Link>
+					<From>SRIF-1</From>
+					<To>IXL-1</To>
+					<Status>UP</Status>
+				</Link>
+				<Link>
+					<From>SRIF-1</From>
+					<To>IXL-2</To>
+					<Status>DOWN</Status>
+				</Link>
+			</DiagnosticAlarms>
+			<Interlocking>
+				<UniqueID>UK/York/IXL/001</UniqueID>
+				<SSIID>0F</SSIID>
+				<SPAD>
+					<SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap>
+				</SPAD>
+				<Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications>
+				<StatusByte>Ng==</StatusByte>
+			</Interlocking>
+			<EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms>
+		</Body>
+
+	</Message>
+
+Signature
+
+X509Certificate2
+
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+
+xmlDoc.PreserveWhitespace = false;
+                    xmlDoc.Load("test.xml");
+
+// Sign the XML document. 
+                    SignXml(xmlDoc, rsaKey);
+
+ // Save the document.
+                    xmlDoc.Save("test.xml");
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqc
+DBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzR
+QrtxClXnCUEvlbPbFL0=
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+SequenceNumberTextBox
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+time_t timer;
+    char buffer[26];
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(buffer, 26, "%Y:%m:%d %H:%M:%S", tm_info);
+    puts(buffer);
+
+time
+
+void GetFormatedTime(char* time)
+{
+    time_t timer;
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(time, 26, "%Y:%m:%d %H:%M:%S", tm_info);
+    puts(time);
+}
+
+
+void GetFormatedTime(char* time)
+
+GetFormatedTime
+
+DWORD DoProcessGeneratedAlarms(GeneratedAlarms_t* generatedAlarms)
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD DoProcessInterLockingData(Interlocking_limited_t* interlockingData)
+
+void PopulateSpad(SPAD_t *spad)
+
+DWORD DoProcessEmergencyAlarms(NVFB3_t* EmergencyAlarms)
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD DoProcessTD(TD_t *tddata)
+
+void PopulateStringField(String_t *field, const char* text) 
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD PopulateHeaderInformation(Header_t *header, char *DestinationUnitID, char *LogicalDestinationID)
+
+DWORD PopulateTimeInformation(Time_t *time)
+
+DWORD PopulateVersionInformation(Version_t *version)
+
+void GetFormatedTime(char* buffer)
+
+SequenceNumberTextBox
+
+SRIFTimeTextBox
+
+<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015:09:15 13:22:16</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>98069482</MonoTonic>\n            </Time>\n            <SequenceNumber>478</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <Interlocking>\n                    <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                    <SSIID>0F</SSIID>\n                    <SPAD>\n                        <SignalMap>\n                            <SignalMap>MTIzNDU2Nzg5MA==</SignalMap>\n                        </SignalMap>\n                        <SPADData>\n                            <SignalID>16</SignalID>\n                            <Signal>S123</Signal>\n                            <Track>T123</Track>\n                        </SPADData>\n                    </SPAD>\n                </Interlocking>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n
+
+NVFB3
+
+COM_HEADER_T
+
+BOOLEAN_T
+
+Slib_MemCopy
+
+KER_MBX_T
+
+KER_SEM_T
+
+COM_ID
+
+#include "stdafx.h"
+
+ker_malloc
+
+CNF_RET
+
+CNF_WRONG_VALUE
+
+CNF_OK
+
+CNF_MALLOC_FAILED
+
+ker_free
+
+CNF_LIST_EL
+
+CNF_UNKNOWN_SEC
+
+CNF_UNKNOWN_KEY
+
+CNF_TOO_FEW_KEYS
+
+CNF_TOO_MANY_KEYS
+
+CNF_TOO_MANY_SEC
+
+CNF_NO_INIT
+
+appl_domain
+
+CNF_RET
+
+CNF_RET cnf_init(const char* file, UINT16 num)
+{
+
+}
+
+Smartlock 400 Generic Product Interface Description NVFB/3 Protocol, 
+
+cnfInst
+
+cnf_register_decoding(cnfInst
+
+msg_type
+
+crc  crcTable[256];
+
+void
+crcInit(void)
+{
+    crc  remainder;
+
+
+    /*
+     * Compute the remainder of each possible dividend.
+     */
+    for (int dividend = 0; dividend < 256; ++dividend)
+    {
+        /*
+         * Start with the dividend followed by zeros.
+         */
+        remainder = dividend << (WIDTH - 8);
+
+        /*
+         * Perform modulo-2 division, a bit at a time.
+         */
+        for (uint8_t bit = 8; bit > 0; --bit)
+        {
+            /*
+             * Try to divide the current data bit.
+             */			
+            if (remainder & TOPBIT)
+            {
+                remainder = (remainder << 1) ^ POLYNOMIAL;
+            }
+            else
+            {
+                remainder = (remainder << 1);
+            }
+        }
+
+        /*
+         * Store the result into the table.
+         */
+        crcTable[dividend] = remainder;
+    }
+
+}   /* crcInit() */
+
+#define WIDTH  (8 * sizeof(crc))
+#define TOPBIT (1 << (WIDTH - 1))
+
+
+typedef uint8_t crc;
+
+#define POLYNOMIAL 0xD8  /* 11011 followed by 0's */
+
+void crcInit(void)
+
+#include "EncodeDecodeCRC.h"
+
+/******************************************************************************
+*
+* 
+******************************************************************************/
+
+void writeToLoggerFile(const char *text);
+
+hWnd
+
+::SendMessageA(hWnd, WM_SETTEXT, 0, (LPARAM)buffer);
+
+WM_LOGGER
+
+writeToLoggerFile
+
+crcInit
+
+crc
+crcFast(uint8_t const message[], int nBytes)
+{
+    uint8_t data;
+    crc remainder = 0;
+
+
+    /*
+     * Divide the message by the polynomial, a byte at a time.
+     */
+    for (int byte = 0; byte < nBytes; ++byte)
+    {
+        data = message[byte] ^ (remainder >> (WIDTH - 8));
+        remainder = crcTable[data] ^ (remainder << 8);
+    }
+
+    /*
+     * The final remainder is the CRC.
+     */
+    return (remainder);
+
+}   /* crcFast() */
+
+#define POLY 0x8408
+/*
+//                                      16   12   5
+// this is the CCITT CRC 16 polynomial X  + X  + X  + 1.
+// This works out to be 0x1021, but the way the algorithm works
+// lets us use 0x8408 (the reverse of the bit pattern).  The high
+// bit is always assumed to be set, thus we only use 16 bits to
+// represent the 17 bit value.
+*/
+
+unsigned short crc16(char *data_p, unsigned short length)
+{
+      unsigned char i;
+      unsigned int data;
+      unsigned int crc = 0xffff;
+
+      if (length == 0)
+            return (~crc);
+
+      do
+      {
+            for (i=0, data=(unsigned int)0xff & *data_p++;
+                 i < 8; 
+                 i++, data >>= 1)
+            {
+                  if ((crc & 0x0001) ^ (data & 0x0001))
+                        crc = (crc >> 1) ^ POLY;
+                  else  crc >>= 1;
+            }
+      } while (--length);
+
+      crc = ~crc;
+      data = crc;
+      crc = (crc << 8) | (data >> 8 & 0xff);
+
+      return (crc);
+}
+
+typedef uint8_t crc;
+
+typedef unsigned char uint8_t;
+
+crcFast
+
+crc crcFast(uint8_t const message[], int nBytes)
+
+crcFast
+
+Impostare a 1, da Multisim, tutte le variabili che CLC manda a CLCL e viceversa e verificare che in assenza della comunicazione fra i due host (= staccando la 
+
+NVFB_header
+
+
+
+
+ReceivedTimeCounter
+
+BitConverter.GetBytes(ApplicationDomain)
+
+MessageType
+
+BitConverter.GetBytes(
+
+createFakeNVFB3Heade
+
+            mess.Body.Interlocking[0].ControlRequests = createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890"));
+
+
+createFakeNVFB3Heade(
+
+ASCIIEncoding.ASCII.GetBytes(
+
+System.Convert.ToBase64String(
+
+Convert.ToBase64String((createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890")))
+
+AgEKAAsAAAAAAAAAAAABABQAAQAAADEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=
+
+createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("1234567890123456"))
+
+NVFB_header
+
+CheckThe16BitCRC
+
+'timesheets@g2recruitment.com'
+
+ExtractTheNVFB3Header
+
+
+WORD CheckThe16BitCRC(const char* data, const char *r)
+
+void ExtractTheData(const char* input, char *output, int length)
+
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header)
+
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header)
+
+WORD HandleControlRequestData(const char *)
+
+HandleControlRequestData
+
+interlocking_t->ControlRequest.value
+
+DecodeNVFB3
+
+17503
+
+CRC16_POLYNOM
+
+#define CRC16_POLYNOM                   (UINT16)0x8810 
+
+crc16
+
+unsigned short crc16(char *data_p, unsigned short length)
+
+CheckThe16BitCRC
+
+CRC16_POLYNOM
+
+crcFast
+
+#define CRC16_POLYNOM                   (UINT16)0x8810 
+
+CRC16_POLYNOM
+
+POLYNOMIAL
+
+crc
+crcSlow(uint8_t const message[], int nBytes)
+{
+    crc  remainder = 0;	
+
+
+    /*
+     * Perform modulo-2 division, a byte at a time.
+     */
+    for (int byte = 0; byte < nBytes; ++byte)
+    {
+        /*
+         * Bring the next byte into the remainder.
+         */
+        remainder ^= (message[byte] << (WIDTH - 8));
+
+        /*
+         * Perform modulo-2 division, a bit at a time.
+         */
+        for (uint8_t bit = 8; bit > 0; --bit)
+        {
+            /*
+             * Try to divide the current data bit.
+             */
+            if (remainder & TOPBIT)
+            {
+                remainder = (remainder << 1) ^ POLYNOMIAL;
+            }
+            else
+            {
+                remainder = (remainder << 1);
+            }
+        }
+    }
+
+    /*
+     * The final remainder is the CRC result.
+     */
+    return (remainder);
+
+}   /* crcSlow() */
+
+crcSlow
+
+((const uint8_t *)data, length);
+
+crc crcFast(uint8_t const message[], int nBytes);
+
+ExtractTheData
+
+0x9429e296
+
+udp.stream eq 27
+
+af 27 14 f6 03 af 
+
+0a a3 02 00 01
+
+8810
+
+312323334353637383930
+
+#define poly 0x1021
+
+/* On entry, addr=>start of data
+             num = length of data
+             crc = incoming CRC     */
+int crc16(char *addr, int num, int crc)
+{
+int i;
+
+for (; num>0; num--)               /* Step through bytes in memory */
+  {
+  crc = crc ^ (*addr++ << 8);      /* Fetch byte from memory, XOR into CRC top byte*/
+  for (i=0; i<8; i++)              /* Prepare to rotate 8 bits */
+    {
+    crc = crc << 1;                /* rotate */
+    if (crc & 0x10000)             /* bit 15 was set (now bit 16)... */
+      crc = (crc ^ poly) & 0xFFFF; /* XOR with XMODEM polynomic */
+                                   /* and ensure CRC remains 16-bit value */
+    }                              /* Loop for 8 bits */
+  }                                /* Loop until num=0 */
+  return(crc);                     /* Return updated CRC */
+}
+
+int _crc16(char *addr, int num, int crc)
+
+int _crc16(char *addr, int num)
+
+DECLARE FUNCTION Add_CRC16(BYVAL char AS BYTE,BYVAL crc AS WORD,BYVAL Tcrc AS WORD PTR) AS WORD
+FUNCTION Add_CRC16( BYVAL char AS BYTE, BYVAL crc AS WORD, BYVAL Tcrc AS WORD PTR ) AS WORD
+    #REGISTER NONE
+    LOCAL crcout AS WORD
+    !xor edx,edx            ;clear 32 bit registers
+    !xor eax,eax
+    !xor ebx,ebx
+    !mov dx,crc             ;crc = dx
+    !mov al,char            ;move char into al
+    !xor dx,ax              ; crc xor char
+    !and dx,&h000F          ; crc and &h000F?? = first crctable array element offset
+    !mov bx,dx              ; keep in bx
+    !mov dx,crc             ;put crc back in dx
+    !xor dx,ax              ;crc xor char
+    !and dx,&h00F0          ;(crc xor char) and &h00F0
+    !shr dx,4               ;((crc xor char) and &h00F0) \ 16 )
+    !add dx,16              ;((crc xor char) and &h00F0) \ 16 ) + 16 = second crctable array element offset
+    !mov eax,Tcrc           ;load eax with CRC table address
+    !mov ax,[eax + ebx * 2] ;load ax with CRC table array element @ first crctable array element offset
+    !push ax                ;save on stack
+    !mov eax,Tcrc           ;set table index
+    !mov bx,[eax + edx * 2] ;load bx with CRC table array element @ second crctable array element offset
+    !pop ax                 ; restore ax with CRC table array element @ first crctable array element offset
+    !xor ax,bx              ;xor CRC table array values
+    !mov dx,crc             ; put crc in dx
+    !shr dx,8               ; CRC \ 256
+    !and dx,&h00FF          ; CRC = (CRC \ 256) AND &h00FF
+    !xor ax,dx              ; xor'ed CRC table array values xor CRC
+    !mov crcout,ax          ;put CRC in crcout variable
+    FUNCTION = crcout
+END FUNCTION
+
+Add_CRC16
+
+WORD Add_CRC16( BYTE c, WORD crc , WORD *Tcrc )
+
+0x8408
+
+(char *)data
+
+crctable
+
+GetStringCRC16
+
+FUNCTION GetStringCRC16(BYVAL tBuff AS DWORD,BYVAL lenBuff AS WORD,BYVAL Tcrc AS DWORD) AS WORD
+    #REGISTER NONE
+    LOCAL crc AS WORD
+    !mov esi,tBuff          ;ptr to buffer
+    !mov cx,lenBuff         ;length of buffer
+    !cld                    ;set direction Move forward through the buffer
+    !xor edx,edx            ;clear 32 bit registers
+    !xor eax,eax
+    !xor ebx,ebx
+    !mov crc,dx             ;crc = dx
+C1:
+    !mov al,[esi]           ;move char indexed by esi into al
+    !inc esi                ;increment char position
+    !xor dx,ax              ; crc xor char
+    !and dx,&h000F          ; crc and &h000F?? = first crctable array element offset
+    !mov bx,dx              ; keep in bx
+    !mov dx,crc             ;put crc back in dx
+    !xor dx,ax              ;crc xor char
+    !and dx,&h00F0          ;(crc xor char) and &h00F0
+    !shr dx,4               ;((crc xor char) and &h00F0) \ 16 )
+    !add dx,16              ;((crc xor char) and &h00F0) \ 16 ) + 16 = second crctable array element offset
+    !mov eax,Tcrc           ;load eax with CRC table address
+    !mov ax,[eax + ebx * 2] ;load ax with CRC table array element @ first crctable array element offset
+    !push ax                ;save on stack
+    !mov eax,Tcrc           ;set table index
+    !mov bx,[eax + edx * 2] ;load bx with CRC table array element @ second crctable array element offset
+    !pop ax                 ; restore ax with CRC table array element @ first crctable array element offset
+    !xor ax,bx              ;xor CRC table array values
+    !mov dx,crc             ; put crc in dx
+    !shr dx,8               ; CRC \ 256
+    !and dx,&h00FF          ; CRC = (CRC \ 256) AND &h00FF
+    !xor ax,dx              ; xor'ed CRC table array values xor CRC
+    !mov crc,ax             ;put CRC in crc variable
+    !mov dx,crc             ;put CRC in dx for next iteration
+    !loop C1                ; loop if cx not zero to end of string
+    FUNCTION = crc
+END FUNCTION
+
+ crcTable( 0 ) = &h0000
+    crcTable( 1 ) = &hC0C1
+    crcTable( 2 ) = &hC181
+    crcTable( 3 ) = &h0140
+    crcTable( 4 ) = &hC301
+    crcTable( 5 ) = &h03C0
+    crcTable( 6 ) = &h0280
+    crcTable( 7 ) = &hC241
+    crcTable( 8 ) = &hC601
+    crcTable( 9 ) = &h06C0
+    crcTable( 10 ) = &h0780
+    crcTable( 11 ) = &hC741
+    crcTable( 12 ) = &h0500
+    crcTable( 13 ) = &hC5C1
+    crcTable( 14 ) = &hC481
+    crcTable( 15 ) = &h0440
+    crcTable( 16 ) = &h0000
+    crcTable( 17 ) = &hCC01
+    crcTable( 18 ) = &hD801
+    crcTable( 19 ) = &h1400
+    crcTable( 20 ) = &hF001
+    crcTable( 21 ) = &h3C00
+    crcTable( 22 ) = &h2800
+    crcTable( 23 ) = &hE401
+    crcTable( 24 ) = &hA001
+    crcTable( 25 ) = &h6C00
+    crcTable( 26 ) = &h7800
+    crcTable( 27 ) = &hB401
+    crcTable( 28 ) = &h5000
+    crcTable( 29 ) = &h9C01
+    crcTable( 30 ) = &h8801
+    crcTable( 31 ) = &h4400
+    crcTable( 32 ) = &h0000
+
+_crcTable
+
+GetStringCRC16
+
+WORD TestCRCCode(DWORD buff, WORD lenBuff)
+{
+
+}
+
+GetStringCRC16
+
+_crcTable
+
+lenBuff
+
+Tcrc
+
+TestCRCCode
+
+WORD TestCRCCode(DWORD *buff, WORD lenBuff)
+
+TestCRCCode
+
+FUNCTION GetArrayCRC16(BYVAL tBuff AS BYTE PTR,BYVAL lenBuff AS WORD,BYVAL Tcrc AS WORD PTR) AS WORD
+    #REGISTER NONE
+    LOCAL crc AS WORD
+    !mov esi,tBuff          ;ptr to buffer
+    !mov cx,lenBuff         ;length of buffer
+    !cld                    ;set direction Move forward through the buffer
+    !xor edx,edx            ;clear 32 bit registers
+    !xor eax,eax
+    !xor ebx,ebx
+    !mov crc,dx             ;crc = dx
+C1:
+    !mov al,[esi]           ;move char indexed by esi into al
+    !inc esi                ;increment char position
+    !xor dx,ax              ; crc xor char
+    !and dx,&h000F          ; crc and &h000F?? = first crctable array element offset
+    !mov bx,dx              ; keep in bx
+    !mov dx,crc             ;put crc back in dx
+    !xor dx,ax              ;crc xor char
+    !and dx,&h00F0          ;(crc xor char) and &h00F0
+    !shr dx,4               ;((crc xor char) and &h00F0) \ 16 )
+    !add dx,16              ;((crc xor char) and &h00F0) \ 16 ) + 16 = second crctable array element offset
+    !mov eax,Tcrc           ;load eax with CRC table address
+    !mov ax,[eax + ebx * 2] ;load ax with CRC table array element @ first crctable array element offset
+    !push ax                ;save on stack
+    !mov eax,Tcrc           ;set table index
+    !mov bx,[eax + edx * 2] ;load bx with CRC table array element @ second crctable array element offset
+    !pop ax                 ; restore ax with CRC table array element @ first crctable array element offset
+    !xor ax,bx              ;xor CRC table array values
+    !mov dx,crc             ; put crc in dx
+    !shr dx,8               ; CRC \ 256
+    !and dx,&h00FF          ; CRC = (CRC \ 256) AND &h00FF
+    !xor ax,dx              ; xor'ed CRC table array values xor CRC
+    !mov crc,ax             ;put CRC in crc variable
+    !mov dx,crc             ;put CRC in dx for next iteration
+    !loop C1                ; loop if cx not zero to end of string
+    FUNCTION = crc
+END FUNCTION
+
+
+GetArrayCRC16
+
+CheckTheHeaderCRCs
+
+CheckTheHeaderCRCs(
+
+WORD CheckTheHeaderCRCs(NVFB_header* header, const char* data)
+{
+    return 1;
+}
+
+
+
+CheckTheAuthenticity
+
+DecodeNVFB3Data
+
+
+WORD HandleControlRequestData(const char *input)
+{
+    WORD ret = 0;
+    NVFB_header header;
+    char data[448];
+    ZeroMemory(data, 448);
+    DecodeNVFB3(input, data, &header);  //also checks integrity
+    if(CheckTheAuthenticity(header, data) == 0)  //check Authenticity
+    {
+
+    }
+    return ret;
+}
+
+
+
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header)
+{
+     WORD ret = 1;
+     ExtractTheNVFB3Header(input, header);
+     if(ExtractTheData(input, (BYTE *)data, header->AppDataSize) == 0)
+     {
+         return 0;
+     }
+
+     if(CheckTheHeaderCRCs(header, data) == 0)
+     {
+         return 0;
+     }
+     
+     return ret;
+}
+
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header)
+{
+    header->ApplicationDomain = input[0];
+    header->MsgType = input[1];
+    header->SourceAddress = (WORD)input[2];
+    header->DestinationAddress = (WORD)input[4];
+    header->TimeCounter = (DWORD)input[6];
+    header->EchoCounter = (DWORD)input[10];
+    header->EchoValid =  input[14];
+    header->AppDataSize = input[16];
+    header->DataVer = input[18];
+
+}
+
+WORD ExtractTheData(const char* input, BYTE *output, int length)
+{
+    unsigned char CRC[2];
+    int n = 0;
+    int k = 0;
+    for(k = 22, n = 0; n < length; n++, k++)
+    {
+        output[n] = input[k];
+    }
+
+    //get the CRC
+    k = 0;
+    for(n = (22 + length); n < (22 + length + 2); n++, k++)
+    {
+        CRC[k] = input[n];
+    }
+    return CheckThe16BitCRC(output, (const char *)CRC, length);
+
+}
+
+
+WORD CheckTheAuthenticity(NVFB_header* header, const char* data)
+{
+    return 1;
+}
+
+WORD CheckTheHeaderCRCs(NVFB_header* header, const char* data)
+{
+    return 1;
+}
+
+
+
+WORD CheckThe16BitCRC(BYTE* data, const char *r, short length)
+{
+    WORD ret = crc16((const char *)data, length);
+    WORD ret1 = crcSlow((const uint8_t *)data, length);
+    WORD ret2 = crcFast((const uint8_t *)data, length);
+    WORD ret3 = _crc16((char *)data, length);
+    WORD ret4 = TestCRCCode(data, length);
+    return 1;
+}
+
+
+WORD CheckThe16BitCRC(BYTE* data, const char *r, short length);
+void ExtractTheData(const char* input, BYTE *output, int length);
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header);
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header);
+WORD HandleControlRequestData(const char *);
+
+
+#include "EncodeDecodeCRC.h"
+
+#include "decodeICONIDIFMessage.h"
+
+WORD CheckTheAuthenticity(NVFB_header* header, const char* data)
+
+WORD CheckTheHeaderCRCs(NVFB_header* header, const char* data)
+
+HandleControlRequestData
+
+WORD CheckSequenceCorrect(NVFB_header* header)
+
+CheckSequenceCorrect
+
+WORD CheckSequenceCorrect(NVFB_header* header)
+
+WORD CheckTimlinessAlgorithm(NVFB_header* header)
+
+CheckTimlinessAlgorithm
+
+/******************************************************************************
+
+******************************************************************************/
+
+/******************************************************************************
+
+******************************************************************************/
+
+/******************************************************************************
+Checks the Sequence of each message 
+RecievedTimeCounter > LastReceivedTimeCounter
+******************************************************************************/
+
+/******************************************************************************
+
+******************************************************************************/
+
+/******************************************************************************
+
+/******************************************************************************
+******************************************************************************/
+
+LastReceivedTimeCounter
+
+header->TimeCounter
+
+FRESH_TOLERANCE
+
+WORD GetArrayCRC16(DWORD tBuff , WORD lenBuff, DWORD Tcrc)
+
+CreateCRCTable
+
+LastReceivedTimeCounter
+
+APPLICATION_DOMAIN
+
+MSG_TYPE
+
+SOURCE_ADDRESS
+
+DESTINATION_ADDRESS
+
+TIME_COUNTER
+
+ECHO_COUNTER
+
+ECHO_VALID
+
+APP_DATA_SIZE
+
+APP_DATA_VER
+
+FRESH_TOLERANCE
+
+FirstMessageReceived
+
+(NVFB_header* header)
+
+/******************************************************************************
+Check Timeliness of each  message received
+The Timeliness Check algorithm must verify the ECHO VALID and ECHO Counter fields
+if the ECHO VALID field is FALSE the packet received must be discarded. Other wise
+ECHO COUNTER field of the message received must be compared with the time of the
+receiver if the value is bigger than the FreshTolerance threshold the packet must be discarded
+******************************************************************************/
+
+FirstMessageReceived
+
+Configuration Data
+
+TimeCounterValidTolerences
+
+EchoCounterValidTolerences
+
+TimeCounterValidFlag
+
+LastTimeCounterValid
+
+EchoCounterValidFlag = 0;
+static WORD EchoCounterFlag
+
+EchoCounterValidFlag
+
+EchoCounterFlag
+
+TimeCounterValidFlag
+
+LastTimeCounterValid
+
+EchoCounterValidFlag
+
+EchoCounterFlag
+
+TolerenceCounter = time;
+
+removed at the expense of the Secretary of State
+
+https://www.bic-immigration.com/immigration-news/item/256-what-will-happen-if-i-overstay-in-the-uk/256-what-will-happen-if-i-overstay-in-the-uk
+
+removed at the expense of the Secretary of State
+
+https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/270043/chapter62.pdf
+
+http://www.choices-avr.org.uk/choices
+
+CheckCounterTolerence
+
+WORD CheckCounterTolerence(NVFB_header* header)
+
+GU14 8QB
+
+//location defines
+#define    APPLICATION_DOMAIN  0
+#define    MSG_TYPE            1
+#define    SOURCE_ADDRESS      2
+#define    DESTINATION_ADDRESS 4
+#define    TIME_COUNTER        6
+#define    ECHO_COUNTER        10
+#define    ECHO_VALID          14
+#define    APP_DATA_SIZE       16
+#define    APP_DATA_VER        18
+#define    SAFETY_RELATED      22
+
+#define MSG_SRM_NO_APP_DATA        0xA0
+#define MSG_SRM_BOOL_VAR_ENC       0xA1
+#define MSG_SRM_MULTI_VAR_ENC      0xA2
+#define MSG_SRM_8BIT_ENC           0xA3
+#define MSG_SRM_STRING_ENC         0xA4
+
+
+MSG_NSRM_8BIT_ENC
+
+unsigned char* EncodeToNVF3Data(WORD MsgType, unsigned char* MsgData)
+
+WORD EncodeToNVF3Data(WORD MsgType, unsigned char* MsgData, unsigned char *output)
+
+GetLastReceivedTimeCounter
+
+MSG_SRM_8BIT_ENC
+
+//location defines
+#define    APPLICATION_DOMAIN  0
+#define    MSG_TYPE            1
+#define    SOURCE_ADDRESS      2
+#define    DESTINATION_ADDRESS 4
+#define    TIME_COUNTER        6
+#define    ECHO_COUNTER        10
+#define    ECHO_VALID          14
+#define    APP_DATA_SIZE       16
+#define    APP_DATA_VER        18
+#define    SAFETY_RELATED      22
+
+APPLICATION_DOMAIN
+
+MSG_TYPE
+
+MSG_SRM_8BIT_ENC
+
+SOURCE_ADDRESS
+
+DESTINATION_ADDRESS
+
+TIME_COUNTER
+
+ECHO_COUNTER
+
+APP_DATA_SIZE
+
+SAFETY_RELATED
+
+(DWORD tBuff , WORD lenBuff, DWORD Tcrc)
+
+af 27 14 f6 
+
+APPLICATION_DOMAIN
+
+SAFETY_RELATED
+
+GetArray32CRC
+
+DWORD GetArray32CRC(DWORD tBuff , WORD lenBuff, DWORD Tcrc)
+
+WORD _crcTable[33];
+
+GetArrayCRC16
+
+((DWORD)temp, (22 + length), (DWORD)_crcTable);
+
+WORD GetArrayCRC16(DWORD tBuff , WORD lenBuff, DWORD Tcrc)
+
+SAFETY_RELATED
+
+output[SAFETY_RELATED]
+
+GetArrayCRC16
+
+EncodeToNVF3Data
+
+MSG_SRM_8BIT_ENC
+
+DWORD length,
+
+WORD EncodeToNVF3Data(WORD MsgType, unsigned char* MsgData, DWORD length, unsigned char *output)
+
+System.Text.Encoding.Default.GetString(buffer)
+
+ &interlockingData->Interlocking[0].Indications
+
+		test	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-21T16:30:34.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>627760690</MonoTonic>\n            </Time>\n            <SequenceNumber>58</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <Interlocking>\n                    <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                    <SSIID>0F</SSIID>\n                    <SPAD>\n                        <SignalMap>\n                            <SignalMap>CqMBAAIAMgAAAHcAAACqAAoAAQAAAPYAAABBADEyMzQ1Njc4OTAwAA==</SignalMap>\n                        </SignalMap>\n                        <SPADData>\n                            <SignalID>16</SignalID>\n                            <Signal>S123</Signal>\n                            <Track>T123</Track>\n                        </SPADData>\n                    </SPAD>\n                    <Indications>CqMBAAIAMgAAAHcAAACqAAoAAQAAAPYAAABBADEyMzQ1Njc4OTAwAA==</Indications>\n                </Interlocking>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+static void AddInterlockingToXML(Interlocking_limited_t* interlocking, XMLElement* Interlocking, XMLDocument* doc)
+
+SPAD
+
+void del(char str[], char ch) {
+   int i, j = 0;
+   int size;
+   char ch1;
+   char str1[10];
+ 
+   size = strlen(str);
+ 
+   for (i = 0; i < size; i++) {
+      if (str[i] != ch) {
+         ch1 = str[i];
+         str1[j] = ch1;
+         j++;
+      }
+   }
+   str1[j] = '\0';
+ 
+   printf("\ncorrected string is : %s", str1);
+}
+
+del
+
++		outBuffer	0x046ed834 "<Envelope>
+    <!--comment-->
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-09-21T16:53:17.000Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+                <MonoTonic>629123842</MonoTonic>
+            </Time>
+            <SequenceNumber>0</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>MASTER</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body>
+            <DiagnosticAlarms>
+                <Link>
+                    <From>SRIF-1</From>
+                    <To>IXL-1</To>
+                    <Status>UP</Status>
+                </Link>
+            </DiagnosticAlarms>
+            <GeneratedAlarms>
+                <OSTO>
+                    <Track1>T123</Track1>
+                    <Track2>T124</Track2>
+                </OSTO>
+                <GenericAlarm>
+                    <GenericAlarm>Free Text Alarm</GenericAlarm>
+                </GenericAlarm>
+            </GeneratedAlarms>
+            <EmergencyAlarms>
+                <EmergencyAlarms></EmergencyAlarms>
+            </EmergencyAlarms>
+            <TD>
+                <Interpose>
+                    <TrainID>1T22</TrainID>
+                    <BerthID>0123</BerthID>
+                </Interpose>
+                <Clear>
+                    <Berth>0123</Berth>
+                </Clear>
+                <Step>
+                    <TrainID>1T22</TrainID>
+                    <FromBerth>0123</FromBerth>
+                    <ToBerth>0124</ToBerth>
+                </Step>
+            </TD>
+        </Body>
+    </Message>
+    <Signature/>	char *
+
+
+Interlocking
+
+outBuffer = 0x042dd7d4 "<Envelope>
+    <!--comment-->
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </...
+
+		test	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-21T16:57:46.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>629393350</MonoTonic>\n            </Time>\n            <SequenceNumber>0</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIAxgAAAIsAAACqAAoAAQAAAPYAAADXADEyMzQ1Njc4OTAjAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIAxgAAAIsAAACqAAoAAQAAAPYAAADXADEyMzQ1Njc4OTAjAA==</Indications>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
++		outBuffer	0x0458d40c "<Envelope>
+    <!--comment-->
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-09-22T08:29:07.000Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+                <MonoTonic>685272518</MonoTonic>
+            </Time>
+            <SequenceNumber>1</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>MASTER</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body>
+            <DiagnosticAlarms>
+                <Link>
+                    <From>SRIF-1</From>
+                    <To>IXL-1</To>
+                    <Status>UP</Status>
+                </Link>
+            </DiagnosticAlarms>
+            <GeneratedAlarms>
+                <OSTO>
+                    <Track1>T123</Track1>
+                    <Track2>T124</Track2>
+                </OSTO>
+                <GenericAlarm>
+                    <GenericAlarm>Free Text Alarm</GenericAlarm>
+                </GenericAlarm>
+            </GeneratedAlarms>
+            <Interlocking>
+                <UniqueID>UK//York//IXL//001//OF</UniqueID>
+                <SSIID>0F</SSIID>
+                <SPAD>
+                    <SignalMap>CqMBAAIAxgAAABUAAACqAAoAAQAAAPYAAAAhADEyMzQ1Njc4OTAhAA==</SignalMap>
+                    <SPADData>
+                        <SignalID>16</SignalID>
+                        <Signal>S123</Signal>
+                        <Track>T123</Track>
+                    </SPADData>
+                </SPAD>
+                <Indications>CqMBAAIAxgAAABUAAACqAAoAAQAAAPYAAAAhADEyMzQ1Njc4OTAhAA==</Indications>
+            </Interlocking>
+            <Em	char *
+
+
+bufOut
+
+0x0458d40c "<Envelope>
+    <!--comment-->
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-09-22T08:29:07.000Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+                <MonoTonic>685272518</MonoTonic>
+            </Time>
+            <SequenceNumber>1</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>MASTER</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body>
+            <DiagnosticAlarms>
+                <Link>
+                    <From>SRIF-1</From>
+                    <To>IXL-1</To>
+                    <Status>UP</Status>
+                </Link>
+            </DiagnosticAlarms>
+            <GeneratedAlarms>
+                <OSTO>
+                    <Track1>T123</Track1>
+                    <Track2>T124</Track2>
+                </OSTO>
+                <GenericAlarm>
+                    <GenericAlarm>Free Text Alarm</GenericAlarm>
+                </GenericAlarm>
+            </GeneratedAlarms>
+            <Interlocking>
+                <UniqueID>UK//York//IXL//001//OF</UniqueID>
+                <SSIID>0F</SSIID>
+                <SPAD>
+                    <SignalMap>CqMBAAIAxgAAABUAAACqAAoAAQAAAPYAAAAhADEyMzQ1Njc4OTAhAA==</SignalMap>
+                    <SPADData>
+                        <SignalID>16</SignalID>
+                        <Signal>S123</Signal>
+                        <Track>T123</Track>
+                    </SPADData>
+                </SPAD>
+                <Indications>CqMBAAIAxgAAABUAAACqAAoAAQAAAPYAAAAhADEyMzQ1Njc4OTAhAA==</Indications>
+            </Interlocking>
+            <Em
+
+		test	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T08:28:50.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>685255592</MonoTonic>\n            </Time>\n            <SequenceNumber>0</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIAqAAAAIMAAACqAAoAAQAAAPYAAAD8ADEyMzQ1Njc4OTBhAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIAqAAAAIMAAACqAAoAAQAAAPYAAAD8ADEyMzQ1Njc4OTBhAA==</Indications>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+WhitespaceMode
+
+( true, COLLAPSE_WHITESPACE )
+
+		test	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T08:52:18.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>686663969</MonoTonic>\n            </Time>\n            <SequenceNumber>0</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIAIQAAAOwAAACqAAoAAQAAAPYAAAC9ADEyMzQ1Njc4OTArAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIAIQAAAOwAAACqAAoAAQAAAPYAAAC9ADEyMzQ1Njc4OTArAA==</Indications>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+<Interlocking>\n            
+		<UniqueID>UK//York//IXL//001//OF</UniqueID>\n   
+		<SSIID>0F</SSIID>\n            
+		<SPAD>\n                   
+		<SignalMap>CqMBAAIAqAAAAIMAAACqAAoAAQAAAPYAAAD8ADEyMzQ1Njc4OTBhAA==</SignalMap>\n   
+		<SPADData>\n                      
+		<SignalID>16</SignalID>\n         
+		<Signal>S123</Signal>\n              
+		<Track>T123</Track>\n             
+		</SPADData>\n            
+		</SPAD>\n              
+		<Indications>CqMBAAIAqAAAAIMAAACqAAoAAQAAAPYAAAD8ADEyMzQ1Njc4OTBhAA==</Indications>\n  
+		</Interlocking>\n  
+
+Interlocking
+
+<Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>CqMCAAEA1Ek1KQEAAACqVRQAAAAAATEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=</ControlRequests><ARSSubAreaStatus>CqMCAAEA1Ek1KQEAAACqVRQAAAAAATEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=</ARSSubAreaStatus></Interlocking>
+
+		input	" <Body><Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIA8wAAANQAAACqAAoAAQAAAPYAAACfADEyMzQ1Njc4OTBQAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIA8wAAANQAAACqAAoAAQAAAPYAAACfADEyMzQ1Njc4OTBQAA==</Indications>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>"	string
+
+
+<Interlocking>\n     
+		<UniqueID>UK//York//IXL//001//OF</UniqueID>\n  
+		<SSIID>0F</SSIID>\n    
+		<SPAD>\n            
+        <SignalMap>CqMBAAIA8wAAANQAAACqAAoAAQAAAPYAAACfADEyMzQ1Njc4OTBQAA==</SignalMap>\n      
+		<SPADData>\n                      
+		<SignalID>16</SignalID>\n             
+		<Signal>S123</Signal>\n            
+		<Track>T123</Track>\n             
+		</SPADData>\n             
+		</SPAD>\n              
+		<Indications>CqMBAAIA8wAAANQAAACqAAoAAQAAAPYAAACfADEyMzQ1Njc4OTBQAA==</Indications>\n  
+		</Interlocking>
+
+<Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>CqMBAAIA8wAAANQAAACqAAoAAQAAAPYAAACfADEyMzQ1Njc4OTBQAA==</SignalMap><SPADData><SignalID>16</SignalID><Signal>S123</Signal><Track>T123</Track></SPADData></SPAD><Indications>CqMBAAIA8wAAANQAAACqAAoAAQAAAPYAAACfADEyMzQ1Njc4OTBQAA==</Indications></Interlocking>
+
+		input	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T10:54:31.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>693996671</MonoTonic>\n            </Time>\n            <SequenceNumber>3995</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n       <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIAfwAAAJ8AAACqAAoAAQAAAPYAAACkADEyMzQ1Njc4OTAVAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIAfwAAAJ8AAACqAAoAAQAAAPYAAACkADEyMzQ1Njc4OTAVAA==</Indications>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+EmergencyAlarms
+
+mess.Body.DiagnosticAlarms[0]
+
+		result	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-22T11:47:23.9739704+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>697168686</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>test</From><To>E</To><Status>UP</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>CqMCAAEAPvONKQEAAACqVRQAAAAAATEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=</ControlRequests><ARSSubAreaStatus>CqMCAAEAPvONKQEAAACqVRQAAAAAATEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=</ARSSubAreaStatus></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>9wcRwYaB6KUSC89FW5eEdPFbmM4=</DigestValue></Reference></SignedInfo><SignatureValue>kQEabE5REU+hSEOCskyEdcZVkLPXYwlcRfSUhnr7VCwlw/qdnAHWZqinBLlJN5bVfXCuQ64vSmNHPcRPJeeyR2jj/X+NL/6S3CEoffaDfn9v3NBg+Lq7c2hv84ur86c8G2GmdwBNFTrLdqx1seoDEoqAKMCaBhQki+98HxdDEME=</SignatureValue></Signature></Envelope>"	string
+
+
+		test	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T11:50:31.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>697356511</MonoTonic>\n            </Time>\n            <SequenceNumber>0</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIA3wAAAD4AAACqAAoAAQAAAPYAAABfADEyMzQ1Njc4OTDKAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIA3wAAAD4AAACqAAoAAQAAAPYAAABfADEyMzQ1Njc4OTDKAA==</Indications>\n            </Interlocking>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+		input	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T11:50:32.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>697356761</MonoTonic>\n            </Time>\n            <SequenceNumber>1</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n       <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIA2QAAAD4AAACqAAoAAQAAAPYAAABJADEyMzQ1Njc4OTAAAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIA2QAAAD4AAACqAAoAAQAAAPYAAABJADEyMzQ1Njc4OTAAAA==</Indications>\n            </Interlocking>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T11:50:32.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>697356761</MonoTonic>\n            </Time>\n            <SequenceNumber>1</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n       <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIA2QAAAD4AAACqAAoAAQAAAPYAAABJADEyMzQ1Njc4OTAAAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIA2QAAAD4AAACqAAoAAQAAAPYAAABJADEyMzQ1Njc4OTAAAA==</Indications>\n            </Interlocking>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+   mess.Header = new Header();
+            mess.Body = new Body();
+
+            mess.Header.Version = new Version();
+            mess.Header.Version.MessageFormat = "message-v0.1";
+            mess.Header.Version.Data = "data-v0.1";
+            mess.Header.Version.Software = "software-v1";
+            mess.Header.Time = new Time();
+            mess.Header.Time.Current = DateTime.Now;
+            mess.Header.Time.TimeStatus = timeStatus.SYNCHRONISED;
+            mess.Header.Time.Monotonic = Environment.TickCount & Int32.MaxValue;
+            mess.Header.SequenceNumber = sequenceNumber;
+            mess.Header.SourceUnitID = SourceUnitIDTextBox.Text;
+            mess.Header.LogicalSourceID = LogicalSourceIDTesxtBox.Text;
+            mess.Header.SourceStatus = unitStatus.MASTER;
+            mess.Header.SourceLinkStatus = sourceLinkStatus.UP;
+            mess.Header.DestinationUnitID = "SRIF-1-Unit-A";
+            mess.Header.LogicalDestinationID = "SRIF-1";
+
+            mess.Body.DiagnosticAlarms = new Link[1];
+            mess.Body.DiagnosticAlarms[0] = new Link();
+            mess.Body.DiagnosticAlarms[0].From = "test";
+            mess.Body.DiagnosticAlarms[0].Status = linkStatus.UP;
+            mess.Body.DiagnosticAlarms[0].To = "E";
+
+            mess.Body.Interlocking = new Interlocking[1];
+            for (int n = 0; n < 1; n++)
+            {
+                mess.Body.Interlocking[n] = new Interlocking();
+            }
+
+            mess.Body.Interlocking[0].UniqueID = "UK/York/IXL/001";
+            mess.Body.Interlocking[0].SSIID = "0F";
+            
+            
+            mess.Body.Interlocking[0].ControlRequests = createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890"));
+            mess.Body.Interlocking[0].ARSSubAreaStatus = createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890"));
+
+mess.Body.Interlocking[0].SPAD[0].
+
+		result	"<Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-22T13:48:16.3381343+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>704420736</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>test</From><To>E</To><Status>UP</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>CqMCAAEAgJv8KQEAAACqVRQAAAAAATEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=</ControlRequests><ARSSubAreaStatus>CqMCAAEAgJv8KQEAAACqVRQAAAAAATEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=</ARSSubAreaStatus></Interlocking></Body></Message>"	string
+
+
+createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("1234567890"));
+
+mess.Body.Interlocking[0].SPAD[0].SPADData[0].
+
+mess.Body.GeneratedAlarms.GenericAlarm
+
+mess.Body.GeneratedAlarms.OSTO[0]
+
+mess.Body.GeneratedAlarms.OSTO[0].
+
+XmlSerializer ser = new XmlSerializer(typeof(Message));
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = false;
+            settings.OmitXmlDeclaration = true;
+
+            using (var stream = new StringWriter())
+            using (var writer = XmlWriter.Create(stream, settings))
+            {
+                ser.Serialize(writer, mess);
+                result = stream.ToString();
+            }
+
+            XMLSigning xmlSigner = new XMLSigning(result);
+            xmlSigner.StartSignXML();
+            result = "<Envelope>" + result + xmlSigner.GetText() + "</Envelope>";
+
+GetTest
+
+mess.Body.Interlocking[0].SPAD[0].SPADData[0]
+
+result = "<Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-...
+
+		result	"<Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-22T14:20:26.938175+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>706351264</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>test</From><To>E</To><Status>UP</Status></Link></DiagnosticAlarms><GeneratedAlarms><OSTO><Track1>T213</Track1><Track2>T123</Track2></OSTO><GenericAlarm>Test Alarm</GenericAlarm></GeneratedAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>CqMCAAEAnhoaKgEAAACqVRQAAAAAATEyMzQ1Njc4OTD//w==</SignalMap><SPADData><SignalID>1</SignalID><Signal>123</Signal><Track>T123</Track></SPADData></SPAD><Indications>CqMCAAEAyyQaKgEAAACqVRQAAAAAATEyMzQ1Njc4OTD//w==</Indications></Interlocking></Body></Message>"	string
+
+
+		test	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-09-22T14:32:34.000Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>707078462</MonoTonic>\n            </Time>\n            <SequenceNumber>0</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                <SSIID>0F</SSIID>\n                <SPAD>\n                    <SignalMap>CqMBAAIAPgAAAHQAAACqAAoAAQAAAPYAAAAdADEyMzQ1Njc4OTDgAA==</SignalMap>\n                    <SPADData>\n                        <SignalID>16</SignalID>\n                        <Signal>S123</Signal>\n                        <Track>T123</Track>\n                    </SPADData>\n                </SPAD>\n                <Indications>CqMBAAIAPgAAAHQAAACqAAoAAQAAAPYAAAAdADEyMzQ1Njc4OTDgAA==</Indications>\n            </Interlocking>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n"	string
+
+
+GeneratedAlarms
+
+env.Message.Body.Interlocking
+
+ ! push    EBX                     ; save EBX for PowerBASIC
+  ! push    EDI                     ; save EDI for PowerBASIC
+  ! mov     EDI,Address             ; address in EDI
+  ! mov     ECX,Length              ; length in ECX
+  ! jecxz   CrcDone                 ; exit is zero length
+  ! cld                             ; clear the direction flag
+
+BuildCRC:
+  ! movzx   EBX, Byte Ptr [EDI]     ; get a char
+  ! mov     AX, Seed[1]             ; get 2nd and 3rd bytes of seed
+  ! xor     DX, DX                  ; clear DX
+  ! mov     DL, Seed[3]             ; get 4th byte of seed
+  ! xor     BL, Seed[0]             ; xor char against first byte of seed
+  ! xor     BH, BH                  ; clear BH
+  ! shl     BX, 2                   ; shift the index
+  ! xor     AX, CrcTable[EBX]       ; xor low-half against the table
+  ! xor     DX, CrcTable[EBX+2]     ; xor high-half against the table
+  ! mov     Seed[0], AX             ; save the result
+  ! mov     Seed[2], DX             ;   ...
+  ! inc     EDI                     ; move to next char
+  ! loop    BuildCRC                ; do ECX times
+
+CrcDone:
+  ! pop     EDI                     ; restore EDI
+  ! pop     EBX                     ; restore EBX
+
+BYVAL Address AS DWORD, _
+               BYVAL Length AS LONG, _
+               BYVAL Seed AS LONG) export AS LONG
+
+CrcTable
+
+ ! dd &H000000000&, &H077073096&, &H0EE0E612C&, &H0990951BA&
+  ! dd &H0076DC419&, &H0706AF48F&, &H0E963A535&, &H09E6495A3&
+  ! dd &H00EDB8832&, &H079DCB8A4&, &H0E0D5E91E&, &H097D2D988&
+  ! dd &H009B64C2B&, &H07EB17CBD&, &H0E7B82D07&, &H090BF1D91&
+  ! dd &H01DB71064&, &H06AB020F2&, &H0F3B97148&, &H084BE41DE&
+  ! dd &H01ADAD47D&, &H06DDDE4EB&, &H0F4D4B551&, &H083D385C7&
+  ! dd &H0136C9856&, &H0646BA8C0&, &H0FD62F97A&, &H08A65C9EC&
+  ! dd &H014015C4F&, &H063066CD9&, &H0FA0F3D63&, &H08D080DF5&
+  ! dd &H03B6E20C8&, &H04C69105E&, &H0D56041E4&, &H0A2677172&
+  ! dd &H03C03E4D1&, &H04B04D447&, &H0D20D85FD&, &H0A50AB56B&
+  ! dd &H035B5A8FA&, &H042B2986C&, &H0DBBBC9D6&, &H0ACBCF940&
+  ! dd &H032D86CE3&, &H045DF5C75&, &H0DCD60DCF&, &H0ABD13D59&
+  ! dd &H026D930AC&, &H051DE003A&, &H0C8D75180&, &H0BFD06116&
+  ! dd &H021B4F4B5&, &H056B3C423&, &H0CFBA9599&, &H0B8BDA50F&
+  ! dd &H02802B89E&, &H05F058808&, &H0C60CD9B2&, &H0B10BE924&
+  ! dd &H02F6F7C87&, &H058684C11&, &H0C1611DAB&, &H0B6662D3D&
+  ! dd &H076DC4190&, &H001DB7106&, &H098D220BC&, &H0EFD5102A&
+  ! dd &H071B18589&, &H006B6B51F&, &H09FBFE4A5&, &H0E8B8D433&
+  ! dd &H07807C9A2&, &H00F00F934&, &H09609A88E&, &H0E10E9818&
+  ! dd &H07F6A0DBB&, &H0086D3D2D&, &H091646C97&, &H0E6635C01&
+  ! dd &H06B6B51F4&, &H01C6C6162&, &H0856530D8&, &H0F262004E&
+  ! dd &H06C0695ED&, &H01B01A57B&, &H08208F4C1&, &H0F50FC457&
+  ! dd &H065B0D9C6&, &H012B7E950&, &H08BBEB8EA&, &H0FCB9887C&
+  ! dd &H062DD1DDF&, &H015DA2D49&, &H08CD37CF3&, &H0FBD44C65&
+  ! dd &H04DB26158&, &H03AB551CE&, &H0A3BC0074&, &H0D4BB30E2&
+  ! dd &H04ADFA541&, &H03DD895D7&, &H0A4D1C46D&, &H0D3D6F4FB&
+  ! dd &H04369E96A&, &H0346ED9FC&, &H0AD678846&, &H0DA60B8D0&
+  ! dd &H044042D73&, &H033031DE5&, &H0AA0A4C5F&, &H0DD0D7CC9&
+  ! dd &H05005713C&, &H0270241AA&, &H0BE0B1010&, &H0C90C2086&
+  ! dd &H05768B525&, &H0206F85B3&, &H0B966D409&, &H0CE61E49F&
+  ! dd &H05EDEF90E&, &H029D9C998&, &H0B0D09822&, &H0C7D7A8B4&
+  ! dd &H059B33D17&, &H02EB40D81&, &H0B7BD5C3B&, &H0C0BA6CAD&
+  ! dd &H0EDB88320&, &H09ABFB3B6&, &H003B6E20C&, &H074B1D29A&
+  ! dd &H0EAD54739&, &H09DD277AF&, &H004DB2615&, &H073DC1683&
+  ! dd &H0E3630B12&, &H094643B84&, &H00D6D6A3E&, &H07A6A5AA8&
+  ! dd &H0E40ECF0B&, &H09309FF9D&, &H00A00AE27&, &H07D079EB1&
+  ! dd &H0F00F9344&, &H08708A3D2&, &H01E01F268&, &H06906C2FE&
+  ! dd &H0F762575D&, &H0806567CB&, &H0196C3671&, &H06E6B06E7&
+  ! dd &H0FED41B76&, &H089D32BE0&, &H010DA7A5A&, &H067DD4ACC&
+  ! dd &H0F9B9DF6F&, &H08EBEEFF9&, &H017B7BE43&, &H060B08ED5&
+  ! dd &H0D6D6A3E8&, &H0A1D1937E&, &H038D8C2C4&, &H04FDFF252&
+  ! dd &H0D1BB67F1&, &H0A6BC5767&, &H03FB506DD&, &H048B2364B&
+  ! dd &H0D80D2BDA&, &H0AF0A1B4C&, &H036034AF6&, &H041047A60&
+  ! dd &H0DF60EFC3&, &H0A867DF55&, &H0316E8EEF&, &H04669BE79&
+  ! dd &H0CB61B38C&, &H0BC66831A&, &H0256FD2A0&, &H05268E236&
+  ! dd &H0CC0C7795&, &H0BB0B4703&, &H0220216B9&, &H05505262F&
+  ! dd &H0C5BA3BBE&, &H0B2BD0B28&, &H02BB45A92&, &H05CB36A04&
+  ! dd &H0C2D7FFA7&, &H0B5D0CF31&, &H02CD99E8B&, &H05BDEAE1D&
+  ! dd &H09B64C2B0&, &H0EC63F226&, &H0756AA39C&, &H0026D930A&
+  ! dd &H09C0906A9&, &H0EB0E363F&, &H072076785&, &H005005713&
+  ! dd &H095BF4A82&, &H0E2B87A14&, &H07BB12BAE&, &H00CB61B38&
+  ! dd &H092D28E9B&, &H0E5D5BE0D&, &H07CDCEFB7&, &H00BDBDF21&
+  ! dd &H086D3D2D4&, &H0F1D4E242&, &H068DDB3F8&, &H01FDA836E&
+  ! dd &H081BE16CD&, &H0F6B9265B&, &H06FB077E1&, &H018B74777&
+  ! dd &H088085AE6&, &H0FF0F6A70&, &H066063BCA&, &H011010B5C&
+  ! dd &H08F659EFF&, &H0F862AE69&, &H0616BFFD3&, &H0166CCF45&
+  ! dd &H0A00AE278&, &H0D70DD2EE&, &H04E048354&, &H03903B3C2&
+  ! dd &H0A7672661&, &H0D06016F7&, &H04969474D&, &H03E6E77DB&
+  ! dd &H0AED16A4A&, &H0D9D65ADC&, &H040DF0B66&, &H037D83BF0&
+  ! dd &H0A9BCAE53&, &H0DEBB9EC5&, &H047B2CF7F&, &H030B5FFE9&
+  ! dd &H0BDBDF21C&, &H0CABAC28A&, &H053B39330&, &H024B4A3A6&
+  ! dd &H0BAD03605&, &H0CDD70693&, &H054DE5729&, &H023D967BF&
+  ! dd &H0B3667A2E&, &H0C4614AB8&, &H05D681B02&, &H02A6F2B94&
+  ! dd &H0B40BBE37&, &H0C30C8EA1&, &H05A05DF1B&, &H02D02EF8D&
+
+CrcTable32
+
+CCITT
+
+WORD crc = 0;
+
+ __asm
+    {
+        mov esi,tBuff          //;ptr to buffer
+        mov cx,lenBuff         //;length of buffer
+
+  mov ecx,lenBuff         //;length of buffer
+
+ ! MOV EBX, Seed
+' See CRC32.bas -> GetFileCrc32()
+'  ! XOR EBX, &HFFFFFFFF
+  ! MOV ESI, Length
+  ! CMP ESI, 0
+  ! JZ  QuitLoop
+  ! MOV EDI, Address
+  ! XOR EAX, EAX
+  NextByte:
+  ! MOV AL, BL
+  ! XOR AL, [EDI]
+  ! MOV ECX, CrcTable[4*EAX]
+  ! SHR EBX, 8
+  ! XOR EBX, ECX
+  ! INC EDI
+  ! DEC ESI
+  ! JNZ NextByte
+  QuitLoop:
+' See CRC32.bas -> GetFileCrc32()
+'  ! XOR EBX, &HFFFFFFFF
+  ! MOV Function, EBX
+
+CrcTable32
+
+GetArray32CRC
+
+LONG GetArray32CRC(DWORD Address, DWORD lenBuff, LONG Seed)
+
+APPLICATION_DOMAIN
+
+NVF3B_Header
+
+interlocking_t->ARSSubAreaStatus.value
+
+StatusByte
+
+WM_NVFB3_MESSAGE
+
+NVFB3_INFO_e
+
+(LPARAM)
+
+WM_NVFB3_MESSAGE
+
+NVFB3_INFO_e
+
+CONTROL_REQUEST
+
+ARSSUBAREA
+
+http://astyle.sourceforge.net/
+
+http://cppcheck.sourceforge.net/
+
+void HandleNVF3DecodeRequest(NVFB3_INFO_e info, const char* input)
+
+
+typedef enum
+{
+ CONTROL_REQUEST =   0,
+ ARSSUBAREA     
+}NVFB3_INFO_e;
+
+NVFB3_INFO_e
+
+DealWithIncomingNVF3BData
+
+NVFB3_INFO_e
+
+ARSSUBAREA
+
+CONTROL_REQUEST
+
+DealWithIncomingNVF3BData
+
+HandleControlRequestData
+
+static void DealWithIncomingNVF3BData(NVFB3_INFO_e info, const char* data)
+{
+    ::SendMessageA(hWnd, WM_NVFB3_MESSAGE, info, (LPARAM)data);
+}
+
+
+
+/******************************************************************************
+******************************************************************************/
+
+NVFB3_Information
+
+WORD GenericlDecodeNVFB3(const char* input, NVFB3_Information info, BYTE* output)
+
+controlRequestId
+
+ControlRequestInfo
+
+NVFB3_Information
+
+char data[448];
+
+CheckTheHeaderCRCs
+
+  char data[448];
+    ZeroMemory(data, 448);
+    NVFB3_Information cri = ControlRequestInfo[controlRequestId&0xFF];
+
+    cri.id = controlRequestId++;
+
+
+ZeroMemory(data, 448);
+
+BYTE data[448];
+    NVFB3_Information cri = ControlRequestInfo[controlRequestId&0xFF];
+    ZeroMemory(data, 448);
+
+ARSSubAreaInfo
+
+ArSubAreaId
+
+GenericDecodeNVFB3
+
+    return 0;
+
+
+WORD GenericDecodeNVFB3(const char* input, NVFB3_Information* info, BYTE* output)
+
+_crcTable
+
+WORD EncodeCRC16(unsigned int tbuff, unsigned int lenBuff);
+        WORD EncodeCRC32(unsigned int Address, unsigned int lenBuff);
+
+CRCEncoderDecoder
+
+ void CreateCRCTables();
+        bool EncodeCRC16(unsigned int tbuff, unsigned int lenBuff);
+        bool EncodeCRC32(unsigned int Address, unsigned int lenBuff);
+
+CRCEncoderDecoder
+
+CRCEncodeDecode
+
+CRCEncoderDecoder
+
+  bool _EncodeCRC16(unsigned int tbuff, unsigned int lenBuff);
+        bool _EncodeCRC32(unsigned int Address, unsigned int lenBuff, unsigned int Seed);
+
+CRCEncodeDecode::
+
+EncodeCRC16
+
+_crcTable
+
+EncodeCRC32
+
+return _EncodeCRC16(tbuff, lenBuff, _crcTable);
+
+ return _EncodeCRC32(Address, lenBuff, -1);
+
+DWORD Tcrc)
+
+//#REGISTER NONE
+
+    WORD crc = 0;
+    __asm
+    {
+        mov esi,tBuff          //;ptr to buffer
+        mov cx,lenBuff         //;length of buffer
+        cld                 //   ;set direction Move forward through the buffer
+        xor edx,edx         //   ;clear 32 bit registers
+        xor eax,eax
+        xor ebx,ebx
+        mov crc,dx           //  ;crc = dx
+        C1:
+        mov al,[esi]         //  ;move char indexed by esi into al
+        inc esi              //  ;increment char position
+        xor dx,ax            //  ; crc xor char
+        and dx,0x000F        //  ; crc and 0x000F?? = first crctable array element offset
+        mov bx,dx            //  ; keep in bx
+        mov dx,crc           //  ;put crc back in dx
+        xor dx,ax            //  ;crc xor char
+        and dx,0x00F0        //  ;(crc xor char) and 0x00F0
+        shr dx,4             //  ;((crc xor char) and 0x00F0) \ 16 )
+        add dx,16            //  ;((crc xor char) and 0x00F0) \ 16 ) + 16 = second crctable array element offset
+        mov eax,Tcrc         //  ;load eax with CRC table address
+        mov ax,[eax + ebx * 2]// ;load ax with CRC table array element @ first crctable array element offset
+        push ax               // ;save on stack
+        mov eax,Tcrc          // ;set table index
+        mov bx,[eax + edx * 2]// ;load bx with CRC table array element @ second crctable array element offset
+        pop ax                // ; restore ax with CRC table array element @ first crctable array element offset
+        xor ax,bx             // ;xor CRC table array values
+        mov dx,crc            // ; put crc in dx
+        shr dx,8              // ; CRC \ 256
+        and dx,0x00FF         // ; CRC = (CRC \ 256) AND 0x00FF
+        xor ax,dx             // ; xor'ed CRC table array values xor CRC
+        mov crc,ax           //  ;put CRC in crc variable
+        mov dx,crc            // ;put CRC in dx for next iteration
+        loop C1               // ; loop if cx not zero to end of string
+    }
+    return crc;
+
+    DWORD crc = 0;
+  
+    __asm
+    {
+        MOV EBX, Seed    //' See CRC32.bas -> GetFileCrc32()'  ! XOR EBX, &HFFFFFFFF
+        MOV ESI, lenBuff
+        CMP ESI, 0
+        JZ  QuitLoop
+        MOV EDI, Address
+        XOR EAX, EAX
+NextByte:
+        MOV AL, BL
+        XOR AL, [EDI]
+        MOV ECX, CrcTable32[4*EAX]
+        SHR EBX, 8
+        XOR EBX, ECX
+        INC EDI
+        DEC ESI
+        JNZ NextByte
+QuitLoop:
+        //' See CRC32.bas -> GetFileCrc32()
+//'  ! XOR EBX, &HFFFFFFFF
+     MOV crc, EBX
+     
+    }
+
+
+    return crc;
+
+extern "C" __declspec(dllexport) int __stdcall 
+
+GetArrayCRC16
+
+extern "C" __declspec(dllexport) int __stdcall
+
+LONG GetArray32CRC(DWORD Address, DWORD lenBuff, LONG Seed)
+{
+    DWORD crc = 0;
+  
+    __asm
+    {
+        MOV EBX, Seed    //' See CRC32.bas -> GetFileCrc32()'  ! XOR EBX, &HFFFFFFFF
+        MOV ESI, lenBuff
+        CMP ESI, 0
+        JZ  QuitLoop
+        MOV EDI, Address
+        XOR EAX, EAX
+NextByte:
+        MOV AL, BL
+        XOR AL, [EDI]
+        MOV ECX, CrcTable32[4*EAX]
+        SHR EBX, 8
+        XOR EBX, ECX
+        INC EDI
+        DEC ESI
+        JNZ NextByte
+QuitLoop:
+        //' See CRC32.bas -> GetFileCrc32()
+//'  ! XOR EBX, &HFFFFFFFF
+     MOV crc, EBX
+     
+    }
+
+
+    return crc;
+}
+
+WORD _crcTable[33];
+DWORD CrcTable32[256] = {  
+   0x000000000, 0x077073096, 0x0EE0E612C, 0x0990951BA,
+   0x0076DC419, 0x0706AF48F, 0x0E963A535, 0x09E6495A3,
+   0x00EDB8832, 0x079DCB8A4, 0x0E0D5E91E, 0x097D2D988,
+   0x009B64C2B, 0x07EB17CBD, 0x0E7B82D07, 0x090BF1D91,
+   0x01DB71064, 0x06AB020F2, 0x0F3B97148, 0x084BE41DE,
+   0x01ADAD47D, 0x06DDDE4EB, 0x0F4D4B551, 0x083D385C7,
+   0x0136C9856, 0x0646BA8C0, 0x0FD62F97A, 0x08A65C9EC,
+   0x014015C4F, 0x063066CD9, 0x0FA0F3D63, 0x08D080DF5,
+   0x03B6E20C8, 0x04C69105E, 0x0D56041E4, 0x0A2677172,
+   0x03C03E4D1, 0x04B04D447, 0x0D20D85FD, 0x0A50AB56B,
+   0x035B5A8FA, 0x042B2986C, 0x0DBBBC9D6, 0x0ACBCF940,
+   0x032D86CE3, 0x045DF5C75, 0x0DCD60DCF, 0x0ABD13D59,
+   0x026D930AC, 0x051DE003A, 0x0C8D75180, 0x0BFD06116,
+   0x021B4F4B5, 0x056B3C423, 0x0CFBA9599, 0x0B8BDA50F,
+   0x02802B89E, 0x05F058808, 0x0C60CD9B2, 0x0B10BE924,
+   0x02F6F7C87, 0x058684C11, 0x0C1611DAB, 0x0B6662D3D,
+   0x076DC4190, 0x001DB7106, 0x098D220BC, 0x0EFD5102A,
+   0x071B18589, 0x006B6B51F, 0x09FBFE4A5, 0x0E8B8D433,
+   0x07807C9A2, 0x00F00F934, 0x09609A88E, 0x0E10E9818,
+   0x07F6A0DBB, 0x0086D3D2D, 0x091646C97, 0x0E6635C01,
+   0x06B6B51F4, 0x01C6C6162, 0x0856530D8, 0x0F262004E,
+   0x06C0695ED, 0x01B01A57B, 0x08208F4C1, 0x0F50FC457,
+   0x065B0D9C6, 0x012B7E950, 0x08BBEB8EA, 0x0FCB9887C,
+   0x062DD1DDF, 0x015DA2D49, 0x08CD37CF3, 0x0FBD44C65,
+   0x04DB26158, 0x03AB551CE, 0x0A3BC0074, 0x0D4BB30E2,
+   0x04ADFA541, 0x03DD895D7, 0x0A4D1C46D, 0x0D3D6F4FB,
+   0x04369E96A, 0x0346ED9FC, 0x0AD678846, 0x0DA60B8D0,
+   0x044042D73, 0x033031DE5, 0x0AA0A4C5F, 0x0DD0D7CC9,
+   0x05005713C, 0x0270241AA, 0x0BE0B1010, 0x0C90C2086,
+   0x05768B525, 0x0206F85B3, 0x0B966D409, 0x0CE61E49F,
+   0x05EDEF90E, 0x029D9C998, 0x0B0D09822, 0x0C7D7A8B4,
+   0x059B33D17, 0x02EB40D81, 0x0B7BD5C3B, 0x0C0BA6CAD,
+   0x0EDB88320, 0x09ABFB3B6, 0x003B6E20C, 0x074B1D29A,
+   0x0EAD54739, 0x09DD277AF, 0x004DB2615, 0x073DC1683,
+   0x0E3630B12, 0x094643B84, 0x00D6D6A3E, 0x07A6A5AA8,
+   0x0E40ECF0B, 0x09309FF9D, 0x00A00AE27, 0x07D079EB1,
+   0x0F00F9344, 0x08708A3D2, 0x01E01F268, 0x06906C2FE,
+   0x0F762575D, 0x0806567CB, 0x0196C3671, 0x06E6B06E7,
+   0x0FED41B76, 0x089D32BE0, 0x010DA7A5A, 0x067DD4ACC,
+   0x0F9B9DF6F, 0x08EBEEFF9, 0x017B7BE43, 0x060B08ED5,
+   0x0D6D6A3E8, 0x0A1D1937E, 0x038D8C2C4, 0x04FDFF252,
+   0x0D1BB67F1, 0x0A6BC5767, 0x03FB506DD, 0x048B2364B,
+   0x0D80D2BDA, 0x0AF0A1B4C, 0x036034AF6, 0x041047A60,
+   0x0DF60EFC3, 0x0A867DF55, 0x0316E8EEF, 0x04669BE79,
+   0x0CB61B38C, 0x0BC66831A, 0x0256FD2A0, 0x05268E236,
+   0x0CC0C7795, 0x0BB0B4703, 0x0220216B9, 0x05505262F,
+   0x0C5BA3BBE, 0x0B2BD0B28, 0x02BB45A92, 0x05CB36A04,
+   0x0C2D7FFA7, 0x0B5D0CF31, 0x02CD99E8B, 0x05BDEAE1D,
+   0x09B64C2B0, 0x0EC63F226, 0x0756AA39C, 0x0026D930A,
+   0x09C0906A9, 0x0EB0E363F, 0x072076785, 0x005005713,
+   0x095BF4A82, 0x0E2B87A14, 0x07BB12BAE, 0x00CB61B38,
+   0x092D28E9B, 0x0E5D5BE0D, 0x07CDCEFB7, 0x00BDBDF21,
+   0x086D3D2D4, 0x0F1D4E242, 0x068DDB3F8, 0x01FDA836E,
+   0x081BE16CD, 0x0F6B9265B, 0x06FB077E1, 0x018B74777,
+   0x088085AE6, 0x0FF0F6A70, 0x066063BCA, 0x011010B5C,
+   0x08F659EFF, 0x0F862AE69, 0x0616BFFD3, 0x0166CCF45,
+   0x0A00AE278, 0x0D70DD2EE, 0x04E048354, 0x03903B3C2,
+   0x0A7672661, 0x0D06016F7, 0x04969474D, 0x03E6E77DB,
+   0x0AED16A4A, 0x0D9D65ADC, 0x040DF0B66, 0x037D83BF0,
+   0x0A9BCAE53, 0x0DEBB9EC5, 0x047B2CF7F, 0x030B5FFE9,
+   0x0BDBDF21C, 0x0CABAC28A, 0x053B39330, 0x024B4A3A6,
+   0x0BAD03605, 0x0CDD70693, 0x054DE5729, 0x023D967BF,
+   0x0B3667A2E, 0x0C4614AB8, 0x05D681B02, 0x02A6F2B94,
+   0x0B40BBE37, 0x0C30C8EA1, 0x05A05DF1B, 0x02D02EF8D};
+
+  _crcTable[0] = 0x0000;
+    _crcTable[1] = 0xC0C1;
+    _crcTable[2] = 0xC181;
+    _crcTable[3] = 0x0140;
+    _crcTable[4] = 0xC301;
+    _crcTable[5] = 0x03C0;
+    _crcTable[6] = 0x0280;
+    _crcTable[7] = 0xC241;
+    _crcTable[8] = 0xC601;
+    _crcTable[9] = 0x06C0;
+    _crcTable[10] = 0x0780;
+    _crcTable[11] = 0xC741;
+    _crcTable[12] = 0x0500;
+    _crcTable[13] = 0xC5C1;
+    _crcTable[14] = 0xC481;
+    _crcTable[15] = 0x0440;
+    _crcTable[16] = 0x0000;
+    _crcTable[17] = 0xCC01;
+    _crcTable[18] = 0xD801;
+    _crcTable[19] = 0x1400;
+    _crcTable[20] = 0xF001;
+    _crcTable[21] = 0x3C00;
+    _crcTable[22] = 0x2800;
+    _crcTable[23] = 0xE401;
+    _crcTable[24] = 0xA001;
+    _crcTable[25] = 0x6C00;
+    _crcTable[26] = 0x7800;
+    _crcTable[27] = 0xB401;
+    _crcTable[28] = 0x5000;
+    _crcTable[29] = 0x9C01;
+    _crcTable[30] = 0x8801;
+    _crcTable[31] = 0x4400;
+    _crcTable[32] = 0x0000;
+
+WORD GetArrayCRC16(DWORD tBuff , WORD lenBuff, DWORD Tcrc)
+{
+    //#REGISTER NONE
+
+    WORD crc = 0;
+    __asm
+    {
+        mov esi,tBuff          //;ptr to buffer
+        mov cx,lenBuff         //;length of buffer
+        cld                 //   ;set direction Move forward through the buffer
+        xor edx,edx         //   ;clear 32 bit registers
+        xor eax,eax
+        xor ebx,ebx
+        mov crc,dx           //  ;crc = dx
+        C1:
+        mov al,[esi]         //  ;move char indexed by esi into al
+        inc esi              //  ;increment char position
+        xor dx,ax            //  ; crc xor char
+        and dx,0x000F        //  ; crc and 0x000F?? = first crctable array element offset
+        mov bx,dx            //  ; keep in bx
+        mov dx,crc           //  ;put crc back in dx
+        xor dx,ax            //  ;crc xor char
+        and dx,0x00F0        //  ;(crc xor char) and 0x00F0
+        shr dx,4             //  ;((crc xor char) and 0x00F0) \ 16 )
+        add dx,16            //  ;((crc xor char) and 0x00F0) \ 16 ) + 16 = second crctable array element offset
+        mov eax,Tcrc         //  ;load eax with CRC table address
+        mov ax,[eax + ebx * 2]// ;load ax with CRC table array element @ first crctable array element offset
+        push ax               // ;save on stack
+        mov eax,Tcrc          // ;set table index
+        mov bx,[eax + edx * 2]// ;load bx with CRC table array element @ second crctable array element offset
+        pop ax                // ; restore ax with CRC table array element @ first crctable array element offset
+        xor ax,bx             // ;xor CRC table array values
+        mov dx,crc            // ; put crc in dx
+        shr dx,8              // ; CRC \ 256
+        and dx,0x00FF         // ; CRC = (CRC \ 256) AND 0x00FF
+        xor ax,dx             // ; xor'ed CRC table array values xor CRC
+        mov crc,ax           //  ;put CRC in crc variable
+        mov dx,crc            // ;put CRC in dx for next iteration
+        loop C1               // ; loop if cx not zero to end of string
+    }
+    return crc;
+}
+
+extern "C" __declspec(dllexport) int __stdcall Encode16CRC(unsigned int tBuff, short lenBuff)
+{
+    return 0;
+}
+
+GetArrayCRC16
+
+_crcTable
+
+GetArray32CRC
+
+
+extern "C" __declspec(dllexport) void __stdcall initCRCTable()
+{
+    _crcTable[0] = 0x0000;
+    _crcTable[1] = 0xC0C1;
+    _crcTable[2] = 0xC181;
+    _crcTable[3] = 0x0140;
+    _crcTable[4] = 0xC301;
+    _crcTable[5] = 0x03C0;
+    _crcTable[6] = 0x0280;
+    _crcTable[7] = 0xC241;
+    _crcTable[8] = 0xC601;
+    _crcTable[9] = 0x06C0;
+    _crcTable[10] = 0x0780;
+    _crcTable[11] = 0xC741;
+    _crcTable[12] = 0x0500;
+    _crcTable[13] = 0xC5C1;
+    _crcTable[14] = 0xC481;
+    _crcTable[15] = 0x0440;
+    _crcTable[16] = 0x0000;
+    _crcTable[17] = 0xCC01;
+    _crcTable[18] = 0xD801;
+    _crcTable[19] = 0x1400;
+    _crcTable[20] = 0xF001;
+    _crcTable[21] = 0x3C00;
+    _crcTable[22] = 0x2800;
+    _crcTable[23] = 0xE401;
+    _crcTable[24] = 0xA001;
+    _crcTable[25] = 0x6C00;
+    _crcTable[26] = 0x7800;
+    _crcTable[27] = 0xB401;
+    _crcTable[28] = 0x5000;
+    _crcTable[29] = 0x9C01;
+    _crcTable[30] = 0x8801;
+    _crcTable[31] = 0x4400;
+    _crcTable[32] = 0x0000;
+}
+
+extern "C" __declspec(dllexport) int __stdcall Encode16CRC(unsigned int tBuff, short lenBuff)
+{
+    return GetArrayCRC16(tBuff, lenBuff, (unsigned long)_crcTable);
+}
+
+extern "C" __declspec(dllexport) int __stdcall Encode32CRC(unsigned int tBuff, short lenBuff)
+{
+    return GetArray32CRC(tBuff, lenBuff, -1);
+}
+
+initCRCTable
+
+ int __stdcall Encode16CRC(unsigned int tBuff, short lenBuff)
+
+[DllImport("CRCEncoder.dll")]
+
+int __stdcall Encode32CRC(unsigned int tBuff, short lenBuff)
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\minyEncoder\Debug\CRCEncoder.dll
+
+initCRCTable
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\minyEncoder\Debug\CRCEncoder.dll
+
+Encode16CRC
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\minyEncoder\Debug\CRCEncoder.dll
+
+EncodeToNVFB3Data
+
+ byte[] _ret 
+
+Encode32CRC
+
+            ret.Add(ApplicationDomain);
+
+
+(ApplicationDomain);
+
+(BitConverter.GetBytes(Source));
+
+ret.AddRange(BitConverter.GetBytes(Destination));
+
+ret.AddRange(BitConverter.GetBytes(TimeCounter));
+
+ret.AddRange(BitConverter.GetBytes(EchoCounter));
+
+ret.AddRange(BitConverter.GetBytes(EchoValid));
+
+ret.AddRange(BitConverter.GetBytes(ApplicationDataSize));
+
+ret.AddRange(BitConverter.GetBytes(DataVersion));
+
+ret.AddRange(data);
+
+Encode32CRC
+
+short length = (short)(_ret.Length);
+
+ret.AddRange(data);
+
+_ret = temp.ToArray();
+
+length = (short)(_ret.Length);
+            short CRC16 = (short)Encode16CRC(ref _ret, length);
+
+ret.AddRange(BitConverter.GetBytes(CRC16));  //CRC
+
+&0x80
+
+header->ApplicationDomain
+
+SafetyRelatedCode2
+
+SAFETY_RELATED
+
+ExtractTheData
+
+https://www.youtube.com/watch?v=QdBs5jRIxWE
+
+https://www.youtube.com/watch?v=b4q3i5aw6XQ
+
+ BYTE *temp = NULL;
+    BYTE CRCChecks[6];
+    int datastart = (header->ApplicationDomain &0x80)?28:22;
+    int size = header->AppDataSize;
+
+    temp = (BYTE *)malloc(22 + size);
+
+    memcpy(temp, data, 22);
+    memcpy
+
+
+
+    if(temp != NULL) free(temp);
+
+*(DWORD *)(&output[APP_DATA_VER]) 
+
+https://www.youtube.com/watch?v=b4q3i5aw6XQ
+
+longCrc = GetArray32CRC((DWORD)temp, (22 + length), 0xFFFFFFFF);
+        shortCrc = GetArrayCRC16((DWORD)temp, (22 + (UINT16)length), (DWORD)_crcTable);
+
+CreateCRCTable
+
+ UInt16 Source = 0x02;
+            UInt16 Destination = 0x01;
+            UInt32 TimeCounter = (UInt32)Environment.TickCount;
+            UInt32 EchoCounter = ReceivedTimeCounter;
+            UInt16 EchoValid = 0x55aa;
+            UInt16 ApplicationDataSize = 20;
+            UInt32 DataVersion = 1;
+
+ byte ApplicationDomain = 0xa3;
+            byte MessageType = 0xa3;
+            UInt16 Source = 0x02;
+            UInt16 Destination = 0x01;
+            UInt32 TimeCounter = (UInt32)Environment.TickCount;
+            UInt32 EchoCounter = ReceivedTimeCounter;
+            UInt16 EchoValid = 0x55aa;
+            UInt16 ApplicationDataSize = 20;
+            UInt32 DataVersion = 1;
+
+(UInt32)Environment.TickCount;
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\minyEncoder\Debug\CRCEncoder.dll
+
+CheckTheIntegrity
+
+WORD CheckTheIntegrity(NVFB_header* header, const BYTE* input, BYTE *data)
+
+CheckThe16BitCRC
+
+WORD CheckTheIntegrity(NVFB_header* header, const BYTE* input, BYTE *data)
+
+ byte[] _ret = null;
+
+CheckTheHeaderCRCs
+
+CheckThe16BitCRC
+
+(header->ApplicationDomain&0x80)
+
+CheckThe16BitCRC
+
+ if(header->ApplicationDomain &0x80)
+    {
+        if(CheckTheHeaderCRCs(header, (const BYTE *)input) == 0)
+        {
+            return 0;
+        }
+    }
+
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header)
+

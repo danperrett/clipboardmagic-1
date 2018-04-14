@@ -1,0 +1,232 @@
+WORD CompareTwoSHA1Digests(const char* signedDigest, const char* message)
+
+WORD CompareSignedInfoElement(XMLElement* signature, SignatureInformation_t *signatureInformation, const char* SignatureString)
+
+CheckTheRSAEncryptionOfSignedInfo(SignatureString, _signatureValue, signatureInformation->rsaKey);
+
+WORD CheckTheRSAEncryptionOfSignedInfo(const char* signature, BYTE *SignatureValue, RSA *rsaKey)
+
+WORD CheckThex509Certificate(BYTE *certificate, SignatureInformation_t *signatureInformation)
+
+WORD StartDecode(const char* input, Message_t  *message, ConnectionListInformation_t *connectionInformation)
+
+void decodeHeaderElement(XMLElement *header, Message_t *message)
+
+void decodeBodyElement(XMLElement *body, Message_t *message, DWORD ConnectionID)
+
+void decodeInterlockingElement(XMLElement *interlocking, Interlocking_t *interlocking_t, DWORD SequenceNumber, DWORD ConnectionID)
+
+void handleResponseMessage(const BYTE *ResponseMessage, char* UniqueID, eNVFB3_element_t NVFB3_element, WORD ConnectionID)
+
+static void DealWithIncomingNVF3BData(NVFB3_INFO_e info, const char* data, char *UniqueID, DWORD SequenceNumber, DWORD ConnectionID)
+
+Function	Purpose
+
+DWORD DoProcessDiagnosticAlarms(DiagnosticAlarms_t* diagnosticAlarms)
+
+void DoProcessGeneratedAlarms(GeneratedAlarms_t *generatedAlarms)
+
+void PopulateSpad(SPAD_unbounded_t *spad, WORD iIxl, WORD ConnectionID)
+
+static int PopulateIndication(Interlocking_limited_t *Interlocking, WORD iIxl, WORD ConnectionID)
+
+Get the indication block for this interlocking, convert it to NVFB3 and add
+* it to the passed interlocking element
+
+static int PopulateStatusByte(Interlocking_limited_t *Interlocking, WORD iIxl, WORD ConnectionID)
+
+ Get the status byte for this interlocking, convert it to NVFB3 and add
+* it to the passed interlocking element
+
+DWORD DoProcessEmergencyAlarms(NVFB3_t* EmergencyAlarms, WORD ConnectionID)
+
+Called unconditionally every XML tick to send a NVBF message of the
+* emergency alarm bitmap of the S-RIF
+
+static int DoProcessTDInterpose(char *pTDEvent, Interpose_unbounded_t* Interpose)
+
+Add the passed interpose message to the pending structure
+
+Function	Purpose
+
+void HandleNVF3DecodeRequest(NVFB3_INFO_e info, NVFB_input_t *input)
+
+Called on receipt of CONTROL_REQUEST and ARSSUBAREA commands from Iconis to
+* pass the command on to the interlocking and queue a response to Iconis
+
+WORD HandleControlRequestData(NVFB_input_t* input)
+
+ Handle a NVFB3 ControlRequest message from Iconis.  This message is a
+* bitmap with a bit for each possible command.  S-RIF iterates through bits set
+* in the bitmap, sending the relevant control message to MCS for each.  The bitmap
+* is sent even if no commands are required, but is not passed on to the MCS if it
+* is empty
+
+WORD GenericDecodeNVFB3(const BYTE* input, NVFB3_Information* info, BYTE* output,
+                        char *UniqueID, eNVFB3_element_t element_type, WORD ConnectionID)
+
+Fuction to decode and validate a received NVFB3 message into the buffer
+* output.
+
+WORD DecodeNVFB3(const BYTE* input, BYTE* data, NVFB_header* header)
+
+WORD CheckTheAuthenticity(NVFB_header* header, NVFB3_config_t *NVFB3_config)
+
+RX Function Verifies the authenticity of each message received
+Application Domain, Source Address and Destination Address Fields shall correspond to a value define in the configuation data
+MsgType field shall be one ot the permitted MsgType field values.
+DataVer field shall correspond to the value defined in the system configuration phase. Messages with DataVer field at Zero shall always be accepted.
+
+WORD CheckSequenceCorrect(NVFB_header* header, NVFB3_context_t *NVFB3_context)
+{
+
+Checks the Sequence of each message
+ReceivedTimeCounter > LastReceivedTimeCounter
+
+WORD CheckTimelinessAlgorithm(NVFB_header* header, NVFB3_context_t *NVFB3_context, DWORD DDelay)
+
+The Timeliness Check algorithm must verify the ECHO VALID and ECHO Counter fields
+if the ECHO VALID field is FALSE the packet received must be discarded. Otherwise
+ECHO COUNTER field of the message received must be compared with the time of the
+receiver if the value is bigger than the FreshTolerance threshold the packet must
+be discarded.
+
+Check Timeliness of each  message received
+The Timeliness Check algorithm must verify the ECHO VALID and ECHO Counter fields
+if the ECHO VALID field is FALSE the packet received must be discarded. Otherwise
+ECHO COUNTER field of the message received must be compared with the time of the
+receiver if the value is bigger than the FreshTolerance threshold the packet must
+be discarded.
+
+void CheckCounterTolerance(NVFB3_context_t *NVFB3_context, DWORD DDelay)
+
+Counter Tolerance check Algorithm must verify if the two tolerences
+TimerCounterValidTolerance and EchoValidTolerance are exceeded.  If so flag
+them as stale to force themm to reinitialise from the next exchange of messages.
+
+
+WORD DoTCPSocketCode(HWND hWnd, WPARAM wParam, LPARAM lParam)
+
+Handle the Windows events regarding this Socket
+
+WORD InitialiseTCPSocket(HWND hWnd, int PortNumber)
+
+DWORD SendOverSocket(DWORD Socket, const char* data, int length)
+
+Function	Purpose
+
+DWORD EncodeICONISIFMessageForTransmision(char* outBuffer, Message_t *message, ConnectionListInformation_t *connectionInformation) //supply a suitable length buffer
+
+static void AddBodyInformationToXMLDocument(Body_t* body, XMLElement* Body, XMLDocument* doc)
+
+static void AddHeaderInformationToXMLDocument(Header_t* header, XMLElement* Header, XMLDocument* doc)
+
+Function	Purpose
+
+DWORD WINAPI MSCCE_THREAD( LPVOID lpParam )
+
+Thread callback function to form the comms interface to the MCS-CE.      */
+/*   Loops forever, looking for message inputs and queuing them for           */
+/*   incorporation into the XML report messages for the Iconis system         */
+/*   Initialisation code opens a socket and connects as client to the MCS-CE. */
+/*   It then sends a link up alarm to Iconis, starts a line activity timer and*/
+/*   then enters its main loop.
+
+static void FormNextMessage()
+
+static void FormControlRequest(BYTE iIxl, int bitmap_size, BYTE* bitmap)
+
+static void MSCCE_outputs()
+
+This function implements the state machine controlling output to an TMS  */
+/*   channel, implementing the PS/0009 type ACK/NAK message protocol.         */
+/*   Action is performed according to output state machine stages
+
+static char SendData(char stage)
+
+This function implements the transmission of output message data during  */
+/*   state machine stage OUT_SEND, by extracting each character from the      */
+/*   transmit array, and outputting it. The function inserts the DLE          */
+/*   character before ACK, NAK, DLE, STX or ETX characters in the body of the */
+/*   message.      
+
+static void send_AckNack(void)
+
+This function send an ack or nak according to the state of the           */
+/*   related flags
+
+This interface sends 2 message types to the MCS-CE, being Control Requests and
+// ARS subarea status messages
+
+This function takes a bitmap sent by the Iconis system and builds a   */
+/*      TC message containing a panel command number for each bit set in the  */
+/*      bitmap
+
+ 
+
+Function	Purpose
+
+void MCS_SetLinkActive(BYTE linkActive, WORD iIxl)
+
+Called when a TI message is received from the MCS-CE.  This function updates
+* the link status of the interlocking in question and queues a diagnotic alarm.
+* Also called at startup time to set the link FALSE until we receive the first
+* valid TI from each interlocking.  This is to allow the Iconis to distinguish
+* good indications from uninitialised data as they are sent unconditionally
+
+WORD MCS_SetStatusByte(BYTE statusByte, WORD iIxl)
+
+WORD MCS_AddSpadData(BYTE *spadData, WORD iIxl)
+
+void MCS_SetControlRequestBit(WORD iIxl, WORD iPanelNumber)
+
+void MCS_SetSpadBit(WORD iIxl, WORD iSignalNumber)
+
+MCS_SetControlRequestBit
+
+MCS_AddSpadData
+
+MCS_SetControlRequestBit
+
+void process_PS9_TA_message(const unsigned char *message, int length)
+
+void process_PS9_TI_message(const unsigned char *message, int length)
+
+void process_PS9_CB_message(const unsigned char *message, int length)
+
+MCS_SetLinkActive(
+
+WORD MCS_SetIndication(BYTE *indicationData, WORD iIxl)
+
+void MCS_SetLinkActive(BYTE linkActive, WORD iIxl)	Called when a TI message is received from the MCS-CE.  This function updates the link status of the interlocking in question and queues a diagnotic alarm.
+Also called at startup time to set the link FALSE until we receive the first
+valid TI from each interlocking. This is to allow the Iconis to distinguish good indications from uninitialised data as they are sent unconditionally
+
+
+	
+
+WORD MCS_SetStatusByte(BYTE statusByte, WORD iIxl)	Set interlocking Status Byte to be transmitted to the ICONIS Safety gateway.
+
+process_PS9_TA_message
+
+TI_message
+
+process_PS9_TI_message
+
+void MCS_AddEmergencyAlarmMap(BYTE *input)
+
+WORD MCS_getEmergencyAlarmMap(BYTE *output)
+{
+
+BYTE MCS_get_status_byte(int iIxl)
+
+WORD MCS_get_Ixl_SSIID(int iIxl, BYTE *output)
+
+SetIndication
+
+Matt Randall
+
+ Emma Dixon
+
+void process_PS9_CA_message(const unsigned char *message, int length)
+

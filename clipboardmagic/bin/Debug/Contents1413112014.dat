@@ -1,0 +1,42 @@
+ interactiveEvents.NotifyGenericeLTEEvent("Attach Request", currentCell.CellID);
+
+InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+
+ InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+            interactiveEvents.NotifyGenericeLTEEvent("PDN Connectivity Request", currentCell.CellID);
+
+ //signal to MMI that we have received this
+                InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+                interactiveEvents.NotifyGenericeLTEEvent("PDN Connectivity Request", currentCell.CellID);
+
+cellWrapper
+
+GUIMessageString
+
+string GUIMessageString = msg.MsgType.ToString().Replace('_', ' ');
+
+ InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+                interactiveEvents.NotifyGenericeLTEEvent(GUIMessageString, cellWrapper.CellConfiguration.CellID);
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+TestStatus
+
+TestVerdict
+
+ TestStatus = TESTSTATUS.CODE_SUCCESS;
+            TestVerdict = TESTVERDICTS.PASS_VERDICT;
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+P:\Today\DanP\LteInteractive.zip
+
+m_SASProcess
+
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\SAS2G3GSimulation\SAS2G3GSimulation\bin\Debug
+
+SAS2G3GSimulation.exe
+
+PROCEDURE complete LOCATION UPDATE MO G Cell G
+
+

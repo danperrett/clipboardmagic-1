@@ -1,0 +1,212 @@
+InsertReadResponseClick
+
+READ_RESPONSE_MT
+
+							
+	Folder		Script Name	Band	Description	Support	
+	LTE InterPlay						
+			1 - AttachIgnoreExample.ISC	LTE: 7 	Example Interactive Programmed Play Script. Start of waiting for and Attach Request which it will reject then immediately update the cell, to Ignore the next request. Once the next Attach Request has been ignored it will update the Cell to Reject the next Attach Request.This continues until the end where a Post Process analysis takes place which will count then number of attach requests and measure the time between them.	Supported and Verified	
+			2 - AttachDetach.ISC	LTE: 7 	Basic Attach Detach example  Interactive Programmed Play Script. Activates Cell A, waits for 'Attach Complete', sends network detach, wait for 'Connection Release', then deactivates cell.	Supported and Verified	
+			3 - WaitForTackingAreaUpdate.ISC	LTE: 7 	Wait for Tracking Area Update example  Interactive Programmed Play Script. Activates Cell, sets inactivity timer to 5 sec,  waits for 'Attach Complete', waits for the 'Release' to occur. Then will wait for the 'Tracking Area Update '. After this has happened the 'Network Detach' will happen and then the cell is deactivated.	Supported and Verified	
+			4 - HandoverCellAtoB.ISC	LTE: 7 	Handover from Cell A to B example  Interactive Programmed Play Script.  Activate Cell A and Cell B, wait for 'Attach Complete' on cell A, intiate network handover to cell B, wait for 'Reconfigure' to Cell B then initiate Network Detach.	Supported and Verified	
+			5 - AttachIgnoreExample-Exp.ISC	LTE: 7 	Shortended version of Example Script 1. The Scenarios and cell definitions are Explicitly defined within the script file, so it does not rely on outside files.	Supported	
+	Automation						
+			AMR_MM_SASside_VoLTE.xml	N/A	"This is an example message file which will be installed in C:\AniteSAS\Configuration\User Configuration\TAG Message Files
+It can be used to run the following scripts:  26-VoLTE-MO-Call.ssc,  38 - VoLTE-MO-Call_SRVCC_to_UTRAN.ssc, 39 - VoLTE-MO-Call_with_PS_RAB_SRVCC_to_UTRAN.ssc and 40 - VoLTE-MO-Call- Flexible-Bearer-Setup.ssc"		
+							
+
+
+							
+	Folder		Script Name	Band	Description	Support	
+	LTE						
+			74 - IMS Conversational Video MO Call.ssc	LTE: 4	Example script to demonstrate IMS MO video call	Supported	
+			75 - IMS Conversational Video MT Call.ssc	LTE: 4	Example script to demonstrate IMS MT video call	Supported	
+			76 - Carrier Aggregation CAT4.ssc	LTE: 2, 4	Example script to demonstrate carrier aggregation (CAT4)	Supported	
+			77 - Carrier Aggregation CAT6.ssc	LTE: 3, 7	Example script to demonstrate carrier aggregation (CAT6)	Supported	
+			78 - IE List Processing - Rel 8.ssc	LTE: 4	Example script to demonstrate IE List Processing using R8 information elements	Supported	
+			79 - IE List Processing - Rel 10.ssc	LTE: 4	Example script to demonstrate IE List Processing using R10 information elements	Supported	
+							
+
+
+							
+
+
+
+
+
+	
+
+
+73 - Maximum Downlink Data Rate TM3 Cat3 Cat4 [Band 3].ssc
+
+
+LTE: 3
+
+
+Example script to demonstrate maximum downlink capability for either Cat3 or Cat4 UEs
+
+
+Supported
+
+
+
+
+
+Supported
+
+
+Example script to demonstrate maximum downlink capability for either Cat3 or Cat4 UEs
+
+
+LTE: 3
+
+
+73 - Maximum Downlink Data Rate TM3 Cat3 Cat4 [Band 3].ssc
+
+
+
+
+
+							
+	Folder		Script Name	Band	Description	Support	
+	LTE InterPlay						
+			1 - AttachIgnoreExample.ISC	LTE: 7 	Example Interactive Programmed Play Script. Start of waiting for and Attach Request which it will reject then immediately update the cell, to Ignore the next request. Once the next Attach Request has been ignored it will update the Cell to Reject the next Attach Request.This continues until the end where a Post Process analysis takes place which will count then number of attach requests and measure the time between them.	Supported and Verified	
+			2 - AttachDetach.ISC	LTE: 7 	Basic Attach Detach example  Interactive Programmed Play Script. Activates Cell A, waits for 'Attach Complete', sends network detach, wait for 'Connection Release', then deactivates cell.	Supported and Verified	
+			3 - WaitForTackingAreaUpdate.ISC	LTE: 7 	Wait for Tracking Area Update example  Interactive Programmed Play Script. Activates Cell, sets inactivity timer to 5 sec,  waits for 'Attach Complete', waits for the 'Release' to occur. Then will wait for the 'Tracking Area Update '. After this has happened the 'Network Detach' will happen and then the cell is deactivated.	Supported and Verified	
+			4 - HandoverCellAtoB.ISC	LTE: 7 	Handover from Cell A to B example  Interactive Programmed Play Script.  Activate Cell A and Cell B, wait for 'Attach Complete' on cell A, intiate network handover to cell B, wait for 'Reconfigure' to Cell B then initiate Network Detach.	Supported and Verified	
+			5 - AttachIgnoreExample-Exp.ISC	LTE: 7 	Shortended version of Example Script 1. The Scenarios and cell definitions are Explicitly defined within the script file, so it does not rely on outside files.	Supported	
+	Automation						
+			AMR_MM_SASside_VoLTE.xml	N/A	"This is an example message file which will be installed in C:\AniteSAS\Configuration\User Configuration\TAG Message Files
+It can be used to run the following scripts:  26-VoLTE-MO-Call.ssc,  38 - VoLTE-MO-Call_SRVCC_to_UTRAN.ssc, 39 - VoLTE-MO-Call_with_PS_RAB_SRVCC_to_UTRAN.ssc and 40 - VoLTE-MO-Call- Flexible-Bearer-Setup.ssc"		
+							
+
+
+							
+
+
+79 - IE List Processing - Rel 10.ssc
+
+
+LTE: 4
+
+
+Example script to demonstrate IE List Processing using R10 information elements
+
+
+Supported
+
+
+
+
+
+Supported
+
+
+Example script to demonstrate IE List Processing using R10 information elements
+
+
+LTE: 4
+
+
+79 - IE List Processing - Rel 10.ssc
+
+
+75 - IMS Conversational Video MT Call.ssc
+
+
+LTE: 4
+
+
+Example script to demonstrate IE List Processing using R8 information elements
+
+
+Supported
+
+
+80-MRAT_Attach_Detach_Notify_SAS2G3G
+
+The Regency
+
+Supported
+
+The Regency
+
+Supported
+
+79 - IE List Processing - Rel 10.ssc
+
+
+75 - IMS Conversational Video MT Call.ssc
+
+
+LTE: 4
+
+
+Example script to demonstrate IE List Processing using R8 information elements
+
+
+Supported
+
+
+80-MRAT_Attach_Detach_Notify_SAS2G3G
+
+The Regency
+
+Supported
+
+The Regency
+
+
+annum 
+
+        public void doProcessGenNotificationSASUtranGeranElement(Sequencer_Struct _SequenceElement, bool _TimerProcessed)
+
+
+doProcessGenNotificationSASUtranGeranElement
+
+LogGUIMessageToRTT
+
+RealTimeTraceLog
+
+RealTimeTraceLog.InfoWithLineNumber
+
+   RealTimeTraceLog.InfoWithLineNumber(_SequenceElement.ElementIndex, "Notifying SAS 2G3G");
+
+ SASDebugLogger.InfoLog("SqDr: doProcessSynchronizationPointElement - Failed to complete _ElementIndex=" + _SequenceElement.ElementIndex.ToString());
+                    FireEventStopScript(GetLineNumberAtIndex(_SequenceElement.ElementIndex), Cause.UnexpectedError);
+
+doProcessGenNotificationSASUtranGeranElement
+
+SASDebugLogger.InfoLog("SqDr:
+
+ SASDebugLogger.InfoLog("SqDr: doProcessGenNotificationSASUtranGeranElement 
+
+InfoWithLineNumber
+
+Unexpected Uplink Message
+
+Add	SequencerGUI/Schema/Conversions/ConvertFrom_V14_8_to_V15_0.cs	1.1		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:56:03 BST 2014		uk-flt-mks10.myanite.com:7101
+Add	SequencerGUI/ElementDataHandlers/HandleGeneralNotificationForSAS2G3G.cs	1.1		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:56:04 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerGUI/DragDropClassDefinitions/ElementTreeInitialisation.cs	1.39.1.13		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:49 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerDriver/Script.cs	1.103		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:47 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerGUI/SASLTESequencer.csproj	1.129.1.46.1.2		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:52 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerDriver/Sequencer_Driver.cs	1.236		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:49 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerGUI/Schema/ScriptSchema.cs	1.160		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:43 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerGUI/Utils.cs	1.120		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:41 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerGUI/Schema/ConvertScriptToCurrentSchema.cs	1.64		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:40 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerDriver/UtranGeran/UtranGeran.cs	1.39		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:46 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerInterfaces/SequencerStructures.cs	1.68.1.17		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:46 BST 2014		uk-flt-mks10.myanite.com:7101
+Update	SequencerGUI/Schema/ScriptSchema.xsd	1.157		/SAS/LTE Sequencer/Code/Code.pj	Thu Aug 07 13:55:45 BST 2014		uk-flt-mks10.myanite.com:7101
+
+Release 28.0.0.0 {0180}
+
+FILES.MessageElements = "C:\\AniteSAS\\Configuration\\Sequencer\\ProtocolMessageElements.xml"
+
+C:\\AniteSAS\\Configuration\\Sequencer\\ProtocolMessageElements.xml
+
+http://ci.apache.org/projects/httpd/trunk/doxygen/group__APACHE__CORE__COOKIE.html
+
+ap_cookie_read
+
+Sam Dibas 
+

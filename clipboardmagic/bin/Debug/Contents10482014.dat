@@ -1,0 +1,42 @@
+getClipboardText
+
+clipboardmagic
+
+backupToServer
+
+string username, string password
+
+  WebProxy wProxy = (WebProxy)WebProxy.GetDefaultProxy();
+                wProxy.Credentials = new NetworkCredential("dan.perrett", "password", "MYANITE");
+                wProxy.Credentials = (System.Net.NetworkCredential)System.Net.CredentialCache.DefaultCredentials;
+
+ System.Net.GlobalProxySelection.Select = wProxy;
+
+string URI = "http://www.danperrett.com:8000/uploadFile";
+
+http://www.danperrett.com:8000/getClipboardText?
+
+http://www.danperrett.com:8000/ClipBoardData
+
+ WebUpload wc = new WebUpload(5*60*1000);
+                wc.Proxy = wProxy;
+
+ SetAllowUnsafeHeaderParsing20();
+
+ wc.Headers["Content-type"] = "image/jpg";
+                wc.QueryString["directory"] = project + "/" + file;
+                wc.QueryString["username"] = username;
+                wc.QueryString["password"] = password;
+
+wc.QueryString["password"]
+
+data
+
+ wc.UploadFileCompleted += new UploadFileCompletedEventHandler(wc_UploadFileCompleted);
+                byte[] ret_b = wc.UploadFile(URI, filename);
+                ret = System.Text.ASCIIEncoding.ASCII.GetString(ret_b);
+
+output
+
+backupToServer
+

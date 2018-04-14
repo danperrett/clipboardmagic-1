@@ -1,0 +1,90 @@
+update.UpdateCellPath
+
+private void rootRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rootRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string fullPath;
+                if (pathType != "Full")
+                {
+                    fullPath = folderPref + "\\" + filename;
+                    fullPath = DIR.GetFileFullPath(false, fullPath);
+                }
+                else
+                {
+                    fullPath = filename;
+                }
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                setScenarioPath(filename, folderPref, fullPath);
+
+
+                pathType = "RelativeToUTRAN_GERANDirectory";
+            }
+        }
+
+    private void rootRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rootRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string Path;
+                if (pathType != "Full")
+                {
+                    Path = folderPref + "\\" + filename;
+                    Path = DIR.GetFileFullPath(false, Path);
+                }
+                else
+                {
+                    Path = filename;
+                }
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                setScenarioPath(filename, folderPref, Path);
+
+
+                pathType = "RelativeToUTRAN_GERANDirectory";
+            }
+        }
+
+ : base("14.5", "14.6", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+
+(Dictionary<string, ConvertFromBase> _ConverterDict)
+
+ProtocolVersion
+
+R8_2009_03
+
+(Dictionary<string, ConvertFromBase> _ConverterDict)
+
+, _ConverterDict)
+
+mapper.Initialise
+
+C:\\Program Files\\Anite\\SAS LTE Sequencer\\FieldValueMaps\\ProtocolFieldValueMappingDB.xml"
+
+m_Trunk_Converter_Info
+
+m_Trunk_Converter_Info.Versions.Add("14.6");
+
+namespace Anite.Interactive.Utils
+
+
+Interactive
+
+public enum TransmissionMode
+    {
+        TM1,
+        TM2,
+        TM3,
+        TM4,
+        TM6,
+        TM7,
+        TM8
+    }
+
+ConvertScriptToCurrentSchema
+
+GetCurrentScriptVersion
+
+XML.DeSerialise
+

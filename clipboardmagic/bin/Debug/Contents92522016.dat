@@ -1,0 +1,221 @@
+GetRichEditCtrl().LineScroll(1, 0);
+    //GetRichEditCtrl().ScrollWindow(0, 200)
+
+SetScrollPos
+
+SCROLLINFO info;
+
+edit->GetScrollInfo(SB_VERT, &info);
+edit->SetScrollPos(SB_VERT,info.nMax);
+
+GetRichEditCtrl()
+
+CodeTextBox
+
+CodeTextBox.BackColor = Color.White;
+
+       GoButton.Enabled = false;
+
+GoButton.Enabled = false;
+
+GoButton.Enabled = true;
+
+void swap(char* first, char* second)
+
+void LetterForm::interleave(char* buffer, int length)
+
+void LetterForm::simpleEncrypt(short* input, int length, short* output, short keyword)
+
+void simpleEncrypt(short* input, int length, short* output, short keyword)
+
+Encrypter
+
+  void Encrypt(char^ input, int length, char^ output, short keyword);
+    private:
+        void swap(char* first, char* second);
+        void interleave(char* buffer, int length);
+        void simpleEncrypt(short* input, int length, short* output, short keyword);
+
+Encrypter
+
+EncryptingLibrary
+
+Encrypter
+
+void Encrypt(char^ input, int length, char^ output, short keyword);
+
+void Decrypt(char^ input, int length, char^ output, short keyword);
+
+Encrypter::
+
+  unsigned short primenumberlist[16] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53};
+    unsigned short keywordlist[16] = {0};
+    int count = 0;
+    for(int n = 0; n < 16; n++)
+    {
+        keywordlist[n] = (short)keyword*primenumberlist[n];
+    }
+
+    for(int n = 0; n < length; n++)
+    {
+        output[n] = input[n] ^ keywordlist[(count+keyword)&0xF];
+        count++;
+    }
+
+ register int count = length/10;
+
+    for(register int n = 0; n < count; n+=10)
+    {
+        swap(&buffer[2+n], &buffer[7+n]);
+        swap(&buffer[8+n], &buffer[9+n]);
+        swap(&buffer[0+n], &buffer[5+n]);
+        swap(&buffer[1+n], &buffer[4+n]);
+        swap(&buffer[3+n], &buffer[6+n]);
+    }
+
+
+//2, 8, 0, 1, 3
+//7, 9, 5, 4, 6
+
+    *first ^= *second;
+    *second ^= *first;
+    *first ^= *second;
+
+      int length = bytes.Length;
+                        if ((length % 2) > 0)
+                        {
+                        }
+
+  if ((length % 2) > 0)
+                        {
+                        }
+
+C:\StarTeam\48SA022 Sapphire T48 X86 Applications\#E - RIF\software\Documentation\Module Testing\48SA022E-TES-0001 SSL S-RIF Prototype Software Module Test Spec.pdf
+
+C:\StarTeam\48SA022 Sapphire T48 X86 Applications\#E - RIF\software\Documentation\Module Testing\48SA022E-TES-0001 SSL S-RIF Prototype Software Module Test Spec.doc
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+array<BYTE^>^ by
+
+(array<BYTE^>^ input, int length, array<BYTE^>^ output, short keyword)
+
+(array<unsigned char>^ input, int length, array<unsigned char>^ output, short keyword)
+
+byte[] output
+
+   output = new byte[length];
+
+simpleEncrypt
+
+unsigned char *c_output
+
+= new unsigned char[length + 1];
+
+c_output[0] =  new unsigned char[length + 1];
+
+c_output =  new unsigned char[length + 1];
+
+interleave(chasrs_, length);
+
+ c_output[0] = 0x1;
+
+1019
+
+1549
+
+2143   
+
+683    
+
+1039   
+
+821    
+
+2851   
+
+271    
+
+557    
+
+139    
+
+563    
+
+8647   
+
+8423   
+
+using (BinaryWriter writer = new BinaryWriter(File.Open(fileName, FileMode.Create)))
+        {
+
+localFileName
+
+EncryptFileTextBox.Text
+
+test = new byte[output.Length - 2];
+
+unsigned char *c_input = new unsigned char[length];
+        for(int n = 0; n < length; n++)
+        {
+            c_input[n] = input[n];
+        }
+
+interleave((unsigned char *)&c_output[1], length);
+
+c_output = new unsigned char[length-1];
+
+  for(int n = 0; n < length+1; n++)
+        {
+            output[n] = c_output[n];
+        }
+
+ unsigned char *temp = new unsigned char[length+1];
+
+memcpy(temp, c_output, length);
+
+ simpleEncrypt((short *)c_input, length/2, (short *)&c_output[1], keyword);
+
+[DllImport("msvcrt.dll")]
+private static extern int memcmp(IntPtr b1, IntPtr b2, long count);
+
+using System.Runtime.InteropServices;
+using System.Diagnostics
+
+ byte[] test;
+                            if(output[0] == 1)
+                            {
+                               test = new byte[output.Length - 2];
+                            }
+                            else
+                            {
+                                test = new byte[output.Length - 1];
+                            }
+                            encrypter.Decrypt(output, output.Length, test, (short)LocalCode);
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+SequenceNumber
+
+10000
+
+ if (line.Contains("</Envelope>"))
+                    {
+
+\\192.168.1.80\d$\SRIFLogs\aaa.dat
+
+N:\Girish
+
+EncryptFileTextBox.Text
+
+using (BinaryWriter writer = new BinaryWriter(File.Open(EncryptFileTextBox.Text + ".ec", FileMode.Create)))
+                            {
+                                writer.Write(output);
+                            }
+
+EncryptFileTextBox.Text
+
+CheckAndEnableGoButton
+

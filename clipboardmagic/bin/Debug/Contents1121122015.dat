@@ -1,0 +1,125 @@
+stuart.squibb@ge.com
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+The Receive difference
+
+ EnterCriticalSection(&Receiving);
+
+totalreceived
+
+TimediffernceAverage
+
+timeDifference;
+
+connectionInformation->connectionInformation.TimediffernceAverage
+
+connectionInformation->connectionInformation.totalreceived++;
+
+ UINT64 totalreceived;
+    WORD TimediffernceAverage;
+
+ConnectionStats
+
+ConnectionStats_t
+
+MaxMinDifference_t
+
+ConnectionList[n].
+
+ConnectionList[n].connectionInformation.stats.
+
+connectionInformation->connectionInformation.stats.
+
+connectionInformation->connectionInformation.stats.maxdiff.diff
+
+timeDifference
+
+connectionInformation->connectionInformation.stats.maxdiff.diff
+
+connectionInformation->connectionInformation.stats.maxdiff.diff = (timeDifference > connectionInformation->connectionInformation.stats.maxdiff.diff)? timeDifference :
+                                                                            connectionInformation->connectionInformation.stats.maxdiff.diff;
+
+mindiff
+
+WORD printConnectionInformationToString(char *output, WORD n)
+{
+    sprintf(output, "Connection Information for connection number %d ", n);
+
+    if(ConnectionList[n].connectionInformation.InUse)
+    {
+
+WORD printConnectionInformationToString(char *output, WORD n)
+{
+    sprintf(output, "Connection Information for connection number %d ", n);
+
+    if(ConnectionList[n].connectionInformation.InUse)
+    {
+        char local[100] = {0};
+        sprintf(local, ": Unit %s ", ConnectionList[n].connectionInformation.SourceUnitID.value);
+        strcat(output, local);
+        ZeroMemory(local, 100);
+        sprintf(local, ": IP %s ", ConnectionList[n].connectionInformation.ipaddress);
+        strcat(output, local);
+        ZeroMemory(local, 100);
+        sprintf(local, ": Status %d ", (WORD)ConnectionList[n].connectionInformation.linkStatus);
+        strcat(output, local);
+        ZeroMemory(local, 100);
+        sprintf(local, ": Source Status %s ", ConnectionList[n].connectionInformation.SourceStatus.value);
+        strcat(output, local);
+        ZeroMemory(local, 100);
+        sprintf(local, ": time of last received %d ", ConnectionList[n].connectionInformation.TimeOfLastReceive);
+        strcat(output, local);
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+(WORD)ConnectionList[n].connectionInformation.stats.maxdiff.
+
+Max diff %d sn %d
+
+(WORD)ConnectionList[n].connectionInformation.stats.maxdiff.diff, (WORD)ConnectionList[n].connectionInformation.stats.maxdiff.sequenceNumber);
+
+WORD printConnectionStatInformationToString(char *output, WORD n)
+
+SendTextToWindow(debug, ALWAYS);
+
+(connection->connectionInformation.TimeOfLastReceive + AppInit.IconisReceiveTimeout
+
+EnterCriticalSection(&Receiving);
+
+LeaveCriticalSection(&Receiving);
+
+currentMiliseconds
+
+AppInit
+
+connectionInformation->connectionInformation.stats.totalreceived
+
+timeDifference > connectionInformation->connectionInformation.stats.maxdiff.diff
+
+timeDifference < connectionInformation->connectionInformation.stats.mindiff.diff
+
+            if(
+
+
+timeDifference < connectionInformation->connectionInformation.stats.mindiff.diff
+
+connectionInformation->connectionInformation.stats.mindiff
+
+DelayTextBox
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+// 
+
+** Disabled for now**
+
+Trouble with 
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+

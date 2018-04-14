@@ -1,0 +1,10 @@
+Nilofar Nari
+
+time_t->Current.value[0]
+
+Time
+
+time_t->Current.value
+
+"XMLReceiveTime:", time_t->Current.value, ALWAYS);
+

@@ -1,0 +1,27 @@
+John Ball 
+
+ Hannah South
+
+C:\StarTeam\48SA007 Generic Logger\Software\Source Code\Logger\Installation\ODBC
+
+C:\StarTeam\48SA007 Generic Logger\Software\Source Code\Logger\Logger Install\SystemDlls\MYODBC.DLL
+
+C:\StarTeam\48SA007 Generic Logger\Software\Source Code\Logger\Logger Install\SystemDlls\DLPORTIO.dll
+
+Test 1(I): Received All Data from TCP Connection 0
+
+Test 1(II) Test1(III) Unknown or Error with Receive length
+
+a.	Within the Simulator set the output length to
+
+b.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+
+a.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+
+ICONIS-1-Unit-c
+
+ if(connectionInformation != NULL)
+    {
+
+Socket
+

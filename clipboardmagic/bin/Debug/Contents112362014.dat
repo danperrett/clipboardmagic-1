@@ -1,0 +1,155 @@
+ <xs:element name="PathType" type="xs:string" />
+
+          if ((fullPathRadio.Checked == true) && (pathType != "Full"))
+            {
+                string filename = scenarioPath.Text;
+                string fullPath = folderPref + "\\" + filename;
+                fullPath = DIR.GetFileFullPath(false, fullPath);
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                scenarioPath.Text = fullPath;
+                pathType = "Full";
+            }
+
+          if (scriptsRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string fullPath;
+                if (pathType != "Full")
+                {
+                    fullPath = folderPref + "\\" + filename;
+                    fullPath = DIR.GetFileFullPath(false, fullPath);
+                }
+                else
+                {
+                    fullPath = filename;
+                }
+                if (String.IsNullOrEmpty(UserPreferences.DefaultScript) || !System.IO.File.Exists(UserPreferences.DefaultScript))
+                {
+                    folderPref = UserPreferences.FolderPreferences.ScriptRootDir;
+                }
+                else
+                {
+                    folderPref = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript);
+                }
+
+                setScenarioPath(filename, folderPref, fullPath);
+
+                pathType = "RelativeToScriptLocation";
+            }
+
+    private bool setScenarioPath(string filename, string folderPref, string fullPath)
+        {
+            if (String.IsNullOrEmpty(filename) == false)
+            {
+                if (scriptsRadio.Checked || rootRadio.Checked)
+                {
+                    try
+                    {
+                        filename = DIR.GetRelativePath(folderPref, fullPath);
+                        int index = filename.IndexOf(".\\");
+                        if (index == 0)
+                        {
+                            filename = filename.Remove(0, 2);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Anite.Sequencer.Utils.SeqMessageBox.ShowWarning("Scenario File does not exist.");
+                        SASDebugLogger.WarningLog("Trouble converting the fullpath to relative path : " + e.Message);
+                        return false;
+                    }
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+            scenarioPath.Text = filename;
+            return true;
+        }
+
+       if (rootRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string fullPath;
+                if (pathType != "Full")
+                {
+                    fullPath = folderPref + "\\" + filename;
+                    fullPath = DIR.GetFileFullPath(false, fullPath);
+                }
+                else
+                {
+                    fullPath = filename;
+                }
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                setScenarioPath(filename, folderPref, fullPath);
+
+
+                pathType = "RelativeToUTRAN_GERANDirectory";
+
+updateCellTextBox
+
+using Anite.SASCommonLibrary;
+
+updateCellTextBox
+
+scenarioPath
+
+updateCellTextBox
+
+ string pathType;
+
+  this.pathType = inputMsgData.PathType;
+
+                switch (inputMsgData.PathType)
+                {
+                    case "RelativeToScriptLocation":
+                        if (String.IsNullOrEmpty(UserPreferences.DefaultScript) || !System.IO.File.Exists(UserPreferences.DefaultScript))
+                        {
+                            folderPref = UserPreferences.FolderPreferences.ScriptRootDir;
+                        }
+                        else
+                        {
+                            folderPref = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript);
+                        }
+                       
+                        this.scriptsRadio.Checked = true;
+                        break;
+                    case "Full":
+                        folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                        this.fullPathRadio.Checked = true;
+                        break;
+                    case "RelativeToUTRAN_GERANDirectory":
+                        folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                        this.rootRadio.Checked = true;
+                        break;
+                    default:
+                        break;
+                }
+
+Full
+
+PathType
+
+this.PathType = "Full";
+
+pathType
+
+    string currentDirectory = "";
+            switch (pathType)
+            {
+                case "RelativeToScriptLocation":
+                    currentDirectory = UserPreferences.DefaultScript;
+                    break;
+                case "RelativeToUTRAN_GERANDirectory":
+                    currentDirectory = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                    break;
+                default:
+                    break;
+            }
+
+string currentDirectory = "";
+
+currentDirectory + "\\" + path
+

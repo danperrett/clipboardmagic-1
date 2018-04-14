@@ -1,0 +1,304 @@
+ReceivedGeneralNotificationFromLTE
+
+TrxRatioCommand
+
+Set TrxRatio
+
+SetTrxRatio
+
+TrxRatioCommand
+
+RemoteTrxRatio
+
+CTrxRatio
+
+Num2GTrxsAvailable
+
+DeActivateCell
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\46.0.644
+
+WM_ACTIVATE_CELL
+
+ActivateCell
+
+IsActive
+
+ActivateUtraCell
+
+Cell3G::Activate()
+
+hugh@hjshipton.co.uk
+
+Lanzarote
+
+Cell3G::Activate()
+
+CELLMANAGER_DEBUG
+
+ALLOC_OK ==
+
+ DEBUGLOG("Cell3G::Activate()")
+
+WM_REPORT_TRXS
+
+OnCellManagerReportTrxs
+
+DEBUGLOG("Cell3G::Activate() Alloc OK")
+
+Cell3G::Activate()
+
+Cell::ReportCellInactive()
+
+Cell3G::~Cell3G()
+
+ReportCellInactive
+
+WM_CELL_INACTIVE
+
+OnCellInactive
+
+Cell3G::~Cell3G()
+
+Cell3G
+
+ReportCellInactive
+
+        DEBUGLOG("Cell3G::Activate() Insufficient Lic")
+
+DEBUGLOG("
+
+DEBUGLOG("OnCellInactive()");
+
+DEBUGLOG("OnCellInactive() Utra Cell not active");
+
+GsmCellDeactivated
+
+ DEBUGLOG("GsmCellDeactivated()");
+
+UpdateActiveSetForm
+
+CellManagerInterface::Destroy()
+
+CellManagerInterface::Destroy
+
+CONTROL_INTERFACE::DestroyCellManager
+
+DestroyCellManager
+
+DEBUGLOG
+
+ShutdownSAS
+
+DEBUGLOG("ShutdownSAS() Calling DestroyCellManager");
+
+TerminateThreads
+
+DEBUGLOG("ShutdownSAS
+
+DEBUGLOG("RemoteControllerEndRun");
+
+OnRemoteControlRequest
+
+RemoteEndRun
+
+OnCellManagerTestError
+
+DEBUGLOG("OnCellManagerTestError()");
+
+TCommonFormControls
+
+#ifdef DEBUG
+#include "stdio.h"
+#include "CReportToMMI.h"
+#define DEBUGLOG(z) CallControl::DebugLog(z);
+#else
+#define DEBUGLOG(z)
+#endif
+
+#ifdef DEBUG
+#define DEBUGLOG(z) DebugLog(z);
+extern void DebugLog(AnsiString szLogMessage);
+#else
+#define DEBUGLOG(z)
+#endif
+
+DebugLog
+
+OnCellInactive
+
+OnCellManagerTestError
+
+WM_INSUFFICIENT_TRXS
+
+OnCellManagerTestError
+
+Activate
+
+WM_INSUFFICIENT_TRXS
+
+OnCellManagerTestError
+
+Hudson, Colin <colin.hudson@anite.com>
+
+Singh, Manohar <manohar.singh@anite.com>
+
+Message.Msg
+
+uRcmiErrorRetType
+
+TCommonFormControls::ErrorInsufficentTrxs
+
+ if (m_pCommonFormControls->bThreadPlaybackTerminated || m_pCommonFormControls->m_PlaybackInfo.Stop || m_pCommonFormControls->m_PlaybackInfo.Pause)
+
+EndRun(true);
+
+TCommonFormControls::EError  uRcmiErrorRetType
+
+   TCommonFormControls::EError  uRcmiErrorRetType = TCommonFormControls::ErrorCellManagerWarning;
+
+James Bristow 
+
+LoadScenarioCommand
+
+IsInteractiveOwner
+
+   DEBUGLOG("OnCellManagerTestError() EndRun");
+
+Activated
+
+m_pCommonFormControls
+
+m_pCommonFormControls->m_PlaybackInfo
+
+    DEBUGLOG("OnCellManagerTestError() EndRun");
+
+m_pCommonFormControls->m_GUINamedPipe.IsInteractiveOwner()
+
+Message.Msg
+
+WM_INSUFFICIENT_TRXS
+
+  TCommonFormControls::EError  uRcmiErrorRetType = TCommonFormControls::ErrorCellManagerWarning;
+
+bIsInteractiveOwner
+
+m_SASOwner
+
+InteractiveScriptMode
+
+"Status Interactive"
+
+InteractiveScriptMode
+
+InteractiveScriptMode =
+
+(m_pCommonFormControls->m_SystemOptions.bNamedPipeControl)
+
+m_pCommonFormControls->m_GUINamedPipe.IsInteractiveOwner()
+
+IsInteractiveScript
+
+EndRun(true);
+
+DEBUGLOG("OnCellManagerTestError() EndRun In Playback Mode");
+
+    DEBUGLOG("OnCellManagerTestError() EndRun because its a interactive script");
+
+DEBUGLOG("OnCellManagerTestError() EndRun In Playback Mode");
+
+NamedPipeManager
+
+m_sasOwner
+
+AskSASStatus
+
+HostSASInsideSequencer
+
+AskSASStatus
+
+WaitForSASReady
+
+WaitForSASReady
+
+AskSASStatus
+
+m_SASOwner
+
+checkSMSMessageAndDisplay
+
+m_pCommonFormControls->m_GUINamedPipe.IsInteractiveScript()
+
+DEBUGLOG("OnCellManagerTestError() EndRun because its a script");
+
+ScriptedMode
+
+EnableScriptModeMenuItem
+
+InteractiveScriptMode
+
+Shutdown UtranGeran
+
+SYSTEM CONFIGURATION (TRX/ABP in the setup/CS version/SAS version): 1*A9K+DAC+CS28.0.0.0(174)+SAS46.0.644
+
+TEST CASE and ISSUE DESCRIPTION:  
+SAS got hanged after clicking End Run while executing psc in automation mode and connected to the TAG with ?!TS_xxx/!STOP,<verdict>? option selected in Tool>Option>miscellaneous>Automator Configuration. The only option left is to close the SAS from the Task Manager.
+
+REPRODUCIBLE:100%
+ 
+ALTERNATE SETUP RESULTS: 2*A9K+DAC+ CS28.0.0.0(174)+SAS46.0.644 and 3*8960+1*ABP+DAC +SAS46.0.643
+ 
+UE: Samsung S3 , Qualcomm 8974
+  
+Logs: Snapshot and logs are placed at the location: \\10.97.116.124\SASDEV Shared folder\1. Shared Folder\Kritika\issue27
+
+
+67699
+
+67699:5. 
+
+69996
+
+Hi,
+ Raised an IR 69996  for this and linked it to 67699
+
+
+SMSMT
+
+EndRunCommand
+
+WriteToLocalNamedPipe
+
+m_pCommonFormControls->m_GUINamedPipe.IsInteractiveOwner()
+
+OnNamedPipeL3P
+
+(void)TCommonFormControls::FormPtr->m_L3PReportNamedPipe.WriteToLocalNamedPipe(pMessage);
+
+DEBUGLOG("OnCellManagerTestError() Interactive Scripting Mode");
+
+if (message.StartsWith(messageType))
+                        {
+
+ScriptedMode
+
+UtranGeranEventHandler
+
+EventQueueUtranGeranEventType
+
+UnplannedDisconnect
+
+EventQueueUtranGeranEventType
+
+m_UtranGeranInterface_UtranGeranEventObtained
+
+m_UtranGeranInterface_GPRSStatusChange
+
+SAS2G3GRequestsEndRun
+
+SAS2G3GHadRequestedEndRun
+
+SAS2G3GRequestsEndRunHandler
+
+m_SASLTEInteractiveEventCallback
+

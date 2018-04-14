@@ -1,0 +1,30 @@
+GetRichEditCtrl().LineScroll(1, 0);
+    //GetRichEditCtrl().ScrollWindow(0, 200)
+
+SetScrollPos
+
+SCROLLINFO info;
+
+edit->GetScrollInfo(SB_VERT, &info);
+edit->SetScrollPos(SB_VERT,info.nMax);
+
+GetRichEditCtrl()
+
+CodeTextBox
+
+CodeTextBox.BackColor = Color.White;
+
+       GoButton.Enabled = false;
+
+GoButton.Enabled = false;
+
+GoButton.Enabled = true;
+
+void swap(char* first, char* second)
+
+void LetterForm::interleave(char* buffer, int length)
+
+void LetterForm::simpleEncrypt(short* input, int length, short* output, short keyword)
+
+void simpleEncrypt(short* input, int length, short* output, short keyword)
+

@@ -1,0 +1,1777 @@
+118 Burlington Road New Malden Surrey, KT3 4NR
+
+SendTextToWindow
+
+C:\Windows\MCSCORUN.INI
+
+inDataLength = recv(Socket, (char *)szHistory, Length, 0);
+
+dataLength
+
+(char *)&szHistory[startlocation]
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\CRCEncoder.dll
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig - Copy.xml
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+inDataLength = recv(Socket, (char *)&szHistory[startlocation], copy_of_length, 0))
+
+inDataLength
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+unexpected errors
+
+has been designed to meet the requirements for SIL2 software development as per EN 50128(2011)
+
+1.1	Security Considerations
+The protection mechanisms used, being a sequence number, timeout and XML signing, meet the EN50159 criteria of sequence number (7.3.1), timeout (7.3.3) and cryptographic techniques (7.3.8) and so, as depicted in the threat/defence matrix (7.4.2), provide protection against all seven threats.  Specifically, 
+?	the sequence number implemented in the ICONIS Interface module protects against repetition, re-sequencing, insertion and deletion,
+?	the timeout in the TCP Handler module protects against delay (out of date data),
+?	the XML signing protects against corruption and masquerade.
+XML signing is a type A1 security mechanism as described in EN50159 clause C2 and is therefore suitable for use in systems where unauthorised access cannot be excluded.
+The NVFB3 protocol is used for rail state information and control requests passed between the Safety Gateway and the SSL S-RIF.  This provides additional protection against six of the seven threats.
+
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+array<Byte>^msg = Text::Encoding::ASCII->GetBytes( data );
+
+This will encode the information into XML based on the XSD given in the Appendix of Ref [1].
+
+The executable runs on a DXP card within the Sapphire T48 chassis. This has its own design and verification process, please see ref 9.
+
+[ICONIS_CONNECTION]
+IconisTransmitTimePeriod=250
+IconisReceiveTimeout=10000
+IconisPortNumber=3400
+SourceUnitID=SRIF-1-Unit-1
+LogicalSourceID=SRIF-1
+SourceStatus=MASTER
+MessageFormat=message-v01 
+DataLink=data-v01
+SequenceStartNumber=10001
+
+[Interlockings]
+NumInterlockings=2
+Interlocking_00_SSIID=O4
+Interlocking_00_UniqueID=Keighley
+Interlocking_00_MCSID=19
+Interlocking_01_SSIID=21
+Interlocking_01_UniqueNVID=Horsforth
+Interlocking_01_MCSID=21
+
+;keighley nvfb3 config
+InterlockingControl_00_IconisAddress=2
+InterlockingControl_00_SRIFAddress=12
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=3
+InterlockingARS_00_SRIFAddress=13
+InterlockingARS_00_AppDomain=10
+InterlockingSignalMap_00_IconisAddress=5
+InterlockingSignalMap_00_SRIFAddress=15
+InterlockingSignalMap_00_AppDomain=10
+InterlockingIndications_00_IconisAddress=1
+InterlockingIndications_00_SRIFAddress=11
+InterlockingIndications_00_AppDomain=10
+InterlockingStatusByte_00_IconisAddress=4
+InterlockingStatusByte_00_SRIFAddress=14
+InterlockingStatusByte_00_AppDomain=10
+;horsforth nvfb3 config
+InterlockingControl_01_IconisAddress=22
+InterlockingControl_01_SRIFAddress=32
+InterlockingControl_01_AppDomain=10
+InterlockingARS_01_IconisAddress=23
+InterlockingARS_01_SRIFAddress=33
+InterlockingARS_01_AppDomain=10
+InterlockingSignalMap_01_IconisAddress=25
+InterlockingSignalMap_01_SRIFAddress=35
+InterlockingSignalMap_01_AppDomain=10
+InterlockingIndications_01_IconisAddress=21
+InterlockingIndications_01_SRIFAddress=31
+InterlockingIndications_01_AppDomain=10
+InterlockingStatusByte_01_IconisAddress=24
+InterlockingStatusByte_01_SRIFAddress=34
+InterlockingStatusByte_01_AppDomain=10
+
+[NVFB3]
+TxPeriod=2500
+DDelay=10000
+FreshTolerance=10000
+AppDomain=10
+IconisAddress=6
+SRIFAddress=16
+DataVer=1
+
+[MCS_CE]
+Name=MCS-CE-1
+IPAddress=127.0.0.1
+PortNumber=999
+ActivityTimeout=40000
+
+[LOGGER]
+; LOGMASK_TCP         0x00000001
+; LOGMASK_MAIN        0x00000002
+; LOGMASK_SIGNING     0x00000004
+; LOGMASK_ICONISIF    0x00000008
+; LOGMASK_MCSIF       0x00000010
+; LOGMASK_MCSPS9      0x00000020
+; LOGMASK_NVFB3       0x00000040
+; LOGMASK_SRIFMAIN    0x00000080
+LogMask=ffffff00
+LogPath=C:\SRIF
+
+
+FreshTolerance
+
+DataVer
+
+https://tinyproxy.github.io/
+
+child_main_loop
+
+SERVER_COUNT_LOCK
+
+SERVER_INC
+
+child_listening_sockets
+
+Socket Error 10035
+
+Socket Error
+
+Received a chunk of size
+
+WSAEWOULDBLOCK
+
+LOGSTRINT("Socket Error", , ALWAYS);
+
+Failed To Send Message
+
+https://codility.com/programmers/
+
+All software is designed, developed and tested in accordance to GE software development process and all software will be validated to the SSL TMS S-RIF Prototype Verification and Validation Plan (ref 7). The GE Software Process meets EN 50128, SIL 2 safety requirements.
+
+I would expect to see reference to the GE V&V plan here instead
+
+SSL TMS S-RIF Prototype Verification and Validation Plan 
+
+int possibleStart[2]
+
+WORD FindStartOfNextPosition(char *input)
+
+FindStartOfNextPosition(input)
+
+szHistory
+
+ possibleStart[i]
+
+possibleStart[i]
+
+INT
+
+FindStartOfNextPosition(szHistory);
+
+recv(Socket, (char *)szHistory, LENGTH_OF_BUFFER, 0);
+
+receivedError
+
+ LOGSTRINT("*** Error with the received Length ***", Length, ALWAYS);
+                LOGGER("Test 1(II) Test1(III) Unknown or Error with Receive length", "", LOGMASK_TCP);
+
+                //dump data in the receive buffer.
+                INT possibleStartLocation = FindStartOfNextPosition(szHistory) - 4;
+                if((possibleStartLocation > -1) && (possibleStartLocation != 0))
+                {
+                    recv(Socket, (char *)szHistory, possibleStartLocation, 0);  // remove only up to the next plausible start 
+                }
+                else 
+                {
+                    //else get rid of everything in there
+                    recv(Socket, (char *)szHistory, LENGTH_OF_BUFFER, 0);
+                }
+
+                ZeroMemory(szHistory, LENGTH_OF_BUFFER);
+
+ClearReceivingBuffer
+
+recv(Socket, (char *)szHistory, LENGTH_OF_BUFFER, 0);
+
+ ClearReceivingBuffer();
+
+SOCKET Socket
+
+  LOGSTRINT("*** Error with the received Length ***", Length, ALWAYS);
+     LOGGER("Test 1(II) Test1(III) Unknown or Error with Receive length", "", LOGMASK_TCP);
+
+ SendTextToWindow("The connection has been Closed by Client", ALWAYS);
+
+3.11, 3.10
+
+3
+
+3.3
+
+A complete list of requirements for the whole system can be found in ref [2].This document is only concerned with contributing to the system communication requirement as specified in ref [1].
+The following table is a list of the requirements that the design contribute to and the specific sections:
+Requirement	Sections Covered
+RIF_4.2_002	3.5 3.7 3.3 RIF_4.2_004	3.3 RIF_4.7_001	3.3 and 3.5 RIF_4.7_002.	3.12 and 3.11 RIF 5.2_007	3.11 RIF 11.4_009	3.11 and 3.10 
+
+
+&A[0]
+
+std::cout << ' ' << *it;
+
+vector<int>::iterator it
+
+#include <numeric>
+
+INT_MAX
+
+// you can use includes, for example:
+#include <algorithm>
+#include <limits.h>
+#include <numeric>
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+int solution(vector<int> &A) 
+{
+    int min = INT_MAX; //
+    vector<int>::iterator it = A.begin();
+    for(; it != (A.end()-1); it++)
+    {
+        int lower = std::accumulate(A.begin(), it+1, 0);
+       
+        int upper = std::accumulate((it+1), A.end(), 0);
+      
+        int diff = lower - upper;
+        diff = (diff < 0)?diff*-1:diff;
+       
+        if(diff < min)
+        {
+            min = diff;
+        }
+    }
+    return min;
+}
+
+(lower - upper)
+
+int solution(vector<int> &A) 
+{
+    register int min = INT_MAX; //
+    register int lower = 0;
+    register int upper = 0;
+    vector<int>::iterator it = A.begin();
+    for(; it != (A.end()-1); it++)
+    {
+        lower = std::accumulate(A.begin(), it+1, 0);
+       
+        upper = std::accumulate((it+1), A.end(), 0);
+      
+        diff = ((lower - upper) < ;
+        diff = (diff < 0)?diff*-1:diff;
+       
+        if(diff < min)
+        {
+            min = diff;
+        }
+    }
+    return min;
+}
+
+#include <algorithm>
+#include <limits.h>
+#include <numeric>
+
+    int diff = lower - upper;
+        diff = (diff < 0)?diff*-1:diff;
+
+
+// you can use includes, for example:
+#include <algorithm>
+#include <limits.h>
+#include <numeric>
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+int solution(vector<int> &A) 
+{
+    register int min = INT_MAX; //
+    register int lower = 0;
+    register int upper = 0;
+    register int diff = 0;
+    vector<int>::iterator it = A.begin();
+    for(; it != (A.end()-1); it++)
+    {
+        lower = std::accumulate(A.begin(), it+1, 0);
+       
+        upper = std::accumulate((it+1), A.end(), 0);
+      
+        diff = lower - upper;
+        diff = (diff < 0)?diff*-1:diff;
+        
+        if(diff < min)
+        {
+            min = diff;
+        }
+    }
+    return min;
+}
+
+/******************************************************************************
+<pre>
+FUNCTION:
+    WORD InitialiseTCPSocket(HWND hWnd, int PortNumber)
+
+DESCRIPTION:
+    
+PARAMETERS:
+    hWnd ID
+    int  PortNumber to listen on for Iconis connection
+
+RETURNS:
+    void 
+
+</pre>
+******************************************************************************/
+
+INT FindStartOfNextPosition(char *input)
+
+/******************************************************************************
+<pre>
+FUNCTION:
+    INT FindStartOfNextPosition(char *input)
+
+DESCRIPTION:
+    find the start postition of either <?xml or <Envelope> 
+    as a quick way to make sure its there
+
+PARAMETERS:
+    char *input   the input
+
+RETURNS:
+    INT return the location
+
+</pre>
+******************************************************************************/
+
+VOID ClearReceivingBuffer(SOCKET Socket)
+
+ if(*it  < X)
+       {
+           marked[*it] = true;
+       }
+
+C:\Users\502525009\Documents\26406-SPE-000003 SSL S-RIF Software Design Specification.docx
+
+// you can use includes, for example:
+// #include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+int solution(int X, vector<int> &A) 
+{
+    register bool *marked = new bool[X];
+    
+    register int n = -1;
+  
+    for(int i = 0; i < X; i++)marked[i] = false;
+    register vector<int>::iterator it = A.begin();
+    bool all = false;
+    
+    while(it != A.end())
+    {
+        
+      
+        
+           marked[*it - 1] = true;
+       
+       
+          all = true;
+        
+           
+       for(int i = 0; i < X; i++)
+       {
+               if(!marked[i])
+               {
+                   all = false;
+                   i = X;
+               }
+       }
+       if(all)return n+1;
+       
+       
+       it++;  
+       n++;
+    }
+    
+    return -1;
+}
+
+if((n+2) >=X) // only start checking when we know that it might be a solution
+        {
+
+ (1, [1])
+
+// you can use includes, for example:
+// #include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+int solution(int X, vector<int> &A) 
+{
+    register bool *marked = new bool[X];
+    
+    register int n = -1;
+  
+    for(int i = 0; i < X; i++)marked[i] = false;
+    register vector<int>::iterator it = A.begin();
+    bool all = false;
+    
+    while(it != A.end())
+    {
+        marked[*it - 1] = true;
+        
+        if(n >=X) // only start checking when we know that it might be a solution
+        {
+        all = true;
+        
+        
+        for(int i = 0; i < ((X/2)+1); i++)
+        {
+               if(!marked[i])
+               {
+                   all = false;
+                   i = X;
+               }
+               else if(!marked[(X-1)-i])
+               {
+                   all  = false;
+                   i = X;
+               }
+        }
+        
+        if(all)return n+1;
+        }
+       
+       
+       it++;  
+       n++;
+    }
+    
+    return -1;
+}
+
+(1, [1])
+
+vector<int>::iterator it = A.begin();
+
+cout << *it << endl;
+
+for(int i = 0; i < N; i++)
+            {
+                result[i] = *max;
+            }
+
+Revision: 303
+Author: 502539222
+Date: 29 January 2016 10:28:31
+Message:
+Reject input message with >20 interlockings
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+Modified : /trunk/exampleWin32Proj/Iconis_IF.h
+
+Revision: 302
+Author: 502525009
+Date: 29 January 2016 09:08:41
+Message:
+moved the code around and improvements to the clearing of the buffer
+----
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+
+Revision: 301
+Author: 502539222
+Date: 28 January 2016 13:29:01
+Message:
+Add Bad ARS unit test
+
+----
+Modified : /trunk/exampleWin32Proj/exampleWin32Proj.rc
+Modified : /trunk/exampleWin32Proj/resource.h
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 300
+Author: 502525009
+Date: 27 January 2016 11:40:19
+Message:
+TCP receive socket error fix
+----
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+
+Revision: 299
+Author: 502525009
+Date: 27 January 2016 09:37:12
+Message:
+increase interlocing size
+----
+Modified : /trunk/exampleWin32Proj/Iconis_IF.h
+
+Revision: 298
+Author: 502525009
+Date: 27 January 2016 09:36:40
+Message:
+increase socket size
+----
+Modified : /trunk/exampleWin32Proj/TCPSocket.h
+
+Revision: 297
+Author: 502525009
+Date: 25 January 2016 15:31:17
+Message:
+changes for 20 interlockings
+----
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+
+Revision: 296
+Author: 502539222
+Date: 25 January 2016 15:22:07
+Message:
+Correct handling of too many diagnostic alarms
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+
+Revision: 295
+Author: 502539222
+Date: 22 January 2016 09:59:11
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 294
+Author: 502539222
+Date: 20 January 2016 15:04:51
+Message:
+Remove SocketInit.  Set warning level to 4 throughout
+
+----
+Modified : /trunk/exampleWin32Proj/exampleWin32Proj.vcxproj
+Modified : /trunk/exampleWin32Proj/exampleWin32Proj.vcxproj.filters
+
+Revision: 293
+Author: 502539222
+Date: 20 January 2016 15:03:35
+Message:
+Remove try catch block from NVFB3 CRC code
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.cpp
+
+Revision: 292
+Author: 502539222
+Date: 20 January 2016 14:56:09
+Message:
+Remove SSLSocket files
+
+
+----
+Deleted : /trunk/exampleWin32Proj/SSLSocket.cpp
+Deleted : /trunk/exampleWin32Proj/SSLSocket.h
+
+Revision: 291
+Author: 502539222
+Date: 20 January 2016 14:18:30
+Message:
+Replace blocking winsock calls with nonblocking
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+
+Revision: 290
+Author: 502539222
+Date: 20 January 2016 14:16:58
+Message:
+Banner comments as per review
+
+----
+Modified : /trunk/exampleWin32Proj/NVFB3.c
+
+Revision: 289
+Author: 502539222
+Date: 20 January 2016 12:56:03
+Message:
+Remove Apple copyright notice
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeDecodeBase64.h
+
+Revision: 288
+Author: 502539222
+Date: 20 January 2016 12:52:51
+Message:
+Add function banner comments as per review.
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_IF.h
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+
+Revision: 287
+Author: 502539222
+Date: 20 January 2016 11:31:34
+Message:
+Correct queue removal error for OSTO alarm messages
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+
+Revision: 286
+Author: 502539222
+Date: 20 January 2016 11:25:52
+Message:
+Move Winsock initialisation code inline and remove SocketInit.cpp
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 285
+Author: 502539222
+Date: 20 January 2016 11:23:39
+Message:
+
+----
+Deleted : /trunk/exampleWin32Proj/SocketInit.cpp
+
+Revision: 284
+Author: 502525009
+Date: 20 January 2016 09:25:04
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 283
+Author: 502525009
+Date: 19 January 2016 16:37:40
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/logger.cpp
+
+Revision: 282
+Author: 502539222
+Date: 19 January 2016 10:54:23
+Message:
+Update version number to 1.0.0.7 and copyright year
+
+----
+Modified : /trunk/exampleWin32Proj/exampleWin32Proj.rc
+
+Revision: 281
+Author: 502539222
+Date: 19 January 2016 09:46:32
+Message:
+Add SPAD Clear message handling
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+
+Revision: 280
+Author: 502539222
+Date: 19 January 2016 09:45:49
+Message:
+Remove ECHO COUNTER hack
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+
+Revision: 279
+Author: 502539222
+Date: 19 January 2016 09:45:14
+Message:
+Banner heading.  Some logging changes
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.cpp
+
+Revision: 278
+Author: 502525009
+Date: 19 January 2016 09:21:35
+Message:
+logger problem
+----
+Modified : /trunk/exampleWin32Proj/IConis_IF.cpp
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+Modified : /trunk/exampleWin32Proj/RIFMain.h
+Modified : /trunk/exampleWin32Proj/logger.cpp
+
+Revision: 276
+Author: 502525009
+Date: 15 January 2016 10:35:59
+Message:
+code inspection
+----
+Modified : /trunk/exampleWin32Proj/EncodeICONISIFMessage.cpp
+Modified : /trunk/exampleWin32Proj/EncoderICONISIF.h
+Modified : /trunk/exampleWin32Proj/HandleXMLSigning.cpp
+Modified : /trunk/exampleWin32Proj/IConis_IF.cpp
+Modified : /trunk/exampleWin32Proj/RIFMain.h
+Modified : /trunk/exampleWin32Proj/logger.h
+Modified : /trunk/exampleWin32Proj/utils.cpp
+Modified : /trunk/exampleWin32Proj/utils.h
+
+Revision: 274
+Author: 502539222
+Date: 14 January 2016 15:38:28
+Message:
+Add  Clear_SPAD_bit to unit test
+
+----
+Modified : /trunk/exampleWin32Proj/exampleWin32Proj.rc
+Modified : /trunk/exampleWin32Proj/resource.h
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 273
+Author: 502539222
+Date: 14 January 2016 15:34:54
+Message:
+Add SPAD_clear_bit_message
+
+----
+Modified : /trunk/exampleWin32Proj/UnitTestData.h
+
+Revision: 272
+Author: 502539222
+Date: 14 January 2016 15:30:30
+Message:
+Add MCS_ClearSpadBit function
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_IF.h
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+
+Revision: 271
+Author: 502525009
+Date: 14 January 2016 15:02:03
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/SRIFmainA4.cpp
+
+Revision: 270
+Author: 502525009
+Date: 14 January 2016 14:57:18
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+Modified : /trunk/exampleWin32Proj/TCPSocket.h
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 269
+Author: 502525009
+Date: 14 January 2016 14:41:56
+Message:
+comment update after review
+----
+Modified : /trunk/exampleWin32Proj/SRIFmainA4.cpp
+
+Revision: 268
+Author: 502539222
+Date: 13 January 2016 14:55:31
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+Modified : /trunk/exampleWin32Proj/NVFB3.c
+
+Revision: 267
+Author: 502539222
+Date: 13 January 2016 14:51:59
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 266
+Author: 502539222
+Date: 13 January 2016 14:51:03
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/SRIFmainA4.cpp
+
+Revision: 265
+Author: 502539222
+Date: 13 January 2016 14:45:43
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+
+Revision: 264
+Author: 502539222
+Date: 13 January 2016 14:43:45
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/SocketInit.cpp
+
+Revision: 263
+Author: 502539222
+Date: 13 January 2016 14:40:41
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeDecodeCRC.cpp
+Modified : /trunk/exampleWin32Proj/EncodeICONISIFMessage.cpp
+
+Revision: 262
+Author: 502539222
+Date: 13 January 2016 14:26:01
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/stdafx.cpp
+
+Revision: 261
+Author: 502539222
+Date: 13 January 2016 14:25:13
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/utils.cpp
+
+Revision: 260
+Author: 502539222
+Date: 13 January 2016 14:24:12
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeDecodeBase64.cpp
+
+Revision: 259
+Author: 502539222
+Date: 13 January 2016 14:22:42
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 258
+Author: 502539222
+Date: 13 January 2016 14:20:55
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/logger.cpp
+
+Revision: 257
+Author: 502539222
+Date: 13 January 2016 14:19:37
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+
+Revision: 256
+Author: 502539222
+Date: 13 January 2016 14:17:53
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+
+Revision: 255
+Author: 502539222
+Date: 13 January 2016 14:13:53
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/utils.cpp
+
+Revision: 254
+Author: 502539222
+Date: 13 January 2016 14:12:56
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/utils.cpp
+
+Revision: 253
+Author: 502539222
+Date: 13 January 2016 14:11:59
+Message:
+test
+
+----
+Modified : /trunk/exampleWin32Proj/utils.cpp
+
+Revision: 252
+Author: 502539222
+Date: 13 January 2016 14:01:34
+Message:
+test
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 251
+Author: 502539222
+Date: 13 January 2016 13:55:48
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 250
+Author: 502539222
+Date: 13 January 2016 13:54:09
+Message:
+test
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 249
+Author: 502539222
+Date: 13 January 2016 09:50:21
+Message:
+Add version.lib to linked libraries for release build
+
+----
+Modified : /trunk/exampleWin32Proj/exampleWin32Proj.vcxproj
+
+Revision: 248
+Author: 502539222
+Date: 12 January 2016 16:45:22
+Message:
+Add comments and remove some unused funcs
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_IF.h
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+
+Revision: 247
+Author: 502539222
+Date: 12 January 2016 16:44:38
+Message:
+Remove some unused defines, structs etc
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+
+Revision: 246
+Author: 502539222
+Date: 12 January 2016 15:22:24
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_IF.h
+
+Revision: 245
+Author: 502525009
+Date: 12 January 2016 15:22:03
+Message:
+lots of comments added
+----
+Modified : /trunk/exampleWin32Proj/HandleXMLSigning.cpp
+
+Revision: 244
+Author: 502539222
+Date: 12 January 2016 15:21:39
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.h
+
+Revision: 243
+Author: 502539222
+Date: 12 January 2016 14:13:43
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+
+Revision: 242
+Author: 502539222
+Date: 12 January 2016 13:41:27
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+
+Revision: 241
+Author: 502539222
+Date: 12 January 2016 13:35:00
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeICONISIFMessage.cpp
+
+Revision: 240
+Author: 502539222
+Date: 12 January 2016 13:24:23
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeDecodeCRC.cpp
+
+Revision: 239
+Author: 502539222
+Date: 12 January 2016 12:13:05
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeDecodeBase64.cpp
+
+Revision: 238
+Author: 502539222
+Date: 12 January 2016 12:09:12
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.cpp
+
+Revision: 237
+Author: 502539222
+Date: 12 January 2016 11:55:25
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 236
+Author: 502539222
+Date: 12 January 2016 11:38:02
+Message:
+Change function banner comments for use with Doxygen
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+
+Revision: 235
+Author: 502525009
+Date: 11 January 2016 15:45:01
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 234
+Author: 502539222
+Date: 11 January 2016 14:38:48
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+
+Revision: 233
+Author: 502539222
+Date: 11 January 2016 14:17:22
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeDecodeCRC.cpp
+Modified : /trunk/exampleWin32Proj/EncodeDecodeCRC.h
+
+Revision: 232
+Author: 502539222
+Date: 11 January 2016 13:53:47
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+Modified : /trunk/exampleWin32Proj/EncodeDecodeBase64.cpp
+
+Revision: 231
+Author: 502539222
+Date: 11 January 2016 13:22:20
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeICONISIFMessage.cpp
+
+Revision: 230
+Author: 502539222
+Date: 11 January 2016 12:32:48
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.cpp
+
+Revision: 229
+Author: 502539222
+Date: 11 January 2016 10:02:32
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 228
+Author: 502539222
+Date: 11 January 2016 10:01:24
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 227
+Author: 502539222
+Date: 08 January 2016 16:56:38
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+
+Revision: 226
+Author: 502539222
+Date: 08 January 2016 14:17:55
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_IF.h
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+
+Revision: 225
+Author: 502539222
+Date: 08 January 2016 14:01:42
+Message:
+Warnings
+----
+Modified : /trunk/exampleWin32Proj/MCS_IF.h
+Modified : /trunk/exampleWin32Proj/MCS_PS9.h
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+
+Revision: 224
+Author: 502539222
+Date: 08 January 2016 13:17:38
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONIDIFMessage.h
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.cpp
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.h
+Modified : /trunk/exampleWin32Proj/IConis_IF.cpp
+Modified : /trunk/exampleWin32Proj/Iconis_IF.h
+
+Revision: 223
+Author: 502539222
+Date: 08 January 2016 13:14:47
+Message:
+Remove unused function declarations
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.h
+Modified : /trunk/exampleWin32Proj/RIFMain.h
+
+Revision: 222
+Author: 502539222
+Date: 08 January 2016 11:39:44
+Message:
+Remove unused functions
+
+----
+Modified : /trunk/exampleWin32Proj/NVFB3.c
+Modified : /trunk/exampleWin32Proj/NVFB3.h
+
+Revision: 221
+Author: 502539222
+Date: 08 January 2016 11:31:59
+Message:
+Compiler warnings
+
+----
+Modified : /trunk/exampleWin32Proj/HandleXMLSigning.h
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 220
+Author: 502539222
+Date: 08 January 2016 11:26:03
+Message:
+Remove unused code
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 219
+Author: 502539222
+Date: 08 January 2016 11:03:34
+Message:
+
+----
+Deleted : /trunk/exampleWin32Proj/SocketCloseUDP.cpp
+Deleted : /trunk/exampleWin32Proj/SocketCreateUDP.cpp
+Deleted : /trunk/exampleWin32Proj/SocketReceiveUDP.cpp
+
+Revision: 218
+Author: 502539222
+Date: 08 January 2016 10:17:39
+Message:
+Code tidy up and expand comments
+
+----
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+Modified : /trunk/exampleWin32Proj/DoProcess.h
+
+Revision: 217
+Author: 502539222
+Date: 07 January 2016 13:37:28
+Message:
+Comments
+
+----
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+
+Revision: 216
+Author: 502525009
+Date: 07 January 2016 11:11:32
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+
+Revision: 215
+Author: 502525009
+Date: 07 January 2016 11:10:19
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+
+Revision: 214
+Author: 502525009
+Date: 07 January 2016 10:54:38
+Message:
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 213
+Author: 502525009
+Date: 07 January 2016 10:53:39
+Message:
+adding comments
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 212
+Author: 502525009
+Date: 07 January 2016 10:45:58
+Message:
+testing commits
+----
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+
+Revision: 211
+Author: 502539222
+Date: 06 January 2016 12:45:13
+Message:
+Compiler warnings fixed
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 210
+Author: 502539222
+Date: 06 January 2016 09:48:49
+Message:
+Correct GetSRIFTickCount()
+
+----
+Modified : /trunk/exampleWin32Proj/utils.cpp
+
+Revision: 209
+Author: 502539222
+Date: 06 January 2016 09:45:18
+Message:
+Fix compiler warnings
+
+----
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 208
+Author: 502539222
+Date: 06 January 2016 09:43:09
+Message:
+Fix compiler warnings
+
+----
+Modified : /trunk/exampleWin32Proj/HandleXMLSigning.cpp
+
+Revision: 207
+Author: 502525009
+Date: 31 December 2015 13:50:31
+Message:
+code tidy up
+----
+Modified : /trunk/exampleWin32Proj/DecodeICONISIFMessage.cpp
+Modified : /trunk/exampleWin32Proj/DecodeNVFB3Data.cpp
+Modified : /trunk/exampleWin32Proj/DoProcess.cpp
+Modified : /trunk/exampleWin32Proj/EncodeICONISIFMessage.cpp
+Modified : /trunk/exampleWin32Proj/EncodeNVFB3Data.cpp
+Modified : /trunk/exampleWin32Proj/HandleXMLSigning.cpp
+Modified : /trunk/exampleWin32Proj/IConis_IF.cpp
+Modified : /trunk/exampleWin32Proj/Iconis_IF.h
+Modified : /trunk/exampleWin32Proj/MCS_PS9.C
+Modified : /trunk/exampleWin32Proj/MCS_if.c
+Modified : /trunk/exampleWin32Proj/NVFB3.c
+Modified : /trunk/exampleWin32Proj/RIFMain.h
+Modified : /trunk/exampleWin32Proj/Resource.h
+Modified : /trunk/exampleWin32Proj/SRIFmainA4.cpp
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+Modified : /trunk/exampleWin32Proj/UnitTestData.h
+Modified : /trunk/exampleWin32Proj/logger.cpp
+Modified : /trunk/exampleWin32Proj/srif.cpp
+
+Revision: 206
+Author: 502525009
+Date: 30 December 2015 11:17:28
+Message:
+dump data if nothing there.
+----
+Modified : /trunk/exampleWin32Proj/IConis_IF.cpp
+Modified : /trunk/exampleWin32Proj/TCPSocket.cpp
+
+
+
+r303
+Reject input message with >20 interlockings 
+---------------------
+r302
+moved the code around and improvements to the clearing of the buffer
+---------------------
+r301
+Add Bad ARS unit test 
+---------------------
+r300
+TCP receive socket error fix
+---------------------
+r299
+increase interlocing size
+---------------------
+r298
+increase socket size
+---------------------
+r297
+changes for 20 interlockings
+---------------------
+r296
+Correct handling of too many diagnostic alarms 
+---------------------
+r295
+
+---------------------
+r294
+Remove SocketInit.  Set warning level to 4 throughout 
+---------------------
+r293
+Remove try catch block from NVFB3 CRC code 
+---------------------
+r292
+Remove SSLSocket files
+---------------------
+r291
+Replace blocking winsock calls with nonblocking 
+---------------------
+r290
+Banner comments as per review 
+---------------------
+r289
+Remove Apple copyright notice 
+---------------------
+r288
+Add function banner comments as per review. 
+---------------------
+r287
+Correct queue removal error for OSTO alarm messages 
+---------------------
+r286
+Move Winsock initialisation code inline and remove SocketInit.cpp 
+---------------------
+r285
+
+---------------------
+r284
+
+---------------------
+r283
+
+---------------------
+r282
+Update version number to 1.0.0.7 and copyright year 
+---------------------
+r281
+Add SPAD Clear message handling 
+---------------------
+r280
+Remove ECHO COUNTER hack 
+---------------------
+r279
+Banner heading.  Some logging changes 
+---------------------
+r278
+logger problem
+---------------------
+r276
+code inspection
+---------------------
+r274
+Add  Clear_SPAD_bit to unit test 
+---------------------
+r273
+Add SPAD_clear_bit_message 
+---------------------
+r272
+Add MCS_ClearSpadBit function 
+---------------------
+r271
+
+---------------------
+r270
+
+---------------------
+r269
+comment update after review
+---------------------
+r268
+
+---------------------
+r267
+
+---------------------
+r266
+
+---------------------
+r265
+
+---------------------
+r264
+
+---------------------
+r263
+
+---------------------
+r262
+
+---------------------
+r261
+
+---------------------
+r260
+
+---------------------
+r259
+
+---------------------
+r258
+
+---------------------
+r257
+
+---------------------
+r256
+
+---------------------
+r255
+
+---------------------
+r254
+
+---------------------
+r253
+test 
+---------------------
+r252
+test 
+---------------------
+r251
+
+---------------------
+r250
+test 
+---------------------
+r249
+Add version.lib to linked libraries for release build 
+---------------------
+r248
+Add comments and remove some unused funcs 
+---------------------
+r247
+Remove some unused defines, structs etc 
+---------------------
+r246
+
+---------------------
+r245
+lots of comments added
+---------------------
+r244
+
+---------------------
+r243
+Change function banner comments for use with Doxygen 
+---------------------
+r242
+Change function banner comments for use with Doxygen 
+---------------------
+r241
+Change function banner comments for use with Doxygen 
+---------------------
+r240
+Change function banner comments for use with Doxygen 
+---------------------
+r239
+Change function banner comments for use with Doxygen 
+---------------------
+r238
+Change function banner comments for use with Doxygen 
+---------------------
+r237
+Change function banner comments for use with Doxygen 
+---------------------
+r236
+Change function banner comments for use with Doxygen 
+---------------------
+r235
+
+---------------------
+r234
+Comments 
+---------------------
+r233
+Comments 
+---------------------
+r232
+Comments 
+---------------------
+r231
+Comments 
+---------------------
+r230
+Comments 
+---------------------
+r229
+
+---------------------
+r228
+
+---------------------
+r227
+Comments 
+---------------------
+r226
+
+---------------------
+r225
+Warnings
+---------------------
+r224
+
+---------------------
+r223
+Remove unused function declarations 
+---------------------
+r222
+Remove unused functions 
+---------------------
+r221
+Compiler warnings 
+---------------------
+r220
+Remove unused code 
+---------------------
+r219
+
+---------------------
+r218
+Code tidy up and expand comments 
+---------------------
+r217
+Comments 
+---------------------
+r216
+
+---------------------
+r215
+
+---------------------
+r214
+
+---------------------
+r213
+adding comments
+---------------------
+r212
+testing commits
+---------------------
+r211
+Compiler warnings fixed 
+---------------------
+r210
+Correct GetSRIFTickCount() 
+---------------------
+r209
+Fix compiler warnings 
+---------------------
+r208
+Fix compiler warnings 
+---------------------
+r207
+code tidy up
+---------------------
+r206
+dump data if nothing there.
+---------------------
+
+
+20 interlocking stability fixes. 
+	clean up code after test review. Headers for each functions.
+	ARS unit testing added.
+	Fix TCP socket errors.
+	correct Handling of diagnostic alarms.
+	SPAD clear bit implemented.
+
+Dan.Perrett@sigsol.onmicrosoft.com
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+1639
+
+C:\srif\Win32Srif4_3\Documents\SSL S-RIF Prototype Software Module Test Spec v1.2.doc
+
+SSLSRIF
+
+openssl-1.0.2d-32bit-release-static-vs2010.1
+
+// you can use includes, for example:
+#include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+vector<int> solution(int N, vector<int> &A) 
+{
+    vector<int> result(N, 0);
+    vector<int>::iterator it = A.begin();
+    vector<int>::iterator max;
+    while(it != A.end())
+    {
+        
+        if((*it > 0) && (*it <= N))
+        {
+            result[*it-1]++;
+   //         cout << *it << ":" << result[*it] << endl;    
+        }
+        else if(*it > N)
+        {
+            max = max_element(result.begin(), result.end());
+            for(int i = 0; i < N; i++)
+            {
+                result[i] = *max;
+            }
+        }
+        it++;
+    }
+   
+    return result;
+}
+
+// you can use includes, for example:
+#include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+vector<int> solution(int N, vector<int> &A) 
+{
+    vector<int> result(N, 0);
+    vector<int>::iterator it = A.begin();
+    vector<int>::iterator max;
+    while(it != A.end())
+    {
+        
+        if((*it > 0) && (*it <= N))
+        {
+            result[*it-1]++;
+   //         cout << *it << ":" << result[*it] << endl;    
+        }
+        else if(*it > N)
+        {
+            max = max_element(result.begin(), result.end());
+            result.assign(N, *max);
+        }
+        it++;
+    }
+   
+    return result;
+}
+
+result[*it-1]
+
+// you can use includes, for example:
+#include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+vector<int> solution(int N, vector<int> &A) 
+{
+    vector<int> result(N, 0);
+    register vector<int>::iterator it = A.begin();
+    //vector<int>::iterator max;
+    register int max = -1;
+    while(it != A.end())
+    {
+        
+        if((*it > 0) && (*it <= N))
+        {
+            result[*it-1]++;
+            if(result[*it-1] > max)
+            max = result[*it-1];
+   //         cout << *it << ":" << result[*it] << endl;    
+        }
+        else if(*it > N)
+        {
+            //max = max_element(result.begin(), result.end());
+            result.assign(N, max);
+        }
+        it++;
+    }
+   
+    return result;
+}
+

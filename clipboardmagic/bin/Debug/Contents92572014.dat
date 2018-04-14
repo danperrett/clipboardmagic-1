@@ -1,0 +1,46 @@
+Chauhan, Arvind <arvind.chauhan@anite.com>
+
+63 - TD-LTE to TD-SCDMA Reselection same PLMN_Detach (MO)  [band38_34].SSC
+
+67699 
+
+        if(CellManagerThread::IsNamedPipeControl() && m_procedureNotification)
+
+
+procedureNotification
+
+67699 
+
+70491
+
+__FILE__
+
+sequencerExeName
+
+dwState
+
+szTerminalAutomation
+
+Chauhan, Arvind <arvind.chauhan@anite.com>
+
+63 - TD-LTE to TD-SCDMA Reselection same PLMN_Detach (MO)  [band38_34].SSC
+
+67699 
+
+        if(CellManagerThread::IsNamedPipeControl() && m_procedureNotification)
+
+
+procedureNotification
+
+67699 
+
+70491
+
+__FILE__
+
+sequencerExeName
+
+dwState
+
+szTerminalAutomation
+

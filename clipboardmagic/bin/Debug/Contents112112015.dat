@@ -1,0 +1,73 @@
+updateReceivedCounter
+
+delegate void updateReceivedCounter(int TC, int EC, int error);
+
+LastTimeCounter
+
+EchoCounter
+
+LastError
+
+Update_NVFB3_Controls
+
+List<InterLockingReceived> interlockingTabs = new List<InterLockingReceived>();
+
+interlockingTabs
+
+updateIndicationInformation
+
+InterLockingReceived
+
+interlockingTabs
+
+interlockingTabs[iIxl]
+
+Update_NVFB3_Controls
+
+                    }
+
+
+interlockingTabs
+
+public void updateReceivedStatusByteInformation(int TC, int EC, int error)
+        {
+            SBR_TC_textBox.Text = TC.ToString();
+            SBR_EC_textBox.Text = EC.ToString();
+            SB_Error_textBox.Text = error.ToString();
+        }
+
+public void updateReceivedSignalMapInformation(int TC, int EC, int error)
+        {
+            SMR_TC_textBox.Text = TC.ToString();
+            SMR_EC_textBox.Text = EC.ToString();
+            SM_Error_textBox.Text = error.ToString();
+        }
+
+fidgeTrxContents
+
+AlterTransmitContentsCheckBox
+
+fidgeTrxContents
+
+log
+
+void PieceTogetherSystemTime(SYSTEMTIME myTime, char *out)
+
+ //Clock
+    GetLocalTime(&myTime);
+    PieceTogetherSystemTime(myTime, Apptime);
+    ShowText(CLOCK, Apptime);
+
+ char buffer[30];
+    SYSTEMTIME  myTime;
+
+char Apptime[24];
+
+void PieceTogetherSystemTime(SYSTEMTIME myTime, char *out)
+
+Timeliness
+
+ System.Globalization.NumberStyles.AllowHexSpecifier
+
+System.Globalization.NumberStyles.AllowHexSpecifier
+

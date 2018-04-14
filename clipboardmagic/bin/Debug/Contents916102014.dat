@@ -1,0 +1,456 @@
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\SASCommon\SequencerInterfaces\Schema\MessageTypes.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\BinDebug\SequencerInterfaces.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerInterfaces\bin\Debug\SequencerInterfaces.dll
+
+MessageTypeProgramVariable
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerInterfaces\bin\Debug\SequencerInterfaces.dll
+
+ProgrammingVariable_MessageType
+
+    private ProgramVariableBase[] ConvertGUIVariblesToDriverVariables()
+        {
+            int numberOfVariables = variablesDB.NumberOfElements;
+
+            ProgramVariableBase[] driverVariablesData = new ProgramVariableBase[numberOfVariables];
+
+            ScriptVariable[] variblesCollection = variablesDB.GetAllScriptVariables();
+
+            for (int index = 0; index < numberOfVariables; index++)
+            {
+                ScriptVariable scriptVariable = variblesCollection[index];
+
+                driverVariablesData[index] = scriptVariable.GetScriptVariableInDriverFormat();       
+            }
+
+            return driverVariablesData;
+        }
+
+ProgramVariableBase
+
+    private ProgramVariableBase[] ConvertGUIVariblesToDriverVariables()
+        {
+            int numberOfVariables = variablesDB.NumberOfElements;
+
+            ProgramVariableBase[] driverVariablesData = new ProgramVariableBase[numberOfVariables];
+
+            ScriptVariable[] variblesCollection = variablesDB.GetAllScriptVariables();
+
+            for (int index = 0; index < numberOfVariables; index++)
+            {
+                ScriptVariable scriptVariable = variblesCollection[index];
+
+                driverVariablesData[index] = scriptVariable.GetScriptVariableInDriverFormat();       
+            }
+
+            return driverVariablesData;
+        }
+
+scriptModeMain
+
+    private ProgramVariableBase[] ConvertGUIVariblesToDriverVariables()
+        {
+            int numberOfVariables = variablesDB.NumberOfElements;
+
+            ProgramVariableBase[] driverVariablesData = new ProgramVariableBase[numberOfVariables];
+
+            ScriptVariable[] variblesCollection = variablesDB.GetAllScriptVariables();
+
+            for (int index = 0; index < numberOfVariables; index++)
+            {
+                ScriptVariable scriptVariable = variblesCollection[index];
+
+                driverVariablesData[index] = scriptVariable.GetScriptVariableInDriverFormat();       
+            }
+
+            return driverVariablesData;
+        }
+
+
+ConvertGUIVariblesToDriverVariables
+
+Anite.Sequencer.Variables
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\BinDebug\SequencerInterfaces.dll
+
+VariableStore variablesDB = VariableStore.GetInstance();
+
+GetScriptVariableInDriverFormat
+
+ScriptVariable
+
+public override ProgramVariableBase GetScriptVariableInDriverFormat()
+
+ScriptVariable
+
+NumericVariable
+
+NumericProgramVariable driverProgramVar = new NumericProgramVariable(Name, (ProgramVariableBase.VariableTypeEnum)VarType);
+            return driverProgramVar;
+
+BAND
+
+ public enum BAND
+    {
+        Dummy = 0,
+        // FDD Bands
+        BAND1 = 1,
+        BAND2 = 2,
+        BAND3 = 3,
+        BAND4 = 4,
+        BAND5 = 5,
+        BAND6 = 6,
+        BAND7 = 7,
+        BAND8 = 8,
+        BAND9 = 9,
+        BAND10 = 10,
+        BAND11 = 11,
+        BAND12 = 12,
+        BAND13 = 13,
+        BAND14 = 14,
+        BAND17 = 17,
+        BAND18 = 18,
+        BAND19 = 19,
+        BAND20 = 20,
+        BAND21 = 21,
+        BAND22 = 22,
+        BAND23 = 23,
+        BAND24 = 24,
+        BAND25 = 25,
+        BAND26 = 26,
+        BAND27 = 27,
+        BAND28 = 28,
+        BAND29 = 29,
+        BAND30 = 30,
+        BAND31 = 31,
+        // TDD Bands
+        BAND33 = 33,
+        BAND34 = 34,
+        BAND35 = 35,
+        BAND36 = 36,
+        BAND37 = 37,
+        BAND38 = 38,
+        BAND39 = 39,
+        BAND40 = 40,
+        BAND41 = 41,
+        BAND44 = 44,
+    }
+
+58917
+
+Hi,
+I'm new to developing modules for Apache. I understand the basics now and can develop something simple which allows a 'GET' request to happen, but what I want to do is actually 'POST' information to my site. I know the basic POST Request works and I can see that it is post by looking at request_rec->method. but what I can't seem to find is the information related to that post ie text message. would that be in the request_rec somewhere?
+
+Also while I'm here, I need to set and retrieve cookie information is there any API infromation related to that?
+
+Please help.
+
+Thanks.
+Dan.
+danperrett
+ 
+Posts: 1
+Joined: 15. October 2014 13:11
+XAMPP Version: 1.8.0
+Operating System: ubuntu
+
+
+ public enum BAND
+    {
+        Dummy = 0,
+        // FDD Bands
+        BAND1 = 1,
+        BAND2 = 2,
+        BAND3 = 3,
+        BAND4 = 4,
+        BAND5 = 5,
+        BAND6 = 6,
+        BAND7 = 7,
+        BAND8 = 8,
+        BAND9 = 9,
+        BAND10 = 10,
+        BAND11 = 11,
+        BAND12 = 12,
+        BAND13 = 13,
+        BAND14 = 14,
+        BAND17 = 17,
+        BAND18 = 18,
+        BAND19 = 19,
+        BAND20 = 20,
+        BAND21 = 21,
+        BAND22 = 22,
+        BAND23 = 23,
+        BAND24 = 24,
+        BAND25 = 25,
+        BAND26 = 26,
+        BAND27 = 27,
+        BAND28 = 28,
+        BAND29 = 29,
+        BAND30 = 30,
+        BAND31 = 31,
+        // TDD Bands
+        BAND33 = 33,
+        BAND34 = 34,
+        BAND35 = 35,
+        BAND36 = 36,
+        BAND37 = 37,
+        BAND38 = 38,
+        BAND39 = 39,
+        BAND40 = 40,
+        BAND41 = 41,
+        BAND44 = 44,
+    }
+
+
+TraceObject
+
+Time
+
+Seq_Delta_Time
+
+TraceObject
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerInterfaces
+
+DirectionType
+
+ public enum BAND
+    {
+        Dummy = 0,
+        // FDD Bands
+        BAND1 = 1,
+        BAND2 = 2,
+        BAND3 = 3,
+        BAND4 = 4,
+        BAND5 = 5,
+        BAND6 = 6,
+        BAND7 = 7,
+        BAND8 = 8,
+        BAND9 = 9,
+        BAND10 = 10,
+        BAND11 = 11,
+        BAND12 = 12,
+        BAND13 = 13,
+        BAND14 = 14,
+        BAND17 = 17,
+        BAND18 = 18,
+        BAND19 = 19,
+        BAND20 = 20,
+        BAND21 = 21,
+        BAND22 = 22,
+        BAND23 = 23,
+        BAND24 = 24,
+        BAND25 = 25,
+        BAND26 = 26,
+        BAND27 = 27,
+        BAND28 = 28,
+        BAND29 = 29,
+        BAND30 = 30,
+        BAND31 = 31,
+        // TDD Bands
+        BAND33 = 33,
+        BAND34 = 34,
+        BAND35 = 35,
+        BAND36 = 36,
+        BAND37 = 37,
+        BAND38 = 38,
+        BAND39 = 39,
+        BAND40 = 40,
+        BAND41 = 41,
+        BAND44 = 44,
+    }
+
+ProtocolVersion
+
+ public class ProtocolVersion
+    {
+        public enum Release
+        {
+            R7_2008_03,
+            R8_2009_03,
+            R8_2009_09,
+            R8_2009_12,
+            R9_2010_06,
+            R10_2012_03,
+            R10_2013_12,
+            R11_2014_03
+        }
+
+        private static ProtocolVersion m_Self = null;
+
+        public const string R7_2008_03_VERSION = "R7 March 2008";
+        public const string R8_2009_03_VERSION = "R8 March 2009";
+        public const string R8_2009_09_VERSION = "R8 September 2009";
+        public const string R8_2009_12_VERSION = "R8 December 2009";
+        public const string R9_2010_06_VERSION = "R9 June 2010";
+        public const string R10_2012_03_VERSION = "R10 March 2012";
+        public const string R10_2013_12_VERSION = "R10 December 2013";
+        public const string R11_2014_03_VERSION = "R11 March 2014";
+
+        // this special case was selectable by mistake in SAS 45 but corrected in SAS 46
+        public const string R11_2013_03_VERSION = "R11 March 2013";
+
+        // This is the default version that will be used when a new script is created.
+        private const Release m_DefaultProtocolVersion = Release.R10_2012_03;
+
+        private EnumStringLookup<Release> m_Releases = null;
+        private EnumStringLookup<Release> m_Releases_SMS = null;
+
+
+        private static ProtocolVersion Instance
+        {
+            get
+            {
+                if (m_Self == null)
+                {
+                    m_Self = new ProtocolVersion();
+                }
+
+                return m_Self;
+            }
+        }
+
+        private ProtocolVersion()
+        {
+            m_Releases = new EnumStringLookup<Release>();
+            m_Releases.PopulateLookup(Release.R8_2009_03, R8_2009_03_VERSION);
+            m_Releases.PopulateLookup(Release.R8_2009_09, R8_2009_09_VERSION);
+            m_Releases.PopulateLookup(Release.R8_2009_12, R8_2009_12_VERSION);
+            m_Releases.PopulateLookup(Release.R9_2010_06, R9_2010_06_VERSION);
+            m_Releases.PopulateLookup(Release.R10_2012_03, R10_2012_03_VERSION);
+            m_Releases.PopulateLookup(Release.R10_2013_12, R10_2013_12_VERSION);
+            m_Releases.PopulateLookup(Release.R11_2014_03, R11_2014_03_VERSION);
+
+            m_Releases_SMS = new EnumStringLookup<Release>();
+            m_Releases_SMS.PopulateLookup(Release.R7_2008_03, R7_2008_03_VERSION);
+        }
+
+        public static string[] AvailablePDUVersions
+        {
+            get
+            {
+                return Instance.m_Releases.Values();
+            }
+        }
+
+        public static Release DefaultPDUVersion
+        {
+            get
+            {
+                return ProtocolVersion.m_DefaultProtocolVersion;
+            }
+        }
+
+        public static Release ToRelease(string _Release)
+        {
+            // special case 
+            if (_Release == R11_2013_03_VERSION) _Release = R11_2014_03_VERSION;
+            return Instance.m_Releases.Lookup(_Release);
+        }
+
+        public static string ToString(Release _Release)
+        {
+            return Instance.m_Releases.Lookup(_Release);
+        }
+
+        public static Release ToRelease_SMS(string _Release)
+        {
+            return Instance.m_Releases_SMS.Lookup(_Release);
+        }
+
+        public static string ToString_SMS(Release _Release)
+        {
+            return Instance.m_Releases_SMS.Lookup(_Release);
+        }
+    }
+
+  class EnumStringLookup<T>
+    {
+        private Dictionary<T, string> m_LookupDictionary = new Dictionary<T, string>();
+
+        public void ClearLookup()
+        {
+            m_LookupDictionary.Clear();
+        }
+
+        public void DefaultPopulateLookup()
+        {
+            Array values = Enum.GetValues(typeof(T));
+            foreach (T element in values)
+            {
+                PopulateLookup(element, Textualise(element));
+            }
+        }
+
+        public void PopulateLookup(T _EnumType, string _EnumTypeString)
+        {
+            if (!m_LookupDictionary.ContainsKey(_EnumType))
+            {
+                m_LookupDictionary.Add(_EnumType, _EnumTypeString);
+            }
+        }
+
+        public string[] Values()
+        {
+            return m_LookupDictionary.Values.ToArray();
+        }
+
+        public string Lookup(T _EnumType)
+        {
+            string codingType = "";
+
+            if (m_LookupDictionary.ContainsKey(_EnumType))
+            {
+                codingType = m_LookupDictionary[_EnumType];
+            }
+
+            return codingType;
+        }
+
+        public T Lookup(string _EnumTypeString)
+        {
+            T codingType = default(T);
+
+            foreach (KeyValuePair<T, string> entry in m_LookupDictionary)
+            {
+                if (entry.Value == _EnumTypeString)
+                {
+                    codingType = entry.Key;
+                    break;
+                }
+            }
+
+            return codingType;
+        }
+
+        private string Textualise(T _LanguageCode)
+        {
+            string languageDescription = _LanguageCode.ToString();
+            languageDescription = languageDescription.Replace("_", " ");
+            return languageDescription;
+        }
+    }
+
+EnumStringLookup
+
+            tempRecord.Hundredths = tempObject.Time.Hundredths.ToString();
+
+
+Hi,
+I'm new to developing modules for Apache. I understand the basics now and can develop something simple which allows a 'GET' request to happen, but what I want to do is actually 'POST' information to my site. I know the basic POST Request works and I can see that it is post by looking at request_rec->method. but what I can't seem to find is the information related to that post ie text message. would that be in the request_rec somewhere?
+
+Also while I'm here, I need to set and retrieve cookie information is there any API infromation related to that?
+
+Please help.
+
+Thanks.
+Dan.
+
+Anite.Sequencer.InterfacesCopy.
+
+Anite.Sequencer.Interfaces.
+
+GetScriptVariableInDriverFormat
+

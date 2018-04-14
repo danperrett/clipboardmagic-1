@@ -1,0 +1,123 @@
+   [DllImport("kernel32", SetLastError = true)]
+    private static extern bool AttachConsole(int dwProcessId);
+
+using System.Runtime.InteropServices;
+
+ IntPtr ptr = GetForegroundWindow();
+
+        int u;
+
+        GetWindowThreadProcessId(ptr, out u);
+
+        Process process = Process.GetProcessById(u);
+
+        AttachConsole(process.Id);
+
+  [DllImport("user32.dll")]
+    private static extern IntPtr GetForegroundWindow();
+
+    [DllImport("user32.dll", SetLastError = true)]
+    private static extern uint GetWindowThreadProcessId(IntPtr hWnd, out int lpdwProcessId);
+
+
+[DllImport( "kernel32.dll" )]
+        static extern bool AttachConsole( int dwProcessId );
+        private const int ATTACH_PARENT_PROCESS = -1;
+
+   AttachConsole( ATTACH_PARENT_PROCESS );
+
+  System.Console.WriteLine("CommandLines");
+
+  public bool CommandLine(string[] args)
+        {
+            bool isCommandLineStarted = false;
+          
+            Thread.Sleep(30000);
+           
+            if (args.Length > 1)
+            {
+
+                AttachConsole(ATTACH_PARENT_PROCESS);
+
+                System.Console.WriteLine("CommandLines");
+
+                isCommandLineStarted = true;
+                int i = 1;
+                while (i < args.Length)
+                {
+                    string arg = args[i];
+                    if ((arg == "-h") || (arg == "--help"))
+                    {
+                        System.Console.WriteLine("Help");
+                    }
+                    i++;
+                }
+            }
+
+            return isCommandLineStarted;
+        }
+
+   [DllImport("kernel32.dll")]
+        static extern bool AttachConsole(int dwProcessId);
+        private const int ATTACH_PARENT_PROCESS = -1;
+
+using System.Runtime.InteropServices;
+
+   static public bool CommandLine(string[] args, out bool help)
+        {
+            bool isCommandLineStarted = false;
+
+          //  Thread.Sleep(30000);
+            help = false;
+
+            if (args.Length > 1)
+            {
+
+                AttachConsole(ATTACH_PARENT_PROCESS);
+
+                System.Console.WriteLine("CommandLines");
+
+                isCommandLineStarted = true;
+                int i = 1;
+                while (i < args.Length)
+                {
+                    string arg = args[i];
+                    if ((arg == "-h") || (arg == "--help"))
+                    {
+                        System.Console.WriteLine("-h this menu\n-b Batch Name\n-v Version\n-l License\n-s Signature Type\n-p Path to Script.");
+                        help = true;
+                        break;
+                    }
+                    i++;
+
+
+                }
+            }
+
+            return isCommandLineStarted;
+        }
+
+This debug will go in the official release.
+
+SignatureTypeEnum
+
+UserScript_BatchName
+
+"AUDIO MULTIMODE AUDIO TESTING" 
+
+dataGridView_Scripts
+
+RTTEvent_LogImsMessage
+
+NewTraceObject_ImsSimulator
+
+WriteLine
+
+SASLogger
+
+params
+
+System.IO.TextWriter.WriteLine
+
+\\myanite.com\telecoms\ODCShare\Releases\Core Software Standard Releases\Release 29.0\Internal\Images\Core Software Release 29.0.0.0 {0182}
+

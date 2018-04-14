@@ -1,0 +1,1527 @@
+not
+
+NameServiceRef
+
+corbaloc::192.168.50.107:2809/NameService
+
+CutlasNameService
+
+NameServiceLoc
+
+corbaloc::192.168.50.107:2809/NameService
+
+contextKind
+
+UTMC
+
+contextName
+
+CUTLAS
+
+resolve_initial_references
+
+serviceName
+
+MANAGER2
+
+resolve_initial_references
+
+utmcServices
+
+serviceName
+
+nameServiceReference
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+1.1.1.1 
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+ServerIPAddress
+
+ServerUsername
+
+CameraAccessPort
+
+CameraType
+
+CameraUsername
+
+CameraPassword
+
+SharedObject
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+appSettings
+
+InputDataDump
+
+m62
+
+ORA-00911: invalid character
+
++
+  "from dss_fin_user.acq_dashboard_src_load_success " 
+
+vmsUnitReference
+
+ New VMSTrafficData
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing from vms_definition where deletiondate is null and datasource_typeid = 3 and typeid in ( 4, 5, 6, 8  );
+
+GetTableFromDB
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+CFB613DE7D9A3254E0433CC411ACFD01
+
+SubscriberService/SubscriberWebService/Core/EventManager.cs
+
+wilmut.peek.prv
+
+GetDBQueryString
+
+CREATEDBY,
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\ReadImagesAgent\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+DVTelWrapperLibrary
+
+..\..\..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+@echo off
+
+@echo ***************************************************
+@echo ***************************************************
+@echo Filename: Start_Build_VS10_x64.bat
+@echo Description: Starts the build of ImCity for 2010 solutions
+@echo ---------------------------------------------------
+@echo Created by: Daniel Perrett	Date: May 2016
+@echo ---------------------------------------------------
+@echo ---------------------------------------------------
+
+REM Establish a build root
+cd C:\secure\Source\cutlas
+
+devenv "C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln"
+
+devenv "Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln" /Clean
+
+%1 /OUT "build_%1_VS2010_x64.log" > nul
+
+ %1 /OUT "build_%1_VS2010_x64.log"  > nul
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+sudo adduser -m -d /home/codinggain codinggain
+
+
+\Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+regasm /tlb /codebase Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+Core\%1\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll
+
+Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+0
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+My First Heading
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild
+
+..\..\Release\Helpers
+
+$(SolutionDir)..\Release
+
+$(OutDir)/
+
+$(SolutionDir)..\Debug\Helpers
+
+Camera CCTV001
+
+Camera CCTV002
+
+getClipboardText?username=danperre
+
+https://en.wikipedia.org/wiki/Component_Object_Model
+
+Component Object Model
+
+bool GotoPreset(int cameraNum, int presetnum);
+
+bool Logon(string server, string username, string password);
+
+ void Initialise(string config);
+
+ public bool Logon(string server, string username, string password)
+
+int InitiliseNumberOfCameras();
+
+public int GetCameraNumberFromName(string name)
+
+GetCameraNumberFromName
+
+ bool GotoPreset(int cameraNum, int presetnum);
+
+ bool Bookmark(int cam, string name, string description);
+
+ byte[] GetSnapshot(int camerNum, ref long length, ref int preset, string username, string password, int port, string cameraType = null);
+
+2755466/2/r8R/665
+
+Open Network Video Interface Forum
+
+DVTel Agent
+
+Blow is a list of command and parameters that have to be enabled by the :
+
+Whytrumpisgreat.com
+
+SharedObject=
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+4845
+
+??
+
+4845
+
+?????????????????????????????????????????????????????????????????????????????????????????
+
+, says the Tate.
+
+URL http://www.bbc.co.uk/news/entertainment-arts-39219709
+
+********************
+
+Source bbc-news
+
+Title Title: West Indies v England - Hales starring on return
+
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/Everest/trunk
+
+C:\Users\Daniel.Perrett\Documents\DVTelCCTVAdapter.docx
+
+g
+
+http://93.95.10.169:18080/
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification
+
+https://www.youtube.com/watch?v=GwbO_PdwK_4
+
+/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+
+	/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+	{
+		Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		formatter.setTimeZone(calendar.getTimeZone());
+		String startdateString = formatter.format(calendar.getTime());
+		int faulttype = GetFaultType(fault.diagnosticData);
+		int c = 0;
+		String sqlCommand = 
+				String.format("SELECT * FROM %1$s WHERE SYSTEMCODENUMBER='%2$s' AND FAULTTYPE=%3$d",
+					      databasetable,
+					      fault.diagnosticData.getEquipmentSCN(), 
+					      faulttype); 
+		
+		logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		
+		if(GetErrorWarning(c, queryResults) != "") return false;
+		
+		ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+	/*	for(ResultSet _r: _res)
+		{
+			boolean ignoreflag = false;
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+				switch(_c.name)
+				{
+				
+					
+				case "CLEAREDDATE":
+					Timestamp[] timestamp = _c.values.timestampValues();
+					if(timestamp != null)
+					{
+						if(timestamp.length > 0)
+						{
+							if(timestamp[0].dateValue != 0)
+							{
+								logger.log(logLevel, "Its Already been Cleared!");
+								return false;
+							}
+						}
+					}
+					break;
+				}
+			}
+			
+		}
+		*/
+		calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+		sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+		
+		logger.log(logLevel, sqlCommand);
+		queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		return GetErrorWarning(c, queryResults) == "";
+	}
+	
+
+anperrett.com:8000/getProjectsAndIds?id=danperre&pro_id=437
+
+clearUnavailableFault
+
+	logger.log(logLevel, "Error connection to server");
+        	connected = false;
+        	connectionAttempts++;
+        	if(connectionAttempts >= 3 && !unavailableFaultRaised)
+        	{
+        		createUnavailableFault("Cannot connect to the xmpp server!");
+        		
+        		connectionAttempts = 0;
+        	}
+
+  adapterStatus.setStatus("Succesfully Logged onto XMPP Server");
+            connectionAttempts = 0;
+            if(unavailableFaultRaised)
+            {
+            	unavailableFaultRaised = false;
+            	clearUnavailableFault();
+            }
+
+clearUnavailableFault
+
+c
+
+	sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+
+cdbTableName
+
+fault.EndTime
+
+fault.Device
+
+fault.type.ordinal()
+
+unavailableFaultRaised
+
+unavailableFault = new FaultInformation();
+
+InsightDetector
+
+unavailableFault.Device = "InsightDetector";
+
+logger.log(logLevel, "Error in the insertion of Status");
+
+TO_DATE('Fri Mar 10 11:37:57 GMT 2017', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='InsightDetector'
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('Fri Mar 10 11:37:57 GMT 2017', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='InsightDetector' AND FAULTTYPE=0 AND CLEAREDDATE is null AND DATASOURCE_TYPEID=1724
+
+SELECT * FROM SUBSYSTEM_FAULTS WHERE SYSTEMCODENUMBER='InsightDetector' AND CREATIONDATE=TO_DATE('', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=0
+
+calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+
+Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+Calendar calendar
+
+fault.EndTime,
+
+Calendar
+
+fault.EndTime
+
+SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
+			Date time = new Date();
+			date = sdf.format(time);
+
+String date = "";
+
+fault.EndTime
+
+CORBAQuery
+
+int c = 0;
+
+54.246.187.36
+
+adapter 
+
+
+
+
+Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>; Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>
+
+ReceiveMail
+
+    import java.io.IOException;  
+    import java.util.Properties;  
+    import javax.mail.Folder;  
+    import javax.mail.Message;  
+    import javax.mail.MessagingException;  
+    import javax.mail.NoSuchProviderException;  
+    import javax.mail.Session;  
+    import com.sun.mail.pop3.POP3Store;  
+      
+    public class ReceiveMail{  
+      
+     public static void receiveEmail(String pop3Host, String storeType,  
+      String user, String password) {  
+      try {  
+       //1) get the session object  
+       Properties properties = new Properties();  
+       properties.put("mail.pop3.host", pop3Host);  
+       Session emailSession = Session.getDefaultInstance(properties);  
+         
+       //2) create the POP3 store object and connect with the pop server  
+       POP3Store emailStore = (POP3Store) emailSession.getStore(storeType);  
+       emailStore.connect(user, password);  
+      
+       //3) create the folder object and open it  
+       Folder emailFolder = emailStore.getFolder("INBOX");  
+       emailFolder.open(Folder.READ_ONLY);  
+      
+       //4) retrieve the messages from the folder in an array and print it  
+       Message[] messages = emailFolder.getMessages();  
+       for (int i = 0; i < messages.length; i++) {  
+        Message message = messages[i];  
+        System.out.println("---------------------------------");  
+        System.out.println("Email Number " + (i + 1));  
+        System.out.println("Subject: " + message.getSubject());  
+        System.out.println("From: " + message.getFrom()[0]);  
+        System.out.println("Text: " + message.getContent().toString());  
+       }  
+      
+       //5) close the store and folder objects  
+       emailFolder.close(false);  
+       emailStore.close();  
+      
+      } catch (NoSuchProviderException e) {e.printStackTrace();}   
+      catch (MessagingException e) {e.printStackTrace();}  
+      catch (IOException e) {e.printStackTrace();}  
+     }  
+      
+     public static void main(String[] args) {  
+      
+      String host = "mail.javatpoint.com";//change accordingly  
+      String mailStoreType = "pop3";  
+      String username= "sonoojaiswal@javatpoint.com";  
+      String password= "xxxxx";//change accordingly  
+      
+      receiveEmail(host, mailStoreType, username, password);  
+      
+     }  
+    }  
+
+
+public class ReceiveMail {
+
+}
+
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+mail.javatpoint.com
+
+Daniel.Perrett@dynniq.co.uk
+
+
+ public static void main(String[] args) {  
+
+ pop.mail.yahoo.com
+
+Daniel.Perrett@dynniq.co.uk
+
+String host = "mail.javatpoint.com";//change accordingly  
+  String mailStoreType = "pop3";  
+  String username= "sonoojaiswal@javatpoint.com";  
+  String password= "xxxxx";//change accordingly  
+
+ String host = " pop.mail.yahoo.com";//change accordingly  
+  String mailStoreType = "pop3";  
+  String username= "danperrett07087@yahoo.com";  
+  String password= "M0nkeybra1ns";//change accordingly  
+  
+
+ pop.mail.yahoo.com
+
+sonoojaiswal@javatpoint.com
+
+ Properties properties = System.getProperties();
+    Session session = Session.getDefaultInstance(properties);
+    Store store = session.getStore("pop3");
+    store.connect(host, user, password);
+    Folder inbox = store.getFolder("Inbox");
+    inbox.open(Folder.READ_ONLY);
+
+@yahoo.com
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+op.mail.yahoo.com
+
+// get the list of inbox messages
+    Message[] messages = inbox.getMessages();
+
+	    
+
+ // get the list of inbox messages
+    Message[] messages = inbox.getMessages();
+
+
+g
+
+??
+
+if (messages.length == 0) System.out.println("No messages found.");
+
+x
+
+pop.gmail.com
+
+danperrett07087
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+pop.gmail.com
+
+/usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.U19215 --address :24800
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+Daniel.Perrett@dynniq.co.uk
+
+dperrett1969
+
+Errors were encountered while processing:
+ tomcat7
+
+
+sudo cp /etc/squirrelmail/apache.conf /etc/apache2/sites-available/squirrelmail.conf
+
+sudo a2ensite squirrelmail.conf
+
+.com/squirrelmail.
+
+ sudo mkdir -p /var/www/html
+
+usermod -m -d /var/www/html/
+
+Error: Failed to autocreate mailbox INBOX: Internal error occurred. Refer to server log for more information
+
+10777610
+
+23492
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+10862231010
+
+10860935182
+
+http://www.tecmint.com/setup-postfix-mail-server-in-ubuntu-debian/
+
+https://webmail.dynniq.co.uk/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.dynniq.co.uk%2fowa%2f
+
+http://www.bbc.co.uk/news/world-europe-39248188
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification/
+
+23866
+
+SOAP Request
+
+
+4.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+1.1.1	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+C:\Users\Daniel.Perrett\Documents\CATestDesign.vsdx
+
+C:\Users\Daniel.Perrett\Documents\ClearViewModuleTestingPhase1.vsdx
+
+93.95.10.169
+
+http://cajtmsfaults.co.uk:18080/JTMSDiagnosticFeed.wsdl
+
+93.95.10.169
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+C:6090	M	For each PTZ CCTV camera it must be possible to define on the map a number of zones of coverage. For each zone of coverage a camera pre-set position can be defined.	2.34.37. The objective is to be able to automatically point a CCTV camera at the site of an incident that falls within a zone of coverage.
+
+C:6095	M	When automatically creating (Incident Detection) or manually creating/editing an Incident it shall be possible to trigger all PTZ cameras which have a zone of coverage that includes the geo-location of the incident, to point at the incident.	2.34.37
+
+4.1.1	TC001
+
+C:6260	M	Creating a new Incident shall result in an automatic flag being created for all CCTV cameras in the system. The associated text shall be the Incident reference.	SDD pt 1 Issue 2 section 4.1.1.1
+
+C:6400	M	The following fault states must be available from the CCTV sub-system and stored in the CDB
+?	Per camera
+o	camera fault
+o	loss of connection
+?	Loss of connection to the CCTV sub-system. In this event ImCity must indicate all cameras as status unknown and prevent user interface operation.	Common sense.
+
+
+
+
+
+
+3.14.23 8th bullet
+
+
+C:6410	M	Clearance of a fault must result in all relevant faults being automatically cleared in ImCity (without manual intervention). 
+
+C:6080	W	It must be possible to bring up a full resolution moving image from the camera in a separate window.	Not actually stated anywhere but an obvious requirement for ImCity and CCTV. Solution to be discussed (note C:1812 that requires a single frame to be displayed on camera selection). Not a MG MCS requirement and project cannot afford ?extras?.
+
+TC002
+
+4.1.3	TC003
+Name	Description
+Summary	
+Ref requirements	
+Pre-condition	
+Test description	
+Expected result	
+Actual result	
+Pass / Fail	
+
+
+C:6090
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+Num	CCTV_COMMAND
+1	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+2	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+3	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '3', '0')
+4	INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+5	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+
+C:6260
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+TC002
+
+TC001
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+vmsRecord
+
+http://datex2.eu/schema/2/2_0
+
+http://www.datex2.eu/schema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+Webclientinterface
+
+delegate string 
+
+D2LogicalModel
+
+   if (gotinfo != null)
+            { 
+
+             }
+
+https://datex2.stratostraffic.com/vms/definition
+
+new NetworkCredential("username", "password");
+
+    string htmlCode = client.DownloadString("http://domain.loc/testpage.aspx");
+
+https://datex2.stratostraffic.com/vms/definition
+
+url
+
+namespace DatexIIv2PullAdapterLib
+
+using DatexIIv2PullAdapterLib;
+
+MainInterface
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+https://datex2.stratostraffic.com/vms/definition
+
+GetWebContent.Start();
+
+GetWebContent.Elapsed
+
+GetWebContent_Elapsed
+
+GetWebContent.Elapsed += GetWebContent_Elapsed;
+
+D2LogicalModel
+
+TextWriter writer = new StringWriter(sb)
+
+TextReader reader = new StringReader(operationXML)
+
+htmlCode
+
+reader
+
+D2LogicalModel
+
+PayloadPublication
+
+Test that the PTZ camera will go to a predefined pre-set
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+C:6090, C:6095
+
+C:6260
+
+'Incident~245436'
+
+C:6410
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_Clearview_Adapter_I2.docx
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_CA_Adapter_I2.docx
+
+http://wilmut.peek.prv/instation/datexiipushadapter.git
+
+git@wilmut.peek.prv:instation/datexiipushadapter.git
+
+TestResults_Iteration_5
+
+http://wilmut.peek.prv/instation/datexiipushadapter.git
+
+\\192.168.11.210\danperrett\datexIIadapter_latest\datexiipushadapter\SubscriberService\SubscriberWebService\bin\log4net.dll
+
+\\192.168.11.210\danperrett\datexIIadapter_latest\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+\\192.168.11.210\danperrett\datexIIadapter_latest\datexiipushadapter\SubscriberService\SubscriberWebService\bin\GZipEncoder.dll
+
+old
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_Clearview_Adapter_I2.docx
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_CA_Adapter_I2.docx
+
+1.	INTRODUCTION	3
+1.1	Objective of this document	3
+1.2	Audience and advice for the reader	3
+1.3	Glossary	3
+1.4	References	3
+2.	TEST ENVIRONMENT	4
+2.1	Clearview Adapter Development Testing	4
+2.2	Equipment and tools	5
+3.	REQUIREMENTS	6
+3.1	Functional	6
+4.	FUNCTIONAL TESTS	7
+4.1.1	TC001	7
+4.1.2	TC002	7
+4.1.3	TC003	7
+1.	INTRODUCTION
+Purpose of this document is to describe the Test report for the CA adapter module.
+
+1.1	Objective of this document
+The objective of this document is to provide some clarification over the module testing of the CA adapter. 
+
+1.2	Audience and advice for the reader
+This document has been written for:
+?	Product manager
+?	Engineering
+?	Additional stakeholders
+
+1.3	Glossary
+	
+	
+CDB	Common Database
+SOAP	Simple Object Access Protocol
+	
+
+1.4	References
+Ref.	Title/Author/Publisher	Version	Date/Year 
+& 1 
+P31001-0004 MCS Development Test Plan 1d (Draft).docx		08.08.2016
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+2.	TEST ENVIRONMENT
+Figure 1 describes the environment for the developer testing of the CA Adapter. Use of Eclipse for development and SQL developer is paramount to this testing. The Tests are devised to ensure that the adapter receives, decode and logs a correct error in the database.
+As no access has been made available to Dynniq for testing purposes. We have to simulate the SOAP interface using a tool called SOAP UI.
+
+
+2.1	CA Adapter Development Testing
+
+ 
+Figure 1  Testing Setup for CA testing.
+
+
+?
+2.2	Equipment and tools
+Equipment and tools required for testing are listed in the following table:
+
+Item	Product	Availability
+Java VM	1.8	Available
+Database	Oracle	Available
+Operating System	Windows 7/Linux	Available
+Essential software	Eclipse IDE, SQL Developer	Available
+Simulators	SOAP UI/Custom	Available.
+Other Equipment	Laptop/PC 	Available
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.	REQUIREMENTS
+3.1	Functional
+
+#	MoSCoW	Functional Requirements	Test Case
+C:12000	M	ImCity must automatically connect to the CA system.	TC001
+C:12010	M	ImCity must log the lack of ability to connect to the CA system as a sub-system fault (just once per occasion please).	TC001
+C:12020	M	Loss of connection to the CA system shall be made apparent to an operator within 5 minutes.	TC002
+C:11040	M	It must be possible to display faults against specific camera (icons).	TC003
+C:11050	M	A specific fault is to be identified for cameras suspected as being out of alignment.	TC004
+C:12060	M	A fault shall be automatically cleared in ImCity when the equipment is no longer reported as faulty.	TC003
+
+ 
+
+4.	FUNCTIONAL TESTS
+The test list is not finalised and is extendable.
+4.1.1	TC001
+Name	Description
+Summary	Test the Adapter will connect to the SOAP Service simulator.
+Ref requirements	C:12000, C:12010
+Pre-condition	Fault Simulator is running on a PC/Linux box
+Test description	Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the CA Simulator
+Expected result	Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	Verify that the host name and IP address is correct in the file C:Windows\System32\Drivers\etc\host.
+After a period of running change the IP address to something incorrect in the above file.
+Wait 5 min.
+Change the IP address back to the correct one.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	General logging of faults coming from the simulator
+Ref requirements	C:11040
+Pre-condition	TC001 and a constant flow of faults
+Test description	Let the Server and adapter run for about 10 min, check the SQL developer views
+Expected result	Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+The faults should be a mixture of faults as these are randomly generated by the simulator.
+Actual result	
+Pass / Fail	
+
+
+
+
+
+
+4.1.4	TC004
+Name	Description
+Summary	Check that the Status of the adapter get updated in the database.
+Ref requirements	None
+Pre-condition	Run the adapter in the eclipse debugger.
+Test description	Once the CA Adapter is up and running you should be able to check the appropriate database (047, 048) that the Status has been updated.
+Expected result	Should see and entry ?OK? and device ?CA-ANPR-JTMS? with time stamp in the Subsystem_Status table of your database.
+Actual result	
+Pass / Fail	
+
+
+Muirfield
+
+Name	Description
+Summary	Test the Adapter will connect to the SOAP Service simulator.
+Ref requirements	C:12000, C:12010
+Pre-condition	Fault Simulator is running on a PC/Linux box
+Test description	Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the CA Simulator
+Expected result	Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+Actual result	
+Pass / Fail	
+
+
+Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the CA Simulator
+
+Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+
+
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	Verify that the host name and IP address is correct in the file C:Windows\System32\Drivers\etc\host.
+After a period of running change the IP address to something incorrect in the above file.
+Wait 5 min.
+Change the IP address back to the correct one.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+
+Verify that the host name and IP address is correct in the file C:Windows\System32\Drivers\etc\host.
+After a period of running change the IP address to something incorrect in the above file.
+Wait 5 min.
+Change the IP address back to the correct one.
+
+
+Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+
+
+	
+	
+	
+	
+	
+	
+	
+Pass / Fail	
+
+
+
+
+Name	Description
+Summary	General logging of faults coming from the simulator
+Ref requirements	C:11040
+Pre-condition	TC001 and a constant flow of faults
+Test description	Let the Server and adapter run for about 10 min, check the SQL developer views
+Expected result	Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+The faults should be a mixture of faults as these are randomly generated by the simulator.
+Actual result	
+Pass / Fail	
+
+
+Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+The faults should be a mixture of faults as these are randomly generated by the simulator.
+
+
+
+4.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010, C:10020
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the XMPP server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the XMPP server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online. Further checks can be done be monitoring the Detector Faults VIEW  in the database with SQL developer.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the Clearview internal system.
+Test description	Create several random faults using the Clearview provided simulator. This does have to be done by hand.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+4.1.4	TC004
+Name	Description
+Summary	When the Adapter goes off line it must receive missed faults
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	Run the adapter to start with, simulating several faults using the Clearview simulation tool.
+Make sure these are received by the adapter and go into the database.
+Take the adapter down, ensuing it is not running anywhere! 
+Again generate several fault using the clearview simulator.
+Start up the adapter again, ensuing that it connects to the xmpp server.
+Expected result	When the Adapter start and logs on to the xmpp server you should see all the faults being sent to it.
+Actual result	
+Pass / Fail	
+
+?
+
+
+
+1.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+1.1.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010, C:10020
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the XMPP server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the XMPP server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online. Further checks can be done be monitoring the Detector Faults VIEW  in the database with SQL developer.
+Actual result	
+Pass / Fail	
+
+1.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the Clearview internal system.
+Test description	Create several random faults using the Clearview provided simulator. This does have to be done by hand.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+1.1.4	TC004
+Name	Description
+Summary	When the Adapter goes off line it must receive missed faults
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	Run the adapter to start with, simulating several faults using the Clearview simulation tool.
+Make sure these are received by the adapter and go into the database.
+Take the adapter down, ensuing it is not running anywhere! 
+Again generate several fault using the clearview simulator.
+Start up the adapter again, ensuing that it connects to the xmpp server.
+Expected result	When the Adapter start and logs on to the xmpp server you should see all the faults being sent to it.
+Actual result	
+Pass / Fail	
+
+?
+
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\Test_Plan_For_Tyco_DVTEL_CCTV_Adapter.docx
+
+
+4.1.1	TC001
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set
+Ref requirements	C:6090, C:6095
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run through commands 1 to 3 of Table 1 in sql developer, ensuring hat with in the adapter dialog we see a command acknowledge and a complete message, this might take up to 30 seconds before a complete message is seen. You can view the camera move on the Control Center software in the TYCO system.
+Expected result	Using Oracle SQL developer you should see a Response result of 2 being written to the CCTV_COMMANDS table. In WebOs you should see the image change.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Test that the CCTV video get marked correctly.
+Ref requirements	C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Execute command 4 of Table 1 in sql developer environment. Ensure a complete message is seen in the cctv dialog box.
+Expected result	Checking the result does require access the TYCO DVTel server system, where Control Center should be up and running.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set, and book mark the video at the same time.
+Ref requirements	C:6090, C:6095, C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run command 5 in Table 1.
+Expected result	Check the camera has moved using the Control Center, check a book mark for  'Incident~245436' has been registered. Check WebOs to see if the image has changed
+Actual result	
+Pass / Fail	
+
+
+4.1.4	TC004
+Name	Description
+Summary	Test a fault will be raised if the camera is disconnected.
+Ref requirements	C:6410
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Unplug one of your cameras.
+Expected result	A faults will be generated either, firstly from the fact that a Snap shot cannot now be taken, secondly the DVTel Software will raise an error indicating that there is a fault.
+Actual result	
+Pass / Fail	
+
+
+
+
+
+
+
+1.1.1	TC001
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set
+Ref requirements	C:6090, C:6095
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run through commands 1 to 3 of Table 1 in sql developer, ensuring hat with in the adapter dialog we see a command acknowledge and a complete message, this might take up to 30 seconds before a complete message is seen. You can view the camera move on the Control Center software in the TYCO system.
+Expected result	Using Oracle SQL developer you should see a Response result of 2 being written to the CCTV_COMMANDS table. In WebOs you should see the image change.
+Actual result	
+Pass / Fail	
+1.1.2	TC002
+Name	Description
+Summary	Test that the CCTV video get marked correctly.
+Ref requirements	C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Execute command 4 of Table 1 in sql developer environment. Ensure a complete message is seen in the cctv dialog box.
+Expected result	Checking the result does require access the TYCO DVTel server system, where Control Center should be up and running.
+Actual result	
+Pass / Fail	
+
+1.1.3	TC003
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set, and book mark the video at the same time.
+Ref requirements	C:6090, C:6095, C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run command 5 in Table 1.
+Expected result	Check the camera has moved using the Control Center, check a book mark for  'Incident~245436' has been registered. Check WebOs to see if the image has changed
+Actual result	
+Pass / Fail	
+
+
+1.1.4	TC004
+Name	Description
+Summary	Test a fault will be raised if the camera is disconnected.
+Ref requirements	C:6410
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Unplug one of your cameras.
+Expected result	A faults will be generated either, firstly from the fact that a Snap shot cannot now be taken, secondly the DVTel Software will raise an error indicating that there is a fault.
+Actual result	
+Pass / Fail	
+
+
+
+
+
+
+C:\Secure\Source\cutlas\Core\Adapters\AdapterCore
+
+C:\Secure\Source\cutlas\Core\Adapters
+
+http://www.datex2.eu/schema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+[ERROR] (Related to above error) This is the other declaration.
+
+
+chema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDPVqA6_gyAJgD6uUbioQ1bp7oYA2zwfIg
+
+My Project
+
+pi/geocode
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDktsvtCxugmtcFNmlJ3W1lXlWkD7WUVo8
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package
+
+C:\Users\Daniel.Perrett\Desktop\Latitude_Update_7.0.0.5762.exe
+
+".\Release Files\program files\Imtech\ImCity\adapters\CCTVAdapter\"
+
+copy $(TargetPath) $(SolutionDir)..\bin\$(TargetFileName)
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild
+
+TycoCriticalSection
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild Release > cctv.txt
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter.sln
+
+mkdir ".\Release Files\Program files\Imtech\ImCity\Adapters\CCTVAdapter\Support"
+
+DVTelInterfaceLibrary
+
+copy ".\Core\
+
+cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release
+
+Adapters\C
+
+".\Release Files\Program files\Imtech\ImCity\Adapters\CCTVAdapter\DVTelInterfaceLibrary"
+
+@echo ---------------------------------------------------
+
+https://console.developers.google.com/apis/api/geocoding_backend
+
+51.306460, -0.783426
+
+40.714224,-73.961452
+
+51.307682, -0.785225
+
+51.306460, -0.783426
+
+51.309382, -0.789817
+
+51.307682, -0.785225
+
+39.666381, 8.926839
+
+51.309382, -0.789817
+
+37.393636, 14.041117
+
+39.666381, 8.926839
+
+10.765542, 122.580153
+
+37.393636, 14.041117
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=10.765542,%20122.580153&key=AIzaSyDktsvtCxugmtcFNmlJ3W1lXlWkD7WUVo8
+
+50
+
+C:\Secure\Source\cutlas\Core\ThirdParty\DVTelFLIRPackages
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package.zip
+
+C:\Secure\Source\cutlas\Core\ThirdParty\DVTelFLIRPackages
+
+51.308054, -0.776788
+
+51.48, 0
+
+maps/web/
+
+maps/
+
+8000
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.MCore.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Server.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Tracing.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.SDK.Samples.Base.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.SystemManager.SystemObjects.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Application.common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Common.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Alarms.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Alarms.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Incidents.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Logical.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Logical.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Physical.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Physical.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemObjects.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemObjects.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemSettings.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemSettings.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.SDK.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.UpdateServices.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.AssemblyLoader.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Configuration.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.CsharpUtils.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.DataAccess.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.DVComm.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.DVComm.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Encryption.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Infrastructure.dll
+
+DatexIIUtility::latLong2OSGB
+
+const TSLCoordinateSystem* DatexIIUtility::m_coordSystem = 0;
+
+if ( !m_coordSystem )
+  {
+    //tsltransforms.dat
+    if ( TSLCoordinateSystem::loadCoordinateSystems( m_transformsFileLoc.c_str() ) )
+    {
+      m_coordSystem = TSLCoordinateSystem::findByName( "British National Grid (OSGB 1936)" );
+    }
+  }
+
+  if ( m_coordSystem )
+  {
+    m_coordSystem->latLongToMU( latitude, longitude, &easting, &northing, true );
+    return;
+  }
+
+static const TSLCoordinateSystem* m_coordSystem;
+
+  webclientif = new Webclientinterface(username, password, url, interval);
+            webclientif.gotinfo += Webclientif_gotinfo;
+            webclientif.Start();
+
+
+        Webclientinterface webclientif = null;
+
+          if(model != null)
+            {
+                PayloadPublication publication = model.payloadPublication;
+                VmsTablePublication vmsTable = publication as VmsTablePublication;
+                if(vmsTable != null)
+                {
+                    
+                }
+            }
+
+VmsStratoDefinitions
+
+"https://datex2.stratostraffic.com/vms/definition"
+
+https://datex2.stratostraffic.com/vms/status
+
+
+            webclientif = new Webclientinterface(username, password, url, interval);
+            webclientif.gotinfo += Webclientif_gotinfo;
+            webclientif.Start();
+
+static const TSLCoordinateSystem* m_coordSystem;
+
+ Webclientinterface webclientif = null;
+
+BaseConnection
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\DVTelLibrariesUsed
+
+Z:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\ClearviewCounterAdapter.zip
+
+Z:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CAFaultAdapter.zip
+

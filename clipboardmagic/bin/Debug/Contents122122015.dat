@@ -1,0 +1,69 @@
+ LARGE_INTEGER beforeCheck;
+        LARGE_INTEGER afterCheck;
+        QueryPerformanceCounter(&beforeCheck);
+         CHECKANDEXIT(decodeSignature(Signature, Message, &connectionInformation->signatureInformation, input), "Decode Signature"); //if this is incorrect then we need to drop the connection
+        QueryPerformanceCounter(&afterCheck);
+
+        DWORD diff = afterCheck.LowPart - beforeCheck.LowPart;
+        max = (diff > max)? diff : max;
+        min = (diff < min)? diff : min;
+        LOGSTRINT("ticks taken to decode signature is", diff, LOGMASK_ICONISIF);
+        LOGSTRINT("Min ticks is ", min, LOGMASK_ICONISIF);
+        LOGSTRINT("Max ticks is ", max, LOGMASK_ICONISIF);
+
+LARGE_INTEGER beforeCheck;
+        LARGE_INTEGER afterCheck;
+        QueryPerformanceCounter(&beforeCheck);
+         
+        QueryPerformanceCounter(&afterCheck);
+
+        DWORD diff = afterCheck.LowPart - beforeCheck.LowPart;
+        max = (diff > max)? diff : max;
+        min = (diff < min)? diff : min;
+        LOGSTRINT("ticks taken to decode signature is", diff, LOGMASK_ICONISIF);
+        LOGSTRINT("Min ticks is ", min, LOGMASK_ICONISIF);
+        LOGSTRINT("Max ticks is ", max, LOGMASK_ICONISIF);
+
+SignElement(&doc, Signature, Message, &connectionInformation->signatureInformation);
+
+ static DWORD max = -1;
+    static DWORD min = 1000000000;
+
+Base64encode_len
+
+CONTROL_REQUEST_BITMAP_SIZE
+
+Base64encode
+
+output
+
+CONTROL_REQUEST_BITMAP_SIZE
+
+(const char*)
+
+char debug[48] = {0};
+
+ICONISIF
+
+D:\Signature\Log_12_ 2_11_30_32_375.dat
+
+Sending a control request to MCS
+
+MCSIF
+
+Sending a control request to MCS
+
+AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=
+
+AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=
+
+AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+ICONISIF
+
+Trouble with timliness
+
+ALWAYS
+
+Connection Information
+

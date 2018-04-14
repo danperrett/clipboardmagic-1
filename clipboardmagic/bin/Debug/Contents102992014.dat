@@ -1,0 +1,272 @@
+ else
+                {
+
+                }
+
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\LteInteractive.zip
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSUtils.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSManagedWrapper_R10_03_2012.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\ThirdPartyComponents
+
+61978
+
+62603
+
+C:\Development\SASSandboxes\SAS-cs29\SAS\NS\src\MMI\PlaybackThread.cpp
+
+                            dwTimeOut = pL3p->L3Sequence[i].WaitTime + pCopyCommandObject->DeltaTime+ 1000;  //nidhi 62603
+
+
+Nidhi Bajaj
+
+Nidhi Bajaj <nidhi.b@hcl.com>
+
+Todd, Martin <martin.todd@anite.com>; Hudson, Colin <colin.hudson@anite.com>
+
+  dwTimeOut = pL3p->L3Sequence[i].WaitTime + pCopyCommandObject->DeltaTime+ 1000;  //nidhi 62603
+
+
+WaitForTask
+
+o
+
+62603
+
+o
+
+HandleSequenceCompleteWaitEvent
+
+EditWaitForAnyMessage
+
+InitialiseCellIDComboBox
+
+  if(StoreMessageTypeComboBox->ItemIndex == -1)
+       StoreMessageTypeComboBox->ItemIndex = 0;
+
+VariableNameComboBox
+
+TStartSubScript
+
+ int NumberOfStringVariables;
+
+NumberOfStringVariables
+
+ NumberOfStringVariables(0)
+
+NumberOfStringVariables = 0;
+
+NumberOfStringVariables
+
+  for(int n = 0; n < NumberOfStringVariables; n++)
+       {
+           StoreCellIDComboBox->ItemIndex = n;
+           char *temp = StoreCellIDComboBox->Text.c_str();
+           char *temp2 = (char *)data.CellVariable.c_str();
+           if(strcmp(temp, temp2) == 0)
+           {
+               break;
+           }
+       }
+
+VariableNameComboBox
+
+variable
+
+VariableNameComboBox->Text
+
+varc
+
+72848
+
+data.CellVariable.c_str();
+
+string varc(VariableNameComboBox->Text.c_str());
+
+Hi Nidhi Bajaj,
+
+string varc(VariableNameComboBox->Text.c_str());
+
+ int lenc = varc.length();
+
+ if(lenc >= length)
+        {
+            char *temp = (char *)varc.c_str();
+
+StoreCellIDComboBox
+
+ string varc(StoreCellIDComboBox->Text.c_str());
+
+StoreMessageTypeComboBox
+
+ int lenc = varc.length();
+           if(lenc >= length)
+           {
+
+72848 
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_2_to_V15_3.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ConvertScriptToCurrentSchema.cs
+
+                new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+                m_Trunk_Converter_Info.EndVersion = "15.3";
+
+
+Anite.Script.Utils
+
+71574
+
+    new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+                m_Trunk_Converter_Info.EndVersion = "15.3";
+
+
+
+72643
+
+                Correct the ?@? at the end of some SMS message displays.
+                Checks the correct length from the message and truncates if it?s too long after decoding.
+
+
+72848
+
+              GUI changes to Sub Script and Wait for any message Variable Combo box selection
+
+change variable 
+then click OK.
+Double click again 
+the previously chosen variable is not reflected in the combon box.
+This is a GUI problem only and the actuall variable DOES change.
+
+              GUI changes to Sub Script and Wait for any message Variable Combo box selection
+
+C:\AniteSAS\TestBatch
+
+CommandLineActivated
+
+ swf.CommandLineActivated = true;
+
+userScript_BatchName
+
+userScript_License
+
+UserScript_SASLTEVersion
+
+userScript_Version
+
+foreach (EMyEnum val in Enum.GetValues(typeof(EMyEnum)))
+{
+
+userScript_Version
+
+textBox_SASLTEVersion.Text
+
+userScript_Version
+
+ textBox_SASLTEVersion.Text = userScript_Version;
+
+userScript_License
+
+ this.textBox_BatchName.Text = userScript_BatchName;
+            this.textBox_License.Text = userScript_License;
+
+C:\Users\dan.perrett\Documents\_CV_.doc
+
+C:\Users\dan.perrett\Documents\IMG_1678.JPG
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_2_to_V15_3.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V14_8_to_V15_0.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V14_9_to_V15_1.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_0_to_V15_1.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_1_to_V15_2.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V14_8_to_V14_9.cs
+
+ new ConvertFrom_V14_8_to_V15_0(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.0");
+                new ConvertFrom_V15_0_to_V15_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.1");
+                new ConvertFrom_V15_1_to_V15_2(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.2");
+                new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+                m_Trunk_Converter_Info.EndVersion = "15.3";
+
+ if (m_SAS_46_3_Converters == null)
+            {
+                m_SAS_46_3_Converters = new ConvertDictInfo();
+                m_SAS_46_3_Converters.Converters = new Dictionary<string, ConvertFromBase>();
+                m_SAS_46_3_Converters.Versions = new List<string>();
+
+                m_SAS_46_3_Converters.StartVersion = "14.8";
+                m_SAS_46_3_Converters.Versions.Add("14.8");
+                new ConvertFrom_V14_8_to_V14_9(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("14.9");
+                new ConvertFrom_V14_9_to_V15_1(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("15.1");
+
+                m_SAS_46_3_Converters.EndVersion = "15.1";
+
+                ConverterDictionaryInfos.Add(m_SAS_46_3_Converters);
+            }
+
+
+      static ConvertDictInfo m_SAS_46_3_Converters = null;
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Tools\BinDebug
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly
+
+ScriptWatermarking.exe
+
+peace1g@yahoo.co.uk
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.pdb
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.vshost.exe
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.vshost.exe.manifest
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SequencerInterfaces.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SequencerInterfaces.pdb
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\FieldValueMaps
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\01 - Attach and Detach - [Band 7].SSC
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SASCommonLibrary.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SASLTEInterfaces.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SASProtocolFieldValueMapperUtil.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptAuthentication.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.exe
+
+D:\Anite Docs\Build PC\47.0.659_TestBuildOnly
+

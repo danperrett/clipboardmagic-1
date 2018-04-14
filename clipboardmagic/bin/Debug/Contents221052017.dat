@@ -1,0 +1,6 @@
+Convert.ToBase64String(DataMisalignedException);
+
+= UserCredentialsStore.GetInstance();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteCl
+

@@ -1,0 +1,742 @@
+Paverd, Mervyn (Alstom Transportation, Non-GE) <mervyn.paverd@ge.com>
+
+	Oshawa, ON
+
+21 December 2015
+
+TransmitLength
+
+forceLength.Checked
+
+TransmitLength
+
+   FD_SET WriteSet;
+   FD_SET ReadSet;
+
+FD_ZERO(&ReadSet);
+      FD_ZERO(&WriteSet);
+
+   FD_SET(ListenSocket, &ReadSet);
+
+Socket
+
+ if ((Total = select(0, &ReadSet, &WriteSet, NULL, NULL)) == SOCKET_ERROR)
+
+recv(Socket, (char *)szHistory, Length, MSG_PEEK)) != Length) && (safetyLoop-- != 0)
+
+LENGTH_OF_BUFFER
+
+ ZeroMemory(szHistory, LENGTH_OF_BUFFER);
+
+connectionInformation->connectionInformation.stats.totalreceived
+
+LOGMASK_ICONISIF
+
+Test 3(I)
+
+View Test 5(I) is in the log and consistent.
+
+Check for Test 6(I) in log file.
+
+All tests are run within the unit testers PC. Windows 7 is needed to run the ICONIS simulator. The SSL SRIF will both run in a Win 7 environment and Windows XP (Embedded).
+
+2.2	MCS Interface tests
+The objective of these tests is to confirm that messages from the MCS are decoded and the information contained in them passed to the Iconis Safety Gateway and that control messages are passed successfully to a MCS.
+The testing makes use of a specially-developed Iconis simulator and S-RIF?s Unit Test dialog that can be used to trigger the sending of pre-captured MCS messages in order to automate the testing in the absence of MCS equipment.  Successful execution of injected messages will be signalled by changes of values in the user interface of the simulator and failure of badly formed messages will be logged in the SRIF logfile.  The Iconis simulator can be found stored under SVN in Win32Srif4/minyEncoder.
+Additionally the GE Protocol Simulator is used to test PS9 link handling.  This needs to be a version of the program that supports LAN connections and the 16-bit extended checksum.  A copy of the executable for this can be found stored under SVN in the win32SRIF4 repository as ?Win32Srif4\TestTools\GETS Protocol Simulator.exe?
+Because many of the tests involve examining the logfile, it is suggested that the logmask is set to value ffffff30 so that only messages relating to the MCS interface are logged.
+Test No.	MCS Interface 
+Test Description
+1	Main Processing Loop Functionality
+To execute this test, the GE Protocol Simulator built with LAN support and 16-bit CRC is needed.  Run the program and choose ?PS9? from the vertical button stack on the right of the main dialog.  In the ?Load PS9 Channel? dialog, choose ?Network?, set the port to the value specified in the ?[MCS-CE]? section of the S-RIF?s configuration (usually 999).  Set the Host to ?localhost? and the Type to ?listen?.
+(i)	Check that messages with a correct CRC are ACK-ed
+Choose ?free text? from the message category and enter some text.  Check the ?Use crc16? checkbox and send the message.  Confirm that log entries like 
+15:53: 5:236    :MCSPS9: Received good message. Sending ACK
+15:53: 5:238    :MCSPS9: Received class of message from MCS:  ZZ
+15:53: 5:239    :MCSPS9: Received unexpected class of message from MCS:  ZZ
+Have been logged and that the Comms windows of the simulator shows the S-RIF as having sent an ACK 
+(ii)	Check that messages with an incorrect CRC are NAK-ed
+Disable the crc16 checkbox and repeat the step above.  Then re-enable crc16 and repeat.  This will send the S-RIF sufficient data with an invalid crc.  Confirm that the log contains entries like
+15:58:42:236    :MCSPS9: Received message from MCS: 
+15:58:42:238    :MCSPS9: 0x02, 0x5a, 0x5a, 0x5a, 0x5a, 0x5a, 0x5a, 0x5a, 0x03, 0x59, 0x02, 
+15:58:42:240    :ALWAYS: Received bad CRC message. Sending NAK.
+And that ths Comms window of the simulator shows the S-RIF as having sent a NAK
+(iii)	Check that messages with an unknown classification are logged and ignored
+Confirmed in test (i) by the presence of the log message
+15:53: 5:238    :MCSPS9: Received class of message from MCS:  ZZ
+15:53: 5:239    :ALWAYS: Received unexpected class of message from MCS:  ZZ
+(iv)	Check that the link is dropped and reopened if there is no line activity for a configurable timeout period (currently 40 secs)
+Refrain from sending messages via the simulator for a little while and check that the log contains messages like 
+16: 4: 4: 9    :ALWAYS: Sending link alarm to Iconis UP
+16: 4: 4:11    :MCSIF: Queueing received MCS message for XML use:  DIA@SRIF-1@MCS-CE-1@UP
+16: 4:44:316    :ALWAYS: Sending link alarm to Iconis DOWN
+16: 4:44:316    :MCSIF: Queueing received MCS message for XML use:  DIA@SRIF-1@MCS-CE-1@DOWN
+Spaced about 40 seconds apart
+2	Interlocking Device Status (TI message)
+To execute this test, press the F7 button to bring up S-RIF?s unit test control panel.
+(i)	Check that a TI message of incorrect length is logged and ignored 
+Press the ?Bad length? button in the button row of tests relating to the TI message type.  Check that the log file contains entries like:
+16:30:36:686    :MCSPS9: TI received for interlocking : 19
+16:30:36:690    :ALWAYS: Length of 500 expected. Ignoring
+(ii)	Check that a message relating to an unknown interlocking is logged and ignored 
+Press the ?Unknown IXL? button in the button row of tests relating to the TI message type.  Check that the log file contains entries like:
+16:36:33:283    :ALWAYS: Unknown Interlocking number received from MCS 85
+16:36:33:285    :ALWAYS: Bad TI interlocking index received.  Ignoring
+(iii)	Check that the indications data are passed on to the Iconis
+Run the Iconis simulator and Check that the simulator is configured with the same interlockings as the S-RIF.  Connect to the S-RIF on localhost and press Start to initiate communications.  After a second or two, select the NVFB tab to confirm that communications are running smoothly (0 in all the Error texboxes).  Select the ?receive? tab to see received data fields received from the S-RIF.  Press ?Online TI? in the S-RIF?s Unit Tests dialog and check that the indications textboxes on the Iconis simulator change value.  Alternate between the ?Online TI? and ?Offline? buttons to see the indications data values change.
+(iv)	Check that the ?data valid? byte in the TI message is used to toggle between link up and link down diagnostic alarms to the Iconis.
+Continue to alternate between the ?Online TI? and ?Offline TI? buttons to see diagnostic link up/down alarms being received for the Keighley interlocking as the captured TI messages have data valid field .values of 1 or 0 to indicate that the interlocking is online or offline
+(v)	Check that the status byte in the TI message is passed on to the Iconis 
+Continue to alternate between the ?Online TI? and ?Offline TI? buttons to see the value of the status byte change value
+
+3	TD Step (CA Message) 
+(i)	Check that a valid CA message is logged and forwarded to the Iconis
+Run the Iconis simulator, start communications and select the ?receive? tab.  Check that pressing the ?Good? button in the CA row of the S-RIF Unit Test dialog causes the textboxes relating to a TD Step message to change value and the log contains a message like:
+11:14:46:854    :ALWAYS: TD Step received for train T005 from B001 berth to berth B003
+(ii)	Check that a CA message of incorrect length is ignored
+On the unit test dialog press the button ?Bad Length? in the CA row and check that the log contains a message like:
+9:34:33:556    :ALWAYS: Badly formed CA message. Length of 23 expected. Found:  22
+(iii)	Check that a CA message with an invalid berth Id is logged and ignored
+Press the button ?Bad B1? or ?Bad B2? and check that the log contains a message like:
+9:34:34:459    :ALWAYS: Bad parameter found in TD Step message
+(iv)	Check that a CA message with an invalid train id is logged and ignored
+Press the button ?Bad Train? and check that the log contains a message like:
+9:34:35:959    :ALWAYS: Bad parameter found in TD Step message
+4	TD Clear (CB Message)
+(i)	Check that a valid CB message is logged and forwarded to the Iconis 
+Using the Iconis simulator, check that pressing the ?Good? button in the CB row of the S-RIF Unit Test dialog causes the textboxes relating to a TD Clear message to change value and the log contains a message like:
+11:14:47:604    :ALWAYS: TD Clear received for berth B005
+(ii)	Check that a CB message of incorrect length is logged and ignored 
+On the unit test dialog press the button ?Bad Length? in the CB row and check that the log contains a message like:
+9:54:11:921    :ALWAYS: Badly formed CB message. Length of 15 expected. Found:  14
+(iii)	Check that a CB message with an invalid berth Id is logged and ignored
+On the unit test dialog press the button ?Bad Berth? in the CB row and check that the log contains a message like:
+9:54:12:643    :ALWAYS: Bad parameter found in TD Clear message
+5	TD Interpose (CC Message)
+(i)	Check that a valid message is logged and passed on to the Iconis.  (CC messages are also used in this system to communicate axle reset counts).
+Using the Iconis simulator, check that pressing the ?Good? button in the CC row of the S-RIF Unit Test dialog causes the textboxes relating to a TD Interpose message to change value and that the log contains a message like:
+11:14:48:604    :ALWAYS: TD Interpose received for train 0005 to berth AX01
+(ii)	Check that a CC message of incorrect length is logged and ignored 
+On the unit test dialog press the button ?Bad Length? in the CC row and check that the log contains a message like:
+10: 1:12:441    :ALWAYS: Badly formed CC message. Length of 19 expected. Found:  18
+(iii)	Check that a CC message with an invalid berth Id is logged and ignored
+On the unit test dialog press the button ?Bad Berth? in the CC row and check that the log contains a message like:
+10: 1:13:461    :ALWAYS: Bad parameter found in TD Interpose message
+(iv)	Check that a CC message with an invalid train id is logged and ignored
+On the unit test dialog press the button ?Bad Train? in the CC row and check that the log contains a message like:
+10: 1:14:461    :ALWAYS: Bad parameter found in TD Interpose message
+6	Generic Alarm Message
+(i)	Check that a valid generic alarm message is logged and passed on to the Iconis.
+On the S-RIF Unit Test dialog enter some text into the Free Text Generic Alarm/Text textbox and press the Send button.  Check that the text appears in the Generic Alarm textbox on the Receive tab of the Iconis simulator and that the S-RIF log contains a message like:
+11: 5:34:276    :ALWAYS: Generic alarm received:  Some train related free text alarm
+(ii)	Check that a badly formed (ie empty) generic alarm message is logged and discarded
+On the S-RIF Unit Test dialog delete all text from the Free Text Generic Alarm/Text textbox and press the Send button.  Check that no change occurs in the Generic Alarm textbox on the Receive tab of the Iconis simulator and that the S-RIF log contains a message like:
+16:11:36:95    :ALWAYS: Badly formed generic alarm message.  Discarding
+7	OSTO Alarm Message
+(i)	Check that a well-formed OSTO alarm (AL message with alarm_id 4 ) of type CLEAR is logged and passed on to the Iconis
+Using the Iconis simulator, check that pressing the ?Clear? button in the OSTO row of the S-RIF Unit Test dialog causes the textboxes relating to an OSTO alarm message to change value and that the log contains a message like:
+10: 6:13:590    :ALWAYS: OSTO received on track FD   status = Clear
+(ii)	Check that a well-formed OSTO alarm (AL message with alarm_id 4 ) of type OCCUPIED  is logged and passed on to the Iconis
+Check that pressing the ?Occupied? button in the OSTO row of the S-RIF Unit Test dialog causes the track2 textbox (which is used for the OSTO state) to change to ?Occupied? and that the log contains a message like:
+10: 6:15:443    :ALWAYS: OSTO received on track FC   status = Occupied
+(iii)	Check that an OSTO alarm with no Trackname is logged and discarded 
+On the unit test dialog press the button ?Bad Track? in the OSTO row and check that the log contains a message like:
+10: 6:16:729    :ALWAYS: Badly formed OSTO message.  Discarding
+(iv)	Check that an OSTO alarm with no State field is logged and discarded 
+Press the button ?Bad State? in the CC row and check that the log contains a message like:
+10: 6:17:979    :ALWAYS: Badly formed OSTO message.  Discarding
+8	SPAD Alarm Message
+(i)	Check that a well-formed SPAD alarm (AL message with alarm_id 7) is logged and passed on to the Iconis
+Using the Iconis simulator, check that pressing the ?Good SPAD? button of the S-RIF Unit Test dialog causes the textboxes relating to a SPAD alarm message to change value and that the log contains a message like 
+11:52:46:614    :ALWAYS: SPAD received from Keighley on track FD at signal 4013(9)
+(ii)	Check that a SPAD alarm with no Trackname is logged and discarded
+On the Unit Test dialog press the button ?No Track? in the SPAD row and check that the log contains a message like:
+10:24: 4:434    :ALWAYS: Badly formed SPAD message.  Discarding 
+(iii)	Check that a SPAD alarm with no Signal field is logged and discarded.
+On the Unit Test dialog press the button ?No Signal? in the SPAD row and check that the log contains a message like:
+10:24: 3:435    :ALWAYS: Badly formed SPAD message.  Discarding
+9
+	ARS Disable Subarea Notification
+(i)	Check that a well-formed ARS Disable Subarea notification is logged and passed on to the Iconis
+Using the Iconis simulator, check that pressing the ?Good? button in the ?ARS? row of the S-RIF Unit Test dialog causes the textbox relating to ARS Disable message to change value and that the log contains a message like 
+11:53: 4:613    :ALWAYS: ARS Subarea Disable received from Keighley for subarea 4059
+10 	Control Request Messages
+(i)	Check that a well-formed Panel Request Message is logged and passed on to the MCS
+To execute this test, the GE Protocol Simulator built with LAN support and 16-bit CRC is needed.  Run the program and choose ?PS9? from the vertical button stack on the right of the main dialog.  In the ?Load PS9 Channel? dialog, choose ?Network?, set the port to the value specified in the ?[MCS-CE]? section of the S-RIF?s configuration (usually 999).  Set the Host to ?localhost? and the Type to ?listen?.
+Using the Unit Test Dialog, invoke a panel request for interlocking 0.  Select ?Hex? as display format on the protocol simulator and check that a panel request message has been sent and acknowledged.  Check that the logfile contains entries like:
+14:54: 7:700    :MCSPS9: S-RIF send() to MCS message of length  15
+14:54: 7:702    :MCSPS9: 0x02, 0x00, 0x54, 0x43, 0x00, 0x00, 0x0f, 0x13, 0x00, 0x01, 0x00, 0x01, 0x03, 0x24, 0x5b,
+Where 0x54, 0x43 are the ?TC? of a panel request message, 0x0f is the length 0x13 is the SSI interlocking number for the IXL in slot 0, the number of requests is 1 and the panel request is number 1.
+
+
+1.1	MCS Interface tests
+The objective of these tests is to confirm that messages from the MCS are decoded and the information contained in them passed to the Iconis Safety Gateway and that control messages are passed successfully to a MCS.
+The testing makes use of a specially-developed Iconis simulator and S-RIF?s Unit Test dialog that can be used to trigger the sending of pre-captured MCS messages in order to automate the testing in the absence of MCS equipment.  Successful execution of injected messages will be signalled by changes of values in the user interface of the simulator and failure of badly formed messages will be logged in the SRIF logfile.  The Iconis simulator can be found stored under SVN in Win32Srif4/minyEncoder.
+Additionally the GE Protocol Simulator is used to test PS9 link handling.  This needs to be a version of the program that supports LAN connections and the 16-bit extended checksum.  A copy of the executable for this can be found stored under SVN in the win32SRIF4 repository as ?Win32Srif4\TestTools\GETS Protocol Simulator.exe?
+Because many of the tests involve examining the logfile, it is suggested that the logmask is set to value ffffff30 so that only messages relating to the MCS interface are logged.
+Test No.	MCS Interface 
+Test Description
+1	Main Processing Loop Functionality
+To execute this test, the GE Protocol Simulator built with LAN support and 16-bit CRC is needed.  Run the program and choose ?PS9? from the vertical button stack on the right of the main dialog.  In the ?Load PS9 Channel? dialog, choose ?Network?, set the port to the value specified in the ?[MCS-CE]? section of the S-RIF?s configuration (usually 999).  Set the Host to ?localhost? and the Type to ?listen?.
+(i)	Check that messages with a correct CRC are ACK-ed
+Choose ?free text? from the message category and enter some text.  Check the ?Use crc16? checkbox and send the message.  Confirm that log entries like 
+15:53: 5:236    :MCSPS9: Received good message. Sending ACK
+15:53: 5:238    :MCSPS9: Received class of message from MCS:  ZZ
+15:53: 5:239    :MCSPS9: Received unexpected class of message from MCS:  ZZ
+Have been logged and that the Comms windows of the simulator shows the S-RIF as having sent an ACK 
+(ii)	Check that messages with an incorrect CRC are NAK-ed
+Disable the crc16 checkbox and repeat the step above.  Then re-enable crc16 and repeat.  This will send the S-RIF sufficient data with an invalid crc.  Confirm that the log contains entries like
+15:58:42:236    :MCSPS9: Received message from MCS: 
+15:58:42:238    :MCSPS9: 0x02, 0x5a, 0x5a, 0x5a, 0x5a, 0x5a, 0x5a, 0x5a, 0x03, 0x59, 0x02, 
+15:58:42:240    :ALWAYS: Received bad CRC message. Sending NAK.
+And that ths Comms window of the simulator shows the S-RIF as having sent a NAK
+(iii)	Check that messages with an unknown classification are logged and ignored
+Confirmed in test (i) by the presence of the log message
+15:53: 5:238    :MCSPS9: Received class of message from MCS:  ZZ
+15:53: 5:239    :ALWAYS: Received unexpected class of message from MCS:  ZZ
+(iv)	Check that the link is dropped and reopened if there is no line activity for a configurable timeout period (currently 40 secs)
+Refrain from sending messages via the simulator for a little while and check that the log contains messages like 
+16: 4: 4: 9    :ALWAYS: Sending link alarm to Iconis UP
+16: 4: 4:11    :MCSIF: Queueing received MCS message for XML use:  DIA@SRIF-1@MCS-CE-1@UP
+16: 4:44:316    :ALWAYS: Sending link alarm to Iconis DOWN
+16: 4:44:316    :MCSIF: Queueing received MCS message for XML use:  DIA@SRIF-1@MCS-CE-1@DOWN
+Spaced about 40 seconds apart
+2	Interlocking Device Status (TI message)
+To execute this test, press the F7 button to bring up S-RIF?s unit test control panel.
+(i)	Check that a TI message of incorrect length is logged and ignored 
+Press the ?Bad length? button in the button row of tests relating to the TI message type.  Check that the log file contains entries like:
+16:30:36:686    :MCSPS9: TI received for interlocking : 19
+16:30:36:690    :ALWAYS: Length of 500 expected. Ignoring
+(ii)	Check that a message relating to an unknown interlocking is logged and ignored 
+Press the ?Unknown IXL? button in the button row of tests relating to the TI message type.  Check that the log file contains entries like:
+16:36:33:283    :ALWAYS: Unknown Interlocking number received from MCS 85
+16:36:33:285    :ALWAYS: Bad TI interlocking index received.  Ignoring
+(iii)	Check that the indications data are passed on to the Iconis
+Run the Iconis simulator and Check that the simulator is configured with the same interlockings as the S-RIF.  Connect to the S-RIF on localhost and press Start to initiate communications.  After a second or two, select the NVFB tab to confirm that communications are running smoothly (0 in all the Error texboxes).  Select the ?receive? tab to see received data fields received from the S-RIF.  Press ?Online TI? in the S-RIF?s Unit Tests dialog and check that the indications textboxes on the Iconis simulator change value.  Alternate between the ?Online TI? and ?Offline? buttons to see the indications data values change.
+(iv)	Check that the ?data valid? byte in the TI message is used to toggle between link up and link down diagnostic alarms to the Iconis.
+Continue to alternate between the ?Online TI? and ?Offline TI? buttons to see diagnostic link up/down alarms being received for the Keighley interlocking as the captured TI messages have data valid field .values of 1 or 0 to indicate that the interlocking is online or offline
+(v)	Check that the status byte in the TI message is passed on to the Iconis 
+Continue to alternate between the ?Online TI? and ?Offline TI? buttons to see the value of the status byte change value
+
+3	TD Step (CA Message) 
+(i)	Check that a valid CA message is logged and forwarded to the Iconis
+Run the Iconis simulator, start communications and select the ?receive? tab.  Check that pressing the ?Good? button in the CA row of the S-RIF Unit Test dialog causes the textboxes relating to a TD Step message to change value and the log contains a message like:
+11:14:46:854    :ALWAYS: TD Step received for train T005 from B001 berth to berth B003
+(ii)	Check that a CA message of incorrect length is ignored
+On the unit test dialog press the button ?Bad Length? in the CA row and check that the log contains a message like:
+9:34:33:556    :ALWAYS: Badly formed CA message. Length of 23 expected. Found:  22
+(iii)	Check that a CA message with an invalid berth Id is logged and ignored
+Press the button ?Bad B1? or ?Bad B2? and check that the log contains a message like:
+9:34:34:459    :ALWAYS: Bad parameter found in TD Step message
+(iv)	Check that a CA message with an invalid train id is logged and ignored
+Press the button ?Bad Train? and check that the log contains a message like:
+9:34:35:959    :ALWAYS: Bad parameter found in TD Step message
+4	TD Clear (CB Message)
+(i)	Check that a valid CB message is logged and forwarded to the Iconis 
+Using the Iconis simulator, check that pressing the ?Good? button in the CB row of the S-RIF Unit Test dialog causes the textboxes relating to a TD Clear message to change value and the log contains a message like:
+11:14:47:604    :ALWAYS: TD Clear received for berth B005
+(ii)	Check that a CB message of incorrect length is logged and ignored 
+On the unit test dialog press the button ?Bad Length? in the CB row and check that the log contains a message like:
+9:54:11:921    :ALWAYS: Badly formed CB message. Length of 15 expected. Found:  14
+(iii)	Check that a CB message with an invalid berth Id is logged and ignored
+On the unit test dialog press the button ?Bad Berth? in the CB row and check that the log contains a message like:
+9:54:12:643    :ALWAYS: Bad parameter found in TD Clear message
+5	TD Interpose (CC Message)
+(i)	Check that a valid message is logged and passed on to the Iconis.  (CC messages are also used in this system to communicate axle reset counts).
+Using the Iconis simulator, check that pressing the ?Good? button in the CC row of the S-RIF Unit Test dialog causes the textboxes relating to a TD Interpose message to change value and that the log contains a message like:
+11:14:48:604    :ALWAYS: TD Interpose received for train 0005 to berth AX01
+(ii)	Check that a CC message of incorrect length is logged and ignored 
+On the unit test dialog press the button ?Bad Length? in the CC row and check that the log contains a message like:
+10: 1:12:441    :ALWAYS: Badly formed CC message. Length of 19 expected. Found:  18
+(iii)	Check that a CC message with an invalid berth Id is logged and ignored
+On the unit test dialog press the button ?Bad Berth? in the CC row and check that the log contains a message like:
+10: 1:13:461    :ALWAYS: Bad parameter found in TD Interpose message
+(iv)	Check that a CC message with an invalid train id is logged and ignored
+On the unit test dialog press the button ?Bad Train? in the CC row and check that the log contains a message like:
+10: 1:14:461    :ALWAYS: Bad parameter found in TD Interpose message
+6	Generic Alarm Message
+(i)	Check that a valid generic alarm message is logged and passed on to the Iconis.
+On the S-RIF Unit Test dialog enter some text into the Free Text Generic Alarm/Text textbox and press the Send button.  Check that the text appears in the Generic Alarm textbox on the Receive tab of the Iconis simulator and that the S-RIF log contains a message like:
+11: 5:34:276    :ALWAYS: Generic alarm received:  Some train related free text alarm
+(ii)	Check that a badly formed (ie empty) generic alarm message is logged and discarded
+On the S-RIF Unit Test dialog delete all text from the Free Text Generic Alarm/Text textbox and press the Send button.  Check that no change occurs in the Generic Alarm textbox on the Receive tab of the Iconis simulator and that the S-RIF log contains a message like:
+16:11:36:95    :ALWAYS: Badly formed generic alarm message.  Discarding
+7	OSTO Alarm Message
+(i)	Check that a well-formed OSTO alarm (AL message with alarm_id 4 ) of type CLEAR is logged and passed on to the Iconis
+Using the Iconis simulator, check that pressing the ?Clear? button in the OSTO row of the S-RIF Unit Test dialog causes the textboxes relating to an OSTO alarm message to change value and that the log contains a message like:
+10: 6:13:590    :ALWAYS: OSTO received on track FD   status = Clear
+(ii)	Check that a well-formed OSTO alarm (AL message with alarm_id 4 ) of type OCCUPIED  is logged and passed on to the Iconis
+Check that pressing the ?Occupied? button in the OSTO row of the S-RIF Unit Test dialog causes the track2 textbox (which is used for the OSTO state) to change to ?Occupied? and that the log contains a message like:
+10: 6:15:443    :ALWAYS: OSTO received on track FC   status = Occupied
+(iii)	Check that an OSTO alarm with no Trackname is logged and discarded 
+On the unit test dialog press the button ?Bad Track? in the OSTO row and check that the log contains a message like:
+10: 6:16:729    :ALWAYS: Badly formed OSTO message.  Discarding
+(iv)	Check that an OSTO alarm with no State field is logged and discarded 
+Press the button ?Bad State? in the CC row and check that the log contains a message like:
+10: 6:17:979    :ALWAYS: Badly formed OSTO message.  Discarding
+8	SPAD Alarm Message
+(i)	Check that a well-formed SPAD alarm (AL message with alarm_id 7) is logged and passed on to the Iconis
+Using the Iconis simulator, check that pressing the ?Good SPAD? button of the S-RIF Unit Test dialog causes the textboxes relating to a SPAD alarm message to change value and that the log contains a message like 
+11:52:46:614    :ALWAYS: SPAD received from Keighley on track FD at signal 4013(9)
+(ii)	Check that a SPAD alarm with no Trackname is logged and discarded
+On the Unit Test dialog press the button ?No Track? in the SPAD row and check that the log contains a message like:
+10:24: 4:434    :ALWAYS: Badly formed SPAD message.  Discarding 
+(iii)	Check that a SPAD alarm with no Signal field is logged and discarded.
+On the Unit Test dialog press the button ?No Signal? in the SPAD row and check that the log contains a message like:
+10:24: 3:435    :ALWAYS: Badly formed SPAD message.  Discarding
+9
+	ARS Disable Subarea Notification
+(i)	Check that a well-formed ARS Disable Subarea notification is logged and passed on to the Iconis
+Using the Iconis simulator, check that pressing the ?Good? button in the ?ARS? row of the S-RIF Unit Test dialog causes the textbox relating to ARS Disable message to change value and that the log contains a message like 
+11:53: 4:613    :ALWAYS: ARS Subarea Disable received from Keighley for subarea 4059
+10 	Control Request Messages
+(i)	Check that a well-formed Panel Request Message is logged and passed on to the MCS
+To execute this test, the GE Protocol Simulator built with LAN support and 16-bit CRC is needed.  Run the program and choose ?PS9? from the vertical button stack on the right of the main dialog.  In the ?Load PS9 Channel? dialog, choose ?Network?, set the port to the value specified in the ?[MCS-CE]? section of the S-RIF?s configuration (usually 999).  Set the Host to ?localhost? and the Type to ?listen?.
+Using the Unit Test Dialog, invoke a panel request for interlocking 0.  Select ?Hex? as display format on the protocol simulator and check that a panel request message has been sent and acknowledged.  Check that the logfile contains entries like:
+14:54: 7:700    :MCSPS9: S-RIF send() to MCS message of length  15
+14:54: 7:702    :MCSPS9: 0x02, 0x00, 0x54, 0x43, 0x00, 0x00, 0x0f, 0x13, 0x00, 0x01, 0x00, 0x01, 0x03, 0x24, 0x5b,
+Where 0x54, 0x43 are the ?TC? of a panel request message, 0x0f is the length 0x13 is the SSI interlocking number for the IXL in slot 0, the number of requests is 1 and the panel request is number 1.
+
+
+(v)	Increase the delay of the transmit on the ICONIS simulator make sure that the connection is dropped once the Delay is greater than the threshold set in the config file
+
+a
+
+10:59:15:896    :TCP: Test 2(I): Length added  3954
+10:59:15:897    :TCP: Test 2(II): Message Just Sent OK 
+10:59:15:897    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:15:898    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:16:124    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:16:124    :ICONISIF: Test 7(IV) b: Sequence number as reference 10122
+10:59:16:125    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:16:126    :ICONISIF: Tx Sequence Number:  10122
+10:59:16:128    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:16:129    :SIGNING: Test 5(I): Fez5dIdT5Bo1eqt7uop1RYguva0=
+10:59:16:130    :SIGNING: DoRSASignature 
+10:59:16:131    :SIGNING: Signature Info Canalization 
+10:59:16:132    :SIGNING: Transmit RSA Digest J5iUHWpJ4T1vDhrmFuJz/g/Z9Uo=
+10:59:16:135    :ICONISIF: ticks taken to encode signature is 24118
+10:59:16:135    :ICONISIF: Encode Min ticks is  9046
+10:59:16:136    :ICONISIF: Encode Max ticks is  490281
+10:59:16:136    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:16:138    :TCP: Test 2(I): Length added  3954
+10:59:16:138    :TCP: Test 2(II): Message Just Sent OK 
+10:59:16:138    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:16:139    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:16:374    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:16:378    :ICONISIF: Test 7(IV) b: Sequence number as reference 10123
+10:59:16:383    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:16:388    :ICONISIF: Tx Sequence Number:  10123
+10:59:16:395    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:16:399    :SIGNING: Test 5(I): 8Th3byzc4Unc7vWFs0fChZJM5w0=
+10:59:16:403    :SIGNING: DoRSASignature 
+10:59:16:406    :SIGNING: Signature Info Canalization 
+10:59:16:407    :SIGNING: Transmit RSA Digest xfKqtxAuWh/vqMIA3OgORuJef9A=
+10:59:16:411    :ICONISIF: ticks taken to encode signature is 55378
+10:59:16:412    :ICONISIF: Encode Min ticks is  9046
+10:59:16:413    :ICONISIF: Encode Max ticks is  490281
+10:59:16:414    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:16:416    :TCP: Test 2(I): Length added  3954
+10:59:16:416    :TCP: Test 2(II): Message Just Sent OK 
+10:59:16:417    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:16:418    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:16:624    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:16:625    :ICONISIF: Test 7(IV) b: Sequence number as reference 10124
+10:59:16:627    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:16:628    :ICONISIF: Tx Sequence Number:  10124
+10:59:16:632    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:16:634    :SIGNING: Test 5(I): 8LoxuQG7Otou+oc8McRJQXJZQz4=
+10:59:16:636    :SIGNING: DoRSASignature 
+10:59:16:638    :SIGNING: Signature Info Canalization 
+10:59:16:641    :SIGNING: Transmit RSA Digest 6QyjIPJfZQaHhHYiIlzNVIV8PKo=
+10:59:16:647    :ICONISIF: ticks taken to encode signature is 53551
+10:59:16:648    :ICONISIF: Encode Min ticks is  9046
+10:59:16:649    :ICONISIF: Encode Max ticks is  490281
+10:59:16:651    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:16:654    :TCP: Test 2(I): Length added  3954
+10:59:16:655    :TCP: Test 2(II): Message Just Sent OK 
+10:59:16:656    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:16:657    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:16:874    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:16:875    :ICONISIF: Test 7(IV) b: Sequence number as reference 10125
+10:59:16:878    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:16:880    :ICONISIF: Tx Sequence Number:  10125
+10:59:16:882    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:16:883    :SIGNING: Test 5(I): G9YLcb97QiAnBU9Vj1nXeBLo/lw=
+10:59:16:885    :SIGNING: DoRSASignature 
+10:59:16:887    :SIGNING: Signature Info Canalization 
+10:59:16:888    :SIGNING: Transmit RSA Digest V3cOXWf79O6d9JtUS6PUnlNR+lo=
+10:59:16:890    :ICONISIF: ticks taken to encode signature is 26826
+10:59:16:890    :ICONISIF: Encode Min ticks is  9046
+10:59:16:891    :ICONISIF: Encode Max ticks is  490281
+10:59:16:891    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:16:893    :TCP: Test 2(I): Length added  3954
+10:59:16:893    :TCP: Test 2(II): Message Just Sent OK 
+10:59:16:893    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:16:894    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:17:124    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:17:124    :ICONISIF: Test 7(IV) b: Sequence number as reference 10126
+10:59:17:125    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:17:125    :ICONISIF: Tx Sequence Number:  10126
+10:59:17:126    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:17:127    :SIGNING: Test 5(I): 1alknP0K6eP+ZmGlHU4FYCvkZ3s=
+10:59:17:127    :SIGNING: DoRSASignature 
+10:59:17:128    :SIGNING: Signature Info Canalization 
+10:59:17:129    :SIGNING: Transmit RSA Digest cu7FiSWq0E01jY/w0IYmJKQA0cw=
+10:59:17:131    :ICONISIF: ticks taken to encode signature is 17418
+10:59:17:131    :ICONISIF: Encode Min ticks is  9046
+10:59:17:132    :ICONISIF: Encode Max ticks is  490281
+10:59:17:132    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:17:134    :TCP: Test 2(I): Length added  3954
+10:59:17:134    :TCP: Test 2(II): Message Just Sent OK 
+10:59:17:134    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:17:135    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:17:374    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:17:374    :ICONISIF: Test 7(IV) b: Sequence number as reference 10127
+10:59:17:376    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:17:378    :ICONISIF: Tx Sequence Number:  10127
+10:59:17:380    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:17:381    :SIGNING: Test 5(I): 9aJjwrugGUrn4RoK15brDdUl89s=
+10:59:17:382    :SIGNING: DoRSASignature 
+10:59:17:384    :SIGNING: Signature Info Canalization 
+10:59:17:385    :SIGNING: Transmit RSA Digest rRk+d1uS1NQQdTioutZx27FzL5w=
+10:59:17:387    :ICONISIF: ticks taken to encode signature is 24561
+10:59:17:387    :ICONISIF: Encode Min ticks is  9046
+10:59:17:388    :ICONISIF: Encode Max ticks is  490281
+10:59:17:388    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:17:389    :TCP: Test 2(I): Length added  3954
+10:59:17:390    :TCP: Test 2(II): Message Just Sent OK 
+10:59:17:390    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:17:390    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:17:624    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:17:625    :ICONISIF: Test 7(IV) b: Sequence number as reference 10128
+10:59:17:627    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:17:628    :ICONISIF: Tx Sequence Number:  10128
+10:59:17:632    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:17:634    :SIGNING: Test 5(I): EnNdZ9QlWAaqq8r507Qga0MxhPU=
+10:59:17:636    :SIGNING: DoRSASignature 
+10:59:17:638    :SIGNING: Signature Info Canalization 
+10:59:17:641    :SIGNING: Transmit RSA Digest X/Wuwu6ZF6j2+i26xzKt96YxkV0=
+10:59:17:650    :ICONISIF: ticks taken to encode signature is 63940
+10:59:17:652    :ICONISIF: Encode Min ticks is  9046
+10:59:17:654    :ICONISIF: Encode Max ticks is  490281
+10:59:17:656    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:17:661    :TCP: Test 2(I): Length added  3954
+10:59:17:662    :TCP: Test 2(II): Message Just Sent OK 
+10:59:17:662    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:17:663    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:17:874    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:17:879    :ICONISIF: Test 7(IV) b: Sequence number as reference 10129
+10:59:17:885    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:17:890    :ICONISIF: Tx Sequence Number:  10129
+10:59:17:897    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:17:900    :SIGNING: Test 5(I): Gz5qlhUce0rTW7FPsFuFgGYxze0=
+10:59:17:906    :SIGNING: DoRSASignature 
+10:59:17:912    :SIGNING: Signature Info Canalization 
+10:59:17:919    :SIGNING: Transmit RSA Digest LreuDgMhJbNNmyLA6dZQAG/eoXk=
+10:59:17:933    :ICONISIF: ticks taken to encode signature is 123319
+10:59:17:934    :ICONISIF: Encode Min ticks is  9046
+10:59:17:935    :ICONISIF: Encode Max ticks is  490281
+10:59:17:936    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:17:939    :TCP: Test 2(I): Length added  3954
+10:59:17:940    :TCP: Test 2(II): Message Just Sent OK 
+10:59:17:940    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:17:941    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:18:124    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+10:59:18:125    :ICONISIF: Test 7(IV) b: Sequence number as reference 10130
+10:59:18:127    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+10:59:18:128    :ICONISIF: Tx Sequence Number:  10130
+10:59:18:132    :SIGNING: Test 5(I): XML Canicalised OK 
+10:59:18:134    :SIGNING: Test 5(I): jRfB12VuO/DS9ewSywC9cQRLgFM=
+10:59:18:136    :SIGNING: DoRSASignature 
+10:59:18:138    :SIGNING: Signature Info Canalization 
+10:59:18:141    :SIGNING: Transmit RSA Digest nzqU0AwoqKz1z6nhtzTgAinz2Vk=
+10:59:18:146    :ICONISIF: ticks taken to encode signature is 52799
+10:59:18:148    :ICONISIF: Encode Min ticks is  9046
+10:59:18:149    :ICONISIF: Encode Max ticks is  490281
+10:59:18:150    :ICONISIF: Test 7(III): Added Signed Element 
+10:59:18:153    :TCP: Test 2(I): Length added  3954
+10:59:18:154    :TCP: Test 2(II): Message Just Sent OK 
+10:59:18:155    :ICONISIF: Test 2(III): succes sending data for connection 0
+10:59:18:155    :ICONISIF: Test 7(II): Sequence number incremented 
+10:59:18:373    :TCP: Test 1(V): The Receive difference is out side of the allowed tolerence 10343
+10:59:18:379    :TCP: Connection ID is  0
+10:59:18:381    :TCP: 17 : The Receive difference is out side of the allowed tolerence dropping the connection
+
+
+SRIF Development Design Document for SSL System Architecture interface
+
+1.	Introduction
+The SRIF SSL interface module implements the S-RIF System Architecture Ref 1 design. This is the interface from the SRIF to the ICONIS Safety gateway.  The messages back and forth are in xml format and are described in Ref 1 chapter 5.2. 
+The SRIF module will set up a listener on a specific port and wait for a connection from one or more safety gateways. 
+The messages could also consist of up to 20 interlocking data element all of which are encoded using a NVF3B protocol so special consideration in the software is needed for that.
+2.	Security Considerations		SJS
+The protection mechanisms used, being  a sequence number, timeout and XML signing, meet the EN50159 criteria of  sequence number (7.3.1), timeout (7.3.3) and cryptographic techniques (7.3.8) and so, as depicted in the threat/defence matrix (7.4.2), provide protection against all seven threats.  Specifically, 
+?	the sequence number implemented in the Iconis Interface module protects against repetition, re-sequencing, insertion and deletion
+?	the timeout in the TCP Handler module protects against delay
+?	the XML signing protects against corruption and masquerade.
+XML signing is a type A1 security mechanism as described in EN50159 clause C2 and is therefore suitable for use in systems where unauthorised access cannot be excluded.
+The NVFB3 protocol is used for rail state information and control requests passed between the Safety Gateway and the SSL S-RIF.  This provides additional protection against five of the seven threats
+Scope
+	This document only covers the design of the SRIF interface with the ICONIS Safety gateway interface.
+
+3.	Design Overview
+ 
+Figure 1SRIF Overview
+Figure 1 give a brief overview of the different component to the SRIF ICONIS Safety gateway.
+The design can be broken down into 10 major components.
+?	Win32 Message Handler
+?	TCP Handler
+?	250 ms Timer
+?	Shared Memory
+?	Decode IF Messages
+?	Encode IF Messages
+?	Do Process
+?	XML Signing
+?	NVFB3 Encode/Decode
+?	PS9 Handler
+Mode details about each of the components can be found in the Design Section. Some of the component have multiple decode and encode uses.
+4.	Module Design
+Win32 Message Handler Module
+Main Function is to route and re-route messages.  This handler sits in the middle sending messages back and forth between the Encoder, Decode and the TCP Handler.  This handler has several jobs;
+?	At start up the init function will send a message to this handler to initialise all of the modules.
+?	On receipt of data from the TCP Handler it will forward this data to the Decode IF Message entity.
+?	On Receipt of the 250ms event tick the Handler calls the Encode Message IF routines.
+?	All Decode and Encode of NVFB3 messages are routed via the Win32 Handler module.
+
+TCP Handler Module
+The TCP handler is the main interface between the outside world and the SRIF itself.  During the initial setup the handler will start to listen on a certain port number which can be specified in the setup configuration.
+?	Upon receipt of data through the socket the TCP handler will cast off the first 4 byte which is the Length (Big Endian).
+?	Once the length is found and verified it can then receive the rest of the data, the first few bytes are validated to verify that we are receiving and xml structured message.
+?	With the information now received and packed into a receive buffer this then get forwarded to the Decode IF module.
+?	If no input message is found within a configurable timeout, the connection is regarded as dead and so the link is dropped. 	SJS
+250 MS Timer
+It is important that this timer is accurate so a multimedia timer is started after start-up which is initially set to 250ms. On expiry of this timer the Do Process Function are called in sequence to see what data is available for transmission.
+Decode IF messages Module
+Upon receipt of data from the TCP handler this module will firstly check that it can decode the information as a XML structure, failure to do this will result in the link being dropped. 
+Once the structure has been XML decoded a few check are carried out.
+?	Decode the signature and make sure it can be verified against the public key
+?	Decode the Header Element updating all internal structures that we have about this connection
+?	Decode the body element keeping a structure of the decoded information.
+?	If the message contains NVF3B data send this of to be decoded.
+?	If this is validated check the connection is in Available or greater state;  if it is available move it to Up state.
+?	Note the time received and track the time difference.
+?	Check the sequence number and if it is not one greater than the previous sequence number drop the connection		SJS
+
+Do Process
+The DoProcess Module run through data it has received from the MCS, if there is any, and starts to build and output message to be sent to the Safety gateway the procedure in short is:
+?	Check for Diagnostic alarms
+?	Check for Generated Alarms
+?	Check for all interlocking data
+?	Check for emergency alarms
+This is all packaged up and sent to the encode IF for transmission.
+
+NVFB3 Encode Decode Module.
+It?s down to this module to Encode and Decode the NVFB3 Data. When decoding it will:
+?	Decode the NVFB3 header and check the 2 CRC are valid.
+?	Check the Authenticity of the data by checking the source and destination address
+?	Check the correct sequence
+?	Check the Timeliness
+?	If any of the above fail then the data is discarded 
+?	If they pass then the data is forwarded to the MCS
+In the Encode this module:
+?	Reads data from the PS9 Module to encode
+?	Reads Echo responses from the Decoder to encode.
+?	Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRC?s to byte array
+?	Adds data to the byte array
+?	Calculates and adds the last 16 bit CRC to the byte array.
+?
+XML Signing 
+The XML signing module does two things encode of the xml message, decode of the xml message.  The signing process is better described in ref 2 
+During the encode procedure the following steps are taken:
+?	Create a SHA1 Digest value for the XML message
+?	Sign that Digest using a RSA-SHA1 encryption method
+?	Add CA Certificate to the xml structure 
+?	Place both the SHA1 Digest and RSA-SHA1 signature in the XML structure and send to the TCP handler for transition.
+
+During the Decode the following procedure is followed:
+?	The SHA1 digest is generated for the XML message and compared to the one which is sent.
+?	The RSA-SHA1 encryption is generated and then compared to the one which is sent.
+?	The Certificate and public key which are supplied are verified (on first message only) to verify that?s it from the CE and correct.
+If any of these above steps fail then the link to that Safety Gateway is closed.
+Shared Memory 
+The Shared memory gets created at initialisation and enables the monitoring of watchdog timers as well as communication from other processors.
+
+Encode IF Module
+The Encode IF Module follows the following procedures:
+?	Add Header information 
+?	Add Body information
+?	Create XML structured Text
+?	Sign XML
+?	Add four byte length information at front of message for receiving purposes, send to t TCP Handler
+MCS_PS9 Module
+The interface between the S-RIF and the MCS-CE makes use of the PS9 protocol (with 16-bit CRC extension) across a TCP/IP connection.   The MCS_PS9 source module implements a thread to manage the incoming and outgoing PS9 protocol state machines, queueing notification events and updating lock-protected shared state data for use by the XML-forming ICONIS Safety Gateway interface .
+The MCS-CE runs as server and listens on a TCP/IP port for a connection request.  After link connection a time message is sent by the MCS-CE every 30 seconds to check the link is still up.  If the S-RIF does not receive a time message within a configurable timeout, the connection is closed, a Diagnostic Alarm Link Down message is sent to ICONIS and the link is re-established.  On reconnection a Diagnostic Alarm Link Up message is sent to ICONIS.  
+While the link is active, it is monitored for incoming PS9 messages from MCS-CE.  
+Messages sent to the MCS-CE have the following content:
+ControlRequests  On detection of a Control Request from the ICONIS Safety Gateway, a MCS-CE TC message is built containing the relevant panel request numbers.
+ARSSubAreaStatus TBD
+MCS_IF
+This module manages the shared data that pass between the ICONIS Safety Gateway and MCS-CE.  It contains state data for the interlockings and queue mechanisms to manage the flow of event data between the 2 systems.  Access to all shared data structures is controlled using Windows critical sections.  For each interlocking, this module manages data stores for:
+?	Status Byte		(byte 0x1c1) 
+?	SPAD SignalMap	128 element bitmap indicating SPAD status for each signal 
+?	Control Requests	255 element bitmap bit for each panel request
+?	Indications		448 byte data containing the SSI defined railway state information
+Queues of event notifications are used for informing DoProcess of event notifications containing
+
+5.	References
+[ ] 	S-RIF System Architecture Specification, SSL/PR046/SYS/REP/00001Issue 2.0, 19th June 2015
+[2]	XML Specification, http://www.w3.org/TR/2008/REC-xml-20081126/, Issue 1.0 (Fifth Edition), 26 November 2008
+[3] 	XML Signature Syntax and Processing (Second Edition), http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/, Second Edition, 10 June 2008
+[4] 	EN50159 - Railway applications - Communication, signalling and processing systems - Safety-related communication in transmission systems.  September 2010
+
+
+reciprocating saw
+
+Notice of Proprietary Information
+Copyright ? 2010 GE Transportation Systems. 
+All rights reserved.
+
+This document is the property of GE Transportation Systems and may not be copied in any form without the express permission of GE Transportation Systems. It is entrusted to the customers of GE Transportation Systems for their information only. The information contained herein is proprietary and confidential and may not be transferred, transported, or transmitted by any means without the express permission of GE Transportation Systems. GE Transportation Systems makes no guarantee to the completeness or the correctness of the information contained in this document and retains the right to make changes at any time, without notice.
+
+
+http://www.danperrett.com:8000/getPictureProjects?id=danperre
+
+Alstom Transport UK LTD
+
+SSL S-RIF Design Specification
+
+The SRIF SSL interface module implements the S-RIF System Architecture Ref 1 design. This is the interface from the SRIF to the ICONIS Safety gateway.  The messages back and forth are in xml format and are described in Ref 1 chapter 5.2. 
+The SRIF module will set up a listener on a specific port and wait for a connection from one or more safety gateways. 
+The messages could also consist of up to 20 interlocking data element all of which are encoded using a NVF3B protocol so special consideration in the software is needed for that.
+2.	Security Considerations		SJS
+The protection mechanisms used, being  a sequence number, timeout and XML signing, meet the EN50159 criteria of  sequence number (7.3.1), timeout (7.3.3) and cryptographic techniques (7.3.8) and so, as depicted in the threat/defence matrix (7.4.2), provide protection against all seven threats.  Specifically, 
+?	the sequence number implemented in the Iconis Interface module protects against repetition, re-sequencing, insertion and deletion
+?	the timeout in the TCP Handler module protects against delay
+?	the XML signing protects against corruption and masquerade.
+XML signing is a type A1 security mechanism as described in EN50159 clause C2 and is therefore suitable for use in systems where unauthorised access cannot be excluded.
+The NVFB3 protocol is used for rail state information and control requests passed between the Safety Gateway and the SSL S-RIF.  This provides additional protection against five of the seven threats
+Scope
+	This document only covers the design of the SRIF interface with the ICONIS Safety gateway interface.
+
+3.	Design Overview
+ 
+Figure 1SRIF Overview
+Figure 1 give a brief overview of the different component to the SRIF ICONIS Safety gateway.
+The design can be broken down into 10 major components.
+?	Win32 Message Handler
+?	TCP Handler
+?	250 ms Timer
+?	Shared Memory
+?	Decode IF Messages
+?	Encode IF Messages
+?	Do Process
+?	XML Signing
+?	NVFB3 Encode/Decode
+?	PS9 Handler
+Mode details about each of the components can be found in the Design Section. Some of the component have multiple decode and encode uses.
+4.	Module Design
+Win32 Message Handler Module
+Main Function is to route and re-route messages.  This handler sits in the middle sending messages back and forth between the Encoder, Decode and the TCP Handler.  This handler has several jobs;
+?	At start up the init function will send a message to this handler to initialise all of the modules.
+?	On receipt of data from the TCP Handler it will forward this data to the Decode IF Message entity.
+?	On Receipt of the 250ms event tick the Handler calls the Encode Message IF routines.
+?	All Decode and Encode of NVFB3 messages are routed via the Win32 Handler module.
+
+TCP Handler Module
+The TCP handler is the main interface between the outside world and the SRIF itself.  During the initial setup the handler will start to listen on a certain port number which can be specified in the setup configuration.
+?	Upon receipt of data through the socket the TCP handler will cast off the first 4 byte which is the Length (Big Endian).
+?	Once the length is found and verified it can then receive the rest of the data, the first few bytes are validated to verify that we are receiving and xml structured message.
+?	With the information now received and packed into a receive buffer this then get forwarded to the Decode IF module.
+?	If no input message is found within a configurable timeout, the connection is regarded as dead and so the link is dropped. 	SJS
+250 MS Timer
+It is important that this timer is accurate so a multimedia timer is started after start-up which is initially set to 250ms. On expiry of this timer the Do Process Function are called in sequence to see what data is available for transmission.
+Decode IF messages Module
+Upon receipt of data from the TCP handler this module will firstly check that it can decode the information as a XML structure, failure to do this will result in the link being dropped. 
+Once the structure has been XML decoded a few check are carried out.
+?	Decode the signature and make sure it can be verified against the public key
+?	Decode the Header Element updating all internal structures that we have about this connection
+?	Decode the body element keeping a structure of the decoded information.
+?	If the message contains NVF3B data send this of to be decoded.
+?	If this is validated check the connection is in Available or greater state;  if it is available move it to Up state.
+?	Note the time received and track the time difference.
+?	Check the sequence number and if it is not one greater than the previous sequence number drop the connection		SJS
+
+Do Process
+The DoProcess Module run through data it has received from the MCS, if there is any, and starts to build and output message to be sent to the Safety gateway the procedure in short is:
+?	Check for Diagnostic alarms
+?	Check for Generated Alarms
+?	Check for all interlocking data
+?	Check for emergency alarms
+This is all packaged up and sent to the encode IF for transmission.
+
+NVFB3 Encode Decode Module.
+It?s down to this module to Encode and Decode the NVFB3 Data. When decoding it will:
+?	Decode the NVFB3 header and check the 2 CRC are valid.
+?	Check the Authenticity of the data by checking the source and destination address
+?	Check the correct sequence
+?	Check the Timeliness
+?	If any of the above fail then the data is discarded 
+?	If they pass then the data is forwarded to the MCS
+In the Encode this module:
+?	Reads data from the PS9 Module to encode
+?	Reads Echo responses from the Decoder to encode.
+?	Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRC?s to byte array
+?	Adds data to the byte array
+?	Calculates and adds the last 16 bit CRC to the byte array.
+?
+XML Signing 
+The XML signing module does two things encode of the xml message, decode of the xml message.  The signing process is better described in ref 2 
+During the encode procedure the following steps are taken:
+?	Create a SHA1 Digest value for the XML message
+?	Sign that Digest using a RSA-SHA1 encryption method
+?	Add CA Certificate to the xml structure 
+?	Place both the SHA1 Digest and RSA-SHA1 signature in the XML structure and send to the TCP handler for transition.
+
+During the Decode the following procedure is followed:
+?	The SHA1 digest is generated for the XML message and compared to the one which is sent.
+?	The RSA-SHA1 encryption is generated and then compared to the one which is sent.
+?	The Certificate and public key which are supplied are verified (on first message only) to verify that?s it from the CE and correct.
+If any of these above steps fail then the link to that Safety Gateway is closed.
+Shared Memory 
+The Shared memory gets created at initialisation and enables the monitoring of watchdog timers as well as communication from other processors.
+
+Encode IF Module
+The Encode IF Module follows the following procedures:
+?	Add Header information 
+?	Add Body information
+?	Create XML structured Text
+?	Sign XML
+?	Add four byte length information at front of message for receiving purposes, send to t TCP Handler
+MCS_PS9 Module
+The interface between the S-RIF and the MCS-CE makes use of the PS9 protocol (with 16-bit CRC extension) across a TCP/IP connection.   The MCS_PS9 source module implements a thread to manage the incoming and outgoing PS9 protocol state machines, queueing notification events and updating lock-protected shared state data for use by the XML-forming ICONIS Safety Gateway interface .
+The MCS-CE runs as server and listens on a TCP/IP port for a connection request.  After link connection a time message is sent by the MCS-CE every 30 seconds to check the link is still up.  If the S-RIF does not receive a time message within a configurable timeout, the connection is closed, a Diagnostic Alarm Link Down message is sent to ICONIS and the link is re-established.  On reconnection a Diagnostic Alarm Link Up message is sent to ICONIS.  
+While the link is active, it is monitored for incoming PS9 messages from MCS-CE.  
+Messages sent to the MCS-CE have the following content:
+ControlRequests  On detection of a Control Request from the ICONIS Safety Gateway, a MCS-CE TC message is built containing the relevant panel request numbers.
+ARSSubAreaStatus TBD
+MCS_IF
+This module manages the shared data that pass between the ICONIS Safety Gateway and MCS-CE.  It contains state data for the interlockings and queue mechanisms to manage the flow of event data between the 2 systems.  Access to all shared data structures is controlled using Windows critical sections.  For each interlocking, this module manages data stores for:
+?	Status Byte		(byte 0x1c1) 
+?	SPAD SignalMap	128 element bitmap indicating SPAD status for each signal 
+?	Control Requests	255 element bitmap bit for each panel request
+?	Indications		448 byte data containing the SSI defined railway state information
+Queues of event notifications are used for informing DoProcess of event notifications containing
+
+5.	References
+[ ] 	S-RIF System Architecture Specification, SSL/PR046/SYS/REP/00001Issue 2.0, 19th June 2015
+[2]	XML Specification, http://www.w3.org/TR/2008/REC-xml-20081126/, Issue 1.0 (Fifth Edition), 26 November 2008
+[3] 	XML Signature Syntax and Processing (Second Edition), http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/, Second Edition, 10 June 2008
+[4] 	EN50159 - Railway applications - Communication, signalling and processing systems - Safety-related communication in transmission systems.  September 2010
+
+
+Alstom Transport UK Ltd
+
+SSL S-RIF Software Design Specification
+
+C:\Users\502525009\Desktop\Alstom Report.dotm
+

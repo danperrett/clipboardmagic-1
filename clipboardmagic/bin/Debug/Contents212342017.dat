@@ -1,0 +1,21 @@
+  if(WhenNewRadioButton.Checked)
+                {
+                    return UploadPeriod.WhenCoppied;
+                }
+                else if(EveryMinRadioButton.Checked)
+                {
+                    return UploadPeriod.EveryMin;
+                }
+                else if(EveryFiveMinRadioButton.Checked)
+                {
+                    return UploadPeriod.EveryFive;
+                }
+                else if(ManualRadioButton.Checked)
+                {
+                    return UploadPeriod.Manual;
+                }
+                else if(WhenClosedRadioButton.Checked)
+                {
+                    return UploadPeriod.WhenClosed;
+                }
+

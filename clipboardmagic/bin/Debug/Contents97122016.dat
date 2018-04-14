@@ -1,0 +1,137 @@
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+initialise
+
+..\..\..\lib
+
+$(SolutionDir)..\include
+
+CutlasIniFile
+
+CutlasHelperS.lib
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent_DVTel.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+Tyco Camera failed to find camera ID for camera 'CCTV01'
+
+initialise
+
+ITycoCCTVInterfacePtr pICalc(__uuidof(ManagedClass));
+
+pICalc
+
+#import ".\ManagedDll.tlb" 
+
+using namespace ManagedDll;
+
+CutlasHelperS.lib
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+cctvAdapter
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+#import ".\ManagedDll.tlb"
+
+TycoAgent_DVTel
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+3515
+
+[DispId(1)]
+
+using System.Runtime.InteropServices;
+
+[DispId(1)]
+
+guidgen.exe
+
+[Guid("2D618965-AE4E-44AB-87A8-7FC4B9256AD6")]
+
+InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+
+[DispId(2)]
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+BSTR _result = 0;
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.dll
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.pdb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\manageddll.tlh
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\manageddll.tli
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+TycoAgent_DVTel
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+[DispId(11)]
+        int GetNumberOfPresets(int camerNum);
+
+[DispId(10)]
+        int GetCameraNumberFromName(string name);
+
+[DispId(12)]
+        bool Logoff();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+video_controller
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+  string errors =  pICalc->GetErrors();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+TycoAgent_DVTel
+
+'/RTC1' and '/clr
+
+TycoAgent_DVTel
+

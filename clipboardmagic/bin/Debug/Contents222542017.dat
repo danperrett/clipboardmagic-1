@@ -1,0 +1,13 @@
+ if(uploadPeriod == UploadPeriod.WhenCoppied)
+                    {
+                        lock (backupToServer)
+                        {
+                            sendtoServer(text);
+                            backupToServer = "";
+                        }
+                    }
+
+backupToServer 
+
+UploadPeriod
+

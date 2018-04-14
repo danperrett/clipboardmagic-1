@@ -1,0 +1,137 @@
+NELLY Srikanth <srikanth.nelly@transport.alstom.com>
+
+HandleIncomingDataStream
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+static DWORD myThreadID;
+
+
+MAX_NUMBER_OF_CONNECTIONS
+
+DWORD WINAPI ReceiveThread(LPVOID lpParameter)
+{
+    while(connected)
+    {
+         int inDataLength = 0;
+         char szIncoming[1024];
+
+		 ZeroMemory(szIncoming, 1024);
+        
+
+         while((inDataLength = recv(Socket, (char*)szIncoming, 1024, 0)) > 0)
+         {
+            SendTextToWindow("Reading the Information");
+            SendTextToWindow(szIncoming);
+         }
+         if(inDataLength <= 0)
+         {
+             Sleep(100);
+         }
+    }
+    return 0;
+}
+
+ReceiveThread
+
+ //HANDLE myHandle = CreateThread(0, 0, ReceiveThread, &Socket, 0, &myThreadID);//test
+
+static DWORD threadCount = 0;
+
+   //HANDLE myHandle = CreateThread(0, 0, ReceiveThread, &Socket, 0, &myThreadID);//test
+
+connected = true;
+
+SOCKET Socket=NULL;
+
+ n++; 
+
+CONTROL_REQUEST_BITMAP_SIZE
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+2	SOFTWARE MODULE TESTS
+Test No.	Test Description
+1	Main Processing Loop Functionality
+(i)	Check that all channels of appropriate type are scanned and any received messages are extracted from the relevant input queue
+(ii)	Check that messages with an unknown classification are ignored
+2	Device Status Update
+SU Message ? Function DeviceStatusUpdate
+For each of the different device types:
+(i)	Check that a message of incorrect length is ignored 
+(ii)	Check that an update is ignored if the device record number is invalid 
+(iii)	Check that the correct device array record is updated with the new status data and a flag set for the device type for action by the DEVICE process.
+3	Train Move
+CA Message ? Function TrainMove
+(i)	Check that a message of incorrect length is ignored 
+(ii)	Check that an invalid berth Id?s are ignored
+(iii)	Check that a valid message updates the correct BARRAY records with the correct data.
+4	Train Cancel
+CB Message ? Function TrainCancel
+(i)	Check that a message of incorrect length is ignored 
+(ii)	Check that an invalid berth Id is ignored
+(iii)	Check that a valid message updates the correct BARRAY record with the correct data.
+5	Train Interpose
+CC Message ? Function TrainInterpose
+(i)	Check that a message of incorrect length is ignored 
+(ii)	Check that an invalid berth Id is ignored
+(iii)	Check that a valid message updates the correct BARRAY record with the correct data.
+
+
+DoTCPSocketCode
+
+SendOverSocket
+
+ srikanthnelly@yahoo.com
+
+This should allow multiple connection to connect, at TCP level found bug, but I?ve tried to contact Dave about to get more clarifications about how it?s meant to work.
+
+The MASTER/Standby should flip between both now. 
+
+And things are queued to MCS properly
+
+
+'srikanthnelly@yahoo.com'
+
+srikanthnelly@yahoo.com
+
+This should allow multiple connection to connect, at TCP level found bug, but I?ve tried to contact Dave about to get more clarifications about how it?s meant to work.
+
+The MASTER/Standby should flip between both now. 
+
+And things are queued to MCS properly
+
+
+The signing takes place in two steps and the verification of the signing is the reverse of the 
+
+Greenford  
+
+connectionInformation
+
+connectionInformation->connectionInformation.SequenceNumber
+
+message.Header.SequenceNumber
+
+ConnectionID
+
+connectionInformation
+
+NVFB_input_t
+
+(NVFB_input_t* input)
+
+ConnectionID
+
+[ConnectionID]
+
+if (NVFB3_contexts == NULL)
+        {
+            init_NVFB3_contexts();
+        }
+
+ConnectionID
+
+[ConnectionID]
+
+ConnectionID
+

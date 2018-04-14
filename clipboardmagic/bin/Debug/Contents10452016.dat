@@ -1,0 +1,158 @@
+C:\Secure\Source\cutlas\Core
+
+.connect(recv);
+
+boost::thread
+
+SocketConnector.cpp:96:1: error: expected ?}? at end of input
+
+public
+
+CDBXmlInterface.h:29:48: error: expected class-name before ?,? token
+
+SocketConnector
+
+CDBXmlInterface.cpp:48:32: error: no matching function for call to ?CDBXmlInterface::Connect(std::string&, int)?
+
+CDBXmlInterface.cpp:45:6: note:   candidate expects 3 arguments, 2 provided
+
+sigReceived
+
+(int length, unsigned char* data)
+
+CDBXmlInterface.cpp:48:37: error: invalid use of non-static member function
+
+SocketConnector.h:46:10: note: initializing argument 1 of ?void SocketConnector::Subscribe(recievedRawData)?
+
+void Recv(int length, unsigned char* data);
+
+   /* boost::thread recvThread;
+    volatile bool running;
+    int connectionID;
+    tcp::endpoint* endpoint;
+    boost::asio::io_service* io_service;
+    tcp::socket *socket;
+    tcp::acceptor* acceptor;
+    bool serverorclient;
+    string endServer;*/
+
+C:\CDBServer\boost\boost_1_42_0
+
+C:\CDBServer\boost\boost_1_42
+
+boost::asio::transfer_exactly(n)
+
+In file included from /usr/include/boost/asio/read.hpp:631:0,
+
+ boost::asio::streambuf write_buffer;
+
+boost::asio::streambuf read_buffer;
+
+boost::asio::streambuf write_buffer;
+
+boost::asio::buffer(buffer)
+
+(unsigned char*)
+
+4
+
+MSG_PEEK
+
+initialReadLength
+
+SocketConnector.cpp:103:74:   required from here
+
+Y:\Software\ImCityDependentSoftware\ImCityCoreDevelopment\MicrosoftProducts\msxml6_SDK.msi
+
+Y:\Software\ImCityDependentSoftware\ImCityCoreDevelopment\MicrosoftProducts\msxml6.msi
+
+06DAF-07839-0E5D6-00000-B2497
+
+/usr/include/boost/asio/basic_datagram_socket.hpp:345:5: error: no match for call to ?(boost::system::error_code) (const boost::system::error_code&, const long unsigned int&)?
+
+10.164.81.40
+
+C:\Users\Daniel.Perrett\Downloads\msxml6_SDK.msi
+
+C:\Users\Daniel.Perrett\Downloads\msxml6.msi
+
+2>Finished generating code
+
+
+de
+
+geo
+
+192.168.11.210
+
+getColumnCount
+
+getRowCount
+
+getColumnCount
+
+getRowCount
+
+;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;
+
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc100;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl\;C:\Inprise\vbroker\bin;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\cygwin64\bin;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin
+
+;C:\cygwin64\bin
+
+C:\cygwin64\bin
+
+C:\omniORB-4.2.0\lib\x86_win32
+
+omniDynamic420_rt.lib
+
+C:\omniORB-4.2.0\lib\x86_win32\
+
+omniDynamic4_rt.lib
+
+omniORB420_rt.lib
+
+C:\omniORB-4.2.0\lib\x86_win32\
+
+omnithread40_rt.lib
+
+C:\Users\Daniel.Perrett\Downloads\boost_1_59_0-msvc-10.0-64.exe
+
+C:\local\boost_1_59_0\
+
+C:\local\boost_1_59_0\lib64-msvc-10.0
+
+libboost_date_time-vc100-mt-1_59.lib
+
+C:\local\boost_1_59_0\
+
+C:\Secure\Source\Cutlas\Core\Lib
+
+C:\Secure\Source\Cutlas\Core\CDBServer\CDBService\Release_x64
+
+async_read_some
+
+
+                }
+
+boost::asio::buffer(buf)
+
+buffer
+
+boost::asio::rea
+
+buffer[256] = {0};
+
+SocketConnector.cpp:92:34: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+
+*
+
+(long)
+
+C:\Users\Daniel.Perrett\Downloads\vscode-amd64.deb
+
+http://svnserver.infra.imtech.nl/ImCity/Products/ImCity/trunk/Source
+
+connection
+
+X:\Downloads\WinMerge-2.14.0-Setup.exe
+

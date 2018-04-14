@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+SR-SRIF-108	All Areas
+
+Repetition, deletion, insertion, re-sequencing, corruption, masquerading, and delay
+
+http://random-name-generator.info/random/?n=10&g=2&st=3
+
+C:\Users\502525009\Documents\SSL-S-RIFCodeReview-PartA.doc
+
+C:\Users\502525009\Documents\26406-SPE-000003 SSL S-RIF Software Design Specification.docx
+
+SSL S-RIF Prototype Verification and Validation Plan
+
+SSL 
+
+ICONIS 
+
+DXP Processor Module Software DXP Shell Requirements Specification.
+
+Signalling 
+
+void interleave(char *buffer, in length);
+
+Signalling 
+
+swap(buffer[0], buffer[2]);
+
+interleave
+
+interleave(output, length);
+

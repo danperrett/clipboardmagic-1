@@ -1,0 +1,523 @@
+GetRichEditCtrl().LineScroll(1, 0);
+    //GetRichEditCtrl().ScrollWindow(0, 200)
+
+SetScrollPos
+
+SCROLLINFO info;
+
+edit->GetScrollInfo(SB_VERT, &info);
+edit->SetScrollPos(SB_VERT,info.nMax);
+
+GetRichEditCtrl()
+
+CodeTextBox
+
+CodeTextBox.BackColor = Color.White;
+
+       GoButton.Enabled = false;
+
+GoButton.Enabled = false;
+
+GoButton.Enabled = true;
+
+void swap(char* first, char* second)
+
+void LetterForm::interleave(char* buffer, int length)
+
+void LetterForm::simpleEncrypt(short* input, int length, short* output, short keyword)
+
+void simpleEncrypt(short* input, int length, short* output, short keyword)
+
+Encrypter
+
+  void Encrypt(char^ input, int length, char^ output, short keyword);
+    private:
+        void swap(char* first, char* second);
+        void interleave(char* buffer, int length);
+        void simpleEncrypt(short* input, int length, short* output, short keyword);
+
+Encrypter
+
+EncryptingLibrary
+
+Encrypter
+
+void Encrypt(char^ input, int length, char^ output, short keyword);
+
+void Decrypt(char^ input, int length, char^ output, short keyword);
+
+Encrypter::
+
+  unsigned short primenumberlist[16] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53};
+    unsigned short keywordlist[16] = {0};
+    int count = 0;
+    for(int n = 0; n < 16; n++)
+    {
+        keywordlist[n] = (short)keyword*primenumberlist[n];
+    }
+
+    for(int n = 0; n < length; n++)
+    {
+        output[n] = input[n] ^ keywordlist[(count+keyword)&0xF];
+        count++;
+    }
+
+ register int count = length/10;
+
+    for(register int n = 0; n < count; n+=10)
+    {
+        swap(&buffer[2+n], &buffer[7+n]);
+        swap(&buffer[8+n], &buffer[9+n]);
+        swap(&buffer[0+n], &buffer[5+n]);
+        swap(&buffer[1+n], &buffer[4+n]);
+        swap(&buffer[3+n], &buffer[6+n]);
+    }
+
+
+//2, 8, 0, 1, 3
+//7, 9, 5, 4, 6
+
+    *first ^= *second;
+    *second ^= *first;
+    *first ^= *second;
+
+      int length = bytes.Length;
+                        if ((length % 2) > 0)
+                        {
+                        }
+
+  if ((length % 2) > 0)
+                        {
+                        }
+
+C:\StarTeam\48SA022 Sapphire T48 X86 Applications\#E - RIF\software\Documentation\Module Testing\48SA022E-TES-0001 SSL S-RIF Prototype Software Module Test Spec.pdf
+
+C:\StarTeam\48SA022 Sapphire T48 X86 Applications\#E - RIF\software\Documentation\Module Testing\48SA022E-TES-0001 SSL S-RIF Prototype Software Module Test Spec.doc
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+array<BYTE^>^ by
+
+(array<BYTE^>^ input, int length, array<BYTE^>^ output, short keyword)
+
+(array<unsigned char>^ input, int length, array<unsigned char>^ output, short keyword)
+
+byte[] output
+
+   output = new byte[length];
+
+simpleEncrypt
+
+unsigned char *c_output
+
+= new unsigned char[length + 1];
+
+c_output[0] =  new unsigned char[length + 1];
+
+c_output =  new unsigned char[length + 1];
+
+interleave(chasrs_, length);
+
+ c_output[0] = 0x1;
+
+1019
+
+1549
+
+2143   
+
+683    
+
+1039   
+
+821    
+
+2851   
+
+271    
+
+557    
+
+139    
+
+563    
+
+8647   
+
+8423   
+
+using (BinaryWriter writer = new BinaryWriter(File.Open(fileName, FileMode.Create)))
+        {
+
+localFileName
+
+EncryptFileTextBox.Text
+
+test = new byte[output.Length - 2];
+
+unsigned char *c_input = new unsigned char[length];
+        for(int n = 0; n < length; n++)
+        {
+            c_input[n] = input[n];
+        }
+
+interleave((unsigned char *)&c_output[1], length);
+
+c_output = new unsigned char[length-1];
+
+  for(int n = 0; n < length+1; n++)
+        {
+            output[n] = c_output[n];
+        }
+
+ unsigned char *temp = new unsigned char[length+1];
+
+memcpy(temp, c_output, length);
+
+ simpleEncrypt((short *)c_input, length/2, (short *)&c_output[1], keyword);
+
+[DllImport("msvcrt.dll")]
+private static extern int memcmp(IntPtr b1, IntPtr b2, long count);
+
+using System.Runtime.InteropServices;
+using System.Diagnostics
+
+ byte[] test;
+                            if(output[0] == 1)
+                            {
+                               test = new byte[output.Length - 2];
+                            }
+                            else
+                            {
+                                test = new byte[output.Length - 1];
+                            }
+                            encrypter.Decrypt(output, output.Length, test, (short)LocalCode);
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+SequenceNumber
+
+10000
+
+ if (line.Contains("</Envelope>"))
+                    {
+
+\\192.168.1.80\d$\SRIFLogs\aaa.dat
+
+N:\Girish
+
+EncryptFileTextBox.Text
+
+using (BinaryWriter writer = new BinaryWriter(File.Open(EncryptFileTextBox.Text + ".ec", FileMode.Create)))
+                            {
+                                writer.Write(output);
+                            }
+
+EncryptFileTextBox.Text
+
+CheckAndEnableGoButton
+
+\\192.168.1.80\d$\SRIFLogs\aaa.dat
+
+Results250216.dat
+
+ if (EncryptRadioButton.Checked)
+                        {
+
+ EncryptFileTextBox.Text = "";
+
+  }
+                            EncryptFileTextBox.Text = "";
+                            CheckAndEnableGoButton(false);
+
+//= ------------------------------------------------------------------------
+//=
+//= FUNCTION:
+//=   void CTechView::Scroll
+//=
+//= DESCRIPTION:
+//=   This task scrolls the view, checks if the text length has been
+//=   exceeded. If there is an excess, lines are removed from the top of
+//=   the view to clear the excess.
+//=
+//= RETURN VALUE:
+//=   NONE
+//=
+//= PARAMETERS:
+//=   nLines - the number of lines to scroll vertically (default = 1)
+//=
+//= SAFETY:
+//=   NON-CRITICAL
+//=
+//= LIMITATIONS:
+//=   NONE
+//=
+//= NOTES:
+//=   NONE
+//=
+//= ------------------------------------------------------------------------
+
+ScrollToEnd
+
+\\192.168.1.80\d$\SRIFLogs\aaa.dat
+
+C:\StarTeam\48SA009 Generic Tech Term\Software\Source Code\Release\Tech.exe
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\encrypt\encrypt\bin\Release\encrypt.exe
+
+(char *)
+
+http://www.mev.co.uk/
+
+$(OutDir)$(TargetName)$(TargetExt)
+
+S:\MCS LAN Logger
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Images
+
+icon1
+
+Fluid_Alstom.bmp
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Logger\ws_MElliott.rc
+
+C:\Users\502525009\Documents\GE10019-301115.pdf
+
+C:\Users\502525009\Documents\GE10019-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10020-071215.pdf
+
+C:\Users\502525009\Documents\GE10020-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10021-141215.pdf
+
+C:\Users\502525009\Documents\GE10021-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10022-211215.pdf
+
+C:\Users\502525009\Documents\GE10022-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10023-281215.pdf
+
+C:\Users\502525009\Documents\GE10023-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10024-040116.pdf
+
+C:\Users\502525009\Documents\GE10024-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10025-110116.pdf
+
+C:\Users\502525009\Documents\GE10025-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10026-180116.pdf
+
+C:\Users\502525009\Documents\GE10026-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10027-250116.pdf
+
+C:\Users\502525009\Documents\GE10027-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10028-010216.pdf
+
+C:\Users\502525009\Documents\GE10028-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10029-080216.pdf
+
+C:\Users\502525009\Documents\GE10029-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10030-150216.pdf
+
+C:\Users\502525009\Documents\GE10030-Invoice-f.pdf
+
+C:\Users\502525009\Documents\GE10018-231115.pdf
+
+C:\Users\502525009\Documents\GE10018-Invoice.pdf
+
+canonicalized 
+
+C:\StarTeam\48SA022 Sapphire T48 X86 Applications\#E - RIF\software\Documentation\Module Testing\48SA022E-TES-0001 SSL S-RIF Prototype Software Module Test Spec.pdf
+
+FolderBrowserDialog
+
+FileOrFolderLabel.Text = "Folder";
+
+localFileName
+
+using (BinaryReader reader = new BinaryReader(File.Open(EncryptFileTextBox.Text, FileMode.Open)))
+                    {
+                        byte[] bytes = reader.ReadBytes((int)reader.BaseStream.Length);
+                        int length = bytes.Length;
+                      
+                        
+                        if (EncryptRadioButton.Checked)
+                        {
+                            byte[] output;
+                            if ((length % 2) > 0)
+                            {
+                                output = new byte[length + 2];
+                            }
+                            else
+                            {
+                                output = new byte[length + 1];
+                            }
+                            encrypter.Encrypt(bytes, length, output, (short)LocalCode);
+
+                           
+                            using (BinaryWriter writer = new BinaryWriter(File.Open(EncryptFileTextBox.Text + ".ec", FileMode.Create)))
+                            {
+                                writer.Write(output);
+                            }
+                            EncryptFileTextBox.Text = "";
+                            CheckAndEnableGoButton(false);
+                        }
+                        else //decrypt file
+                        {
+                            byte[] test;
+                            bool flag = false;
+                            flag = (bytes[0] == 1);
+                            test = new byte[bytes.Length - 1];
+                          
+                            encrypter.Decrypt(bytes, bytes.Length, test, (short)LocalCode);
+                            string file = EncryptFileTextBox.Text.Replace(".ec", "");
+                            using (BinaryWriter writer = new BinaryWriter(File.Open(file, FileMode.Create)))
+                            {
+                                if (flag)
+                                {
+                                    writer.Write(test, 0, (test.Length - 1));
+                                }
+                                else
+                                {
+                                    writer.Write(test);
+                                }
+                            }
+                              
+                            EncryptFileTextBox.Text = "";
+                            CheckAndEnableGoButton(false);
+                        }
+                    }
+
+ Encrypter encrypter = new Encrypter();
+
+EncodeOrDecode
+
+EncryptFileTextBox.Text
+
+2147483648
+
+a.	Within the Simulator set the output length to 2147483648 which is 2^31.
+
+C:\StarTeam\48SA022 Sapphire T48 X86 Applications\#E - RIF\software\Documentation\Module Testing\48SA022E-TES-0001 SSL S-RIF Prototype Software Module Test Spec.pdf
+
+localFileName
+
+EncryptRadioButton.Checked
+
+if (!file.Name.Contains(".ec"))
+                    {
+
+                    }
+
+ EncodeOrDecode(file.FullName);
+
+EncryptFileTextBox.Text
+
+fileIn
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\encrypt.zip
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Images
+
+st helier
+
+D:\encrypt.zip
+
+   length += 50;
+
+simpleEncrypt((short *)key_c, 2, (short *)key_ce, keyword);
+
+	char key_ce[4] = {0};
+
+ keyword = (keyword&0x1)?keyword:keyword+1;
+
+DISPLAY_BUFFER_STRUCT
+
+COMMS_STRUCT
+
+#ifdef __cplusplus
+typedef struct : comms_channel_t 
+{
+#else
+typedef struct 
+{
+	comms_channel_t ;
+#endif
+	DWORD	 comms_channel ;			///< Application channel number
+
+	BYTE	 comms_address [MAX_PATH];  ///< Port Name (COMx) or host address. Blank for unused ports
+
+	WORD   comms_port_number;			///< Network port number.  May also be used for COM port number in some cases
+
+	DWORD comms_error ;
+
+	WORD   comms_baud;				///< Serial port baud rate. Zero for network ports
+	WORD   comms_parity;				///< Serial port parity
+	WORD   comms_data;				///< Number of serial port data bits
+	WORD   comms_stop;				///< Number of serial port stop bits
+
+} COMMS_STRUCT;
+
+
+ if(key_ce[n] != key[n])
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\encrypt.zip
+
+c_output =  new unsigned char[length + 1 + 50];
+
+C:\StarTeam\MCS LAN Logger\MCS_Logger\Debug\Logger_dan.exe
+
+James Bourne
+
+ms
+
+5?????
+
+D:\GETimesheetsAndInvoices\GE10027-Invoice.pdf
+
+D:\GETimesheetsAndInvoices\GE10027-250116.pdf
+
+COMMS_STRUCT
+
+Action_Queue
+
+extern ACTION_QUEUE_STRUCT  Action_Queue[MAX_ACTION_QUEUE_RECORDS];
+
+GENPROJ_Action_Queue_Critical_Section
+
+Action_Queue_Critical_Section
+
+GEN_Action_Queue_Critical_Section
+
+OVERVIEW
+
+GEN_Action_Queue_Critical_Section
+
+C:\StarTeam\MCS LAN Logger\MCS_Logger
+
+C:\StarTeam\MCS LAN Logger\MACE_XP
+
+http://leaveamessage.com/
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Logger with LAN\MCS_Logger\Debug\Logger_dan.exe
+
+AlstomLogo.bmp
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Logger with LAN\MCS_Logger\Debug\Logger_dan.exe
+
+C:\Users\502525009\Documents\danielCodinggainpayslip.pdf
+
+C:\Users\502525009\Documents\DividendCertificate.pdf
+
+C:\Users\502525009\Documents\companyCertificate.pdf
+

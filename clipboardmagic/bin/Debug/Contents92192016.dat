@@ -1,0 +1,243 @@
+6530
+
+SoapUI-x64-5.2.1.sh
+
+10309
+
+void SetStatus(string status);
+
+AdapterStatus(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+	void SetStatus(string status);
+
+	string GetStatus();
+
+AdapterStatus(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+const char* AdapterSCN, CDBInterfaceManager* cdbInterface
+
+currentStatus
+
+void Initialise(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+AdapterStatus::
+
+#include "cdbinterfacemanager.h"
+
+
+using std::string;
+
+currentStatus
+
+cdbInterface
+
+static void ThreadTask();
+
+AdapterStatus::
+
+LPVOID lpParam 
+
+CreateThread
+
+ThreadTask
+
+ DWORD ThreadTask(LPVOID lpParam );
+
+ThreadTask
+
+ AdapterStatus::ThreadTask
+
+using namespace System::Threading;
+
+There is a problem with th JTMS
+
+CA-ANPR-JTMS
+
+th
+
+${equipmentSCN2}
+
+context.equipmentSCN2 = Devices[rand.nextInt(5)];
+
+  HANDLE m_heartbeatThreadHandle;
+
+m_heartbeatThreadHandle = CreateThread( 0 , 0 , heartbeat, this, CREATE_SUSPENDED , &m_heartbeatThreadID ) ;
+
+AdapterStatus::ThreadTask
+
+ unsigned long m_heartbeatThreadID;
+
+m_updateStatusThreadID
+
+m_updateStatusThreadHandle
+
+void *data
+
+unsigned long
+
+_stdcall
+
+cdbInterface
+
+running
+
+AdapterStatus
+
+adapterStatus
+
+CVMSAdaptorDlg
+
+m_cdbManager
+
+SNMPManager
+
+ this->adapterStatus->Initialise("VMSAdapter", m_pmanager->m_cdbManager);
+
+SetStatus
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniConnectionMgmt413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniORB413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omnithread34_vc8_rtd.dll
+
+ this->adapterStatus->Initialise("VMSAdapter", m_pmanager->m_cdbManager);
+
+VMSDefinition.xml
+
+C:\Secure\SourceNew\Core\Adapters\VMSAdapterAsyn\Config\VMSDefinition.xml
+
+7971
+
+m_pokeTimerID
+
+  int result = ResumeThread( m_heartbeatThreadHandle );
+
+m_updateStatusThreadHandle
+
+ResumeThread
+
+promissory
+
+'registrar@iloilo.sti.edu'
+
+retrycount
+
+SCNName
+
+TypeID
+
+bool checkAndAddAdapter(const char* AdapterSCN, long TypeID);
+
+CDBInterfaceManager::
+
+char queryCode[400] = {0}; 
+
+checkAndAddAdapter
+
+cdbInterface
+
+SCNName
+
+TypeID
+
+12 Picket Post Close in Bracknell, Berkshire
+
+sprintf(queryCode, "SELECT * FROM SUBSYSTEM_DEFINITION WHERE SYSTEMCODENUMBER='%s' AND DATASOURCE_TYPEID=%ld\0", AdapterSCN, TypeID);
+
+dob = query(queryCode);
+
+dob.size()
+
+dob.size()-1
+
+if(dob.size() > 0)
+	{
+		if(dob[dob.size()-1]->attributes().size() > 0)
+		{
+			const char* val = dob[dob.size()-1]->attributes()[0]->value();
+			num = atoi(val);
+		}
+	}
+
+cdbInterface->updateAdapterStatus(this->AdapterSCN.c_str(), this->currentStatus.c_str());
+
+adapterStatus
+
+vector<DeviceObject *> dob = query(queryCode);
+
+if(dob.size() > 0)
+		{
+			if(dob[dob.size()-1]->attributes().size() > 0)
+			{	
+				const char* val = dob[dob.size()-1]->attributes()[0]->value();
+				num = atoi(val);
+			}
+			if(num == 0)return false;
+		}
+
+UPDATE SUBSYSTEM_STATUS set STATUS='Initialisation', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='VMSAdapter1'
+
+sprintf(queryCode, "UPDATE SUBSYSTEM_STATUS set STATUS='%s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='%s'", Status, AdapterSCN);
+
+INSERT INTO
+
+VALUES('%s', %ld)\0
+
+	dob = query(queryCode);
+		if(dob.size() > 0)
+		{
+			if(dob[dob.size()-1]->attributes().size() > 0)
+			{	
+				const char* val = dob[dob.size()-1]->attributes()[0]->value();
+				num = atoi(val);
+			}
+			if(num == 0)return false; //cant add the sybsytem then no bother trying to add into status table
+		}
+
+A programming error has been detected
+
+this->adapterStatus->SetStatus("Initialisation");
+
+@dynniq.co.uk
+
+AdapterStatus
+
+4967
+
+adapterStatus
+
+AdapterStatus
+
+adapterStatus = AdapterStatus::GetInstance();
+
+startManager
+
+Unknown error when trying to initiate the manager" );
+
+(adapterStatus != NULL)
+
+string GetSCN() const;
+
+	long GetTypeId() const;
+
+AdapterStatus::
+
+AdapterSCN
+
+TypeID
+
+adapterStatus->SetStatus("OK");
+
+this->running = true;
+
+void SetStatus(string status)
+
+SetAdapterStatus
+
+12321
+
+http://visual-studio-2005-remote-debugger.software.informer.com/
+

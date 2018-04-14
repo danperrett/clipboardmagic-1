@@ -1,0 +1,130 @@
+(PointCoordinates from, PointCoordinates to)
+
+      if ((from.latitude <= m_northBoundLatitude) && (from.latitude >= m_southBoundLatitude) &&
+                (from.longitude <= m_eastBoundLongitude) && (from.longitude >= m_westBoundLongitude))
+                return true;
+
+   if ((from.latitude <= m_northBoundLatitude) && (from.latitude >= m_southBoundLatitude) &&
+                (from.longitude <= m_eastBoundLongitude) && (from.longitude >= m_westBoundLongitude))
+                return true;
+
+point
+
+CheckLocationPoint
+
+NTISModel-2016-09-20-v5.0.zip
+
+CheckLocationPoint
+
+vmsUnit.vmsRecord
+
+SubscriberService/SubscriberWebService/Core/AnprManager.cs
+
+This is out of the Area of Interest
+
+SubscriberService/SubscriberWebService/Core/LocationManager.cs
+
+SubscriberService/SubscriberWebService/Core/DetectorManager.cs
+
+git clone git@wilmut.peek.prv:instation/datexiipushadapter
+
+datexIIadapter
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+cdb-peek-02.peek.prv
+
+http://localhost:15513/WebServiceSubscriber.svc
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+DetectorManager.cs
+
+string temp = ConfigurationManager.AppSettings["PublishVms"];
+
+
+ private bool CheckLocationPoint(PointCoordinates point)
+        {
+            if ((point.latitude <= m_northBoundLatitude) && (point.latitude >= m_southBoundLatitude) &&
+             (point.longitude <= m_eastBoundLongitude) && (point.longitude >= m_westBoundLongitude))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+   // start with default UK values
+        // Default UK TopLeft(60.85,-9.23)
+        // Default UK BottomRight (49.84, 2.69)
+        private double m_northBoundLatitude = 60.85;
+        private double m_westBoundLongitude = -9.23;
+        private double m_southBoundLatitude = 49.84;
+        private double m_eastBoundLongitude = 2.69;
+
+temp = ConfigurationManager.AppSettings["NorthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("NorthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_northBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse NorthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["NorthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["SouthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("SouthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_southBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse SouthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["SouthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["EastBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("EastBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_eastBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse EastBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["EastBoundLongitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["WestBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("WestBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_westBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse WestBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["WestBoundLongitude"].ToString()));
+            }
+
+CheckLocationPoint
+
+  Point p = (Point)rec.measurementSiteLocation;
+
+CheckLocationPoint
+
+putDatex2DataResponse
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+http://localhost:15513/WebServiceSubscriber.svc
+
+29901
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+25291
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+SubscriberService/SubscriberWebService/Core/VmsManager.cs
+
+10860935182
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+

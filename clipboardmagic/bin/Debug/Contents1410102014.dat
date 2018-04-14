@@ -1,0 +1,714 @@
+Hashtable
+
+Hashtable hashtable = new Hashtable();
+
+using System;
+using System.Collections;
+
+variabletable
+
+    if (vars != null)
+                {
+                    BEGINInlineSubScriptCmdData begin =  progData.ProgrammingCmdData as BEGINInlineSubScriptCmdData;
+                    if (begin != null)
+                    {
+                        vars.SetVariableByName(begin.SubScriptCmdResult.VariableName, begin.SubScriptCmdResult.InitialValue);
+                    }     
+                }
+
+BEGINInlineSubScriptCmdData
+
+beginSubscript
+
+ ScriptEngine.BeginInlineSubScript();
+
+beginSubscript
+
+ScriptEngine.EndInlineSubScript();
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_3_to_V15_4.cs
+
+m_Trunk_Converter_Info.Converters);
+
+m_Trunk_Converter_Info.Versions.Add("15.3");
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleELSECommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleELSEIFCommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleENDIFCommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleIFCommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\ExpressionForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\ExpressionForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\ExpressionForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IFCondition.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IFCondition.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IFCondition.cs
+
+ELEMENTANDDBTREE
+
+  public const string IFCondition = "IF";
+        public const string ELSEIFCondition = "ELSEIF";
+        public const string ELSECondition = "ELSE";
+        public const string ENDIFCondition = "ENDIF";
+
+        public const string RRC = "RRC";
+        public const string NAS = "NAS";
+        public const string Pseudo = "Pseudo";
+        public const string SMS = "SMS";
+        public const string SMSMessage = "SMS MT Message Group";
+        public const string Comment = "Comment";
+        public const string StringExpression = "String Expression";
+        public const string UserPrompt = "User Prompt";
+        public const string ActivateCell = "Activate Cell";
+        public const string ReconfigCell = "Reconfigure Cell";
+        public const string DeactivateCell = "Deactivate Cell";
+        public const string ModifyCellPower = "Modify Cell Power";
+        public const string ModifyFading = "Modify Cell Fading";
+        public const string AddMbsfnArea = "Add MBSFN Area";
+        public const string RemoveMbsfnArea = "Remove MBSFN Area";
+        public const string ModifyMbsfnArea = "Modify MBSFN Area";
+        public const string ApnIpConfig = "APN Config List";
+        public const string TestSteps = "Test Steps";
+        public const string MBSFNArea = "MBSFN Area";
+        public const string CellControl = "Cell Control";
+        public const string BEGINInlineSubScript = "BEGIN INLINE SUB-SCRIPT";
+        public const string ENDInlineSubScript = "END INLINE SUB-SCRIPT";
+        public const string AssignVariable = "ASSIGN VARIABLE";
+        public const string AdjustVariable = "ADJUST VARIABLE";
+        public const string DisplayVariables = "DISPLAY VARIABLES";
+        public const string IFCondition = "IF";
+        public const string ELSEIFCondition = "ELSEIF";
+        public const string ELSECondition = "ELSE";
+        public const string ENDIFCondition = "ENDIF";
+        public const string StartTimer = "Start Timer";
+        public const string StopTimer = "Stop Timer";
+        public const string VerdictPass = "Verdict: (PASS)";
+        public const string VerdictFail = "Verdict: (FAIL)";
+        public const string VerdictInconclusive = "Verdict: (INCONCLUSIVE)";
+        public const string TerminateScript = "Terminate Script";
+        public const string Loop = "LOOP";
+        public const string ENDLOOPCondition = "ENDLOOP";
+        public const string IEVariable = "IE Variable";
+        public const string StringVariable = "String Variable";
+        public const string TimerVariable = "Timer Variable";
+        public const string NumericVariable = "Numeric Variable";
+        public const string MessageTypeVariable = "Message Type Variable";
+        public const string NewDBName = "New DataBase";
+        public const string UtranGeran = "UTRAN/GERAN";
+        public const string UtranFDD = "UTRAN FDD";
+        public const string UtranTDD = "UTRAN TDD 1.28Mcps";
+        public const string Geran = "GERAN";
+        public const string LoadScenario = "Load Scenario";
+        public const string RunPlayback = "Run Playback Script";
+        public const string WaitFor2G3GVerdict = "Wait For Verdict";
+        public const string SyncPoint = "Synchronization Point";
+        public const string ModifyUtranFading = "Modify Utran Fading";
+        public const string ActivateUtranCell = "Activate Utran Cell";
+        public const string ActivateGeranCell = "Activate Geran Cell";
+        public const string DeactivateUtranCell = "Deactivate Utran Cell";
+        public const string DeactivateGeranCell = "Deactivate Geran Cell";
+        public const string ModifyUtranCellPower = "Modify Utran Cell Power";
+        public const string ModifyGeranCellPower = "Modify Geran Cell Power";
+        public const string WaitFor2GEvent = "Wait For Geran Event";
+        public const string Ignore2GEvents = "Ignore Geran Events";
+        public const string WaitFor3GEvent = "Wait For Utran Event";
+        public const string Ignore3GEvents = "Ignore Utran Events";
+        public const string ActivateUtranCellTDD = "Activate Utran Cell (TDD 1.28Mcps)";
+        public const string ReconfigUtranCellTDD = "Reconfigure Utran Cell (TDD 1.28Mcps)";
+        public const string ProcedureUtraTDD = "UTRA TDD 1.28Mcps Procedures";
+        public const string UtraTDDAttach = "Attach";
+        public const string UtraTDDDeAttachMO = "Detach (M0)";
+        public const string UtraTDDDeAttachMT = "Detach (MT)";
+        public const string UtraTDDRoutingAreaUpdate = "Routing Area Update";
+        public const string UtraTDDRoutingAreaUpdateReject = "Routing Area Update Reject";
+        public const string UtraTDDLocationAreaUpdate = "Location Update";
+        public const string UtraTDDPDPContextActivateMT = "PDP Context Activation (MT)";
+        public const string UtraTDDPDPContextActivateMO = "PDP Context Activation (MO)";
+        public const string UtraTDDPDPContextDeactivateMO = "PDP Context Deactivation (MO)";
+        public const string UtraTDDPDPContextTransfer = "PDP Context Transfer from EUTRAN";
+        public const string UtraTDDMeasurementControl = "Measurement Control";
+        public const string UtraTDDRrcConnectionRelease = "RRC Connection Release (Redirection)";
+        public const string UtraTDDPaging = "Paging Type1";
+        public const string DeactivateUtranCellTDD = "Deactivate Utran Cell (TDD 1.28Mcps)";
+        public const string ModifyUtranCellPowerTDD = "Modify Utran Cell Power (TDD 1.28Mcps)";
+        public const string WaitFor3GTDDEvent = "Wait For Utran Event (1.28Mcps)";
+        public const string Ignore3GTDDEvents = "Ignore Utran Event (1.28Mcps)";
+        public const string IMSElements = "IMS";
+        public const string IMSConfiguration = "IMS Configuration";
+        public const string IMSCommand = "IMS Command";
+        public const string ModifyVideoStreaming = "Modify Video Stream";
+        public const string C2K = "C2K";
+        public const string C2KEhrpd = "eHRPD";
+        public const string C2K1xRtt = "1xRTT";
+        public const string ActivateC2KEhrpdCell = "Activate eHRPD Cell";
+        public const string DeactivateC2KEhrpdCell = "Deactivate eHRPD Cell";
+        public const string ModifyC2KEhrpdCellPower = "Modify eHRPD Cell Power";
+        public const string WaitForEhrpdEvent = "Wait For eHRPD Event";
+        public const string IgnoreEhrpdEvents = "Ignore eHRPD Events";
+        public const string ActivateC2K1xRttCell = "Activate 1xRTT Cell";
+        public const string DeactivateC2K1xRttCell = "Deactivate 1xRTT Cell";
+        public const string ModifyC2K1xRttCellPower = "Modify 1xRTT Cell Power";
+        public const string WaitFor1xRttEvent = "Wait For 1xRTT Event";
+        public const string Ignore1xRttEvents = "Ignore 1xRTT Events";
+        public const string ScriptDetails = "Script Details";
+        public const string SIMInformation = "SIM Information";
+        public const string LoggingPreferences = "Logging Preferences";
+        public const string DummyUplinkMessage = "Receive Any Message";
+        public const string CarrierSelectionControl = "Carrier Selection Control";
+        public const string MACControl = "MAC Control Commands";
+        public const string VerifyDataTransfer = "Verify Data Transfer";
+        public const string VerifyResponseToTestData = "Verify Response To Test Data";
+        public const string SCellActivationEvents = "S-Cell Activation Events";
+        public const string StartMetricsLogging = "Start Metrics Logging";
+        public const string StopMetricsLogging = "Stop Metrics Logging";
+        public const string CellIdVariable = "Cell ID Variable";
+        public const string NotificationForSAS = "Notify SAS 2G3G";
+        public const string IEListProcessing = "IE List Processing";
+        public const string ProcedureControl = "Auto-Procedure Control";
+        public const string BeginSubScriptProcedure = "BEGIN SUB-SCRIPT";
+        public const string EndSubScriptProcedure = "END SUB-SCRIPT";
+        public const string SubScriptControl = "Sub-Script Control";
+        public const string ApplicationElements = "Applications";
+        public const string ApplicationPingStart = "PING Start";
+        public const string ApplicationPingStop = "PING Stop";
+        public const string IpPacketRx = "IP Packet Monitor";
+        public const string XcapGuiElements = "XCAP";
+        public const string XcapSetGuiElement = "XCAP Configure Data";
+        public const string XcapGetGuiElement = "XCAP Get Data";
+        public const string XcapVerifyGuiElement = "XCAP Verify Data";
+
+        public const string IFCondition = "IF";
+        public const string ELSEIFCondition = "ELSEIF";
+        public const string ELSECondition = "ELSE";
+        public const string ENDIFCondition = "ENDIF";
+
+Programming_Cmd_Data
+
+        public Command_type_enum commandType;
+        public object programmingData;  // Either string or Loop_Cmd_Data / UserPrompt_Cmd_Data
+        public bool isIEConditionCheck = false;
+        public bool isMsgTypCheck = false;
+        public bool isCellIdTypeCheck = false;
+
+BEGINInlineSubScript 
+
+BEGINInlineSubScriptMessageNode
+
+ // Store If Condition
+            ElementDragDropData IFConditionMessageNode = new ElementDragDropData();
+            ProgrammingData IFConditionMessageData = new ProgrammingData();
+            IFConditionMessageData.ProgrammingCmdData = new IFCmdData();
+
+            IFConditionMessageNode.ScriptDragDropData = IFConditionMessageData;
+            IFConditionMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        IFConditionMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.IFCondition] = IFConditionMessageNode;
+
+
+ // Store If Condition
+            ElementDragDropData IFConditionMessageNode = new ElementDragDropData();
+            ProgrammingData IFConditionMessageData = new ProgrammingData();
+            IFConditionMessageData.ProgrammingCmdData = new IFCmdData();
+
+            IFConditionMessageNode.ScriptDragDropData = IFConditionMessageData;
+            IFConditionMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        IFConditionMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.IFCondition] = IFConditionMessageNode;
+
+
+            // Store ElseIf Condition
+            ElementDragDropData ELSEIFConditionMessageNode = new ElementDragDropData();
+            ProgrammingData ELSEIFConditionMessageData = new ProgrammingData();
+            ELSEIFConditionMessageData.ProgrammingCmdData = new ELSEIFCmdData();
+
+            ELSEIFConditionMessageNode.ScriptDragDropData = ELSEIFConditionMessageData;
+            ELSEIFConditionMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        ELSEIFConditionMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.ELSEIFCondition] = ELSEIFConditionMessageNode;
+
+
+            // Store Else Condition
+            ElementDragDropData ELSEConditionMessageNode = new ElementDragDropData();
+            ProgrammingData ELSEConditionMessageData = new ProgrammingData();
+            ELSEConditionMessageData.ProgrammingCmdData = new ELSECmdData();
+
+            ELSEConditionMessageNode.ScriptDragDropData = ELSEConditionMessageData;
+            ELSEConditionMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        ELSEConditionMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.ELSECondition] = ELSEConditionMessageNode;
+
+
+            // Store EndIf Condition
+            ElementDragDropData ENDIFConditionMessageNode = new ElementDragDropData();
+            ProgrammingData ENDIFConditionMessageData = new ProgrammingData();
+            ENDIFConditionMessageData.ProgrammingCmdData = new ENDIFCmdData();
+
+            ENDIFConditionMessageNode.ScriptDragDropData = ENDIFConditionMessageData;
+            ENDIFConditionMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        ENDIFConditionMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.ENDIFCondition] = ENDIFConditionMessageNode;
+
+ELEMENTANDDBTREE.IFCondition
+
+ TreeNode ifCommandNode = new TreeNode();
+            ifCommandNode.Text = ELEMENTANDDBTREE.IFCondition;
+            ifCommandNode.ImageIndex = 2;
+            ifCommandNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(ifCommandNode);
+
+            TreeNode elseIfCommandNode = new TreeNode();
+            elseIfCommandNode.Text = ELEMENTANDDBTREE.ELSEIFCondition;
+            elseIfCommandNode.ImageIndex = 2;
+            elseIfCommandNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(elseIfCommandNode);
+
+            TreeNode elseCommandNode = new TreeNode();
+            elseCommandNode.Text = ELEMENTANDDBTREE.ELSECondition;
+            elseCommandNode.ImageIndex = 2;
+            elseCommandNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(elseCommandNode);
+
+            TreeNode endifCommandNode = new TreeNode();
+            endifCommandNode.Text = ELEMENTANDDBTREE.ENDIFCondition;
+            endifCommandNode.ImageIndex = 2;
+            endifCommandNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(endifCommandNode);
+
+ValidateSubScript
+
+  ResetErrorHighlighting();
+
+    // Check for matching ENDLOOPs for each LOOP in the script
+            ValidateForwardInScript(typeof(LOOPCmdData), typeof(LOOPCmdData), typeof(ENDLOOPCmdData),
+                                    Resources.NOENDLOOPFORLOOP);
+
+    // Check for matching ENDLOOPs for each LOOP in the script
+            ValidateForwardInScript(typeof(LOOPCmdData), typeof(LOOPCmdData), typeof(ENDLOOPCmdData),
+                                    Resources.NOENDLOOPFORLOOP);
+
+
+            // Check for matching LOOPs for each ENDLOOP in the script
+            ValidateBackwardInScript(typeof(ENDLOOPCmdData), typeof(LOOPCmdData), typeof(ENDLOOPCmdData),
+                                    Resources.NOLOOPFORENDLOOP);
+
+BEGINInlineSubScriptCmdData
+
+  // check for matching END INLINE SUB-SCRIPT for each BEGIN INLINE SUB-SCRIPT in the script
+            ValidateForwardInScript(typeof(BEGINInlineSubScriptCmdData), typeof(BEGINInlineSubScriptCmdData), typeof(ENDInlineSubScriptCmdData),
+                                    Resources.NOENDInlineForBEGIN);
+
+            // check for matching BEGIN INLINE SUB-SCRIPT for each END INLINE SUB-SCRIPT in the script
+            ValidateBackwardInScript(typeof(ENDInlineSubScriptCmdData), typeof(BEGINInlineSubScriptCmdData), typeof(ENDInlineSubScriptCmdData),
+                                    Resources.NOBEGINInlineForEND);
+
+
+NOENDInlineForBEGIN
+
+No matching END INLINE SUB-SCRIPT for BEGIN INLINE SUB-SCRIPT
+
+NOBEGINInlineForEND
+
+No matching BEGIN INLINE SUB-SCRIPT for END INLINE SUB-SCRIPT
+
+RttMesssages
+
+m_rttMessages
+
+RttMesssages
+
+m_rttCountMesssages
+
+messageCounter
+
+RealTimeTraceCountElement
+
+subscribeToRealTimeTraceCountElement
+
+subscribeToRealTimeTraceCountElement(RealTimeTraceCountElement
+
+AddToRealTimeTraceCount
+
+      public void AddToRealTimeTraceCount(string message)
+        {
+
+        }
+
+ lock (messageCounter)
+                        {
+
+  lock (messageCounter)
+                        {
+                            messageCounter.RttCountMessage = true;
+                            messageCounter.MessageToCount.Clear();
+
+                            for (int n = 0; n < UserPreferences.LoggingPreferences.NumberOfRttMesssage; n++)
+                            {
+                                messageCounter.MessageToCount.Add(UserPreferences.LoggingPreferences.RTTMessages[n]);
+
+messageCounter.MessageToCount
+
+          <xs:element name="Messages" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+
+
+MessageToCount
+
+ <xs:complexType name="MessageToCount">
+    <xs:complexContent>
+      <xs:extension base="ElementData">
+        <xs:sequence>
+          <xs:element name="Messages" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+        public override DialogResult DisplayElementDataInGUI()
+        {
+            DialogResult msgDialogResult = DisplayElement();
+            return msgDialogResult;
+        }
+
+        private DialogResult DisplayElement()
+        {
+            InactivityTimer timer = new InactivityTimer();
+            timer.SetData(this);
+            DialogResult result = timer.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                copyOfGUIData = timer.GetData();
+                copyOfGUIData.DeltaTime = new DeltaTime();
+                copyOfGUIData.DeltaTime.Hundredths = this.DeltaTime.Hundredths;
+                copyOfGUIData.DeltaTime.Minutes = this.DeltaTime.Minutes;
+                copyOfGUIData.DeltaTime.Seconds = this.DeltaTime.Seconds;
+            }
+            this.DataType = GetDataTypeString();
+            return result;
+            
+        }
+
+        public override DialogResult DisplayElementDataInGUI(int indexOfDrop)
+        {
+            DialogResult msgDialogResult = DialogResult.Cancel;
+
+
+            msgDialogResult = DisplayElement();
+            return msgDialogResult;
+        }
+
+        public override ElementData GetCopyOfElementDataFromGUI()
+        {
+            copyOfGUIData.DataType = GetDataTypeString();
+            return copyOfGUIData;
+        }
+
+        protected string GetDataTypeString()
+        {
+            return ELEMENTANDDBTREE.InactivityDataDetails;
+        }
+
+        public override DialogResult DisplayCellID()
+        {
+            DialogResult DlgResult = DialogResult.Cancel;
+
+            if (this.Cell != null)
+            {
+                CellID cellIDForm = new CellID();
+
+                cellIDForm.UpdateCellID(this.Cell);
+
+                DlgResult = cellIDForm.ShowDialog();
+
+                if (DlgResult == DialogResult.OK)
+                {
+                    Cell changedCellID = cellIDForm.GetChangedCell();
+
+                    copyOfGUIData = (InactivityTimerElement)this.GetElementDataCopy();
+                    copyOfGUIData.Cell = changedCellID;
+                }
+            }
+
+            return DlgResult;
+        }
+
+        public override ListViewItem GetListViewItem(int index)
+        {
+            string[] listViewColumns = GetDataInListViewFormat(index);
+
+            listViewColumns[ListVwIndices.DATATYPE] = GetDataTypeString();
+
+            ListViewItem scripRecordInScriptView = new ListViewItem(listViewColumns);
+            scripRecordInScriptView.ForeColor = UserPreferences.CellcontrolColor;
+            scripRecordInScriptView.BackColor = itemBackColor;
+
+            return scripRecordInScriptView;
+        }
+
+        public override DialogResult DisplayDeltaTime()
+        {
+            DialogResult DlgResult = DialogResult.Cancel;
+
+
+            if (DeltaTime != null)
+            {
+                DeltaTimer deltaTimer = new DeltaTimer();
+                deltaTimer.UpdateTimerValue(DeltaTime);
+
+                DlgResult = deltaTimer.ShowDialog();
+
+                if (DlgResult == DialogResult.OK)
+                {
+                    DeltaTime changedTime = deltaTimer.GetTimerValue();
+
+                    copyOfGUIData = (InactivityTimerElement)this.GetElementDataCopy();
+                    copyOfGUIData.DeltaTime = changedTime;
+                }
+            }
+
+            return DlgResult;
+        }
+
+
+        public virtual string[] GetDataInListViewFormat(int index)
+        {
+            string[] listViewStrings = new string[ListVwIndices.NUMBEROFCOLUMNS];
+            listViewStrings[ListVwIndices.BLANK] = "";
+
+            listViewStrings[ListVwIndices.LINENUMBER] = GetLineNumberAtIndex(index).ToString();
+
+            if (DeltaTime != null)
+            {
+                listViewStrings[ListVwIndices.DELTATIME] = this.DeltaTime.GetTimeInGUIFormat();
+            }
+
+            if (Cell != null)
+            {
+                listViewStrings[ListVwIndices.CELL] = string.Empty;
+            }
+
+            listViewStrings[ListVwIndices.DIRECTION] = GUIDirectionStrings.GetGUIDirectionFromEnumString(Direction);
+            listViewStrings[ListVwIndices.DATATYPE] = this.DataType;
+            listViewStrings[ListVwIndices.DESCRIPTION] = this.Description;
+
+            return listViewStrings;
+        }
+
+        public override ElementData GetElementDataCopy()
+        {
+            InactivityTimerElement copyOfGUIData = new InactivityTimerElement();
+
+
+            if (DeltaTime != null)
+            {
+                copyOfGUIData.DeltaTime = new DeltaTime();
+                copyOfGUIData.DeltaTime.Hundredths = base.DeltaTime.Hundredths;
+                copyOfGUIData.DeltaTime.Minutes = base.DeltaTime.Minutes;
+                copyOfGUIData.DeltaTime.Seconds = base.DeltaTime.Seconds;
+            }
+
+            copyOfGUIData.DataType = GetDataTypeString();
+            copyOfGUIData.Description = this.Description;
+            copyOfGUIData.ArmedAfterData = this.ArmedAfterData;
+            copyOfGUIData.InactivityTime = this.InactivityTime;
+            copyOfGUIData.InactivityTimerActive = this.InactivityTimerActive;
+            copyOfGUIData.Direction = this.Direction;
+
+            return copyOfGUIData;
+        }
+
+InactivityTimerElement copyOfGUIData = null;
+
+using System.Windows.Forms;
+using Anite.Sequencer.Interfaces;
+using Anite.Sequencer.Utils;
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+MessageToCount
+
+VariableStore
+
+VariableStore variableDB = VariableStore.GetInstance();
+
+foreach (ScriptVariable variable in ScriptVariables)
+                {
+                    variableStore.AddScriptVariable(variable);
+                }
+
+script.ScriptElements.ScriptVariables
+
+VariableStore
+
+ScriptVariable variable = variables.GetScriptVariable(vardetails.Name);
+
+begin.SubScriptCmdResult.VariableName
+
+StringVariable
+
+EvaluatorVariable
+
+ProgramVariableBase
+
+SetVariableByName
+
+Gala, Girish <girish.gala@anite.com>
+
+variableStore
+
+ if (type == typeof(int))
+                            {
+
+                            }
+                            break;
+
+if (type == typeof(int))
+                            {
+                                variableStore[name] = value;
+                            }
+                            else
+                            {
+                                ret = false;
+                            }
+                            break;
+
+SetVariableByName
+
+7	RRC CONNECTION REQUEST	EUTRAN	0	1	-	-	-
+
+MessageToCount
+
+InactivityTimer
+
+MessageToCount
+
+ TreeNode endLoopCommandNode = new TreeNode();
+            endLoopCommandNode.Text = ELEMENTANDDBTREE.ENDLOOPCondition;
+            endLoopCommandNode.ImageIndex = 2;
+            endLoopCommandNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(endLoopCommandNode);
+
+messageToCountCommandNode
+
+ENDLOOPCondition
+
+  // Store ENDLOOP Condition
+            ElementDragDropData ENDLOOPMessageNode = new ElementDragDropData();
+            ProgrammingData ENDLOOPMessageData = new ProgrammingData();
+            ENDLOOPMessageData.ProgrammingCmdData = new ENDLOOPCmdData();
+
+            ENDLOOPMessageNode.ScriptDragDropData = ENDLOOPMessageData;
+            ENDLOOPMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        ENDLOOPMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.ENDLOOPCondition] = ENDLOOPMessageNode;
+
+MessageToCountNode
+
+ ElementDragDropData RRCConnectionReleaseCellMessageNode = new ElementDragDropData();
+            ReleaseRRCConnection RRCConnectionReleaseMessageData = new ReleaseRRCConnection();
+
+            RRCConnectionReleaseCellMessageNode.ScriptDragDropData = RRCConnectionReleaseMessageData;
+            RRCConnectionReleaseCellMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                    RRCConnectionReleaseMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.RRCConnectionRelease] = RRCConnectionReleaseCellMessageNode;
+
+MessageToCountNode
+
+MessageToCountData
+
+MessageToCountNode
+
+RRCConnectionReleaseCellMessageNode
+
+MessageToCountNode
+
+MessageToCountData
+
+                    RRCConnectioMessageToCountDatanReleaseMessageData.DisplayElementDataInGUI);
+
+
+MessageToCountData
+
+MessageToCountNode
+
+MessageToCountForm
+
+message
+
+string[] scriptVariables = GetVariablesNamesAsSortedArray(typeof(StringVariable));
+
+ScriptVariable
+
+NumericVariable
+
+  return PopulateComboBox(scriptVariables, _CurrentVariableName, _ComboBox);
+
+PopulateComboBoxWithIntVariable
+
+ vars.PopulateComboBoxWithStringVariables
+
+  VariableStore vars = VariableStore.GetInstance();
+
+
+
+
+  VariableStore vars = VariableStore.GetInstance();
+
+
+ vars.PopulateComboBoxWithStringVariables
+
+
+VariableComboBox
+
+ VariableStore vars = VariableStore.GetInstance();
+
+GetVariablesNamesAsSortedArray(typeof(NumericVariable));
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+foreach(Foos foo in Enum.GetValues(typeof(Foos)))
+

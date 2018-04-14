@@ -1,0 +1,113 @@
+PROCEDURE complete LOCATION UPDATE MT G Cell G
+
+((IEVariable)this)
+
+ProtocolMessageType.NotDefined
+
+ATTACH REQUEST
+
+Background
+
+sendTextToRealTimeTrace
+
+sendTextToRealTimeTrace("Starting loop for " + value.ToString() + " Count");
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+Intl_research@gis-internationalscreening.com
+
+44118222
+
+
+44118222 CISCO Background Investigation Form
+
+ 0113 812 0000
+
+http://www.leedsbeckett.ac.uk
+
+LS1 3HE
+
+Ancells Business Park
+
+GU51 2UZ
+
+01252 775200
+
+
+Interesting combination.
+
+
+version
+
+ConvertFrom_V15_4_to_V16_0.cs
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/10/29 16:08:48GMT $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V15_4_to_V16_0.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V15_4_to_V16_0 : ConvertFromBase
+    {
+        public ConvertFrom_V15_4_to_V16_0(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("15.4", "16.0", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                //ADD TO NEW Convert file
+                scriptElements = _ScriptElementList.ToArray();
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+
+     //Update any ActivateCell element data with relevant fading configuration
+                List<ScriptElement> ActivateCellDataList = _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsActivateCellData));
+
+(ScriptElement _scriptElement)
+
+((_scriptElement.ElementData is ActivateCellData) &&
+                           !(_scriptElement.ElementData is ReconfigureCellData)) ? true : false;
+
+
+(_scriptElement.ElementData is IgnoreEvents)
+
+IsIgnoreEvent
+
+new ConvertFrom_V15_4_to_V16_0(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("16.0");
+
+PROCEDURE complete LOCATION UPDATE MO G Cell G
+
+PROCEDURE complete GPRS ATTACH MO G Cell G
+
+PROCEDURE complete LOCATION UPDATE MO G Cell G
+
+L3PPipeMessageHandler: 
+

@@ -1,0 +1,105 @@
+nt r = rand.Next();
+                UserCredentialsStore store = UserCredentialsStore.GetInstance();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteClipboard.get
+
+     MemoryStream stream= null;
+
+   waveWriter.Write(e.Buffer, 0, e.BytesRecorded);
+
+ waveWriter = new WaveFileWriter(stream, sourceStream.WaveFormat);
+
+waveInStream
+
+http://www.codinggain.com:8080/AudioService/services/AudioReflect?wsdl
+
+   int count = 0;
+        int id = -1;
+        AudioReflector.AudioReflectClient service = null;
+
+ service = new AudioReflector.AudioReflectClient();
+
+ id = service.createNewStream("dperrett");
+
+service = new AudioReflectorService.AudioReflectClient();
+
+ id = service.createNewStream("dperrett");
+
+service.putAudio("audiotest1", "test", data.Length, id, data);
+
+ String data = Convert.ToBase64String(e.Buffer);
+
+AudioReflectorService
+
+http://www.codinggain.com:8080/AudioService/services/AudioReflect?wsdl
+
+AudioReflectService
+
+getAudioResponse
+
+H:\Visual Studio 2008
+
+PushToTalkService
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using agsXMPP;
+using agsXMPP.protocol.client;
+
+namespace AudioIntercomm
+{
+    class XmppInterface
+    {
+        string jid_sender = "@tigase.im";
+        XmppClientConnection xmpp = null;
+        public XmppInterface(string username, string password)
+        {
+            jid_sender = username + jid_sender; 
+            Jid jidSender = new Jid(jid_sender);
+            xmpp = new XmppClientConnection(jidSender.Server);
+            xmpp.OnMessage += Xmpp_OnMessage;
+            xmpp.Open(jidSender.User, password);
+         
+
+        }
+
+        private void Xmpp_OnMessage(object sender, Message msg)
+        {
+          
+        }
+
+        public bool send(string message, string jid)
+        {
+            if(xmpp != null)
+            {
+                xmpp.OnLogin += delegate (object o) { xmpp.Send(new Message(new Jid(jid), MessageType.chat, message)); };
+            }
+            return false;
+        }
+    }
+}
+
+
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\AudioIntercomm\AudioIntercomm\lib
+
+string message = "ID=" + id + ";Count=" + count + ";To=audiotest1" + ";From=audiotest2";
+            count = 0;
+            XmppInterface xmpp = new XmppInterface("dperrett", "images");
+            xmpp.send(message, "audiotest1@codinggain.com");
+
+
+        int runningTotal = 0;
+        int runningAverage = 0;
+        int runCount = 0;
+        int max = -999;
+        int min = 9999;
+        
+
+waveInStream.Dispose();
+          //  waveInStream = null;
+          //  writer.Close();
+        //    writer = null;
+

@@ -1,0 +1,347 @@
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+initialise
+
+..\..\..\lib
+
+$(SolutionDir)..\include
+
+CutlasIniFile
+
+CutlasHelperS.lib
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent_DVTel.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+Tyco Camera failed to find camera ID for camera 'CCTV01'
+
+initialise
+
+ITycoCCTVInterfacePtr pICalc(__uuidof(ManagedClass));
+
+pICalc
+
+#import ".\ManagedDll.tlb" 
+
+using namespace ManagedDll;
+
+CutlasHelperS.lib
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+cctvAdapter
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+#import ".\ManagedDll.tlb"
+
+TycoAgent_DVTel
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+3515
+
+[DispId(1)]
+
+using System.Runtime.InteropServices;
+
+[DispId(1)]
+
+guidgen.exe
+
+[Guid("2D618965-AE4E-44AB-87A8-7FC4B9256AD6")]
+
+InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+
+[DispId(2)]
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+BSTR _result = 0;
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.dll
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.pdb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\manageddll.tlh
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\manageddll.tli
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+TycoAgent_DVTel
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+[DispId(11)]
+        int GetNumberOfPresets(int camerNum);
+
+[DispId(10)]
+        int GetCameraNumberFromName(string name);
+
+[DispId(12)]
+        bool Logoff();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+video_controller
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+  string errors =  pICalc->GetErrors();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+TycoAgent_DVTel
+
+'/RTC1' and '/clr
+
+TycoAgent_DVTel
+
+/Zi /clr:oldSyntax /nologo /W3 /WX- /Od /Oy- /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "UNICODE" /EHa /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\example.pch" /Fa"Debug\" /Fo"Debug\" /Fd"Debug\vc100.pdb" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:queue 
+
+/Od /I "..\..\include" /I "..\..\ThirdParty" /I "C:\Program Files\Envitia\MapLink Pro\7.1\bin64\..\include" /I "C:\secure\source\cutlas\core\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_CRT_SECURE_NO_WARNINGS" /D "_VC80_UPGRADE=0x0710" /D "_SECURE_SCL=0" /D "_HAS_ITERATOR_DEBUGGING=0" /D "_CRT_SECURE_NO_DEPRECATE" /D "_CRT_NONSTDC_NO_DEPRECATE" /D "_SCL_SECURE_NO_DEPRECATE" /D "_AFXDLL" /D "_MBCS" /FD /EHa /MDd /Zc:wchar_t- /Fp".\..\..\Debug\cctvAdapter\cctvAdapter.pch" /Fo".\..\..\Debug\cctvAdapter/" /Fd".\..\..\Debug\cctvAdapter/" /W3 /nologo /c /Zi /clr:oldSyntax /errorReport:prompt
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+TycoAgent_DVTel
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+m_northBoundLatitude
+
+northBound
+
+   private bool AreaOfInterest(PointCoordinates from, PointCoordinates to)
+        {
+            log.Info(string.Format("To({0}, {1}) From({2}, {3})", to.latitude, to.longitude, from.latitude, to.longitude));
+
+            if ((from.latitude <= m_northBoundLatitude) && (from.latitude >= m_southBoundLatitude) &&
+                (from.longitude <= m_eastBoundLongitude) && (from.longitude >= m_westBoundLongitude))
+                return true;
+
+            log.Info("One end is out side the boundry area");
+
+            if ((to.latitude <= m_northBoundLatitude) && (to.latitude >= m_southBoundLatitude) &&
+                (to.longitude <= m_eastBoundLongitude) && (to.longitude >= m_westBoundLongitude))
+                return true;
+
+            log.Info("Both ends are outside of the boundry area");
+
+            return false;
+        }
+
+   // start with default UK values
+        // Default UK TopLeft(60.85,-9.23)
+        // Default UK BottomRight (49.84, 2.69)
+        private double m_northBoundLatitude = 60.85;
+        private double m_westBoundLongitude = -9.23;
+        private double m_southBoundLatitude = 49.84;
+        private double m_eastBoundLongitude = 2.69;
+
+temp = ConfigurationManager.AppSettings["NorthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("NorthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_northBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse NorthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["NorthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["SouthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("SouthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_southBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse SouthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["SouthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["EastBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("EastBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_eastBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse EastBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["EastBoundLongitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["WestBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("WestBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_westBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse WestBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["WestBoundLongitude"].ToString()));
+            }
+
+ private bool AreaOfInterest(PointCoordinates from, PointCoordinates to)
+        {
+            log.Info(string.Format("To({0}, {1}) From({2}, {3})", to.latitude, to.longitude, from.latitude, to.longitude));
+
+            if ((from.latitude <= m_northBoundLatitude) && (from.latitude >= m_southBoundLatitude) &&
+                (from.longitude <= m_eastBoundLongitude) && (from.longitude >= m_westBoundLongitude))
+                return true;
+
+            log.Info("One end is out side the boundry area");
+
+            if ((to.latitude <= m_northBoundLatitude) && (to.latitude >= m_southBoundLatitude) &&
+                (to.longitude <= m_eastBoundLongitude) && (to.longitude >= m_westBoundLongitude))
+                return true;
+
+            log.Info("Both ends are outside of the boundry area");
+
+            return false;
+        }
+
+
+  Point pt = (Point)srec.groupOfLocations;
+
+ Point pt = (Point)srec.groupOfLocations;
+
+  PointCoordinates pc = pt.locationForDisplay;
+
+SubscriberService/GZipEncoder/GZipMessageEncoderFactory.cs
+
+if (gtype == typeof(NonOrderedLocationGroupByList))
+                {
+                    NonOrderedLocationGroupByList gloc = (NonOrderedLocationGroupByList)srec.groupOfLocations;
+                    foreach (Location loc in gloc.locationContainedInGroup)
+                    {
+                        if (loc.GetType() == typeof(Point))
+                        {
+                            Point pt = (Point)gloc.locationContainedInGroup[0];
+                            PointCoordinates pc = pt.locationForDisplay;
+                            ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting, ref m_northing);
+                            break;
+                        }
+                    }
+                }
+
+ Type gtype = srec.groupOfLocations.GetType();
+                if (gtype == typeof(Point))
+                {
+                    Point pt = (Point)srec.groupOfLocations;
+                    PointCoordinates pc = pt.locationForDisplay;
+                    ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting, ref m_northing);
+                }
+
+http://www.bbc.co.uk/news/blogs-trending-38173842
+
+  Point pt = null;
+                    PointCoordinates pc = null;
+
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_v2\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_v2\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_v2\ManagedDll.pdb
+
+C:\cctvadapter
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+D:\Oracle\product\11.2.0\client_odac_1;D:\Oracle\product\11.2.0\client_odac_1\bin;D:\Oracle\product\11.2.0\dbhome_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+C:\Users\Administrator\Desktop\cctvadapter
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent_DVTel.dll
+
+D:\Oracle\product\11.2.0\client_odac_1;D:\Oracle\product\11.2.0\client_odac_1\bin;D:\Oracle\product\11.2.0\dbhome_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rt.dll
+
+C:\cctvadapter\TycoAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+loaded successfully
+
+C:\Users\Daniel.Perrett\Downloads\Latitude_Update_7.0.0.5762.zip
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package.zip
+
+https://flir.box.com/v/Latitude7
+
+D2V0T1e5l
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent_DVTel.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+C:\cctvadapter\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\TycoAgent_v2\TycoAgent_DVTel.dll
+
+https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\Release
+
+C:\Users\Administrator\Desktop\cctvadapter
+
+93.95.10.169
+
+NicanderClient
+
+N1c@nd3rCl13nt
+

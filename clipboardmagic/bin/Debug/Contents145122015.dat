@@ -1,0 +1,62 @@
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+IndicationsResponse
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+FD_WRITE
+
+MCS_getControlRequestsBitmap
+
+ICONISIF
+
+LOGMASK_ICONISIF
+
+HandleIncomingDataStream
+
+LOGMASK_ICONISIF
+
+HandleIncomingDataStream
+
+ ConnectionListInformation_t *connectionInformation = GetConnectionInformation(Socket);
+
+ConnectionListInformation_t *GetConnectionInformation(DWORD Socket)
+
+connectionInformation
+
+LOGMASK_TCP
+
+ICONISIF
+
+Create connection in array numbe
+
+HandleIncomingDataStream
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\minyEncoder.exe
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\minyEncoder.exe
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010\bin\test.pem
+
+StreamReader file = new StreamReader(@"C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010\bin\test.pem");
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\minyEncoder.vshost.exe
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\minyEncoder.vshost.exe.manifest
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\private.pem
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\test.pem
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\CRCEncoder.dll
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\minyEncoder.exe
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\minyEncoder.pdb
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+

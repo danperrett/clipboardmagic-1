@@ -1,0 +1,242 @@
+Disable the NFS support
+
+074901500bf600f1108001010000000154064000f110000157022000640101
+
+074901500bf600f1108001010000000154064000f110000157022000000001
+
+074901500bf600f1108001010000000154064000f110000157022000640101
+
+#ifndef R8MARCH2009
+
+  void LTE_TRACK_AREA_UPDT_ACC_PDU_::DisableNFSSupport()
+    {
+#ifndef R8MARCH2009
+        m_pdu->eps_nfs.iei = 0;
+        m_pdu->eps_nfs.iel = 0;
+#endif
+    }
+
+void LTE_TRACK_AREA_UPDT_ACC_PDU_::DisableNFSSupport()
+
+  SASDebugLogger.InfoLog("Disable the NFS support");
+                        trackAreaUpdateAcceptMsg.DisableNFSSupport();
+
+AttachAcceptMsg
+
+DisableNFSSupport
+
+LTE_ATT_ACC_PDU_
+
+62704
+
+  stProgramCommand *programCommand = new stProgramCommand;
+    memset(programCommand, 0, sizeof(stProgramCommand));
+    memset(&programCommand->L3m, 0, sizeof(stLayer3Data));
+
+ programCommand->WaitTime = 120000;
+    programCommand->TypeOfStatement = (int)DEFINE_VAR_MT;
+    programCommand->NumOfExpr = 1;
+    programCommand->NumOfLogicalOptrs = 1;
+
+  for(int i = 0; i < MAX_LOGICAL_OPERATOR; i++)
+    {
+         programCommand->LogicalOptrList[i] = OR;
+    }
+
+   for(int i = 0; i < MAX_LOGICAL_OPERATOR; i++)
+    {
+         programCommand->LogicalOptrList[i] = OR;
+    }
+
+    setUpExpression(&(programCommand->ExprList[0]), data);
+
+setUpExpression(&(programCommand->ExprList[0]), data);
+
+programCommand->ExprList[n]
+
+programCommand->ExprList[n].Var2.VarName
+
+startSubScript
+
+class stProgCommandVarData
+{
+public:
+  char *        VarName;
+  VAR_TYPE      VarType;
+  MESSAGE_TYPES MsgType;
+  char *        MsgTypeString;
+  PROTOCOL_DISCRIMINATOR  pd;
+  char *        IeChosen;
+  char *        ChosenIeValue;
+  int           UsedCount;
+  int           Commented;
+  unsigned int  PDUIeId;
+  char *        szPDUIeId;
+  DIRECTION_FLAG  Direction; // uplink == 0, which is the default.
+  int           RATType;
+};
+
+/*****************************************************************************/
+
+programCommand->ExprList[n].Var1.VarName;
+
+name
+
+programCommand->ExprList[n].Var1.VarName
+
+if(programCommand->ExprList[n].Var1.VarName != NULL)
+    {
+        delete[] programCommand->ExprList[n].Var1.VarName;
+    }
+
+variable
+
+programCommand->ExprList[0].Var2.VarName;
+
+memcpy(&programCommand->ExprList[0].Var1.VarName, name.c_str(), length);
+
+ if(programCommand->ExprList[0].Var1.VarName != NULL)
+    {
+        delete[] programCommand->ExprList[0].Var1.VarName;
+    }
+
+length = variable.length() + 1;
+
+start
+
+variable
+
+start
+
+programCommand->ExprList[0].Var2.VarName = new char[length];
+
+memcpy(&programCommand->ExprList[0].Var2.VarName, variable.c_str(), length);
+
+end
+
+if(programCommand->ExprList[1].Var1.VarName != NULL)
+    {
+        delete[] programCommand->ExprList[1].Var1.VarName;
+    }
+
+length = start.length() + 1;
+    programCommand->ExprList[1].Var1.VarName = new char[length];
+    memcpy(&programCommand->ExprList[1].Var1.VarName, start.c_str(), length);
+
+programCommand
+
+ memset(&programCommand->L3m, 0, sizeof(stLayer3Data));
+
+programCommand
+
+ pCommandObject->Data = programCommand;
+
+TWaitForAnyMessageDialog
+
+EditWaitForAnyMessage
+
+LOG_START_SUB_SCRIPT
+
+TCommandObject *pCommandObject = (TCommandObject *)CommandListBox->Items->Objects[CommandListBox->ItemIndex];
+                stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+                if(pProgCommand != NULL)
+                {
+
+void             __fastcall EditWaitForAnyMessage(stProgramCommand *programCommand);
+
+EditInsertStartSubScript
+
+pProgCommand
+
+EditInsertStartSubScript(stProgramCommand *programCommand);
+
+TPlaybackForm::
+
+ auto_ptr<TStartSubScript> startSubScript(new TStartSubScript(this));
+
+if (startSubScript->ShowModal() != mrOk)
+    {
+        return;
+    }
+
+ if (GetNumberOfVariables(VAR_TYPE_STRING) == 0)
+    {
+        Application->MessageBox("Must have a least one varaible of\n"
+                                "String type.","Playback...", MB_OK | MB_ICONEXCLAMATION);
+        return;
+    }
+    startSubScript->InitialiseComboBox();
+
+    if (startSubScript->ShowModal() != mrOk)
+    {
+        return;
+    }
+
+startSubScript
+
+void __fastcall SetData(string name, string variable, string start, string end);
+
+TStartSubScript::
+
+NameTextBox->Text
+
+VariableNameComboBox->Text
+
+InitialValueTextBox->Text
+
+EndValueTextBox
+
+ programCommand->ExprList[0].Var1.VarName
+
+EditInsertStartSubScript
+
+EndValueTextBox
+
+WAIT_ANY_MESSAGE
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+LOG_START_SUB_SCRIPT
+
+((RecordType == SAS_MSG) && (ProcedureType == LOG_L3_RECEIVE_ANY_MESSAGE))
+
+LOG_START_SUB_SCRIPT
+
+stProgramCommand *pData = (stProgramCommand*)SasMalloc(sizeof(stProgramCommand));
+                 ::Read(*pData, "ProgramCommand", Node);
+            Data = pData;
+            if (!PROGRAM_COMMAND_UTILS::IsLoopCounterType(pData))
+            {
+                for (int i = 0; i < pData->NumOfExpr; i++)
+                {
+                    pData->ExprList[i].Var1.UsedCount = 1;
+                    m_pCommonFormControls->UpdateVariableUsedCount(&pData->ExprList[i].Var1, 1);
+                }
+
+            }
+
+ stProgramCommand *pData = (stProgramCommand*)SasMalloc(sizeof(stProgramCommand));
+                 ::Read(*pData, "ProgramCommand", Node);
+            Data = pData;
+            if (!PROGRAM_COMMAND_UTILS::IsLoopCounterType(pData))
+            {
+                for (int i = 0; i < pData->NumOfExpr; i++)
+                {
+                    pData->ExprList[i].Var1.UsedCount = 1;
+                    m_pCommonFormControls->UpdateVariableUsedCount(&pData->ExprList[i].Var1, 1);
+                }
+            }
+
+((LogRecord.RecordType == SAS_MSG) && (LogRecord.ProcedureType == LOG_L3_RECEIVE_ANY_MESSAGE))
+
+stProgramCommand *pData = (stProgramCommand *)LogRecord.Data;
+            ::Write(*pData, "ProgramCommand", node);
+
+LOG_START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+else if((RecordType == SAS_MSG) && (ProcedureType == LOG_START_SUB_SCRIPT))
+
+LOG_END_SUB_SCRIPT
+

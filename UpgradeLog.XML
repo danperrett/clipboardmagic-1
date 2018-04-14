@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="clipboardmagic">
+</Property><Property Name="Solution File" Value="C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic.sln">
+</Property><Property Name="User Options File" Value="C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic.suo">
+</Property><Property Name="Date" Value="08 December 2014">
+</Property><Property Name="Time" Value="10:35">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="clipboardmagic.sln" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic.sln">
+</Event><Event ErrorLevel="0" Project="" Source="clipboardmagic.suo" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic.suo">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\clipboardmagic.csproj" Description="Project file successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\clipboardmagic.csproj">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\ClipBoardPoller.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\ClipBoardPoller.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\MainDialog.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\MainDialog.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\MainDialog.Designer.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\MainDialog.Designer.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Options.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Options.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Options.Designer.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Options.Designer.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Program.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Program.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\webclient.cs" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\webclient.cs">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Properties\Settings.settings" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\FOLDER.ICO" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\FOLDER.ICO">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\MainDialog.resx" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\MainDialog.resx">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Options.resx" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Options.resx">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\Properties\Resources.resx" Description="File successfully backed up as C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\Backup\clipboardmagic\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\clipboardmagic.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="clipboardmagic" Source="clipboardmagic\clipboardmagic.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="clipboardmagic.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="clipboardmagic.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="clipboardmagic" Source="clipboardmagic\clipboardmagic.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,47 @@
+            WindowState = FormWindowState.Normal;
+
+m_ProcessedElementIndex == m_ScheduledElementIndex
+
+m_ProcessedElementIndex 
+
+if (FormWindowState.Minimized == WindowState)
+      Hide();
+
+Show();
+    WindowState = FormWindowState.Normal;
+
+m_ProcessedElementIndex 
+
+
+ // indicate that a script element has been processed
+            m_Script.ScriptElementProcessed(_SequenceElement.ElementIndex, false);
+
+            // start processing more script elements if possible
+            FireEventProcessNextElement();
+
+ if (ProcessSequenceElementDelayTimer(_SequenceElement))
+
+doProcessGenNotificationSASUtranGeranElement
+
+SASDebugLogger.InfoLog("
+
+doProcessGenNotificationSASUtranGeranElement
+
+m_ScheduledElementIndex
+
+EventProcessNotification2G3GElement
+
+   scheduleAnother = false;
+
+new ConvertFrom_V14_6_to_V14_7(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("14.7");
+
+Anite.Script.Utils
+
+new ConvertFrom_V14_6_to_V14_7(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("14.7");
+
+<SAS-MKS-Check-In>: <Trunk>:< SAS LTE Sequencer>: IR70198
+
+cellInstance.DedCfg.MobilityMgmnt.TAUParameters
+

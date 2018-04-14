@@ -1,0 +1,761 @@
+Rajesh.Pattni@flir.com
+
+ <add key="InputDataDump" value="3"/>
+
+UKLT1086
+
+Rajesh.Pattni@flir.com
+
+DV_T3lab
+
+http://localhost:8088/CAJTMSFaultDiagnostic/services/JTMSDiagnosticsFeedPort
+
+C:\Users\Daniel.Perrett\Desktop\Latitude 7.0 Installation Package
+
+ request.getParameter("name")
+
+C:\Users\Daniel.Perrett\Desktop\Latitude 7.0 Installation Package
+
+C:\ProgramData\Oracle\Java\javapath;C:\app\deepam.gupta\product\11.2.0\client_2\Network\Admin;C:\app\deepam.gupta\product\11.2.0\client_2;C:\app\deepam.gupta\product\11.2.0\client_2\bin;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl\;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files (x86)\Hewlett-Packard\HP ProtectTools Security Manager\Bin\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;%MAPL_PATH%;C:\Program Files (x86)\Envitia\Cutlas\Common Files;C:\Secure\Source\cutlas\Core\bin;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80;C:\Program Files (x86)\Java\jdk1.6.0_23\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;%systemroot%\System32\WindowsPowerShell\v1.0\;%systemroot%\System32\WindowsPowerShell\v1.0\
+
+C:\Oracle\product\11.2.0\client_1;C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc100;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80;C:\Inprise\vbroker\bin;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;C:\cygwin64\bin;%USERPROFILE%\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;%MAPL_PATH%;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jdk1.7.0_79\bin;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\
+
+2193F6634ACE
+
+2381
+
+ 10.164.81.21
+
+C:\Users\Daniel.Perrett\Desktop\2193F6634ACE.SLMLIC
+
+10.164.81.135
+
+ 10.164.81.21
+
+C:\Latitude_v7.0.0.56_SDK\Samples\API\DVTel.SDK.Samples.Login\bin\Debug
+
+C:\Users\Daniel.Perrett\Desktop\Latitude_Update_7.0.0.5762.exe
+
+.base
+
+10.164.81.21
+
+using DVTel.API;
+using DVTel.API.Common;
+using DVTel.API.Entities.SystemObjects;
+using DVTel.SDK.Samples.Base;
+using DVTel.SystemManager.SystemObjects.Common;
+
+
+   IDvtelSystemId loggedInSystem =
+			            DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.Login
+			                (tbDirectory.Text, tbUsername.Text, tbPassword.Text, unitsCacheRequest);
+
+	LoginCacheRequest unitsCacheRequest = new LoginCacheRequest(true);
+
+TestCCTVLibrary
+
+CCTVLibrary
+
+10.164.81.21
+
+C:\Program Files (x86)\DVTel\Common\DVTel.API.dll
+
+  LoginCacheRequest unitsCacheRequest = new LoginCacheRequest(true);
+            try
+            {
+                IDvtelSystemId loggedInSystem =
+                     DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.Login(address, username, password);
+            }
+            catch
+            {
+            }
+
+"10.164.81.21", "admin", ""
+
+ DVTelInit.InitApplication();
+
+using DVTel.Common.AssemblyLoader;
+
+
+ DVTelInit.InitApplication();
+
+IDvtelSystemId loggedInSystem =
+                     DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.Login("10.164.81.21", "admin", "");
+
+using DVTel.API.Common;
+using DVTel.Common;
+
+MSB6006
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter.sln
+
+C:\Secure\Source\cutlas\Core\Adapters
+
+TycoCCTVLibrary
+
+10.164.81.21
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+TycoCCTVLibrary.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_2\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+TycoCCTVLibrary
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\CCTVWrapper\TycoCCTVLibrary.dll
+
+ICCTVInterface
+
+ c:\users\daniel.perrett\documents\visual studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+#import "
+
+TycoCCTVLibrary.tlb
+
+#import "TycoCCTVLibrary.tlb"
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\TycoCCTVLibrary.pdb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\TycoCCTVLibrary.tlb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\TycoCCTVLibrary.dll
+
+21727
+
+TycoCCTVLibrary
+
+// Initialize COM.
+HRESULT hr = CoInitialize(NULL);
+
+ICCTVInterface
+
+pICalc(__uuidof(ManagedClass));
+
+TycoCCTVLibrary
+
+// Interface declaration.
+public interface ICalculator
+{
+    int Add(int Number1, int Number2);
+};
+
+// Interface implementation.
+public class ManagedClass:ICalculator
+{
+    public int Add(int Number1,int Number2)
+        {
+            return Number1+Number2;
+        }
+}
+
+DVTel.API.Entities.SystemObjects.dll
+
+c:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+ICalculatorPtr pICalc(__uuidof(ManagedClass));
+
+
+long lResult = 0;
+
+// Call the Add method.
+pICalc->Add(5, 10, &lResult);
+
+The following error has occurred: The transaction log for database 'HR_0c73bad2_3fa4_405d_bb79_d652556c70fb_HR' is full due to 'LOG_BACKUP'.
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+ public void Initialise()
+        {
+           // DVTelInit.InitApplication();
+        }
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+ public bool Logon(string server, string username, string password)
+        {
+
+  public bool Logon(string server, string username, string password)
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+DVTelInit.InitApplication();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+  try
+            {
+                IDvtelSystemId loggedInSystem =
+                     DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.Login(server, username, password);
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+ 10.164.81.21
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\TycoCCTVLibrary.dll
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\TycoCCTVLibrary.pdb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\TycoCCTVLibrary.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\DVTel.API.Entities.SystemObjects.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+ICalculator
+
+public interface ICalculator
+    {
+        int Add(int Number1, int Number2);
+    };
+
+int Add(int Number1, int Number2);
+
+ public int Add(int Number1,int Number2)
+            {
+                return Number1+Number2;
+            }
+
+C:\Documents and Settings\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+[assembly: AssemblyDelaySign(false)] 
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\TycoCCTVLibrary\TycoCCTVLibrary\bin\Debug\TycoCCTVLibrary.dll
+
+ICalculator
+
+int Add(int Number1, int Number2);
+
+int Add(int Number1, int Number2)
+
+RegAsm.exe ManagedDLL.dll /tlb:ManagedDLL.tlb /codebase
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedClass\ManagedClass\bin\Debug\ManagedClass.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedClass\ManagedClass\bin\Debug\ManagedClass.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedClass\ManagedClass\bin\Debug\ManagedClass.tlb
+
+int Add(int Number1, int Number2);
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+void Initialise();
+        bool Logon(string server, string username, string password);
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+DVTelInit.InitApplication();
+
+using DVTel.Common.AssemblyLoader;
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+CoUninitialize();
+
+InitDVTelSDK
+
+  IDvtelSystemId loggedInSystem =
+			            DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.Login
+			                (tbDirectory.Text, tbUsername.Text, tbPassword.Text, unitsCacheRequest);
+
+using DVTel.SystemManager.SystemObjects.Common;
+
+using DVTel.API;
+using DVTel.API.Common;
+using DVTel.API.Entities.SystemObjects;
+using DVTel.SDK.Samples.Base;
+using DVTel.SystemManager.SystemObjects.Common;
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+Console::WriteLine(L"Hello World");
+
+10.164.81.21
+
+DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.
+
+DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.Logout()
+
+IDvtelSystemId loggedInSystem
+
+loggedInSystem
+
+void Logoff()
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+
+Follow BBC Two, Radio 5 live sports extra, text updates and hi
+
+ private void GotoLocation(double panValue, double tiltValue, double zoomValue)
+
+  private void GotoLocation(double panValue, double tiltValue, double zoomValue)
+        {
+            IPtzMotorNormalized3DLocationEntity location = Scene.DvtelSystem.CreateEntity<IPtzMotorNormalized3DLocationEntity>();
+            location.InitializeAsNew(Guid.NewGuid());
+            
+            location.PanValue = panValue;
+            location.TiltValue = tiltValue;
+            location.ZoomValue = zoomValue;
+            if (m_ptzClient != null)
+            {
+                m_ptzClient.GotoLocation(location);
+            }
+        }
+
+private IPTZClient m_ptzClient;
+
+using DVTel.API.Entities.Logical;
+using DVTel.API.Entities.Physical;
+
+m_ptzClient
+
+	IDeviceAPI deviceAPI = Scene.DvtelSystem.GetAPI<IDeviceAPI>();
+				m_ptzClient = deviceAPI.AcquirePTZControl(Scene);
+
+IVideoInSceneEntity Scene
+
+private IVideoInSceneEntity Scene
+		{
+			get
+			{
+				return (IVideoInSceneEntity)Entity;
+			}
+		}
+
+public IConfigurationEntity Entity
+		{
+			get
+			{
+				return m_entity;
+			}
+		}
+
+ private IConfigurationEntity    m_entity; 
+
+m_entity
+
+  IList<IConfigurationEntity> scenes;
+			foreach (IDvtelSystemId latitudeSystem in DvtelSystemsManagerProvider.Instance.DvtelSystemsManager.LoggedInDvtelSystems)
+			{
+
+loggedInSystem
+
+ scenes = latitudeSystem.AdministrationAPI.GetCachedEntitiesOfType(typeof(IVideoInSceneEntity), null).Values;	
+
+loggedInSystem
+
+ IList<IConfigurationEntity> scenes;
+
+int NumberOfScenes()
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+NumberOfScenes
+
+lgc106970
+
+"10.164.81.21", "admin", ""
+
+getId
+
+IList<IConfigurationEntity> scenes;
+
+IVideoInSceneEntity cachedScene = Scene.DvtelSystem.AdministrationAPI.GetCachedEntity(Scene.Id) as IVideoInSceneEntity
+
+IVideoInSceneEntity cachedScene = Scene.DvtelSystem.AdministrationAPI.GetCachedEntity(Scene.Id) as IVideoInSceneEntity;
+
+ var digitalPtzPreset = cachedScene.DigitalPtzPresets.Values.FirstOrDefault(x => x.PtzNumber == presetNum);
+            if (digitalPtzPreset != null)
+            {
+                m_videoController.DigitalPTZPerformer.DisplayArea = digitalPtzPreset.Area;
+            }
+
+GotoDigitalPreset
+
+presetnum
+
+InitiliseNumberOfCameras
+
+string getId(int cameranum)
+
+21741
+
+m_videoController
+
+	IPlayerAPI playerAPI = Entity.DvtelSystem.GetAPI<IPlayerAPI>();
+			m_videoController = (IVideoController)playerAPI.CreateController((IDisplayableEntity)Entity);
+
+IVideoController
+
+ IVideoController video
+
+ void StartVideo(int num)
+
+RectangleF randomArea = new RectangleF((float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100);
+
+  private void SetDigitalPreset(int presetNum)
+        {
+            var random = new Random();
+            RectangleF randomArea = new RectangleF((float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100);
+
+void SetDigitalPreset(int presetNum)
+        {
+            var random = new Random();
+            RectangleF randomArea = new RectangleF((float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100, (float)random.Next(1, 50) / 100);
+            var clonedVideoInScene = Scene.CloneEntity() as IVideoInSceneEntity;
+            var digitalPreset = clonedVideoInScene.DigitalPtzPresets.Values.FirstOrDefault(x => x.PtzNumber == presetNum);
+            if (digitalPreset != null)
+            {
+                digitalPreset.Area = randomArea;
+            }
+            else
+            {
+                IDigitalPtzPresetEntity newPreset = clonedVideoInScene.DvtelSystem.CreateEntity<IDigitalPtzPresetEntity>();
+                newPreset.InitializeAsNew(Guid.NewGuid(), randomArea);
+                newPreset.PtzNumber = presetNum;
+                clonedVideoInScene.DigitalPtzPresets.Add(newPreset);
+            }
+            clonedVideoInScene.DvtelSystem.AdministrationAPI.UpdateEntity(clonedVideoInScene, MoveEntityPrivilageOption.NoMovement);
+        }
+
+RectangleF
+
+IVideoInSceneEntity
+
+SetDigitalPreset
+
+using DVTel.API.Entities.SystemObjects;
+
+private void GotoLocation(double panValue, double tiltValue, double zoomValue)
+        {
+            IPtzMotorNormalized3DLocationEntity location = Scene.DvtelSystem.CreateEntity<IPtzMotorNormalized3DLocationEntity>();
+            location.InitializeAsNew(Guid.NewGuid());
+            
+            location.PanValue = panValue;
+            location.TiltValue = tiltValue;
+            location.ZoomValue = zoomValue;
+            if (m_ptzClient != null)
+            {
+                m_ptzClient.GotoLocation(location);
+            }
+        }
+
+void SetDigitalPreset(int cameraNum, int presetNum)
+
+void GotoLocation(int cameraNum, double panValue, double tiltValue, double zoomValue)
+
+ bool GotoDigitalPreset(int cameraNum, int presetnum)
+
+ public void StartVideo(int num)
+
+tycoInterface
+
+ Guid id = cameraIdList[cameraNum];
+            IVideoInSceneEntity cachedScene = cameras[cameraNum].DvtelSystem.AdministrationAPI.GetCachedEntity(id) as IVideoInSceneEntity;
+
+ IDigitalPtzPresetEntity digitalPtzPreset
+
+cachedScene.DigitalPtzPresets
+
+ cachedScene.DigitalPtzPresets
+
+27188
+
+RectangleF
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+ITycoCCTVInterface
+
+InitiliseNumberOfCameras
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+ICalculatorPtr
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+ public int Add(int number1, int number2)
+        {
+            return (number1 + number2);
+        }
+
+ void Initialise();
+        bool Logon(string server, string username, string password);
+        int InitiliseNumberOfCameras();
+
+ void Logoff();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+ATestClass
+
+cannot convert from 'const _GUID' to 'const ManagedDll::ICalculatorPtr'
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+raw_interfaces_only
+
+public interface ICalculator
+{
+    int Add(int Number1, int Number2);
+};
+
+public class ManagedClass:ICalculator
+{
+    public int Add(int Number1,int Number2)
+        {
+            return Number1+Number2;
+        }
+}
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.tlb
+
+CalcInterface.dll
+
+ICalculator
+
+ManagedClass
+
+CalcInterface
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.tlb
+
+cannot instantiate abstract class
+1>          due to following members:
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\CalcInterface\CalcInterface\bin\Debug\CalcInterface.tlb
+
+#import ".\CalcInterface.tlb"
+
+using namespace CalcInterface;
+
+    HRESULT hr = CoInitialize(NULL);
+    ICalculator pICalc(__uuidof(ManagedClass));
+
+[assembly: AssemblyDelaySign(false)] 
+
+ICalculatorPtr 
+
+RegAsm.exe ManagedDLL.dll /tlb:ManagedDLL.tlb /codebase
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+ATestClass
+
+ManagedDll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+ManagedClass
+
+ITycoCCTVInterface
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+InitiliseNumberOfCameras
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+StartVideo
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll\ManagedDll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2013\Projects\ManagedDll
+
+RegAsm.exe ManagedDLL.dll /tlb:ManagedDLL.tlb /codebase
+
+c:\Users\Daniel.Perrett\Documents\
+
+RegAsm.exe ManagedDLL.dll /tlb:ManagedDLL.tlb /codebase
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.pdb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\Debug\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent
+
+#import ".\ManagedDll.tlb" 
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\TycoCCTVLibrary.tlb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\TycoCCTVLibrary.dll
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\TycoCCTVLibrary.pdb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.tlb
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.dll
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\example\example\ManagedDll.pdb
+
+ITycoCCTVInterfacePtr
+
+ CoInitialize(NULL);
+
+using namespace ManagedDll;
+
+pICalc(__uuidof(ManagedClass));
+
+AZIMOPERK
+
+ ITycoCCTVInterfacePtr pICalc(__uuidof(ManagedClass));
+
+ byte[] GetSnapshot(int camerNum);
+
+ IVideoController controller = (IVideoController)FocusedController;
+                controller.CreateSnapShot(m_savePath + "\\" + "Snapshot.bmp");
+
+IVideoController
+
+video_controller
+
+Image
+
+ MemoryStream ms = new MemoryStream();
+    imageIn.Save(ms,System.Drawing.Imaging.ImageFormat.Gif);
+    return  ms.ToArray();
+
+byte[] GetSnapshot(int cameraNum)
+
+
+
+

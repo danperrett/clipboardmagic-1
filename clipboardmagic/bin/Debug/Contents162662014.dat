@@ -1,0 +1,189 @@
+update.UpdateCellPath
+
+private void rootRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rootRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string fullPath;
+                if (pathType != "Full")
+                {
+                    fullPath = folderPref + "\\" + filename;
+                    fullPath = DIR.GetFileFullPath(false, fullPath);
+                }
+                else
+                {
+                    fullPath = filename;
+                }
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                setScenarioPath(filename, folderPref, fullPath);
+
+
+                pathType = "RelativeToUTRAN_GERANDirectory";
+            }
+        }
+
+    private void rootRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rootRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string Path;
+                if (pathType != "Full")
+                {
+                    Path = folderPref + "\\" + filename;
+                    Path = DIR.GetFileFullPath(false, Path);
+                }
+                else
+                {
+                    Path = filename;
+                }
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                setScenarioPath(filename, folderPref, Path);
+
+
+                pathType = "RelativeToUTRAN_GERANDirectory";
+            }
+        }
+
+ : base("14.5", "14.6", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+
+(Dictionary<string, ConvertFromBase> _ConverterDict)
+
+ProtocolVersion
+
+R8_2009_03
+
+(Dictionary<string, ConvertFromBase> _ConverterDict)
+
+, _ConverterDict)
+
+mapper.Initialise
+
+C:\\Program Files\\Anite\\SAS LTE Sequencer\\FieldValueMaps\\ProtocolFieldValueMappingDB.xml"
+
+m_Trunk_Converter_Info
+
+m_Trunk_Converter_Info.Versions.Add("14.6");
+
+namespace Anite.Interactive.Utils
+
+
+Interactive
+
+public enum TransmissionMode
+    {
+        TM1,
+        TM2,
+        TM3,
+        TM4,
+        TM6,
+        TM7,
+        TM8
+    }
+
+ConvertScriptToCurrentSchema
+
+GetCurrentScriptVersion
+
+XML.DeSerialise
+
+UL-CCCH-Message.message.c1.rrcConnectionRequest.criticalExtensions.rrcConnectionRequest-r8.ue-Identity
+
+ state = SCRIPT_MODE_STATES.FINISH;
+                    TestStatus = TESTSTATUS.ERR_INVALID_LOG_PATH;
+                    TestVerdict = TESTVERDICTS.FAIL_VERDICT;
+                    m_ERRORReport = "ERR Scenario File Not Found";
+                    return SCRIPT_MODE_EVENT_TYPES.ABORT;
+
+File.Exists(Path)
+
+state = SCRIPT_MODE_STATES.FINISH;
+                    TestStatus = TESTSTATUS.ERR_INVALID_LOG_PATH;
+                    TestVerdict = TESTVERDICTS.FAIL_VERDICT;
+                    m_ERRORReport = "ERR Scenario File Not Found";
+                    return SCRIPT_MODE_EVENT_TYPES.ABORT;
+
+
+
+state = SCRIPT_MODE_STATES.FINISH;
+                    TestStatus = TESTSTATUS.ERR_INVALID_LOG_PATH;
+                    TestVerdict = TESTVERDICTS.FAIL_VERDICT;
+                    m_ERRORReport = "ERR Scenario File Not Found";
+                    return SCRIPT_MODE_EVENT_TYPES.ABORT;
+
+testVerdict
+
+m_ErrReport
+
+(File.Exists(Path))
+
+ return SCRIPT_MODE_EVENT_TYPES.ABORT;
+
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_0_to_V14_1.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_1_to_V14_2.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_2_to_V14_3.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_3_to_V14_4.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_4_to_V14_5.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_5_to_V14_6.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V14_6_to_V14_7.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V1_0_to_V2_0.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V2_0_to_V3_0.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V3_0_to_V3_1.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V3_1_to_V4_0.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V4_0_to_V5_0.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V5_0_to_V5_1.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V5_1_to_V5_2.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V5_2_to_V6_0.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V6_0_to_V6_1.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V6_1_to_V6_2.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V6_2_to_V6_3.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V6_3_to_V6_4.cs" />
+    <Compile Include="ISCSchemaConversion\ConvertFrom_V6_4_to_V6_5.cs" />
+
+
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_0_to_V14_1.cs" />
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_6_to_V14_7.cs" />
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_1_to_V14_2.cs" />
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_2_to_V14_3.cs" />
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_3_to_V14_4.cs" />
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_4_to_V14_5.cs" />
+    <Compile Include="Schema\Conversions\ConvertFrom_V14_5_to_V14_6.cs" />
+
+
+C:\SAS\LTE-Interactive-46.0-cs28\Code\Utils\ISCSchemaConversion\
+
+C:\SAS\LTE-Interactive-46.0-cs28\Code\SequencerScriptDefinitions\SchemaConversion\
+
+C:\SAS\LTE-Interactive-46.0-cs28\Code\SequencerScriptConversion\SchemaConversion\ConvertScriptToCurrentSchema.cs
+
+Anite.Script.Utils
+
+using Anite.Sequencer;
+
+Aite.Sequencer.
+
+Anite.Sequencer.
+
+Anite.Script.
+
+Anite.Script.Utils
+
+using Anite.Sequencer;
+
+Anite.Sequencer.
+
+                            _script = (Script)ConvertScriptToCurrentSchema.ConvertScriptToLatest(xmlFileName);
+
+
+Anite.Sequencer.
+
+3000 Cathedral Hill,
+Guildford,
+Surrey,
+GU2 7YB
+
+APDU.PROTOCOL_DISCRIMINATOR.SMS_PD
+
+	Red Error box on the MT SMS Numbers
+

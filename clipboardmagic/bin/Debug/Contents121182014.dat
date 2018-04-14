@@ -1,0 +1,379 @@
+Arrecife Lanzarote - London Stansted
+
+Date:	25 Aug 2014
+Leaves:	Arrecife Lanzarote 07:25
+Leaves:	London Stansted 11:30
+Airline	Ryanair
+Flight number	FR8286
+
+London Stansted - Arrecife Lanzarote
+
+Dates	15 Aug 2014
+Leaves:	London Stansted 12:10
+Arrives:	Arrecife Lanzarote 16:25
+Airline	Ryanair
+Flight number	FR8288
+Lcf
+
+Galeon Playa Costa Teguise, Lanzarote, Canaries 
+
+C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\xsd.exe
+
+$(ProjectDir)Schema\ScriptSchema.xsd  /c /n:Anite.Sequencer  /out:$(ProjectDir)Schema
+
+L3PPipeMessageHandler
+
+
+
+
+L3PPipeMessageHandler
+
+L3PPipeMessageProcess
+
+m_EarlyL3MessageThread
+
+ProcessEarlyL3Message
+
+finish Scheduling elements
+
+I believe Colin would like to hand this over to me.
+
+HandleUnexpectedEventV2
+
+95.172.225.192
+
+L3PPipeMessageHandler
+
+HandleUnexpectedEventV2
+
+\\myanite\telecoms\ODCShare\SAS\18 - Scripts\11 - Projects\03 - SAS UL message handling\SAS Enhancement - UL Message Handling_v[latest].docx
+
+58405
+
+m_Ignore_Event_type
+
+                UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+
+
+UtranGeranEventObtained2Param
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", false);
+                        reportToRTT = "IGNORE - " + message.Trim();
+                        LogMessageToRTT(reportToRTT, false);
+                        SASDebugLogger.InfoLog("UtranGeran: IGNORING Unexpected Event Message: " + message.Trim());
+                    }
+                    else
+                    {
+                        // When this function is called before the WaitFor processing don't terminate the script if there is no match
+                        // When this function is called as default processing do terminate the script if there is no match
+                        if (_TerminateTheScript)
+                        {
+                            SASDebugLogger.InfoLog("UtranGeran: Unexpected Event Message: " + message.Trim());
+                            UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+                        }
+                    }
+
+Unexpected
+
+indiscretion
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", false);
+                        reportToRTT = "IGNORE - " + message.Trim();
+                        LogMessageToRTT(reportToRTT, false);
+                        SASDebugLogger.InfoLog("UtranGeran: IGNORING Unexpected Event Message: " + message.Trim());
+                    }
+                    else
+                    {
+                        // When this function is called before the WaitFor processing don't terminate the script if there is no match
+                        // When this function is called as default processing do terminate the script if there is no match
+                        if (_TerminateTheScript)
+                        {
+                            SASDebugLogger.InfoLog("UtranGeran: Unexpected Event Message: " + message.Trim());
+                            UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+                        }
+                    }
+
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", 
+
+(m_Ignore_Event_type == Ignore_Event_type.IgnoreSelectedEvents)
+
+ if (m_Ignore_Event_type == Ignore_Event_type.IgnoreSelectedEvents)
+
+Ignore_Event_type.IgnoreNoEvents
+
+70883
+
+SAS Sequencer, Script not failing on unexpected messages from 2G3G.
+
+L3PPipeMessageProcess
+
+   public bool SendNotification(int _ElementIndex, string cellID, string message)
+        {
+            bool triggerOk = IsInitialised();
+            if (triggerOk)
+            {
+                triggerOk = noProcedureWaiting();
+            }
+
+            try
+            {
+                if (triggerOk)
+                {
+                    string _message = "General Notification of event:" + cellID.Replace(' ', '-') + " " + message;
+                    triggerOk = m_pipeManager.SendControl(_message, 10);
+                    if (!triggerOk) m_lastErrorMessage = "failed to send trigger";
+                }
+            }
+            catch
+            {
+                triggerOk = false;
+                m_lastErrorMessage = "exception in Trigger";
+            }
+
+            return triggerOk;
+        }
+
+  catch
+            {
+                triggerOk = false;
+                m_lastErrorMessage = "exception in Trigger";
+            }
+
+            return triggerOk;
+        }
+
+
+70883
+
+<SAS-MKS-Check-In> : <Trunk> : <SAS2G3G> : IR <69968>
+
+K, Kanagaraj <kanagaraj.k@anite.com>
+
+70259
+
+AutoResetEvent
+
+70259
+
+SharedView 
+
+SEQ-REQ3
+
+?	2G3G-REQ3
+
+ConvertFrom_V14_7_to_V14_8.cs
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Clwyd Jones (cjones) $
+ * $Date: 2014/07/17 14:52:06BST $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V14_7_to_V14_8.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V14_7_to_V14_8 : ConvertFromBase
+    {
+        public ConvertFrom_V14_7_to_V14_8(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("14.7", "14.8", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                scriptElements = _ScriptElementList.ToArray();
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+
+ConvertFrom_V14_8_to_V15_0
+
+  new ConvertFrom_V14_7_to_V14_8(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("14.8");
+
+
+68682
+
+TMO project needs to check if they want more than delivered in SAS46 and, if not, what extra they need.
+
+IR70259 
+
+IR70259
+
+doProcessGenNotificationSASUtranGeranElement
+
+IEListProcessing_Data
+
+ProcessingOK
+
+GetNoElementsInIEList
+
+81BFB20000081C0E7C1A210000
+
+NumberOfElementsInList
+
+'Locate and Check' option
+
+70884
+
+3805081C1C99801000082061030716306902660C9C4AA0850FFFFA3FFFFD0EE5DA3FFFFD0FFEFA3FFFFD0B65DA3FFFFD0EFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0AFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0DFFFA3FFFFD0FFFBA3FFFFD0FFF7A3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFBFEFFFFF47140110C870CA74A8300128F0600251E6B88E0B1E00000000752A0E0800202E0400704001014020038200080981001C1000404B0800E080020218400708001014C20038600080B81001C300040500800E18002026040070C001012C20038600080881001C300040410800E20002021840072C001010C20039600080821001CC00040430800E600020208400740001010C2003A000080821001D300040420800EC000202C840076400101602015A1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFF0024000088A807E8000000007E8000000000016940000BA8CAAB541A955AA22920C112000600054384271CFBE6899EBB65CA138E7DF344CF5DB2F509C73EF9A267AED97884E39F7CD133D76CB73D0131C410A438F5E9A1A267AED96C00C80E80E00DC1529800003492DE91246CC1F020C2871234797326D0A762CE5D1B21033035758A6601404EF6513B887852F2831C1A53432B259EF9891E3000DDD9C633123C6001BA332C662478C0036040F0B0D000B8000810F01800A811F0F800
+
+UE-EUTRA-Capability.nonCriticalExtension.nonCriticalExtension.nonCriticalExtension.rf-Parameters-v1020.supportedBandCombination-r10[0].BandCombinationParameters-r10[0].BandParameters-r10.bandEUTRA-r10
+
+3805081C1C99801000082061030716306902660C9C4AA0850FFFFA3FFFFD0EE5DA3FFFFD0FFEFA3FFFFD0B65DA3FFFFD0EFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0AFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0DFFFA3FFFFD0FFFBA3FFFFD0FFF7A3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFBFEFFFFF47140110C870CA74A8300128F0600251E6B88E0B1E00000000752A0E0800202E0400704001014020038200080981001C1000404B0800E080020218400708001014C20038600080B81001C300040500800E18002026040070C001012C20038600080881001C300040410800E20002021840072C001010C20039600080821001CC00040430800E600020208400740001010C2003A000080821001D300040420800EC000202C840076400101602015A1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFF0024000088A807E8000000007E8000000000016940000BA8CAAB541A955AA22920C112000600054384271CFBE6899EBB65CA138E7DF344CF5DB2F509C73EF9A267AED97884E39F7CD133D76CB73D0131C410A438F5E9A1A267AED96C00C80E80E00DC1529800003492DE91246CC1F020C2871234797326D0A762CE5D1B21033035758A6601404EF6513B887852F2831C1A53432B259EF9891E3000DDD9C633123C6001BA332C662478C0036040F0B0D000B8000810F01800A811F0F800
+
+
+3805081C1C99801000082061030716306902660C9C4AA0850FFFFA3FFFFD0EE5DA3FFFFD0FFEFA3FFFFD0B65DA3FFFFD0EFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0AFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0DFFFA3FFFFD0FFFBA3FFFFD0FFF7A3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFBFEFFFFF47140110C870CA74A8300128F0600251E6B88E0B1E00000000752A0E0800202E0400704001014020038200080981001C1000404B0800E080020218400708001014C20038600080B81001C300040500800E18002026040070C001012C20038600080881001C300040410800E20002021840072C001010C20039600080821001CC00040430800E600020208400740001010C2003A000080821001D300040420800EC000202C840076400101602015A1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFF0024000088A807E8000000007E8000000000016940000BA8CAAB541A955AA22920C112000600054384271CFBE6899EBB65CA138E7DF344CF5DB2F509C73EF9A267AED97884E39F7CD133D76CB73D0131C410A438F5E9A1A267AED96C00C80E80E00DC1529800003492DE91246CC1F020C2871234797326D0A762CE5D1B21033035758A6601404EF6513B887852F2831C1A53432B259EF9891E3000DDD9C633123C6001BA332C662478C0036040F0B0D000B8000810F01800A811F0F800
+
+nonCriticalExtension
+
+3805081C1C99801000082061030716306902660C9C4AA0850FFFFA3FFFFD0EE5DA3FFFFD0FFEFA3FFFFD0B65DA3FFFFD0EFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0AFFFA3FFFFD0FFFFA3FFFFD0AFFFA3FFFFD0DFFFA3FFFFD0FFFBA3FFFFD0FFF7A3FFFFD0FFFFA3FFFFD0FFFFA3FFFFD0FFFFA3FFFFBFEFFFFF47140110C870CA74A8300128F0600251E6B88E0B1E00000000752A0E0800202E0400704001014020038200080981001C1000404B0800E080020218400708001014C20038600080B81001C300040500800E18002026040070C001012C20038600080881001C300040410800E20002021840072C001010C20039600080821001CC00040430800E600020208400740001010C2003A000080821001D300040420800EC000202C840076400101602015A1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFFA1FFFF47FFFF0024000088A807E8000000007E8000000000016940000BA8CAAB541A955AA22920C112000600054384271CFBE6899EBB65CA138E7DF344CF5DB2F509C73EF9A267AED97884E39F7CD133D76CB73D0131C410A438F5E9A1A267AED96C00C80E80E00DC1529800003492DE91246CC1F020C2871234797326D0A762CE5D1B21033035758A6601404EF6513B887852F2831C1A53432B259EF9891E3000DDD9C633123C6001BA332C662478C0036040F0B0D000B8000810F01800A811F0F800
+
+70884
+
+http://stackoverflow.com/questions/5411538/how-to-redirect-from-an-html-page
+
+public bool MeasureFromFlagIncluded = false;
+        public string MeasureFromItemIncluded = "";
+        public double actualTimeStampIncluded = 0.0;
+
+    TestElement.MeasuredFromFlag = true;
+                        }
+                        TestElement.actualTimeStamp = details.timeDifference;
+                        TestElement.MeasuredFromItem = details.MeasuredFromItem;
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1;url=http://example.com">
+        <script type="text/javascript">
+            window.location.href = "http://example.com"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow the <a href='http://example.com'>link to example</a>
+    </body>
+</html>
+
+MeasuredFromItem
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1;url=http://example.com">
+        <script type="text/javascript">
+            window.location.href = "http://example.com"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow the <a href='http://example.com'>link to example</a>
+    </body>
+</html>
+
+TestElement.actualTimeStampIncluded = details.timeDifference;
+                        TestElement.MeasureFromItemIncluded = details.MeasuredFromItem;
+
+   if (element.MeasureFromFlagIncluded)
+                                {
+                                    if (str == element.MeasureFromItemIncluded)
+                                    {
+                                        tc2 = testCaseElement[location].matchedTimes[entry.Key];
+                                    }
+                                }
+
+ string measured = element.MeasuredFromItem;
+                        if (matchedTimeMasterList.ContainsKey(measured))
+                        {
+
+if (element.MeasureFromFlagIncluded)
+                            {
+
+ int location = matchedTimeMasterList[measured];
+
+ foreach (KeyValuePair<string, MatchedTimesClass> entry in testCaseElement[location].matchedTimes)
+                            {
+
+ string str = entry.Key.Split('.')[0];
+
+if (element.MeasureFromFlagIncluded)
+                            {
+
+if (element.MeasureFromFlagIncluded)
+                                    {
+
+                                    }
+
+                                int sequenceNum = tc.sequenceNumber;
+
+double measuredTimeIs = 0.0;
+                                for (n = 0; n < testCaseElement[location].elements.Count; n++)
+                                {
+                                    if (testCaseElement[location].elements[n].sequenceNumber == tc.sequenceNumber)
+                                    {
+                                        measuredTimeIs = testCaseElement[location].elements[n].actualTimeStamp;
+                                        break;
+                                    }
+                                }
+
+                                double thisTimeIs = testCaseElement[matchLocation + i].matchedTimes[element.ItemID].time;
+                                double diff = thisTimeIs - measuredTimeIs;
+                                testCaseElement[location].elements[lastTimeLocation].timedifference = diff;
+
+int _location
+
+http://www.danperrett.com:8000/GetPictureHtml?id=8019&proj_id=466
+
+http://www.danperrett.com:8000/getProjectsAndIds?pro_id=466
+
+double diff2
+
+(element.actualTimeStamp * 1000)
+
+reportMatchToResults(element.ItemID, "Time Error of " + diff + " ms from " + measured + " to " + element.ItemID, testCaseElement[matchLocation + i].matchedTimes[element.ItemID].sequenceNumber);
+                                        timeError.Add(testCaseElement[location].elements[lastTimeLocation].sequenceNumber, (int)diff);
+                                        ret = true;
+
+1836
+
+timedifference
+
+details.timeDifference
+
+timedifference
+
+details.timeDifference
+

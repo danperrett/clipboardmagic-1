@@ -1,0 +1,837 @@
+ValidateInsertLoop
+
+LOG_LOOP
+
+LOG_ENDLOOP
+
+PROCEDURE_TYPE procedureStart = LOG_LOOP, PROCEDURE_TYPE procedureEnd = LOG_ENDLOOP
+
+  bool ValidateInsertStartSubScript();
+
+TPlaybackForm::
+
+    //Check we are inserting into procedure level
+    TCommandObject *CommandObject1=NULL;
+    int CurrentIndex = GetSelectedCommand();
+
+    if (CurrentIndex>=0)
+    {
+        CommandObject1 = (TCommandObject *)CommandListBox->Items->Objects[CurrentIndex];
+        if (CommandObject1->RecordType == SAS_L3M)
+        {
+            Application->MessageBox("Loops cannot be inserted\n"
+                                    "into Layer 3 procedures",
+                                    "Playback...", MB_OK | MB_ICONEXCLAMATION);
+            return false;
+        }
+    }
+
+    bool found = false;
+    int index = CurrentIndex - 1;
+    if (CurrentIndex < 0)
+        index=CommandListBox->Items->Count-1;
+
+    while (index >= 0)
+    {
+        CommandObject1 = (TCommandObject *)CommandListBox->Items->Objects[index];
+
+        if (CommandObject1->RecordType == SAS_MSG)
+        {
+            if (CommandObject1->ProcedureType == LOG_LOOP)
+            {
+                found=true;
+                break;
+            }
+            else if (CommandObject1->ProcedureType == LOG_ENDLOOP)
+            {
+                break;
+            }
+        }
+        index--;
+    }
+    if (found)
+    {
+        Application->MessageBox("No Nesting: LOOP statements cannot be inserted into existing LOOP-ENDLOOP blocks","Playback...", MB_OK | MB_ICONEXCLAMATION);
+        return false;
+    }
+    return true;
+
+LOG_START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+ValidateInsertStartSubScript
+
+ bool ValidateInsertEndSubScript();
+
+TPlaybackForm::
+
+    //Check we are inserting into procedure level
+    int CurrentIndex = GetSelectedCommand();
+
+    bool found = false;
+    TCommandObject *CommandObject1;
+    int index = CurrentIndex - 1;
+    if (CurrentIndex < 0)
+        index=CommandListBox->Items->Count-1;
+
+    while (index >= 0)
+    {
+        CommandObject1 = (TCommandObject *)CommandListBox->Items->Objects[index];
+
+        if (CommandObject1->RecordType==SAS_MSG)
+        {
+            if (CommandObject1->ProcedureType == LOG_LOOP)
+            {
+                found=true;
+                break;
+            }
+            if (CommandObject1->ProcedureType == LOG_ENDLOOP)
+            {
+                break;
+            }
+        }
+        index--;
+    }
+
+    if (!found)
+    {
+        Application->MessageBox("The ENDLOOP can only be inserted after a LOOP statement. Please add a LOOP statement first","Playback...", MB_OK | MB_ICONEXCLAMATION);
+        return false;
+    }
+
+    index = CurrentIndex;
+    if (CurrentIndex >= 0)
+    {
+        while (index < CommandListBox->Items->Count)
+        {
+            CommandObject1 = (TCommandObject *)CommandListBox->Items->Objects[index];
+
+            if (CommandObject1->RecordType == SAS_MSG)
+            {
+                if (CommandObject1->ProcedureType == LOG_ENDLOOP)
+                {
+                    found=false;
+                    break;
+                }
+                if (CommandObject1->ProcedureType == LOG_LOOP)
+                {
+                    break;
+                }
+            }
+            index++;
+        }
+    }
+    if (!found)
+    {
+        Application->MessageBox("No Nesting: ENDLOOP statements cannot be inserted into existing LOOP-ENDLOOP blocks","Playback...", MB_OK | MB_ICONEXCLAMATION);
+        return false;
+    }
+    return true;
+
+LOG_START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+
+LOG_START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+ValidateInsertEndSubScript
+
+DoStartSubScript
+
+    stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+
+   stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+                if(pProgCommand != NULL)
+                {
+
+ string name =  programCommand->ExprList[0].Var1.VarName;
+    string variable =  programCommand->ExprList[0].Var2.VarName;
+    string start =  programCommand->ExprList[1].Var1.VarName;
+    string end =  programCommand->ExprList[1].Var2.VarName;
+
+ CELLMANAGER::StringVariables.set(expression->Var1.VarName, strRRcCellId.c_str());
+
+variable
+
+start
+
+void __fastcall DoStartSubScript(TCommandObject *pCommandObject);
+
+ void __fastcall DoEndSubScript(TCommandObject *pCommandObject);
+
+TPlaybackThread::
+
+//---------------------------------------------------------------------------
+
+    stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+    if(pProgCommand != NULL)
+    {
+         string name =  programCommand->ExprList[0].Var1.VarName;
+         string variable =  programCommand->ExprList[0].Var2.VarName;
+         string start =  programCommand->ExprList[1].Var1.VarName;
+         string end =  programCommand->ExprList[1].Var2.VarName;
+
+         CELLMANAGER::StringVariables.set(variable.c_str(), start.c_str());
+    }
+
+end
+
+pProgCommand
+
+DoEndSubScript
+
+ // CStringValue test = CELLMANAGER::StringVariables.get(expression->Var1.VarName);
+
+DoEndSubScript
+
+ // CStringValue test = CELLMANAGER::StringVariables.get(expression->Var1.VarName);
+
+ volatile CStringValue test = CELLMANAGER::StringVariables.get(variable.c_str());
+
+DoEndSubScript
+
+EditInsertStartSubScript
+
+//Name of Subscript
+    int length = name.length() + 1;
+    programCommand->ExprList[0].Var1.VarName = new char[length];
+    memcpy(programCommand->ExprList[0].Var1.VarName, name.c_str(), length);
+    
+    //Variable Name
+    length = variable.length() + 1;
+    programCommand->ExprList[0].Var2.VarName = new char[length];
+    memcpy(programCommand->ExprList[0].Var2.VarName, variable.c_str(), length);
+
+    //Start Value
+    length = start.length() + 1;
+    programCommand->ExprList[1].Var1.VarName = new char[length];
+    memcpy(programCommand->ExprList[1].Var1.VarName, start.c_str(), length);
+
+    //End Value
+    length = end.length() + 1;
+    programCommand->ExprList[1].Var2.VarName = new char[length];
+    memcpy(programCommand->ExprList[1].Var2.VarName, end.c_str(), length);
+
+EditInsertStartSubScript
+
+//Name of Subscript
+    int length = name.length() + 1;
+    programCommand->ExprList[0].Var1.VarName = new char[length];
+    memcpy(programCommand->ExprList[0].Var1.VarName, name.c_str(), length);
+    
+    //Variable Name
+    length = variable.length() + 1;
+    programCommand->ExprList[0].Var2.VarName = new char[length];
+    memcpy(programCommand->ExprList[0].Var2.VarName, variable.c_str(), length);
+
+    //Start Value
+    length = start.length() + 1;
+    programCommand->ExprList[1].Var1.VarName = new char[length];
+    memcpy(programCommand->ExprList[1].Var1.VarName, start.c_str(), length);
+
+    //End Value
+    length = end.length() + 1;
+    programCommand->ExprList[1].Var2.VarName = new char[length];
+    memcpy(programCommand->ExprList[1].Var2.VarName, end.c_str(), length);
+
+
+
+programCommand->ExprList[0].Var1.VarName
+
+programCommand->ExprList[0].Var2.VarName
+
+programCommand->ExprList[1].Var1.VarName
+
+programCommand->ExprList[1].Var2.VarName
+
+ string name = startSubScript->GetSubScriptName();
+    string variable = startSubScript->GetSubScriptVariable();
+    string start = startSubScript->GetStartValue();
+    string end = startSubScript->GetEndValue();
+
+VerifyDataTransfer
+
+<xs:sequence>
+          <xs:element name="Command" type="xs:string" />
+
+GeneralNotificationForSAS2G3G
+
+namespace Anite.Sequencer
+
+partial
+
+GeneralNotificationForSAS2G3G
+
+        public override ListViewItem GetListViewItem(int index)
+        {
+            string[] listViewColumns = GetDataInListViewFormat(index);
+
+            listViewColumns[ListVwIndices.DATATYPE] = GetDataTypeString();
+
+            ListViewItem scripRecordInScriptView = new ListViewItem(listViewColumns);
+
+            scripRecordInScriptView.ForeColor = ScriptItemColor;
+            scripRecordInScriptView.BackColor = itemBackColor;
+
+            return scripRecordInScriptView;
+        }
+
+
+        protected virtual string GetDataTypeString()
+        {
+            string dataTypeName = ELEMENTANDDBTREE.StopMetricsLogging;
+
+            return dataTypeName;
+        }
+
+
+        public override DialogResult DisplayElementDataInGUI()
+        {
+            copyOfGUIData = (StopMetricsLoggingData)this.GetElementDataCopy();
+            copyOfGUIData.DataType = GetDataTypeString();
+            DialogResult msgDialogResult = DialogResult.OK;
+            return msgDialogResult;
+        }
+
+        public override DialogResult DisplayElementDataInGUI(int indexOfDrop)
+        {
+            copyOfGUIData = (StopMetricsLoggingData)this.GetElementDataCopy();
+            copyOfGUIData.DataType = GetDataTypeString();
+
+            DialogResult msgDialogResult = DialogResult.OK;
+            return msgDialogResult;
+        }
+
+
+        public override ElementData GetCopyOfElementDataFromGUI()
+        {
+            return copyOfGUIData;
+        }
+
+        public override ElementData GetElementDataCopy()
+        {
+            StopMetricsLoggingData copyOfStopMetricsLoggingData = new StopMetricsLoggingData();
+            if (copyOfStopMetricsLoggingData == null)
+            {
+                return null;
+            }
+
+            copyOfStopMetricsLoggingData.Commented = base.Commented;
+
+            if (DeltaTime != null)
+            {
+                copyOfStopMetricsLoggingData.DeltaTime = new DeltaTime();
+                copyOfStopMetricsLoggingData.DeltaTime.Hundredths = base.DeltaTime.Hundredths;
+                copyOfStopMetricsLoggingData.DeltaTime.Minutes = base.DeltaTime.Minutes;
+                copyOfStopMetricsLoggingData.DeltaTime.Seconds = base.DeltaTime.Seconds;
+            }
+
+            if (this.Cell != null)
+            {
+                copyOfStopMetricsLoggingData.Cell = new Cell();
+                copyOfStopMetricsLoggingData.Cell.CellID = base.Cell.CellID;
+                copyOfStopMetricsLoggingData.Cell.RATType = base.Cell.RATType;
+                copyOfStopMetricsLoggingData.Cell.CellType = base.Cell.CellType;
+
+            }
+
+            if (this.ExtensionInfo != null)
+            {
+                copyOfStopMetricsLoggingData.ExtensionInfo = new ExtensionInfo();
+                copyOfStopMetricsLoggingData.ExtensionInfo.RadioParams = this.ExtensionInfo.RadioParams;
+            }
+
+            copyOfStopMetricsLoggingData.DataType = base.DataType;
+            copyOfStopMetricsLoggingData.Description = base.Description;
+            copyOfStopMetricsLoggingData.Direction = base.Direction;
+
+            return copyOfStopMetricsLoggingData;
+        }
+
+        public override Color ScriptItemColor
+        {
+            get
+            {
+                return UserPreferences.CellcontrolColor;
+            }
+        }
+
+        public override Sequencer_Struct GetDataInDriverFormat(int _ElementIndex)
+        {
+            Sequencer_Struct stopMetricsLoggingData = base.GetDataInDriverFormat(_ElementIndex);
+
+            if (Cell != null)
+            {
+                stopMetricsLoggingData.Data = Cell.GetCellInGUIFormat();
+
+                if (Cell.RATType == RATType.EUTRAN)
+                {
+                    stopMetricsLoggingData.RecordType = Record_Type_Enum.StopMetricsLogging;
+                }
+
+            }
+            return stopMetricsLoggingData;
+        }
+
+
+        public override DialogResult DisplayCellID()
+        {
+            DialogResult DlgResult = DialogResult.Cancel;
+
+            if (this.Cell != null)
+            {
+                CellID cellIDForm = new CellID();
+
+                cellIDForm.UpdateCellID(this.Cell);
+
+                DlgResult = cellIDForm.ShowDialog();
+
+                if (DlgResult == DialogResult.OK)
+                {
+                    Cell changedCellID = cellIDForm.GetChangedCell();
+
+                    copyOfGUIData = (StopMetricsLoggingData)this.GetElementDataCopy();
+
+                    copyOfGUIData.Cell = changedCellID;
+                }
+            }
+
+            return DlgResult;
+        }
+
+
+        public override DialogResult DisplayDeltaTime()
+        {
+            DialogResult DlgResult = DialogResult.Cancel;
+
+            if (DeltaTime != null)
+            {
+                DeltaTimer deltaTimer = new DeltaTimer();
+                deltaTimer.UpdateTimerValue(DeltaTime);
+
+                DlgResult = deltaTimer.ShowDialog();
+
+                if (DlgResult == DialogResult.OK)
+                {
+                    DeltaTime changedTime = deltaTimer.GetTimerValue();
+
+                    copyOfGUIData = (StopMetricsLoggingData)this.GetElementDataCopy();
+
+                    copyOfGUIData.DeltaTime = changedTime;
+                }
+            }
+
+            return DlgResult;
+        }
+
+ StopMetricsLoggingData copyOfGUIData = null;
+
+GeneralNotificationForSAS2G3G
+
+using System.Windows.Forms;
+
+using System.Windows.Forms;
+using System.Drawing;
+using Anite.Sequencer.Interfaces;
+
+GeneralNotificationForSAS2G3G
+
+copyOfNotificationData
+
+GeneralNotificationForSAS2G3G
+
+68416 
+
+WM_LAYER3_SEQUENCE
+
+HandleMessage
+
+SendLayer3Sequence
+
+SendLayer3Message
+
+m_CurrentCellId
+
+SetCurrentCellId
+
+Send3GMessage
+
+F:\HDRLogs\CellIDProblems\LTE-BTR-1-0523_Fail
+
+LTE-BTR-1-0523
+
+          if ((CellManagerThread::GetCurrentCellId() != m_Data->CellId) && (CellManagerThread::GetCurrentCellId() != 0))
+            {
+                // soft handover case where the serving cell was removed but there are still
+                // messages to send in the sequence from that cell.
+                nCellId = CellManagerThread::GetCurrentCellId();
+            }
+
+            Send3GMessage( nCellId, &EventData );
+
+Cell3G::SendLayer3Message( stLayer3Data * pMessageToSend )
+
+src/CellManager/Cell3G/Cell3G_SendLayer3Message.cpp
+
+68500
+
+LTE-BTR-1-0523
+
+I
+
+Cell3G_SendLayer3Message.cpp
+
+RRC_CONNECTION_RELEASE_COMPLETE
+
+SetCurrentCellId(0)
+
+The unexpected RRC Conn Reqs are recognised when they happen but the Sequencer processing is blocked waiting for an event from 2G3G SAS (IR 65925 has been raised for this problem) so the script shutdown doesn?t happen until there has been an event from 2G3G.
+
+We quite often get the problem with unexpected LTE messages being blocked because Sequencer is waiting for a 2G3G event and the script is shut down without a crash as soon as a 2G3G event is received. 
+
+To me the problem isn?t the LTE messages being blocked the problem is the crash and the DT errors in the Sequencer debug log but no DT errors in the diagfile. The unexpected UL messages don?t explain the crash, they may be contributing to the crash because it means there is a UEProxy active when the cell is being deactivated.
+
+The DT errors in the Sequencer debug log appear to be coming from LTE L2 or at least Amit thinks it looks like L2 trace rather than L3 trace. The DT errors don?t contain any useful information. 
+
+
+68505
+
+The unexpected RRC Conn Reqs are recognised when they happen but the Sequencer processing is blocked waiting for an event from 2G3G SAS (IR 65925 has been raised for this problem) so the script shutdown doesn?t happen until there has been an event from 2G3G.
+
+We quite often get the problem with unexpected LTE messages being blocked because Sequencer is waiting for a 2G3G event and the script is shut down without a crash as soon as a 2G3G event is received. 
+
+To me the problem isn?t the LTE messages being blocked the problem is the crash and the DT errors in the Sequencer debug log but no DT errors in the diagfile. The unexpected UL messages don?t explain the crash, they may be contributing to the crash because it means there is a UEProxy active when the cell is being deactivated.
+
+The DT errors in the Sequencer debug log appear to be coming from LTE L2 or at least Amit thinks it looks like L2 trace rather than L3 trace. The DT errors don?t contain any useful information. 
+
+
+68505
+
+68505 
+
+ELEMENTANDDBTREE
+
+GeneralNotificationForSAS
+
+NotificationForSAS
+
+utranGeranNode
+
+SyncPoint
+
+ElementDragDropData syncPointDataNode = new ElementDragDropData();
+
+genNotification
+
+syncPointDataNode
+
+genNotification
+
+   syncPointDataNode.ElementDragDropHandler = new ElementDragDropData.ManageElementDropCommand(
+                synchronizationPoint.DisplayElementDataInGUI);
+
+GenSasNotificationNode
+
+ElementDragDropHandler = new ElementDragDropData.ManageElementDropCommand(
+                synchronizationPoint.DisplayElementDataInGUI);
+
+GenSasNotificationNode
+
+genNotification
+
+ElementDragDropHandlers[ELEMENTANDDBTREE.SyncPoint] = syncPointDataNode;
+
+GenSasNotificationNode
+
+NotifySAS2G3G
+
+genNotification
+
+ class EventProcessSyncPointElement : ISASEvent
+        {
+            Sequencer_Driver m_Sequencer_Driver = null;
+            Sequencer_Struct m_SequenceElement = null;
+
+            public EventProcessSyncPointElement(Sequencer_Driver _Sequencer_Driver, Sequencer_Struct _SequenceElement)
+            {
+                m_Sequencer_Driver = _Sequencer_Driver;
+                m_SequenceElement = _SequenceElement;
+            }
+
+            public void Handle()
+            {
+                if (null != m_Sequencer_Driver)
+                {
+                    m_Sequencer_Driver.doProcessSynchronizationPointElement(m_SequenceElement, false);
+                }
+            }
+        }
+
+
+EventProcessNotification2G3GElement
+
+public void doProcessSynchronizationPointElement(Sequencer_Struct _SequenceElement, bool _TimerProcessed)
+        {
+            SASDebugLogger.TraceLogStart(this, "doProcessSynchronizationPointElement");
+
+            // check if delay timer for this element has been processed
+            if (_TimerProcessed)
+            {
+                bool success = false;
+                Sync_Point_Info syncPointInfo = _SequenceElement.Data as Sync_Point_Info;
+
+                SASDebugLogger.InfoLog("SqDr: SynchronizationPointEvent");
+
+                if (syncPointInfo != null)
+                {
+                    success = m_UtranGeranInterface.Trigger(_SequenceElement.ElementIndex,
+                                                            _SequenceElement.DeltaTimeSpan().TotalMilliseconds,
+                                                            syncPointInfo);
+                }
+                else
+                {
+                    SASDebugLogger.InfoLog("SqDr: Error- syncPointInfo is NULL");
+                }
+
+                if (success)
+                {
+                    SASDebugLogger.InfoLog("SqDr: doProcessSynchronizationPointElement - Acknowledge ElementIndex=" + _SequenceElement.ElementIndex.ToString());
+
+                    // indicate that a script element has been processed
+                    m_Script.ScriptElementProcessed(_SequenceElement.ElementIndex, false);
+
+                    // start processing more script elements if possible
+                    FireEventProcessNextElement();
+                }
+                else
+                {
+                    SASDebugLogger.InfoLog("SqDr: doProcessSynchronizationPointElement - Failed to complete _ElementIndex=" + _SequenceElement.ElementIndex.ToString());
+                    FireEventStopScript(GetLineNumberAtIndex(_SequenceElement.ElementIndex), Cause.UnexpectedError);
+                }
+            }
+            else
+            {
+                Sync_Point_Info syncPointInfo = _SequenceElement.Data as Sync_Point_Info;
+                // Only process delay if only sending a SYNC
+                if (syncPointInfo.SendSync && !syncPointInfo.ReceiveSync)
+                {
+                    // if the timer for this sequencer element has not been processed, then process the delay timer
+                    if (ProcessSequenceElementDelayTimer(_SequenceElement))
+                    {
+                        // the timer elapsed event will trigger the completion of the doProcessSynchronizationPointElement
+                        SASDebugLogger.InfoLog("Sequencer_Driver_doProcessSynchronizationPointElement - timer set");
+                    }
+                    else
+                    {
+                        // process the element now, indicating that the delay timer has been processsed
+                        doProcessSynchronizationPointElement(_SequenceElement, true);
+                    }
+                }
+                else
+                {
+                    doProcessSynchronizationPointElement(_SequenceElement, true);
+                }
+            }
+
+            SASDebugLogger.TraceLogEnd(this, "doProcessSynchronizationPointElement");
+        }
+
+doProcessGenNotificationSAS2g3gElement
+
+doProcessGenNotificationSASUtranGeranElement
+
+doProcessSynchronizationPointElement
+
+doProcessGenNotificationSASUtranGeranElement
+
+m_UtranGeranInterface
+
+ElementData
+
+// indicate that a script element has been processed
+            m_Script.ScriptElementProcessed(_SequenceElement.ElementIndex, false);
+
+            // start processing more script elements if possible
+            FireEventProcessNextElement();
+
+ SASDebugLogger.
+
+doProcessGenNotificationSASUtranGeranElement
+
+SASDebugLogger.TraceLogStart(this, "doProcessGenNotificationSASUtranGeranElement");
+
+EventProcessNotification2G3GElement
+
+EventProcessSyncPointElement
+
+EventProcessNotification2G3GElement
+
+FireEventSAS2G3GGenNotification
+
+NotifySAS2G3G
+
+FireEventSAS2G3GGenNotification
+Illegal Control Command
+
+General Notification of event
+
+ReceivedGeneralNotificationFromLTE
+
+General Notification of event
+
+ReceivedGeneralNotificationFromLTE
+
+General Notification of event
+
+WM_RECEIVED_ANYMESSAGE_LTE
+
+CReportToMMI
+
+  C:\SAS\ATT_ANYCELL\Code\NS\src\PT_ComIF\UtraAPI_Mapping.h(1071):#define UtraSysSetCTimeout(EntityId, Timeout, Status) _UtraSysSetCTimeout(THIS_FILE, __LINE__, EntityId, Timeout, Status)
+
+
+CReportToMMI
+
+CReportToMMI.h
+
+MB_ICONWARNING
+
+ CReportToMMI::ReportError("HandleApiEvent unknown RRC type ",
+                                    "3G Seq Debug...",
+                                     MB_OK | MB_ICONWARNING,
+                                     ERR_UTRAN_ERROR );
+
+ReceivedAnyLTEMessage
+
+FailLayer3Sequence
+
+ReportToMMI
+
+int nLogType=LOG_LAYER3_SEQUENCE_FAIL;
+                ReportToMMI( WM_LAYER3_SEQUENCE_FAILED, sizeof(int), &nLogType );
+
+SendMsg( TID_MMI_MAIN, TID_CELL_MANAGER
+
+DoStartSubScript
+
+END_SUB_SCRIPT
+
+START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+
+ if (m_bReportAbort)
+                    {
+
+m_pCommonFormControls->m_SystemOptions.bPlaybackAborting
+
+ while (index < CommandListBox->Items->Count)
+        {
+
+DoRun
+
+while (index < CommandListBox->Items->Count)
+        {
+            CommandObject1 = (TCommandObject *)CommandListBox->Items->Objects[index];
+
+            if (CommandObject1->RecordType == SAS_MSG)
+            {
+                if (CommandObject1->ProcedureType == LOG_END_SUB_SCRIPT)
+                {
+
+RecordType
+
+ if (CommandObject1->ProcedureType == LOG_START_SUB_SCRIPT)
+                {
+                    break;
+                }
+
+tempCommandObject
+
+StartInlineSubScript
+
+    if (CommandObject1->ProcedureType == LOG_END_SUB_SCRIPT)
+                {
+
+
+tempCommandObject
+
+StartInlineSubScript
+
+stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+
+StartInlineSubScript
+
+tempCommandObject
+
+pProgCommand
+
+StartInlineSubScript->Data
+
+ //check if there is a sub script and
+            //set up the "end sub script" with the same parameters as the start
+            if(tempCommandObject->RecordType == SAS_MSG)
+            {   
+                if (tempCommandObject->ProcedureType == LOG_START_SUB_SCRIPT)
+                {
+                    StartInlineSubScript = tempCommandObject;
+                }
+
+                if (tempCommandObject->ProcedureType == LOG_END_SUB_SCRIPT)
+                {
+                    if(StartInlineSubScript != NULL)
+                    {
+                        tempCommandObject->Data = StartInlineSubScript->Data;
+                    }
+                }
+            }
+
+            TCommandObject *StartInlineSubScript = NULL;
+
+endSubScript
+
+startSubScript
+
+endSubScript
+
+TCommandObject *
+
+loopCmdObject
+
+m_pCommonFormControls->m_SystemOptions.bPlaybackAborting
+
+EndofSubScript
+
+GetNextCommandObject
+
+m_pCommonFormControls->UpdateVariableUsedCount(&pData->ExprList[i].Var1, 1);
+
+WaitForAnyMessage
+
+TWaitForAnyMessageDialog
+
+m_pCommonFormControls->UpdateVariableUsedCount(&pData->ExprList[i].Var1, 1);
+
+
+m_pCommonFormControls->UpdateVariableUsedCount(data.CellVariable.c_str(), 1);
+
+loopCmdObject
+
+DoElement
+
+loopCmdObject
+
+DoLoopStatement
+
+m_pCommonFormControls->UpdateVariableUsedCount(data.CellVariable.c_str(), 1);
+
+
+variable
+

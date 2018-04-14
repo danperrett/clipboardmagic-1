@@ -1,0 +1,63 @@
+void __fastcall TPlaybackThread::HandlePlaybackTerminated(const char * Message, FailReason reason)
+
+
+HandlePlaybackTerminated
+
+CONTROL_INTERFACE::SetSASModeAsPlayback();
+
+bLogToRTT = false;
+
+// if we terminate then the RTT gets a specific ERROR message
+        // with the string we pass above, so do not log a separate message to the RTT
+
+ // delete the copy of the commandobject
+    delete pCopyCommandObject;
+    pCopyCommandObject = NULL;
+
+HandleScriptTerminated
+
+ PB_DEBUGLOG("HandleScriptTerminated() entered")
+
+HandlePlaybackTerminated
+
+   m_bMSActive = false;
+
+DoWaitCellActive
+
+DoWaitForEvent
+
+//read back for test
+
+ErrorProcessingResults
+
+TCommonFormControls::
+
+TCommonFormControls::ErrorNone
+
+stLayer3Sequence * L3ProcedureEncDec::Create_Empty_ProgrammingProcedureWithData(PROCEDURE_TYPE L3LogType, stLayer3Data *data)
+
+
+    if(GetNumberOfVariables(VAR_TYPE_STORE_MSG) == 0)
+
+
+    if ((expression->Var1.VarType == VAR_TYPE_STRING) && (strcmp(expression->Var1.VarName, "") > 0))
+
+
+    if((expression->Var2.VarType == VAR_TYPE_STORE_MSG) && (strcmp(expression->Var2.VarName, "") > 0))
+
+
+Create_Empty_ProgrammingProcedureWithData
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2007. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/05/22 18:15:15BST $
+ * $Revision: 1.80 $
+ * $Source: src/L3pEncDec/Misc_L3ProcedureEncDec.cpp $
+ *
+ ****************************************************************************/
+
+67699
+

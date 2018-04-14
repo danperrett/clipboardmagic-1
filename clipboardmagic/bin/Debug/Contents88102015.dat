@@ -1,0 +1,370 @@
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\openssl\openssl\Debug\ssleay32.lib
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\openssl\openssl\Debug\libeay32.lib
+
+Rosetta Code
+
+SignedInfo
+
++		request	0x0033d234 "<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T10:14:15.6397509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>756650276</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVbgAAQAAAPmTa42QWaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nnLvg==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVYwAAQAAABk1ilk486OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+X8J8=</ControlRequests></Interlocking></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>A/Jdni9rxGe0TXJzCx8gfM8Z2kw=</DigestValue></Reference></SignedInfo><SignatureValue>a+GDUx4Z07IBeYn2h06d12ayChx5viOm4K1P88/7SCw/1NkM9aY/MDmFrDlnaikAYOaxMi/Y2yZt7EnSA8JNqExJEnO8W	const char *
+
+
+linkStatus
+
++		request	0x0033d234 "<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T10:14:15.6397509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>756650276</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVbgAAQAAAPmTa42QWaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nnLvg==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVYwAAQAAABk1ilk486OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+X8J8=</ControlRequests></Interlocking></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>A/Jdni9rxGe0TXJzCx8gfM8Z2kw=</DigestValue></Reference></SignedInfo><SignatureValue>a+GDUx4Z07IBeYn2h06d12ayChx5viOm4K1P88/7SCw/1NkM9aY/MDmFrDlnaikAYOaxMi/Y2yZt7EnSA8JNqExJEnO8W	const char *
+
+
++		controlBuffer	0x0033d234 "<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T10:14:15.6397509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>756650276</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVbgAAQAAAPmTa42QWaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nnLvg==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVYwAAQAAABk1ilk486OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+X8J8=</ControlRequests></Interlocking></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>A/Jdni9rxGe0TXJzCx8gfM8Z2kw=</DigestValue></Reference></SignedInfo><SignatureValue>a+GDUx4Z07IBeYn2h06d12ayChx5viOm4K1P88/7SCw/1NkM9aY/MDmFrDlnaikAYOaxMi/Y2yZt7EnSA8JNqExJEnO8W	char [8192]
+
+
+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+X8J8=</ControlRequests></Interlocking></Body></Message><Signature xmlns="http
+
+"<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T10:14:15.6397509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>756650276</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVbgAAQAAAPmTa42QWaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nnLvg==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAJJEZLQEAAACqVYwAAQAAABk1ilk486OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+X8J8=</ControlRequests></Interlocking></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>A/Jdni9rxGe0TXJzCx8gfM8Z2kw=</DigestValue></Reference></SignedInfo><SignatureValue>a+GDUx4Z07IBeYn2h06d12ayChx5viOm4K1P88/7SCw/1NkM9aY/MDmFrDlnaikAYOaxMi/Y2yZt7EnSA8JNqExJEnO8W
+
++		szHistory	0x00a85d18 "<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T10:22:52.0677509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>757166733</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAjXIhLQEAAACqVbgAAQAAAHdXa/m/cKOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlI3Q==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAjXIhLQEAAACqVYwAAQAAABThf5OjE6OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XDdE=</ControlRequests></Interlocking></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>73Ip5Wu+EWd2wnLHSJX6yVe3SU8=</DigestValue></Reference></SignedInfo><SignatureValue>ibCJibkCqB0it+Ih0OHKQZJkYRPYwiulACgVR3LKHSvqLQa0LA59FSNq5If7f2A1dnGKvWpk/+5SBU/Zu/PvDguno4dYg	char [20000]
+
+
+Reference
+
+XMLElement *Reference = 
+
+void ReplaceCRLF(char *data)
+{
+    int len = strlen(data);
+    int n = 0;
+    for(n = 0; n < len; n++)
+    {
+       if((int)data[n] == 0xD)
+       {
+           data[n] = 0xA;
+       }
+    }
+}
+
+void ReplaceCRLF(char *data)
+
+Base64decode_len
+
+CHECKANDEXIT
+
+#include <openssl/sha.h>
+
+unsigned char result[SHA_DIGEST_LENGTH];
+
+SHA1((const unsigned char*)string, strlen(string), result);
+
+C:\srif\openssl-1.0.2d-32bit-release-static-vs2010
+
+openssl-1.0.2d-32bit-release-static-vs2010
+
+libeay32.lib
+
+..\openssl-1.0.2d-32bit-release-static-vs2010\lib\
+
+ssleay32.lib
+
++		message	0x00ae69e8 "<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Header>
+        <Version>
+            <MessageFormat>message-v0.1</MessageFormat>
+            <Data>data-v0.1</Data>
+            <Software>software-v1</Software>
+        </Version>
+        <Time>
+            <Current>2015-10-07T11:30:41.8667509+01:00</Current>
+            <TimeStatus>SYNCHRONISED</TimeStatus>
+            <Monotonic>761236768</Monotonic>
+        </Time>
+        <SequenceNumber>0</SequenceNumber>
+        <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+        <LogicalSourceID>ICONIS-1</LogicalSourceID>
+        <SourceStatus>MASTER</SourceStatus>
+        <SourceLinkStatus>UP</SourceLinkStatus>
+        <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+        <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+    </Header>
+    <Body>
+        <Interlocking>
+            <UniqueID>4</UniqueID>
+            <SSIID>4</SSIID>
+            <ControlRequests>o6MBAAEAII1fLQEAAACqVbgAAQAAABKFVKsKUqOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nniKg==</ControlRequests>
+        </Interlocking>
+        <Interlocking>
+            <UniqueID>44</UniqueID>
+            <SSIID>34534</SSIID>
+            <ControlRequests>o6MBAAEAII1fLQEAAACqVYwAAQAAAJw0M/NUSqOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xt3o=</ControlRequests>
+        </Interlocking>
+    </Body>
+</Message>
+</Envelope>"	const char *
+
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Header>
+        <Version>
+            <MessageFormat>message-v0.1</MessageFormat>
+            <Data>data-v0.1</Data>
+            <Software>software-v1</Software>
+        </Version>
+        <Time>
+            <Current>2015-10-07T11:30:41.8667509+01:00</Current>
+            <TimeStatus>SYNCHRONISED</TimeStatus>
+            <Monotonic>761236768</Monotonic>
+        </Time>
+        <SequenceNumber>0</SequenceNumber>
+        <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+        <LogicalSourceID>ICONIS-1</LogicalSourceID>
+        <SourceStatus>MASTER</SourceStatus>
+        <SourceLinkStatus>UP</SourceLinkStatus>
+        <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+        <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+    </Header>
+    <Body>
+        <Interlocking>
+            <UniqueID>4</UniqueID>
+            <SSIID>4</SSIID>
+            <ControlRequests>o6MBAAEAII1fLQEAAACqVbgAAQAAABKFVKsKUqOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nniKg==</ControlRequests>
+        </Interlocking>
+        <Interlocking>
+            <UniqueID>44</UniqueID>
+            <SSIID>34534</SSIID>
+            <ControlRequests>o6MBAAEAII1fLQEAAACqVYwAAQAAAJw0M/NUSqOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xt3o=</ControlRequests>
+        </Interlocking>
+    </Body>
+</Message>
+</Envelope>
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:30:41.8667509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>761236768</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAII1fLQEAAACqVbgAAQAAABKFVKsKUqOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nniKg==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAII1fLQEAAACqVYwAAQAAAJw0M/NUSqOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xt3o=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+            resultNoSignature = "<Envelope>" + result + "</Envelope>";
+
+
+		resultNoSignature	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:42:54.8597509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>761969801</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAibxqLQEAAACqVbgAAQAAAA1X2jXf5qOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlDXA==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAibxqLQEAAACqVYwAAQAAAO8IyTsMVKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XJhI=</ControlRequests></Interlocking></Body></Message></Envelope>"	string
+
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:42:54.8597509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>761969801</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAibxqLQEAAACqVbgAAQAAAA1X2jXf5qOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlDXA==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAibxqLQEAAACqVYwAAQAAAO8IyTsMVKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XJhI=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+XMLPrinter
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+03f706ebd1c0ceacc79b062487d670a2b65fa431
+
+message
+
++		body	0x014a69e8 "<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>"	char [8192]
+
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+b6382eb1053475eb45c439cdb1550445a3d983e2
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T11:52:07.0117509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>762521982</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVbgAAQAAAJ+rai3jwaOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmG+g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAfilzLQEAAACqVYwAAQAAAMArx1c2sKOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XoJk=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+b6382eb1053475eb45c439cdb1550445a3d983e2
+
+resultNoSignature
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T12:54:54.1247509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>766289313</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVbgAAQAAAMTPoq2BV6OjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlHfA==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVYwAAQAAAE37NVexBaOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XvaA=</ControlRequests></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>9b/L29I3D+uU8JfXQTB/L+LP+Dw=</DigestValue></Reference></SignedInfo><SignatureValue>byi9sgUHFF1vi+Jlny5+TjiH2BNiVAp6UvGm47Oo/ot3f0MZ5XEqt4y4AYoFR4TCbvVGw97uwNmfVa+p3iEPAo5/K464osIgIVwe/xyadfr25+ZPKb5VnW+t3AlX4n5q7tVN/D8S+Rb6lVm9wO9MARr/eQDgOEvTDanswQ3V+4I=</SignatureValue></Signature></Envelope>
+
+9b/L29I3D+uU8JfXQTB/L+LP+Dw=
+
+LP+Dw=
+
+9b/L29I3D+uU8JfXQTB/L+LP+Dw=
+
+f5bfcbdbd2370feb94f097d741307f2fe2cff83c
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T12:54:54.1247509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>766289313</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVbgAAQAAAMTPoq2BV6OjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlHfA==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVYwAAQAAAE37NVexBaOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XvaA=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+Message 
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T12:54:54.1247509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>766289313</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVbgAAQAAAMTPoq2BV6OjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlHfA==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVYwAAQAAAE37NVexBaOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XvaA=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T12:54:54.1247509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>766289313</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVbgAAQAAAMTPoq2BV6OjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlHfA==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAoaWsLQEAAACqVYwAAQAAAE37NVexBaOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XvaA=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+9b/L29I3D+uU8JfXQTB/L+LP+Dw=
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T13:15:49.3437509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>767544606</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEALc2/LQEAAACqVbgAAQAAAPbflbiM8qOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmkzw==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEATc2/LQEAAACqVYwAAQAAAEq7zOSmE6OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xl7I=</ControlRequests></Interlocking></Body></Message></Envelope>"
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T13:15:49.3437509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>767544606</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEALc2/LQEAAACqVbgAAQAAAPbflbiM8qOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmkzw==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEATc2/LQEAAACqVYwAAQAAAEq7zOSmE6OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xl7I=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw
+
+<Envelope><Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T13:15:49.3437509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>767544606</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEALc2/LQEAAACqVbgAAQAAAPbflbiM8qOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmkzw==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEATc2/LQEAAACqVYwAAQAAAEq7zOSmE6OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xl7I=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+aadca670c84b8819d7297a7bc85c019964f1ade9
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T13:15:49.3437509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>767544606</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEALc2/LQEAAACqVbgAAQAAAPbflbiM8qOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nmkzw==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEATc2/LQEAAACqVYwAAQAAAEq7zOSmE6OjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+Xl7I=</ControlRequests></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>5wokQ3l1QTehlnMtzgPK70P2uI8=</DigestValue></Reference></SignedInfo><SignatureValue>JF+FzxuWhtfurIZR4MMyHLI851V31Joj9PFsO+9odeGRlhK4MMZ9bmpkr+piq057aG0nfI9jlhf5sYsEU42QB8Qbo1VswHp9nsMqtno9QoNAtZih8XAPnp8pZvYmgCXaDrIhpAJ9LvubFt0kJmA40E4sCM3mLSjZk76YwaLQToU=</SignatureValue></Signature></Envelope>
+
+5wokQ3l1QTehlnMtzgPK70P2uI8=
+
+yPPgcJu0EJy4nt1fMD40ts7uK2I=
+
+c8f3e0709bb4109cb89edd5f303e34b6ceee2b62
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue></Reference></SignedInfo><SignatureValue>YvZ5affSfD4Z/vwOdgyI5D/qTreQcaqa29Tn0nv9+AqYwaremaohtSOC8YjbgFUFkO5m60VWFVTW15aeV0CTTHmb7vUOSmElgeDOM+N58ZWFjNAS5VtelGj+WUUEIzdKElvmhqF70GJxKJju1W/VlwbOcmntfiuRIbG7B9iT1Ig=</SignatureValue></Signature></Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message></Envelope>
+
+c8f3e0709bb4109cb89edd5f303e34b6ceee2b62
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message></Envelope>
+
+const char *string = "<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message></Envelope>";
+
+result = "<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message></Envelope>";
+
+  result = "<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message></Envelope>";
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue></Reference></SignedInfo><SignatureValue>YvZ5affSfD4Z/vwOdgyI5D/qTreQcaqa29Tn0nv9+AqYwaremaohtSOC8YjbgFUFkO5m60VWFVTW15aeV0CTTHmb7vUOSmElgeDOM+N58ZWFjNAS5VtelGj+WUUEIzdKElvmhqF70GJxKJju1W/VlwbOcmntfiuRIbG7B9iT1Ig=</SignatureValue></Signature></Envelope>
+
+yPPgcJu0EJy4nt1fMD40ts7uK2I=
+
+c8f3e0709bb4109cb89edd5f303e34b6ceee2b62
+
+<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T14:38:52.3557509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>772527902</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAHtcLLgEAAACqVRIBAQAAAHowHuR/raOjAQABAMqm0y0BAAAAqlX0AAEAAABMi12byy+jowEAAQBQHdItAQAAAKpV1gABAAAAC/3qTadlo6MBAAEAhhfPLQEAAACqVbgAAQAAAEsY2xqgYqOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlN5kO98Jcu3A==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEAHtcLLgEAAACqVeYAAQAAAFFTxXJng6OjAQABAMqm0y0BAAAAqlXIAAEAAACM2JBlmv+jowEAAQBQHdItAQAAAKpVqgABAAAAgRa5uwSio6MBAAEAhhfPLQEAAACqVYwAAQAAAKb0W5dZxqOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XNZf9V8Jaw/E=</ControlRequests></Interlocking></Body></Message></Envelope>
+
+XmlWriterSettings
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T14:52:29.9907509+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>773345581</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEALVEYLgEAAACqVRIBAQAAAD5CzPFnp6OjAQABAMqm0y0BAAAAqlX0AAEAAABMi12byy+jowEAAQBQHdItAQAAAKpV1gABAAAAC/3qTadlo6MBAAEAhhfPLQEAAACqVbgAAQAAAEsY2xqgYqOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlN5kO98JdKNw==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEALVEYLgEAAACqVeYAAQAAAMi8yJDQFqOjAQABAMqm0y0BAAAAqlXIAAEAAACM2JBlmv+jowEAAQBQHdItAQAAAKpVqgABAAAAgRa5uwSio6MBAAEAhhfPLQEAAACqVYwAAQAAAKb0W5dZxqOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XNZf9V8JaaEQ=</ControlRequests></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>FCO+Pt34dlcsHuMRTNuEdh9tSEk=</DigestValue></Reference></SignedInfo><SignatureValue>jdl1NO/KCEo/2c6oCnWngJS0NP1tGal/Wt1Qld5QAN/JhvnFUnQRxgxJsec/oPJpIRqUIrouIvN6X5j6hnv33OZ8nXA6MlU4MqyVk6VCcT/qhlR+9kE71RwS6Y/F3402lIVrLyvFbx7TDAE2wWI8Ej8mPBivu2nOl2T5ds34HTk=</SignatureValue></Signature></Envelope>
+
+FCO+Pt34dlcsHuMRTNuEdh9tSEk=
+
+1423be3eddf876572c1ee3114cdb84761f6d4849
+
+   // Dosha1Encode(digest, string);
+
+
+WORD decodeSignature(XMLElement *signature, XMLElement *Message)
+
+CHECKANDEXIT
+
+WORD StartDecode(const char* input, Message_t  *message)
+
+connectionInformation->linkStatus = UP;
+
+closesocket
+
+wParam
+
+result = "<Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message>";
+
+/******************************************************************************
+
+WORD HandleControlRequest(DWORD Socket, const char *request)
+
+/******************************************************************************
+* WORD HandleControlRequest(DWORD Socket, const char *request);
+*
+******************************************************************************/
+
+ConnectionListInformation_t *GetConnectionInformation(DWORD Socket)
+
+
+/******************************************************************************
+* ConnectionListInformation_t *GetConnectionInformation(DWORD Socket)
+*
+******************************************************************************/
+
+void InitialiseConnectionInformation()
+
+<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" />
+
+"http://www.w3.org/2000/09/xmldsig#\"
+
+CanonicalizationMethod
+
+Algorithm
+
+"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" 
+
+CanonicalizationMethod
+
+SignatureMethod
+
+//<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\">
+    //<SignedInfo>
+    //<CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" />
+    //<SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" />
+
+http://www.w3.org/2000/09/xmldsig#rsa-sha1\"
+
+Algorithm
+
+CanonicalizationMethod
+
+SignedInfo->InsertEndChild(
+
+SignatureMethod
+
+SignedInfo->InsertEndChild(
+
+Algorithm
+
+http://www.w3.org/2000/09/xmldsig#enveloped-signature
+
+Algorithm
+
+http://www.w3.org/2000/09/xmldsig#sha1
+
+Reference->InsertEndChild(
+
+PrepMessageForSignature
+
+receivebody
+
+void  Dosha1Encode(BYTE* bufout, const char* bufin)
+
+FCO+Pt34dlcsHuMRTNuEdh9tSEk=
+
+char digest[21];
+
+Dosha1Encode
+
+Base64encode
+
+<DigestValue>FCO+Pt34dlcsHuMRTNuEdh9tSEk=</DigestValue></Reference></SignedInfo><SignatureValue>jdl1NO/KCEo/2c6oCnWngJS0NP1tGal/Wt1Qld5QAN/JhvnFUnQRxgxJsec/oPJpIRqUIrouIvN6X5j6hnv33OZ8nXA6MlU4MqyVk6VCcT/qhlR+9kE71RwS6Y/F3402lIVrLyvFbx7TDAE2wWI8Ej8mPBivu2nOl2T5ds34HTk=</SignatureValue></Signature>
+
+XMLPrinter printer(NULL, true, 0);
+
+Message->Accept(&printer);
+
+Signature
+
+ char* xmlstring  = (char *)printer.CStr();
+
+SignElement
+
+void SignElement(XMLDocument* doc, XMLElement* Signature, XMLElement* Message)
+
+Signature
+
+SignElement(&doc, Signature, Message);
+
++		xmlstring	0x028550c8 "<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>DZjwCOaow+3PpxN1r5BMWwPkqMo=</DigestValue></Reference></SignedInfo></Signature>"	char *
+
+
++		transbody	0x00aa69e8 "<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T16:54:08.000Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>780642216</MonoTonic></Time><SequenceNumber>214</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>CqMBAAIAqKeHLiunhy6qVQoAAQAAAIZyctQ40TEyMzQ1Njc4OTC8xg==</SignalMap><SPADData><SignalID>16</SignalID><Signal>S123</Signal><Track>T123</Track></SPADData></SPAD><Indications>CqMBAAIAqKeHLiunhy6qVQoAAQAAAIZyctQ40TEyMzQ1Njc4OTC8xg==</Indications></Interlocking></Body></Message></Envelope>"	char [8193]
+
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-07T16:54:08.000Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>780642216</MonoTonic></Time><SequenceNumber>214</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>CqMBAAIAqKeHLiunhy6qVQoAAQAAAIZyctQ40TEyMzQ1Njc4OTC8xg==</SignalMap><SPADData><SignalID>16</SignalID><Signal>S123</Signal><Track>T123</Track></SPADData></SPAD><Indications>CqMBAAIAqKeHLiunhy6qVQoAAQAAAIZyctQ40TEyMzQ1Njc4OTC8xg==</Indications></Interlocking></Body></Message></Envelope>
+
+int RSA_public_encrypt(int flen, unsigned char *from,
+???unsigned char *to, RSA *rsa, int padding);
+?
+int RSA_private_decrypt(int flen, unsigned char *from,
+????unsigned char *to, RSA *rsa, int padding);
+
+PEM_read_bio_RSA_PUBKEY
+

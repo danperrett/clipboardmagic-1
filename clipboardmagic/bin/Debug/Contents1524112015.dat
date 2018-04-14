@@ -1,0 +1,17 @@
+0x21, 0x79, 0xfe, 0x2f, 0x25, 0x1c, 0x14, 0x63, 0x88, 0xb8, 0xb8, 0xc7, 0x5a, 0x16, 0x93, 0x7b, 0x8b, 0xd3, 0xa8, 0x74
+
+Dosha1Encode(output, (const char *)xmlstring);
+
+SignedInfoOutput3
+
+SignatureString
+
+XMLElement *SignedInfo = signature->FirstChildElement("SignedInfo");
+    GetDigestForSignedInfo(SignedInfo, digest);
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\exampleWin32Proj\HandleXMLSigning.cpp
+
+JesHPeUH9JhKKlc5rZsL6DXr0pVaL66MIOQHZv3f9ic/blrt6VorXmqQqlGbUm34
+HAgp5JZGtXX3HwhJfcVTLhPVjncR3ZO04c8IzlTblxq4Ww3Rt3BhJ1xX5Puu/Bcp
+v38nxR92oDZS9kGvP1DxnprxY5gGbfxEnZIBReOZC+8=
+

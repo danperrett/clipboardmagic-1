@@ -1,0 +1,270 @@
+$(FrameworkSDKDir)include
+
+IPPROTO_IPV6
+
+WIN32_WINNT
+
+C:\Program Files (x86)\MSXML 6.0\inc
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include
+
+C:\Secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include
+
+8925
+
+C:\Program Files (x86)\MSXML 6.0\inc
+
+5E(zcZ0Q_1
+
+C:\Program Files (x86)\MSXML 6.0\inc
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150023_UTMS_Mersey_Gateway_HR/trunk/17_Document_Reviews/CCTV%20SDK/
+
+daldridge@tycoint.com
+
+ANPR Route
+
+INSERT INTO TL_DEFINITION ( SYSTEMCODENUMBER, CREATIONDATE, DATASOURCE_TYPEID, TYPEID )
+
+SCN field on TL_ANPR_DYNAMIC only 32 characters
+
+The DatexIIAdapter code does not properley handle the SCN 's when inserting dynamic information into the database. 
+It tries to insert a SCN greater than 32 character and always gets rejected.
+Other areas of the code properly truncate the SCN down to the last 8 digits. and its this code that we need to copy.
+
+SCN field on TL_ANPR_DYNAMIC only 32 characters
+
+The DatexIIAdapter code does not properley handle the SCN 's when inserting dynamic information into the database. 
+It tries to insert a SCN greater than 32 character and always gets rejected.
+Other areas of the code properly truncate the SCN down to the last 8 digits. and its this code that we need to copy.
+
+ string[] text = rec.id.Split('_');
+                        string scn = text.Last();
+
+UpdateAnprSites
+
+AnprInsertSiteDefinition
+
+CheckDefinition
+
+rec.id.Split('_')
+
+.Split('_')
+
+ANPR_Measurement_Site_30072495
+
+ANPR_Measurement_Site_30071594
+
+192.168.50.45
+
+measurementsForSite.measurementSiteReference.id
+
+ANPRIDPrefix=ANPR_Measurement_Site_
+
+  string temp = ConfigurationManager.AppSettings["PublishAnpr"];
+
+ANPRIDPrefix
+
+m_AnprManager
+
+siteID = measurementsForSite.measurementSiteReference.id.Split('_').Last();
+
+m_AnprManager.ANPRIDPrefix
+
+anprIDPrefix
+
+anprTypeID
+
+ANPRIDPrefix
+
+ANPR_Measurement_Site_
+
+28619
+
+siteID = measurementsForSite.measurementSiteReference.id
+
+10.164.114.181
+
+\\10.164.114.30\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+add key="ANPRIDPrefix" value="ANPR_Measurement_Site_"/>
+
+m_lastUpdated
+
+process
+
+http://www.bbc.co.uk/iplayer/episode/p04b183c/adam-curtis-hypernormalisation
+
+JourneyTime
+
+Line 1294: TransportLink 118119: JourneyTime = 300s, Num Plates Used = 1
+
+TL_ANPR_DYNAMIC
+
+cctv_anpr_vrn_dynamic
+
+DATABASE_VIEW_NAME
+
+C:\Secure\Source\cutlas\ImtechCE
+
+DVTel installation
+
+\\10.164.114.30\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+C:\Temp\DatexIIAdapter\bin\SubscriberWebService.dll
+
+purgeDatabaseAfterReading
+
+  ini.read(
+
+purgeDatabaseAfterReading
+
+purgedb
+
+"purgeDatabaseAfterReading"
+
+C++ casting int to bool
+
+void PurgeVRNsFromDatabase(double time);
+
+PurgeVRNsFromDatabase
+
+entryperiod
+
+ stringstream sql;
+  sql << "SELECT systemcodenumber, vrn, vrnconfidence, tag, tagconfidence, lastupdated, lanenumber, vehicledirection" 
+      << " FROM CCTV_ANPR_VRN_DYNAMIC DYN" 
+      << " WHERE lastupdated > sysdate - " << entryperiod 
+      << " ORDER BY lastupdated";
+
+ if(purgeDatabaseAfterReading)
+	  {
+
+TransportLinks::processData (CutlDataSet* data)
+
+10.164.114.181
+
+databasehack registy key was set
+
+purgeDatabaseAfterReading=1
+
+SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter
+
+118119
+
+222edf8c0258e30585cf13a599166e6d8665d85e7bd4a35415121151b760e2ac
+
+Input Seed 
+
+ highLog( listObjects<int>("input data", data));
+
+validation
+
+  highLog( listObjects<int>("input data", validation));
+
+purgeDatabaseAfterReading
+
+MATCHES
+
+adding vehicle Vehicle
+
+VehicleMatcher::out
+
+MATCHES
+
+e58f252899897ea6cbea8a28696feba0e6412d8672c1969056f477554398071c
+
+MATCHES
+
+Associated Links Configuration not found for Camera
+
+TransportLinks Processing Database vrnDynData
+
+CameraKey
+
+cameraKey
+
+ cameraKeys[j]
+
+MATCHES
+
+Vehicle
+
+2fa5809972eb6b51943c60627fcdb201a1b85826a9d6791e4e982c38326d522b
+
+0b481c53a038a2cc222341dc3250f5cd3c1091ddc635c06e9134f5f5384ae2e2
+
+we have and in for this out
+
+f76d58bf49c8a599879d0e59b3b2e9b7bfab4f70b7ac54426d8ee21d93b050a2
+
+we have and in for this out
+
+MATCHES
+
+publishdelay
+
+m_publishdelay
+
+b12c7f9703720bb15e8b2a4e3495223818451f2ae9509d1a179584d7aab09703
+
+29690e283fe918cd66b74875a8368349d4d6302b4ca9538ab0b4e5234be2ceb7
+
+2fa5809972eb6b51943c60627fcdb201a1b85826a9d6791e4e982c38326d522b
+
+f95353930578d90abd4e79340852f3857caa7781f4fad598e0e3713d173e4867
+
+41667a0a6c9def2b28f4317bf19ac4d57f8e016ec85c1407bf6bba40c90a5292
+
+d0056228552a3846a63e781b93ae384439d845e18fdf247ca4f825c795dabe0f
+
+8e0619d65eb3bd6f796dbbd4f8d015a6acd049f791b6dc272483153ef25cdd2a
+
+b513e7b3779c5729c5a7139ed09fcb6c12ea710f7cf86e66e63700d36187d0d2
+
+20eaa1650346df657a91ccb7c996b7bd49a590c29b7155e408ce28e0e646da56
+
+3230585293afba06b217209ceb85aca3ec719f9aa73e7328c08f629088b06ab0
+
+1597e05d7909c535893c8434384012a6ba2bd7362ebaaab0cbe7d77d264277c6
+
+c646999a0f9b4273ddac8c0931a9bb4f8918041e8ffa975070b3f6d18a310e40
+
+68739d7d95afd33cd4d81c994f45c606d9c864b083b5472989e5ca3522338cdf
+
+73ee92217aadeb1e11677963d97485958a2c8add591b563446e1149d747e270d
+
+4d74e203257c729304b4e97d66b880832553adab554603076902036b25ec5a5e
+
+384929c79a89c8587dbb2fff15c3ef4223f3a3e5065afa35976f1ef0d24eee6b
+
+5aaad386ce76cb22a3b9295f2dff68ce380169aa201e919a8af1c2e0280806b8
+
+249f62b338f8daaba3dbb324a8b46e9392cf2f9c9345135ada31974704a767a6
+
+b347993e339926834fd82c86de38474e4b86a2999c8eea2c41d3d965dc461320
+
+time_t inTime;
+	time_t outTime;
+	int inCount;
+	int outCount;
+
+
+time_t inTime;
+	time_t outTime;
+	int inCount;
+	int outCount;
+
+	time_t inTime;
+	time_t outTime;
+	int inCount;
+	int outCount;
+
+
+	  int TotalCount;
+	  int runningAverageSeconds;
+	  vector<int> times;
+
+vector<int> times;
+
+Tota

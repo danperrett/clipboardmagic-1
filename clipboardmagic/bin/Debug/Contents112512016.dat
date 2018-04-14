@@ -1,0 +1,19 @@
+timer
+
+C:\Windows\MCSCORUN.INI
+
+transmitThread
+
+System.Threading.ThreadStart(
+
+transmitThread
+
+  transmitThread = new System.Threading.Thread(new System.Threading.ThreadStart(timer_tick));
+            transmitThread.Priority = ThreadPriority.Highest;
+
+RECV_SOCKET_SIZE
+
+SEND_SOCKET_SIZE
+
+MaxFreeTcbs 
+

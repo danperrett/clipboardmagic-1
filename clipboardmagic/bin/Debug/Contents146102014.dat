@@ -1,0 +1,44 @@
+variablesGridView_CellFormatting
+
+BEGINInlineSubScriptCmdData
+
+element
+
+ElementData
+
+ Type type = element.ElementData.GetType();
+
+scriptElement
+
+ProgrammingData progData = data as ProgrammingData;
+            string tt = progData.ProgrammingCmdData.ToString();
+
+scriptElement[n].ElementData
+
+"Anite.Sequencer.ENDInlineSubScriptCmdData"
+
+subscriptEndIndex
+
+eventToWaitFor
+
+TimerEventTimeOut
+
+END_SUBSCRIPT
+
+stopTimeoutTimer
+
+                    }
+
+
+ElementIndex
+
+subscriptEndIndex
+
+ElementIndex
+
+68658
+
+ T-Mobile Acceptance scripts 9.4.
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SASEpcProxy.zip
+

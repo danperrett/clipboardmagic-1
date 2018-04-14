@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CAInterface"
+    targetNamespace="http://tempuri.org/CAInterface.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CAInterface.xsd"
+    xmlns:mstns="http://tempuri.org/CAInterface.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="DeviceSCN" type="xs:string" default="" />
+      <xs:element name="Category" type="xs:string" default="" />
+      <xs:element name="type" type="xs:string" default="" />
+      <xs:element name="StartTime" type="xs:string" default="" />
+      <xs:element name="EndTime" type="xs:string" default="" />
+      <xs:element name="UpdateTime" type="xs:long" />
+      <xs:element name="UpdateTimeString" type="xs:string" default="" />
+      <xs:element name="Misc" type="xs:string" default="" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Faults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FaultInformation" type="Fault" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Version" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+:57868/CAInterface.aspx?StartTime=2016-07-05-14-07-20
+
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CAInterface"
+    targetNamespace="http://tempuri.org/CAInterface.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CAInterface.xsd"
+    xmlns:mstns="http://tempuri.org/CAInterface.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="DeviceSCN" type="xs:string" default="" />
+      <xs:element name="Category" type="xs:string" default="" />
+      <xs:element name="type" type="xs:string" default="" />
+      <xs:element name="StartTime" type="xs:string" default="" />
+      <xs:element name="EndTime" type="xs:string" default="" />
+      <xs:element name="UpdateTime" type="xs:long" />
+      <xs:element name="UpdateTimeString" type="xs:string" default="" />
+      <xs:element name="Misc" type="xs:string" default="" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Faults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FaultInformation" type="Fault" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Version" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+   static int count = 0;
+        static int timercount = 0;
+        static Faults listofFaults = new Faults();
+        static System.Timers.Timer timer = null;
+        static Random rand = new Random();
+        static Object myLock = new object();
+
+ timer = new System.Timers.Timer();
+            timer.Interval = 1000*60*2;
+            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
+            timer.Start();
+           // listofFaults.Version = 1;
+            
+        }
+
+        void timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            int next = rand.Next(1, 3);
+            lock (myLock)
+            {
+                if (next == 1)
+                {
+                    //creat new fault of fix one
+                    if (rand.Next(1, 3) == 1)
+                    {
+                        CreateFault();
+                    }
+                    else
+                    {
+                        ClearFault();
+                    }
+                }
+            }
+            timercount++;
+        }
+
+using System.Timers;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using System.Text;
+
+        void CreateFault()
+        {
+            Fault fault = new Fault();
+            int cameraNumber = rand.Next(1, 17);
+            fault.DeviceSCN = "EvoX" + cameraNumber;
+            fault.Category = "Camera";
+            if (rand.Next(1, 3) == 1)
+            {
+                fault.type = "Hardware Fault";
+            }
+            else
+            {
+                fault.type = "Software Fault";
+            }
+            DateTime time = DateTime.Now;
+            string now = string.Format("{0}-{1}-{2} {3}:{4}:{5}", time.Year, time.Month, time.Day, time.Hour, time.Minute, time.Second);
+            fault.StartTime = now;
+            fault.UpdateTime = time.Ticks;
+            fault.UpdateTimeString = time.ToString();
+            if (listofFaults != null)
+            {
+                if(listofFaults.FaultInformation == null)
+                {
+                    listofFaults.FaultInformation = new Fault[0];
+                }
+                List<Fault> lofF = listofFaults.FaultInformation.ToList();
+                lofF.Add(fault);
+                listofFaults.FaultInformation = lofF.ToArray();
+            }
+        }
+
+        void ClearFault()
+        {
+            if (listofFaults.FaultInformation.Length > 0)
+            {
+                int rr = rand.Next(0, listofFaults.FaultInformation.Length);
+                Fault fault = listofFaults.FaultInformation[rr];
+                
+                if (String.IsNullOrEmpty(fault.EndTime))
+                {
+                    DateTime time = DateTime.Now;
+                    string now = string.Format("{0}-{1}-{2} {3}:{4}:{5}", time.Year, time.Month, time.Day, time.Hour, time.Minute, time.Second);
+                    fault.EndTime = now;
+                    fault.UpdateTime = time.Ticks;
+                    fault.UpdateTimeString = time.ToString();
+                    listofFaults.FaultInformation[rr] = fault;   
+                 }
+            }
+        }
+
+
+  public string GetXMLInformation()
+        {
+            string username = Request.Params["UserName"];
+            string password = Request.Params["PassWord"];
+            string start = Request.Params["StartTime"];
+            string end = Request.Params["EndTime"];
+            count++;
+           
+
+            DateTime startTime;
+            DateTime endTime;
+
+            if (start == "Everything")
+            {
+                return SerialiseFaults(listofFaults);
+            }
+
+            if (start == null) return "Start time must be present";
+            string[] _start = start.Split('-');
+            
+            if (_start.Length != 6) return "Error Parsing Start Time";
+            
+            startTime = new DateTime(Int32.Parse(_start[0]),
+                                     Int32.Parse(_start[1]),
+                                     Int32.Parse(_start[2]),
+                                     Int32.Parse(_start[3]),
+                                     Int32.Parse(_start[4]),
+                                     Int32.Parse(_start[5]));
+
+            if (end != null)
+            {
+                string[] _end = end.Split('-');
+                if (_end.Length != 6) return "error Parsing End Time";
+                endTime = new DateTime(Int32.Parse(_end[0]),
+                                         Int32.Parse(_end[1]),
+                                         Int32.Parse(_end[2]),
+                                         Int32.Parse(_end[3]),
+                                         Int32.Parse(_end[4]),
+                                         Int32.Parse(_end[5]));
+            }
+            else
+            {
+                endTime = DateTime.Now;
+            }
+            
+            string xml = SerialiseFaults(getListOfFaults(startTime, endTime));
+            return xml ;
+        }
+
+        List<Fault> SortByModifiedTime(List<Fault> faults)
+        {
+            Fault[] ret = faults.ToArray();
+            int length = faults.Count;
+            for (int n = 0; n < length - 1; n++)
+            {
+                for (int i = (n + 1); i < length; i++)
+                {
+                    Fault temp;
+                    if (ret[i].UpdateTime > ret[n].UpdateTime)
+                    {
+                        temp = ret[n];
+                        ret[n] = ret[i];
+                        ret[i] = temp;
+                    }
+                }
+            }
+
+            return ret.ToList();
+        }
+
+        Faults getListOfFaults(DateTime start, DateTime end)
+        {
+            Faults newList = new Faults();
+            newList.FaultInformation = new Fault[0];
+            newList.Version = 1;
+            long _start = start.Ticks;
+            long _end = end.Ticks;
+            List<Fault> _faults = new List<Fault>();
+            if (listofFaults.FaultInformation != null)
+            {
+                foreach (Fault fault in listofFaults.FaultInformation)
+                {
+                    if ((fault.UpdateTime >= _start) && (fault.UpdateTime <= _end))
+                    {
+                        _faults.Add(fault);
+                    }
+                }
+            }
+
+            if(_faults.Count > 0)
+            {
+                newList.FaultInformation = SortByModifiedTime(_faults).ToArray();
+            }
+
+            return newList;
+        }
+
+        private string SerialiseFaults(Faults faults)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            XmlSerializer xs = new XmlSerializer(typeof(Faults));
+            XmlTextWriter xmlTextWriter = new XmlTextWriter(memoryStream, Encoding.UTF8);
+            xs.Serialize(xmlTextWriter, faults);
+            string result = Encoding.UTF8.GetString(memoryStream.ToArray());
+            return result;
+        }
+
+http://localhost:60943/WebService1.asmx?WSDL
+
+40-340981
+
+https://www.youtube.com/watch?v=11iGyrvBhzc
+
+http://localhost:60943/WebService1.asmx?WSDL
+
+Wizard WSDL validation is disabled.
+
+http://localhost:60943/WebService1.asmx?WSDL
+
+C:\Program Files\Java\jdk1.7.0_79\bin
+
+http://localhost:60943/WebService1.asmx?WSDL
+
+ http://www.webservicex.com/globalweather.asmx?wsdl
+
+http://www.webservicex.com/globalweather.asmx?wsdl
+
+http://www.thomas-bayer.com/axis2/services/BLZService?wsdl
+
+http://localhost:60943/WebService1.asmx?WSDL
+
+C:\Program Files\Java\jdk1.7.0_79\bin
+
+http://www.thomas-bayer.com/axis2/services/BLZService?wsdl
+
+http://localhost:60943/WebService1.asmx?WSDL
+
+C:\Temp\org\tempuri\package-info.java
+
+C:\Temp\org\tempuri\WebService1.java
+
+C:\Temp\org\tempuri\WebService1Soap.java
+
+C:\Temp\org\tempuri\CAFaultApi.java
+
+C:\Temp\org\tempuri\CAFaultApiResponse.java
+
+C:\Temp\org\tempuri\ObjectFactory.java
+
+package SoapApi;
+
+WebService1
+
+WebService1 webService = new WebService1();
+
+caFaultApi
+
+WebService1 webService = new WebService1();
+	/**
+
+getWebService1Soap
+
+WebService1Soap
+
+caFaultApi
+
+String xml = service.caFaultApi("dan", "test", "Everything", "");
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\WebService1Soap.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\CAFaultApi.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\CAFaultApiResponse.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\ObjectFactory.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\package-info.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\WebService1.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\CAFaultApiResponse.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\ObjectFactory.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\package-info.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\WebService1.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\WebService1Soap.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\SoapApi\CAFaultApi.java
+
+paul.zammit@theloansengine.co.uk
+
+gotNewUpdate
+
+Thread.Sleep(5000);
+
+gotNewUpdate
+
+	WebService1 webService = new WebService1();
+		WebService1Soap service =	 webService.getWebService1Soap();
+
+Date time = new Date();
+			    long now = time.getTime();
+			    String local_url;
+			    String _date;
+
+WebService1 webService = new WebService1();
+		WebService1Soap service =	 webService.getWebService1Soap();
+
+
+WebService1 webService = new WebService1();
+				WebService1Soap service =
+
+WebService1Soap service =	 webService.getWebService1Soap();
+
+
+String xml = service.caFaultApi("dan", "test", "Everything", "");
+
+<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><Version>0</Version></Faults>
+
+?<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:1:7</StartTime><EndTime>2016-7-18 10:2:7</EndTime><UpdateTime>636044329273945678</UpdateTime><UpdateTimeString>18/07/2016 10:02:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:12:7</StartTime><EndTime>2016-7-18 10:14:7</EndTime><UpdateTime>636044336475648165</UpdateTime><UpdateTimeString>18/07/2016 10:14:07</UpdateTimeString><Misc /></FaultInformation><Version>0</Version></Faults>
+
+<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:1:7</StartTime><EndTime>2016-7-18 10:2:7</EndTime><UpdateTime>636044329273945678</UpdateTime><UpdateTimeString>18/07/2016 10:02:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:12:7</StartTime><EndTime>2016-7-18 10:14:7</EndTime><UpdateTime>636044336475648165</UpdateTime><UpdateTimeString>18/07/2016 10:14:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX11</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:18:7</StartTime><EndTime>2016-7-18 10:22:7</EndTime><UpdateTime>636044341276746450</UpdateTime><UpdateTimeString>18/07/2016 10:22:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:25:7</StartTime><EndTime>2016-7-18 10:32:7</EndTime><UpdateTime>636044347278226943</UpdateTime><UpdateTimeString>18/07/2016 10:32:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:26:7</StartTime><EndTime /><UpdateTime>636044343677380700</UpdateTime><UpdateTimeString>18/07/2016 10:26:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:27:7</StartTime><EndTime /><UpdateTime>636044344277456725</UpdateTime><UpdateTimeString>18/07/2016 10:27:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:29:7</StartTime><EndTime /><UpdateTime>636044345477738788</UpdateTime><UpdateTimeString>18/07/2016 10:29:07</UpdateTimeString><Misc /></FaultInformation><Version>0</Version></Faults>
+
+com.thoughtworks.xstream.io.xml.XppReader.pullNextEvent(XppReader.java:124)
+	at com.thoughtworks.xstream.io.xml.AbstractPullReader.readRealEvent(AbstractPullReader.java:148)
+	at com.thoughtworks.xstream.io.xml.AbstractPullReader.readEvent(AbstractPullReader.java:141)
+	at com.thoughtworks.xstream.io.xml.AbstractPullReader.move(AbstractPullReader.java:118)
+	at com.thoughtworks.xstream.io.xml.AbstractPullReader.moveDown(AbstractPullReader.java:103)
+
+<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:1:7</StartTime><EndTime>2016-7-18 10:2:7</EndTime><UpdateTime>636044329273945678</UpdateTime><UpdateTimeString>18/07/2016 10:02:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:12:7</StartTime><EndTime>2016-7-18 10:14:7</EndTime><UpdateTime>636044336475648165</UpdateTime><UpdateTimeString>18/07/2016 10:14:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX11</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:18:7</StartTime><EndTime>2016-7-18 10:22:7</EndTime><UpdateTime>636044341276746450</UpdateTime><UpdateTimeString>18/07/2016 10:22:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:25:7</StartTime><EndTime>2016-7-18 10:32:7</EndTime><UpdateTime>636044347278226943</UpdateTime><UpdateTimeString>18/07/2016 10:32:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:26:7</StartTime><EndTime>2016-7-18 10:53:8</EndTime><UpdateTime>636044359881156591</UpdateTime><UpdateTimeString>18/07/2016 10:53:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:27:7</StartTime><EndTime /><UpdateTime>636044344277456725</UpdateTime><UpdateTimeString>18/07/2016 10:27:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:29:7</StartTime><EndTime>2016-7-18 10:36:7</EndTime><UpdateTime>636044349678771058</UpdateTime><UpdateTimeString>18/07/2016 10:36:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:39:7</StartTime><EndTime>2016-7-18 10:56:8</EndTime><UpdateTime>636044361681654275</UpdateTime><UpdateTimeString>18/07/2016 10:56:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:41:7</StartTime><EndTime>2016-7-18 10:52:8</EndTime><UpdateTime>636044359281020560</UpdateTime><UpdateTimeString>18/07/2016 10:52:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:43:7</StartTime><EndTime /><UpdateTime>636044353879816112</UpdateTime><UpdateTimeString>18/07/2016 10:43:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX8</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:59:8</StartTime><EndTime /><UpdateTime>636044363482036317</UpdateTime><UpdateTimeString>18/07/2016 10:59:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX11</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 11:5:8</StartTime><EndTime /><UpdateTime>636044367082940531</UpdateTime><UpdateTimeString>18/07/2016 11:05:08</UpdateTimeString><Misc /></FaultInformation><Version>0</Version></Faults>
+
+<Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:1:7</StartTime><EndTime>2016-7-18 10:2:7</EndTime><UpdateTime>636044329273945678</UpdateTime><UpdateTimeString>18/07/2016 10:02:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:12:7</StartTime><EndTime>2016-7-18 10:14:7</EndTime><UpdateTime>636044336475648165</UpdateTime><UpdateTimeString>18/07/2016 10:14:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX11</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:18:7</StartTime><EndTime>2016-7-18 10:22:7</EndTime><UpdateTime>636044341276746450</UpdateTime><UpdateTimeString>18/07/2016 10:22:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:25:7</StartTime><EndTime>2016-7-18 10:32:7</EndTime><UpdateTime>636044347278226943</UpdateTime><UpdateTimeString>18/07/2016 10:32:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:26:7</StartTime><EndTime>2016-7-18 10:53:8</EndTime><UpdateTime>636044359881156591</UpdateTime><UpdateTimeString>18/07/2016 10:53:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:27:7</StartTime><EndTime /><UpdateTime>636044344277456725</UpdateTime><UpdateTimeString>18/07/2016 10:27:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:29:7</StartTime><EndTime>2016-7-18 10:36:7</EndTime><UpdateTime>636044349678771058</UpdateTime><UpdateTimeString>18/07/2016 10:36:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:39:7</StartTime><EndTime>2016-7-18 10:56:8</EndTime><UpdateTime>636044361681654275</UpdateTime><UpdateTimeString>18/07/2016 10:56:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:41:7</StartTime><EndTime>2016-7-18 10:52:8</EndTime><UpdateTime>636044359281020560</UpdateTime><UpdateTimeString>18/07/2016 10:52:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 10:43:7</StartTime><EndTime /><UpdateTime>636044353879816112</UpdateTime><UpdateTimeString>18/07/2016 10:43:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX8</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-18 10:59:8</StartTime><EndTime /><UpdateTime>636044363482036317</UpdateTime><UpdateTimeString>18/07/2016 10:59:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX11</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-18 11:5:8</StartTime><EndTime /><UpdateTime>636044367082940531</UpdateTime><UpdateTimeString>18/07/2016 11:05:08</UpdateTimeString><Misc /></FaultInformation><Version>0</Version></Faults>
+
+?<?xml version="1.0" encoding="utf-8"?>
+
+public static final String VMS_DATA_VIEW = "VMS_BASIC_DATA";
+	public static final String VMS_DEFINITION_VIEW = "VMS_DEFINITION";
+	public static final String VMS_CONFIGURATION_VIEW = "VMS_CONFIGURATION";
+	public static final String VMS_DYNAMIC_VIEW = "VMS_DYNAMIC";
+	public static final String VMS_FAULTS_VIEW = "VMS_FAULTS";	
+	public static final String VMS_COMMANDS_VIEW = "VMS_COMMANDS";
+
+CCTV_DATA_VIEW
+
+	if (view.equalsIgnoreCase(CDBConstant.CCTV_COMMANDS_VIEW)) {
+											ArrayList<CCTVCommands> cctvCommands = tr.transformVMSCommands(rp);
+											for (CCTVSubscriber fs : subs) {
+												fs.cctvCommandUpdate(cctvCommands, deleted);
+											}
+										}
+
+transformCctvFaults
+
+cctvFaultsUpdate
+
+systemCodeNumber
+
+promissory note
+
+K10892626
+
+getSystemCodeNumber
+
+getClearedDate
+
+ailed for " + cdbUserName);
+					AdapterUtility.sleeping(AdapterConstant.RESTARTWAITERROR);
+				}
+			}
+			
+			if (testDiagInt(AdapterConstant.DIAGNOSTIC_T)) 
+			{
+				AdapterUtility.ps(logger, "Adapter main thread logged in");
+			}
+
+			// Register connection details with the CD
+
+K10892626
+
+Geronimo 
+
+server
+
+http://svnserver.infra.imtech.nl/ImCity/Products/ImCity/trunk/Source
+
+C:\Secure\Source\cutlas\Core\WebServices_x64
+
+C:\Secure\Source\cutlas\AutoBuild\Start_Build_VS10_x64.bat
+
+CO
+

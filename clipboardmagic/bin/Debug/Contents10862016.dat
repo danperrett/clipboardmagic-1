@@ -1,0 +1,122 @@
+Properties
+
+
+			//AdapterUtility.ps(logger, "\t'" + keyStr + "'");
+
+port
+
+Integer.parseInt("
+
+port
+
+System.out.println("Hello World");
+
+new String[5] =
+
+Random _r = new Random(4);
+
+? Faults Hardware and software when they occur, where they are from (specific street information) and when they cleared (New Faults and Fixed Fault information).
+ What sort of faults can you provide for us and we will need a specific fault code table, if there is any codes.
+
+
+Faults including Communication faults: 
+Camera to Instation
+Instation to JTMS
+Hardware Faults:
+	Camera
+	Instation
+	JTMS
+
+
+ 
+
+Hi Peter,
+  In answer to your questions
+?	We?d like to see  Hardware and software faults when they occur, where they are from (specific street information) and when they cleared (New Faults and Fixed Fault information). What sort of faults can you provide for us and we will need a specific fault code table, if there is any codes?
+StartTime and EndTime TTU format, times to have a resolution of minutes, seconds not necessary. 
+?	Fault information for any component from the Street to the ANPR JTMS system are needed.
+Faults including Communication faults: 
+Camera to Instation
+Instation to JTMS
+Hardware Faults:
+                                Camera
+                                Instation
+                                JTMS
+?	Below is a general diagram describing the interface
+
+
+ 
+
+?	We don?t like the idea of login in  to a database to retrieve fault information but we?d like if possible an XML web interface that we can request information from, we could periodically poll the interface so it will need to keep a certain level of historical faults that have occurred so that none are missed.  This will probably need to be hammered out a bit more once we find out what sort of fault information you can supply us with.
+
+Thanks.
+
+Dan Perrett
+01256891814
+
+
+
+images
+
+0
+
+ ChatManager chatm = ChatManager.getInstanceFor(conn);
+        chatm.addChatListener(new ChatManagerListener() 
+        {
+
+			@Override
+			public void chatCreated(Chat chat, boolean arg1) 
+			{
+				// TODO Auto-generated method stub
+				 chat.addMessageListener(new ChatMessageListener()
+			     {
+
+					@Override
+					public void processMessage(Chat arg0, Message arg1) 
+					{
+						    System.out.println("Message: " + arg1.getBody());
+							
+					}
+			     });
+				
+			}
+		});
+
+chat = ChatManager.getInstanceFor((XMPPConnection)connection).createChat("clearview@localhost");
+        	
+        	chat.sendMessage("s");
+
+/*
+
+if(To == "dan")
+				 {
+					 
+				
+
+Device: KLtest
+Type: Time synchronisation request
+Time: 2016-06-08 07:35:08
+
+No time zone for device
+
+Device: M720_Insight
+Category: Device Faults
+Type: GPRS/Ethernet Connection Failure
+Time: 2016-06-08 07:47:19
+
+9430
+
+Device: M720_Insight
+Category: Device Faults
+Type: GPRS/Ethernet Connection Failure
+Time: 2016-06-08 07:47:19
+
+ Set<ChatMessageListener> chats = chat.getListeners();
+				 chats.clear();
+
+String
+
+// TODO Auto-generated method stub
+
+Category
+

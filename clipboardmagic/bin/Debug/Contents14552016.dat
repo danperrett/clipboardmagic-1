@@ -1,0 +1,91 @@
+
+copy /Y C:\Secure\Source_x64\Core\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniDynamic420_vc10_rt.dll $(ProjectDir)..\..\bin
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniORB420_vc10_rt.dll $(ProjectDir)..\..\bin
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omnithread40_vc10_rt.dll $(ProjectDir)..\..\bin
+
+..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\
+
+10.164.114.184
+
+D:\Logs\CDBServer\
+
+..\..\$(Configuration)_x64\$(ProjectName)\
+
+..\..\$(Configuration)_x64\MoServices\
+
+..\..\$(Configuration)_x64\$(ProjectName)\
+
+C:\Secure\Source_x64\Core\version;..\..\ThirdParty\omniORB-4.2.0\include;..\..\ThirdParty\boost\boost_1_59_0;..\..\include;..\IDLCore-OmniOrb;..\DBConnection\utmcdbif;%(AdditionalIncludeDirectories)
+
+$(CutlasCore)
+
+C:\local\boost_1_59_0\lib64-msvc-10.0;C:\omniORB-4.2.0\lib\x86_win32;..\..\lib;%(AdditionalLibraryDirectories)
+
+..\..\Release_x64\CDBService\
+
+IF EXIST "%PROGRAMFILES(X86)%"
+
+C:\Secure\Source\cutlas\Core\ToolKits_x64\MoServices
+
+MoServices
+
+Core\ToolKits_x64\
+
+CutlasBase
+
+\CDBServer_x64
+
+CDBCore
+
+.;..\..\ThirdParty\boost\boost_1_59_0;%(AdditionalIncludeDirectories)
+
+..\..\$(Configuration)_x64\$(ProjectName)\
+
+copy /Y  $(TargetPath) $(CutlasCore)\Lib_x64
+
+$(TargetPath) 
+
+del C:\Secure\Source\cutlas\Core\ToolKits_x64\CutlasBase\..\..\Debug_x64\CutlasBase\CutlasBase.lib\*.*
+
+del C:\secure\source\cutlas\core\Debug_x64\CutlasBase\*.*
+
+del /Y C:\secure\source\cutlas\core\Debug_x64\CutlasBase\*.*
+
+del /q /f $(CutlasCore)\$(Configuration)_x64\$(ProjectName)\*.*
+
+IF EXIST "%PROGRAMFILES(X86)%"
+
+devenv "Core\ToolKits_x64\MoServices.sln" /
+
+devenv "Core\ToolKits_x64\CutlasBase.sln" /
+
+devenv "Core\\CDBServer_x64\CDBCore.sln" /
+
+C:\Secure\Source\cutlas\Core
+
+C:\Secure\Source\cutlas\Core\ThirdParty
+
+C:\Secure\Source\cutlas\Core\ThirdParty\boost\boost_1_59_0
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.2.0
+
+Start_Build_VS10_x64.bat
+
+C:\Secure\Source\cutlas\AutoBuild
+
+C:\Secure\Source\cutlas\Core\CDBServer
+
+elephone number
+
+C:\Program Files (x86)\boost\boost_1_42\lib
+
+C:\Secure\Source\cutlas\Core\ThirdParty\boost\boost_1_42\lib
+
+C:\Secure\Source\cutlas\Core\ThirdParty
+
+C:\local\
+
+$(CutlasCore)\ThirdPartyl
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.2.0\lib\x86_win32
+

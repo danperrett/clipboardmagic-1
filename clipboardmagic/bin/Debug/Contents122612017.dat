@@ -1,0 +1,401 @@
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Users\Daniel.Perrett\Desktop\Barnsley_BMBCFeeds
+
+D:\Logs\Adapters\Barnsley_BMBCFeeds\
+
+Barnsley_BMBCFeeds
+
+C:\Users\Daniel.Perrett\Desktop\Barnsley_BMBCFeeds
+
+Barnsley_BMBCFeeds
+
+C:\Users\Daniel.Perrett\Desktop\Barnsley_BMBCFeeds
+
+D:\Logs\Adapters\Barnsley_BMBCFeeds
+
+C:\Users\Daniel.Perrett\Desktop\Barnsley_BMBCFeeds
+
+C:\Barnsley_BMBCFeeds
+
+5472
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+C:\Secure\Source\cutlas\Core\Release\UTMCClient\DLL Release\UTMCClient.dll
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+initialiseVmsCollection
+
+Checking if the VMS data has changed
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+initialise
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+APERRETT889993
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+C:\Barnsley_BMBCFeeds
+
+U:\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+The specified procedure could not be found.
+
+http://www.bbc.co.uk/news/live/uk-politics-38723261
+
+maplink.lib
+
+allocateArray
+
+TSLMemoryHelper
+
+CoordinateSystem
+
+MemoryHelper
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+There is a dependency of the Maplink library in the current DatexII pull adapter which prevent myself from running this  on my laptop. 
+the actual usage of the maplink library is minimum in this adapter and only appears to is use it to convert co-ordinate
+
+http://www.bbc.co.uk/news/live/uk-politics-38723261
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+HIGH_IMPORTANCE
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+C:\Secure\Source\cutlas\Core\Release\AdapterService\Release\AdapterService.exe
+
+hasLastUpdateChanged
+
+https://datex2.stratostraffic.com/vms/status
+
+https://datex2.stratostraffic.com/vms/definition
+
+http://datexii.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+
+https://drakewell01.drakewell.com/datex2/datex2_predefinedlocations.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP%5B&showmatchcount=1&routelinks=7
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+
+https://datex2.stratostraffic.com/vms/status  
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/content.xml
+
+http://datex2.tistrafficinfo.com/England/MatrixSignals/content.xml
+
+https://drakewell01.drakewell.com/datex2/datex2_trafficdata.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP%5B&showmatchcount=1&routelinks=7
+
+https://datex2.stratostraffic.com/traveltime/status
+
+https://datex2.stratostraffic.com/vms/status
+
+https://datex2.stratostraffic.com/vms/definition
+
+https://datex2.stratostraffic.com/traveltime/status
+
+https://drakewell01.drakewell.com/datex2/datex2_trafficdata.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP%5B&showmatchcount=1&routelinks=7
+
+text/xml;charset=UTF-8
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/content.xml
+
+http://datex2.tistrafficinfo.com/England/MatrixSignals/metadata.xml
+
+http://datex2.tistrafficinfo.com/England/UnplannedEvent/metadata.xml
+
+http://datex2.tistrafficinfo.com/England/TrafficData/metadata.xml
+
+https://drakewell01.drakewell.com/datex2/datex2_trafficdata.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP%5B&showmatchcount=1
+
+http://datex2.tistrafficinfo.com/England/MatrixSignals/metadata.xml
+
+[Events]
+
+C:\Secure\Source\cutlas\Core\Release\DatexIIAdapter\DatexIIAdapter.dll
+
+UnplannedEventMetadataUrl=http://datex2.tistrafficinfo.com/England/UnplannedEvent/metadata.xml
+UnplannedEventContentUrl=http://datex2.tistrafficinfo.com/England/UnplannedEvent/content.xml
+CurrentPlannedMetadataUrl=http://datex2.tistrafficinfo.com/England/CurrentPlanned/metadata.xml
+CurrentPlannedContentUrl=http://datex2.tistrafficinfo.com/England/CurrentPlanned/content.xml
+FuturePlannedMetadataUrl=http://datex2.tistrafficinfo.com/England/FuturePlanned/metadata.xml
+FuturePlannedContentUrl=http://datex2.tistrafficinfo.com/England/FuturePlanned/content.xml
+CurrentRoadworksMetadataUrl=http://datex2.tistrafficinfo.com/England/CurrentRoadworks/metadata.xml
+CurrentRoadworksContentUrl=http://datex2.tistrafficinfo.com/England/CurrentRoadworks/content.xml
+FutureRoadworksMetadataUrl=http://datex2.tistrafficinfo.com/England/FutureRoadworks/metadata.xml
+FutureRoadworksContentUrl=http://datex2.tistrafficinfo.com/England/FutureRoadworks/content.xml
+ReportedBy=NTCC
+ClearedTime=2
+StartupQueryTimeout=60000
+PublishAccidents=N
+PublishIncidents=N
+PublishEvents=N
+PublishRoadworks=N
+
+https://datex2.stratostraffic.com/vms/status 
+
+situationRecord
+
+ReadToFollowing
+
+situationRecord
+
+https://drakewell01.drakewell.com/datex2/datex2_predefinedlocations.asp?v=2.2&node=ROTH_JT&bsp=SQWLDP[&locationtype=r&routelinks=7
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/content.xml
+
+http://datex2.tistrafficinfo.com/England/TrafficData/content.xml
+
+http://www.datex2.eu/schema/2/2_2/DATEXIISchema_2_2_2.xsd
+
+situationRecord
+
+vmsUnitTable
+
+http://datex2.tistrafficinfo.com/England/MatrixSignals/metadata.xml
+
+MetadataUrl=https://datex2.stratostraffic.com/vms/definition
+ContentUrl=https://datex2.stratostraffic.com/vms/status 
+
+groupOfLocations
+
+192.168.11.210
+
+payloadPublication
+
+vmsDescription
+
+https://datex2.stratostraffic.com/vms/definition
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+ContentUrl=http://datex2.tistrafficinfo.com/England/VariableMessageSign/content.xml
+
+Employee Number	Work Date	Account Number	Explanation	Sub- ledger	Pay Code	Billing Rate	Hours	Week No		Alpha Name	Week Ending	Comments		
+311419	16/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	17/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	18/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	19/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	20/01/2017	10860935182.1572.1100	South Yorkshire iTS		1	1	7.50	3		Perrett, Daniel	20/01/2017			
+
+
+Employee Number	Work Date	Account Number	Explanation	Sub- ledger	Pay Code	Billing Rate	Hours	Week No		Alpha Name	Week Ending	Comments		
+311419	1/16/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	1/20/2017	P & S		
+311419	1/17/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	1/20/2017	P & S		
+311419	1/18/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	1/20/2017	P & S		
+311419	1/19/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	1/20/2017	P & S		
+311419	1/20/2017	10860935182.1572.1100	South Yorkshire iTS		1	1	7.50	3		Perrett, Daniel	1/20/2017			
+
+
+Employee Number	Work Date	Account Number	Explanation	Sub- ledger	Pay Code	Billing Rate	Hours	Week No		Alpha Name	Week Ending	Comments		
+311419	16/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	17/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	18/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	19/01/2017	10862231010.1572.1100	MCS Development		1	1	7.50	3		Perrett, Daniel	20/01/2017	P & S		
+311419	20/01/2017	10860935182.1572.1100	South Yorkshire iTS		1	1	7.50	3		Perrett, Daniel	20/01/2017			
+
+
+Ball, John - UK <John.Ball@dynniq.co.uk>
+
+Gilday, Kevin - UK <kevin.gilday@dynniq.co.uk>; Ball, John - UK <John.Ball@dynniq.co.uk>
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+requestSnapShot->manager->m_interface->ClearErrors();
+
+GetErrors
+
+requestSnapShot->manager->m_interface->ClearErrors();
+
+requestSet
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestType_SnapShot
+
+RequestSnapShot
+
+Gilday, Kevin - UK <kevin.gilday@dynniq.co.uk>; Ball, John - UK <John.Ball@dynniq.co.uk>
+
+void ExtendWithCamera(string scn);
+
+Camera::
+
+ExtendWithCamera
+
+  virtual void ExtendWithCamera(string scn);
+
+ virtual void ExtendWithCamera(string scn);
+
+TycoCamera::
+
+ExtendWithCamera
+
+ virtual void ExtendWithCamera(string scn){};
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+scnList
+
+cameraList
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+10.164.114.151
+
+15688
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+std::string trim(const std::string& str,
+                 const std::string& whitespace = " \t")
+{
+    const auto strBegin = str.find_first_not_of(whitespace);
+    if (strBegin == std::string::npos)
+        return ""; // no content
+
+    const auto strEnd = str.find_last_not_of(whitespace);
+    const auto strRange = strEnd - strBegin + 1;
+
+    return str.substr(strBegin, strRange);
+}
+
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+cameraList
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\bin\Debug\
+
+route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+
+CAANPRAdapterSOAPInterface
+
+Http Timer TimedOut
+
+There is an Error in connection to the SOAP Server!
+
+XMLGregorianCalendar gregStart = DatatypeFactory.newInstance().newXMLGregorianCalendar(_date);
+
+ XMLGregorianCalendar gregStart;
+			    XMLGregorianCalendar gregEnd;
+
+D:\3-Workspace\ImCityAdapters\CAFaultAdapter\deploy\CAFaultAdapter.jar
+
+ INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '8', '0');
+commit;
+
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '8', '0');
+commit;
+
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+LPSYSTEMTIME
+
+SystemTimeToVariantTime
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ bool isfaultraised(string error, string scn);
+
+faultList
+
+CameraFaults_e
+
+typedef enum 
+{
+	COMMS_ERROR,
+	SNAPSHOT_ERROR,
+	SET_PRESET_ERROR,
+	SET_MARKER_ERROR,
+	UNKNOWN_ERROR
+}CameraFaults_e;
+
+errorType
+
+CameraFaults_e
+
+m_errorType
+
+SNAPSHOT_ERROR
+
+SET_PRESET_ERROR
+
+ErrorLog
+
+ else
+                    {
+                        logError("Cannot goto preset as camera specified is out of range!");
+                    }
+

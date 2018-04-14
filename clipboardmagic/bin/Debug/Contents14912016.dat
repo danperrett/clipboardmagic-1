@@ -1,0 +1,1013 @@
+C:\Users\502525009\Documents\Alstom Report.dotm
+
+The SRIF SSL interface module implements the S-RIF System Architecture Ref 1 design. This is the interface from the SRIF to the ICONIS Safety gateway.  The messages back and forth are in xml format and are described in Ref 1 chapter 5.2. 
+The SRIF module will set up a listener on a specific port and wait for a connection from one or more safety gateways. 
+The messages could also consist of up to 20 interlocking data element all of which are encoded using a NVF3B protocol so special consideration in the software is needed for that.
+2.	Security Considerations		SJS
+The protection mechanisms used, being  a sequence number, timeout and XML signing, meet the EN50159 criteria of  sequence number (7.3.1), timeout (7.3.3) and cryptographic techniques (7.3.8) and so, as depicted in the threat/defence matrix (7.4.2), provide protection against all seven threats.  Specifically, 
+?	the sequence number implemented in the Iconis Interface module protects against repetition, re-sequencing, insertion and deletion
+?	the timeout in the TCP Handler module protects against delay
+?	the XML signing protects against corruption and masquerade.
+XML signing is a type A1 security mechanism as described in EN50159 clause C2 and is therefore suitable for use in systems where unauthorised access cannot be excluded.
+The NVFB3 protocol is used for rail state information and control requests passed between the Safety Gateway and the SSL S-RIF.  This provides additional protection against five of the seven threats
+Scope
+	This document only covers the design of the SRIF interface with the ICONIS Safety gateway interface.
+
+3.	Design Overview
+ 
+Figure 1SRIF Overview
+Figure 1 give a brief overview of the different component to the SRIF ICONIS Safety gateway.
+The design can be broken down into 10 major components.
+?	Win32 Message Handler
+?	TCP Handler
+?	250 ms Timer
+?	Shared Memory
+?	Decode IF Messages
+?	Encode IF Messages
+?	Do Process
+?	XML Signing
+?	NVFB3 Encode/Decode
+?	PS9 Handler
+Mode details about each of the components can be found in the Design Section. Some of the component have multiple decode and encode uses.
+4.	Module Design
+Win32 Message Handler Module
+Main Function is to route and re-route messages.  This handler sits in the middle sending messages back and forth between the Encoder, Decode and the TCP Handler.  This handler has several jobs;
+?	At start up the init function will send a message to this handler to initialise all of the modules.
+?	On receipt of data from the TCP Handler it will forward this data to the Decode IF Message entity.
+?	On Receipt of the 250ms event tick the Handler calls the Encode Message IF routines.
+?	All Decode and Encode of NVFB3 messages are routed via the Win32 Handler module.
+
+TCP Handler Module
+The TCP handler is the main interface between the outside world and the SRIF itself.  During the initial setup the handler will start to listen on a certain port number which can be specified in the setup configuration.
+?	Upon receipt of data through the socket the TCP handler will cast off the first 4 byte which is the Length (Big Endian).
+?	Once the length is found and verified it can then receive the rest of the data, the first few bytes are validated to verify that we are receiving and xml structured message.
+?	With the information now received and packed into a receive buffer this then get forwarded to the Decode IF module.
+?	If no input message is found within a configurable timeout, the connection is regarded as dead and so the link is dropped. 	SJS
+250 MS Timer
+It is important that this timer is accurate so a multimedia timer is started after start-up which is initially set to 250ms. On expiry of this timer the Do Process Function are called in sequence to see what data is available for transmission.
+Decode IF messages Module
+Upon receipt of data from the TCP handler this module will firstly check that it can decode the information as a XML structure, failure to do this will result in the link being dropped. 
+Once the structure has been XML decoded a few check are carried out.
+?	Decode the signature and make sure it can be verified against the public key
+?	Decode the Header Element updating all internal structures that we have about this connection
+?	Decode the body element keeping a structure of the decoded information.
+?	If the message contains NVF3B data send this of to be decoded.
+?	If this is validated check the connection is in Available or greater state;  if it is available move it to Up state.
+?	Note the time received and track the time difference.
+?	Check the sequence number and if it is not one greater than the previous sequence number drop the connection		SJS
+
+Do Process
+The DoProcess Module run through data it has received from the MCS, if there is any, and starts to build and output message to be sent to the Safety gateway the procedure in short is:
+?	Check for Diagnostic alarms
+?	Check for Generated Alarms
+?	Check for all interlocking data
+?	Check for emergency alarms
+This is all packaged up and sent to the encode IF for transmission.
+
+NVFB3 Encode Decode Module.
+It?s down to this module to Encode and Decode the NVFB3 Data. When decoding it will:
+?	Decode the NVFB3 header and check the 2 CRC are valid.
+?	Check the Authenticity of the data by checking the source and destination address
+?	Check the correct sequence
+?	Check the Timeliness
+?	If any of the above fail then the data is discarded 
+?	If they pass then the data is forwarded to the MCS
+In the Encode this module:
+?	Reads data from the PS9 Module to encode
+?	Reads Echo responses from the Decoder to encode.
+?	Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRC?s to byte array
+?	Adds data to the byte array
+?	Calculates and adds the last 16 bit CRC to the byte array.
+?
+XML Signing 
+The XML signing module does two things encode of the xml message, decode of the xml message.  The signing process is better described in ref 2 
+During the encode procedure the following steps are taken:
+?	Create a SHA1 Digest value for the XML message
+?	Sign that Digest using a RSA-SHA1 encryption method
+?	Add CA Certificate to the xml structure 
+?	Place both the SHA1 Digest and RSA-SHA1 signature in the XML structure and send to the TCP handler for transition.
+
+During the Decode the following procedure is followed:
+?	The SHA1 digest is generated for the XML message and compared to the one which is sent.
+?	The RSA-SHA1 encryption is generated and then compared to the one which is sent.
+?	The Certificate and public key which are supplied are verified (on first message only) to verify that?s it from the CE and correct.
+If any of these above steps fail then the link to that Safety Gateway is closed.
+Shared Memory 
+The Shared memory gets created at initialisation and enables the monitoring of watchdog timers as well as communication from other processors.
+
+Encode IF Module
+The Encode IF Module follows the following procedures:
+?	Add Header information 
+?	Add Body information
+?	Create XML structured Text
+?	Sign XML
+?	Add four byte length information at front of message for receiving purposes, send to t TCP Handler
+MCS_PS9 Module
+The interface between the S-RIF and the MCS-CE makes use of the PS9 protocol (with 16-bit CRC extension) across a TCP/IP connection.   The MCS_PS9 source module implements a thread to manage the incoming and outgoing PS9 protocol state machines, queueing notification events and updating lock-protected shared state data for use by the XML-forming ICONIS Safety Gateway interface .
+The MCS-CE runs as server and listens on a TCP/IP port for a connection request.  After link connection a time message is sent by the MCS-CE every 30 seconds to check the link is still up.  If the S-RIF does not receive a time message within a configurable timeout, the connection is closed, a Diagnostic Alarm Link Down message is sent to ICONIS and the link is re-established.  On reconnection a Diagnostic Alarm Link Up message is sent to ICONIS.  
+While the link is active, it is monitored for incoming PS9 messages from MCS-CE.  
+Messages sent to the MCS-CE have the following content:
+ControlRequests  On detection of a Control Request from the ICONIS Safety Gateway, a MCS-CE TC message is built containing the relevant panel request numbers.
+ARSSubAreaStatus TBD
+MCS_IF
+This module manages the shared data that pass between the ICONIS Safety Gateway and MCS-CE.  It contains state data for the interlockings and queue mechanisms to manage the flow of event data between the 2 systems.  Access to all shared data structures is controlled using Windows critical sections.  For each interlocking, this module manages data stores for:
+?	Status Byte		(byte 0x1c1) 
+?	SPAD SignalMap	128 element bitmap indicating SPAD status for each signal 
+?	Control Requests	255 element bitmap bit for each panel request
+?	Indications		448 byte data containing the SSI defined railway state information
+Queues of event notifications are used for informing DoProcess of event notifications containing
+
+5.	References
+[ ] 	S-RIF System Architecture Specification, SSL/PR046/SYS/REP/00001Issue 2.0, 19th June 2015
+[2]	XML Specification, http://www.w3.org/TR/2008/REC-xml-20081126/, Issue 1.0 (Fifth Edition), 26 November 2008
+[3] 	XML Signature Syntax and Processing (Second Edition), http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/, Second Edition, 10 June 2008
+[4] 	EN50159 - Railway applications - Communication, signalling and processing systems - Safety-related communication in transmission systems.  September 2010
+
+
+Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRC?s to byte array
+?	Adds data to the byte 
+
+void  Dosha1Encode(BYTE* bufout, const char* bufin)
+
+Dosha1Encode
+
+Base64encode(encryptionBase64, (const char*)encryption, 128);
+
+Base64encode_len
+
+buffer64
+
+sprintf(buffer, "<Message><Status>%s</Status><SequenceNumber>%ld</SequenceNumber></Message>", localconnecstatus, sequenceNumber);
+
+Dosha1Encode((BYTE *)bufferOut, buffer);
+        Base64encode(buffer64, bufferOut, 20);
+
+CHECKANDEXIT(SequenceNumber, "decodeInterSRIFMessage SequenceNumber");
+
+1639
+
+GES C++ SOFTWARE ENGINEER
+
+int bufferCount = 0;
+
+//For Display only.
+char DisplayBuffer[END_OF_DISPLAY][256];
+char RepaintBuffer[DEBUG_LINES_END][256];
+
+
+BOOL bShuttingDown = FALSE;
+
+//Test Only
+LONG ddcount = 0;
+WORD ocount = 0;
+
+
+int APIENTRY _tWinMain(HINSTANCE hInstance,
+                       HINSTANCE hPrevInstance,
+                       LPTSTR    lpCmdLine,
+                       int       nCmdShow)
+
+char connectionStatus[10] = {0};
+BOOL MasterORStandby   = TRUE;  //True for MASTER
+
+
+void PrintDisplayBufferToScreen()
+
+void PrintDebugToScreen(const char *text, UINT32 logmask)
+
+void PrintToScreen(const char* text, int number)
+
+BOOL CALLBACK UnitTestDlgProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
+
+void initialiseSharedMemory()
+
+void CALLBACK MMtimer(UINT wTimerID, UINT msg, DWORD dwUser, DWORD dw1, DWORD dw2)
+
+void Queue_message_from_MCS(const char* buffer)
+
+******************************************************************************
+
+void SendTextToWindow(const char * text, UINT32 logmask)
+
+LONG SPRINT( HWND hDlg, LONG Row, LONG Col, LONG Ink, const char *PrintStr)
+
+WORD decodeInterSRIFMessage(char* input)
+
+<Message><Status>%s</Status><SequenceNumber>%ld</SequenceNumber><DigestValue>%s</DigestValue></Message>
+
+DWORD WINAPI recvThread(LPVOID lpParameter)
+
+WORD SendUDPMessage(char* ipaddress, char* message)
+
+void ShowText(DISPLAY_Location_e location, const char *otxt)
+
+******************************************************************************
+
+void logger(const char *text , UINT32 logmask)
+
+/******************************************************************************
+
+void createLogFile()
+
+/******************************************************************************
+
+void logger_hex(BYTE* pHex, size_t len, UINT32 logmask)
+
+/******************************************************************************
+* void logger_hex(BYTE* pHex, size_t len, UINT32 logmask)
+* 
+******************************************************************************/
+
+logger_s(const char *text, const char* val, UINT32 logmask)
+
+logger_1(const char *text, unsigned val, UINT32 logmask)
+
+/******************************************************************************
+* void logger_1(const char *text, unsigned val, UINT32 logmask)
+* 
+******************************************************************************/
+
+void writeToLoggerFile(const char *text, UINT32 logmask)
+
+******************************************************************************
+
+void WriteSrifInputToInterfaceDebugFile(const char* text)
+
+/******************************************************************************
+* void WriteSrifInputToInterfaceDebugFile(const char* text)
+* write input to log file
+******************************************************************************/
+
+WriteSrifOutputToInterfaceDebugFile
+
+char LogFile[50] = {'l', 'o', 'g', '.', 'd', 'a', 't'};
+
+extern void SendTextToWindow(const char * text, UINT32 logmask);
+
+void GetDecodeStats(DWORD *goodC, DWORD *badC, DWORD *goodA, DWORD *badA)
+
+Peloponnesian War
+
+ Matt Randall
+
+The DoProcess Module run through data it has received from the MCS, if any, and starts to build an output message to be sent to the Safety gateway. The procedure in short is:
+?	Check for Diagnostic alarms
+?	Check for Generated Alarms
+?	Check for all interlocking data
+?	Check for emergency alarms
+This is all packaged up and sent to the Encode IF for transmission.
+
+
+char SourceUnitID[50] = {0};
+char LogicalSourceID[50] = {0};
+char SourceStatus[50] = {0};
+char SourceLinkStatus[6] = {0};
+char MessageFormat[50] = {0};
+char DataLink[50] = {0};
+char SoftwareVersion[50] = {0};
+
+
+CRITICAL_SECTION sequence_CS;
+DWORD sequenceNumber = 0;
+
+Main Function is to route and re-route messages.  This handler sits in the middle sending messages back and forth between the Encode, Decode and the TCP Handler.  This handler has several jobs;
+?	At start up the Init function will send a message to this handler to initialise all of the modules.
+?	On receipt of data from the TCP Handler it will forward this data to the Decode IF Message entity.
+?	On Receipt of the 250ms event tick the Handler calls the Encode IF Message  routines.
+?	All Decode and Encode of NVFB3 messages are routed via the Win32 Handler module.
+
+
+3.2	TCP Handler Module
+The TCP handler is the main interface between the outside world and the SRIF itself.  During the initial setup the handler will start to listen on a certain port number which can be specified in the setup configuration.
+?	Upon receipt of data through the socket the TCP handler will cast off the first 4 bytes which is the Length (Big Endian).
+?	Once the length is found and verified it can then receive the rest of the data, the first few bytes are validated to verify that an XML structured message is being received.
+?	With the information now received and packed into a receive buffer, this is then forwarded to the Decode IF module.
+?	If no input message is found within a configurable timeout, the connection is regarded as dead and so the link is dropped.
+
+
+sockaddr sockAddrClient;
+
+//SOCKET Socket=NULL;
+
+static bool connected = false;
+static DWORD lengthCounter = 0;
+
+WORD dumpToInterfaceFile = 0;
+WORD dumpOuputToInterfaceFile = 0;
+
+LENGTH_OF_BUFFER
+
+This module Encodes and Decodes the NVFB3 Data. When decoding it will:
+?	Decode the NVFB3 header and check that both CRCs are valid.
+?	Check the Authenticity of the data by checking the source and destination address
+?	Check the correct sequence
+?	Check the Timeliness
+?	If any of the above fail then the data is discarded 
+?	If all checks pass then the data is forwarded to the MCS
+
+
+In the Encode this module:
+?	Reads data from the PS9 Module to encode
+?	Reads Echo responses from the Decoder to encode.
+?	Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRCs to byte array.
+?	Adds data to the byte array.
+?	Calculates and adds the last 16 bit CRC to the byte array.
+
+
+The XML Signing module does two things: encode of the XML message and decode of the XML message.  The signing process is better described in ref 2.
+During the encode procedure the following steps are taken:
+?	Create a SHA1 Digest value for the XML message
+?	Sign that Digest using a RSA-SHA1 encryption method
+?	Add CA Certificate to the XML structure 
+?	Place both the SHA1 Digest and RSA-SHA1 signature in the XML structure and send to the TCP handler for transmission.
+During the Decode the following procedure is followed:
+?	The SHA1 digest is generated for the XML message and compared to the one which is sent.
+?	The RSA-SHA1 encryption is generated and then compared to the one which is sent.
+?	The Certificate and public key which are supplied are verified (on first message only) to verify that it is from the CE and correct.
+If any of these above steps fail then the link to that Safety Gateway is closed.
+
+
+3.4	Decode IF messages Module
+Upon receipt of data from the TCP handler this module will firstly check that it can decode the information as an XML structure. Failure to do this will result in the link being dropped.  
+Once the structure has been XML decoded, a few checks are carried out.
+?	Decode the signature and make sure it can be verified against the public key
+?	Decode the Header Element updating all internal structures that are related to this connection.
+?	Decode the body element keeping a structure of the decoded information.
+?	If the message contains NVFB3 data send this off to be decoded.
+?	If this is validated, check the connection is in Available or greater state; if it is available move it to Up state.
+?	Note the time received and track the time difference.
+?	Check the sequence number and if it is not one greater than the previous sequence number drop the connection	
+
+
+GetVersionInfo
+
+/* ------------------------------------------------------------ *
+ * file:        certverify.c                                    *
+ * purpose:     Example code for OpenSSL certificate validation *
+ * author:      06/12/2012 Frank4DD                             *
+ *                                                              *
+ * gcc -lssl -lcrypto -o certverify certverify.c                *
+ * ------------------------------------------------------------ */
+
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
+#include <openssl/x509_vfy.h>
+
+int main() {
+
+  const char ca_bundlestr[] = "./ca-bundle.pem";
+  const char cert_filestr[] = "./cert-file.pem";
+
+  BIO              *certbio = NULL;
+  BIO               *outbio = NULL;
+  X509          *error_cert = NULL;
+  X509                *cert = NULL;
+  X509_NAME    *certsubject = NULL;
+  X509_STORE         *store = NULL;
+  X509_STORE_CTX  *vrfy_ctx = NULL;
+  int ret;
+
+  /* ---------------------------------------------------------- *
+   * These function calls initialize openssl for correct work.  *
+   * ---------------------------------------------------------- */
+  OpenSSL_add_all_algorithms();
+  ERR_load_BIO_strings();
+  ERR_load_crypto_strings();
+
+  /* ---------------------------------------------------------- *
+   * Create the Input/Output BIO's.                             *
+   * ---------------------------------------------------------- */
+  certbio = BIO_new(BIO_s_file());
+  outbio  = BIO_new_fp(stdout, BIO_NOCLOSE);
+
+  /* ---------------------------------------------------------- *
+   * Initialize the global certificate validation store object. *
+   * ---------------------------------------------------------- */
+  if (!(store=X509_STORE_new()))
+     BIO_printf(outbio, "Error creating X509_STORE_CTX object\n");
+
+  /* ---------------------------------------------------------- *
+   * Create the context structure for the validation operation. *
+   * ---------------------------------------------------------- */
+  vrfy_ctx = X509_STORE_CTX_new();
+
+  /* ---------------------------------------------------------- *
+   * Load the certificate and cacert chain from file (PEM).     *
+   * ---------------------------------------------------------- */
+  ret = BIO_read_filename(certbio, cert_filestr);
+  if (! (cert = PEM_read_bio_X509(certbio, NULL, 0, NULL))) {
+    BIO_printf(outbio, "Error loading cert into memory\n");
+    exit(-1);
+  }
+
+  ret = X509_STORE_load_locations(store, ca_bundlestr, NULL);
+  if (ret != 1)
+    BIO_printf(outbio, "Error loading CA cert or chain file\n");
+
+  /* ---------------------------------------------------------- *
+   * Initialize the ctx structure for a verification operation: *
+   * Set the trusted cert store, the unvalidated cert, and any  *
+   * potential certs that could be needed (here we set it NULL) *
+   * ---------------------------------------------------------- */
+  X509_STORE_CTX_init(vrfy_ctx, store, cert, NULL);
+
+  /* ---------------------------------------------------------- *
+   * Check the complete cert chain can be build and validated.  *
+   * Returns 1 on success, 0 on verification failures, and -1   *
+   * for trouble with the ctx object (i.e. missing certificate) *
+   * ---------------------------------------------------------- */
+  ret = X509_verify_cert(vrfy_ctx);
+  BIO_printf(outbio, "Verification return code: %d\n", ret);
+
+  if(ret == 0 || ret == 1)
+  BIO_printf(outbio, "Verification result text: %s\n",
+             X509_verify_cert_error_string(vrfy_ctx->error));
+
+  /* ---------------------------------------------------------- *
+   * The error handling below shows how to get failure details  *
+   * from the offending certificate.                            *
+   * ---------------------------------------------------------- */
+  if(ret == 0) {
+    /*  get the offending certificate causing the failure */
+    error_cert  = X509_STORE_CTX_get_current_cert(vrfy_ctx);
+    certsubject = X509_NAME_new();
+    certsubject = X509_get_subject_name(error_cert);
+    BIO_printf(outbio, "Verification failed cert:\n");
+    X509_NAME_print_ex(outbio, certsubject, 0, XN_FLAG_MULTILINE);
+    BIO_printf(outbio, "\n");
+  }
+
+  /* ---------------------------------------------------------- *
+   * Free up all structures                                     *
+   * ---------------------------------------------------------- */
+  X509_STORE_CTX_free(vrfy_ctx);
+  X509_STORE_free(store);
+  X509_free(cert);
+  BIO_free_all(certbio);
+  BIO_free_all(outbio);
+  exit(0);
+}
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010
+
+..\openssl-1.0.2d-32bit-release-static-vs2010\lib\libeay32.lib
+..\openssl-1.0.2d-32bit-release-static-vs2010\lib\ssleay32.lib
+
+PEM_read_bio_X509_AUX
+
+X509_STORE_CTX_init
+
+verify_callback
+
+SSL_CTX_set_verify
+
+PEM_read_bio_X509_AUX
+
+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
+
+0x30, 0x82, 0x04, 0x65, 0x30, 0x82, 0x02, 0x4d, 0xa0, 0x03, 0x02, 0x01, 0x02, 0x02, 0x02, 0x10, 0x00, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x05, 0x05, 0x00, 0x30, 0x81, 0x9a, 0x31, 0x0b, 0x30, 0x09, 0x06, 0x03, 0x55, 0x04, 0x06, 0x13, 0x02, 0x47, 0x42, 0x31, 0x0e, 0x30, 0x0c, 0x06, 0x03, 0x55, 0x04, 0x08, 0x13, 0x05, 0x44, 0x65, 0x72, 0x62, 0x79, 0x31, 0x0e, 0x30, 0x0c, 0x06, 0x03, 0x55, 0x04, 0x07, 0x13, 0x05, 0x44, 0x65, 0x72, 0x62, 0x79, 0x31, 0x16, 0x30, 0x14, 0x06, 0x03, 0x55, 0x04, 0x0a, 0x13, 0x0d, 0x43, 0x6f, 0x6c, 0x6f, 0x75, 0x72, 0x6e, 0x65, 0x74, 0x2e, 0x6f, 0x72, 0x67, 0x31, 0x1e, 0x30, 0x1c, 0x06, 0x03, 0x55, 0x04, 0x0b, 0x13, 0x15, 0x43, 0x65, 0x72, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x65, 0x20, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x31, 0x10, 0x30, 0x0e, 0x06, 0x03, 0x55, 0x04, 0x03, 0x13, 0x07, 0x44, 0x61, 0x76, 0x65, 0x20, 0x43, 0x41, 0x31, 0x21, 0x30, 0x1f, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x09, 0x01, 0x16, 0x12, 0x64, 0x61, 0x76, 0x65, 0x40, 0x63, 0x6f, 0x6c, 0x6f, 0x75, 0x72, 0x6e, 0x65, 0x74, 0x2e, 0x6f, 0x72, 0x67, 0x30, 0x1e, 0x17, 0x0d, 0x31, 0x35, 0x30, 0x33, 0x30, 0x37, 0x32, 0x30, 0x30, 0x39, 0x30, 0x39, 0x5a, 0x17, 0x0d, 0x31, 0x36, 0x30, 0x33, 0x30, 0x36, 0x32, 0x30, 0x30, 0x39, 0x30, 0x39, 0x5a, 0x30, 0x57, 0x31, 0x0b, 0x30, 0x09, 0x06, 0x03, 0x55, 0x04, 0x06, 0x13, 0x02, 0x47, 0x42, 0x31, 0x0e, 0x30, 0x0c, 0x06, 0x03, 0x55, 0x04, 0x08, 0x13, 0x05, 0x44, 0x65, 0x72, 0x62, 0x79, 0x31, 0x16, 0x30, 0x14, 0x06, 0x03, 0x55, 0x04, 0x0a, 0x13, 0x0d, 0x43, 0x6f, 0x6c, 0x6f, 0x75, 0x72, 0x6e, 0x65, 0x74, 0x2e, 0x6f, 0x72, 0x67, 0x31, 0x10, 0x30, 0x0e, 0x06, 0x03, 0x55, 0x04, 0x0b, 0x13, 0x07, 0x53, 0x2d, 0x52, 0x49, 0x46, 0x20, 0x31, 0x31, 0x0e, 0x30, 0x0c, 0x06, 0x03, 0x55, 0x04, 0x03, 0x13, 0x05, 0x73, 0x72, 0x69, 0x66, 0x31, 0x30, 0x81, 0x9f, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x81, 0x8d, 0x00, 0x30, 0x81, 0x89, 0x02, 0x81, 0x81, 0x00, 0xe0, 0x8e, 0x49, 0x31, 0x37, 0x59, 0x1f, 0xa0, 0x78, 0xb3, 0x3d, 0xce, 0x47, 0x64, 0xec, 0x98, 0x52, 0x63, 0x16, 0xdb, 0x4c, 0x58, 0xaf, 0xcd, 0x78, 0x70, 0xea, 0xbd, 0xd3, 0xeb, 0x92, 0x51, 0x99, 0xa9, 0x71, 0xf4, 0x98, 0x34, 0xbc, 0x25, 0x3d, 0xf0, 0x3b, 0xd8, 0x02, 0x49, 0x97, 0x71, 0xd9, 0xf9, 0x54, 0xbd, 0xe7, 0xbb, 0x60, 0xba, 0x9c, 0x0c, 0x10, 0xef, 0xb0, 0x1a, 0xbd, 0xaa, 0x7f, 0x63, 0x79, 0xb9, 0xa3, 0x8b, 0x18, 0xc9, 0x89, 0x37, 0xc8, 0xc3, 0x8b, 0x44, 0xec, 0xc6, 0xdd, 0x56, 0xd6, 0x2a, 0x2c, 0x9d, 0x8d, 0x0e, 0xbe, 0xa8, 0x8e, 0x57, 0x89, 0xa3, 0x49, 0xda, 0xcd, 0xe7, 0x31, 0x43, 0xf6, 0x60, 0x7e, 0x96, 0xcb, 0x0a, 0x23, 0xd9, 0x68, 0xbd, 0x70, 0xe4, 0x4c, 0xd1, 0x42, 0xbb, 0x71, 0x0a, 0x55, 0xe7, 0x09, 0x41, 0x2f, 0x95, 0xb3, 0xdb, 0x14, 0xbd, 0x02, 0x03, 0x01, 0x00, 0x01, 0xa3, 0x7b, 0x30, 0x79, 0x30, 0x09, 0x06, 0x03, 0x55, 0x1d, 0x13, 0x04, 0x02, 0x30, 0x00, 0x30, 0x2c, 0x06, 0x09, 0x60, 0x86, 0x48, 0x01, 0x86, 0xf8, 0x42, 0x01, 0x0d, 0x04, 0x1f, 0x16, 0x1d, 0x4f, 0x70, 0x65, 0x6e, 0x53, 0x53, 0x4c, 0x20, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x64, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x65, 0x30, 0x1d, 0x06, 0x03, 0x55, 0x1d, 0x0e, 0x04, 0x16, 0x04, 0x14, 0x74, 0x2c, 0x34, 0x5e, 0x72, 0x5c, 0x65, 0x63, 0x19, 0x74, 0xa9, 0x67, 0x12, 0x62, 0x60, 0x1f, 0x46, 0xe7, 0x94, 0x07, 0x30, 0x1f, 0x06, 0x03, 0x55, 0x1d, 0x23, 0x04, 0x18, 0x30, 0x16, 0x80, 0x14, 0x32, 0x9a, 0xa6, 0xa5, 0x54, 0xf6, 0x92, 0xaf, 0x7d, 0xb3, 0x63, 0x26, 0x37, 0xca, 0x53, 0x41, 0x9d, 0x7e, 0xd5, 0xa9, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x05, 0x05, 0x00, 0x03, 0x82, 0x02, 0x01, 0x00, 0xac, 0xd8, 0x7c, 0xaa, 0x91, 0xec, 0x9e, 0x3d, 0xa4, 0xad, 0x46, 0x60, 0x82, 0x21, 0x7e, 0xc7, 0x5b, 0x97, 0xf5, 0x1a, 0x9c, 0xc8, 0xdd, 0xd6, 0x40, 0x8a, 0x24, 0x12, 0x50, 0x15, 0xd3, 0x22, 0x68, 0x53, 0x95, 0xdc, 0x90, 0x56, 0x15, 0x8a, 0x8b, 0xa8, 0xf7, 0x56, 0xd6, 0xf7, 0x11, 0x87, 0x78, 0xb4, 0x50, 0xa3, 0x7a, 0xe2, 0xac, 0x76, 0x5b, 0x32, 0x44, 0xca, 0x94, 0x6b, 0x7a, 0xb7, 0x93, 0x1a, 0xd1, 0x87, 0x11, 0xd5, 0x16, 0x04, 0xbd, 0x53, 0xb2, 0xe9, 0x00, 0xf0, 0x9a, 0x69, 0xee, 0x82, 0xb5, 0xf2, 0x78, 0x85, 0xde, 0x75, 0x59, 0x83, 0xe2, 0xb9, 0xef, 0x51, 0x18, 0xa4, 0x1b, 0x36, 0x54, 0xd2, 0x92, 0xe5, 0x13, 0x95, 0x4d, 0x0a, 0x4d, 0xbe, 0xbe, 0xcb, 0x7f, 0xeb, 0xb9, 0xea, 0x22, 0xe5, 0xef, 0x8e, 0xa1, 0x07, 0xab, 0xb5, 0xcb, 0x9f, 0x56, 0x87, 0x08, 0x6c, 0x2a, 0x8e, 0xdb, 0x41, 0x78, 0x24, 0xb6, 0x5e, 0x12, 0x31, 0x32, 0x59, 0xc1, 0x3f, 0x8d, 0xe2, 0x5c, 0xd1, 0xad, 0xf4, 0x34, 0x73, 0xcf, 0x6e, 0x81, 0x17, 0x0a, 0xe8, 0x09, 0x10, 0x26, 0x03, 0x88, 0x9d, 0x2d, 0x80, 0x26, 0x8b, 0x78, 0x8c, 0xe7, 0x3b, 0x32, 0x17, 0x61, 0x3f, 0x06, 0x96, 0x55, 0x93, 0x90, 0xfd, 0x96, 0xa1, 0x72, 0xa8, 0x29, 0x9d, 0x74, 0xd4, 0x39, 0x26, 0x22, 0xc6, 0x94, 0x83, 0xda, 0xb5, 0x2d, 0x75, 0x5a, 0x04, 0xc4, 0xd0, 0xec, 0x75, 0x7a, 0x44, 0xac, 0x02, 0x91, 0xa8, 0x34, 0xbb, 0xa5, 0x88, 0x3f, 0xd4, 0x84, 0x7b, 0x9b, 0x03, 0x80, 0x56, 0x14, 0x75, 0xc7, 0x67, 0x7a, 0x08, 0xc4, 0x6f, 0xd2, 0x55, 0x0a, 0x9c, 0xb4, 0xdc, 0x48, 0x5d, 0x4c, 0x92, 0x7c, 0x9b, 0x74, 0x57, 0xa0, 0xf9, 0xfd, 0xc3, 0x81, 0x59, 0x72, 0xb5, 0x03, 0x0e, 0x84, 0xee, 0x88, 0x25, 0x31, 0x51, 0x23, 0xd7, 0x85, 0xe2, 0x51, 0x97, 0x32, 0x22, 0xd1, 0x10, 0x00, 0xee, 0x37, 0xa1, 0x7f, 0x7b, 0x0d, 0x43, 0x53, 0xb8, 0xed, 0xa2, 0x7b, 0xce, 0x41, 0xa4, 0xb6, 0x33, 0x38, 0x54, 0x38, 0x19, 0xd7, 0x09, 0x1b, 0x8e, 0x0c, 0xda, 0x7b, 0x64, 0x44, 0xe7, 0x30, 0xd1, 0xe9, 0x56, 0x08, 0x3a, 0x92, 0x02, 0x74, 0xbd, 0xf3, 0x49, 0x77, 0x59, 0x2f, 0x9c, 0x1b, 0x81, 0x3b, 0xfd, 0xc1, 0xfd, 0x0c, 0x3a, 0x9c, 0xd8, 0x8b, 0xe5, 0xda, 0x37, 0x82, 0x5a, 0x58, 0xaa, 0x9e, 0x4d, 0x4a, 0x10, 0xdd, 0xcc, 0xd9, 0x32, 0xb2, 0xcc, 0xa8, 0x96, 0x78, 0x9e, 0xc5, 0xbf, 0x6a, 0xab, 0xf7, 0x31, 0xb9, 0xb1, 0x0a, 0x28, 0x30, 0x61, 0xda, 0x06, 0x68, 0x27, 0x19, 0xa9, 0xed, 0xe0, 0xfc, 0x9c, 0xc1, 0xf9, 0x01, 0x7e, 0x57, 0x09, 0x67, 0x3a, 0xb1, 0x99, 0x2a, 0x79, 0x6a, 0x5c, 0x7c, 0x35, 0x17, 0x80, 0x89, 0x43, 0xa7, 0x1f, 0xd8, 0xfb, 0xcc, 0x85, 0x7a, 0x79, 0x0c, 0x8e, 0xa8, 0xe5, 0x78, 0x6e, 0x59, 0xad, 0x21, 0x2e, 0xdc, 0x04, 0x25, 0x87, 0xcd, 0xa9, 0xa3, 0x50, 0xf4, 0x25, 0x82, 0x94, 0x5e, 0xc6, 0x77, 0xfb, 0x5a, 0xa9, 0x26, 0xf6, 0xa8, 0x89, 0xf9, 0x7e, 0x19, 0x93, 0xae, 0x0f, 0x8f, 0xc2, 0x7e, 0x33, 0xc4, 0xc5, 0x94, 0xa6, 0x86, 0xf5, 0x68, 0xea, 0x7d, 0x65, 0xcb, 0x8d, 0xad, 0xbc, 0x1e, 0x42, 0x7f, 0x95, 0x8a, 0x09, 0x3e, 0x05, 0x73, 0xf2, 0xf2, 0x45, 0xec, 0x84, 0xaa, 0x67, 0xc0, 0xa2, 0xd0, 0x4a, 0x1d, 0x37, 0x14, 0x4c, 0x28, 0xff, 0x32, 0xfb, 0x17, 0x07, 0xb0, 0xad, 0x30, 0xfb, 0xcc, 0xd1, 0xd2, 0x41, 0x56, 0xb7, 0x49, 0xa4, 0x21, 0x52, 0x68, 0xf5, 0x3a, 0xcd, 0x8f, 0xce, 0xee, 0xf9, 0x19, 0x36, 0xa7, 0xe0, 
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqc
+DBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzR
+QrtxClXnCUEvlbPbFL0=
+
+0xe0, 0x8e, 0x49, 0x31, 0x37, 0x59, 0x1f, 0xa0, 0x78, 0xb3, 0x3d, 0xce, 0x47, 0x64, 0xec, 0x98, 0x52, 0x63, 0x16, 0xdb, 0x4c, 0x58, 0xaf, 0xcd, 0x78, 0x70, 0xea, 0xbd, 0xd3, 0xeb, 0x92, 0x51, 0x99, 0xa9, 0x71, 0xf4, 0x98, 0x34, 0xbc, 0x25, 0x3d, 0xf0, 0x3b, 0xd8, 0x02, 0x49, 0x97, 0x71, 0xd9, 0xf9, 0x54, 0xbd, 0xe7, 0xbb, 0x60, 0xba, 0x9c, 0x0c, 0x10, 0xef, 0xb0, 0x1a, 0xbd, 0xaa, 0x7f, 0x63, 0x79, 0xb9, 0xa3, 0x8b, 0x18, 0xc9, 0x89, 0x37, 0xc8, 0xc3, 0x8b, 0x44, 0xec, 0xc6, 0xdd, 0x56, 0xd6, 0x2a, 0x2c, 0x9d, 0x8d, 0x0e, 0xbe, 0xa8, 0x8e, 0x57, 0x89, 0xa3, 0x49, 0xda, 0xcd, 0xe7, 0x31, 0x43, 0xf6, 0x60, 0x7e, 0x96, 0xcb, 0x0a, 0x23, 0xd9, 0x68, 0xbd, 0x70, 0xe4, 0x4c, 0xd1, 0x42, 0xbb, 0x71, 0x0a, 0x55, 0xe7, 0x09, 0x41, 0x2f, 0x95, 0xb3, 0xdb, 0x14, 0xbd
+
+0xe0, 0x8e
+
+0xe0, 0x8e, 0x49, 0x31, 0x37, 0x59, 0x1f, 0xa0, 0x78, 0xb3, 0x3d, 0xce, 0x47, 0x64, 0xec, 0x98, 0x52, 0x63, 0x16, 0xdb, 0x4c, 0x58, 0xaf, 0xcd, 0x78, 0x70, 0xea, 0xbd, 0xd3, 0xeb, 0x92, 0x51, 0x99, 0xa9, 0x71, 0xf4, 0x98, 0x34, 0xbc, 0x25, 0x3d, 0xf0, 0x3b, 0xd8, 0x02, 0x49, 0x97, 0x71, 0xd9, 0xf9, 0x54, 0xbd, 0xe7, 0xbb, 0x60, 0xba, 0x9c, 0x0c, 0x10, 0xef, 0xb0, 0x1a, 0xbd, 0xaa, 0x7f, 0x63, 0x79, 0xb9, 0xa3, 0x8b, 0x18, 0xc9, 0x89, 0x37, 0xc8, 0xc3, 0x8b, 0x44, 0xec, 0xc6, 0xdd, 0x56, 0xd6, 0x2a, 0x2c, 0x9d, 0x8d, 0x0e, 0xbe, 0xa8, 0x8e, 0x57, 0x89, 0xa3, 0x49, 0xda, 0xcd, 0xe7, 0x31, 0x43, 0xf6, 0x60, 0x7e, 0x96, 0xcb, 0x0a, 0x23, 0xd9, 0x68, 0xbd, 0x70, 0xe4, 0x4c, 0xd1, 0x42, 0xbb, 0x71, 0x0a, 0x55, 0xe7, 0x09, 0x41, 0x2f, 0x95, 0xb3, 0xdb, 0x14, 0xbd
+
+Base64encode
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+1129
+
+certificate
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqc
+DBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzR
+QrtxClXnCUEvlbPbFL0=
+
+isPublicKeyPresent
+
+signatureInformation->RecvModulus
+
+CHECKANDEXIT
+
+CHECKPARAMANDEXIT
+
+  printf("%d", 6);
+
+#define language 437            //Line 1 #if language < 400  #undef language                 //Line 2 #else                           //Line 3 #define language 850            //Line 4 #ifdef language                 //Line 5    printf("%d", language);      //Line 6 #endif #endif
+
+In which of the following scenarios is a Copy Constructor called or  invoked
+
+#include <iostream> using namespace std;   class ExBase {  private:     static int stat; public:     static int GetStat(){ return stat; } };   int ExBase::stat = 25;
+
+class ExDer1 : public ExBase {  public:     friend int Der1Fn(){ return ExBase::stat; } };
+
+class ExDer1 : public ExBase {  public:     friend int Der1Fn(){ return ExBase::stat; } };   class ExDer2 : public ExBase{};   class ExDer : public ExDer1, public ExDer2{};
+
+cout << d.Der1Fn() << endl;
+
+polymorphic_cast
+
+int i = i;
+
+Which of the following methods can a developer use to override the default  terminate() function in C++? 
+
+template<typename T> class MyArray {  public:      Myarray ();      MyArray(MyArray& copy);      MyArray& operator=(MyArray& copy);     //... };   class MyData {  public:      MyData(MyArray<int>& x, MyArray<int>& y);     //...      const MyArray<int>& x();     const MyArray<int>& y(); };   MyArray<int> read_data(int*, char**); void make_changes(MyData* edit);   int main(int argc, char* argv[]) {      const MyArray<int> read_x = read_data(&argc, argv);     const MyArray<int> read_y = read_data(&argc, argv);           MyData user_data(read_x, read_y);     MyData edit_buffer (user_data);     make_changes(&edit_buffer); }    A.  MyData(MyArray<int>& x, MyArray<int>& y); should be MyData(const MyArray<int>& x, const MyArray<int>& y);  B.  MyArray& operator=(MyArray& copy); should be const MyArray& operator=(const MyArray& copy);  C.  void make_changes(MyData* edit); should be void make_changes(const MyData* edit);  D.  MyArray(MyArray& copy); should be MyArray(const MyArray& copy);  E.  const MyArray& operator=(const MyArray& copy); should be const MyArray& operator=(const MyArray& copy) const;   n Question 18: In the given C++ code snippet, which of the following statements correctly  identify how Mon of enum DOW can be assigned to a variable named var?   void main() 
+{     const int Mon = 1, Tue = 2;     enum DOW{ Mon = 11, Tue = 12 };    ...    A.  The variable var will have to be of type enum DOW, and then defined as:   var = Mon;  B.  Mon of enum DOW can not be assigned because the compiler will give a redefinition error.   C.  Since enum DOW has been declared and defined later, it will be pushed onto the stack later, but will be accessed first. Hence, the scope resolution operator is not required and var will be assigned as:    var = Mon;  D.  Since Mon is of type enum DOW, var will be assigned as:   var = :: My DOW;  E.  The variable var must be of type const int, and then it can be assigned as:   var = static_cast<const int>(Mon);  n Question 19: Which of the following are not pre-processor directives in C++?     A.  #ifndef  B.  #ifdef  C.  #elif  D.  #define  E.  #external  n Question 20: Which allocator member function do standard containers use to acquire  storage for their elements in C++?    A.  std::allocator<>::allocate(size_t)  B.  std::allocator<>::malloc(int)  C.  std::allocator<>::make(size_t)  D.  std::allocator<>::new(size_t)  E.  std::allocator<>::acquire(size_t)  n Question 21: Which of the following statements provide a valid reason not to use  RTTI for distributed (i.e. networked between different platforms) applications in C++?    A.  RTTI does not have standardized run-time behavior.  B.  RTTI uses too much memory.  C.  RTTI is too slow.  D.  RTTI's performance is unpredictable/non-deterministic.  E.  RTTI frequently fails to function correctly at run-time.  
+1234567890ABCDEFGHIJKLMNabcdefghijklmn! @ # $% ^ && * () _ +. Thirteen thousand five hundred seventy-nine II Stanford Lu Pa pick up. Qing Yuan Lantern Festival Dongfeng Trees spend the night more Blew Star rain BMW cars carved incense over the road phoenix study on three move okho light turn night ichthyosaur dance gold thread moth children Xue Liu laughter Angela Fragrance go trace of her thousands of Baidu Twilight However, looking back at that person is dim lights
+Reading has ended, if you download this article requires
+1 download coupons  
+download
+I want to free download this article?
+Join VIP Now
+Documents Free Download coupon download privileges
+Full stop paying documentation 8-fold from
+One thousand fine eBooks free look
+Next ?
+
+Your comment  
+
+????????????~
+240Post a comment
+User rating
+no comments
+
+? 2016 Baidu  Baidu before use Privacy Policy  |  Library Agreement  |  Site Map
+
+IKM_C++2new
+3 Baidu, 
+? download
+1 download coupons
+This two-dimensional code using a mobile phone sweep: ?
+The following results from the offer:?
+Baidu translation
+Wikipedia entries:?
+Baidu Encyclopedia
+
+
+program below?   template<typename T> class MyArray {  public:      Myarray ();      MyArray(MyArray& copy);      MyArray& operator=(MyArray& copy);     //... };   class MyData {  public:      MyData(MyArray<int>& x, MyArray<int>& y);     //...      const MyArray<int>& x();     const MyArray<int>& y(); };
+
+const int Mon = 1, Tue = 2;     enum DOW{ Mon = 11, Tue = 12 };
+
+Which allocator member function do standard containers use to acquire  storage for their elements in C++? 
+
+template <class T> class Base
+
+template <class T, class Q> class Derived<Q> : public Base<T>
+
+ template <class T, class Q> class Derived : public Base
+
+emplate <class T, class Q> class Derived : public Base<T>
+
+argouml.tigris.org
+
+http://argouml.tigris.org/
+
+TextToEncodeTextBox
+
+System::Void ConvertButton_Click(System::Object^  sender, System::EventArgs^  e) 
+        {
+            String^ text = TextToEncodeTextBox->Text;
+            int n = 0;
+            array<wchar_t, 1> ^chars = text->ToCharArray();
+            int length = chars->Length;
+
+        }
+
+LetterForm
+
+ System::Void ConvertButton_Click(System::Object^  sender, System::EventArgs^  e) 
+        {
+            String^ text = TextToEncodeTextBox->Text;
+            int n = 0;
+            array<wchar_t, 1> ^chars = text->ToCharArray();
+            int length = chars->Length;
+
+        }
+
+namespace Letter {
+
+
+mapOfText[c] = 0;
+
+OutputRichTextBox
+
+textOut
+
+Char::ToString(c);
+
+mapOfText.begin()
+
+mapOfText.end()
+
+for(it = mapOfText.begin(); it != mapOfText.end(); it++)
+
+mapOfText
+
+mapOfText.begin();
+
+ for(int n = 0; n < length; n++)
+    {
+
+ for(it = mapOfText.begin(); it != mapOfText.end(); it++)
+    {
+
+vectorOfText
+
+locationInMap
+
+char c = (char)chars[n];
+
+void Sort(std::map<char, int>::iterator *it);
+
+the quick brown for jumped over the lazy dog again and again and again!!!
+
+the quick brown for jumped over the lazy dog again and again and again!!! you its a good day at the sea side it nice to see the sea?
+
+mapOfText
+
+the quick brown for jumped over the lazy dog again and again and again!!!
+
+the quick brown for jumped over the lazy dog again and again and again!!! you its a good day at the sea side it nice to see the sea?
+
+
+OutputRichTextBox->Text = textOut;
+
+the quick brown for jumped over the lazy dog again and again and again!!! you its a good day at the sea side it nice to see the sea?
+
+ char c = sorted[n];
+
+locationInMap
+
+itc
+
+locationInMap
+
+Char::ToString(c);
+
+System::String^ Decode(array<int> input);
+
+LetterForm
+
+System::String^ Decode(int *input, int maxsize, std::map<char, int>* locationInformaiton);
+
+LetterForm
+
+::iterato
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\Letter.zip
+
+it
+
+mapOfText
+
+Char::ToString(c)
+
+#include <iostream>
+#include <queue>
+#include <map>
+#include <climits> // for CHAR_BIT
+#include <iterator>
+#include <algorithm>
+ 
+const int UniqueSymbols = 1 << CHAR_BIT;
+const char* SampleString = "this is an example for huffman encoding";
+ 
+typedef std::vector<bool> HuffCode;
+typedef std::map<char, HuffCode> HuffCodeMap;
+ 
+class INode
+{
+public:
+    const int f;
+ 
+    virtual ~INode() {}
+ 
+protected:
+    INode(int f) : f(f) {}
+};
+ 
+class InternalNode : public INode
+{
+public:
+    INode *const left;
+    INode *const right;
+ 
+    InternalNode(INode* c0, INode* c1) : INode(c0->f + c1->f), left(c0), right(c1) {}
+    ~InternalNode()
+    {
+        delete left;
+        delete right;
+    }
+};
+ 
+class LeafNode : public INode
+{
+public:
+    const char c;
+ 
+    LeafNode(int f, char c) : INode(f), c(c) {}
+};
+ 
+struct NodeCmp
+{
+    bool operator()(const INode* lhs, const INode* rhs) const { return lhs->f > rhs->f; }
+};
+ 
+INode* BuildTree(const int (&frequencies)[UniqueSymbols])
+{
+    std::priority_queue<INode*, std::vector<INode*>, NodeCmp> trees;
+ 
+    for (int i = 0; i < UniqueSymbols; ++i)
+    {
+        if(frequencies[i] != 0)
+            trees.push(new LeafNode(frequencies[i], (char)i));
+    }
+    while (trees.size() > 1)
+    {
+        INode* childR = trees.top();
+        trees.pop();
+ 
+        INode* childL = trees.top();
+        trees.pop();
+ 
+        INode* parent = new InternalNode(childR, childL);
+        trees.push(parent);
+    }
+    return trees.top();
+}
+ 
+void GenerateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes)
+{
+    if (const LeafNode* lf = dynamic_cast<const LeafNode*>(node))
+    {
+        outCodes[lf->c] = prefix;
+    }
+    else if (const InternalNode* in = dynamic_cast<const InternalNode*>(node))
+    {
+        HuffCode leftPrefix = prefix;
+        leftPrefix.push_back(false);
+        GenerateCodes(in->left, leftPrefix, outCodes);
+ 
+        HuffCode rightPrefix = prefix;
+        rightPrefix.push_back(true);
+        GenerateCodes(in->right, rightPrefix, outCodes);
+    }
+}
+
+ for(int n = 0; n < length; n++)
+    {
+
+ for(int n = 0; n < length; n++)
+    {
+       char c = (char)chars[n];
+
+INode* root = BuildTree(frequencies);
+
+class INode
+{
+public:
+    const int f;
+ 
+    virtual ~INode() {}
+ 
+protected:
+    INode(int f) : f(f) {}
+};
+ 
+class InternalNode : public INode
+{
+public:
+    INode *const left;
+    INode *const right;
+ 
+    InternalNode(INode* c0, INode* c1) : INode(c0->f + c1->f), left(c0), right(c1) {}
+    ~InternalNode()
+    {
+        delete left;
+        delete right;
+    }
+};
+ 
+class LeafNode : public INode
+{
+public:
+    const char c;
+ 
+    LeafNode(int f, char c) : INode(f), c(c) {}
+};
+ 
+struct NodeCmp
+{
+    bool operator()(const INode* lhs, const INode* rhs) const { return lhs->f > rhs->f; }
+};
+
+INode* BuildTree(const int (&frequencies)[UniqueSymbols])
+
+ HuffCodeMap codes;
+    GenerateCodes(root, HuffCode(), codes);
+    delete root;
+
+for (HuffCodeMap::const_iterator it = codes.begin(); it != codes.end(); ++it)
+    {
+        std::cout << it->first << " ";
+        std::copy(it->second.begin(), it->second.end(),
+                  std::ostream_iterator<bool>(std::cout));
+        std::cout << std::endl;
+    }
+
+
+typedef std::vector<bool> HuffCode;
+typedef std::map<char, HuffCode> HuffCodeMap;
+ 
+
+
+ 
+void GenerateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes)
+
+
+typedef std::vector<bool> HuffCode;
+typedef std::map<char, HuffCode> HuffCodeMap;
+ 
+
+
+#include <climits> // for CHAR_BIT
+#include <iterator>
+#include <algorithm>
+
+textOut
+
+$Rev::          $Revision of last commit
+$Author::       $Author of last commit
+$Date::         $Date of last commit
+
+$Rev:: 214                                  $Revision of last commit
+$Author:: 50252#                            $Author of last commit
+$Date:: 2016-01#                            $Date of last commit
+
+std::vector<bool> 
+
+itb = it->second.begin()
+
+Char::ToString(c);
+
+
+HuffCode
+
+const int UniqueSymbols = 1 << CHAR_BIT;
+
+while (*ptr != '\0')
+        ++frequencies[*ptr++];
+ 
+
+const char* ptr =
+
+this is an example for huffman encoding
+
+http://rosettacode.org/
+
+http://rosettacode.org/wiki/Category:Programming_Tasks
+
+Secure Hash Algorithm
+
+this is an example for huffman encoding
+
+Chauhan, Yogesh (Alstom Transportation, Non-GE) <yogesh.chauhan@ge.com>
+
+void SignElement(XMLDocument* doc, XMLElement* Signature, XMLElement* Message, SignatureInformation_t *signatureInformation)
+
+void PrepMessageForSignature(XMLElement *Message, char *body)
+
+Dosha1Encode((BYTE *)digest, transbody);
+
+void  Dosha1Encode(BYTE* bufout, const char* bufin)
+
+WORD DoRSASignature(XMLElement *SignedInfo, BYTE* encryption, RSA *rsaKey)
+
+WORD decodeSignature(XMLElement *signature, XMLElement *Message, SignatureInformation_t *signatureInformation, const char* const input)
+
+WORD CompareTwoSHA1Digests(const char* signedDigest, const char* message)
+
+WORD CompareSignedInfoElement(XMLElement* signature, SignatureInformation_t *signatureInformation, const char* SignatureString)
+
+CheckTheRSAEncryptionOfSignedInfo(SignatureString, _signatureValue, signatureInformation->rsaKey);
+
+WORD CheckTheRSAEncryptionOfSignedInfo(const char* signature, BYTE *SignatureValue, RSA *rsaKey)
+
+WORD CheckThex509Certificate(BYTE *certificate, SignatureInformation_t *signatureInformation)
+
+WORD StartDecode(const char* input, Message_t  *message, ConnectionListInformation_t *connectionInformation)
+
+void decodeHeaderElement(XMLElement *header, Message_t *message)
+
+void decodeBodyElement(XMLElement *body, Message_t *message, DWORD ConnectionID)
+
+void decodeInterlockingElement(XMLElement *interlocking, Interlocking_t *interlocking_t, DWORD SequenceNumber, DWORD ConnectionID)
+
+void handleResponseMessage(const BYTE *ResponseMessage, char* UniqueID, eNVFB3_element_t NVFB3_element, WORD ConnectionID)
+
+static void DealWithIncomingNVF3BData(NVFB3_INFO_e info, const char* data, char *UniqueID, DWORD SequenceNumber, DWORD ConnectionID)
+
+Function	Purpose
+
+DWORD DoProcessDiagnosticAlarms(DiagnosticAlarms_t* diagnosticAlarms)
+
+void DoProcessGeneratedAlarms(GeneratedAlarms_t *generatedAlarms)
+
+void PopulateSpad(SPAD_unbounded_t *spad, WORD iIxl, WORD ConnectionID)
+
+static int PopulateIndication(Interlocking_limited_t *Interlocking, WORD iIxl, WORD ConnectionID)
+
+Get the indication block for this interlocking, convert it to NVFB3 and add
+* it to the passed interlocking element
+
+static int PopulateStatusByte(Interlocking_limited_t *Interlocking, WORD iIxl, WORD ConnectionID)
+
+ Get the status byte for this interlocking, convert it to NVFB3 and add
+* it to the passed interlocking element
+
+DWORD DoProcessEmergencyAlarms(NVFB3_t* EmergencyAlarms, WORD ConnectionID)
+
+Called unconditionally every XML tick to send a NVBF message of the
+* emergency alarm bitmap of the S-RIF
+
+static int DoProcessTDInterpose(char *pTDEvent, Interpose_unbounded_t* Interpose)
+
+Add the passed interpose message to the pending structure
+
+Function	Purpose
+

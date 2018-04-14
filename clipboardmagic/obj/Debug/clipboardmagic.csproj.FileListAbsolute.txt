@@ -1,0 +1,56 @@
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.pdb
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Properties.Resources.resources
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csproj.GenerateResource.Cache
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.MainDialog.resources
+C:\Documents and Settings\dan.perrett\My Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Options.resources
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.MainDialog.resources
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Options.resources
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Properties.Resources.resources
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csproj.GenerateResource.Cache
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.pdb
+C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Users\daperret\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.pdb
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.MainDialog.resources
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Options.resources
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Properties.Resources.resources
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DisplayText.resources
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csprojResolveAssemblyReference.cache
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DisplayText.resources
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.MainDialog.resources
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Options.resources
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Properties.Resources.resources
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csproj.GenerateResource.Cache
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.pdb
+C:\Users\Daniel.Perrett\Documents\Projects\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.UserCredentials.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe.config
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DisplayText.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.MainDialog.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Options.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Properties.Resources.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.UserCredentials.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.UploadSchedule.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.SearchDatabase.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DownloadClipboard.resources

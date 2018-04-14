@@ -1,0 +1,351 @@
+LOG_SYNC_POINT
+
+UpdateLogFile
+
+  C:\SAS\SAS-cs28\Code\NS\src\CellManager\Cell_Layer3Sequencer.cpp(67):    PLAYBACKLOG::PlaybackLog::UpdateLogFile(NOT_TO_LOG, SAS_L3P, m_CellData->CellId, NULL);
+
+
+LOG_ACTIVATE_CELL
+
+UpdateLogFile
+
+WM_ADD_LOG_RECORD
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+UpdateLogFile
+
+CONTROL_INTERFACE::UpdateLogFile(
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+
+pData
+
+stProgramCommand *pData = (stProgramCommand *)pCommandObject->Data;
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+
+stProgramCommand 
+
+stProgramCommand *pData
+
+LOG_START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+stProgramCommand
+
+CopyLayer3ProgramCommand(DestProgCmd,ProgCmd);
+
+DestProgCmd
+
+case LOG_START_SUB_SCRIPT:
+
+UpdateLogFile
+
+InitialiseLayer3Data(&pProgramCommand->L3m);
+
+DestProgCmd
+
+stProgramCommand
+
+ memset(programCommand, 0, sizeof(stProgramCommand));
+
+InitialiseLayer3Data
+
+#include "l3sequenceutils.h"
+
+DestProgCmd
+
+#include "l3sequenceutils.h"
+
+GD68FL 
+
+d_per89@axcetly.net
+
+GD68FL 
+
+ case LOG_L3_RECEIVE_ANY_MESSAGE:
+                case LOG_START_SUB_SCRIPT:
+
+stProgramCommand *ProgCmd = static_cast<stProgramCommand*>(Data);
+
+pLogRecord->Data
+
+  CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+   CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+LOG_START_SUB_SCRIPT
+
+pCommandObject->Data
+
+  CONTROL_INTERFACE::UpdateLogFile(LOG_START_SUB_SCRIPT, SAS_MSG, -1, pCommandObject->Data);
+
+LOG_END_SUB_SCRIPT
+
+   CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+CONTROL_INTERFACE::UpdateLogFile(LOG_END_SUB_SCRIPT, SAS_MSG, -1, NULL);
+
+DoEndSubScript
+
+?	IR63462 
+
+IR63462 
+
+https://developer.amazonservices.co.uk/doc/products/products/v20111001/cSharp.html
+
+MarketplaceWebServiceProductsConfig
+
+setScenarioPath
+
+ switch (pathType)
+                {
+                    case "RelativeToScriptLocation":
+                        currentDirectory = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript);
+                        break;
+                    case "RelativeToUTRAN_GERANDirectory":
+                        currentDirectory = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                        break;
+                    default:
+                        break;
+                }
+
+folderpref
+
+folderPref
+
+fullPath
+
+filename
+
+    setScenarioPath(filename, folderPref, filename);
+
+
+  switch (pathType)
+            {
+                case "RelativeToScriptLocation":
+                    currentDirectory = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript) + "\\" + path;
+                    break;
+                case "RelativeToUTRAN_GERANDirectory":
+                    currentDirectory = UserPreferences.FolderPreferences.SASScenarioFileRootDir + "\\" + path;
+                    break;
+                case "Full":
+                    currentDirectory = path;
+                    break;
+                default:
+                    break;
+            }
+
+currentDirectory
+
+  switch (pathType)
+            {
+                case "RelativeToScriptLocation":
+                    currentDirectory = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript) + "\\" + path;
+                    break;
+                case "RelativeToUTRAN_GERANDirectory":
+                    currentDirectory = UserPreferences.FolderPreferences.SASScenarioFileRootDir + "\\" + path;
+                    break;
+                case "Full":
+                    currentDirectory = path;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (pathType)
+            {
+                case "RelativeToScriptLocation":
+                    currentDirectory = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript) + "\\" + path;
+                    break;
+                case "RelativeToUTRAN_GERANDirectory":
+                    currentDirectory = UserPreferences.FolderPreferences.SASScenarioFileRootDir + "\\" + path;
+                    break;
+                case "Full":
+                    currentDirectory = path;
+                    break;
+                default:
+                    break;
+            }
+
+
+currentDirectory
+
+http://www.pizzaexpress.com/offers/get/4838/#offershow
+
+    <Compile Include="ElementDataHandlers\HandleIEListProcessing.cs" />
+
+
+        public const string IEListProcessing = "IE List Processing";
+
+
+        ModifyVideo,
+
+
+return (_scriptElement.ElementData is Load2G3GScenario) ? true : false;
+
+List<ScriptElement> UpdateLteCell =
+                    _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsUpdateLteCell));
+
+                    _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsUpdateLteCell));
+
+ List<ScriptElement> Load2g3gScenario = _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsLoad2G3GScenario));
+                foreach (ScriptElement load in Load2g3gScenario)
+                {
+                    Load2G3GScenario _load = load.ElementData as Load2G3GScenario;
+                    _load.PathType = "Full";
+                }
+
+   List<ScriptElement> Load2g3gScenario = _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsLoad2G3GScenario));
+                foreach (ScriptElement load in Load2g3gScenario)
+                {
+                    Load2G3GScenario _load = load.ElementData as Load2G3GScenario;
+                    _load.PathType = "Full";
+                }
+
+                List<ScriptElement> Loadscenario = _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsLoadScenario));
+                foreach (ScriptElement load in Loadscenario)
+                {
+                    LoadScenario _load = load.ElementData as LoadScenario;
+                    _load.PathType = "Full";
+                }
+
+  static bool IsLoad2G3GScenario(ScriptElement _scriptElement)
+        {
+            return (_scriptElement.ElementData is Load2G3GScenario) ? true : false;
+        }
+
+        static bool IsLoadScenario(ScriptElement _scriptElement)
+        {
+            return (_scriptElement.ElementData is LoadScenario) ? true : false;
+        }
+
+            ScriptElement[] scriptElements = null;
+            ScriptDetailsData _details =  _ScriptElementList[0].ElementData as ScriptDetailsData;
+
+            string name = _details.Name;
+            string source = _details.Source.Replace("#", "").Trim();
+            string _end = source.Substring(source.Length - 4);
+       
+            if (_ScriptElementList != null)
+            {
+                if (_end == ".isc")
+                {
+                    List<ScriptElement> UpdateLteCell =
+                        _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsUpdateLteCell));
+                    foreach (ScriptElement update in UpdateLteCell)
+                    {
+                        UpdateLteCell _update = update.ElementData as UpdateLteCell;
+                        _update.PathType = "Full";
+                    }
+
+                    List<ScriptElement> Load2g3gScenario = _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsLoad2G3GScenario));
+                    foreach (ScriptElement load in Load2g3gScenario)
+                    {
+                        Load2G3GScenario _load = load.ElementData as Load2G3GScenario;
+                        _load.PathType = "Full";
+                    }
+
+                    List<ScriptElement> Loadscenario = _ScriptElementList.FindAll(new Predicate<ScriptElement>(IsLoadScenario));
+                    foreach (ScriptElement load in Loadscenario)
+                    {
+                        LoadScenario _load = load.ElementData as LoadScenario;
+                        _load.PathType = "Full";
+                    }
+                }
+                scriptElements = _ScriptElementList.ToArray();
+            }
+
+            return scriptElements;
+
+     static bool IsLoad2G3GScenario(ScriptElement _scriptElement)
+        {
+            return (_scriptElement.ElementData is Load2G3GScenario) ? true : false;
+        }
+
+        static bool IsLoadScenario(ScriptElement _scriptElement)
+        {
+            return (_scriptElement.ElementData is LoadScenario) ? true : false;
+        }
+
+  string name = _details.Name;
+            string source = _details.Source.Replace("#", "").Trim();
+            string _end = source.Substring(source.Length - 4);
+
+            string source = _details.Source.Replace("#", "").Trim();
+            string _end = source.Substring(source.Length - 4);
+
+ SASDebugLogger.WarningLog("Unable to Convert properly script from 14_6 to 14_7 something may be missing");
+
+ ScriptDetailsData _details =  _ScriptElementList[0].ElementData as ScriptDetailsData;
+
+try
+                {
+                    string source = _details.Source.Replace("#", "").Trim();
+                    string _end = source.Substring(source.Length - 4);
+                    if (_end.ToLower() == ".isc")
+                    {
+
+"Unable to Convert properly script from 14_6 to 14_7 something may be missing");
+
+\\10.97.116.124\SASDEV Shared folder\1. Shared Folder\Kritika\issue27
+
+S:\SAS\From Navneet\ForDan\.
+
+IsTerminalAutomated
+
+ResetBtnGUIWork
+
+EndSession
+
+ResetBtnGUIWork
+
+ResetBtnClickWork
+
+NcsStopPlayback
+
+ResetBtnClickWork
+
+TThread
+
+ 68 Grove Rd, KT16 9DJ
+
+HandleScriptTerminated
+
+Hi, 
+ Yes I've got your address and phone number OK, I'm just coming from Farnborough so its not far.
+Unfortunately I haven't been able to hire the van I wanted today, and I have to stay behind at work to meet a small deadline.
+The next available opportunity to get this van would be Sunday if that's OK.
+Is there someone around who can help me lift it into the van? and are these better transported upright or on there back?
+
+I'm sorry if I've inconvenienced you.
+
+Thanks.
+Dan. 
+
+Terminate
+
+DoL3LocationUpdate
+
+DoReconfigureLup
+
+HandlePlaybackTerminated
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\46.0.644
+
+HandlePlaybackTerminated
+
+ Any Van
+
+KT16 9DJ
+
+Dali a nada, puli na
+
+KT16 9DJ
+

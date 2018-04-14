@@ -1,0 +1,194 @@
+Alacrity 
+
+ToCharArray
+
+replaceText
+
+000183ddeeff000183aabbcc86dd600000000335113ffd29cc437fb90002020c29fffe66b4c7300000000000000324c1c5456439b83d13c413c40335639c4d455353414745207369703a3132303634383939303038405b333030303a3a333a323463313a633534353a363433393a623833645d3a35303630205349502f322e300d0a4d61782d466f7277617264733a2036380d0a526571756573742d446973706f736974696f6e3a206e6f2d666f726b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f766e642e336770702e736d730d0a4163636570742d436f6e746163743a202a3b2b672e336770702e736d7369700d0a5669613a205349502f322e302f554450205b666432393a636334333a376662393a323a3230633a323966663a666536363a623463375d3a353036303b206272616e63683d7a39684734624b6230346364656437623565300d0a5669613a205349502f322e302f5544502073637363662e616e79696d732e746573742e336770702e636f6d3b206272616e63683d7a39684734624b3235343337633963343436610d0a5669613a205349502f322e302f554450206970736d67772e616e79696d732e746573742e336770702e636f6d3b206272616e63683d7a39684734624b3335386336356562373762650d0a46726f6d3a203c7369703a2b313834373237333338303040746573742e336770702e636f6d3e3b207461673d41544c3234345f3864386237333262383733390d0a546f3a203c7369703a313230363438393930303840696d732e6d6e633331302e6d63633331302e336770706e6574776f726b2e6f72673e0d0a43616c6c2d49443a206666633733613837626163330d0a435365713a2032204d4553534147450d0a502d43616c6c65642d50617274792d49443a203c7369703a313230363438393930303840696d732e6d6e633331302e6d63633331302e336770706e6574776f726b2e6f72673e0d0a502d41737365727465642d4964656e746974793a203c7369703a2b313834373237333338303040746573742e336770702e636f6d3b757365723d70686f6e653e0d0a436f6e74656e742d4c656e6774683a2036360d0a0d0a010003912143003b0008a13241326300014170517152200029c8329bfd065ddf723619143c87d36e50d84d0605cfe1b41b14769341c17338ed0e8542210000000000
+
+0008a13241326300014170517152200029c8329bfd065ddf723619143c87d36e50d84d0605cfe1b41b14769341c17338ed0e8542210000000000
+
+0008a13241326300014170517152200029c8329bfd065ddf723619143c87d36e50d84d0605cfe1b41b14769341c17338ed0e8542210000000000
+
+SetTPOriginatorAddress
+
+MTParams
+
+string cp_mess = BuildSMSMTMessage(cpmessage);
+
+MTParams
+
+MTParams = smsmtForm1.GetData();
+
+ACTIVATE PDP CONTEXT 
+
+ACTIVATE_PDP_CONTEXT_ACCEPT_MT
+
+ERROR: 
+
+ERROR_MESSAGE_MT
+
+SasErrorMessage
+
+OnSASErrorMessage
+
+WM_SAS_ERROR_MESSAGE
+
+ReportError
+
+ACTIVATE_PDP_CONTEXT_ACCEPT_MT
+
+
+CELL ID = ReadCellId()
+
+HandleRLCSDU
+
+WM_RLC_SDU
+
+HandlePTTimer
+
+TimeoutGeneralAckTimer
+
+AbortLayer3SequenceOnAllActiveCells
+
+TimeoutGeneralAckTimer
+
+CellManagerThread::TimeoutGeneralAckTimer
+
+DEBUGLOG("
+
+CellManagerInterface::ReleaseStoredEvent
+
+ReleaseStoredEvent
+
+CONTROL_INTERFACE::ReleaseStoredEvent
+
+DEBUGLOG
+
+#ifdef DEBUG
+#define DEBUGLOG(z) DebugLog(z);
+extern void DebugLog(AnsiString szLogMessage);
+#else
+#define DEBUGLOG(z)
+#endif
+
+DEBUGLOG
+
+failed due to a timeout
+
+DoWaitForAnyMessage
+
+DoLayer3Sequence
+
+OnLayer3SequenceFailure
+
+DoLayer3Sequence
+
+OnLayer3SequenceFailure
+
+DoLayer3Sequence
+
+OnLayer3SequenceFailure
+
+ErrorOccurred
+
+AnsiString szDebugMessage;
+
+std::stringstream ss;
+
+m_pCommonFormControls->m_PlaybackInfo.ErrorOccurred
+
+#include <sstream>  
+
+ErrorOccurred
+
+DEBUGLOG
+
+DEBUGLOG(ss.str().c_str());
+
+DEBUGLOG("WaitForTask() Timeout");
+
+DEBUGLOG("WaitForTask() ErrorPlaybackTerminating");
+
+m_hTimerSemaphore
+
+StartTimer
+
+HandleSequenceCompleteWaitEvent
+
+CELL_MANAGER_SEQUENCE_COMPLETE_SEMAPHORE
+
+DEBUGLOG
+
+CELL_MANAGER_SEQUENCE_COMPLETE_SEMAPHORE
+
+m_hSequenceCompleteSemaphore
+
+GetSequenceCompleteSemaphore
+
+DEBUGLOG("Layer 3 Complete Sequence");
+
+ReportLayer3SequenceComplete
+
+HandleSequenceCompleteWaitEvent
+
+eWaitEvent
+
+DoLayer3Sequence() Timeout
+
+eWaitEvent
+
+bTimedOut
+
+dwTimeOut
+
+{
+        std::stringstream ss;
+        ss << "ErrorOccurred " << m_pCommonFormControls->m_PlaybackInfo.ErrorOccurred << std::endl;
+        DEBUGLOG(ss.str().c_str());
+    }
+
+HandleSequenceCompleteWaitEvent
+
+DoLayer3Sequence
+
+inlineSubscript
+
+dwTimeOut
+
+DoLayer3Sequence
+
+SubScriptInProgress
+
+  {
+        std::stringstream ss;
+        ss << "Timeout " << uTimeout << std::endl;
+        DEBUGLOG(ss.str().c_str());
+    }
+
+dwTimeOut
+
+   dwTimeOut += (inlineSubscript)? 1000 : 0;
+                    {
+                        std::stringstream ss;
+                        ss << "DANs: Timeout " << dwTimeOut << std::endl;
+                        DEBUGLOG(ss.str().c_str());
+                    }
+
+Activate PDP context 
+
+Run36: UE did not sent another Activate PDP context request and after one minute timer subscript failed but eventually the main script also failed with error ?Unexpected wait for procedure?. I was expecting this functionality to work in same manner as it work in sequencer. If my understanding is correct then script should not have failed at this point.
+
+09:41:13.34                                 Inline Sub Script Failed... continuing with main script.                                                                                                    
+09:41:13.37                                 ERROR: ACTIVATE PDP CONTEXT failed due to a timeout.                                                                                                        
+09:41:13.40                                 Verdict : FAIL                                                                                                                                              
+
+
+ 70217 
+
+C:\SAS\SAS-cs28\Code\NS\src\MMI\PlaybackThread-new.cpp
+
+   dwTimeOut += (inlineSubscript)? 200 : 0;
+
+70217 
+

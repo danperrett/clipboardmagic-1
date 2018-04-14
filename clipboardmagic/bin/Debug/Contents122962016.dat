@@ -1,0 +1,68 @@
+C:\Secure\Source\cutlas\Core\WebServices_x64\Envitia.ITS.Web.XmlService\bin\x64\Release\Envitia.ITS.Web.XmlService.dll
+
+http://localhost/vms_service/report.asmx?startAt=2015-Dec-01&endAt=2016-Jan-01
+
+Envitia.ITS.Web.XmlService
+
+
+# CORBA Connection
+
+devenv ".\Core\WebServices\Envitia.ITS.Web.XmlService.sln" /rebuild %1 %2 /OUT "build_%1.log"> nul
+
+@echo ---------------------------------------------------
+@echo BUILD: Web Services
+@echo ---------------------------------------------------
+
+
+WebServices_x64
+
+Newtonsoft.Json.Net20.dll
+
+GET
+
+ <xs:complexType name="ScriptInformation">
+    <xs:sequence>
+      <xs:element name="Version" type="xs:string" default="13.0"/>
+      <xs:element name="Certificate" type="Certificate" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+ minOccurs="1"/
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\CAInterface\CAInterface
+
+minOccurs="0" maxOccurs="unbounded"
+
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CAInterface"
+    targetNamespace="http://tempuri.org/CAInterface.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CAInterface.xsd"
+    xmlns:mstns="http://tempuri.org/CAInterface.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="DeviceSCN" type="xs:string" default="" />
+      <xs:element name="Category" type="xs:string" default="" />
+      <xs:element name="type" type="xs:string" default="" />
+      <xs:element name="StartTime" type="xs:string" default="" />
+      <xs:element name="EndTime" type="xs:string" default="" />
+      <xs:element name="Misc" type="xs:string" default="" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="Faults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FaultInformation" type="Fault" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Version" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\CAWebInterfaceForDynniq\CAWebInterfaceForDynniq
+

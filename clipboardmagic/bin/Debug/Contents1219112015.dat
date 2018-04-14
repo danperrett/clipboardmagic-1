@@ -1,0 +1,176 @@
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-11T10:39:45.428Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>9</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUAFD8h9rs2d8eqVQAAAQAAAJOhS3qgCrW/</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAEz8h9uonIfaqVQAAAQAAAF9qOmsGsdJF</IndicationsResponse><ControlRequests>CqECAAIAFD8h9ocrIfaqVQEAAQAAAMVkbdSC8QD0ng==</ControlRequests><ARSSubAreaStatus>CqECAAMAFD8h9ocrIfaqVQEAAQAAAEym6ktBvgALaA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQAFD8h9uonIfaqVQAAAQAAABQUw0UbxRqW</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsAFD8h9rs2d8eqVQAAAQAAAESq7O/PYWZV</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAFD8h9uonIfaqVQAAAQAAAH429ZmawfFu</IndicationsResponse><ControlRequests>CqECAAgAFD8h9ocrIfaqVQEAAQAAAPSemQCeVgBKhg==</ControlRequests><ARSSubAreaStatus>CqECAAkAFD8h9ocrIfaqVQEAAQAAAH1cHp9dGQC1cA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoAFD8h9uonIfaqVQAAAQAAAMMfZNB0rsl8</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIAEz8h9gAAAAAAAAAAAQAAAN7M0K7t3OES</EmergencyAlarmsResponse></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-11T10:39:45.428Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>9</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUAFD8h9rs2d8eqVQAAAQAAAJOhS3qgCrW/</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAEz8h9uonIfaqVQAAAQAAAF9qOmsGsdJF</IndicationsResponse><ControlRequests>CqECAAIAFD8h9ocrIfaqVQEAAQAAAMVkbdSC8QD0ng==</ControlRequests><ARSSubAreaStatus>CqECAAMAFD8h9ocrIfaqVQEAAQAAAEym6ktBvgALaA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQAFD8h9uonIfaqVQAAAQAAABQUw0UbxRqW</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsAFD8h9rs2d8eqVQAAAQAAAESq7O/PYWZV</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAFD8h9uonIfaqVQAAAQAAAH429ZmawfFu</IndicationsResponse><ControlRequests>CqECAAgAFD8h9ocrIfaqVQEAAQAAAPSemQCeVgBKhg==</ControlRequests><ARSSubAreaStatus>CqECAAkAFD8h9ocrIfaqVQEAAQAAAH1cHp9dGQC1cA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoAFD8h9uonIfaqVQAAAQAAAMMfZNB0rsl8</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIAEz8h9gAAAAAAAAAAAQAAAN7M0K7t3OES</EmergencyAlarmsResponse></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"></Envelope>
+
+CqEBAAIAFD8h9uonIfaqVQAAAQAAAH429ZmawfFu
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-11T10:39:45.428Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>9</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUAFD8h9rs2d8eqVQAAAQAAAJOhS3qgCrW/</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAEz8h9uonIfaqVQAAAQAAAF9qOmsGsdJF</IndicationsResponse><ControlRequests>CqECAAIAFD8h9ocrIfaqVQEAAQAAAMVkbdSC8QD0ng==</ControlRequests><ARSSubAreaStatus>CqECAAMAFD8h9ocrIfaqVQEAAQAAAEym6ktBvgALaA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQAFD8h9uonIfaqVQAAAQAAABQUw0UbxRqW</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsAFD8h9rs2d8eqVQAAAQAAAESq7O/PYWZV</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAFD8h9uonIfaqVQAAAQAAAH429ZmawfFu</IndicationsResponse><ControlRequests>CqECAAgAFD8h9ocrIfaqVQEAAQAAAPSemQCeVgBKhg==</ControlRequests><ARSSubAreaStatus>CqECAAkAFD8h9ocrIfaqVQEAAQAAAH1cHp9dGQC1cA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoAFD8h9uonIfaqVQAAAQAAAMMfZNB0rsl8</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIAEz8h9gAAAAAAAAAAAQAAAN7M0K7t3OES</EmergencyAlarmsResponse></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"></Envelope>
+
+0x9f, 0x3c, 0xe8, 0x6e, 0x17, 0xe0, 0x8a, 0xdc, 0x2a, 0x3a, 0x79, 0xbd, 0x25, 0xbe, 0x7c, 0x1c, 0xc3, 0x8d, 0xd0, 0x16
+
+BhmIBtDw22gj/6/XHYVLUa9CVcM=
+
+0x06, 0x19, 0x88, 0x06, 0xd0, 0xf0, 0xdb, 0x68, 0x23, 0xff, 0xaf, 0xd7, 0x1d, 0x85, 0x4b, 0x51, 0xaf, 0x42, 0x55, 0xc3,
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-11T10:39:45.428Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>9</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUAFD8h9rs2d8eqVQAAAQAAAJOhS3qgCrW/</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAEz8h9uonIfaqVQAAAQAAAF9qOmsGsdJF</IndicationsResponse><ControlRequests>CqECAAIAFD8h9ocrIfaqVQEAAQAAAMVkbdSC8QD0ng==</ControlRequests><ARSSubAreaStatus>CqECAAMAFD8h9ocrIfaqVQEAAQAAAEym6ktBvgALaA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQAFD8h9uonIfaqVQAAAQAAABQUw0UbxRqW</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsAFD8h9rs2d8eqVQAAAQAAAESq7O/PYWZV</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIAFD8h9uonIfaqVQAAAQAAAH429ZmawfFu</IndicationsResponse><ControlRequests>CqECAAgAFD8h9ocrIfaqVQEAAQAAAPSemQCeVgBKhg==</ControlRequests><ARSSubAreaStatus>CqECAAkAFD8h9ocrIfaqVQEAAQAAAH1cHp9dGQC1cA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoAFD8h9uonIfaqVQAAAQAAAMMfZNB0rsl8</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIAEz8h9gAAAAAAAAAAAQAAAN7M0K7t3OES</EmergencyAlarmsResponse></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+</Envelope>
+
+LogPath=C:\srif
+
+IconisTransmitTimePeriod=250
+IconisPortNumber=3400
+SourceUnitID=srif1unit1
+LogicalSourceID=srif1
+SourceStatus=MASTER
+MessageFormat=messagev01 
+DataLink=datav01
+SequenceStartNumber=10001
+
+
+typedef struct
+{
+    int TxPeriod;
+    int DDelay;
+    int FreshTolerance;
+    BYTE AppDomain;
+    WORD IconisAddress;
+    WORD SRIFAddress;
+    DWORD DataVer;
+} NVFB3_config_t;
+
+NVFB3_config_t
+
+NVFB3ConfigARS
+
+NVFB3Type_e
+
+NVFB3_INFO_e
+
+WM_NVFB3_MESSAGE
+
+UniqueID
+
+NVFB3_context_t *NVFB3_context
+
+NVFB3_context
+
+NVFB3_context->NVFB3ConfigControl
+
+NVFB3_config_t
+
+element_type
+
+eNVFB3_element_t
+
+NVFB3_CONTROLREQUESTS
+
+NVFB3_ARSSUBAREASTATUS
+
+config
+
+NVFB3_context
+
+config
+
+NVFB3_context
+
+config
+
+WORD CheckTheAuthenticity(NVFB_header* header, NVFB3_config_t *NVFB3_config)
+
+InterlockingControl_00_
+
+InterlockingControl_00_IconisAddress=4
+InterlockingControl_00_SRIFAddress=2
+InterlockingControl_00_AppDomain=10
+
+
+%02d
+
+GetPrivateProfileString("Interlockings", szIxlCfgName, "0", value3, sizeof(value3), iniFilename);
+
+NVFB3_config_t
+
+GetPrivateProfileString("Interlockings", szIxlCfgName, "0", value3, sizeof(value3), iniFilename);
+
+Control
+
+szIxlCfgName
+
+InterlockingControl_00_SRIFAddress
+
+sprintf(szIxlCfgName, "InterlockingControl_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.IconisAddress = (WORD)atoi(temp);
+
+InterlockingControl_00_SRIFAddress
+
+%02d
+
+sprintf(szIxlCfgName, "InterlockingControl_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.SRIFAddress = (WORD)atoi(temp);
+
+
+InterlockingControl_00_AppDomain
+
+%02d
+
+ sprintf(szIxlCfgName, "InterlockingControl_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingControl_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingControl_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.AppDomain = (WORD)atoi(temp);
+
+InterlockingARS
+
+NVFB3_config_t
+
+void MCS_AddInterlockingFromConfig(int iIxl,
+                                   const char* SSIID, 
+                                   const char* UniqueId, 
+                                   WORD MCS_Interlocking_Index,
+                                   NVFB3_config_t control,
+                                   NVFB3_config_t ARSSubArea)
+
+#include "NVFB3.h"
+
+Control
+
+ARSSubArea
+
+InterlockingControl_00_IconisAddress=4
+InterlockingControl_00_SRIFAddress=2
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=3
+InterlockingARS_00_SRIFAddress=2
+InterlockingARS_00_AppDomain=10
+
+Control
+
+NVFB3_config_t
+
+ZeroMemory(&Control, sizeof(NVFB3_config_t));
+
+ARSSubArea
+
+NVFB3_config_t
+
+MCS_interlockings
+
+NVFB3_config_t
+
+MCS_interlockings[iIxl].
+
+NVFB3_config_t
+
+memcpy(&(MCS_interlockings[iIxl].Control), &control, sizeof(NVFB3_config_t));
+
+ARSSubArea
+

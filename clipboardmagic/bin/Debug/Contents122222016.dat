@@ -1,0 +1,86 @@
+WriteString
+
+CStdioFile
+
+CLogFile
+
+CStdioFile
+
+ScrollToPosition
+
+hFileNull
+
+window_handle
+
+HWND
+
+SendMessage
+
+CreateWindow
+
+CRichEditView
+
+Scroll
+
+ Scroll();
+
+void ScrollToEnd();
+
+CTechView::
+
+        nEnd = GetRichEditCtrl().GetTextLength();
+        GetRichEditCtrl().SetSel(nEnd, nEnd);
+
+long
+
+ScrollWindow
+
+Scroll
+
+nLines
+
+Scroll
+
+CRichEditView
+
+GetRichEditCtrl().GetFocus();
+
+  GetRichEditCtrl().ScrollWindow(0, nLines);
+
+GetRichEditCtrl().ScrollWindow(0, nLines);
+
+ long   nEnd = GetRichEditCtrl().GetTextLength();
+    GetRichEditCtrl().SetSel(nEnd, nEnd);
+
+GetRichEditCtrl().ScrollWindow(0, nLines);
+
+ScrollToEnd
+
+GetRichEditCtrl().GetFocus()
+
+SetRedraw
+
+const int MAX_LINES = 4096;
+    const int DISCARD_LINES = 128;
+    if (GetRichEditCtrl().GetLineCount() > MAX_LINES)
+    {
+        long nEnd = GetRichEditCtrl().LineIndex(DISCARD_LINES);
+        GetRichEditCtrl().SetSel(0, nEnd);
+        GetRichEditCtrl().HideSelection(TRUE, FALSE);
+        GetRichEditCtrl().ReplaceSel("");
+        nEnd = GetRichEditCtrl().GetTextLength();
+        GetRichEditCtrl().SetSel(nEnd, nEnd);
+    }
+
+GetRichEditCtrl().ScrollWindow(0, -10);
+
+WM_COMM_RXCHAR
+
+GetOverlappedResult
+
+WM_COMM_RXCHAR
+
+ GetRichEditCtrl().SetSel(0, -1);            // Select all
+    GetRichEditCtrl().ReplaceSel("");
+    GetRichEditCtrl().SetSel(0, 0);
+

@@ -1,0 +1,301 @@
+C:\Secure\Source\cutlas\Core\WebServices_x64\Envitia.ITS.Web.XmlService\bin\x64\Release\Envitia.ITS.Web.XmlService.dll
+
+http://localhost/vms_service/report.asmx?startAt=2015-Dec-01&endAt=2016-Jan-01
+
+Envitia.ITS.Web.XmlService
+
+
+# CORBA Connection
+
+devenv ".\Core\WebServices\Envitia.ITS.Web.XmlService.sln" /rebuild %1 %2 /OUT "build_%1.log"> nul
+
+@echo ---------------------------------------------------
+@echo BUILD: Web Services
+@echo ---------------------------------------------------
+
+
+WebServices_x64
+
+Newtonsoft.Json.Net20.dll
+
+GET
+
+ <xs:complexType name="ScriptInformation">
+    <xs:sequence>
+      <xs:element name="Version" type="xs:string" default="13.0"/>
+      <xs:element name="Certificate" type="Certificate" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+ minOccurs="1"/
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\CAInterface\CAInterface
+
+minOccurs="0" maxOccurs="unbounded"
+
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CAInterface"
+    targetNamespace="http://tempuri.org/CAInterface.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CAInterface.xsd"
+    xmlns:mstns="http://tempuri.org/CAInterface.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="DeviceSCN" type="xs:string" default="" />
+      <xs:element name="Category" type="xs:string" default="" />
+      <xs:element name="type" type="xs:string" default="" />
+      <xs:element name="StartTime" type="xs:string" default="" />
+      <xs:element name="EndTime" type="xs:string" default="" />
+      <xs:element name="Misc" type="xs:string" default="" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="Faults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FaultInformation" type="Fault" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Version" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\CAWebInterfaceForDynniq\CAWebInterfaceForDynniq
+
+To learn more about ASP.NET
+
+Page_Load
+
+MasterPage
+
+Page_Load
+
+System.Web.UI.Page
+
+Create a New Account
+
+  <%= GetXMLInformation() %>
+
+GetXMLInformation
+
+
+        	{
+        		
+
+Random rand = new Random();
+
+listofFaults
+
+timer.Start();
+
+            
+
+
+DateTime time = DateTime.Now;
+            string now = string.Format("{0}-{1}-{2} {3}:{4}:{5}", time.Year, time.Month, time.Day, time.Hour, time.Minute, time.Second);
+            fault.StartTime = now;
+
+if (listofFaults != null)
+            {
+                List<Fault> lofF = listofFaults.FaultInformation.ToList();
+                lofF.Add(fault);
+                listofFaults.FaultInformation = lofF.ToArray();
+            }
+
+fault.UpdateTime = time.ToString();
+
+MemoryStream memoryStream = new MemoryStream ( );
+XmlSerializer xs = new XmlSerializer ( typeof ( MyObject) );
+XmlTextWriter xmlTextWriter = new XmlTextWriter ( memoryStream, Encoding.UTF8 );
+xs.Serialize ( xmlTextWriter, myObject);
+string result = Encoding.UTF8.GetString(memoryStream .ToArray());
+
+faults
+
+
+1.1.1 Subsystem Faults
+Code	Description
+0	Cannot connect to XMPP server
+1	Clearview Client Offline
+
+
+1.1.1 Fault Types
+	Camera Faults
+0	Offline Camera
+1	Hardware/Software fault in camera
+2	Camera Comms Faults cannot communicate with camera.
+	Instation Faults
+3	Offline
+4	Hardware/Software Faults
+5	Communication Fault
+	Sub Faults
+6	Adapter can?t connect to web interface
+
+
+new Faults();
+
+listofFaults.FaultInformation = new Fault[0];
+
+?<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-6-29 16:18:22</StartTime><EndTime /><UpdateTime>29/06/2016 16:18:22</UpdateTime><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-6-29 16:18:32</StartTime><EndTime /><UpdateTime>29/06/2016 16:18:32</UpdateTime><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-6-29 16:18:42</StartTime><EndTime /><UpdateTime>29/06/2016 16:18:42</UpdateTime><Misc /></FaultInformation><Version>0</Version></Faults>
+
+2016-6-29 16:18:42
+
+<?xml version="1.0" encoding="utf-8"?>
+<Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd">
+<FaultInformation>
+<DeviceSCN>EvoX1</DeviceSCN>
+<Category>Camera</Category>
+<type>Hardware Fault</type>
+<StartTime>2016-6-29 16:18:22</StartTime>
+<EndTime />
+<UpdateTime>29/06/2016 16:18:22</UpdateTime>
+<Misc />
+</FaultInformation>
+<FaultInformation>
+<DeviceSCN>EvoX1</DeviceSCN>
+<Category>Camera</Category>
+<type>Hardware Fault</type>
+<StartTime>2016-6-29 16:18:32</StartTime>
+<EndTime />
+<UpdateTime>29/06/2016 16:18:32</UpdateTime>
+<Misc />
+</FaultInformation>
+<FaultInformation>
+<DeviceSCN>EvoX1</DeviceSCN>
+<Category>Camera</Category>
+<type>Hardware Fault</type>
+<StartTime>2016-6-29 16:18:42</StartTime>
+<EndTime>2016-6-29 17:10:00</EndTime>
+<UpdateTime>29/06/2016 16:18:42</UpdateTime>
+<Misc />
+</FaultInformation>
+<Version>0</Version>
+</Faults>
+
+Extended Interface Example:
+<?xml version="1.0" encoding="utf-8"?>
+<Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd">
+<FaultInformation>
+<DeviceSCN>EvoX1</DeviceSCN>
+<Category>Camera</Category>
+<type>Hardware Fault</type>
+<StartTime>2016-6-29 16:18:22</StartTime>
+<EndTime />
+<UpdateTime>29/06/2016 16:18:22</UpdateTime>
+<Misc />
+</FaultInformation>
+<FaultInformation>
+<DeviceSCN>EvoX1</DeviceSCN>
+<Category>Camera</Category>
+<type>Hardware Fault</type>
+<StartTime>2016-6-29 16:18:32</StartTime>
+<EndTime />
+<UpdateTime>29/06/2016 16:18:32</UpdateTime>
+<Misc />
+</FaultInformation>
+<FaultInformation>
+<DeviceSCN>EvoX1</DeviceSCN>
+<Category>Camera</Category>
+<type>Hardware Fault</type>
+<StartTime>2016-6-29 16:18:42</StartTime>
+<EndTime>2016-6-29 17:10:00</EndTime>
+<UpdateTime>29/06/2016 16:18:42</UpdateTime>
+<Misc />
+</FaultInformation>
+<Version>0</Version>
+</Faults>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CAInterface"
+    targetNamespace="http://tempuri.org/CAInterface.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CAInterface.xsd"
+    xmlns:mstns="http://tempuri.org/CAInterface.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="DeviceSCN" type="xs:string" default="" />
+      <xs:element name="Category" type="xs:string" default="" />
+      <xs:element name="type" type="xs:string" default="" />
+      <xs:element name="StartTime" type="xs:string" default="" />
+      <xs:element name="EndTime" type="xs:string" default="" />
+      <xs:element name="UpdateTime" type="xs:string" default="" />
+      <xs:element name="Misc" type="xs:string" default="" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Faults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FaultInformation" type="Fault" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Version" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+https://www.w3.org/
+
+Java XMPP Smack Library (open source library)	http://www.igniterealtime.org/projects/smack/
+
+Request.Querystring(
+
+start_time=20160320010000&end_time=20160322010000
+
+http://localhost:63750/Default.aspx?StartTime=20160320010000&EndTime=20160322010000
+
+20160320010000
+
+Int32.Parse(_start[0]),
+
+startTime = new DateTime(Int32.Parse(_start[0]),
+                                     Int32.Parse(_start[1]),
+                                     Int32.Parse(_start[2]),
+                                     Int32.Parse(_start[3]),
+                                     Int32.Parse(_start[4]),
+                                     Int32.Parse(_start[5]));
+
+string[] _end = end.Split('-');
+
+if (_end.Length != 6) return "error Parsing End Time";
+
+ string xml = SerialiseFaults(listofFaults);
+
+SortByModifiedTime
+
+ret
+
+SortByModifiedTime(_faults)
+
+ret[n]
+
+ret[i]
+
+getListOfFaults(startTime, endTime);
+
+Code	Description
+0	Not Connected
+1	Power Failure
+2	Charger Failure
+3	Battery Low
+4	Loop Sensor Failure
+5 	Ethernet Card Shutdown
+6	Device Resetting
+7	Timing Error
+8	Watchdog Reset
+9	Device Initialising
+10	No Data
+11	Missing Data
+12	CSD Request Failure
+13	GPRS/Ethernet Connection Failure
+
+
+1
+

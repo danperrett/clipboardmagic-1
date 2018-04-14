@@ -1,0 +1,399 @@
+GetScriptVariableInDriverFormat
+
+IEProgramVariable driverProgramVar = new IEProgramVariable();
+
+            if (InformationElement != null)
+            {
+                driverProgramVar.Direction = (DirectionType)Enum.Parse(typeof(DirectionType), InformationElement.direction);
+                driverProgramVar.IEName = InformationElement.Name;
+                driverProgramVar.ProtocolMessage = (ProtocolMessageType)Enum.Parse(typeof(ProtocolMessageType), InformationElement.ProtocolMessageType);
+            }
+
+            driverProgramVar.Name = Name;
+            driverProgramVar.VariableType = (ProgramVariableBase.VariableTypeEnum)VarType;
+
+ IEProgramVariable driverProgramVar = new IEProgramVariable();
+
+            if (InformationElement != null)
+            {
+                driverProgramVar.Direction = (DirectionType)Enum.Parse(typeof(DirectionType), InformationElement.direction);
+                driverProgramVar.IEName = InformationElement.Name;
+                driverProgramVar.ProtocolMessage = (ProtocolMessageType)Enum.Parse(typeof(ProtocolMessageType), InformationElement.ProtocolMessageType);
+            }
+
+            driverProgramVar.Name = Name;
+            driverProgramVar.VariableType = (ProgramVariableBase.VariableTypeEnum)VarType;
+
+((IEVariable)this).InformationElement
+
+StringProgramVariable driverProgramVar = new StringProgramVariable();
+
+            driverProgramVar.Name = Name;
+            driverProgramVar.ImplicitConversionType = (StringProgramVariable.ImplicitConversionTypeEnum)this.ImplicitConversionType;
+
+(StringVariable)
+
+progVar = driverProgramVar;
+
+ConvertGUIVariblesToDriverVariables
+
+ Anite.Sequencer.InterfacesCopy.ProgramVariableBase[]
+
+Anite.Sequencer.InterfacesCopy.ProgramVariableBase[] progVars
+
+progVars
+
+ProgramVariableBase
+
+// Add variables to variable dictionary
+            foreach (ProgramVariableBase programVariable in _RunCommand.scriptVariables)
+            {
+                m_SequencerVariables.AddVariable(programVariable);
+            }
+
+private SequencerVariables m_SequencerVariables = null;
+
+m_SequencerVariables
+
+messageCounter.LTECount[str]
+
+messageCounter.variableToCountTo[str]
+
+varName
+
+ if (m_SequencerVariables != null)
+                                {
+                                    EvaluatorVariable variable = null;
+                                    m_SequencerVariables.Find(varName, out variable);
+                                    if (variable.IsNumeric)
+                                    {
+                                        variable.AssignValue(messageCounter.LTECount[str].ToString());
+                                    }
+                                }
+
+assignCountToVariable
+
+messageCounter.LTECount[str]
+
+assignCountToVariable(varName,
+
+m_SequencerVariables
+
+resetMessageCountList();
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\SASLTEInteractiveScriptMode\ScriptElementHandlers\Class1.cs
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2010. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/01/13 10:35:25GMT $
+ * $Revision: 1.2 $
+ * $Source: Code/SASLTEInteractiveScriptMode/ScriptElementHandlers/CSFBElementHandler.cs $
+ *
+ ****************************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Anite.Interactive.Utils;
+using Anite.Sequencer;
+using Anite.Sequencer.Interfaces;
+
+IScriptElementHandler
+
+ ScriptModeEngine ScriptEngine = null;
+
+        SCRIPT_MODE_STATES state = SCRIPT_MODE_STATES.GET_MESAGE;
+
+
+     public void updateEngine(ScriptModeEngine engine)
+        {
+            ScriptEngine = engine;
+        }
+
+        public void subscribe(object func)
+        {
+            handoverFunc = (HandoverCellHandler)func;
+        }
+
+        public SCRIPT_MODE_EVENT_TYPES RunElement(ElementData data, string cellID)
+        {
+            InteractiveMTCSFB CSFBData = data as InteractiveMTCSFB;
+
+            timerValue = 6 * 60 * 1000;
+
+            if (handoverFunc != null)
+            {
+                handoverFunc(CSFBData.CellTo);
+                ScriptEngine.setupTimeOut(SCRIPT_MODE_EVENT_TYPES.HANDOVER_COMPLETE, timerValue);
+                return SCRIPT_MODE_EVENT_TYPES.HANDOVER_COMPLETE;
+            }
+
+            return SCRIPT_MODE_EVENT_TYPES.NONE;
+        }
+
+        public void CopyDataTo(ElementData data)
+        {
+        }
+
+        public SCRIPT_MODE_STATES changeStateTo()
+        {
+            return state;
+        }
+
+        public string GetName()
+        {
+            return "CSFB ";
+        }
+
+        public int GetTimeoutValue()
+        {
+            return timerValue;
+        }
+
+        public TESTVERDICTS GetPassFail()
+        {
+            return TESTVERDICTS.PASS_VERDICT;
+        }
+
+        public TESTSTATUS GetTestStatus()
+        {
+            return TESTSTATUS.CODE_SUCCESS;
+        }
+
+        public string GetErrors()
+        {
+            return "";
+        }
+
+ElementHandler
+
+Anite.InteractiveScriptMode.ScriptElementHandlers
+
+int timerValue = 0;
+
+timerValue
+
+override 
+
+ScriptEngine
+
+override 
+
+ScriptEngine
+
+override 
+
+ScriptEngine
+
+override 
+
+ProgrammingData progData = data as ProgrammingData;
+
+progData.ProgrammingCmdData
+
+Anite.Sequencer
+
+  public override Programming_Cmd_Data GetDataInDriverFormat()
+        {
+            Programming_Cmd_Data commandData = new Programming_Cmd_Data();
+            commandData.programmingData = this.ExpressionData.ConditionExpression;
+            commandData.commandType = Command_type_enum.IF;
+            commandData.isIEConditionCheck = false;
+            commandData.isMsgTypCheck = false;
+
+            if (ExpressionData.VariableMapping != null)
+            {
+                int numberOfMappings = ExpressionData.VariableMapping.Length;
+
+                for (int index = 0; index < numberOfMappings; index++)
+                {
+                    if (ExpressionData.VariableMapping[index].IsCondition)
+                    {
+                        commandData.isIEConditionCheck = true;
+                        break;
+                    }
+
+                    if (ExpressionData.VariableMapping[index].IsMessageType)
+                    {
+                        commandData.isMsgTypCheck = true;
+                        break;
+                    }
+
+                    if (ExpressionData.VariableMapping[index].IsCellIdType)
+                    {
+                        commandData.isCellIdTypeCheck = true;
+                        break;
+                    }
+                }
+            }
+
+            return commandData;
+        }
+
+Anite.Sequencer.IFCmdData
+
+ifCmd
+
+Programming_Cmd_Data
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\SequencerScriptDefinitions
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\LTE-InteractiveScript-Editor\Code\SequencerGUI\Schema
+
+L3PPipeMessageHandler: 
+
+testVerdict = TESTVERDICTS.PASS_VERDICT;
+
+        public SCRIPT_MODE_STATES changeStateTo()
+        {
+            return state;
+        }
+
+
+        SCRIPT_MODE_STATES state = SCRIPT_MODE_STATES.WAIT_EVENT;
+
+
+        SCRIPT_MODE_STATES state = SCRIPT_MODE_STATES.START;
+
+
+        SCRIPT_MODE_STATES state = SCRIPT_MODE_STATES.WAIT_EVENT;
+
+
+        SCRIPT_MODE_STATES state = SCRIPT_MODE_STATES.START;
+
+
+        SCRIPT_MODE_STATES state = SCRIPT_MODE_STATES.WAIT_EVENT;
+
+
+   public override void updateEngine(ScriptModeEngine engine)
+        {
+            ScriptEngine = engine;
+        }
+
+for (int n = index; n < scriptElement.Length; n++)
+            {
+
+  Type type = scriptElement[n].ElementData.GetType();
+                if (type.FullName == "Anite.Sequencer.ProgrammingData")
+                {
+                    ProgrammingData progData = scriptElement[n].ElementData as ProgrammingData;
+                    string tt = progData.ProgrammingCmdData.ToString();
+
+if (tt == "Anite.Sequencer.BEGINInlineSubScriptCmdData")
+                    {
+
+else if ((tt == "Anite.Sequencer
+
+FindElseOrEndProgCmds
+
+int next_possible 
+
+   public bool doEvaluation(Sequencer_Struct _SequenceElement)
+        {
+            SASDebugLogger.TraceLogStart(this, "doEvaluation");
+
+            bool retVal = false;
+
+            Programming_Cmd_Data programmingData = (Programming_Cmd_Data)_SequenceElement.Data;
+            string exp = programmingData.programmingData as string;
+
+            // Update timer program variables before evaluating expression.
+            // IE program variables don't need to be explicitly updated, as
+            // the updates are triggered asynchronously by the arrival of
+            // the message containing the relevant IEs.
+            //m_TimerProgramVariables.UpdateTimers();
+
+            if (programmingData.isIEConditionCheck)
+            {
+                mEvaluator.EvaluateIEChecks(exp, ref retVal);
+
+                if (retVal == false)
+                {
+                    if (exp.Contains(IECheck.NotPresent))
+                    {
+                        SASDebugLogger.InfoLog("IE NOT PRESENT Condition check (" + exp + ") evaluated to false.");
+                    }
+                    else if (exp.Contains(IECheck.Present))
+                    {
+                        SASDebugLogger.InfoLog("IE PRESENT check (" + exp + ") evaluated to false.");
+                    }
+                }
+            }
+            else if (programmingData.isMsgTypCheck)
+            {
+                string[] sp = exp.Split(' ');
+                if (sp[1] == "is")
+                {
+                    EvaluatorVariable evaluatorVariable = null;
+                    if (m_SequencerVariables.Find(sp[0].Trim(), out evaluatorVariable))
+                    {
+                        if (evaluatorVariable.VariableValue == sp[2].Trim())
+                        {
+                            retVal = true;
+                        }
+                    }
+                }
+                else
+                {
+                    SASDebugLogger.ErrorLog("Msg Type Check is incorrect");
+                }
+            }
+            else if (programmingData.isCellIdTypeCheck)
+            {
+                string[] sp = exp.Split(' ');
+                if (sp[1] == "is")
+                {
+                     EvaluatorVariable evaluatorVariable = null;
+                     if (m_SequencerVariables.Find(sp[0].Trim(), out evaluatorVariable))
+                     {
+                         string cellValue = evaluatorVariable.VariableValue.Replace("E-Cell ", "");
+                         if (cellValue == sp[2].Trim())
+                         {
+                             retVal = true;
+                         }
+                     }
+                }
+            }
+            else
+            {
+                mEvaluator.Evaluate(exp, ref retVal);
+            }
+            SASDebugLogger.InfoLog("SqDr: Evaluating (" + exp + ") result = " + retVal);
+
+            SASDebugLogger.TraceLogEnd(this, "doEvaluation");
+
+            return retVal;
+        }
+
+Programming_Cmd_Data
+
+ private Evaluator mEvaluator = null;
+
+Anite.Sequencer.Variables.
+
+m_SequencerVariables
+
+m_SequencerVariables = SequencerVariables.Instance;
+
+ private SequencerVariables m_SequencerVariables = null;
+
+        m_SequencerVariables = SequencerVariables.Instance;
+
+doEvaluation
+
+There were two new SAS LTE Sequencer elements introduced in SAS46 to ignore the UTRAN/GERAN events. These elements ignore events on all 2G/3G cells. But sometimes it is required to ignore the events on a specific cell and not all cells.
+
+73776
+
+D6BNH-RB7AA-9DJQB-AJ7UF-9MQ8A
+
+version
+
+UL-CCCH-Message.message.rrcConnectionRequest.v3d0NonCriticalExtensions.v4b0NonCriticalExtensions.v590NonCriticalExtensions.v690NonCriticalExtensions.v6b0NonCriticalExtensions.v6e0NonCriticalExtensions.v770NonCriticalExtensions.v7b0NonCriticalExtensions.v860NonCriticalExtensions.rrcConnectionRequest-v860ext.pre-redirectionInfo.supportEUTRA-FDD
+
+UL-CCCH-Message.message.rrcConnectionRequest.v3d0NonCriticalExtensions.v4b0NonCriticalExtensions.v590NonCriticalExtensions.v690NonCriticalExtensions.v6b0NonCriticalExtensions.v6e0NonCriticalExtensions.v770NonCriticalExtensions.v7b0NonCriticalExtensions.v860NonCriticalExtensions.rrcConnectionRequest-v860ext.pre-redirectionInfo.supportEUTRA-TDD
+

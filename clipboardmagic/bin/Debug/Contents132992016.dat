@@ -1,0 +1,357 @@
+vmsadapter.reg
+
+AdapterSCN
+
+TypeID
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+SetStatus
+
+this->adapterStatus->SetStatus("Initialisation");
+
+Waiting to Start Monitoring
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+SubsystemTypeID
+
+"AdapterSCN"="VMSAdapter1"
+"SubsystemTypeID"=dword:1200
+
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+C:\Secure\SourceNew\Core\TrafficObjectServer\tosmanager\tosmanager.cpp
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\GZipEncoder\GZipMessageEncoderFactory.cs
+
+SubscriberService/GZipEncoder/GZipMessageEncoderFactory.cs
+
+SubscriberService/SubscriberWebService/SubscriberWebService.csproj
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+http://www.hants.gov.uk/cctv/WCAM123.jpg
+
+cctv/
+
+ http://www.hants.gov.uk/cctv/WCAM131.jpg
+
+http://www.hants.gov.uk/cctv/WCAM132.jpg 
+
+http://www.hants.gov.uk/cctv/WCAM131.jpg
+
+AdapterStatus* adapterStatus = AdapterStatus::GetInstance();
+
+AdapterStatus
+
+adapterStatus
+
+AdapterStatus::GetInstance()
+
+AdapterStatus* adapterStatus = AdapterStatus::GetInstance();
+
+adapterStatus = AdapterStatus::GetInstance();
+
+adapterStatus
+
+   </ProjectExtensions>
+
+
+registry.read("AdapterSCN", SCNName, "VMSAdapter");
+  registry.read("SubsystemTypeID", TypeID, 1200);
+
+rootRegistry
+
+char SCNName[256] = {0};
+
+adapterTypeID
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniORB413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omnithread34_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniConnectionMgmt413_vc8_rtd.dll
+
+SCNName
+
+adapterTypeID
+
+27789
+
+adapterStatus->SetStatus("Initialise");
+
+ adapterStatus->SetStatus("Initialise");
+
+adapterStatus->SetStatus("Waiting to Start Monitoring!");
+
+life is a box of chocalates, you never know what your going to get. Unless you read the fucking label you thicky!!
+
+C:\Secure\SourceNew\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+10.164.114.181
+
+AdapterSCN
+
+SubsystemTypeID
+
+ adapterStatus->Initialise(SCNName, adapterTypeID, cdbManager);
+  adapterStatus->SetStatus("Initialise");
+
+C:\Secure\SourceNew\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+WCAM131.jpg
+
+C:\Secure\SourceNew\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+S:\dan\OmniORB_x64.reg
+
+CCTVAgent
+
+DynamicCallbackFuncType
+
+C:\Secure\SourceNew\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+GORD
+
+C:\Temp\DatexR2\zips\NTISModel-2016-09-20-v5.0.zip
+
+NTISModel-2016-09-20-v5.0.zip
+
+PredefinedItinerary
+
+ProcessNtisModelUpdate
+
+SDO_ELEM_INFO_ARRAY(1,1003,1)
+
+SDO_ORDINATE_ARRAY(5,1, 8,1, 8,6, 5,7, 5,1)
+
+insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES(5, SDO_GEOMETRY(2003, NULL, NULL, SDO_ELEM_INFO_ARRAY(1,1003,1), SDO_ORDINATE_ARRAY(5,1, 8,1, 8,6, 5,7, 5,1)));
+
+SELECT SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            NULL,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110))
+
+insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES(5, SDO_GEOMETRY(2003, NULL, NULL, SDO_ELEM_INFO_ARRAY(1,1003,1), SDO_ORDINATE_ARRAY(5,1, 8,1, 8,6, 5,7, 5,1)))
+
+select sdo_util.getnumrings(a.geom) as ringcount
+  from (SELECT SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            NULL,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110)) as geom
+          FROM dual) a;
+
+select count(*) as ringcount
+  from TABLE(SELECT SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            NULL,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110)).sdo_elem_info
+          FROM dual) a
+ where a.column_value in (1003,1005,2003,2005);
+
+
+SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2)
+
+elect sdo_util.getnumrings(a.geom) as ringcount
+  from (SELECT SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            NULL,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110)) as geom
+          FROM dual) a;
+
+select count(*) as ringcount
+  from TABLE(SELECT SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            NULL,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110)).sdo_elem_info
+          FROM dual) a
+ where a.column_value in (1003,1005,2003,2005);
+
+insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES
+
+ORA-29875
+
+10860935182
+
+ORA-13365
+
+ORA-06512
+
+insert into NETWORK_GEOMETRY (GEOMETRYID, COORDCOUNT, GEOMETRY) VALUES (1, 5, SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            81989,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110)))
+
+insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES(5, SDO_GEOMETRY(2003, NULL, NULL, SDO_ELEM_INFO_ARRAY(1,1003,1), SDO_ORDINATE_ARRAY(5,1, 8,1, 8,6, 5,7, 5,1)));
+
+
+ insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES (5, SDO_GEOMETRY(2007,  -- two-dimensional multi-part polygon with hole 
+                            81989,
+                            NULL,
+                            SDO_ELEM_INFO_ARRAY(1,1005,2, 1,2,1, 5,2,2,
+                                               11,2005,2, 11,2,1, 15,2,2,
+                                               21,1005,2, 21,2,1, 25,2,2),
+                            SDO_ORDINATE_ARRAY(  6,10, 10,1, 14,10, 10,14,  6,10,
+                                                13,10, 10,2,  7,10, 10,13, 13,10,
+                                              106,110, 110,101, 114,110, 110,114,106,110)))
+      
+
+insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES(5, SDO_GEOMETRY(2003, NULL, NULL, SDO_ELEM_INFO_ARRAY(1,1003,1), SDO_ORDINATE_ARRAY(5,1, 8,1, 8,6, 5,7, 5,1)))
+
+NWKGM288318
+
+_PredefinedItineraryIndexPredefinedLocation
+
+predifinedLocation
+
+Point fromPt = (Point)fromLoc.predefinedLocation.location;
+
+predifinedLocation[n]
+
+(Point)predifinedLocation[n].predefinedLocation.location;
+
+if (fromPt.pointByCoordinates != null)
+            {
+                // This is NTIS_Link_Shape_*
+                // NOTE - this code processes over 16K records and MUST be fast
+                from = fromPt.pointByCoordinates.pointCoordinates;
+                to = toPt.pointByCoordinates.pointCoordinates;
+
+Point fromPt = (Point)fromLoc.predefinedLocation.location;
+            PointCoordinates from;
+
+            _PredefinedItineraryIndexPredefinedLocation toLoc = pi.predefinedLocation[len - 1];
+            Point toPt = (Point)toLoc.predefinedLocation.location;
+            PointCoordinates to;
+
+            if (fromPt.pointByCoordinates != null)
+            {
+                // This is NTIS_Link_Shape_*
+                // NOTE - this code processes over 16K records and MUST be fast
+                from = fromPt.pointByCoordinates.pointCoordinates;
+                to = toPt.pointByCoordinates.pointCoordinates;
+
+  private string InsertGeometrySql(_PredefinedItineraryIndexPredefinedLocation[] predifinedLocation)
+        {
+            string sql = "";
+            string temp = "";
+            int size = predifinedLocation.Length;
+            for(int n = 0; n < size-1; n++)
+            {
+                Point fromPt = (Point)predifinedLocation[n].predefinedLocation.location;
+                Point toPt = (Point)predifinedLocation[n+1].predefinedLocation.location;
+               
+                PointCoordinates from;
+
+                
+                PointCoordinates to;
+
+                if (fromPt.pointByCoordinates != null && toPt.pointByCoordinates != null)
+                {
+                    from = fromPt.pointByCoordinates.pointCoordinates;
+                    to = toPt.pointByCoordinates.pointCoordinates;
+                }
+                   
+            }
+            return sql;
+        }
+
+InsertGeometrySql
+
+insert into NETWORK_GEOMETRY (COORDCOUNT, GEOMETRY) VALUES(5, SDO_GEOMETRY(2003, 81989, NULL, SDO_ELEM_INFO_ARRAY(1,2,1), SDO_ORDINATE_ARRAY(5,1, 8,1, 8,6, 5,7, 5,1)))
+
+InsertGeometrySql
+
+pi.predefinedLocation
+
+insertGeometrySql
+
+m_connectionString
+
+10.164.114.181
+
+imtech01
+
+  C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.OracleClient.dll
+
+imtech01
+
+system.data
+
+{"System.Data.OracleClient requires Oracle client software version 8.1.7 or greater."}
+
+oraocci11.dll
+
+C:\Program Files (x86)\Microsoft VS Code\bin;C:\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\bin
+
+C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc100;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80;C:\Inprise\vbroker\bin;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;C:\cygwin64\bin;%USERPROFILE%\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;%MAPL_PATH%;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jdk1.7.0_79\bin
+
+C:\Oracle\product\11.2.0\client_1
+
+C:\Oracle\product\11.2.0
+
+ catch (OracleException oe)
+            {
+                log.Error(oe.Message, oe);
+            }
+            catch (Exception e)
+            {
+                log.Error(e.Message, e);
+            }
+
+  using (OracleConnection cnn = new OracleConnection(m_connectionString))
+                {
+                    // Open the database connection
+                    cnn.Open();
+
+                    ExecuteSql(cnn, m_sqlList);
+
+                    // Close the database connection
+                    cnn.Close();
+                }
+
+processSingleSqlQuery
+
+                    List<string> myquery = new List<string>();
+
+
+sqlQuery
+
+myquery
+

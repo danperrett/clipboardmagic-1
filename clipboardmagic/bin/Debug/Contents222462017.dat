@@ -1,0 +1,22 @@
+MaxReceivedMessageSize 
+
+maxBufferSize="64000000" maxReceivedMessageSize="64000000"
+
+JsonConvert
+
+DataContractJsonSerializer 
+
+ DataContractJsonSerializer jsonSerializer
+
+System.Runtime.Serialization.Json
+
+ret
+
+JsonReaderWriterFactory
+
+ var objects = JArray.Parse(json); 
+
+JArray
+
+DAS transponder ring
+

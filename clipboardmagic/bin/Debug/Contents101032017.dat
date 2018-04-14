@@ -1,0 +1,428 @@
+not
+
+NameServiceRef
+
+corbaloc::192.168.50.107:2809/NameService
+
+CutlasNameService
+
+NameServiceLoc
+
+corbaloc::192.168.50.107:2809/NameService
+
+contextKind
+
+UTMC
+
+contextName
+
+CUTLAS
+
+resolve_initial_references
+
+serviceName
+
+MANAGER2
+
+resolve_initial_references
+
+utmcServices
+
+serviceName
+
+nameServiceReference
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+1.1.1.1 
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+ServerIPAddress
+
+ServerUsername
+
+CameraAccessPort
+
+CameraType
+
+CameraUsername
+
+CameraPassword
+
+SharedObject
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+appSettings
+
+InputDataDump
+
+m62
+
+ORA-00911: invalid character
+
++
+  "from dss_fin_user.acq_dashboard_src_load_success " 
+
+vmsUnitReference
+
+ New VMSTrafficData
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing from vms_definition where deletiondate is null and datasource_typeid = 3 and typeid in ( 4, 5, 6, 8  );
+
+GetTableFromDB
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+CFB613DE7D9A3254E0433CC411ACFD01
+
+SubscriberService/SubscriberWebService/Core/EventManager.cs
+
+wilmut.peek.prv
+
+GetDBQueryString
+
+CREATEDBY,
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\ReadImagesAgent\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+DVTelWrapperLibrary
+
+..\..\..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+@echo off
+
+@echo ***************************************************
+@echo ***************************************************
+@echo Filename: Start_Build_VS10_x64.bat
+@echo Description: Starts the build of ImCity for 2010 solutions
+@echo ---------------------------------------------------
+@echo Created by: Daniel Perrett	Date: May 2016
+@echo ---------------------------------------------------
+@echo ---------------------------------------------------
+
+REM Establish a build root
+cd C:\secure\Source\cutlas
+
+devenv "C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln"
+
+devenv "Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln" /Clean
+
+%1 /OUT "build_%1_VS2010_x64.log" > nul
+
+ %1 /OUT "build_%1_VS2010_x64.log"  > nul
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+sudo adduser -m -d /home/codinggain codinggain
+
+
+\Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+regasm /tlb /codebase Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+Core\%1\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll
+
+Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+0
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+My First Heading
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild
+
+..\..\Release\Helpers
+
+$(SolutionDir)..\Release
+
+$(OutDir)/
+
+$(SolutionDir)..\Debug\Helpers
+
+Camera CCTV001
+
+Camera CCTV002
+
+getClipboardText?username=danperre
+
+https://en.wikipedia.org/wiki/Component_Object_Model
+
+Component Object Model
+
+bool GotoPreset(int cameraNum, int presetnum);
+
+bool Logon(string server, string username, string password);
+
+ void Initialise(string config);
+
+ public bool Logon(string server, string username, string password)
+
+int InitiliseNumberOfCameras();
+
+public int GetCameraNumberFromName(string name)
+
+GetCameraNumberFromName
+
+ bool GotoPreset(int cameraNum, int presetnum);
+
+ bool Bookmark(int cam, string name, string description);
+
+ byte[] GetSnapshot(int camerNum, ref long length, ref int preset, string username, string password, int port, string cameraType = null);
+
+2755466/2/r8R/665
+
+Open Network Video Interface Forum
+
+DVTel Agent
+
+Blow is a list of command and parameters that have to be enabled by the :
+
+Whytrumpisgreat.com
+
+SharedObject=
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+4845
+
+??
+
+4845
+
+?????????????????????????????????????????????????????????????????????????????????????????
+
+, says the Tate.
+
+URL http://www.bbc.co.uk/news/entertainment-arts-39219709
+
+********************
+
+Source bbc-news
+
+Title Title: West Indies v England - Hales starring on return
+
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/Everest/trunk
+
+C:\Users\Daniel.Perrett\Documents\DVTelCCTVAdapter.docx
+
+g
+
+http://93.95.10.169:18080/
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification
+
+https://www.youtube.com/watch?v=GwbO_PdwK_4
+
+/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+
+	/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+	{
+		Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		formatter.setTimeZone(calendar.getTimeZone());
+		String startdateString = formatter.format(calendar.getTime());
+		int faulttype = GetFaultType(fault.diagnosticData);
+		int c = 0;
+		String sqlCommand = 
+				String.format("SELECT * FROM %1$s WHERE SYSTEMCODENUMBER='%2$s' AND FAULTTYPE=%3$d",
+					      databasetable,
+					      fault.diagnosticData.getEquipmentSCN(), 
+					      faulttype); 
+		
+		logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		
+		if(GetErrorWarning(c, queryResults) != "") return false;
+		
+		ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+	/*	for(ResultSet _r: _res)
+		{
+			boolean ignoreflag = false;
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+				switch(_c.name)
+				{
+				
+					
+				case "CLEAREDDATE":
+					Timestamp[] timestamp = _c.values.timestampValues();
+					if(timestamp != null)
+					{
+						if(timestamp.length > 0)
+						{
+							if(timestamp[0].dateValue != 0)
+							{
+								logger.log(logLevel, "Its Already been Cleared!");
+								return false;
+							}
+						}
+					}
+					break;
+				}
+			}
+			
+		}
+		*/
+		calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+		sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+		
+		logger.log(logLevel, sqlCommand);
+		queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		return GetErrorWarning(c, queryResults) == "";
+	}
+	
+
+anperrett.com:8000/getProjectsAndIds?id=danperre&pro_id=437
+
+clearUnavailableFault
+
+	logger.log(logLevel, "Error connection to server");
+        	connected = false;
+        	connectionAttempts++;
+        	if(connectionAttempts >= 3 && !unavailableFaultRaised)
+        	{
+        		createUnavailableFault("Cannot connect to the xmpp server!");
+        		
+        		connectionAttempts = 0;
+        	}
+
+  adapterStatus.setStatus("Succesfully Logged onto XMPP Server");
+            connectionAttempts = 0;
+            if(unavailableFaultRaised)
+            {
+            	unavailableFaultRaised = false;
+            	clearUnavailableFault();
+            }
+
+clearUnavailableFault
+
+c
+

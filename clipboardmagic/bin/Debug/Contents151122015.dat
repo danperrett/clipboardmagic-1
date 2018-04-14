@@ -1,0 +1,184 @@
+SetWindowText
+
+SetWindowText(hCtlWnd, szInt);
+
+sprintf(title, "SRIF (%d)", Version);
+    SetWindowText(hWnd, title);
+
+ char title[100] = {0};
+
+    sprintf(title, "SRIF (%d)", Version);
+    SetWindowText(hWnd, title);
+
+char title[100] = {0};
+
+GetDlgItem
+
+ HWND hCtlWnd = GetDlgItem(hNVFBDlg, wParam);
+
+SetConsoleTitle
+
+GetDlgItem
+
+ HWND hCtlWnd = GetDlgItem(hNVFBDlg, wParam);
+
+hWnd
+
+ sprintf(title, "SRIF (%d)", Version);
+
+SetWindowText(hCtlWnd, szInt);
+
+ if(dumpOuputToInterfaceFile == 1)
+            {
+
+(dumpToInterfaceFile == 1)
+
+ SendTextToWindow("Logging output", ALWAYS);
+
+SendTextToWindow("Logging input", ALWAYS);
+
+*****************************
+
+sprintf(out, "%2d:%2d:%2d:%2d    ", myTime.wHour, myTime.wMinute, myTime.wSecond, myTime.wMilliseconds);
+
+ char Apptime[24] = {0};
+
+Apptime
+
+ SYSTEMTIME  myTime;
+    //Clock
+    GetLocalTime(&myTime);
+
+logFile
+
+strcat(logFile, "\\");
+
+logFile
+
+createLogFile
+
+void createLogFile()
+
+LogFile
+
+extern char SourceUnitID[50];
+extern char LogicalSourceID[50];
+extern char SourceStatus[50];
+extern char MessageFormat[50];
+extern char DataLink[50];
+
+SendTextToWindow(
+
+char LogFile[50]
+
+LogFile
+
+SendTextToWindow(DataLink, ALWAYS);
+
+void SendTextToWindow(const char * text, UINT32 logmask)
+
+SendTextToWindow
+
+LOGMASK_NVFB3
+
+arssubareadecode
+
+ for(n = 0; n < MAX_NUMBER_OF_CONNECTIONS; n++)
+    {
+
+ConnectionList
+
+ConnectionList[n].connectionInformation
+
+ConnectionList[n].connectionInformation.
+
+sprintf(output, "Connection Unit %s\n", ConnectionList[n].connectionInformation.
+
+printConnectionInformationToString
+
+void printConnectionInformationToString(char *output)
+
+printConnectionInformationToString
+
+SendTextToWindow(debug
+
+strcat(output, local);
+            ZeroMemory(local, 100);
+
+SendTextToWindow
+
+extern void SendTextToWindow(const char * text, UINT32 logmask);
+
+"Received a control request", LOGMASK_MCSIF
+
+SendTextToWindow
+
+LOGMASK_MCSIF
+
+extern void SendTextToWindow(const char * text, UINT32 logmask);
+
+SendTextToWindow
+
+0x1F
+
+arssubareadecode
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+numeric 
+
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+            while (SPADMsg[i] == ' ')
+            {
+                SPADMsg[i--] = '\0';
+            }
+
+
+
+/*
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+            while (SPADMsg[i] == ' ')
+            {
+                SPADMsg[i--] = '\0';
+            }
+
+            // SignalID is 2-byte value; convert to 1-offset from 0-offset
+            iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1] + 1;
+
+            MCS_SetSpadBit(iIxl, iSignalId);
+
+            // Get the numeric signal id
+            _itoa_s(iSignalId, szSignalId, sizeof(szSignalId), 10);
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, szSignalId);
+*/
+
+
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+for(n = 0; n < MAX_NUMBER_OF_CONNECTIONS; n++)
+
+MAX_NUMBER_OF_CONNECTIONS
+
+<Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-12-01T15:25:12.1418294+00:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>17716097</Monotonic></Time><SequenceNumber>11312</SequenceNumber><SourceUnitID>ICONIS-1-Unit-a</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>/uk/keighly</UniqueID><SSIID>0F</SSIID><SPAD><SignalMapResponse>CqMBAAIAIFYOAf68JF6qVQAAAAAAAPEVbuZ+mklP</SignalMapResponse></SPAD><IndicationsResponse>CqMBAAIAAVYOAQAAAACqVQAAAAAAABKR7xcUKgwk</IndicationsResponse><ControlRequests>EKUaACQAAVYOAQAAAACqVQEAAQAAAH0Nf8V0IQGVRw==</ControlRequests><StatusByteResponse>CqMBAAIAIFYOAQAAAACqVQAAAAAAAER9EYuku6qj</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqMBAAIAgVMOAf68JF6qVQAAAAAAAFirH+Ux6OTA</EmergencyAlarmsResponse></Body></Message>
+
+EKUaACQAAVYOAQAAAACqVQEAAQAAAH0Nf8V0IQGVRw==
+
+CqMBAAIAgVMOAf68JF6qVQAAAAAAAFirH
+
+EmergencyAlarmsResponse
+
+EKUaACQAAVYOAQAAAACqVQEAAQAAAH0Nf8V0IQGVRw==
+
+Keighley
+
+WM_NVFB3_MESSAGE
+
+EKUBAAIALaIbAQAAAACqVQEAAQAAACEVOTiyIQF0Og==
+

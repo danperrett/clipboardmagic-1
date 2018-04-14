@@ -1,0 +1,436 @@
+		result	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-15T09:18:28.341691+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>83441175</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests><ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>YUUqU2hZPfGiJMXQsr3mbqIPzCg=</DigestValue></Reference></SignedInfo><SignatureValue>dt6T4cZQ4/nYBzDMINaVK3H5HhtoNsXj+Fqs7/ufPg1irVV3PklUthMV/33rlXVKQs2pjQhWSL90Q3+LFZjCBCrGANGK3BYkFPvxXLKPHYS6X+7MBPZKXg0kfqZ/9F1vuC2SdX/3Juq7owHHHdy7RMPoIsAZxHKsJS84ywD/22c=</SignatureValue></Signature></Envelope>"	string
+
+
+<Message>
+		<Header>
+			<Version>
+				<MessageFormat>message-v0.1</MessageFormat>
+				<Data>data-v0.1</Data>
+				<Software>software-v1</Software>
+			</Version>
+			<Time>
+				<Current>2015-01-18T14:54:23.423Z</Current>
+				<TimeStatus>SYNCHRONISED</TimeStatus>
+				<Monotonic>1436175143</Monotonic>
+			</Time>
+			<SequenceNumber>746</SequenceNumber>
+			<SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+			<LogicalSourceID>SRIF-1</LogicalSourceID>
+			<SourceStatus>MASTER</SourceStatus>
+			<SourceLinkStatus>UP</SourceLinkStatus>
+			<DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+			<LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+		</Header>
+
+		<Body>
+			<DiagnosticAlarms>
+				<Link>
+					<From>SRIF-1</From>
+					<To>IXL-1</To>
+					<Status>UP</Status>
+				</Link>
+				<Link>
+					<From>SRIF-1</From>
+					<To>IXL-2</To>
+					<Status>DOWN</Status>
+				</Link>
+			</DiagnosticAlarms>
+			<Interlocking>
+				<UniqueID>UK/York/IXL/001</UniqueID>
+				<SSIID>0F</SSIID>
+				<SPAD>
+					<SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap>
+				</SPAD>
+				<Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications>
+				<StatusByte>Ng==</StatusByte>
+			</Interlocking>
+			<EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms>
+		</Body>
+
+	</Message>
+
+Signature
+
+X509Certificate2
+
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+
+xmlDoc.PreserveWhitespace = false;
+                    xmlDoc.Load("test.xml");
+
+// Sign the XML document. 
+                    SignXml(xmlDoc, rsaKey);
+
+ // Save the document.
+                    xmlDoc.Save("test.xml");
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqc
+DBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzR
+QrtxClXnCUEvlbPbFL0=
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+SequenceNumberTextBox
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+time_t timer;
+    char buffer[26];
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(buffer, 26, "%Y:%m:%d %H:%M:%S", tm_info);
+    puts(buffer);
+
+time
+
+void GetFormatedTime(char* time)
+{
+    time_t timer;
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(time, 26, "%Y:%m:%d %H:%M:%S", tm_info);
+    puts(time);
+}
+
+
+void GetFormatedTime(char* time)
+
+GetFormatedTime
+
+DWORD DoProcessGeneratedAlarms(GeneratedAlarms_t* generatedAlarms)
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD DoProcessInterLockingData(Interlocking_limited_t* interlockingData)
+
+void PopulateSpad(SPAD_t *spad)
+
+DWORD DoProcessEmergencyAlarms(NVFB3_t* EmergencyAlarms)
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD DoProcessTD(TD_t *tddata)
+
+void PopulateStringField(String_t *field, const char* text) 
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD PopulateHeaderInformation(Header_t *header, char *DestinationUnitID, char *LogicalDestinationID)
+
+DWORD PopulateTimeInformation(Time_t *time)
+
+DWORD PopulateVersionInformation(Version_t *version)
+
+void GetFormatedTime(char* buffer)
+
+SequenceNumberTextBox
+
+SRIFTimeTextBox
+
+<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015:09:15 13:22:16</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>98069482</MonoTonic>\n            </Time>\n            <SequenceNumber>478</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <Interlocking>\n                    <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                    <SSIID>0F</SSIID>\n                    <SPAD>\n                        <SignalMap>\n                            <SignalMap>MTIzNDU2Nzg5MA==</SignalMap>\n                        </SignalMap>\n                        <SPADData>\n                            <SignalID>16</SignalID>\n                            <Signal>S123</Signal>\n                            <Track>T123</Track>\n                        </SPADData>\n                    </SPAD>\n                </Interlocking>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n
+
+NVFB3
+
+COM_HEADER_T
+
+BOOLEAN_T
+
+Slib_MemCopy
+
+KER_MBX_T
+
+KER_SEM_T
+
+COM_ID
+
+#include "stdafx.h"
+
+ker_malloc
+
+CNF_RET
+
+CNF_WRONG_VALUE
+
+CNF_OK
+
+CNF_MALLOC_FAILED
+
+ker_free
+
+CNF_LIST_EL
+
+CNF_UNKNOWN_SEC
+
+CNF_UNKNOWN_KEY
+
+CNF_TOO_FEW_KEYS
+
+CNF_TOO_MANY_KEYS
+
+CNF_TOO_MANY_SEC
+
+CNF_NO_INIT
+
+appl_domain
+
+CNF_RET
+
+CNF_RET cnf_init(const char* file, UINT16 num)
+{
+
+}
+
+Smartlock 400 Generic Product Interface Description NVFB/3 Protocol, 
+
+cnfInst
+
+cnf_register_decoding(cnfInst
+
+msg_type
+
+crc  crcTable[256];
+
+void
+crcInit(void)
+{
+    crc  remainder;
+
+
+    /*
+     * Compute the remainder of each possible dividend.
+     */
+    for (int dividend = 0; dividend < 256; ++dividend)
+    {
+        /*
+         * Start with the dividend followed by zeros.
+         */
+        remainder = dividend << (WIDTH - 8);
+
+        /*
+         * Perform modulo-2 division, a bit at a time.
+         */
+        for (uint8_t bit = 8; bit > 0; --bit)
+        {
+            /*
+             * Try to divide the current data bit.
+             */			
+            if (remainder & TOPBIT)
+            {
+                remainder = (remainder << 1) ^ POLYNOMIAL;
+            }
+            else
+            {
+                remainder = (remainder << 1);
+            }
+        }
+
+        /*
+         * Store the result into the table.
+         */
+        crcTable[dividend] = remainder;
+    }
+
+}   /* crcInit() */
+
+#define WIDTH  (8 * sizeof(crc))
+#define TOPBIT (1 << (WIDTH - 1))
+
+
+typedef uint8_t crc;
+
+#define POLYNOMIAL 0xD8  /* 11011 followed by 0's */
+
+void crcInit(void)
+
+#include "EncodeDecodeCRC.h"
+
+/******************************************************************************
+*
+* 
+******************************************************************************/
+
+void writeToLoggerFile(const char *text);
+
+hWnd
+
+::SendMessageA(hWnd, WM_SETTEXT, 0, (LPARAM)buffer);
+
+WM_LOGGER
+
+writeToLoggerFile
+
+crcInit
+
+crc
+crcFast(uint8_t const message[], int nBytes)
+{
+    uint8_t data;
+    crc remainder = 0;
+
+
+    /*
+     * Divide the message by the polynomial, a byte at a time.
+     */
+    for (int byte = 0; byte < nBytes; ++byte)
+    {
+        data = message[byte] ^ (remainder >> (WIDTH - 8));
+        remainder = crcTable[data] ^ (remainder << 8);
+    }
+
+    /*
+     * The final remainder is the CRC.
+     */
+    return (remainder);
+
+}   /* crcFast() */
+
+#define POLY 0x8408
+/*
+//                                      16   12   5
+// this is the CCITT CRC 16 polynomial X  + X  + X  + 1.
+// This works out to be 0x1021, but the way the algorithm works
+// lets us use 0x8408 (the reverse of the bit pattern).  The high
+// bit is always assumed to be set, thus we only use 16 bits to
+// represent the 17 bit value.
+*/
+
+unsigned short crc16(char *data_p, unsigned short length)
+{
+      unsigned char i;
+      unsigned int data;
+      unsigned int crc = 0xffff;
+
+      if (length == 0)
+            return (~crc);
+
+      do
+      {
+            for (i=0, data=(unsigned int)0xff & *data_p++;
+                 i < 8; 
+                 i++, data >>= 1)
+            {
+                  if ((crc & 0x0001) ^ (data & 0x0001))
+                        crc = (crc >> 1) ^ POLY;
+                  else  crc >>= 1;
+            }
+      } while (--length);
+
+      crc = ~crc;
+      data = crc;
+      crc = (crc << 8) | (data >> 8 & 0xff);
+
+      return (crc);
+}
+
+typedef uint8_t crc;
+
+typedef unsigned char uint8_t;
+
+crcFast
+
+crc crcFast(uint8_t const message[], int nBytes)
+
+crcFast
+
+Impostare a 1, da Multisim, tutte le variabili che CLC manda a CLCL e viceversa e verificare che in assenza della comunicazione fra i due host (= staccando la 
+
+NVFB_header
+
+
+
+
+ReceivedTimeCounter
+
+BitConverter.GetBytes(ApplicationDomain)
+
+MessageType
+
+BitConverter.GetBytes(
+
+createFakeNVFB3Heade
+
+            mess.Body.Interlocking[0].ControlRequests = createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890"));
+
+
+createFakeNVFB3Heade(
+
+ASCIIEncoding.ASCII.GetBytes(
+
+System.Convert.ToBase64String(
+
+Convert.ToBase64String((createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890")))
+
+AgEKAAsAAAAAAAAAAAABABQAAQAAADEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=
+
+createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("1234567890123456"))
+
+NVFB_header
+
+CheckThe16BitCRC
+
+'timesheets@g2recruitment.com'
+
+ExtractTheNVFB3Header
+
+
+WORD CheckThe16BitCRC(const char* data, const char *r)
+
+void ExtractTheData(const char* input, char *output, int length)
+
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header)
+
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header)
+
+WORD HandleControlRequestData(const char *)
+
+HandleControlRequestData
+
+interlocking_t->ControlRequest.value
+
+DecodeNVFB3
+
+17503
+

@@ -1,0 +1,4 @@
+MaxReceivedMessageSize 
+
+maxBufferSize="64000000" maxReceivedMessageSize="64000000"
+

@@ -1,0 +1,315 @@
+http://93.95.10.164/JTMSDiagnosticsFeed/schema_1-1/JTMSDiagnosticsFeed.wsdl
+
+e
+
+WebService1Soap
+
+C:\Secure\SourceNew\Core\WebServices_x64
+
+C:\Secure\SourceNew\Core\WebServices_x64\Envitia.ITS.Web.XmlService
+
+Envitia.ITS.Web.XmlService
+
+Envitia.ITS.Web.XmlService.Install
+
+\Core\WebServices_x64
+
+Damir Milicevic 
+
+\\UKSV0002\shared\dan\JTMS\JTMSDiagnosticsFeed.wsdl
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1
+
+C:\Program Files\Java\jdk1.7.0_79\bin
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1
+
+0
+
+org.arpit.javapostsforlearning.webservice
+
+package org.arpit.javapostsforlearning.webservice;  
+import javax.jws.WebMethod;  
+import javax.jws.WebService;  
+  
+@WebService  
+public interface HelloWorld {  
+  
+ @WebMethod public String helloWorld(String name);  
+}  
+
+Read more at http://www.java2blog.com/2013/03/jaxws-web-service-eclipse-tutorial.html#zjeORqdpLbPvsk4r.99
+
+package org.arpit.javapostsforlearning.webservice;  
+import javax.jws.WebService;  
+  
+@WebService(endpointInterface="org.arpit.javapostsforlearning.webservice.HelloWorld")  
+public class HelloWorldImpl implements HelloWorld{  
+  
+ public String helloWorld(String name) {  
+  return "Hello world from "+name;  
+ }  
+  
+}  
+
+Read more at http://www.java2blog.com/2013/03/jaxws-web-service-eclipse-tutorial.html#zjeORqdpLbPvsk4r.99
+
+package org.arpit.javapostsforlearning.webservice;  
+import javax.xml.ws.Endpoint;  
+  
+public class HelloWorldWSPublisher {  
+ public static void main(String[] args) {  
+  Endpoint.publish("http://localhost:8080/WS/HelloWorld",new HelloWorldImpl());  
+ }  
+}  
+
+javax.xml.ws.Endpoint
+
+javax.jws.WebService
+
+http://86.8.195.31:8080/
+
+http://www.java2blog.com/2013/03/jaxws-web-service-eclipse-tutorial.html
+
+https://spring.io/guides/gs/producing-web-service/
+
+http://localhost:8080/WS/HelloWorld?wsdl
+
+
+endpointInterface
+
+@WebMethod
+
+cpc90798-farn10-2-0-cust798.6-2.cable.virginm.net
+
+10892626
+
+endpointInterface
+
+https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiFjfKp7ZPOAhXDJ8AKHSQ1DJsQFggiMAE&url=http%3A%2F%2Fcrunchify.com%2Fcreate-sample-wsdl-in-eclipse-and-generate-client%2F&usg=AFQjCNGnsSELfvce7c9sIirofATd9aLfkA&sig2=FZt2nvs2aeW-lgip-zsSSw
+
+http://www.eclipse.org/webtools/community/tutorials/TopDownAxis2WebService/td_tutorial.html
+
+project zulu 1.8
+
+sudo apt-get install openjdk-8-jdk
+
+installing java 8 on ubuntu binary
+
+cfdf1f03-3add-4ac7-9cd1-80c36a911a6f 
+
+drivinglicencechecking.co.uk
+
+org.arpit.javapostsforlearning.webservices
+
+package org.arpit.javapostsforlearning.webservices;  
+  
+public class HelloWorld {  
+  
+    public String sayHelloWorld(String name)  
+    {  
+        return "Hello world from "+ name;  
+    }  
+}
+
+Read more at http://www.java2blog.com/2013/03/soap-web-service-example-in-java-using.html#0zGbrc1uYfOq4J0G.99
+
+Read more at http://www.java2blog.com/2013/03/soap-web-service-example-in-java-using.html#0zGbrc1uYfOq4J0G.99
+
+8080/SimpleSOAPExampleClient/sampleHelloWorldProxy/TestClient.jsp
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\JTMSDiagnosticsFeed.wsdl
+
+X:\Downloads\JTMSDiagnosticsFeed.wsdl
+
+IWAB0399E Error in generating Java from WSDL
+
+:7001/video/livesp.asp#
+
+package org.arpit.javapostsforlearning.webservices;  
+  
+public class HelloWorld {  
+  
+    public String sayHelloWorld(String name)  
+    {  
+        return "Hello world from "+ name;  
+    }  
+}
+
+
+ org.arpit.javapostsforlearning.webservices
+
+package org.arpit.javapostsforlearning.webservices;
+
+public class HelloWorld {
+
+}
+
+
+package org.arpit.javapostsforlearning.webservices;  
+  
+public class HelloWorld {  
+  
+    public String sayHelloWorld(String name)  
+    {  
+        return "Hello world from "+ name;  
+    }  
+}
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\JTMSDiagnosticsFeed.wsdl
+
+X:\workspaceneon\JTMSCAFault\JTMSDiagnosticsFeed.wsdl
+
+X:\workspaceneon\SimpleSOAPServer\JTMSDiagnosticsFeed.wsdl
+
+X:\workspaceneon\jtmsca\JTMSDiagnosticsFeed.wsdl
+
+Exception occurred during code generation for the WSDL  : java.lang.NoClassDefFoundError: org/apache/ws/commons/schema/XmlSchema
+
+[12:47:14] *** Mohammed Azam ***
+
+Exception occurred during code generation for the WSDL  : java.lang.NoClassDefFoundError: org/apache/ws/commons/schema/XmlSchema
+
+
+xmlschema-core-2.2.1.jar
+
+
+WSDL URL
+http://localhost:8080/jtmsca/services/JTMSDiagnosticsFeedService?wsdl
+
+http://127.0.0.1:37128/wse/wsdl/actions/SelectWSDLNavigatorNodeActionJSP.jsp?nodeId=2
+
+http://127.0.0.1:37128/wse/wsdl/actions/SelectWSDLNavigatorNodeActionJSP.jsp?nodeId=0
+
+t
+
+http://127.0.0.1:37128/wse/wsdl/actions/SelectWSDLNavigatorNodeActionJSP.jsp?nodeId=1
+
+??????????????????????????????????????????
+
+x
+
+http://10.164.114.30:8080/jtmsca/services/JTMSDiagnosticsFeedService?wsdl
+
+/JTMSDiagnosticsFeed/schema_1-1
+
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer
+
+http://mvnrepository.com/artifact/org.apache.axis2/axis2-jaxws
+
+http://127.0.0.1:37128/wse/wsdl/actions/SelectWSDLNavigatorNodeActionJSP.jsp?nodeId=4
+
+axis2-jaxws
+
+org.apache.axis2.deployment.ServiceDeployer
+
+16 3:07:25 PM org.apache.catalina.core.StandardHost getDeployer
+INFO: Creat
+
+ion value="JTMS"/>
+        <xsd:enumeration value="InStation"/>
+      </xsd:restriction>
+
+Internal server error
+
+ion value="JTMS"/>
+        <xsd:enumeration value="InStation"/>
+      </xsd:restriction>
+
+Internal server error
+
+Unable to instantiate deployer org.apache.axis2.deployment.ServiceDeployer
+
+java.lang.ClassNotFoundException: org.apache.ws.commons.schema.resolver.URIResolver
+
+java.lang.ClassNotFoundException: org.apache.ws.commons.schema.resolver.URIResolver
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	at org.apache.axis2.deployment.ModuleDeployer.deploy(ModuleDeployer.java:128)
+
+xmlschema-core-2.2.1.jar
+
+/home/daniel.perrett/Downloads/xmlschema-core-2.2.1.jar
+
+<wsdlsoap:address location="http://localhost:8080/JTMSDiagnostic/services/getDiagnosticData"/>
+
+http://localhost:8080/JTMSSoapTestClient/sampleDiagnosticDataProxy/TestClient.jsp
+
+Couldn't find a matching Java operation for WSDD operation 
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\JTMSDiagnosticsFeed.wsdl
+
+X:\workspaceneon\CAJTMSFaultDiagnostic\WebContent\JTMSDiagnosticsFeed.wsdl
+
+axis2-jaxws.jar
+
+Exception occurred during code generation for the WSDL  : java.lang.NoClassDefFoundError: org/apache/ws/commons/schema/XmlSchema
+
+/home/daniel.perrett/workspaceneon
+
+:8080/CATestProject/services/JTMSDiagnosticsFeedService?wsdl
+
+http://10.164.114.30:8080/CATestProject/services/JTMSDiagnosticsFeedService?wsdl
+
+21181
+
+http://127.0.0.1:8080/CATestProject/services/JTMSDiagnosticsFeedService?wsdl
+
+http://10.164.114.30:8080/CATestProject/services/JTMSDiagnosticsFeedService?wsdl
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\ObjectFactory.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\package-info.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\DiagnosticData.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\DiagnosticDataArray.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\DiagnosticDataLogin.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\JTMSDiagnosticsFeedPortType.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CA\JTMSDiagnosticsFeedService.java
+
+nullservices
+
+JTMSDiagnosticsFeedService
+
+@WebService
+
+JTMSDiagnosticsFeedPortType
+
+getJTMSDiagnosticsFeedPort
+
+getDiagnosticData
+
+setUserName
+
+setUserPassword
+
+http://10.164.114.30:8080/CATestProject/services
+
+http://10.164.114.30:8080/CATestProject/services/JTMSDiagnosticsFeed/schema_1-1
+
+http://10.164.114.30:8080/CATestProject/
+
+services/
+
+http://10.164.114.30:8080/CATestProject/services
+
+http://10.164.114.30/JTMSDiagnosticsFeed/
+
+schema_1-1
+
+http://10.164.114.30:8080/CATestProject/services/JTMSDiagnosticsFeed/schema_1-1
+
+getDiagnosticData
+
+/schema_1-1
+
+Chris Wallett <chris.wallett@telematech.co.uk>
+
+Peter Billington <peter.billington@telematech.co.uk>; Andrew Frechter <andrew.frechter@c-a.co.uk>
+
+merseybridge
+

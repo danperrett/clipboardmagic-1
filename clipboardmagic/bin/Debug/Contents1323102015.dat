@@ -1,0 +1,3154 @@
+ DecodeRSAPrivateKey(file.ReadToEnd());
+
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIICojAcBgoqhkiG9w0BDAEDMA4ECFleZ90vhGrRAgIEAASCAoA9rti16XVH
+K4AJVe1CNf61NIpIogu/Xs4Yn4hXflvewiOwe6/9FkxBXLbhKdbQWn1Z4p3C
+njVns2VYEO/qpJR3LciHMwp5dsqedUVVia//CqFHtEV9WfvCKWgmlkkT1YEm
+1aChZnPP5i6IhwVT9qvFluTZhvVmjW0YyF86OrOp0uxxVic7phPbnPrOMelf
+ZPc3A3EGpzDPkxN+o0obw87tUgCL+s0KtUOr3c6Si4KQ3IQjrjZxQF4Se3t/
+4PEpqUl5EpYiCx9q5uqb0Lr1kWiiQ5/inZm5ETc+qO+ENcp0KjnX523CATYd
+U5iOjl/X9XZeJrMpOCXogEuhmLPRauYP1HEWnAY/hLW93v10QJXY6ALlbkL0
+sd5WU8Ces7T04b/p4/12yxqYqV68QePyfHpegdraDq3vRfopSwrUxtL9cisP
+jsQcJ5FL/SfloFbmld4CKIjMsromsEWqo6rfo3JqNizgTVIIWExy3jDT9VvK
+d9ADH0g3JCbuFzaWVOZMmZ0wlo28PKkLQ8FkW8CG/Lq/Q/bHLPM+sPdLN+ke
+gpA6fvL4wpku4ST7hmeN1vWbRLlCfuFijux77hdM7knO9/MawICsA4XdzR78
+p0C2hJlc6p46IWZaINQXGstTbJMh+mJ7i1lrbG2kvZ2Twf9R+RaLp2mPHjb1
++P+3f2L3tOoC31oJ18u/L1MXEWxLEZHB0+ANg+N/0/icwImcI0D+wVN2puU4
+m58j81sGZUEAB3aFEbPxoX3y+qYlOnt1OfdY7WnNdyr9ZzI09fkrTvujF4LU
+nycqE+MXerf0PxkNu1qv9bQvCoH8x3J2EVdMxPBtH1Fb7SbE66cNyh//qzZo
+B9Je
+-----END ENCRYPTED PRIVATE KEY-----
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDgiXM5jdj19eiHdjl/TrAFu1OD3g+3q9x9x3UpDQUubRLfpoYm
+1NJvqlgp/Jfs+oJRDzCAvrFQnkZE8Sy72DLPxmhvB9mwYKy+7jQJahP19wUFk99e
+ujVW2WH/GX/Jgeb4bOqHQHDvrG0sdJ8t+lU6uZl3AqZIUoxO81c4V3RXXwIDAQAB
+AoGAAKQDwydHdjQ0bKaGtXlJAUsuitLIYrLH10gJaouR9zbyddbozRWQYCcxRzVk
+TZXNZ2POtJ9WrC83bhzuDr8oLfQ5kG802G4IW9VlathB8xPXLTle/jPL/ynkAws9
+BaKPt/GOonY3sHlX0y8r3ocGIn0EZl7JG6+LGsPskUSrfyECQQD21uAiIUxfCnD/
+J/zls1BqneUPtYWWxkD6qAq0m5sMVcIBHfk3gooUyPKTDpLNpWYhuTzSBr+0VTHJ
+3K3KmC3RAkEA6N6wESUJ0gJRAd6K6JhQ9Xd3YaRFk2sIVZZzXfTIWxKTInOLf9Nw
+f/Wkqrt0/Twiato4kSqGW2wU6K5MnvqOLwJBAJdM8IebF3/uG4MbFLYLapBfhidR
+4begf/XkiONZufkem9MpdzgiSNcisSWYuj1ZU7f6HiCyyFEWI3WTUeerzfECQCzw
+JFv6oM2FIurQbk/6bM0h08jk8YRESGRz1ymPfkaM7BXe5FGzlOcsmS1VZXsk6qNi
+Hz5sTWdBETvhvumDAoMCQFiI2aFQOIRqqwO8u99L9JxvuLQqJfv25AUvbuKIiSFv
+SyWe0KtQk8q/QHHsISXFf/sC6SGWuDPN4saV7m+NXyg=
+-----END RSA PRIVATE KEY-----
+
+char privateKey[] = "
+
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDgiXM5jdj19eiHdjl/TrAFu1OD3g+3q9x9x3UpDQUubRLfpoYm
+1NJvqlgp/Jfs+oJRDzCAvrFQnkZE8Sy72DLPxmhvB9mwYKy+7jQJahP19wUFk99e
+ujVW2WH/GX/Jgeb4bOqHQHDvrG0sdJ8t+lU6uZl3AqZIUoxO81c4V3RXXwIDAQAB
+AoGAAKQDwydHdjQ0bKaGtXlJAUsuitLIYrLH10gJaouR9zbyddbozRWQYCcxRzVk
+TZXNZ2POtJ9WrC83bhzuDr8oLfQ5kG802G4IW9VlathB8xPXLTle/jPL/ynkAws9
+BaKPt/GOonY3sHlX0y8r3ocGIn0EZl7JG6+LGsPskUSrfyECQQD21uAiIUxfCnD/
+J/zls1BqneUPtYWWxkD6qAq0m5sMVcIBHfk3gooUyPKTDpLNpWYhuTzSBr+0VTHJ
+3K3KmC3RAkEA6N6wESUJ0gJRAd6K6JhQ9Xd3YaRFk2sIVZZzXfTIWxKTInOLf9Nw
+f/Wkqrt0/Twiato4kSqGW2wU6K5MnvqOLwJBAJdM8IebF3/uG4MbFLYLapBfhidR
+4begf/XkiONZufkem9MpdzgiSNcisSWYuj1ZU7f6HiCyyFEWI3WTUeerzfECQCzw
+JFv6oM2FIurQbk/6bM0h08jk8YRESGRz1ymPfkaM7BXe5FGzlOcsmS1VZXsk6qNi
+Hz5sTWdBETvhvumDAoMCQFiI2aFQOIRqqwO8u99L9JxvuLQqJfv25AUvbuKIiSFv
+SyWe0KtQk8q/QHHsISXFf/sC6SGWuDPN4saV7m+NXyg=
+-----END RSA PRIVATE KEY-----
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+0xa2, 0x5a, 0x06, 0xd3, 0x39, 0xd6, 0x8b, 0x62, 0x5c, 0xd7, 0x38, 0x3a, 0x93, 0x23, 0x57, 0x88, 0x99, 0x56, 0xa5, 0x4e
+
+/*
+ * Copyright (c) 2003 Apple Computer, Inc. All rights reserved.
+ *
+ * @APPLE_LICENSE_HEADER_START@
+ *
+ * Copyright (c) 1999-2003 Apple Computer, Inc.  All Rights Reserved.
+ *
+ * This file contains Original Code and/or Modifications of Original Code
+ * as defined in and that are subject to the Apple Public Source License
+ * Version 2.0 (the 'License'). You may not use this file except in
+ * compliance with the License. Please obtain a copy of the License at
+ * http://www.opensource.apple.com/apsl/ and read it before using this
+ * file.
+ *
+ * The Original Code and all software distributed under the License are
+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ * Please see the License for the specific language governing rights and
+ * limitations under the License.
+ *
+ * @APPLE_LICENSE_HEADER_END@
+ */
+/* ====================================================================
+ * Copyright (c) 1995-1999 The Apache Group.  All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the
+ *    distribution.
+ *
+ * 3. All advertising materials mentioning features or use of this
+ *    software must display the following acknowledgment:
+ *    "This product includes software developed by the Apache Group
+ *    for use in the Apache HTTP server project (http://www.apache.org/)."
+ *
+ * 4. The names "Apache Server" and "Apache Group" must not be used to
+ *    endorse or promote products derived from this software without
+ *    prior written permission. For written permission, please contact
+ *    apache@apache.org.
+ *
+ * 5. Products derived from this software may not be called "Apache"
+ *    nor may "Apache" appear in their names without prior written
+ *    permission of the Apache Group.
+ *
+ * 6. Redistributions of any form whatsoever must retain the following
+ *    acknowledgment:
+ *    "This product includes software developed by the Apache Group
+ *    for use in the Apache HTTP server project (http://www.apache.org/)."
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE APACHE GROUP ``AS IS'' AND ANY
+ * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE APACHE GROUP OR
+ * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ * ====================================================================
+ *
+ * This software consists of voluntary contributions made by many
+ * individuals on behalf of the Apache Group and was originally based
+ * on public domain software written at the National Center for
+ * Supercomputing Applications, University of Illinois, Urbana-Champaign.
+ * For more information on the Apache Group and the Apache HTTP server
+ * project, please see <http://www.apache.org/>.
+ *
+ */
+
+
+
+#ifndef _BASE64_H_
+#define _BASE64_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+int Base64encode_len(int len);
+int Base64encode(char * coded_dst, const char *plain_src,int len_plain_src);
+
+int Base64decode_len(const char * coded_src);
+int Base64decode(char * plain_dst, const char *coded_src);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif //_BASE64_H_
+
+#include "stdafx.h"
+
+/*
+ * Copyright (c) 2003 Apple Computer, Inc. All rights reserved.
+ *
+ * @APPLE_LICENSE_HEADER_START@
+ *
+ * Copyright (c) 1999-2003 Apple Computer, Inc.  All Rights Reserved.
+ *
+ * This file contains Original Code and/or Modifications of Original Code
+ * as defined in and that are subject to the Apple Public Source License
+ * Version 2.0 (the 'License'). You may not use this file except in
+ * compliance with the License. Please obtain a copy of the License at
+ * http://www.opensource.apple.com/apsl/ and read it before using this
+ * file.
+ *
+ * The Original Code and all software distributed under the License are
+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ * Please see the License for the specific language governing rights and
+ * limitations under the License.
+ *
+ * @APPLE_LICENSE_HEADER_END@
+ */
+/* ====================================================================
+ * Copyright (c) 1995-1999 The Apache Group.  All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the
+ *    distribution.
+ *
+ * 3. All advertising materials mentioning features or use of this
+ *    software must display the following acknowledgment:
+ *    "This product includes software developed by the Apache Group
+ *    for use in the Apache HTTP server project (http://www.apache.org/)."
+ *
+ * 4. The names "Apache Server" and "Apache Group" must not be used to
+ *    endorse or promote products derived from this software without
+ *    prior written permission. For written permission, please contact
+ *    apache@apache.org.
+ *
+ * 5. Products derived from this software may not be called "Apache"
+ *    nor may "Apache" appear in their names without prior written
+ *    permission of the Apache Group.
+ *
+ * 6. Redistributions of any form whatsoever must retain the following
+ *    acknowledgment:
+ *    "This product includes software developed by the Apache Group
+ *    for use in the Apache HTTP server project (http://www.apache.org/)."
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE APACHE GROUP ``AS IS'' AND ANY
+ * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE APACHE GROUP OR
+ * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ * ====================================================================
+ *
+ * This software consists of voluntary contributions made by many
+ * individuals on behalf of the Apache Group and was originally based
+ * on public domain software written at the National Center for
+ * Supercomputing Applications, University of Illinois, Urbana-Champaign.
+ * For more information on the Apache Group and the Apache HTTP server
+ * project, please see <http://www.apache.org/>.
+ *
+ */
+
+/* Base64 encoder/decoder. Originally Apache file ap_base64.c
+ */
+
+#include <string.h>
+
+#include "EncodeDecodeBase64.h"
+
+/* aaaack but it's fast and const should make it shared text page. */
+static const unsigned char pr2six[256] =
+{
+    /* ASCII table */
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 62, 64, 64, 64, 63,
+    52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 64, 64, 64, 64, 64, 64,
+    64,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,
+    15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 64, 64, 64, 64, 64,
+    64, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
+    64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64
+};
+
+int Base64decode_len(const char *bufcoded)
+{
+    int nbytesdecoded;
+    register const unsigned char *bufin;
+    register int nprbytes;
+
+    bufin = (const unsigned char *) bufcoded;
+    while (pr2six[*(bufin++)] <= 63);
+
+    nprbytes = (bufin - (const unsigned char *) bufcoded) - 1;
+    nbytesdecoded = ((nprbytes + 3) / 4) * 3;
+
+    return nbytesdecoded + 1;
+}
+
+int Base64decode(char *bufplain, const char *bufcoded)
+{
+    int nbytesdecoded;
+    register const unsigned char *bufin;
+    register unsigned char *bufout;
+    register int nprbytes;
+
+    bufin = (const unsigned char *) bufcoded;
+    while (pr2six[*(bufin++)] <= 63);
+    nprbytes = (bufin - (const unsigned char *) bufcoded) - 1;
+    nbytesdecoded = ((nprbytes + 3) / 4) * 3;
+
+    bufout = (unsigned char *) bufplain;
+    bufin = (const unsigned char *) bufcoded;
+
+    while (nprbytes > 4) {
+        *(bufout++) =
+            (unsigned char) (pr2six[*bufin] << 2 | pr2six[bufin[1]] >> 4);
+        *(bufout++) =
+            (unsigned char) (pr2six[bufin[1]] << 4 | pr2six[bufin[2]] >> 2);
+        *(bufout++) =
+            (unsigned char) (pr2six[bufin[2]] << 6 | pr2six[bufin[3]]);
+        bufin += 4;
+        nprbytes -= 4;
+    }
+
+    /* Note: (nprbytes == 1) would be an error, so just ingore that case */
+    if (nprbytes > 1) {
+        *(bufout++) =
+            (unsigned char) (pr2six[*bufin] << 2 | pr2six[bufin[1]] >> 4);
+    }
+    if (nprbytes > 2) {
+        *(bufout++) =
+            (unsigned char) (pr2six[bufin[1]] << 4 | pr2six[bufin[2]] >> 2);
+    }
+    if (nprbytes > 3) {
+        *(bufout++) =
+            (unsigned char) (pr2six[bufin[2]] << 6 | pr2six[bufin[3]]);
+    }
+
+    *(bufout++) = '\0';
+    nbytesdecoded -= (4 - nprbytes) & 3;
+    return nbytesdecoded;
+}
+
+static const char basis_64[] =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
+int Base64encode_len(int len)
+{
+    return ((len + 2) / 3 * 4) + 1;
+}
+
+int Base64encode(char *encoded, const char *string, int len)
+{
+    int i;
+    char *p;
+
+    p = encoded;
+    for (i = 0; i < len - 2; i += 3) {
+        *p++ = basis_64[(string[i] >> 2) & 0x3F];
+        *p++ = basis_64[((string[i] & 0x3) << 4) |
+                        ((int) (string[i + 1] & 0xF0) >> 4)];
+        *p++ = basis_64[((string[i + 1] & 0xF) << 2) |
+                        ((int) (string[i + 2] & 0xC0) >> 6)];
+        *p++ = basis_64[string[i + 2] & 0x3F];
+    }
+    if (i < len) {
+        *p++ = basis_64[(string[i] >> 2) & 0x3F];
+        if (i == (len - 1)) {
+            *p++ = basis_64[((string[i] & 0x3) << 4)];
+            *p++ = '=';
+        }
+        else {
+            *p++ = basis_64[((string[i] & 0x3) << 4) |
+                            ((int) (string[i + 1] & 0xF0) >> 4)];
+            *p++ = basis_64[((string[i + 1] & 0xF) << 2)];
+        }
+        *p++ = '=';
+    }
+
+    *p++ = '\0';
+    return p - encoded;
+}
+
+Base64encode
+
+D8U622bvnhiEXBTfcD90dWsEbOagkhVfjleZhGYdTH+Io7cKhv3TrPjEDfAaMy0e6TcCZ19JwXKYS1y0
+/beQM+prTQbR+sXHd+QXF+s8RVlzhkMSJl9U6VCSEdh1PQuffSo5Yb4JmIMu5egOWZ7VkysUc6eoE2iR
+6uCbX4s/bwc=
+
+Base64encode
+
+D8U622bvnhiEXBTfcD90dWsEbOagkhVfjleZhGYdTH+Io7cKhv3TrPjEDfAaMy0e6TcCZ19JwXKYS1y0
+/beQM+prTQbR+sXHd+QXF+s8RVlzhkMSJl9U6VCSEdh1PQuffSo5Yb4JmIMu5egOWZ7VkysUc6eoE2iR
+6uCbX4s/bwc=
+
+
+TSQUoVrQ0kg1eiltNwIhKPrIdsi1VhWjYNJlXvfQqW2EKk3X37X862SCfrz7v8IYJ7OorWwlFpGDStJDSR6saO
+ScqSvmesCrGEEq+U6zegR9nH0lvcGZ8Rvc/y7U9kZrE4fHqEiLyfpmzJyPmWUT9Uta14nPJYsl3cmdThHB8Bs=
+
+RSA_PKCS1_OAEP_PADDING
+
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgiXM5jdj19eiHdjl/TrAFu1OD
+3g+3q9x9x3UpDQUubRLfpoYm1NJvqlgp/Jfs+oJRDzCAvrFQnkZE8Sy72DLPxmhv
+B9mwYKy+7jQJahP19wUFk99eujVW2WH/GX/Jgeb4bOqHQHDvrG0sdJ8t+lU6uZl3
+AqZIUoxO81c4V3RXXwIDAQAB
+
+30819f300d06092a864886f70d010101050003818d0030818902818100e08973398dd8f5f5e88776397f4eb005bb5383de0fb7abdc7dc775290d052e6d12dfa68626d4d26faa5829fc97ecfa82510f3080beb1509e4644f12cbbd832cfc6686f07d9b060acbeee34096a13f5f7050593df5eba3556d961ff197fc981e6f86cea874070efac6d2c749f2dfa553ab9997702a648528c4ef357385774575f0203010001
+
+4IlzOY3Y9fXoh3Y5f06wBbtTg94Pt6vcfcd1KQ0FLm0S36aGJtTSb6pYKfyX7PqCUQ8wgL6xUJ5GRPEsu9gyz8
+    ZobwfZsGCsvu40CWoT9fcFBZPfXro1Vtlh/xl/yYHm+Gzqh0Bw76xtLHSfLfpVOrmZdwKmSFKMTvNXOFd0V18=
+
+e08973398dd8f5f5e88776397f4eb005bb5383de0fb7abdc7dc775290d052e6d12dfa68626d4d26faa5829fc97ecfa82510f3080beb1509e4644f12cbbd832cfc6686f07d9b060acbeee34096a13f5f7050593df5eba3556d961ff197fc981e6f86cea874070efac6d2c749f2dfa553ab9997702a648528c4ef357385774575f
+
+e08973398
+
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgiXM5jdj19eiHdjl/TrAFu1OD
+3g+3q9x9x3UpDQUubRLfpoYm1NJvqlgp/Jfs+oJRDzCAvrFQnkZE8Sy72DLPxmhv
+B9mwYKy+7jQJahP19wUFk99eujVW2WH/GX/Jgeb4bOqHQHDvrG0sdJ8t+lU6uZl3
+AqZIUoxO81c4V3RXXwIDAQAB
+-----END PUBLIC KEY-----
+
+TSQUoVrQ0kg1eiltNwIhKPrIdsi1VhWjYNJlXvfQqW2EKk3X37X862SCfrz7v8IYJ7OorWwlFpGDStJDSR6saO
+ScqSvmesCrGEEq+U6zegR9nH0lvcGZ8Rvc/y7U9kZrE4fHqEiLyfpmzJyPmWUT9Uta14nPJYsl3cmdThHB8Bs=
+
+a25a06d339d68b625cd7383a932357889956a54e 
+
+  //------- Parses binary ans.1 RSA private key; returns RSACryptoServiceProvider  ---
+        public RSACryptoServiceProvider DecodeRSAPrivateKey(byte[] privkey)
+        {
+            byte[] MODULUS, E, D, P, Q, DP, DQ, IQ;
+
+            // ---------  Set up stream to decode the asn.1 encoded RSA private key  ------
+            MemoryStream mem = new MemoryStream(privkey);
+            BinaryReader binr = new BinaryReader(mem);    //wrap Memory Stream with BinaryReader for easy reading
+            byte bt = 0;
+            ushort twobytes = 0;
+            int elems = 0;
+            try
+            {
+                twobytes = binr.ReadUInt16();
+                if (twobytes == 0x8130)	//data read as little endian order (actual data order for Sequence is 30 81)
+                    binr.ReadByte();	//advance 1 byte
+                else if (twobytes == 0x8230)
+                    binr.ReadInt16();	//advance 2 bytes
+                else
+                    return null;
+
+                twobytes = binr.ReadUInt16();
+                if (twobytes != 0x0102)	//version number
+                    return null;
+                bt = binr.ReadByte();
+                if (bt != 0x00)
+                    return null;
+
+
+                //------  all private key components are Integer sequences ----
+                elems = GetIntegerSize(binr);
+                MODULUS = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                E = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                D = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                P = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                Q = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                DP = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                DQ = binr.ReadBytes(elems);
+
+                elems = GetIntegerSize(binr);
+                IQ = binr.ReadBytes(elems);
+
+                Console.WriteLine("showing components ..");
+                if (verbose)
+                {
+                    /*showBytes("\nModulus", MODULUS);
+                    showBytes("\nExponent", E);
+                    showBytes("\nD", D);
+                    showBytes("\nP", P);
+                    showBytes("\nQ", Q);
+                    showBytes("\nDP", DP);
+                    showBytes("\nDQ", DQ);
+                    showBytes("\nIQ", IQ);*/
+                }
+
+                // ------- create RSACryptoServiceProvider instance and initialize with public key -----
+                RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
+                RSAParameters RSAparams = new RSAParameters();
+                RSAparams.Modulus = MODULUS;
+                RSAparams.Exponent = E;
+                RSAparams.D = D;
+                RSAparams.P = P;
+                RSAparams.Q = Q;
+                RSAparams.DP = DP;
+                RSAparams.DQ = DQ;
+                RSAparams.InverseQ = IQ;
+                RSA.ImportParameters(RSAparams);
+                return RSA;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                binr.Close();
+            }
+        }
+
+
+        private static int GetIntegerSize(BinaryReader binr)
+        {
+            byte bt = 0;
+            byte lowbyte = 0x00;
+            byte highbyte = 0x00;
+            int count = 0;
+            bt = binr.ReadByte();
+            if (bt != 0x02)		//expect integer
+                return 0;
+            bt = binr.ReadByte();
+
+            if (bt == 0x81)
+                count = binr.ReadByte();	// data size in next byte
+            else
+                if (bt == 0x82)
+                {
+                    highbyte = binr.ReadByte();	// data size in next 2 bytes
+                    lowbyte = binr.ReadByte();
+                    byte[] modint = { lowbyte, highbyte, 0x00, 0x00 };
+                    count = BitConverter.ToInt32(modint, 0);
+                }
+                else
+                {
+                    count = bt;		// we already have the data size
+                }
+
+
+
+            while (binr.ReadByte() == 0x00)
+            {	//remove high order zeros in data
+                count -= 1;
+            }
+            binr.BaseStream.Seek(-1, SeekOrigin.Current);		//last ReadByte wasn't a removed zero, so back up a byte
+            return count;
+        }
+
+using System.IO;
+
+ StreamReader file = new StreamReader(@"C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\private.pem");
+           
+            byte[] certBuffer = GetBytesFromPEM(file.ReadToEnd(), "RSA PRIVATE KEY");
+            rsaKey = DecodeRSAPrivateKey(certBuffer);
+
+  byte[] GetBytesFromPEM(string pemString, string section)
+        {
+            var header = String.Format("-----BEGIN {0}-----", section);
+            var footer = String.Format("-----END {0}-----", section);
+
+            var start = pemString.IndexOf(header, StringComparison.Ordinal) + header.Length;
+            var end = pemString.IndexOf(footer, start, StringComparison.Ordinal) - start;
+
+            if (start < 0 || end < 0)
+            {
+                return null;
+            }
+
+            return Convert.FromBase64String(pemString.Substring(start, end));
+        }
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010\bin
+
+decryptedprivate.pem
+
+static public byte[] Encryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
+{
+ try
+ {
+ byte[] encryptedData;
+ using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+   {
+    RSA.ImportParameters(RSAKey);            encryptedData = RSA.Encrypt(Data, DoOAEPPadding);    }   return encryptedData;
+ }
+ catch (CryptographicException e)
+ {
+ Console.WriteLine(e.Message);
+ return null;
+ }
+} 
+
+unsigned char test[20] = {0xa2, 0x5a, 0x06, 0xd3, 0x39, 0xd6, 0x8b, 0x62, 0x5c, 0xd7, 0x38, 0x3a, 0x93, 0x23, 0x57, 0x88, 0x99, 0x56, 0xa5, 0x4e};
+
+Encryption
+
+TSQUoVrQ0kg1eiltNwIhKPrIdsi1VhWjYNJlXvfQqW2EKk3X37X862SCfrz7v8IYJ7OorWwlFpGDStJDSR6saO
+ScqSvmesCrGEEq+U6zegR9nH0lvcGZ8Rvc/y7U9kZrE4fHqEiLyfpmzJyPmWUT9Uta14nPJYsl3cmdThHB8Bs=
+
+MIICXAIBAAKBgQDgjkkxN1kfoHizPc5HZOyYUmMW20xYr814cOq90+uSUZmpcfSY
+NLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5uaOLGMmJN8jDi0Tsxt1W1ios
+nY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFCu3EKVecJQS+Vs9sUvQIDAQAB
+AoGAMBUnhPtWARiqX67/SXhJ1P/nKdDBU0gplf2Pth/3lDgW0BqPhjvcgZj2pMnH
+C5z7CvKBe7xv+fFbUpYZzLqdG8seB0IBbT0XIuLzIQsRLZd03zfyim6syt220NYi
+zZixeT+wuXX6gN5fbeV760Q9erGAHktWXSspMfSUpvDI5gECQQD9lKGtZohpLsEA
+qb/GPe9DZCRbSTr2GzyCGFQzm/utZJIhpMC8AkpUbzukbiY5ibBxeSETK8VRh68E
+LL1xKug9AkEA4rLC9Wd5nnfGVbIWbaiugtOT2DslslTXiTTy4puV7MiCWYjFJPOi
+C862az7z7Dg4PEVvulGhAWkXjAuzgv8mgQJAeIIvB4Hnp9zhOdhx29tJHoSzxnIZ
+xCWTbtvzAAfL5k4aKETslyybeF7YQD9ciRGHOZXwAvVVM3bA1MISUXqrnQJBAIuG
+mpeP6DqwXVHBGizD9SRwND6RqNHphf7cp+DxAYWKoy+YDj5/9OxvfbbkOBzbPUFb
+OzjhpMbJd8SqLwIhKAECQG/teiBHwE2d6rVM5flrHJvsVB1ssydU3CJbE+5PahUR
+JG/IBu7hLeYTzmZLoP9V6wl1Hk6sD2sq3GA+jPW3Rho=
+
+Encrypt
+
+TSQUoVrQ0kg1eiltNwIhKPrIdsi1VhWjYNJlXvfQqW2EKk3X37X862SCfrz7v8IYJ7OorWwlFpGDStJDSR6saO
+ScqSvmesCrGEEq+U6zegR9nH0lvcGZ8Rvc/y7U9kZrE4fHqEiLyfpmzJyPmWUT9Uta14nPJYsl3cmdThHB8Bs=
+
+0x4d, 0x24, 0x14, 0xa1, 0x5a, 0xd0, 0xd2, 0x48, 0x35, 0x7a, 0x29, 0x6d, 0x37, 0x02, 0x21, 0x28, 0xfa, 0xc8, 0x76, 0xc8, 0xb5, 0x56, 0x15, 0xa3, 0x60, 0xd2, 0x65, 0x5e, 0xf7, 0xd0, 0xa9, 0x6d, 0x84, 0x2a, 0x4d, 0xd7, 0xdf, 0xb5, 0xfc, 0xeb, 0x64, 0x82, 0x7e, 0xbc, 0xfb, 0xbf, 0xc2, 0x18, 0x27, 0xb3, 0xa8, 0xad, 0x6c, 0x25, 0x16, 0x91, 0x83, 0x4a, 0xd2, 0x43, 0x49, 0x1e, 0xac, 0x68, 0xe4, 0x9c, 0xa9, 0x2b, 0xe6, 0x7a, 0xc0, 0xab, 0x18, 0x41, 0x2a, 0xf9, 0x4e, 0xb3, 0x7a, 0x04, 0x7d, 0x9c, 0x7d, 0x25, 0xbd, 0xc1, 0x99, 0xf1, 0x1b, 0xdc, 0xff, 0x2e, 0xd4, 0xf6, 0x46, 0x6b, 0x13, 0x87, 0xc7, 0xa8, 0x48, 0x8b, 0xc9, 0xfa, 0x66, 0xcc, 0x9c, 0x8f, 0x99, 0x65, 0x13, 0xf5, 0x4b, 0x5a, 0xd7, 0x89, 0xcf, 0x25, 0x8b, 0x25, 0xdd, 0xc9, 0x9d, 0x4e, 0x11, 0xc1, 0xf0, 0x1b, 
+
+unsigned char testD[128] = 0x4d, 0x24, 0x14, 0xa1, 0x5a, 0xd0, 0xd2, 0x48, 0x35, 0x7a, 0x29, 0x6d, 0x37, 0x02, 0x21, 0x28, 0xfa, 0xc8, 0x76, 0xc8, 0xb5, 0x56, 0x15, 0xa3, 0x60, 0xd2, 0x65, 0x5e, 0xf7, 0xd0, 0xa9, 0x6d, 0x84, 0x2a, 0x4d, 0xd7, 0xdf, 0xb5, 0xfc, 0xeb, 0x64, 0x82, 0x7e, 0xbc, 0xfb, 0xbf, 0xc2, 0x18, 0x27, 0xb3, 0xa8, 0xad, 0x6c, 0x25, 0x16, 0x91, 0x83, 0x4a, 0xd2, 0x43, 0x49, 0x1e, 0xac, 0x68, 0xe4, 0x9c, 0xa9, 0x2b, 0xe6, 0x7a, 0xc0, 0xab, 0x18, 0x41, 0x2a, 0xf9, 0x4e, 0xb3, 0x7a, 0x04, 0x7d, 0x9c, 0x7d, 0x25, 0xbd, 0xc1, 0x99, 0xf1, 0x1b, 0xdc, 0xff, 0x2e, 0xd4, 0xf6, 0x46, 0x6b, 0x13, 0x87, 0xc7, 0xa8, 0x48, 0x8b, 0xc9, 0xfa, 0x66, 0xcc, 0x9c, 0x8f, 0x99, 0x65, 0x13, 0xf5, 0x4b, 0x5a, 0xd7, 0x89, 0xcf, 0x25, 0x8b, 0x25, 0xdd, 0xc9, 0x9d, 0x4e, 0x11, 0xc1, 0xf0, 0x1b};
+
+RSA_public_decrypt
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd
+
+5wlIvw6PJh2i12la0ZeXanFSeOOi
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+0x1b, 0x65, 0xb6, 0x81, 0x35, 0x12, 0xc9, 0x48, 0x80, 0xe1, 0x51, 0xe3, 0xef, 0x5b, 0x3b, 0xc7, 0x06, 0x76, 0x51, 0x29, 0xbf, 0x17, 0xdc, 0xfd, 0x67, 0xf6, 0x57, 0xbf, 0x54, 0xec, 0x79, 0x1b, 0x3b, 0xeb, 0xc2, 0xa1, 0xb9, 0xa7, 0xb3, 0x66, 0x71, 0x1b, 0xa9, 0xb0, 0x33, 0x34, 0x3b, 0x21, 0xc2, 0xfd, 0xe0, 0x97, 0x97, 0xa5, 0xd2, 0xce, 0x98, 0x0d, 0xc5, 0xa2, 0x02, 0xd7, 0xed, 0xd0, 0x33, 0xa8, 0x59, 0x64, 0x50, 0x70, 0xd8, 0xca, 0x44, 0x1c, 0x83, 0x48, 0x8b, 0xed, 0x93, 0x78, 0x0b, 0x9e, 0x47, 0x1e, 0x8a, 0xf5, 0xad, 0x97, 0x64, 0x0f, 0xf3, 0x17, 0x7f, 0xe7, 0x09, 0x48, 0xbf, 0x0e, 0x8f, 0x26, 0x1d, 0xa2, 0xd7, 0x69, 0x5a, 0xd1, 0x97, 0x97, 0x6a, 0x71, 0x52, 0x78, 0xe3, 0xa2, 0x24, 0x38, 0x7a, 0x5c, 0x6c, 0xdf, 0x58, 0xff, 0xe0, 0xbd, 0xf0, 0x0d, 0x17, 0x94
+
+MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOCOSTE3WR+geLM9zkdk7JhSYxbbTFivzXhw6r3T65JRmalx9Jg0vCU98DvYAkmXcdn5VL3nu2C6nAwQ77Aavap/Y3m5o4sYyYk3yMOLROzG3VbWKiydjQ6+qI5XiaNJ2s3nMUP2YH6Wywoj2Wi9cORM0UK7cQpV5wlBL5Wz2xS9AgMBAAECgYAwFSeE+1YBGKpfrv9JeEnU/+cp0MFTSCmV/Y+2H/eUOBbQGo+GO9yBmPakyccLnPsK8oF7vG/58VtSlhnMup0byx4HQgFtPRci4vMhCxEtl3TfN/KKbqzK3bbQ1iLNmLF5P7C5dfqA3l9t5XvrRD16sYAeS1ZdKykx9JSm8MjmAQJBAP2Uoa1miGkuwQCpv8Y970NkJFtJOvYbPIIYVDOb+61kkiGkwLwCSlRvO6RuJjmJsHF5IRMrxVGHrwQsvXEq6D0CQQDissL1Z3med8ZVshZtqK6C05PYOyWyVNeJNPLim5XsyIJZiMUk86ILzrZrPvPsODg8RW+6UaEBaReMC7OC/yaBAkB4gi8Hgeen3OE52HHb20kehLPGchnEJZNu2/MAB8vmThooROyXLJt4XthAP1yJEYc5lfAC9VUzdsDUwhJRequdAkEAi4aal4/oOrBdUcEaLMP1JHA0PpGo0emF/tyn4PEBhYqjL5gOPn/07G99tuQ4HNs9QVs7OOGkxsl3xKovAiEoAQJAb+16IEfATZ3qtUzl+Wscm+xUHWyzJ1TcIlsT7k9qFREkb8gG7uEt5hPOZkug/1XrCXUeTqwPayrcYD6M9bdGGg==
+
+-----BEGIN RSA PRIVATE KEY-----\n"\
+"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOCOSTE3WR+geLM9\n"\
+"zkdk7JhSYxbbTFivzXhw6r3T65JRmalx9Jg0vCU98DvYAkmXcdn5VL3nu2C6nAwQ\n"\
+"77Aavap/Y3m5o4sYyYk3yMOLROzG3VbWKiydjQ6+qI5XiaNJ2s3nMUP2YH6Wywoj\n"\
+"2Wi9cORM0UK7cQpV5wlBL5Wz2xS9AgMBAAECgYAwFSeE+1YBGKpfrv9JeEnU/+cp\n"\
+"0MFTSCmV/Y+2H/eUOBbQGo+GO9yBmPakyccLnPsK8oF7vG/58VtSlhnMup0byx4H\n"\
+"QgFtPRci4vMhCxEtl3TfN/KKbqzK3bbQ1iLNmLF5P7C5dfqA3l9t5XvrRD16sYAe\n"\
+"S1ZdKykx9JSm8MjmAQJBAP2Uoa1miGkuwQCpv8Y970NkJFtJOvYbPIIYVDOb+61k\n"\
+"kiGkwLwCSlRvO6RuJjmJsHF5IRMrxVGHrwQsvXEq6D0CQQDissL1Z3med8ZVshZt\n"\
+"qK6C05PYOyWyVNeJNPLim5XsyIJZiMUk86ILzrZrPvPsODg8RW+6UaEBaReMC7OC\n"\
+"/yaBAkB4gi8Hgeen3OE52HHb20kehLPGchnEJZNu2/MAB8vmThooROyXLJt4XthA\n"\
+"P1yJEYc5lfAC9VUzdsDUwhJRequdAkEAi4aal4/oOrBdUcEaLMP1JHA0PpGo0emF\n"\
+"/tyn4PEBhYqjL5gOPn/07G99tuQ4HNs9QVs7OOGkxsl3xKovAiEoAQJAb+16IEfA\n"\
+"TZ3qtUzl+Wscm+xUHWyzJ1TcIlsT7k9qFREkb8gG7uEt5hPOZkug/1XrCXUeTqwP\n"\
+"ayrcYD6M9bdGGg==\n"\
+"-----END RSA PRIVATE KEY-----"
+
+MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOCOSTE3WR+geLM9zkdk7JhSYxbbTFivzXhw6r3T65JRmalx9Jg0vCU98DvYAkmXcdn5VL3nu2C6nAwQ77Aavap/Y3m5o4sYyYk3yMOLROzG3VbWKiydjQ6+qI5XiaNJ2s3nMUP2YH6Wywoj2Wi9cORM0UK7cQpV5wlBL5Wz2xS9AgMBAAECgYAwFSeE+1YBGKpfrv9JeEnU/+cp0MFTSCmV/Y+2H/eUOBbQGo+GO9yBmPakyccLnPsK8oF7vG/58VtSlhnMup0byx4HQgFtPRci4vMhCxEtl3TfN/KKbqzK3bbQ1iLNmLF5P7C5dfqA3l9t5XvrRD16sYAeS1ZdKykx9JSm8MjmAQJBAP2Uoa1miGkuwQCpv8Y970NkJFtJOvYbPIIYVDOb+61kkiGkwLwCSlRvO6RuJjmJsHF5IRMrxVGHrwQsvXEq6D0CQQDissL1Z3med8ZVshZtqK6C05PYOyWyVNeJNPLim5XsyIJZiMUk86ILzrZrPvPsODg8RW+6UaEBaReMC7OC/yaBAkB4gi8Hgeen3OE52HHb20kehLPGchnEJZNu2/MAB8vmThooROyXLJt4XthAP1yJEYc5lfAC9VUzdsDUwhJRequdAkEAi4aal4/oOrBdUcEaLMP1JHA0PpGo0emF/tyn4PEBhYqjL5gOPn/07G99tuQ4HNs9QVs7OOGkxsl3xKovAiEoAQJAb+16IEfATZ3qtUzl+Wscm+xUHWyzJ1TcIlsT7k9qFREkb8gG7uEt5hPOZkug/1XrCXUeTqwPayrcYD6M9bdGGg==
+
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>qWwoAabPMZn8vva4BBXTqadKdtc=</DigestValue></Reference>
+</SignedInfo>
+
+<CanonicalizationMethod
+
+<SignatureMethod
+
+<SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"><DigestMethod><DigestValue>qWwoAabPMZn8vva4BBXTqadKdtc=</DigestValue></Reference></SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">?
+??????<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>?
+??????<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>?
+??????<Reference URI="">?
+????????<Transforms>?
+??????????<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>?
+????????</Transforms>?
+????????<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>?
+????????<DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>?
+??????</Reference>?
+????</SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+qWwoAabPMZn8vva4BBXTqadKdtc=
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>qWwoAabPMZn8vva4BBXTqadKdtc=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+0xb1, 0x40, 0x0c, 0xd1, 0x73, 0xf8, 0x89, 0x47, 0x93, 0xfd, 0xd6, 0x78, 0x69, 0xcc, 0x37, 0xa6, 0x98, 0xf3, 0x36, 0x68
+
+-		res	{byte[0x00000080]}	byte[]
+
+
+		[0x00000000]	0x4d	byte
+		[0x00000001]	0x75	byte
+		[0x00000002]	0xbf	byte
+		[0x00000003]	0xcc	byte
+		[0x00000004]	0x76	byte
+		[0x00000005]	0x52	byte
+		[0x00000006]	0xbd	byte
+		[0x00000007]	0xca	byte
+		[0x00000008]	0x5a	byte
+		[0x00000009]	0xfe	byte
+		[0x0000000a]	0x4a	byte
+		[0x0000000b]	0x7f	byte
+		[0x0000000c]	0x76	byte
+		[0x0000000d]	0x7b	byte
+		[0x0000000e]	0x27	byte
+		[0x0000000f]	0x8c	byte
+		[0x00000010]	0xb7	byte
+		[0x00000011]	0xd4	byte
+		[0x00000012]	0xc4	byte
+		[0x00000013]	0xf0	byte
+		[0x00000014]	0xac	byte
+		[0x00000015]	0x97	byte
+		[0x00000016]	0xd7	byte
+		[0x00000017]	0x8c	byte
+		[0x00000018]	0x37	byte
+		[0x00000019]	0xc4	byte
+		[0x0000001a]	0xce	byte
+		[0x0000001b]	0xc6	byte
+		[0x0000001c]	0x8b	byte
+		[0x0000001d]	0xae	byte
+		[0x0000001e]	0xa1	byte
+		[0x0000001f]	0x28	byte
+		[0x00000020]	0xd9	byte
+		[0x00000021]	0xc5	byte
+		[0x00000022]	0x03	byte
+		[0x00000023]	0xd3	byte
+		[0x00000024]	0x17	byte
+		[0x00000025]	0x31	byte
+		[0x00000026]	0x74	byte
+		[0x00000027]	0x72	byte
+		[0x00000028]	0xf0	byte
+		[0x00000029]	0x82	byte
+		[0x0000002a]	0x60	byte
+		[0x0000002b]	0x54	byte
+		[0x0000002c]	0x9d	byte
+		[0x0000002d]	0x1a	byte
+		[0x0000002e]	0xe6	byte
+		[0x0000002f]	0x1d	byte
+		[0x00000030]	0x5b	byte
+		[0x00000031]	0xeb	byte
+		[0x00000032]	0x5b	byte
+		[0x00000033]	0xec	byte
+		[0x00000034]	0x8c	byte
+		[0x00000035]	0xbb	byte
+		[0x00000036]	0xb2	byte
+		[0x00000037]	0x71	byte
+		[0x00000038]	0x8d	byte
+		[0x00000039]	0xfa	byte
+		[0x0000003a]	0x3b	byte
+		[0x0000003b]	0x9e	byte
+		[0x0000003c]	0x81	byte
+		[0x0000003d]	0x01	byte
+		[0x0000003e]	0x62	byte
+		[0x0000003f]	0x01	byte
+		[0x00000040]	0x59	byte
+		[0x00000041]	0x46	byte
+		[0x00000042]	0x19	byte
+		[0x00000043]	0x70	byte
+		[0x00000044]	0x0d	byte
+		[0x00000045]	0x70	byte
+		[0x00000046]	0x89	byte
+		[0x00000047]	0x3a	byte
+		[0x00000048]	0xaf	byte
+		[0x00000049]	0x2b	byte
+		[0x0000004a]	0x3e	byte
+		[0x0000004b]	0xe3	byte
+		[0x0000004c]	0x66	byte
+		[0x0000004d]	0x79	byte
+		[0x0000004e]	0x27	byte
+		[0x0000004f]	0xc0	byte
+		[0x00000050]	0x7e	byte
+		[0x00000051]	0xca	byte
+		[0x00000052]	0xc7	byte
+		[0x00000053]	0x53	byte
+		[0x00000054]	0x8b	byte
+		[0x00000055]	0xe1	byte
+		[0x00000056]	0x07	byte
+		[0x00000057]	0x1b	byte
+		[0x00000058]	0xde	byte
+		[0x00000059]	0x8c	byte
+		[0x0000005a]	0x9d	byte
+		[0x0000005b]	0x2b	byte
+		[0x0000005c]	0xd2	byte
+		[0x0000005d]	0x76	byte
+		[0x0000005e]	0x1d	byte
+		[0x0000005f]	0x95	byte
+		[0x00000060]	0xbc	byte
+		[0x00000061]	0x82	byte
+		[0x00000062]	0x92	byte
+		[0x00000063]	0x21	byte
+		[0x00000064]	0x9f	byte
+		[0x00000065]	0x69	byte
+		[0x00000066]	0x4f	byte
+		[0x00000067]	0xbb	byte
+		[0x00000068]	0x2b	byte
+		[0x00000069]	0x91	byte
+		[0x0000006a]	0xd8	byte
+		[0x0000006b]	0x1e	byte
+		[0x0000006c]	0xd3	byte
+		[0x0000006d]	0x16	byte
+		[0x0000006e]	0xd4	byte
+		[0x0000006f]	0xea	byte
+		[0x00000070]	0x74	byte
+		[0x00000071]	0x48	byte
+		[0x00000072]	0xdb	byte
+		[0x00000073]	0xa7	byte
+		[0x00000074]	0x76	byte
+		[0x00000075]	0x78	byte
+		[0x00000076]	0x18	byte
+		[0x00000077]	0xe3	byte
+		[0x00000078]	0x3d	byte
+		[0x00000079]	0x4c	byte
+		[0x0000007a]	0x3e	byte
+		[0x0000007b]	0x2b	byte
+		[0x0000007c]	0xe2	byte
+		[0x0000007d]	0x4e	byte
+		[0x0000007e]	0x48	byte
+		[0x0000007f]	0x70	byte
+
+
+    public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
+        }
+
+using System.Text;
+using System.Windows.Forms;
+
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+ByteArrayToString
+
+Console.WriteLine(ByteArrayToString(res));
+
+0x19, 0xe6, 0xad, 0xa6, 0x2a, 0xb6, 0xef, 0x88, 0xf8, 0x8f, 0x01, 0x8a, 0x3d, 0x
+cc, 0xb9, 0x66, 0x3e, 0x3c, 0xb7, 0x45, 0x6e, 0x7f, 0x28, 0x78, 0x89, 0x47, 0xbd
+, 0x41, 0xe1, 0xf8, 0x6e, 0xa2, 0x61, 0x58, 0x99, 0x98, 0xde, 0x15, 0x3b, 0x88,
+0x78, 0xc6, 0x04, 0x7c, 0xc3, 0x49, 0x68, 0xa3, 0x4b, 0xd3, 0xcd, 0xf3, 0x88, 0x
+f4, 0xde, 0x58, 0xda, 0x92, 0xa6, 0x4b, 0x86, 0xcc, 0x75, 0xb5, 0xd2, 0x09, 0xb6
+, 0x42, 0x71, 0x60, 0x96, 0xfa, 0x62, 0x02, 0xc4, 0xc0, 0x43, 0x9e, 0x96, 0x06,
+0xe1, 0x41, 0xf3, 0x11, 0x62, 0xac, 0x9e, 0xa6, 0x0e, 0xf5, 0x17, 0xcb, 0x68, 0x
+04, 0x1c, 0xd8, 0xd1, 0x28, 0x98, 0x7e, 0xfa, 0xa1, 0xef, 0xb1, 0xfd, 0x93, 0x6c
+, 0x5b, 0x83, 0xad, 0x8f, 0xdf, 0x73, 0xbf, 0x10, 0xf0, 0x6d, 0x6e, 0x27, 0x11,
+0xd6, 0x2d, 0x17, 0x48, 0x7e, 0x07, 0x4f, 0xa6,
+0xa6, 0x4f, 0x07, 0x7e, 0x48, 0x17, 0x2d, 0xd6, 0x11, 0x27, 0x6e, 0x6d, 0xf0, 0x
+10, 0xbf, 0x73, 0xdf, 0x8f, 0xad, 0x83, 0x5b, 0x6c, 0x93, 0xfd, 0xb1, 0xef, 0xa1
+, 0xfa, 0x7e, 0x98, 0x28, 0xd1, 0xd8, 0x1c, 0x04, 0x68, 0xcb, 0x17, 0xf5, 0x0e,
+0xa6, 0x9e, 0xac, 0x62, 0x11, 0xf3, 0x41, 0xe1, 0x06, 0x96, 0x9e, 0x43, 0xc0, 0x
+c4, 0x02, 0x62, 0xfa, 0x96, 0x60, 0x71, 0x42, 0xb6, 0x09, 0xd2, 0xb5, 0x75, 0xcc
+, 0x86, 0x4b, 0xa6, 0x92, 0xda, 0x58, 0xde, 0xf4, 0x88, 0xf3, 0xcd, 0xd3, 0x4b,
+0xa3, 0x68, 0x49, 0xc3, 0x7c, 0x04, 0xc6, 0x78, 0x88, 0x3b, 0x15, 0xde, 0x98, 0x
+99, 0x58, 0x61, 0xa2, 0x6e, 0xf8, 0xe1, 0x41, 0xbd, 0x47, 0x89, 0x78, 0x28, 0x7f
+, 0x6e, 0x45, 0xb7, 0x3c, 0x3e, 0x66, 0xb9, 0xcc, 0x3d, 0x8a, 0x01, 0x8f, 0xf8,
+0x88, 0xef, 0xb6, 0x2a, 0xa6, 0xad, 0xe6, 0x19,
+
+writ
+
+0xaa, 0x97, 0x0e, 0x0b, 0x2f, 0xe2, 0x1f, 0x01, 0x7a, 0xcf, 0x86, 0x20, 0x32, 0x3e, 0x37, 0x01, 0x79, 0xae, 0x8b, 0xab, 0x38, 0x0e, 0x84, 0x4e, 0xfc, 0x2e, 0x45, 0x58, 0x94, 0x58, 0xfb, 0xf8, 0xf8, 0x99, 0x90, 0x5e, 0xdd, 0x07, 0x72, 0x16, 0x73, 0x46, 0x2e, 0x86, 0x0e, 0x04, 0xe8, 0x8d, 0x90, 0x4f, 0x15, 0x17, 0x45, 0xaa, 0x28, 0x2b, 0x96, 0x6c, 0x3f, 0x9c, 0xff, 0xeb, 0x5b, 0x13, 0x76, 0xd0, 0xba, 0x16, 0x2e, 0x58, 0xbc, 0xc3, 0x3f, 0x3f, 0x2a, 0x23, 0x3c, 0x78, 0xfb, 0x10, 0xd1, 0x97, 0x2b, 0xef, 0xf8, 0xde, 0xbe, 0x08, 0xb5, 0xd2, 0xcc, 0xe0, 0xb2, 0x4e, 0xde, 0x85, 0x73, 0xbc, 0x86, 0x15, 0xc6, 0x04, 0xeb, 0xdb, 0x0a, 0xae, 0x03, 0x68, 0x8c, 0x05, 0xbb, 0x1f, 0x86, 0x2c, 0x62, 0xc1, 0xc9, 0x7e, 0x14, 0x63, 0x1b, 0x2a, 0x1f, 0x93, 0xfa, 0xa5, 0x6b, 0x0c, 
+0x0c, 0x6b, 0xa5, 0xfa, 0x93, 0x1f, 0x2a, 0x1b, 0x63, 0x14, 0x7e, 0xc9, 0xc1, 0x62, 0x2c, 0x86, 0x1f, 0xbb, 0x05, 0x8c, 0x68, 0x03, 0xae, 0x0a, 0xdb, 0xeb, 0x04, 0xc6, 0x15, 0x86, 0xbc, 0x73, 0x85, 0xde, 0x4e, 0xb2, 0xe0, 0xcc, 0xd2, 0xb5, 0x08, 0xbe, 0xde, 0xf8, 0xef, 0x2b, 0x97, 0xd1, 0x10, 0xfb, 0x78, 0x3c, 0x23, 0x2a, 0x3f, 0x3f, 0xc3, 0xbc, 0x58, 0x2e, 0x16, 0xba, 0xd0, 0x76, 0x13, 0x5b, 0xeb, 0xff, 0x9c, 0x3f, 0x6c, 0x96, 0x2b, 0x28, 0xaa, 0x45, 0x17, 0x15, 0x4f, 0x90, 0x8d, 0xe8, 0x04, 0x0e, 0x86, 0x2e, 0x46, 0x73, 0x16, 0x72, 0x07, 0xdd, 0x5e, 0x90, 0x99, 0xf8, 0xf8, 0xfb, 0x58, 0x94, 0x58, 0x45, 0x2e, 0xfc, 0x4e, 0x84, 0x0e, 0x38, 0xab, 0x8b, 0xae, 0x79, 0x01, 0x37, 0x3e, 0x32, 0x20, 0x86, 0xcf, 0x7a, 0x01, 0x1f, 0xe2, 0x2f, 0x0b, 0x0e, 0x97, 0xaa, 
+
+
+decrypted_length = public_decrypt(testD, 128/*encrypted_length*/, (unsigned char*)publicKey, decrypted, 1);
+
+   byte[] rr = rsaKey.Decrypt(res, false);
+
+0xb8, 0x50, 0xce, 0xc8, 0xf1, 0x23, 0x6e, 0x75, 0xe0, 0x8e, 0xfa, 0x62, 0x7b, 0xba, 0xd2, 0x31, 0x1b, 0x70, 0xba, 0xa5, 0xdb, 0x22, 0xbb, 0x1e, 0x83, 0x5f, 0x28, 0x73, 0x65, 0x3f, 0x44, 0x19, 0x38, 0xdf, 0x06, 0x74, 0xd3, 0xdd, 0x7a, 0x4f, 0x55, 0xe8, 0xa6, 0x9c, 0xe3, 0x5d, 0x60, 0x22, 0xfd, 0xff, 0xaf, 0x58, 0xcd, 0x60, 0x13, 0x44, 0x9e, 0xd1, 0x50, 0x94, 0x47, 0x17, 0x1f, 0x8f, 0xdb, 0xee, 0x5e, 0xbc, 0xf7, 0xa2, 0x89, 0xfe, 0x8f, 0xe0, 0x3a, 0x40, 0x69, 0xf0, 0x7b, 0xbe, 0xc9, 0x92, 0x15, 0x23, 0x0e, 0x58, 0x50, 0x5f, 0xfd, 0x21, 0xd8, 0x09, 0x87, 0x1a, 0x55, 0x2a, 0x37, 0x0b, 0x2c, 0x04, 0xb3, 0x32, 0xdc, 0x95, 0x10, 0xd8, 0x58, 0x4a, 0x01, 0x96, 0x5d, 0x29, 0xcb, 0x21, 0x2a, 0xbb, 0xf2, 0x69, 0x07, 0x2b, 0x1f, 0x6d, 0x1e, 0x79, 0x81, 0x4b, 0x92, 0xbc
+
+0x1b, 0xfb, 0x7f, 0xce, 0x20, 0x92, 0xc5, 0x72, 0x79, 0x5b, 0x69, 0x76, 0xdd, 0x08, 0xc5, 0x31, 0x8d, 0x78, 0x08, 0xe1, 0x69, 0x28, 0x08, 0x6e, 0xce, 0xc2, 0xe7, 0x2c, 0x78, 0x29, 0xa2, 0x1c, 0x98, 0xd0, 0xc2, 0x15, 0xea, 0x27, 0x92, 0xa9, 0x9a, 0x47, 0xbb, 0x7d, 0x8a, 0xfb, 0x07, 0xbc, 0x9c, 0x2d, 0xc4, 0x1b, 0xef, 0xe2, 0x0a, 0x27, 0x20, 0x22, 0x7b, 0xff, 0xc9, 0x18, 0xf7, 0x89, 0x44, 0x70, 0xf2, 0x68, 0xc4, 0x08, 0x4b, 0x9c, 0xc6, 0x92, 0x56, 0xc0, 0x93, 0x22, 0xe9, 0x0b, 0x07, 0x8e, 0x36, 0x68, 0x1f, 0xe3, 0xbc, 0xfb, 0x0b, 0x8c, 0x30, 0x1c, 0x61, 0x7b, 0xae, 0x9a, 0x4e, 0x90, 0x64, 0xd3, 0x48, 0xeb, 0x0e, 0x10, 0xed, 0xa6, 0xeb, 0x68, 0xae, 0x31, 0x22, 0x5e, 0xf4, 0xba, 0x64, 0xff, 0xd6, 0xae, 0x90, 0xb1, 0x4c, 0x2a, 0x59, 0xae, 0x2f, 0x9c, 0x07, 0x1f
+
+0x1f, 0x07, 0x9c, 0x2f, 0xae, 0x59, 0x2a, 0x4c, 0xb1, 0x90, 0xae, 0xd6, 0xff, 0x64, 0xba, 0xf4, 0x5e, 0x22, 0x31, 0xae, 0x68, 0xeb, 0xa6, 0xed, 0x10, 0x0e, 0xeb, 0x48, 0xd3, 0x64, 0x90, 0x4e, 0x9a, 0xae, 0x7b, 0x61, 0x1c, 0x30, 0x8c, 0x0b, 0xfb, 0xbc, 0xe3, 0x1f, 0x68, 0x36, 0x8e, 0x07, 0x0b, 0xe9, 0x22, 0x93, 0xc0, 0x56, 0x92, 0xc6, 0x9c, 0x4b, 0x08, 0xc4, 0x68, 0xf2, 0x70, 0x44, 0x89, 0xf7, 0x18, 0xc9, 0xff, 0x7b, 0x22, 0x20, 0x27, 0x0a, 0xe2, 0xef, 0x1b, 0xc4, 0x2d, 0x9c, 0xbc, 0x07, 0xfb, 0x8a, 0x7d, 0xbb, 0x47, 0x9a, 0xa9, 0x92, 0x27, 0xea, 0x15, 0xc2, 0xd0, 0x98, 0x1c, 0xa2, 0x29, 0x78, 0x2c, 0xe7, 0xc2, 0xce, 0x6e, 0x08, 0x28, 0x69, 0xe1, 0x08, 0x78, 0x8d, 0x31, 0xc5, 0x08, 0xdd, 0x76, 0x69, 0x5b, 0x79, 0x72, 0xc5, 0x92, 0x20, 0xce, 0x7f, 0xfb, 0x1b
+
+TSQUoVrQ0kg1eiltNwIhKPrIdsi1VhWjYNJlXvfQqW2EKk3X37X862SCfrz7v8IYJ7OorWwlFpGDStJDSR6saO
+ScqSvmesCrGEEq+U6zegR9nH0lvcGZ8Rvc/y7U9kZrE4fHqEiLyfpmzJyPmWUT9Uta14nPJYsl3cmdThHB8Bs=
+
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgiXM5jdj19eiHdjl/TrAFu1OD
+3g+3q9x9x3UpDQUubRLfpoYm1NJvqlgp/Jfs+oJRDzCAvrFQnkZE8Sy72DLPxmhv
+B9mwYKy+7jQJahP19wUFk99eujVW2WH/GX/Jgeb4bOqHQHDvrG0sdJ8t+lU6uZl3
+AqZIUoxO81c4V3RXXwIDAQAB
+
+void createNewRSAKEY()
+{
+    if(rsaKey != NULL)
+    {//free the old one first otherwise this will be a memory leak
+        RSA_free(rsaKey);
+    }
+    rsaKey = RSA_new();
+    rsaKey->e = BN_bin2bn(Exponent, 3, rsaKey->e);
+    rsaKey->n = BN_bin2bn(Modulus, 128, rsaKey->n);
+    rsaKey = createRSA((unsigned char*)publicKey, 1);
+    rsaKey = createRSA((unsigned char*)privateKey, 0);
+}
+
+RSA * rsa
+
+BYTE Modulus[128] = {0};
+BYTE Exponent[3] = {0};
+
+DAQAB
+
+AQAB
+
+
+BYTE Modulus[128] = {0};
+BYTE Exponent[3] = {0};
+
+AQAB
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+char *modulus = "4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=";
+char *exponent = "AQAB";
+
+
+char _modulus[129] = {0};
+    char _exponent[4] = {0};
+    Base64decode(_modulus, modulus);
+    Base64decode(_exponent, exponent);
+
+createNewRSAKEY
+
+mrUC7SGszsBrUKjzlWjo5cw28mI4sFiDdxbP83rHRTzSn7vY0LAk7L/TTnhPxCs0asESxApLgEAeX7wF6BaZZNCTNcZgKjV/eXUjrS6STC/ytGTkNy3K3GGXiFlhSu0cDWQLjekzB6cD+O3pVlEq8fVKM1SGMYXW1WI6sLTUTlg=
+
+0x9a, 0xb5, 0x02, 0xed, 0x21, 0xac, 0xce, 0xc0, 0x6b, 0x50, 0xa8, 0xf3, 0x95, 0x68, 0xe8, 0xe5, 0xcc, 0x36, 0xf2, 0x62, 0x38, 0xb0, 0x58, 0x83, 0x77, 0x16, 0xcf, 0xf3, 0x7a, 0xc7, 0x45, 0x3c, 0xd2, 0x9f, 0xbb, 0xd8, 0xd0, 0xb0, 0x24, 0xec, 0xbf, 0xd3, 0x4e, 0x78, 0x4f, 0xc4, 0x2b, 0x34, 0x6a, 0xc1, 0x12, 0xc4, 0x0a, 0x4b, 0x80, 0x40, 0x1e, 0x5f, 0xbc, 0x05, 0xe8, 0x16, 0x99, 0x64, 0xd0, 0x93, 0x35, 0xc6, 0x60, 0x2a, 0x35, 0x7f, 0x79, 0x75, 0x23, 0xad, 0x2e, 0x92, 0x4c, 0x2f, 0xf2, 0xb4, 0x64, 0xe4, 0x37, 0x2d, 0xca, 0xdc, 0x61, 0x97, 0x88, 0x59, 0x61, 0x4a, 0xed, 0x1c, 0x0d, 0x64, 0x0b, 0x8d, 0xe9, 0x33, 0x07, 0xa7, 0x03, 0xf8, 0xed, 0xe9, 0x56, 0x51, 0x2a, 0xf1, 0xf5, 0x4a, 0x33, 0x54, 0x86, 0x31, 0x85, 0xd6, 0xd5, 0x62, 0x3a, 0xb0, 0xb4, 0xd4, 0x4e, 0x58
+
+0xc4
+
+TSQUoVrQ0kg1eiltNwIhKPrIdsi1VhWjYNJlXvfQqW2EKk3X37X862SCfrz7v8IYJ7OorWwlFpGDStJDSR6saO
+ScqSvmesCrGEEq+U6zegR9nH0lvcGZ8Rvc/y7U9kZrE4fHqEiLyfpmzJyPmWUT9Uta14nPJYsl3cmdThHB8Bs=
+
+4IlzOY3Y9fXoh3Y5f06wBbtTg94Pt6vcfcd1KQ0FLm0S36aGJtTSb6pYKfyX7PqCUQ8wgL6xUJ5GRPEsu9gyz8
+    ZobwfZsGCsvu40CWoT9fcFBZPfXro1Vtlh/xl/yYHm+Gzqh0Bw76xtLHSfLfpVOrmZdwKmSFKMTvNXOFd0V18=
+
+MIICXAIBAAKBgQDgiXM5jdj19eiHdjl/TrAFu1OD3g+3q9x9x3UpDQUubRLfpoYm
+1NJvqlgp/Jfs+oJRDzCAvrFQnkZE8Sy72DLPxmhvB9mwYKy+7jQJahP19wUFk99e
+ujVW2WH/GX/Jgeb4bOqHQHDvrG0sdJ8t+lU6uZl3AqZIUoxO81c4V3RXXwIDAQAB
+AoGAAKQDwydHdjQ0bKaGtXlJAUsuitLIYrLH10gJaouR9zbyddbozRWQYCcxRzVk
+TZXNZ2POtJ9WrC83bhzuDr8oLfQ5kG802G4IW9VlathB8xPXLTle/jPL/ynkAws9
+BaKPt/GOonY3sHlX0y8r3ocGIn0EZl7JG6+LGsPskUSrfyECQQD21uAiIUxfCnD/
+J/zls1BqneUPtYWWxkD6qAq0m5sMVcIBHfk3gooUyPKTDpLNpWYhuTzSBr+0VTHJ
+3K3KmC3RAkEA6N6wESUJ0gJRAd6K6JhQ9Xd3YaRFk2sIVZZzXfTIWxKTInOLf9Nw
+f/Wkqrt0/Twiato4kSqGW2wU6K5MnvqOLwJBAJdM8IebF3/uG4MbFLYLapBfhidR
+4begf/XkiONZufkem9MpdzgiSNcisSWYuj1ZU7f6HiCyyFEWI3WTUeerzfECQCzw
+JFv6oM2FIurQbk/6bM0h08jk8YRESGRz1ymPfkaM7BXe5FGzlOcsmS1VZXsk6qNi
+Hz5sTWdBETvhvumDAoMCQFiI2aFQOIRqqwO8u99L9JxvuLQqJfv25AUvbuKIiSFv
+SyWe0KtQk8q/QHHsISXFf/sC6SGWuDPN4saV7m+NXyg=
+
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgjkkxN1kfoHizPc5HZOyYUmMW
+20xYr814cOq90+uSUZmpcfSYNLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5
+uaOLGMmJN8jDi0Tsxt1W1iosnY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFC
+u3EKVecJQS+Vs9sUvQIDAQAB
+
+0x26, 0xc5, 0xdf, 0x75, 0xe6, 0xcc, 0x7d, 0xcb, 0xf2, 0x6d, 0x68, 0xd9, 0x81, 0x15, 0xd6, 0x8c, 0xd4, 0xd5, 0x4a, 0x17, 0x0f, 0x7e, 0x35, 0x12, 0xc5, 0xc5, 0x7f, 0x65, 0x71, 0x7c, 0x79, 0xe1, 0x83, 0xa6, 0x44, 0x85, 0x3b, 0x98, 0x07, 0x3e, 0xc9, 0xbc, 0x90, 0x36, 0x08, 0x58, 0xbb, 0x75, 0xad, 0x57, 0x03, 0xdf, 0xac, 0xcc, 0x10, 0xa8, 0x14, 0x66, 0x9a, 0xbc, 0xdf, 0x74, 0x87, 0x4b, 0xb4, 0xf9, 0x42, 0xa1, 0x49, 0x6f, 0xdb, 0x97, 0x1a, 0x98, 0x6e, 0xa4, 0xc1, 0xbe, 0x26, 0x26, 0x3b, 0xc1, 0xab, 0xa5, 0x65, 0x62, 0xad, 0x86, 0xed, 0x6d, 0xc1, 0xd5, 0x16, 0x3d, 0x07, 0x82, 0x9a, 0x9f, 0xf5, 0xbe, 0x4b, 0xd1, 0x95, 0xeb, 0x9b, 0xd6, 0x21, 0xef, 0xfa, 0xe6, 0xb1, 0x25, 0xc9, 0xea, 0x98, 0x5b, 0x8f, 0x36, 0x4f, 0x2b, 0x20, 0xee, 0x8b, 0x87, 0x99, 0x7e, 0xcc, 0xbf
+
+0xbf, 0xcc, 0x7e, 0x99, 0x87, 0x8b, 0xee, 0x20, 0x2b, 0x4f, 0x36, 0x8f, 0x5b, 0x98, 0xea, 0xc9, 0x25, 0xb1, 0xe6, 0xfa, 0xef, 0x21, 0xd6, 0x9b, 0xeb, 0x95, 0xd1, 0x4b, 0xbe, 0xf5, 0x9f, 0x9a, 0x82, 0x07, 0x3d, 0x16, 0xd5, 0xc1, 0x6d, 0xed, 0x86, 0xad, 0x62, 0x65, 0xa5, 0xab, 0xc1, 0x3b, 0x26, 0x26, 0xbe, 0xc1, 0xa4, 0x6e, 0x98, 0x1a, 0x97, 0xdb, 0x6f, 0x49, 0xa1, 0x42, 0xf9, 0xb4, 0x4b, 0x87, 0x74, 0xdf, 0xbc, 0x9a, 0x66, 0x14, 0xa8, 0x10, 0xcc, 0xac, 0xdf, 0x03, 0x57, 0xad, 0x75, 0xbb, 0x58, 0x08, 0x36, 0x90, 0xbc, 0xc9, 0x3e, 0x07, 0x98, 0x3b, 0x85, 0x44, 0xa6, 0x83, 0xe1, 0x79, 0x7c, 0x71, 0x65, 0x7f, 0xc5, 0xc5, 0x12, 0x35, 0x7e, 0x0f, 0x17, 0x4a, 0xd5, 0xd4, 0x8c, 0xd6, 0x15, 0x81, 0xd9, 0x68, 0x6d, 0xf2, 0xcb, 0x7d, 0xcc, 0xe6, 0x75, 0xdf, 0xc5, 0x26
+
+yPPgcJu0EJy4nt1fMD40ts7uK2I=
+
+<SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue></Reference></SignedInfo>
+
+<CanonicalizationMethod
+
+<SignatureMethod
+
+<Transform
+
+<DigestMethod
+
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+<DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+</Reference>
+</SignedInfo>
+
+signedXml._digestedSignedInfo
+
+._digestedSignedInfo
+
+<SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue></Reference></SignedInfo>
+
+<SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+xmlns="http://www.w3.org/2000/09/xmldsig#"
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+<SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">?
+??????<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>?
+??????<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>?
+??????<Reference URI="">?
+????????<Transforms>?
+??????????<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>?
+????????</Transforms>?
+????????<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>?
+????????<DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>?
+??????</Reference>?
+????</SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+yPPgcJu0EJy4nt1fMD40ts7uK2I=
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+xmlns="http://www.w3.org/2000/09/xmldsig#"
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+UWuYTYug10J1k5hKfonxthgrAR8=
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue>
+      </Reference>
+    </SignedInfo>
+
+yPPgcJu0EJy4nt1fMD40ts7uK2I=
+
+SignedXml
+
+http://www.w3.org/TR/2001/REC-xml-c14n-20010315
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>yPPgcJu0EJy4nt1fMD40ts7uK2I=</DigestValue></Reference></SignedInfo>
+
+wj2LMgMX58scrqa2R+ihlPFlOt/PqrGm2IMEqEcda4ukxBzbl0fWWe5HCdvaAHFYcaOGJWiUiVdWY6sH0GWoQohoTbJ4/fXFoZErIog2QAUWsQOYmGu8il3cZSs7DXrDVhgFCb1qB0Je9ymh7RkI69qlEXylo6LRDDmpD9evokM=
+
+Transform
+
+wj2LMgMX58scrqa2R+ihlPFlOt/PqrGm2IMEqEcda4ukxBzbl0fWWe5HCdvaAHFYcaOGJWiUiVdWY6sH0GWoQohoTbJ4/fXFoZErIog2QAUWsQOYmGu8il3cZSs7DXrDVhgFCb1qB0Je9ymh7RkI69qlEXylo6LRDDmpD9evokM=
+
+0xc2, 0x3d, 0x8b, 0x32, 0x03, 0x17, 0xe7, 0xcb, 0x1c, 0xae, 0xa6, 0xb6, 0x47, 0xe8, 0xa1, 0x94, 0xf1, 0x65, 0x3a, 0xdf, 0xcf, 0xaa, 0xb1, 0xa6, 0xd8, 0x83, 0x04, 0xa8, 0x47, 0x1d, 0x6b, 0x8b, 0xa4, 0xc4, 0x1c, 0xdb, 0x97, 0x47, 0xd6, 0x59, 0xee, 0x47, 0x09, 0xdb, 0xda, 0x00, 0x71, 0x58, 0x71, 0xa3, 0x86, 0x25, 0x68, 0x94, 0x89, 0x57, 0x56, 0x63, 0xab, 0x07, 0xd0, 0x65, 0xa8, 0x42, 0x88, 0x68, 0x4d, 0xb2, 0x78, 0xfd, 0xf5, 0xc5, 0xa1, 0x91, 0x2b, 0x22, 0x88, 0x36, 0x40, 0x05, 0x16, 0xb1, 0x03, 0x98, 0x98, 0x6b, 0xbc, 0x8a, 0x5d, 0xdc, 0x65, 0x2b, 0x3b, 0x0d, 0x7a, 0xc3, 0x56, 0x18, 0x05, 0x09, 0xbd, 0x6a, 0x07, 0x42, 0x5e, 0xf7, 0x29, 0xa1, 0xed, 0x19, 0x08, 0xeb, 0xda, 0xa5, 0x11, 0x7c, 0xa5, 0xa3, 0xa2, 0xd1, 0x0c, 0x39, 0xa9, 0x0f, 0xd7, 0xaf, 0xa2, 0x43
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+AQAB
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+AQAB
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6YDcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOiJDh6XGzfWP/gvfANF5Q=
+
+0x1b, 0x65, 0xb6, 0x81, 0x35, 0x12, 0xc9, 0x48, 0x80, 0xe1, 0x51, 0xe3, 0xef, 0x5b, 0x3b, 0xc7, 0x06, 0x76, 0x51, 0x29, 0xbf, 0x17, 0xdc, 0xfd, 0x67, 0xf6, 0x57, 0xbf, 0x54, 0xec, 0x79, 0x1b, 0x3b, 0xeb, 0xc2, 0xa1, 0xb9, 0xa7, 0xb3, 0x66, 0x71, 0x1b, 0xa9, 0xb0, 0x33, 0x34, 0x3b, 0x21, 0xc2, 0xfd, 0xe0, 0x97, 0x97, 0xa5, 0xd2, 0xce, 0x98, 0x0d, 0xc5, 0xa2, 0x02, 0xd7, 0xed, 0xd0, 0x33, 0xa8, 0x59, 0x64, 0x50, 0x70, 0xd8, 0xca, 0x44, 0x1c, 0x83, 0x48, 0x8b, 0xed, 0x93, 0x78, 0x0b, 0x9e, 0x47, 0x1e, 0x8a, 0xf5, 0xad, 0x97, 0x64, 0x0f, 0xf3, 0x17, 0x7f, 0xe7, 0x09, 0x48, 0xbf, 0x0e, 0x8f, 0x26, 0x1d, 0xa2, 0xd7, 0x69, 0x5a, 0xd1, 0x97, 0x97, 0x6a, 0x71, 0x52, 0x78, 0xe3, 0xa2, 0x24, 0x38, 0x7a, 0x5c, 0x6c, 0xdf, 0x58, 0xff, 0xe0, 0xbd, 0xf0, 0x0d, 0x17, 0x94
+
+<SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>qWwoAabPMZn8vva4BBXTqadKdtc=</DigestValue></Reference></SignedInfo>
+
+xmlns="http://www.w3.org/2000/09/xmldsig#"
+
+</CanonicalizationMethod>
+
+</SignatureMethod>
+
+</Transform>
+
+</DigestMethod>
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>qWwoAabPMZn8vva4BBXTqadKdtc=</DigestValue></Reference></SignedInfo>
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+mrUC7SGszsBrUKjzlWjo5cw28mI4sFiDdxbP83rHRTzSn7vY0LAk7L/TTnhPxCs0asESxApLgEAeX7wF6BaZZNCTNcZgKjV/eXUjrS6STC/ytGTkNy3K3GGXiFlhSu0cDWQLjekzB6cD+O3pVlEq8fVKM1SGMYXW1WI6sLTUTlg=
+
+0x9a, 0xb5, 0x02, 0xed, 0x21, 0xac, 0xce, 0xc0, 0x6b, 0x50, 0xa8, 0xf3, 0x95, 0x68, 0xe8, 0xe5, 0xcc, 0x36, 0xf2, 0x62, 0x38, 0xb0, 0x58, 0x83, 0x77, 0x16, 0xcf, 0xf3, 0x7a, 0xc7, 0x45, 0x3c, 0xd2, 0x9f, 0xbb, 0xd8, 0xd0, 0xb0, 0x24, 0xec, 0xbf, 0xd3, 0x4e, 0x78, 0x4f, 0xc4, 0x2b, 0x34, 0x6a, 0xc1, 0x12, 0xc4, 0x0a, 0x4b, 0x80, 0x40, 0x1e, 0x5f, 0xbc, 0x05, 0xe8, 0x16, 0x99, 0x64, 0xd0, 0x93, 0x35, 0xc6, 0x60, 0x2a, 0x35, 0x7f, 0x79, 0x75, 0x23, 0xad, 0x2e, 0x92, 0x4c, 0x2f, 0xf2, 0xb4, 0x64, 0xe4, 0x37, 0x2d, 0xca, 0xdc, 0x61, 0x97, 0x88, 0x59, 0x61, 0x4a, 0xed, 0x1c, 0x0d, 0x64, 0x0b, 0x8d, 0xe9, 0x33, 0x07, 0xa7, 0x03, 0xf8, 0xed, 0xe9, 0x56, 0x51, 0x2a, 0xf1, 0xf5, 0x4a, 0x33, 0x54, 0x86, 0x31, 0x85, 0xd6, 0xd5, 0x62, 0x3a, 0xb0, 0xb4, 0xd4, 0x4e, 0x58
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOCOSTE3WR+geLM9zkdk7JhSYxbbTFivzXhw6r3T65JRmalx9Jg0vCU98DvYAkmXcdn5VL3nu2C6nAwQ77Aavap/Y3m5o4sYyYk3yMOLROzG3VbWKiydjQ6+qI5XiaNJ2s3nMUP2YH6Wywoj2Wi9cORM0UK7cQpV5wlBL5Wz2xS9AgMBAAECgYAwFSeE+1YBGKpfrv9JeEnU/+cp0MFTSCmV/Y+2H/eUOBbQGo+GO9yBmPakyccLnPsK8oF7vG/58VtSlhnMup0byx4HQgFtPRci4vMhCxEtl3TfN/KKbqzK3bbQ1iLNmLF5P7C5dfqA3l9t5XvrRD16sYAeS1ZdKykx9JSm8MjmAQJBAP2Uoa1miGkuwQCpv8Y970NkJFtJOvYbPIIYVDOb+61kkiGkwLwCSlRvO6RuJjmJsHF5IRMrxVGHrwQsvXEq6D0CQQDissL1Z3med8ZVshZtqK6C05PYOyWyVNeJNPLim5XsyIJZiMUk86ILzrZrPvPsODg8RW+6UaEBaReMC7OC/yaBAkB4gi8Hgeen3OE52HHb20kehLPGchnEJZNu2/MAB8vmThooROyXLJt4XthAP1yJEYc5lfAC9VUzdsDUwhJRequdAkEAi4aal4/oOrBdUcEaLMP1JHA0PpGo0emF/tyn4PEBhYqjL5gOPn/07G99tuQ4HNs9QVs7OOGkxsl3xKovAiEoAQJAb+16IEfATZ3qtUzl+Wscm+xUHWyzJ1TcIlsT7k9qFREkb8gG7uEt5hPOZkug/1XrCXUeTqwPayrcYD6M9bdGGg==
+
+wj2LMgMX58scrqa2R+ihlPFlOt/PqrGm2IMEqEcda4ukxBzbl0fWWe5HCdvaAHFYcaOGJWiUiVdWY6sH0GWoQohoTbJ4/fXFoZErIog2QAUWsQOYmGu8il3cZSs7DXrDVhgFCb1qB0Je9ymh7RkI69qlEXylo6LRDDmpD9evokM=
+
+0xc2, 0x3d, 0x8b, 0x32, 0x03, 0x17, 0xe7, 0xcb, 0x1c, 0xae, 0xa6, 0xb6, 0x47, 0xe8, 0xa1, 0x94, 0xf1, 0x65, 0x3a, 0xdf, 0xcf, 0xaa, 0xb1, 0xa6, 0xd8, 0x83, 0x04, 0xa8, 0x47, 0x1d, 0x6b, 0x8b, 0xa4, 0xc4, 0x1c, 0xdb, 0x97, 0x47, 0xd6, 0x59, 0xee, 0x47, 0x09, 0xdb, 0xda, 0x00, 0x71, 0x58, 0x71, 0xa3, 0x86, 0x25, 0x68, 0x94, 0x89, 0x57, 0x56, 0x63, 0xab, 0x07, 0xd0, 0x65, 0xa8, 0x42, 0x88, 0x68, 0x4d, 0xb2, 0x78, 0xfd, 0xf5, 0xc5, 0xa1, 0x91, 0x2b, 0x22, 0x88, 0x36, 0x40, 0x05, 0x16, 0xb1, 0x03, 0x98, 0x98, 0x6b, 0xbc, 0x8a, 0x5d, 0xdc, 0x65, 0x2b, 0x3b, 0x0d, 0x7a, 0xc3, 0x56, 0x18, 0x05, 0x09, 0xbd, 0x6a, 0x07, 0x42, 0x5e, 0xf7, 0x29, 0xa1, 0xed, 0x19, 0x08, 0xeb, 0xda, 0xa5, 0x11, 0x7c, 0xa5, 0xa3, 0xa2, 0xd1, 0x0c, 0x39, 0xa9, 0x0f, 0xd7, 0xaf, 0xa2, 0x43
+
+  RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider();
+            StreamReader file = new StreamReader(@"C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010\bin\test.pem");
+           // rsaKey.
+            byte[] certBuffer = GetBytesFromPEM(file.ReadToEnd(), "RSA PRIVATE KEY");
+            rsaKey = DecodeRSAPrivateKey(certBuffer);
+
+      xmlDoc = new XmlDocument();
+            xmlDoc.PreserveWhitespace = false;
+            xmlDoc.LoadXml(doc);
+
+
+XMLSigning xmlSigner
+
+resultNoSignature
+
+ char publicKey[]="-----BEGIN PUBLIC KEY-----\n"\
+                     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgjkkxN1kfoHizPc5HZOyYUmMW\n"\
+                     "20xYr814cOq90+uSUZmpcfSYNLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5\n"\
+                     "uaOLGMmJN8jDi0Tsxt1W1iosnY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFC\n"\
+                     "u3EKVecJQS+Vs9sUvQIDAQAB\n"\
+                     "-----END PUBLIC KEY-----";
+
+CHECKPARAMANDEXIT
+
+WORD CanonicalizeTheSignature(XMLElement SignatureInfo)
+{
+    WORD ret = 0;
+
+
+    return ret;
+}
+
+XMLPrinter printer(NULL, true, 0);
+    signedInfo->Accept(&printer);
+    char* xmlstring  = (char *)printer.CStr();
+
+
+<SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>qWwoAabPMZn8vva4BBXTqadKdtc=</DigestValue></Reference></SignedInfo>
+
+SignatureInfo
+
+xmlns="http://www.w3.org/2000/09/xmldsig#"
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">?
+??????<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>?
+??????<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>?
+??????<Reference URI="">?
+????????<Transforms>?
+??????????<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>?
+????????</Transforms>?
+????????<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>?
+????????<DigestValue>UWuYTYug10J1k5hKfonxthgrAR8=</DigestValue>?
+??????</Reference>?
+????</SignedInfo>
+
+CanonicalizeTheSignature
+
+xmlns
+
+http://www.w3.org/2000/09/xmldsig#"
+
+ReplaceCRLF
+
+SignatureMethod 
+
++		xmlstring	0x029d32b0 "<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>jCNSgb6dAGfNT4KmTYyTiDr51DQ=</DigestValue></Reference></SignedInfo>"	char *
+
+
+xmlstring = 0x008328a8 "<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=...
+
++		xmlstring	0x008328a8 "<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><DigestValue>7bTPkUdn49Ri4VDfGthKr245SBc=</DigestValue></Reference></SignedInfo>"	char *
+
+
+FullTagToElement
+
+SignatureInfo->FirstChildElement("SignatureMethod");
+
+CanonicalizationMethod 
+
+CanicalizationMethod
+
++		xmlstring	0x02a93018 "<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>QLR0Uszwu4HCTMNimzYX6DooOMw=</DigestValue></Reference></SignedInfo>"	char *
+
+
+CanicalizationMethod
+
+int size = sizeof(xmlstring);
+
+CanicalizationMethod
+
+"SignatureMethod"
+
+"Reference"
+
+"Transforms"
+
+"Transform"
+
+"DigestMethod"
+
+"SignatureValue"
+
+"KeyInfo"
+
+"KeyValue"
+
+"RSAKeyValue"
+
+"Modulus"
+
+"Exponent"
+
+"SignedInfo"
+
+"Reference"
+
+"DigestValue"
+
+WORD CanonicalizeTheSignature(XMLElement *SignatureInfo, BYTE *output)
+
+WORD CheckTheRSAEncryptionOfSignedInfo(XMLElement* signature, BYTE *SignatureValue)
+
+/******************************************************************************
+* WORD CheckTheRSAEncryptionOfSignedInfo(XMLElement* signature, BYTE *SignatureValue)
+* Use the Openssl library to calculate the SHA1 digest of the encrytped SignatureValue
+******************************************************************************/
+
+
+void GetDigestForSignedInfo(XMLElement* signedInfo, BYTE* output)
+
+* Use the Openssl library to calculate the SHA1 digest of the encrytped SignatureValue
+
+
+void createNewRSAKEY()
+
+RSA_private_encrypt(data_len, data, encrypted, rsa, padding);
+
+        int encrypted_length = RSA_private_encrypt(20, digest, encryption, rsaKey, padding); private_encrypt((unsigned char*)digest, 20, (unsigned char*)privateKey, encryption);
+
+
+CHECKANDEXIT
+
+CHECKPARAMANDEXIT
+
+{LOGGER(location, "Failed Check and Exit"); return 0;}
+
+createNewRSAKEY
+
+extern void SendTextToWindow(const char * text);
+
+{\
+    char debug[200];\
+    sprintf(debug, "%s %s", x, y);\
+    logger(debug);\
+    }
+
+SendTextToWindow
+
+PRINTTOWINDOW
+
+X509_verify_cert
+
+/* ------------------------------------------------------------ *
+ * file:        certverify.c                                    *
+ * purpose:     Example code for OpenSSL certificate validation *
+ * author:      06/12/2012 Frank4DD                             *
+ *                                                              *
+ * gcc -lssl -lcrypto -o certverify certverify.c                *
+ * ------------------------------------------------------------ */
+
+#include <openssl/bio.h>
+#include <openssl/err.h>
+#include <openssl/pem.h>
+#include <openssl/x509.h>
+#include <openssl/x509_vfy.h>
+
+int main() {
+
+  const char ca_bundlestr[] = "./ca-bundle.pem";
+  const char cert_filestr[] = "./cert-file.pem";
+
+  BIO              *certbio = NULL;
+  BIO               *outbio = NULL;
+  X509          *error_cert = NULL;
+  X509                *cert = NULL;
+  X509_NAME    *certsubject = NULL;
+  X509_STORE         *store = NULL;
+  X509_STORE_CTX  *vrfy_ctx = NULL;
+  int ret;
+
+  /* ---------------------------------------------------------- *
+   * These function calls initialize openssl for correct work.  *
+   * ---------------------------------------------------------- */
+  OpenSSL_add_all_algorithms();
+  ERR_load_BIO_strings();
+  ERR_load_crypto_strings();
+
+  /* ---------------------------------------------------------- *
+   * Create the Input/Output BIO's.                             *
+   * ---------------------------------------------------------- */
+  certbio = BIO_new(BIO_s_file());
+  outbio  = BIO_new_fp(stdout, BIO_NOCLOSE);
+
+  /* ---------------------------------------------------------- *
+   * Initialize the global certificate validation store object. *
+   * ---------------------------------------------------------- */
+  if (!(store=X509_STORE_new()))
+     BIO_printf(outbio, "Error creating X509_STORE_CTX object\n");
+
+  /* ---------------------------------------------------------- *
+   * Create the context structure for the validation operation. *
+   * ---------------------------------------------------------- */
+  vrfy_ctx = X509_STORE_CTX_new();
+
+  /* ---------------------------------------------------------- *
+   * Load the certificate and cacert chain from file (PEM).     *
+   * ---------------------------------------------------------- */
+  ret = BIO_read_filename(certbio, cert_filestr);
+  if (! (cert = PEM_read_bio_X509(certbio, NULL, 0, NULL))) {
+    BIO_printf(outbio, "Error loading cert into memory\n");
+    exit(-1);
+  }
+
+  ret = X509_STORE_load_locations(store, ca_bundlestr, NULL);
+  if (ret != 1)
+    BIO_printf(outbio, "Error loading CA cert or chain file\n");
+
+  /* ---------------------------------------------------------- *
+   * Initialize the ctx structure for a verification operation: *
+   * Set the trusted cert store, the unvalidated cert, and any  *
+   * potential certs that could be needed (here we set it NULL) *
+   * ---------------------------------------------------------- */
+  X509_STORE_CTX_init(vrfy_ctx, store, cert, NULL);
+
+  /* ---------------------------------------------------------- *
+   * Check the complete cert chain can be build and validated.  *
+   * Returns 1 on success, 0 on verification failures, and -1   *
+   * for trouble with the ctx object (i.e. missing certificate) *
+   * ---------------------------------------------------------- */
+  ret = X509_verify_cert(vrfy_ctx);
+  BIO_printf(outbio, "Verification return code: %d\n", ret);
+
+  if(ret == 0 || ret == 1)
+  BIO_printf(outbio, "Verification result text: %s\n",
+             X509_verify_cert_error_string(vrfy_ctx->error));
+
+  /* ---------------------------------------------------------- *
+   * The error handling below shows how to get failure details  *
+   * from the offending certificate.                            *
+   * ---------------------------------------------------------- */
+  if(ret == 0) {
+    /*  get the offending certificate causing the failure */
+    error_cert  = X509_STORE_CTX_get_current_cert(vrfy_ctx);
+    certsubject = X509_NAME_new();
+    certsubject = X509_get_subject_name(error_cert);
+    BIO_printf(outbio, "Verification failed cert:\n");
+    X509_NAME_print_ex(outbio, certsubject, 0, XN_FLAG_MULTILINE);
+    BIO_printf(outbio, "\n");
+  }
+
+  /* ---------------------------------------------------------- *
+   * Free up all structures                                     *
+   * ---------------------------------------------------------- */
+  X509_STORE_CTX_free(vrfy_ctx);
+  X509_STORE_free(store);
+  X509_free(cert);
+  BIO_free_all(certbio);
+  BIO_free_all(outbio);
+  exit(0);
+}
+
+C:\Users\502525009\Desktop\ca.trusted.pem
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010\bin\public.pem
+
+ca.trusted.pem
+
+public.pem
+
+ca.trusted.pem
+
+public.pem";
+
+find_issuer
+
+X509_get_issuer_name
+
+X509_verify_cert
+
+X509_STORE_CTX 
+
+https://www.aleksey.com/xmlsec/api/xmlsec-examples-sign-x509.html
+
+X509_STORE_CTX 
+
+PEM_read_X509 
+
+X509_STORE* m_store = X509_STORE_new();
+X509_LOOKUP* m_lookup = X509_STORE_add_lookup(m_store,X509_LOOKUP_file());    
+X509_STORE_load_locations(m_store, "CAFile.pem", NULL);
+X509_STORE_set_default_paths(m_store);
+X509_LOOKUP_load_file(m_lookup,"CAFile.pem",X509_FILETYPE_PEM)
+
+X509_STORE* m_store = X509_STORE_new();
+X509_LOOKUP* m_lookup = X509_STORE_add_lookup(m_store,X509_LOOKUP_file());    
+X509_STORE_load_locations(m_store, "CAFile.pem", NULL);
+X509_STORE_set_default_paths(m_store);
+X509_LOOKUP_load_file(m_lookup,"CAFile.pem",X509_FILETYPE_PEM)
+// alternative lookup by hashdir
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+/* by_buffer.c - copied and modified from crypto/x509/by_file.c */
+/* Copyright (C) - should be the same as for OpenSSL
+*/
+#include "by_buffer.h"
+
+#include <stdio.h>
+#include <time.h>
+#include <errno.h>
+
+#include "../crypto/cryptlib.h"
+#include <openssl/lhash.h>
+#include <openssl/buffer.h>
+#include <openssl/pem.h>
+#include <openssl/err.h>
+
+static int by_buffer_ctrl(X509_LOOKUP *ctx, int cmd, const char *argc,
+    long argl, char **ret);
+X509_LOOKUP_METHOD x509_buffer_lookup=
+    {
+    "Load buffer into cache",
+    NULL,        /* new */
+    NULL,        /* free */
+    NULL,         /* init */
+    NULL,        /* shutdown */
+    by_buffer_ctrl,    /* ctrl */
+    NULL,        /* get_by_subject */
+    NULL,        /* get_by_issuer_serial */
+    NULL,        /* get_by_fingerprint */
+    NULL,        /* get_by_alias */
+    };
+
+X509_LOOKUP_METHOD *X509_LOOKUP_buffer(void)
+    {
+    return(&x509_buffer_lookup);
+    }
+
+static int by_buffer_ctrl(X509_LOOKUP *ctx, int cmd, const char *argp, long argl,
+         char **ret)
+    {
+    int ok=0;
+    char *certBuf;
+
+    switch (cmd)
+        {
+    case X509_L_BUF_LOAD:
+        if (argl == X509_FILETYPE_DEFAULT)
+            {
+            X509err(X509_F_BY_FILE_CTRL,X509_R_LOADING_DEFAULTS);
+            }
+        else
+            {
+            if(argl == X509_FILETYPE_PEM)
+                ok = (X509_load_cert_crl_buf(ctx,argp,
+                    X509_FILETYPE_PEM) != 0);
+            else
+                ok = (X509_load_cert_buf(ctx,argp,(int)argl) != 0);
+            }
+        break;
+        }
+    return(ok);
+    }
+
+int X509_load_cert_buf(X509_LOOKUP *ctx, const char *certBuf, int type)
+    {
+    int ret=0;
+    BIO *in=NULL;
+    int i,count=0;
+    X509 *x=NULL;
+
+    if (certBuf == NULL) return(1);
+        in=BIO_new(BIO_s_mem());
+        if(in==NULL) goto err;
+
+    if (type == X509_FILETYPE_PEM)
+        {
+        for (;;)
+            {
+            x=PEM_read_bio_X509_AUX(in,NULL,NULL,NULL);
+            if (x == NULL)
+                {
+                if ((ERR_GET_REASON(ERR_peek_last_error()) ==
+                    PEM_R_NO_START_LINE) && (count > 0))
+                    {
+                    ERR_clear_error();
+                    break;
+                    }
+                else
+                    {
+                    X509err(X509_F_X509_LOAD_CERT_FILE,
+                        ERR_R_PEM_LIB);
+                    goto err;
+                    }
+                }
+            i=X509_STORE_add_cert(ctx->store_ctx,x);
+            if (!i) goto err;
+            count++;
+            X509_free(x);
+            x=NULL;
+            }
+        ret=count;
+        }
+    else if (type == X509_FILETYPE_ASN1)
+        {
+        x=d2i_X509_bio(in,NULL);
+        if (x == NULL)
+            {
+            X509err(X509_F_X509_LOAD_CERT_FILE,ERR_R_ASN1_LIB);
+            goto err;
+            }
+        i=X509_STORE_add_cert(ctx->store_ctx,x);
+        if (!i) goto err;
+        ret=i;
+        }
+    else
+        {
+        X509err(X509_F_X509_LOAD_CERT_FILE,X509_R_BAD_X509_FILETYPE);
+        goto err;
+        }
+err:
+    if (x != NULL) X509_free(x);
+    if (in != NULL) BIO_free(in);
+    return(ret);
+    }
+
+int X509_load_crl_buf(X509_LOOKUP *ctx, const char *certBuf, int type)
+    {
+    int ret=0;
+    BIO *in=NULL;
+    int i,count=0;
+    X509_CRL *x=NULL;
+
+    if (certBuf == NULL) return(1);
+    //in=BIO_new(BIO_s_file_internal());
+        in=BIO_new(BIO_s_mem());
+
+        if(in==NULL) goto err;
+
+    if (type == X509_FILETYPE_PEM)
+        {
+        for (;;)
+            {
+            x=PEM_read_bio_X509_CRL(in,NULL,NULL,NULL);
+            if (x == NULL)
+                {
+                if ((ERR_GET_REASON(ERR_peek_last_error()) ==
+                    PEM_R_NO_START_LINE) && (count > 0))
+                    {
+                    ERR_clear_error();
+                    break;
+                    }
+                else
+                    {
+                    X509err(X509_F_X509_LOAD_CRL_FILE,
+                        ERR_R_PEM_LIB);
+                    goto err;
+                    }
+                }
+            i=X509_STORE_add_crl(ctx->store_ctx,x);
+            if (!i) goto err;
+            count++;
+            X509_CRL_free(x);
+            x=NULL;
+            }
+        ret=count;
+        }
+    else if (type == X509_FILETYPE_ASN1)
+        {
+        x=d2i_X509_CRL_bio(in,NULL);
+        if (x == NULL)
+            {
+            X509err(X509_F_X509_LOAD_CRL_FILE,ERR_R_ASN1_LIB);
+            goto err;
+            }
+        i=X509_STORE_add_crl(ctx->store_ctx,x);
+        if (!i) goto err;
+        ret=i;
+        }
+    else
+        {
+        X509err(X509_F_X509_LOAD_CRL_FILE,X509_R_BAD_X509_FILETYPE);
+        goto err;
+        }
+err:
+    if (x != NULL) X509_CRL_free(x);
+    if (in != NULL) BIO_free(in);
+    return(ret);
+    }
+
+int X509_load_cert_crl_buf(X509_LOOKUP *ctx, const char *certBuf, int type)
+{
+    STACK_OF(X509_INFO) *inf;
+    X509_INFO *itmp;
+    BIO *in;
+    int i, count = 0;
+    if(type != X509_FILETYPE_PEM)
+        return X509_load_cert_buf(ctx, certBuf, type);
+        in = BIO_new(BIO_s_mem());
+    if(!in) {
+        X509err(X509_F_X509_LOAD_CERT_CRL_FILE,ERR_R_SYS_LIB);
+        return 0;
+    }
+        BIO_write(in, certBuf, strlen(certBuf));
+    inf = PEM_X509_INFO_read_bio(in, NULL, NULL, NULL);
+    BIO_free(in);
+    if(!inf) {
+        X509err(X509_F_X509_LOAD_CERT_CRL_FILE,ERR_R_PEM_LIB);
+        return 0;
+    }
+    for(i = 0; i < sk_X509_INFO_num(inf); i++) {
+        itmp = sk_X509_INFO_value(inf, i);
+        if(itmp->x509) {
+            X509_STORE_add_cert(ctx->store_ctx, itmp->x509);
+            count++;
+        }
+        if(itmp->crl) {
+            X509_STORE_add_crl(ctx->store_ctx, itmp->crl);
+            count++;
+        }
+    }
+    sk_X509_INFO_pop_free(inf, X509_INFO_free);
+    return count;
+}
+Routine in C++ which calls the above routines:
+
+#include "by_buffer.h"
+static int check(X509_STORE *ctx, const char *certBuf);
+static X509 *load_cert(const char *certBuf);
+
+int validateKey(const char *rsaKeyCA, const char *rsaCertificate) {
+    int ret=0;
+    X509_STORE *cert_ctx=NULL;
+    X509_LOOKUP *lookup=NULL;
+
+    cert_ctx=X509_STORE_new();
+    if (cert_ctx == NULL) goto end;
+
+    OpenSSL_add_all_algorithms();
+
+    lookup=X509_STORE_add_lookup(cert_ctx,X509_LOOKUP_buffer());
+    if (lookup == NULL)
+        goto end;
+
+    if(!X509_LOOKUP_load_buf(lookup,rsaKeyCA,X509_FILETYPE_PEM))
+        goto end;
+
+    lookup=X509_STORE_add_lookup(cert_ctx,X509_LOOKUP_hash_dir());
+    if (lookup == NULL)
+        goto end;
+
+    X509_LOOKUP_add_dir(lookup,NULL,X509_FILETYPE_DEFAULT);
+
+    ret = check(cert_ctx, rsaCertificate);
+end:
+    if (cert_ctx != NULL) X509_STORE_free(cert_ctx);
+
+    return ret;
+}
+
+static X509 *load_cert(const char *certBuf)
+{
+    X509 *x=NULL;
+    BIO *cert;
+
+    if ((cert=BIO_new(BIO_s_mem())) == NULL)
+        goto end;
+
+    BIO_write(cert, certBuf, strlen(certBuf));
+
+    x=PEM_read_bio_X509_AUX(cert,NULL, NULL, NULL);
+end:
+    if (cert != NULL) BIO_free(cert);
+    return(x);
+}
+
+static int check(X509_STORE *ctx, const char *certBuf)
+{
+    X509 *x=NULL;
+    int i=0,ret=0;
+    X509_STORE_CTX *csc;
+
+    x = load_cert(certBuf);
+    if (x == NULL)
+        goto end;
+
+    csc = X509_STORE_CTX_new();
+    if (csc == NULL)
+        goto end;
+    X509_STORE_set_flags(ctx, 0);
+    if(!X509_STORE_CTX_init(csc,ctx,x,0))
+        goto end;
+    ////// See crypto/asn1/t_x509.c for ideas on how to access and print the values
+    //printf("X.509 name: %s\n", x->name);
+    i=X509_verify_cert(csc);
+    X509_STORE_CTX_free(csc);
+
+    ret=0;
+end:
+    ret = (i > 0);
+    if (x != NULL)
+        X509_free(x);
+
+    return(ret);
+}
+
+#ifdef ANOTHER
+
+/* File:   by_buffer.h */
+
+#ifndef BY_BUFFER_H
+#define    BY_BUFFER_H
+
+#include <openssl/x509.h>
+
+#ifdef    __cplusplus
+extern "C" {
+#endif
+#define X509_L_BUF_LOAD    1
+#define X509_LOOKUP_load_buf(x,name,type) \
+        X509_LOOKUP_ctrl((x),X509_L_BUF_LOAD,(name),(long)(type),NULL)
+X509_LOOKUP_METHOD *X509_LOOKUP_buffer(void);
+
+#ifdef    __cplusplus
+}
+#endif
+
+#endif    /* BY_BUFFER_H */
+
+X509_load_cert_crl_buf
+
+int X509_load_cert_crl_buf(X509_LOOKUP *ctx, const char *certBuf, int type)
+
+X509_load_cert_buf
+
+int X509_load_cert_buf(X509_LOOKUP *ctx, const char *certBuf, int type)
+
+-----BEGIN CERTIFICATE-----
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdC
+MQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91
+cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UE
+AxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4X
+DTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAM
+BgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdT
+LVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkC
+gYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gC
+SZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJ
+o0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYD
+VR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlm
+aWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaA
+FDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2Hyqkeye
+PaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKs
+dlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUT
+lU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPP
+boEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVa
+BMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9
+w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZ
+MrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJ
+Q6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+P
+wn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7Fwew
+rTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+-----END CERTIFICATE-----
+
+load_cert
+
+X509
+
+load_cert
+
+check
+
+char publicKey[]="-----BEGIN PUBLIC KEY-----\n"\
+                     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgjkkxN1kfoHizPc5HZOyYUmMW\n"\
+                     "20xYr814cOq90+uSUZmpcfSYNLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5\n"\
+                     "uaOLGMmJN8jDi0Tsxt1W1iosnY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFC\n"\
+                     "u3EKVecJQS+Vs9sUvQIDAQAB\n"\
+                     "-----END PUBLIC KEY-----";
+
+validateKey
+
+char privateKey[]="-----BEGIN RSA PRIVATE KEY-----\n"\
+                      "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOCOSTE3WR+geLM9\n"\
+                      "zkdk7JhSYxbbTFivzXhw6r3T65JRmalx9Jg0vCU98DvYAkmXcdn5VL3nu2C6nAwQ\n"\
+                      "77Aavap/Y3m5o4sYyYk3yMOLROzG3VbWKiydjQ6+qI5XiaNJ2s3nMUP2YH6Wywoj\n"\
+                      "2Wi9cORM0UK7cQpV5wlBL5Wz2xS9AgMBAAECgYAwFSeE+1YBGKpfrv9JeEnU/+cp\n"\
+                      "0MFTSCmV/Y+2H/eUOBbQGo+GO9yBmPakyccLnPsK8oF7vG/58VtSlhnMup0byx4H\n"\
+                      "QgFtPRci4vMhCxEtl3TfN/KKbqzK3bbQ1iLNmLF5P7C5dfqA3l9t5XvrRD16sYAe\n"\
+                      "S1ZdKykx9JSm8MjmAQJBAP2Uoa1miGkuwQCpv8Y970NkJFtJOvYbPIIYVDOb+61k\n"\
+                      "kiGkwLwCSlRvO6RuJjmJsHF5IRMrxVGHrwQsvXEq6D0CQQDissL1Z3med8ZVshZt\n"\
+                      "qK6C05PYOyWyVNeJNPLim5XsyIJZiMUk86ILzrZrPvPsODg8RW+6UaEBaReMC7OC\n"\
+                      "/yaBAkB4gi8Hgeen3OE52HHb20kehLPGchnEJZNu2/MAB8vmThooROyXLJt4XthA\n"\
+                      "P1yJEYc5lfAC9VUzdsDUwhJRequdAkEAi4aal4/oOrBdUcEaLMP1JHA0PpGo0emF\n"\
+                      "/tyn4PEBhYqjL5gOPn/07G99tuQ4HNs9QVs7OOGkxsl3xKovAiEoAQJAb+16IEfA\n"\
+                      "TZ3qtUzl+Wscm+xUHWyzJ1TcIlsT7k9qFREkb8gG7uEt5hPOZkug/1XrCXUeTqwP\n"\
+                      "ayrcYD6M9bdGGg==\n"\
+                      "-----END RSA PRIVATE KEY-----";
+
+privateKey
+
+X509_LOOKUP_load_buf
+
+X509_LOOKUP_load_buf 
+
+X509_LOOKUP_ctrl
+
+X509_L_BUF_LOAD
+
+X509_LOOKUP_ctrl
+
+ "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgjkkxN1kfoHizPc5HZOyYUmMW\n"\
+                     "20xYr814cOq90+uSUZmpcfSYNLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5\n"\
+                     "uaOLGMmJN8jDi0Tsxt1W1iosnY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFC\n"\
+
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgjkkxN1kfoHizPc5HZOyYUmMW20xYr814cOq90+uSUZmpcfSYNLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5uaOLGMmJN8jDi0Tsxt1W1iosnY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFC
+
+0x30, 0x81, 0x9f, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00, 0x03, 0x81, 0x8d, 0x00, 0x30, 0x81, 0x89, 0x02, 0x81, 0x81, 0x00, 0xe0, 0x8e, 0x49, 0x31, 0x37, 0x59, 0x1f, 0xa0, 0x78, 0xb3, 0x3d, 0xce, 0x47, 0x64, 0xec, 0x98, 0x52, 0x63, 0x16, 0xdb, 0x4c, 0x58, 0xaf, 0xcd, 0x78, 0x70, 0xea, 0xbd, 0xd3, 0xeb, 0x92, 0x51, 0x99, 0xa9, 0x71, 0xf4, 0x98, 0x34, 0xbc, 0x25, 0x3d, 0xf0, 0x3b, 0xd8, 0x02, 0x49, 0x97, 0x71, 0xd9, 0xf9, 0x54, 0xbd, 0xe7, 0xbb, 0x60, 0xba, 0x9c, 0x0c, 0x10, 0xef, 0xb0, 0x1a, 0xbd, 0xaa, 0x7f, 0x63, 0x79, 0xb9, 0xa3, 0x8b, 0x18, 0xc9, 0x89, 0x37, 0xc8, 0xc3, 0x8b, 0x44, 0xec, 0xc6, 0xdd, 0x56, 0xd6, 0x2a, 0x2c, 0x9d, 0x8d, 0x0e, 0xbe, 0xa8, 0x8e, 0x57, 0x89, 0xa3, 0x49, 0xda, 0xcd, 0xe7, 0x31, 0x43, 0xf6, 0x60, 0x7e, 0x96, 0xcb, 0x0a, 0x23, 0xd9, 0x68, 0xbd, 0x70, 0xe4, 0x4c, 0xd1, 0x42
+
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgjkkxN1kfoHizPc5HZOyYUmMW
+20xYr814cOq90+uSUZmpcfSYNLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5
+uaOLGMmJN8jDi0Tsxt1W1iosnY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFC
+u3EKVecJQS+Vs9sUvQIDAQAB
+-----END PUBLIC KEY-----
+
+X509_FILETYPE_ASN1
+
+X509_LOOKUP_ctrl
+
+load_cert
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+X509_FILETYPE_DEFAULT
+
+ char base64encoded[300] = {0};
+
+Base64encode(base64encoded, (const char*)encrypted, encrypted_length);
+
+pubkey->public_key->data
+
+#include "base64.h"
+
+MIGJAoGBAOCOSTE3WR+geLM9zkdk7JhSYxbbTFivzXhw6r3T65JRmalx9Jg0vCU98DvYAkmXcdn5VL3n
+u2C6nAwQ77Aavap/Y3m5o4sYyYk3yMOLROzG3VbWKiydjQ6+qI5XiaNJ2s3nMUP2YH6Wywoj2Wi9cORM
+0UK7cQpV5wlBL5Wz2xS9AgMBAAE=
+
+pubkey->public_key->data
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+0x30
+0x81
+0x89
+0x2
+0x81
+0x81
+0x0
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+0xe0, 0x8e, 0x49, 0x31, 0x37, 0x59, 0x1f, 0xa0, 0x78, 0xb3, 0x3d, 0xce, 0x47, 0x64, 0xec, 0x98, 0x52, 0x63, 0x16, 0xdb, 0x4c, 0x58, 0xaf, 0xcd, 0x78, 0x70, 0xea, 0xbd, 0xd3, 0xeb, 0x92, 0x51, 0x99, 0xa9, 0x71, 0xf4, 0x98, 0x34, 0xbc, 0x25, 0x3d, 0xf0, 0x3b, 0xd8, 0x02, 0x49, 0x97, 0x71, 0xd9, 0xf9, 0x54, 0xbd, 0xe7, 0xbb, 0x60, 0xba, 0x9c, 0x0c, 0x10, 0xef, 0xb0, 0x1a, 0xbd, 0xaa, 0x7f, 0x63, 0x79, 0xb9, 0xa3, 0x8b, 0x18, 0xc9, 0x89, 0x37, 0xc8, 0xc3, 0x8b, 0x44, 0xec, 0xc6, 0xdd, 0x56, 0xd6, 0x2a, 0x2c, 0x9d, 0x8d, 0x0e, 0xbe, 0xa8, 0x8e, 0x57, 0x89, 0xa3, 0x49, 0xda, 0xcd, 0xe7, 0x31, 0x43, 0xf6, 0x60, 0x7e, 0x96, 0xcb, 0x0a, 0x23, 0xd9, 0x68, 0xbd, 0x70, 0xe4, 0x4c, 0xd1, 0x42, 0xbb, 0x71, 0x0a, 0x55, 0xe7, 0x09, 0x41, 0x2f, 0x95, 0xb3, 0xdb, 0x14, 0xbd
+
+0x2
+0x3
+0x1
+0x0
+0x1
+
+X509_FILETYPE_ASN1
+
+X509_FILETYPE_DEFAULT
+
+#ifdef DEBUG_ON
+#define LOGGER(x, y) {\
+    char debug[200];\
+    sprintf(debug, "%s %s", x, y);\
+    logger(debug);\
+    }
+#else
+#define LOGGER(x, y)
+#endif
+
+#ifdef DEBUG_ON
+#define PRINTTOWINDOW(x, y) {\
+    char debug[200];\
+    sprintf(debug, "%s %s", x, y);\
+    SendTextToWindow(debug);\
+    }
+#else
+#define PRINTTOWINDOW(x, y)
+#endif
+
+
+sprintf(debug, "%s
+
+LOGGER_3
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+"-----BEGIN CERTIFICATE-----\n"\
+"MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdC\n"\
+"MQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91\n"\
+"cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UE\n"\
+"AxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4X\n"\
+"DTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAM\n"\
+"BgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdT\n"\
+"LVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkC\n"\
+"gYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gC\n"\
+"SZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJ\n"\
+"o0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYD\n"\
+"VR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlm\n"\
+"aWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaA\n"\
+"FDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2Hyqkeye\n"\
+"PaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKs\n"\
+"dlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUT\n"\
+"lU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPP\n"\
+"boEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVa\n"\
+"BMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9\n"\
+"w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb\n"\
+"jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZ\n"\
+"MrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJ\n"\
+"Q6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+P\n"\
+"wn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7Fwew\n"\
+"rTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==\n"\
+"-----END CERTIFICATE-----";
+
+
+WORD CheckAndCopyNewKey(BYTE *modulus, BYTE *exponent)
+
+KeyInfo
+
+X509Certificate
+
+CHECKANDEXIT(X509Data, "X509 Data");
+
+X509Certificate
+
+CheckThex509Certificate
+
+"X509 Certificate"
+
+		result	"<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>p0tZ+slmukTjhVtfKNocIvm48ps=</DigestValue></Reference></SignedInfo><SignatureValue>SWNh+TneDhhUSOObMNlVuIxyrSVG/Xvh+dnzsgN5yLGSE63sNtPN6Rm4zqVbMt3h3Skz+jeetYE8R0cn7E529NteWbnReeJvPbknk7IVB7avgYUXxhAFgtYbD6ve7SHo2ht+Eue/c1jfpkdRpXA/bgPIUhoyA898cEkt97XcGKg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature>"	string
+
+
+		result	"<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>yp0TEohAJuqfIFx7oV8uY2UMvxE=</DigestValue></Reference></SignedInfo><SignatureValue>YBiTGpCWZBS6DLUQ2M3wshL2GR6uI78xZ7C4at20C6C4/vlJ1zvvICtz68BAUo+m6aqFdvkIZlyqtBmRv2PQCAQwhU2VoshzNi+7K5Vv5dpRhMZxYyrl8kT9x83vD/204yrP7aKiFoD7m5eEvnF1Rfqh7aZIa4f8fub6MWXrP5o=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature>"	string
+
+
+<X509Data>
+<X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==</X509Certificate></X509Data>
+
+xmlData
+
+		result	"<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>6tsCH2iA5HHJoy02+y0ycbECpm4=</DigestValue></Reference></SignedInfo><SignatureValue>k+wR9tPpmQYk09NMWT0yN9e9KNXE4vfNUVe26XjE2GGtkjSMzmT1pXY1Rp7d/2cjL1boJrE0OqyZSo2DeGwYK8ZqUx0N/xqD2hAwS9PVuuLK/eigXG+6X7+hnQ0Yxum9bgMSd9Bh5v5F4Qkm9QA9MkkX0XE5/zkxP0+6jsQPUk8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo><XMLData xmlns=\"\">&lt;X509Certificate&gt;MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==&lt;/X509Certificate&gt;</XMLData></Signature>"	string
+
+
+xmlCertificate
+
+		result	"<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>fyf+HbXqjSaS+FmdipYhOXUcBHY=</DigestValue></Reference></SignedInfo><SignatureValue>fHGn9MNDH+2QueJbeWO7qXoim5k5Rzd0TPkvJmSuI8APDISDL8Ns+samY8WeyAaOcpeKWO/Lzuzlsy6infZkp4Ukk7PU9I2S1SGJkYeZ4RK5jAnn52ti3JcX+KurFJiaOsKK2ld8YpBSPdv1JqDyaLSFBfGVkZECEHlk0PhlYxQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo><XMLData xmlns=\"\"><X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==</X509Certificate></XMLData></Signature>"	string
+
+
+x509Data
+
+X509Certificate2 key
+
+KeyInfoX509Data keyInfoData = new KeyInfoX509Data( certificate );
+
+Certificate
+
+ KeyInfoX509Data keyInfoData = new KeyInfoX509Data(Certificate);
+
+		result	"<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>5Fe1+VRHIQiPaC3YkAoWTmsTEBQ=</DigestValue></Reference></SignedInfo><SignatureValue>tl2IzLpFx2a7bhncAEmpov2xxyKU5BiksKRc2KN8GjaYFA5ymTqSKoKx1UQm0OO5xsXQeTXX5AQ2+sUn6uOelQMYaEnfe70t+PL8/75Hv9yzSlwLU5WL1ny34z2t8TeWU2jSi3GOgiH01+3/v65UWLhz3614KnY5uT+/eXwqT7o=</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==</X509Certificate></X509Data><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature>"	string
+
+
+ keyInfo.AddClause(keyInfoData);
+
+"MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdC\n"\
+"MQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91\n"\
+"cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UE\n"\
+"AxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4X\n"\
+"DTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAM\n"\
+"BgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdT\n"\
+"LVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkC\n"\
+"gYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gC\n"\
+"SZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJ\n"\
+"o0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYD\n"\
+"VR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlm\n"\
+"aWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaA\n"\
+"FDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2Hyqkeye\n"\
+"PaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKs\n"\
+"dlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUT\n"\
+"lU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPP\n"\
+"boEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVa\n"\
+"BMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9\n"\
+"w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb\n"\
+"jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZ\n"\
+"MrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJ\n"\
+"Q6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+P\n"\
+"wn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7Fwew\n"\
+"rTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==\n"\
+
+x509certificateStripped
+
+WORD CheckThex509Certificate(BYTE *certificate)
+
+X509* x509certificate = load_cert((const char*)ca_cert);
+
+static X509 *load_cert(const char *certBuf)
+{
+    X509 *x=NULL;
+    BIO *cert;
+
+    if ((cert=BIO_new(BIO_s_mem())) == NULL)
+        goto end;
+
+    BIO_write(cert, certBuf, strlen(certBuf));
+
+    x=PEM_read_bio_X509_AUX(cert, NULL, NULL, NULL);
+end:
+    if (cert != NULL) BIO_free(cert);
+    return(x);
+}
+
+    if (cert != NULL) BIO_free(cert);
+
+#include <openssl/x509.h>
+#include <openssl/x509_vfy.h>
+
+
+"-----BEGIN CERTIFICATE-----\n"
+
+"-----END CERTIFICATE-----"
+
+x509certificateStripped
+
+certificateHeader
+
+certificateFooter
+
+certificateHeader
+
+x509certificateStripped
+
+certificateFooter
+
+PEM_read_bio_X509_AUX
+
+x509certificate
+
+ca_cert
+
+x509certificateStripped
+
+PRINTTOWINDOW
+
++		x509certificateStripped	0x013a6b78 "MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+"	char [1510]
+
+
++		certificate	0x041f133d "MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A=="	unsigned char *
+
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+certificate
+
+strncmp
+
+x509certificateStripped
+
+certificate
+
+len1
+
+strcat(ca_cert, (const char *)certificate);
+
+certificateHeader
+
+(strlen(x509certificateStripped) + strlen(certificateHeader) + strlen(certificateFooter) + 20)
+
+certificate
+
+X509
+
+void send(int count, short *to, short *from)
+{
+    /* count > 0 assumed */
+    register n = (count + 7) / 8;
+
+    switch (count % 8)
+    {
+    case 0:        do {  *to = *from++;
+    case 7:              *to = *from++;
+    case 6:              *to = *from++;
+    case 5:              *to = *from++;
+    case 4:              *to = *from++;
+    case 3:              *to = *from++;
+    case 2:              *to = *from++;
+    case 1:              *to = *from++;
+                   } while (--n > 0);
+    }
+}
+
+
+QueryPerformanceCounter
+
+QueryPerformanceCounter(&_ticks_before);
+
+LARGE_INTEGER _ticks_before;
+
+fastcopy((BYTE*)ptr, &certificate[n], 65);
+
+QueryPerformanceCounter(&_ticks_before);
+
+QueryPerformanceCounter(&_ticks_after);
+
+_ticks_after
+
+diff = _ticks_after.u.LowPart - _ticks_before.u.LowPart;
+
+memcpy
+
+static size_t GetStackUsage()
+{
+    MEMORY_BASIC_INFORMATION mbi;
+    VirtualQuery(&mbi, &mbi, sizeof(mbi));
+    // now mbi.AllocationBase = reserved stack memory base address
+
+    VirtualQuery(mbi.AllocationBase, &mbi, sizeof(mbi));
+    // now (mbi.BaseAddress, mbi.RegionSize) describe reserved (uncommitted) portion of the stack
+    // skip it
+
+    VirtualQuery((char*)mbi.BaseAddress + mbi.RegionSize, &mbi, sizeof(mbi));
+    // now (mbi.BaseAddress, mbi.RegionSize) describe the guard page
+    // skip it
+
+    VirtualQuery((char*)mbi.BaseAddress + mbi.RegionSize, &mbi, sizeof(mbi));
+    // now (mbi.BaseAddress, mbi.RegionSize) describe the committed (i.e. accessed) portion of the stack
+
+    return mbi.RegionSize;
+}
+
+GetStackUsage
+
+X509* x509certificate = load_cert((const char*)ca_cert);
+
+certificate
+
+strcpy(ca_cert, certificateHeader);
+
+strcat(ca_cert, certificateFooter);
+
+		result	"<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-21T13:50:36.5512287+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1140904732</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-jjjjj</SourceUnitID><LogicalSourceID>ICONIS-1wersdfsdf</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAKQkBRAEAAACqVaQFAQAAAAJ2B7qs8aOjAQABAIHe/0MBAAAAqlWGBQEAAADbcyhYIoejowEAAQArrP1DAQAAAKpVaAUBAAAAMo2EVgfDo6MBAAEAKxDyQwEAAACqVUoFAQAAANjJipFa0aOjAQABAEgE3EMBAAAAqlUsBQEAAAADwVIprrCjowEAAQAzLmNDAQAAAKpVDgUBAAAAMFqWmVv9o6MBAAEAnXpeQwEAAACqVfAEAQAAANROWlhupaOjAQABAP0CL0MBAAAAqlXSBAEAAACojtzFuHWjowEAAQDL7ydDAQAAAKpVtAQBAAAA0lxeQM56o6MBAAEAU4MgQwEAAACqVZYEAQAAAHTr/2VZNqOjAQABAFUBiT8BAAAAqlV4BAEAAADEDRLdUcqjowEAAQDILIg/AQAAAKpVWgQBAAAAelZGgGyoo6MBAAEAY4CFPwEAAACqVTwEAQAAAK9O1LOpDqOjAQABAADKeD8BAAAAqlUeBAEAAAAe3DXBA2ijowEAAQCUv3c/AQAAAKpVAAQBAAAAFxvI1Ydho6MBAAEAU/VsPwEAAACqVeIDAQAAAEaf1yFtraOjAQABAB3Uaj8BAAAAqlXEAwEAAACRJNDipvGjowEAAQB7cGk/AQAAAKpVpgMBAAAA1YEOUtNIo6MBAAEAoM43PwEAAACqVYgDAQAAAHwb3IICKqOjAQABAK/E0z4BAAAAqlVqAwEAAACX+l4/9tyjowEAAQBWMsMqAQAAAKpVTAMBAAAA7xlujpRgo6MBAAEAdqK4KgEAAACqVS4DAQAAAIcOghPe4KOjAQABAGnLoCoBAAAAqlUQAwEAAADldD2dMDejowEAAQCOVaAqAQAAAKpV8gIBAAAABhJs+/tqo6MBAAEATuqTKgEAAACqVdQCAQAAAMLX+60VEqOjAQABALIQkioBAAAAqlW2AgEAAACo2VPQP3+jowEAAQCYO34qAQAAAKpVmAIBAAAASBuFH9y7o6MBAAEA7nQ3KgEAAACqVXoCAQAAAKiAkLH2QaOjAQABAFRC7R8BAAAAqlVcAgEAAADQ5q4uTfSjowEAAQAIAoAfAQAAAKpVPgIBAAAAtFdev9/Bo6MBAAEAWUg5HwEAAACqVSACAQAAAMT4PPcY8qOjAQABACH5OB8BAAAAqlUCAgEAAAAohsuALeejowEAAQAGZjYfAQAAAKpV5AEBAAAAt3RX94o7o6MBAAEAVh81HwEAAACqVcYBAQAAALvNgH4kW6OjAQABAEaqGh8BAAAAqlWoAQEAAACgGLkaVxKjowEAAQBNLHIbAQAAAKpVigEBAAAAZCPttRm4o6MBAAEADxZiGwEAAACqVWwBAQAAAGwaDzL2aKOjAQABAHZGhC4BAAAAqlVOAQEAAAAWStZhS3CjowEAAQCdvDUuAQAAAKpVMAEBAAAAx3xkDQCio6MBAAEAOacsLgEAAACqVRIBAQAAADFDer0q9qOjAQABAMqm0y0BAAAAqlX0AAEAAABMi12byy+jowEAAQBQHdItAQAAAKpV1gABAAAAC/3qTadlo6MBAAEAhhfPLQEAAACqVbgAAQAAAEsY2xqgYqOjAQABAEluGS0BAAAAqlWaAAEAAADvdkxI54mjowEAAQAYsaIPAQAAAKpVfAABAAAAi8AJ3WVCo6MBAAEAN16DDwEAAACqVV4AAQAAALCwOYmKFqOjAQABADS7Zg8BAAAAqlVAAAEAAACPpPKOJkMwMTAyMDMwMDA0MDAwNTAwMDAwMDA2MDAwMDAwMDcwMDAyMDAwMDAwMDgwMDAwMDAwMDAwMDAwMDAwMDAzMDM5Mb2D9qd13nlN5kO98JcbAS+RYvfy2dyL7USmZpMrC2D6H1CY0333MpgQWBGfMo1PV5PNQ4DJuUP5b912Deqa7EqiqcBtAJxeXIf3kWUPXyLXuadnNggykcynJyjZ1g==</ControlRequests></Interlocking><Interlocking><UniqueID>44</UniqueID><SSIID>34534</SSIID><ControlRequests>o6MBAAEA03cBRAEAAACqVXgFAQAAALDkNkO2XaOjAQABAIHe/0MBAAAAqlVaBQEAAABY3hDyuayjowEAAQArrP1DAQAAAKpVPAUBAAAAF/y71YC/o6MBAAEAKxDyQwEAAACqVR4FAQAAAEkYESN4YqOjAQABAEgE3EMBAAAAqlUABQEAAADEueSRIP+jowEAAQAzLmNDAQAAAKpV4gQBAAAARtgXH3LRo6MBAAEAnXpeQwEAAACqVcQEAQAAADarDM/DgaOjAQABAP0CL0MBAAAAqlWmBAEAAADYlms4YLOjowEAAQDL7ydDAQAAAKpViAQBAAAA9WLOWuM3o6MBAAEAU4MgQwEAAACqVWoEAQAAAN9H8BTeaaOjAQABAFUBiT8BAAAAqlVMBAEAAACPk06iEFejowEAAQDILIg/AQAAAKpVLgQBAAAAXphDsdAYo6MBAAEAY4CFPwEAAACqVRAEAQAAABnFa0KS4KOjAQABAADKeD8BAAAAqlXyAwEAAADTFGeDDoejowEAAQCUv3c/AQAAAKpV1AMBAAAAOBe46WSdo6MBAAEAU/VsPwEAAACqVbYDAQAAACNCZdP+TaOjAQABAB3Uaj8BAAAAqlWYAwEAAAAtrqkSnjCjowEAAQB7cGk/AQAAAKpVegMBAAAAkcqG3r3do6MBAAEAoM43PwEAAACqVVwDAQAAAA6ESiIs8qOjAQABAK/E0z4BAAAAqlU+AwEAAAAPXQxA9lqjowEAAQBWMsMqAQAAAKpVIAMBAAAALTua9YHlo6MBAAEAdqK4KgEAAACqVQIDAQAAAJ/IpfRycqOjAQABAGnLoCoBAAAAqlXkAgEAAACbi0MRo2SjowEAAQCOVaAqAQAAAKpVxgIBAAAAT70uhhDco6MBAAEATuqTKgEAAACqVagCAQAAADiFgZfrJKOjAQABALIQkioBAAAAqlWKAgEAAAAh4pyow8SjowEAAQCYO34qAQAAAKpVbAIBAAAAykXd5Uc/o6MBAAEA7nQ3KgEAAACqVU4CAQAAAJ8a15brSqOjAQABAFRC7R8BAAAAqlUwAgEAAAB1SNLunUijowEAAQAIAoAfAQAAAKpVEgIBAAAAhk3xmV67o6MBAAEAWUg5HwEAAACqVfQBAQAAANlsKkWmGqOjAQABACH5OB8BAAAAqlXWAQEAAADjlgfm1P+jowEAAQAGZjYfAQAAAKpVuAEBAAAAGa0JaZfao6MBAAEAVh81HwEAAACqVZoBAQAAANGgfjPYAaOjAQABAEaqGh8BAAAAqlV8AQEAAABipts5j/+jowEAAQBNLHIbAQAAAKpVXgEBAAAAbHdY/tCOo6MBAAEADxZiGwEAAACqVUABAQAAAJz2EOYUS6OjAQABAHZGhC4BAAAAqlUiAQEAAAB2K/SnFgyjowEAAQCdvDUuAQAAAKpVBAEBAAAAufZ9dwboo6MBAAEAOacsLgEAAACqVeYAAQAAAAo34pp28KOjAQABAMqm0y0BAAAAqlXIAAEAAACM2JBlmv+jowEAAQBQHdItAQAAAKpVqgABAAAAgRa5uwSio6MBAAEAhhfPLQEAAACqVYwAAQAAAKb0W5dZxqOjAQABAEluGS0BAAAAqlVuAAEAAAAYmWLbAC6jowEAAQAYsaIPAQAAAKpVUAABAAAAAZL7pw8+MDIwMzA0MDAwNTAwMDYwMDAwMDAwNzAwMDAwMDA4MDAwYTAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzNTMwMzYzMDM3MzAzODMwMzmHGw+XNZf9V8JaKMFVxwDp+S34B0o/GLvWzQvJqJY0Wwr7lMzGIkYDYaXSY8xBhvRYD0I2P04Zikb1qAQ8rLygXaepMT+HgkOUSUbTU98mwWL/5eyaIGwWqSE=</ControlRequests></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>1/f2Hq5zL80E1edfl06NR17JGzI=</DigestValue></Reference></SignedInfo><SignatureValue>qdTYGI1U5u4Q+8iZRpxH5+0DaHfvcTYt0ZAwhowTfGPl+FpW/YTpOFWP5zy6HUUVgwSjoZFyVSFVfLYGWbPJJ8jCBTDVtVuXadJ9UzO6FkMzmPIJXt5malzs8URsVGB7Vh/VPAl3j6O0T8wBW60D4AyYOFjHngpw0STFcgyfl+Y=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==</X509Certificate></X509Data></KeyInfo></Signature></Envelope>"	string
+
+
+ BYTE data[1001];
+
+NVFB3_data
+
+		test	"<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-21T14:31:57.000Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>1143385927</MonoTonic></Time><SequenceNumber>29</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-jjjjj</DestinationUnitID><LogicalDestinationID>ICONIS-1wersdfsdf</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Wigan//IXL//002//BF</UniqueID><SSIID>BF</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Havant//IXL//003//FO</UniqueID><SSIID>FO</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Lavant//IXL//004//GO</UniqueID><SSIID>GO</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Clapham//IXL//005//HO</UniqueID><SSIID>HO</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><EmergencyAlarms>CqMBAAIAR68mRAAAAAClpRQAAQA=</EmergencyAlarms></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"></CanonicalizationMethod><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"></SignatureMethod><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"></DigestMethod><DigestValue>+oQVwp5ozrS6OdTeIl5qwI5ppHA=</DigestValue></Reference></SignedInfo><SignatureValue>gDk/c28t3zbiSiYacGbEa/eU71LHtZdy302mZ6IxKBTo15hEBnKEs8IwJZMuOeU8K/if6uKGIlXib7DxzA8aaP5if/yEdDJvLByg98GeO8gt</SignatureValue></Signature></Envelope>"	string
+
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-21T14:31:57.000Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>1143385927</MonoTonic></Time><SequenceNumber>29</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-jjjjj</DestinationUnitID><LogicalDestinationID>ICONIS-1wersdfsdf</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Wigan//IXL//002//BF</UniqueID><SSIID>BF</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Havant//IXL//003//FO</UniqueID><SSIID>FO</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Lavant//IXL//004//GO</UniqueID><SSIID>GO</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Clapham//IXL//005//HO</UniqueID><SSIID>HO</SSIID><SPAD><SignalMap>CqMBAAIAR68mRAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAR68mRAAAAAClpcABAQAAALpgKwupRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><EmergencyAlarms>CqMBAAIAR68mRAAAAAClpRQAAQA=</EmergencyAlarms></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"></CanonicalizationMethod><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"></SignatureMethod><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"></DigestMethod><DigestValue>+oQVwp5ozrS6OdTeIl5qwI5ppHA=</DigestValue></Reference></SignedInfo><SignatureValue>gDk/c28t3zbiSiYacGbEa/eU71LHtZdy302mZ6IxKBTo15hEBnKEs8IwJZMuOeU8K/if6uKGIlXib7DxzA8aaP5if/yEdDJvLByg98GeO8gt</SignatureValue></Signature></Envelope>
+
+Modulus
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+0xe0, 0x8e, 0x49, 0x31, 0x37, 0x59, 0x1f, 0xa0, 0x78, 0xb3, 0x3d, 0xce, 0x47, 0x64, 0xec, 0x98, 0x52, 0x63, 0x16, 0xdb, 0x4c, 0x58, 0xaf, 0xcd, 0x78, 0x70, 0xea, 0xbd, 0xd3, 0xeb, 0x92, 0x51, 0x99, 0xa9, 0x71, 0xf4, 0x98, 0x34, 0xbc, 0x25, 0x3d, 0xf0, 0x3b, 0xd8, 0x02, 0x49, 0x97, 0x71, 0xd9, 0xf9, 0x54, 0xbd, 0xe7, 0xbb, 0x60, 0xba, 0x9c, 0x0c, 0x10, 0xef, 0xb0, 0x1a, 0xbd, 0xaa, 0x7f, 0x63, 0x79, 0xb9, 0xa3, 0x8b, 0x18, 0xc9, 0x89, 0x37, 0xc8, 0xc3, 0x8b, 0x44, 0xec, 0xc6, 0xdd, 0x56, 0xd6, 0x2a, 0x2c, 0x9d, 0x8d, 0x0e, 0xbe, 0xa8, 0x8e, 0x57, 0x89, 0xa3, 0x49, 0xda, 0xcd, 0xe7, 0x31, 0x43, 0xf6, 0x60, 0x7e, 0x96, 0xcb, 0x0a, 0x23, 0xd9, 0x68, 0xbd, 0x70, 0xe4, 0x4c, 0xd1, 0x42, 0xbb, 0x71, 0x0a, 0x55, 0xe7, 0x09, 0x41, 0x2f, 0x95, 0xb3, 0xdb, 0x14, 0xbd
+
+AQAB
+
+0x01, 0x00, 0x01
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+Base64encode
+
+OurModulus
+
+Modulus
+
+Base64encode(
+
+KeyValue->InsertEndChild(Modulus);
+
+x509certificateStripped
+
+Signature->
+
+		test	"<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-21T15:57:36.000Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>1148524444</MonoTonic></Time><SequenceNumber>297</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-jjjjj</DestinationUnitID><LogicalDestinationID>ICONIS-1wersdfsdf</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMap>CqMBAAIAnBd1RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAnBd1RAAAAAClpcABAQAAAMgdls/1pwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications><ControlRequestsResponse>CqMBAAIAPxd1RIkJdUSqVQAAAQAAAEZJFV3TQ4jS</ControlRequestsResponse></Interlocking><Interlocking><UniqueID>UK//Wigan//IXL//002//BF</UniqueID><SSIID>BF</SSIID><SPAD><SignalMap>CqMBAAIAnBd1RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAnBd1RAAAAAClpcABAQAAAMgdls/1pwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications><ControlRequestsResponse>CqMBAAIAPxd1RIkJdUSqVQAAAQAAAEZJFV3TQ4jS</ControlRequestsResponse></Interlocking><Interlocking><UniqueID>UK//Havant//IXL//003//FO</UniqueID><SSIID>FO</SSIID><SPAD><SignalMap>CqMBAAIAnBd1RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAnBd1RAAAAAClpcABAQAAAMgdls/1pwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Lavant//IXL//004//GO</UniqueID><SSIID>GO</SSIID><SPAD><SignalMap>CqMBAAIAnBd1RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAnBd1RAAAAAClpcABAQAAAMgdls/1pwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Clapham//IXL//005//HO</UniqueID><SSIID>HO</SSIID><SPAD><SignalMap>CqMBAAIAnBd1RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAnBd1RAAAAAClpcABAQAAAMgdls/1pwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><EmergencyAlarms>CqMBAAIAnBd1RAAAAAClpRQAAQA=</EmergencyAlarms></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"></CanonicalizationMethod><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"></SignatureMethod><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"></DigestMethod><DigestValue>/Q97lWtsWs1UnaKsseYMmnup1+w=</DigestValue></Reference></SignedInfo><SignatureValue>nYvZCFWnQXiicQ==</SignatureValue><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue><X509Data><X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==\n</X509Certificate></X509Data></KeyValue></Signature></Envelope>"	string
+
+
+		test	"<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-21T16:09:11.000Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>1149219179</MonoTonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-jjjjj</DestinationUnitID><LogicalDestinationID>ICONIS-1wersdfsdf</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK//York//IXL//001//OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMap>CqMBAAIAa7F/RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAa7F/RAAAAAClpcABAQAAAJGJfo+B0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Wigan//IXL//002//BF</UniqueID><SSIID>BF</SSIID><SPAD><SignalMap>CqMBAAIAa7F/RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAa7F/RAAAAAClpcABAQAAAJGJfo+B0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Havant//IXL//003//FO</UniqueID><SSIID>FO</SSIID><SPAD><SignalMap>CqMBAAIAa7F/RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAa7F/RAAAAAClpcABAQAAAJGJfo+B0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Lavant//IXL//004//GO</UniqueID><SSIID>GO</SSIID><SPAD><SignalMap>CqMBAAIAa7F/RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAa7F/RAAAAAClpcABAQAAAJGJfo+B0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><Interlocking><UniqueID>UK//Clapham//IXL//005//HO</UniqueID><SSIID>HO</SSIID><SPAD><SignalMap>CqMBAAIAa7F/RAAAAAClpQ==</SignalMap></SPAD><Indications>CqMBAAIAa7F/RAAAAAClpcABAQAAAJGJfo+B0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</Indications></Interlocking><EmergencyAlarms>CqMBAAIAa7F/RAAAAAClpRQAAQA=</EmergencyAlarms></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"></CanonicalizationMethod><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\"></SignatureMethod><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\"></DigestMethod><DigestValue>O1a7pz7/LjHwITusr4YzACURgSs=</DigestValue></Reference></SignedInfo><SignatureValue>fDETsMyQN/nka2tHdKLtLlm7z84ZrvV5udqMD/ZT0nsc8Rx85dPIglgRKuFhhmfAvzkr9F3Vm+PTwGRikdMPYuRlh2HTdJWBEylWNrSNN0VcwQP5i94nmrfOiy8On9rRt7Jmw81BsbzARrXs//8OdTh3Amg/NwWbLS9mPu9ZEt4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==\n</X509Certificate></X509Data></KeyInfo></Signature></Envelope>"	string
+
+
+CqMBAAIAnBd1RAAAAAClpRQAAQA=
+
+C:\srif\Win32Srif4_3\minyEncoder\XML\ICONIS.cs
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified">
+
+ <!-- Import the XML Digital Signature XSD -->
+ <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+  schemaLocation="xmldsig-core-schema.xsd" />
+
+ <!-- Custom Types -->
+ <xs:simpleType name="nonEmptyString">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Version Number format, e.g. message/data/software etc... -->
+ <xs:simpleType name="versionNumber">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+   <xs:pattern value="[a-z0-9\-]*" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Sequence Numbering -->
+ <xs:simpleType name="sequenceNumber">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+   <xs:maxInclusive value="2147483647" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Unit Identifiers e.g. RIF-1-A etc... -->
+ <xs:simpleType name="unitID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Identifiers for remote links and other remote equipment -->
+ <xs:simpleType name="equipmentID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Track circuit ID's -->
+ <xs:simpleType name="trackID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Signal Names -->
+ <xs:simpleType name="signalID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How requests are identified -->
+ <xs:simpleType name="requestID">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- ARS Sub-Area identifier -->
+ <xs:simpleType name="arsSubAreaID">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Berth identifier -->
+ <xs:simpleType name="berthID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+<xs:simpleType name="trainID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- An SSI ID, e.g. 0F or 1B -->
+ <xs:simpleType name="SSIID">
+  <xs:restriction base="xs:string">
+   <xs:pattern value="[0-9A-Z]{2}" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How the time sync status should be described -->
+ <xs:simpleType name="timeStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="SYNCHRONISED" />
+   <xs:enumeration value="UNSYNCHRONISED" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How the unit status can be described -->
+ <xs:simpleType name="unitStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="MASTER" />
+   <xs:enumeration value="STANDBY" />
+   <xs:enumeration value="UNAVAILABLE" />
+   <xs:enumeration value="ACTIVE" />
+   <xs:enumeration value="INACTIVE" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- The description of links to external systems -->
+ <xs:simpleType name="linkStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UP" />
+   <xs:enumeration value="DOWN" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Link availability -->
+ <xs:simpleType name="sourceLinkStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UP" />
+   <xs:enumeration value="DOWN" />
+   <xs:enumeration value="AVAILABLE" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- NVFB/3 data, base64 encoded -->
+ <xs:simpleType name="NVFB3">
+  <xs:restriction base="xs:base64Binary" />
+ </xs:simpleType>
+
+ <!-- Header Elements -->
+ <xs:element name="Version">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="MessageFormat" type="versionNumber"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="Data" type="versionNumber" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Software" type="versionNumber"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Time">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Current" type="xs:dateTime" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="TimeStatus" type="timeStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="Monotonic" type="xs:long" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Header">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Version" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Time" minOccurs="1" maxOccurs="1" />
+    <xs:element name="SequenceNumber" type="sequenceNumber"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceUnitID" type="unitID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="LogicalSourceID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceStatus" type="unitStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceLinkStatus" type="sourceLinkStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="DestinationUnitID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="LogicalDestinationID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Body Elements -->
+
+ <xs:element name="Link">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="From" type="equipmentID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="To" type="equipmentID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Status" type="linkStatus" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="DiagnosticAlarms">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Link" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="OSTO">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Track1" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Track2" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="GeneratedAlarms">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="OSTO" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="GenericAlarm" type="nonEmptyString"
+     minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SPADData">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="SignalID" type="xs:int" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Signal" type="signalID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Track" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SPAD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="SignalMap" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="SignalMapResponse" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="SPADData" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="ControlRequestRejected">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="RequestNumber" type="requestID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="RejectReason" type="nonEmptyString"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Interlocking">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="UniqueID" type="nonEmptyString"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SSIID" type="SSIID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element ref="SPAD" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="Indications" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="IndicationsResponse" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="ControlRequests" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="ControlRequestsResponse" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element ref="ControlRequestRejected" minOccurs="0"
+     maxOccurs="unbounded" />
+    <xs:element name="ARSDisableSubArea" type="arsSubAreaID"
+     minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="ARSSubAreaStatus" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="ARSSubAreaStatusResponse" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="StatusByte" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="StatusByteResponse" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Interpose">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="TrainID" type="trainID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Berth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Clear">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Berth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Step">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="TrainID" type="trainID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="FromBerth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="ToBerth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="TD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Interpose" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Clear" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Step" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Body">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="DiagnosticAlarms" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="GeneratedAlarms" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="Interlocking" minOccurs="0" maxOccurs="20" />
+    <xs:element name="EmergencyAlarms" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="EmergencyAlarmsResponse" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element ref="TD" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Message Element -->
+
+ <xs:element name="Message">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Header" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Body" minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Envelope Element -->
+ <xs:element name="Envelope">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Message" minOccurs="1" maxOccurs="1" />
+    <!-- set minOccurs to 1 to mandate signatures, 0 to have them optional -->
+    <xs:element ref="dsig:Signature" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
+
+
+ControlRequestResponse
+
+ControlRequestsResponse
+
+EmergencyAlarms
+
+EncodeICONISIFMessageForTransmision
+
+outBuffer
+
+DWORD EncodeICONISIFMessageForTransmision(char** outBuffer, Message_t *message)
+
+char ca_cert[1700] = {0};
+
+BYTE Modulus[129] = {0};
+
+BYTE Modulus[129] = {0};
+BYTE OurExponent[4] = {0x01, 0x00, 0x01};
+BYTE Exponent[4] = {0};
+BYTE ca_cert[1700] = {0};
+
+ConnectionListInformation_t
+
+, ConnectionListInformation_t *connectionInformation)
+
+connectionInformation
+
+BYTE Modulus[129];
+    BYTE Exponent[4];
+    BYTE ca_cert[1700];
+
+SignatureInformation_t
+
+ConnectionListInformation_t *connectionInformation
+
+SignatureInformation_t *signatureInformation
+
+WORD CompareSignedInfoElement(XMLElement* signature, SignatureInformation_t *signatureInformation)
+
+signatureInformation
+
+signatureInformation->RecvModulus
+
+signatureInformation->RecvExponent
+
+SignatureInformation_t *signatureInformation
+
+//const
+
+signatureInformation
+
+RSA *rsaKey = NULL;
+
+ConnectionInformation_t
+
+static char receivebody[8193];
+static char transbody[8193];
+
+SigningBuffers_t
+
+#include <openssl/rsa.h>
+
+RSA *rsaKey
+
+signatureInformation
+
+connectionInformation
+
+connectionInformation.
+
+RSA *rsaKey
+
+ //initialise the RSA signing keys
+        createNewRSAKEY();
+
+signatureInformation
+
+, SignatureInformation_t *signatureInformation
+
+ConnectionListInformation_t
+
+ ConnectionListInformation_t *connectionInformation)
+
+ConnectionList[n]
+
+certificate
+
+X509certificate
+
+signatureInformation->ca_cert
+
+(const char*)X509certificate
+
+-----BEGIN CERTIFICATE-----\n
+
+-----END CERTIFICATE-----
+
+char temp[66] = {0};
+
+(const char *)&certificate[n], 65
+
+strcat(ptr, "\n");              
+
+x509certificate
+
+PRINTTOWINDOW
+
+"CertificateReceived"
+
+x509certificate->name
+
+#define LOGANDPRINTTOWINDOW(x, y) {\
+    LOGGER(x, y);\
+    PRINTTOWINDOW(x, y);\
+    }
+
+#define LOGANDPRINTTOWINDOW(x, y)
+
+LOGANDPRINTTOWINDOW
+
+X509Certificate
+
+signatureInformation->X509Certificate
+
+STARTButton.Text = "
+
+ghMutex
+
+HANDLE ghMutex; 
+
+ghMutex = CreateMutex( 
+        NULL,              // default security attributes
+        FALSE,             // initially not owned
+        NULL);             // unnamed mutex
+
+
+ConnectionList[n]
+
+void CreateNewConnection(DWORD Socket, char *ipaddress)
+
+dwWaitResult = WaitForSingleObject( 
+            ghMutex,    // handle to mutex
+            INFINITE);  // no time-out interval
+
+ DWORD dwCount=0, dwWaitResult; 
+
+ConnectionList[n]
+
+switch (dwWaitResult) 
+        {
+            // The thread got ownership of the mutex
+            case WAIT_OBJECT_0: 
+                __try { 
+                    // TODO: Write to the database
+                    printf("Thread %d writing to database...\n", 
+                            GetCurrentThreadId());
+                    dwCount++;
+                } 
+
+                __finally { 
+                    // Release ownership of the mutex object
+                    if (! ReleaseMutex(ghMutex)) 
+                    { 
+                        // Handle error.
+                    } 
+                } 
+                break; 
+
+            // The thread got ownership of an abandoned mutex
+            // The database is in an indeterminate state
+            case WAIT_ABANDONED: 
+                return FALSE; 
+        }
+
+getMutexForConnection
+
+if(getMutexForConnection(n))  //if this is available we will use it 
+                {
+
+ ReleaseMutex(ghMutex)
+
+ConnectionList[n]
+
+ReleaseMutex
+
+ReleaseConnectionMutex
+
+ ConnectionList[n].ghMutex = CreateMutex(NULL,              // default security attributes
+                                  FALSE,             // initially not owned
+                                  NULL);             // unnamed
+
+ConnectionList[n].ghMutex = CreateMutex(NULL,              // default security attributes
+                                  FALSE,             // initially not owned
+                                  NULL);             // unnamed mutex
+
+
+//This resource is shared between the Receive and transmit so I'd like to protect it a little using a Mutex
+
+connectionInformation
+
+WORD getMutexForConnection(int n)
+{
+    WORD ret = 0;
+    DWORD dwWaitResult; 
+    dwWaitResult = WaitForSingleObject( 
+            ConnectionList[n].ghMutex,    // handle to mutex
+            INFINITE);  // no time-out interval
+
+    switch (dwWaitResult) 
+    {
+            case WAIT_OBJECT_0: 
+                ret = 1;
+                break; 
+
+            case WAIT_ABANDONED: 
+                LOGGER("Mutex Abandoned", "");
+                ret = 0;
+    }
+
+    return ret;
+}
+
+void ReleaseConnectionMutex(int n)
+{
+     ReleaseMutex(ConnectionList[n].ghMutex);
+}
+
+
+connectionInformation
+
+LOGSTRINT
+
+"failed to close down this socket %d as it did not exist in the list"
+
+log
+
+getMutexForConnection
+
++		input	0x003ccfac "<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-22T15:37:52.2112595+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1233738415</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-a</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAr1qJSQEAAACqVUgHAQAAANCK5XbnCKOjAQABAGwqiUkBAAAAqlUqBwEAAACpKKKKiGSjowEAAQC+EYVJAQAAAKpVDAcBAAAAH7o9zfOho6MBAAEA6BmESQEAAACqVe4GAQAAAP9HedscIKOjAQABAAJOgUkBAAAAqlXQBgEAAADqiAabWz+jowEAAQDvxXpJAQAAAKpVsgYBAAAAzMqm4vbfo6MBAAEAeLN3SQEAAACqVZQGAQAAAL/7ukOgLKOjAQABAC+QZEkBAAAAqlV2BgEAAAAaH8Z0K42jowEAAQBLL2JJAQAAAKpVWAYBAAAAJsnG4Smzo6MBAAEArQBfSQEAAACqVToGAQAAAJ37mgX5caOjAQABAK7bEEkBAAAAqlUcBgEAAABYMXlbZdSjowEAAQDTyQ9JAQAAAKpV/gUBAAAAj8xqCIT9o6MBAAEA8BywSAEAAACqVeAFAQAAAEiFPHaue6OjAQABAHPwlUgBAAAAqlXCBQEAAABTErOyuwajowEAAQAY8SVEAQAAAKpVpAUBAAAAHiSG1bTqo6MBAAEAgd7/QwEAAACqVYYFAQAAANtzKFgih6OjAQABACus/UMBAAAAqlVoBQEAAAAyjYRWB8OjowEAAQArEPJDAQAAAKpVSgUBAAAA2MmKkVrRo6MBAAEASATcQwEAAACqVSwFAQAAAAPBUimusKOjAQABADMuY0MBAAAAqlUOBQEAAAAwWpaZW/2jowEAAQCdel5DAQAAAKpV8AQBAAAA1E5aWG6lo6MBAAEA/QIvQwEAAACqVdIEAQAAAKiO3MW4daOjAQABAMvvJ0MBAAAAqlW0BAEAAADSXF5AznqjowEAAQBTgyBDAQAAAKpVlgQBAAAAdOv/ZVk2o6MBAAEAVQGJPwEAAACqVXgEAQAAAMQNEt1RyqOjAQABAMgsiD8BAAAAqlVaBAEAAAB6VkaAbKijowEAAQBjgIU/AQAAAKpVPAQBAAAAr07Us6kOo6MBAAEAAMp4PwEAAACqVR4EAQAAAB7cNcEDaKOjAQABAJS/dz8BAAAAqlUABAEAAAAXG8jVh2GjowEAAQBT9Ww/AQAAAKpV4gMBAAAARp/XIW2to6MBAAEAHdRqPwEAAACqVcQDAQAAAJEk0OKm8aOjAQABAHtwaT8BAAAAqlWmAwEAAADVgQ5S00ijowEAAQCgzjc/AQAAAKpViAMBAAAAfBvcggIqo6MBAAEAr8TTPgEAAACqVWoDAQAAAJf6Xj/23KOjAQABAFYywyoBAAAAqlVMAwEAAADvGW6OlGCjowEAAQB2orgqAQAAAKpVLgMBAAAAhw6CE97go6MBAAEAacugKgEAAACqVRADAQAAAOV	const char *
+
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-22T15:37:52.2112595+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1233738415</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-a</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAr1qJSQEAAACqVUgHAQAAANCK5XbnCKOjAQABAGwqiUkBAAAAqlUqBwEAAACpKKKKiGSjowEAAQC+EYVJAQAAAKpVDAcBAAAAH7o9zfOho6MBAAEA6BmESQEAAACqVe4GAQAAAP9HedscIKOjAQABAAJOgUkBAAAAqlXQBgEAAADqiAabWz+jowEAAQDvxXpJAQAAAKpVsgYBAAAAzMqm4vbfo6MBAAEAeLN3SQEAAACqVZQGAQAAAL/7ukOgLKOjAQABAC+QZEkBAAAAqlV2BgEAAAAaH8Z0K42jowEAAQBLL2JJAQAAAKpVWAYBAAAAJsnG4Smzo6MBAAEArQBfSQEAAACqVToGAQAAAJ37mgX5caOjAQABAK7bEEkBAAAAqlUcBgEAAABYMXlbZdSjowEAAQDTyQ9JAQAAAKpV/gUBAAAAj8xqCIT9o6MBAAEA8BywSAEAAACqVeAFAQAAAEiFPHaue6OjAQABAHPwlUgBAAAAqlXCBQEAAABTErOyuwajowEAAQAY8SVEAQAAAKpVpAUBAAAAHiSG1bTqo6MBAAEAgd7/QwEAAACqVYYFAQAAANtzKFgih6OjAQABACus/UMBAAAAqlVoBQEAAAAyjYRWB8OjowEAAQArEPJDAQAAAKpVSgUBAAAA2MmKkVrRo6MBAAEASATcQwEAAACqVSwFAQAAAAPBUimusKOjAQABADMuY0MBAAAAqlUOBQEAAAAwWpaZW/2jowEAAQCdel5DAQAAAKpV8AQBAAAA1E5aWG6lo6MBAAEA/QIvQwEAAACqVdIEAQAAAKiO3MW4daOjAQABAMvvJ0MBAAAAqlW0BAEAAADSXF5AznqjowEAAQBTgyBDAQAAAKpVlgQBAAAAdOv/ZVk2o6MBAAEAVQGJPwEAAACqVXgEAQAAAMQNEt1RyqOjAQABAMgsiD8BAAAAqlVaBAEAAAB6VkaAbKijowEAAQBjgIU/AQAAAKpVPAQBAAAAr07Us6kOo6MBAAEAAMp4PwEAAACqVR4EAQAAAB7cNcEDaKOjAQABAJS/dz8BAAAAqlUABAEAAAAXG8jVh2GjowEAAQBT9Ww/AQAAAKpV4gMBAAAARp/XIW2to6MBAAEAHdRqPwEAAACqVcQDAQAAAJEk0OKm8aOjAQABAHtwaT8BAAAAqlWmAwEAAADVgQ5S00ijowEAAQCgzjc/AQAAAKpViAMBAAAAfBvcggIqo6MBAAEAr8TTPgEAAACqVWoDAQAAAJf6Xj/23KOjAQABAFYywyoBAAAAqlVMAwEAAADvGW6OlGCjowEAAQB2orgqAQAAAKpVLgMBAAAAhw6CE97go6MBAAEAacugKgEAAACqVRADAQAAAOV
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-22T15:37:52.2112595+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1233738415</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-a</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEAr1qJSQEAAACqVUgHAQAAANCK5XbnCKOjAQABAGwqiUkBAAAAqlUqBwEAAACpKKKKiGSjowEAAQC+EYVJAQAAAKpVDAcBAAAAH7o9zfOho6MBAAEA6BmESQEAAACqVe4GAQAAAP9HedscIKOjAQABAAJOgUkBAAAAqlXQBgEAAADqiAabWz+jowEAAQDvxXpJAQAAAKpVsgYBAAAAzMqm4vbfo6MBAAEAeLN3SQEAAACqVZQGAQAAAL/7ukOgLKOjAQABAC+QZEkBAAAAqlV2BgEAAAAaH8Z0K42jowEAAQBLL2JJAQAAAKpVWAYBAAAAJsnG4Smzo6MBAAEArQBfSQEAAACqVToGAQAAAJ37mgX5caOjAQABAK7bEEkBAAAAqlUcBgEAAABYMXlbZdSjowEAAQDTyQ9JAQAAAKpV/gUBAAAAj8xqCIT9o6MBAAEA8BywSAEAAACqVeAFAQAAAEiFPHaue6OjAQABAHPwlUgBAAAAqlXCBQEAAABTErOyuwajowEAAQAY8SVEAQAAAKpVpAUBAAAAHiSG1bTqo6MBAAEAgd7/QwEAAACqVYYFAQAAANtzKFgih6OjAQABACus/UMBAAAAqlVoBQEAAAAyjYRWB8OjowEAAQArEPJDAQAAAKpVSgUBAAAA2MmKkVrRo6MBAAEASATcQwEAAACqVSwFAQAAAAPBUimusKOjAQABADMuY0MBAAAAqlUOBQEAAAAwWpaZW/2jowEAAQCdel5DAQAAAKpV8AQBAAAA1E5aWG6lo6MBAAEA/QIvQwEAAACqVdIEAQAAAKiO3MW4daOjAQABAMvvJ0MBAAAAqlW0BAEAAADSXF5AznqjowEAAQBTgyBDAQAAAKpVlgQBAAAAdOv/ZVk2o6MBAAEAVQGJPwEAAACqVXgEAQAAAMQNEt1RyqOjAQABAMgsiD8BAAAAqlVaBAEAAAB6VkaAbKijowEAAQBjgIU/AQAAAKpVPAQBAAAAr07Us6kOo6MBAAEAAMp4PwEAAACqVR4EAQAAAB7cNcEDaKOjAQABAJS/dz8BAAAAqlUABAEAAAAXG8jVh2GjowEAAQBT9Ww/AQAAAKpV4gMBAAAARp/XIW2to6MBAAEAHdRqPwEAAACqVcQDAQAAAJEk0OKm8aOjAQABAHtwaT8BAAAAqlWmAwEAAADVgQ5S00ijowEAAQCgzjc/AQAAAKpViAMBAAAAfBvcggIqo6MBAAEAr8TTPgEAAACqVWoDAQAAAJf6Xj/23KOjAQABAFYywyoBAAAAqlVMAwEAAADvGW6OlGCjowEAAQB2orgqAQAAAKpVLgMBAAAAhw6CE97go6MBAAEAacugKgEAAACqVRADAQAAAOV
+
+
+getMutexForConnection
+
+ if(ConnectionList[n].connectionInformation.InUse == 1)
+
+ if(getMutexForConnection(n) == 1)
+
+ReleaseMutex
+
+WaitForSingleObject
+
+EnterCriticalSection
+
+CRITICAL_SECTION m_cs;
+
+InitializeCriticalSection(&m_cs); 
+
+EnterCriticalSection(&m_cs); 
+
+//Release the Critical section
+	LeaveCriticalSection(&m_cs);
+
+ EnterCriticalSection(&m_cs); 
+
+ConnectionList[n].connectionInformation.InUse = 1;
+
+// Lock the Critical section
+	EnterCriticalSection(&m_cs);
+
+//Release the Critical section
+	LeaveCriticalSection(&m_cs);
+
+ LeaveCriticalSection(&m_cs);
+
+
+
+
+ LeaveCriticalSection(&m_cs);
+
+ EnterCriticalSection(&m_cs); 
+
+StartDecode(request, &message, connectionInformation)
+
+EnterCriticalSection(&m_cs);
+
+//Release the Critical section
+	LeaveCriticalSection(&m_cs);
+
+EnterCriticalSection
+
+THREAD_PRIORITY_TIME_CRITICAL
+
+ HANDLE  hThreadArray
+
+DWORD WINAPI MyThreadFunction( LPVOID lpParam ) 
+
+DWORD WINAPI
+
+LPVOID lpParam
+
+ hThreadArray[i] = CreateThread( 
+            NULL,                   // default security attributes
+            0,                      // use default stack size  
+            MyThreadFunction,       // thread function name
+            pDataArray[i],          // argument to thread function 
+            0,                      // use default creation flags 
+            &dwThreadIdArray[i]);  
+
+TransmitThread
+
+DWORD WINAPI TransmitThread( LPVOID lpParam )
+
+SetThreadPriority
+
+THREAD_PRIORITY_BELOW_NORMAL
+
+EnterCriticalSection(&m_cs);
+
+
+	
+
+LeaveCriticalSection(&m_cs);
+
+
+CRITICAL_SECTION m_cs;
+
+ InitializeCriticalSection(&m_cs); 
+
+InitializeCriticalSection(&m_cs); 
+
+m_cs
+
+CertificateReceived
+
+0x30,
+0x81,
+0x89,
+0x2,
+0x81,
+0x81,
+
+0x2,
+0x3,
+0x1,
+0x0,
+0x1};
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+
+signatureInformation->X509Certificate
+
+VerifyPublicKey
+
+signatureInformation->
+

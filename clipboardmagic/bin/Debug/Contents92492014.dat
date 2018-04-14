@@ -1,0 +1,120 @@
+Release 28.0.0.0 {0180}
+
+Copies a PESQ score summary file into the RTT log
+
+UpdateRowDataWithScriptDetails
+
+ScriptWatermarkingForm
+
+UserScript_BatchName
+
+ScriptWatermarkingForm
+
+            System.Console.WriteLine("-h this menu\n-b Batch Name\n-v Version\n-l License\n-s Signature Type\n-p Path to Script.");
+
+help = true;
+
+musthaves
+
+DataSet_ScriptsDisplayInfo.InfoRow
+
+row
+
+dataSet_ScriptsDisplayInfo.Info.Rows
+
+Script _script = ReadScriptFile(row.Filename);
+
+CommandLineScriptName
+
+ if (null != _script)
+                    {
+
+ if (null != _script)
+                    {
+                        ScriptDetailsData _scriptDetailsData = _script.ScriptElements.ScriptElement[0].ElementData as ScriptDetailsData;
+
+CommandLineScriptName
+
+dataSet_ScriptsDisplayInfo.Info.Rows.Add(
+
+01 - Attach and Detach - [Band 7].SSC
+
+Developed
+
+Commandline_Signature
+
+button_SignScripts_Click
+
+DataSet_ScriptsDisplayInfo.InfoRow row
+
+DataSet_ScriptsDisplayInfo.InfoRow
+
+_scriptDetailsData
+
+CommandLineActivated
+
+>ScriptWatermarking.exe -p "01 - Attach and Detach - [Band 7].SSC" -s
+
+01 - Attach and Detach - [Band 7].SSC
+
+ System.Console.WriteLine("CommandLines");
+
+string[] filePaths = Directory.GetFiles(@"c:\MyDir\", "*.bmp");
+
+CommandLineScriptName
+
+args[i]
+
+   Script _script = ReadScriptFile(CommandLineScriptName);
+            if (null != _script)
+            {
+                ScriptDetailsData _scriptDetailsData = _script.ScriptElements.ScriptElement[0].ElementData as ScriptDetailsData;
+                
+                dataSet_ScriptsDisplayInfo.Info.Rows.Add("");
+                DataSet_ScriptsDisplayInfo.InfoRow row = dataSet_ScriptsDisplayInfo.Info.Rows[0] as DataSet_ScriptsDisplayInfo.InfoRow;
+                row.UpdatePending = "True";
+                row.Filename = CommandLineScriptName;
+                row.Name = _scriptDetailsData.Name;
+                row.Purpose = _scriptDetailsData.Purpose;
+                row.ProtocolVersion = _scriptDetailsData.ProtocolVersion;
+                row.Source = _scriptDetailsData.Source.Replace("#", "").Replace("Source:", "").Trim();
+                row.Revision = _scriptDetailsData.Revision.Replace("#", "").Replace("Revision:", "").Trim();
+                row.Date = _scriptDetailsData.Date.Replace("#", "").Replace("Date:", "").Trim();
+                row.License = UserScript_License;
+                row.Batch = UserScript_BatchName;
+                row.Version = UserScript_SASLTEVersion;
+                row.SignatureType = Commandline_Signature.ToString();
+                row.Description = _scriptDetailsData.Description;
+                row.RevisionHistory = _scriptDetailsData.RevisionHistory;
+
+FillInScriptRow
+
+FillInScriptRow(CommandLineScriptName);
+
+    button_SignScripts_Click(null, null);
+
+
+                string[] filePaths = Directory.GetFiles(CommandLineScriptName, "*.ssc");
+                foreach (string str in filePaths)
+                {
+                    FillInScriptRow(str);
+                }
+
+CommandLineScriptName
+
+Active Partition Recovery
+
+C:\AniteSAS\TestBatch
+
+folder
+
+ So we will probably have to run through 10.6 ourselves.
+
+69968    
+
+72509
+
+If you modify Time control of any message in a SAS interactive programmed play script(.isc) then the message corresponding to it is modified to a default value or nil value
+
+Samatshetti, Mrutyunjay <mrutyunjay.samatshet@anite.com>
+

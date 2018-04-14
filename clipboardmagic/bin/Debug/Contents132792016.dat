@@ -1,0 +1,92 @@
+vmsadapter.reg
+
+AdapterSCN
+
+TypeID
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+SetStatus
+
+this->adapterStatus->SetStatus("Initialisation");
+
+Waiting to Start Monitoring
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+SubsystemTypeID
+
+"AdapterSCN"="VMSAdapter1"
+"SubsystemTypeID"=dword:1200
+
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+C:\Secure\SourceNew\Core\TrafficObjectServer\tosmanager\tosmanager.cpp
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\GZipEncoder\GZipMessageEncoderFactory.cs
+
+SubscriberService/GZipEncoder/GZipMessageEncoderFactory.cs
+
+SubscriberService/SubscriberWebService/SubscriberWebService.csproj
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+http://www.hants.gov.uk/cctv/WCAM123.jpg
+
+cctv/
+
+ http://www.hants.gov.uk/cctv/WCAM131.jpg
+
+http://www.hants.gov.uk/cctv/WCAM132.jpg 
+
+http://www.hants.gov.uk/cctv/WCAM131.jpg
+
+AdapterStatus* adapterStatus = AdapterStatus::GetInstance();
+
+AdapterStatus
+
+adapterStatus
+
+AdapterStatus::GetInstance()
+
+AdapterStatus* adapterStatus = AdapterStatus::GetInstance();
+
+adapterStatus = AdapterStatus::GetInstance();
+
+adapterStatus
+
+   </ProjectExtensions>
+
+
+registry.read("AdapterSCN", SCNName, "VMSAdapter");
+  registry.read("SubsystemTypeID", TypeID, 1200);
+
+rootRegistry
+
+char SCNName[256] = {0};
+
+adapterTypeID
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniORB413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omnithread34_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniConnectionMgmt413_vc8_rtd.dll
+
+SCNName
+
+adapterTypeID
+
+27789
+
+adapterStatus->SetStatus("Initialise");
+
+ adapterStatus->SetStatus("Initialise");
+
+adapterStatus->SetStatus("Waiting to Start Monitoring!");
+
+life is a box of chocalates, you never know what your going to get. Unless you read the fucking label you thicky!!
+

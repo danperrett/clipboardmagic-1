@@ -1,0 +1,1569 @@
+MSG_WAITALL
+
+ SendTextToWindow("Reading the Information");
+
+#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/param.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <netdb.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+
+szIncoming
+
+ZeroMemory
+
+FD_WRITE
+
+int SSL_SOCKET :: ssend_p(char *b, int sz)
+{
+   // same as send, but forces reading ALL sz
+   int rs = 0;
+   for (;;)
+   {
+      int rval = send(X, b + rs, sz - rs, 0);
+      if (rval == 0 || rval == SOCKET_ERROR)
+         return rs;
+      rs += rval;
+      if (rs == sz)
+         return rs;
+   }
+}
+
+DWORD ssend_p(char *b, int sz)
+
+ssend_p
+
+int SSL_SOCKET :: s_ssend(char* b,int sz)
+	{
+	// QueryContextAttributes
+	// Encrypt Message
+	// ssend
+
+	SecPkgContext_StreamSizes Sizes;
+	SECURITY_STATUS ss = 0;
+	ss = QueryContextAttributes(&hCtx,SECPKG_ATTR_STREAM_SIZES,&Sizes);
+	if (FAILED(ss))
+		return -1;
+
+	Z<SecBuffer> Buffers(100);
+	int mPos = 0;
+	for(;;)
+		{
+		Z<char> mmsg(Sizes.cbMaximumMessage*2);
+		Z<char> mhdr(Sizes.cbHeader*2);
+		Z<char> mtrl(Sizes.cbTrailer*2);
+
+		unsigned int dwMessage = sz - mPos;
+		if (dwMessage == 0)
+			break; // all ok!
+
+		if (dwMessage > Sizes.cbMaximumMessage)
+			{
+			dwMessage = Sizes.cbMaximumMessage;
+			}
+		memcpy(mmsg,b + mPos,dwMessage);
+		mPos += dwMessage;
+
+
+		Buffers[0].pvBuffer     = mhdr;
+		Buffers[0].cbBuffer     = Sizes.cbHeader;
+		Buffers[0].BufferType   = SECBUFFER_STREAM_HEADER;
+		Buffers[2].pvBuffer     = mtrl;
+		Buffers[2].cbBuffer     = Sizes.cbTrailer;
+		Buffers[2].BufferType   = SECBUFFER_STREAM_TRAILER;
+		Buffers[3].pvBuffer     = 0;
+		Buffers[3].cbBuffer     = 0;
+		Buffers[3].BufferType   = SECBUFFER_EMPTY;
+		Buffers[1].pvBuffer     = mmsg;
+		Buffers[1].cbBuffer     = dwMessage;
+		Buffers[1].BufferType   = SECBUFFER_DATA;
+
+		sbin.ulVersion = SECBUFFER_VERSION;
+		sbin.pBuffers = Buffers;
+		sbin.cBuffers = 4;
+
+		ss = EncryptMessage(&hCtx,0,&sbin,0);
+		if (FAILED(ss))
+			return -1;
+
+
+		// Send this message
+		int rval;
+		rval = ssend_p((char*)Buffers[0].pvBuffer,Buffers[0].cbBuffer);
+		if (rval != Buffers[0].cbBuffer)
+			return rval;
+		rval = ssend_p((char*)Buffers[1].pvBuffer,Buffers[1].cbBuffer);
+		if (rval != Buffers[1].cbBuffer)
+			return rval;
+		rval = ssend_p((char*)Buffers[2].pvBuffer,Buffers[2].cbBuffer);
+		if (rval != Buffers[2].cbBuffer)
+			return rval;
+		}
+
+	return sz;
+	}
+
+
+int s_ssend(char* b,int sz)
+
+
+int s_ssend(char* b,int sz)
+
+s_ssend
+
+ExtraData
+
+C:\AStyle\bin
+
+PendingRecvData
+
+WORD InitialiseTCPSocket(HWND hWnd, bool Ssl)
+
+******************************************************************************
+
+/******************************************************************************
+* WORD InitialiseTCPSocket(HWND hWnd, bool Ssl)
+* Inputs: 
+*     hWnd ID
+*     Ssl is this a Secure Socket Layer
+* Outputs:
+*     WORD success or no success
+* Description:
+*     
+*******************************************************************************/
+
+DoTCPSocketCode(HWND hWnd, WPARAM wParam, LPARAM lParam)
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE schema PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "http://www.w3.org/2001/XMLSchema.dtd" 
+ [ <!ATTLIST schema xmlns:ds CDATA #FIXED "http://www.w3.org/2000/09/xmldsig#"> 
+ <!ENTITY dsig 'http://www.w3.org/2000/09/xmldsig#'> <!ENTITY % p ''> <!ENTITY 
+ % s ''> ]> -->
+<!-- Schema for XML Signatures http://www.w3.org/2000/09/xmldsig# $Revision: 
+ 4 $ on $Date: 2004-12-16 12:08:17 -0500 (Thu, 16 Dec 2004) $ by $Author: 
+ marcgratacos $ Copyright 2001 The Internet Society and W3C (Massachusetts 
+ Institute of Technology, Institut National de Recherche en Informatique et 
+ en Automatique, Keio University). All Rights Reserved. http://www.w3.org/Consortium/Legal/ 
+ This document is governed by the W3C Software License [1] as described in 
+ the FAQ [2]. [1] http://www.w3.org/Consortium/Legal/copyright-software-19980720 
+ [2] http://www.w3.org/Consortium/Legal/IPR-FAQ-20000620.html#DTD -->
+<schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#"
+ version="0.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+ <!-- Basic Types Defined for Signatures -->
+ <simpleType name="CryptoBinary">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- Start Signature -->
+ <element name="Signature" type="ds:SignatureType" />
+ <complexType name="SignatureType">
+  <sequence>
+   <element ref="ds:SignedInfo" />
+   <element ref="ds:SignatureValue" />
+   <element minOccurs="0" ref="ds:KeyInfo" />
+   <element maxOccurs="unbounded" minOccurs="0" ref="ds:Object" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureValue" type="ds:SignatureValueType" />
+ <complexType name="SignatureValueType">
+  <simpleContent>
+   <extension base="base64Binary">
+    <attribute name="Id" type="ID" use="optional" />
+   </extension>
+  </simpleContent>
+ </complexType>
+ <!-- Start SignedInfo -->
+ <element name="SignedInfo" type="ds:SignedInfoType" />
+ <complexType name="SignedInfoType">
+  <sequence>
+   <element ref="ds:CanonicalizationMethod" />
+   <element ref="ds:SignatureMethod" />
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType" />
+ <complexType mixed="true" name="CanonicalizationMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##any" />
+   <!-- (0,unbounded) elements from (1,1) namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="SignatureMethod" type="ds:SignatureMethodType" />
+ <complexType mixed="true" name="SignatureMethodType">
+  <sequence>
+   <element minOccurs="0" name="HMACOutputLength" type="ds:HMACOutputLengthType" />
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other" />
+   <!-- (0,unbounded) elements from (1,1) external namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- Start Reference -->
+ <element name="Reference" type="ds:ReferenceType" />
+ <complexType name="ReferenceType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+   <element ref="ds:DigestMethod" />
+   <element ref="ds:DigestValue" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="URI" type="anyURI" use="optional" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <element name="Transforms" type="ds:TransformsType" />
+ <complexType name="TransformsType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Transform" />
+  </sequence>
+ </complexType>
+ <element name="Transform" type="ds:TransformType" />
+ <complexType mixed="true" name="TransformType">
+  <choice maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+   <element name="XPath" type="string" />
+  </choice>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- End Reference -->
+ <element name="DigestMethod" type="ds:DigestMethodType" />
+ <complexType mixed="true" name="DigestMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+    processContents="lax" />
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="DigestValue" type="ds:DigestValueType" />
+ <simpleType name="DigestValueType">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- End SignedInfo -->
+ <!-- Start KeyInfo -->
+ <element name="KeyInfo" type="ds:KeyInfoType" />
+ <complexType mixed="true" name="KeyInfoType">
+  <choice maxOccurs="unbounded">
+   <element ref="ds:KeyName" />
+   <element ref="ds:KeyValue" />
+   <element ref="ds:RetrievalMethod" />
+   <element ref="ds:X509Data" />
+   <element ref="ds:PGPData" />
+   <element ref="ds:SPKIData" />
+   <element ref="ds:MgmtData" />
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+  </choice>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="KeyName" type="string" />
+ <element name="MgmtData" type="string" />
+ <element name="KeyValue" type="ds:KeyValueType" />
+ <complexType mixed="true" name="KeyValueType">
+  <choice>
+   <element ref="ds:DSAKeyValue" />
+   <element ref="ds:RSAKeyValue" />
+   <any namespace="##other" processContents="lax" />
+  </choice>
+ </complexType>
+ <element name="RetrievalMethod" type="ds:RetrievalMethodType" />
+ <complexType name="RetrievalMethodType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+  </sequence>
+  <attribute name="URI" type="anyURI" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <!-- Start X509Data -->
+ <element name="X509Data" type="ds:X509DataType" />
+ <complexType name="X509DataType">
+  <sequence maxOccurs="unbounded">
+   <choice>
+    <element name="X509IssuerSerial" type="ds:X509IssuerSerialType" />
+    <element name="X509SKI" type="base64Binary" />
+    <element name="X509SubjectName" type="string" />
+    <element name="X509Certificate" type="base64Binary" />
+    <element name="X509CRL" type="base64Binary" />
+    <any namespace="##other" processContents="lax" />
+   </choice>
+  </sequence>
+ </complexType>
+ <complexType name="X509IssuerSerialType">
+  <sequence>
+   <element name="X509IssuerName" type="string" />
+   <element name="X509SerialNumber" type="integer" />
+  </sequence>
+ </complexType>
+ <!-- End X509Data -->
+ <!-- Begin PGPData -->
+ <element name="PGPData" type="ds:PGPDataType" />
+ <complexType name="PGPDataType">
+  <choice>
+   <sequence>
+    <element name="PGPKeyID" type="base64Binary" />
+    <element minOccurs="0" name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+   <sequence>
+    <element name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+  </choice>
+ </complexType>
+ <!-- End PGPData -->
+ <!-- Begin SPKIData -->
+ <element name="SPKIData" type="ds:SPKIDataType" />
+ <complexType name="SPKIDataType">
+  <sequence maxOccurs="unbounded">
+   <element name="SPKISexp" type="base64Binary" />
+   <any minOccurs="0" namespace="##other" processContents="lax" />
+  </sequence>
+ </complexType>
+ <!-- End SPKIData -->
+ <!-- End KeyInfo -->
+ <!-- Start Object (Manifest, SignatureProperty) -->
+ <element name="Object" type="ds:ObjectType" />
+ <complexType mixed="true" name="ObjectType">
+  <sequence maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##any" processContents="lax" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="MimeType" type="string" use="optional" />
+  <attribute name="Encoding" type="anyURI" use="optional" />
+  <!-- add a grep facet -->
+ </complexType>
+ <element name="Manifest" type="ds:ManifestType" />
+ <complexType name="ManifestType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperties" type="ds:SignaturePropertiesType" />
+ <complexType name="SignaturePropertiesType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:SignatureProperty" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperty" type="ds:SignaturePropertyType" />
+ <complexType mixed="true" name="SignaturePropertyType">
+  <choice maxOccurs="unbounded">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (1,unbounded) namespaces -->
+  </choice>
+  <attribute name="Target" type="anyURI" use="required" />
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <!-- End Object (Manifest, SignatureProperty) -->
+ <!-- Start Algorithm Parameters -->
+ <simpleType name="HMACOutputLengthType">
+  <restriction base="integer" />
+ </simpleType>
+ <!-- Start KeyValue Element-types -->
+ <element name="DSAKeyValue" type="ds:DSAKeyValueType" />
+ <complexType name="DSAKeyValueType">
+  <sequence>
+   <sequence minOccurs="0">
+    <element name="P" type="ds:CryptoBinary" />
+    <element name="Q" type="ds:CryptoBinary" />
+   </sequence>
+   <element minOccurs="0" name="G" type="ds:CryptoBinary" />
+   <element name="Y" type="ds:CryptoBinary" />
+   <element minOccurs="0" name="J" type="ds:CryptoBinary" />
+   <sequence minOccurs="0">
+    <element name="Seed" type="ds:CryptoBinary" />
+    <element name="PgenCounter" type="ds:CryptoBinary" />
+   </sequence>
+  </sequence>
+ </complexType>
+ <element name="RSAKeyValue" type="ds:RSAKeyValueType" />
+ <complexType name="RSAKeyValueType">
+  <sequence>
+   <element name="Modulus" type="ds:CryptoBinary" />
+   <element name="Exponent" type="ds:CryptoBinary" />
+  </sequence>
+ </complexType>
+ <!-- End KeyValue Element-types -->
+ <!-- End Signature -->
+</schema>
+
+
+DWORD OpenMACE_DIOseg(const char * SegmentName, DWORD BlockType, DWORD diocfg, APP_DIO_MAP *AppDIO)
+
+b5d51e8f901ff54f1932259fccc4342694574c29
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\tinyxml2-master\resources
+
+int s_ssend(char* b,int sz)
+
+char * newBuffer = (char *)malloc(new_length);
+
+if(length > new_length) return NULL;
+
+ExtraDataSize
+
+void *ExpandBuffer(void *buffer, DWORD length, DWORD new_length)
+
+http://cppcheck.sourceforge.net/
+
+#if defined(__cplusplus)
+
+BYTE * newBuffer
+
+defined(__cplusplus)
+
+ALLOCATE
+
+ExtraDataSize
+
+ ExtraData = (char *)ALLOCATE(ExtraDataSize);
+
+PendingRecvData
+
+ALLOCATE
+
+PendingRecvDataSize
+
+
+/******************************************************************************
+* void *ExpandBuffer(void *buffer, DWORD length, DWORD new_length)
+* creates a new buffer to size of new_length then copies old to new delete old
+* all sizes in bytes
+******************************************************************************/
+
+BYTE *ALLOCATE(DWORD size)
+
+BYTE *ExpandBuffer(void *buffer, DWORD length, DWORD new_length)
+
+ExtraData
+
+#if defined(__cplusplus)
+
+*input = NULL;
+
+DELETEMEMORY
+
+Buffers
+
+mmsg
+
+DELETEMEMORY
+
+mhdr
+
+DELETEMEMORY((void **)&mmsg);
+    DELETEMEMORY((void **)&mhdr);
+
+DELETEMEMORY((void **)&mmsg);
+        DELETEMEMORY((void **)&mhdr);
+
+DELETEMEMORY((void **)&mhdr);
+
+mtrl
+
+ALLOCATE
+
+void DELETEMEMORY(void **input)
+
+BYTE *ALLOCATE(DWORD size)
+
+delete[] mmsg;
+            delete[] mhdr;
+            delete[] mtrl;
+
+DELETEMEMORY((void **)&ExtraData);
+
+PendingRecvData
+
+(char *)ALLOCATE(
+
+DELETEMEMORY
+
+EXTRA_BUFFER_SIZE
+
+Buffers
+
+ServerLoop
+
+pDataBuffer
+
+szHistory
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified">
+
+ <!-- Import the XML Digital Signature XSD -->
+ <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+  schemaLocation="xmldsig-core-schema.xsd" />
+
+ <!-- Custom Types -->
+ <xs:simpleType name="nonEmptyString">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Version Number format, e.g. message/data/software etc... -->
+ <xs:simpleType name="versionNumber">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+   <xs:pattern value="[a-z0-9\-]*" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Sequence Numbering -->
+ <xs:simpleType name="sequenceNumber">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+   <xs:maxInclusive value="2147483647" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Unit Identifiers e.g. RIF-1-A etc... -->
+ <xs:simpleType name="unitID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Identifiers for remote links and other remote equipment -->
+ <xs:simpleType name="equipmentID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Track circuit ID's -->
+ <xs:simpleType name="trackID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Signal Names -->
+ <xs:simpleType name="signalID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How requests are identified -->
+ <xs:simpleType name="requestID">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- ARS Sub-Area identifier -->
+ <xs:simpleType name="arsSubAreaID">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Berth identifier -->
+ <xs:simpleType name="berthID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+<xs:simpleType name="trainID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- An SSI ID, e.g. 0F or 1B -->
+ <xs:simpleType name="SSIID">
+  <xs:restriction base="xs:string">
+   <xs:pattern value="[0-9A-Z]{2}" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How the time sync status should be described -->
+ <xs:simpleType name="timeStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="SYNCHRONISED" />
+   <xs:enumeration value="UNSYNCHRONISED" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How the unit status can be described -->
+ <xs:simpleType name="unitStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="MASTER" />
+   <xs:enumeration value="STANDBY" />
+   <xs:enumeration value="UNAVAILABLE" />
+   <xs:enumeration value="ACTIVE" />
+   <xs:enumeration value="INACTIVE" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- The description of links to external systems -->
+ <xs:simpleType name="linkStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UP" />
+   <xs:enumeration value="DOWN" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Link availability -->
+ <xs:simpleType name="sourceLinkStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UP" />
+   <xs:enumeration value="DOWN" />
+   <xs:enumeration value="AVAILABLE" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- NVFB/3 data, base64 encoded -->
+ <xs:simpleType name="NVFB3">
+  <xs:restriction base="xs:base64Binary" />
+ </xs:simpleType>
+
+ <!-- Header Elements -->
+ <xs:element name="Version">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="MessageFormat" type="versionNumber"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="Data" type="versionNumber" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Software" type="versionNumber"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Time">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Current" type="xs:dateTime" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="TimeStatus" type="timeStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="Monotonic" type="xs:long" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Header">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Version" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Time" minOccurs="1" maxOccurs="1" />
+    <xs:element name="SequenceNumber" type="sequenceNumber"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceUnitID" type="unitID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="LogicalSourceID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceStatus" type="unitStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceLinkStatus" type="sourceLinkStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="DestinationUnitID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="LogicalDestinationID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Body Elements -->
+
+ <xs:element name="Link">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="From" type="equipmentID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="To" type="equipmentID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Status" type="linkStatus" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="DiagnosticAlarms">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Link" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="OSTO">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Track1" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Track2" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="GeneratedAlarms">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="OSTO" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="GenericAlarm" type="nonEmptyString"
+     minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SPADData">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="SignalID" type="xs:int" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Signal" type="signalID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Track" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SPAD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="SignalMap" type="NVFB3" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element ref="SPADData" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="ControlRequestRejected">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="RequestNumber" type="requestID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="RejectReason" type="nonEmptyString"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Interlocking">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="UniqueID" type="nonEmptyString"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SSIID" type="SSIID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element ref="SPAD" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="Indications" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="ControlRequests" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element ref="ControlRequestRejected" minOccurs="0"
+     maxOccurs="unbounded" />
+    <xs:element name="ARSDisableSubArea" type="arsSubAreaID"
+     minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="ARSSubAreaStatus" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="StatusByte" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Interpose">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="TrainID" type="trainID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Berth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Clear">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Berth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Step">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="TrainID" type="trainID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="FromBerth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="ToBerth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="TD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Interpose" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Clear" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Step" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Body">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="DiagnosticAlarms" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="GeneratedAlarms" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="Interlocking" minOccurs="0" maxOccurs="20" />
+    <xs:element name="EmergencyAlarms" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element ref="TD" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Message Element -->
+
+ <xs:element name="Message">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Header" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Body" minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Envelope Element -->
+ <xs:element name="Envelope">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Message" minOccurs="1" maxOccurs="1" />
+    <!-- set minOccurs to 1 to mandate signatures, 0 to have them optional -->
+    <xs:element ref="dsig:Signature" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE schema PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "http://www.w3.org/2001/XMLSchema.dtd" 
+ [ <!ATTLIST schema xmlns:ds CDATA #FIXED "http://www.w3.org/2000/09/xmldsig#"> 
+ <!ENTITY dsig 'http://www.w3.org/2000/09/xmldsig#'> <!ENTITY % p ''> <!ENTITY 
+ % s ''> ]> -->
+<!-- Schema for XML Signatures http://www.w3.org/2000/09/xmldsig# $Revision: 
+ 4 $ on $Date: 2004-12-16 12:08:17 -0500 (Thu, 16 Dec 2004) $ by $Author: 
+ marcgratacos $ Copyright 2001 The Internet Society and W3C (Massachusetts 
+ Institute of Technology, Institut National de Recherche en Informatique et 
+ en Automatique, Keio University). All Rights Reserved. http://www.w3.org/Consortium/Legal/ 
+ This document is governed by the W3C Software License [1] as described in 
+ the FAQ [2]. [1] http://www.w3.org/Consortium/Legal/copyright-software-19980720 
+ [2] http://www.w3.org/Consortium/Legal/IPR-FAQ-20000620.html#DTD -->
+<schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#"
+ version="0.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+ <!-- Basic Types Defined for Signatures -->
+ <simpleType name="CryptoBinary">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- Start Signature -->
+ <element name="Signature" type="ds:SignatureType" />
+ <complexType name="SignatureType">
+  <sequence>
+   <element ref="ds:SignedInfo" />
+   <element ref="ds:SignatureValue" />
+   <element minOccurs="0" ref="ds:KeyInfo" />
+   <element maxOccurs="unbounded" minOccurs="0" ref="ds:Object" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureValue" type="ds:SignatureValueType" />
+ <complexType name="SignatureValueType">
+  <simpleContent>
+   <extension base="base64Binary">
+    <attribute name="Id" type="ID" use="optional" />
+   </extension>
+  </simpleContent>
+ </complexType>
+ <!-- Start SignedInfo -->
+ <element name="SignedInfo" type="ds:SignedInfoType" />
+ <complexType name="SignedInfoType">
+  <sequence>
+   <element ref="ds:CanonicalizationMethod" />
+   <element ref="ds:SignatureMethod" />
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType" />
+ <complexType mixed="true" name="CanonicalizationMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##any" />
+   <!-- (0,unbounded) elements from (1,1) namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="SignatureMethod" type="ds:SignatureMethodType" />
+ <complexType mixed="true" name="SignatureMethodType">
+  <sequence>
+   <element minOccurs="0" name="HMACOutputLength" type="ds:HMACOutputLengthType" />
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other" />
+   <!-- (0,unbounded) elements from (1,1) external namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- Start Reference -->
+ <element name="Reference" type="ds:ReferenceType" />
+ <complexType name="ReferenceType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+   <element ref="ds:DigestMethod" />
+   <element ref="ds:DigestValue" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="URI" type="anyURI" use="optional" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <element name="Transforms" type="ds:TransformsType" />
+ <complexType name="TransformsType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Transform" />
+  </sequence>
+ </complexType>
+ <element name="Transform" type="ds:TransformType" />
+ <complexType mixed="true" name="TransformType">
+  <choice maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+   <element name="XPath" type="string" />
+  </choice>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- End Reference -->
+ <element name="DigestMethod" type="ds:DigestMethodType" />
+ <complexType mixed="true" name="DigestMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+    processContents="lax" />
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="DigestValue" type="ds:DigestValueType" />
+ <simpleType name="DigestValueType">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- End SignedInfo -->
+ <!-- Start KeyInfo -->
+ <element name="KeyInfo" type="ds:KeyInfoType" />
+ <complexType mixed="true" name="KeyInfoType">
+  <choice maxOccurs="unbounded">
+   <element ref="ds:KeyName" />
+   <element ref="ds:KeyValue" />
+   <element ref="ds:RetrievalMethod" />
+   <element ref="ds:X509Data" />
+   <element ref="ds:PGPData" />
+   <element ref="ds:SPKIData" />
+   <element ref="ds:MgmtData" />
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+  </choice>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="KeyName" type="string" />
+ <element name="MgmtData" type="string" />
+ <element name="KeyValue" type="ds:KeyValueType" />
+ <complexType mixed="true" name="KeyValueType">
+  <choice>
+   <element ref="ds:DSAKeyValue" />
+   <element ref="ds:RSAKeyValue" />
+   <any namespace="##other" processContents="lax" />
+  </choice>
+ </complexType>
+ <element name="RetrievalMethod" type="ds:RetrievalMethodType" />
+ <complexType name="RetrievalMethodType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+  </sequence>
+  <attribute name="URI" type="anyURI" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <!-- Start X509Data -->
+ <element name="X509Data" type="ds:X509DataType" />
+ <complexType name="X509DataType">
+  <sequence maxOccurs="unbounded">
+   <choice>
+    <element name="X509IssuerSerial" type="ds:X509IssuerSerialType" />
+    <element name="X509SKI" type="base64Binary" />
+    <element name="X509SubjectName" type="string" />
+    <element name="X509Certificate" type="base64Binary" />
+    <element name="X509CRL" type="base64Binary" />
+    <any namespace="##other" processContents="lax" />
+   </choice>
+  </sequence>
+ </complexType>
+ <complexType name="X509IssuerSerialType">
+  <sequence>
+   <element name="X509IssuerName" type="string" />
+   <element name="X509SerialNumber" type="integer" />
+  </sequence>
+ </complexType>
+ <!-- End X509Data -->
+ <!-- Begin PGPData -->
+ <element name="PGPData" type="ds:PGPDataType" />
+ <complexType name="PGPDataType">
+  <choice>
+   <sequence>
+    <element name="PGPKeyID" type="base64Binary" />
+    <element minOccurs="0" name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+   <sequence>
+    <element name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+  </choice>
+ </complexType>
+ <!-- End PGPData -->
+ <!-- Begin SPKIData -->
+ <element name="SPKIData" type="ds:SPKIDataType" />
+ <complexType name="SPKIDataType">
+  <sequence maxOccurs="unbounded">
+   <element name="SPKISexp" type="base64Binary" />
+   <any minOccurs="0" namespace="##other" processContents="lax" />
+  </sequence>
+ </complexType>
+ <!-- End SPKIData -->
+ <!-- End KeyInfo -->
+ <!-- Start Object (Manifest, SignatureProperty) -->
+ <element name="Object" type="ds:ObjectType" />
+ <complexType mixed="true" name="ObjectType">
+  <sequence maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##any" processContents="lax" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="MimeType" type="string" use="optional" />
+  <attribute name="Encoding" type="anyURI" use="optional" />
+  <!-- add a grep facet -->
+ </complexType>
+ <element name="Manifest" type="ds:ManifestType" />
+ <complexType name="ManifestType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperties" type="ds:SignaturePropertiesType" />
+ <complexType name="SignaturePropertiesType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:SignatureProperty" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperty" type="ds:SignaturePropertyType" />
+ <complexType mixed="true" name="SignaturePropertyType">
+  <choice maxOccurs="unbounded">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (1,unbounded) namespaces -->
+  </choice>
+  <attribute name="Target" type="anyURI" use="required" />
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <!-- End Object (Manifest, SignatureProperty) -->
+ <!-- Start Algorithm Parameters -->
+ <simpleType name="HMACOutputLengthType">
+  <restriction base="integer" />
+ </simpleType>
+ <!-- Start KeyValue Element-types -->
+ <element name="DSAKeyValue" type="ds:DSAKeyValueType" />
+ <complexType name="DSAKeyValueType">
+  <sequence>
+   <sequence minOccurs="0">
+    <element name="P" type="ds:CryptoBinary" />
+    <element name="Q" type="ds:CryptoBinary" />
+   </sequence>
+   <element minOccurs="0" name="G" type="ds:CryptoBinary" />
+   <element name="Y" type="ds:CryptoBinary" />
+   <element minOccurs="0" name="J" type="ds:CryptoBinary" />
+   <sequence minOccurs="0">
+    <element name="Seed" type="ds:CryptoBinary" />
+    <element name="PgenCounter" type="ds:CryptoBinary" />
+   </sequence>
+  </sequence>
+ </complexType>
+ <element name="RSAKeyValue" type="ds:RSAKeyValueType" />
+ <complexType name="RSAKeyValueType">
+  <sequence>
+   <element name="Modulus" type="ds:CryptoBinary" />
+   <element name="Exponent" type="ds:CryptoBinary" />
+  </sequence>
+ </complexType>
+ <!-- End KeyValue Element-types -->
+ <!-- End Signature -->
+</schema>
+
+
+xmldsig-core-schema.xsd
+
+<simpleType name="CryptoBinary">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- Start Signature -->
+ <element name="Signature" type="ds:SignatureType" />
+ <complexType name="SignatureType">
+  <sequence>
+   <element ref="ds:SignedInfo" />
+   <element ref="ds:SignatureValue" />
+   <element minOccurs="0" ref="ds:KeyInfo" />
+   <element maxOccurs="unbounded" minOccurs="0" ref="ds:Object" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureValue" type="ds:SignatureValueType" />
+ <complexType name="SignatureValueType">
+  <simpleContent>
+   <extension base="base64Binary">
+    <attribute name="Id" type="ID" use="optional" />
+   </extension>
+  </simpleContent>
+ </complexType>
+ <!-- Start SignedInfo -->
+ <element name="SignedInfo" type="ds:SignedInfoType" />
+ <complexType name="SignedInfoType">
+  <sequence>
+   <element ref="ds:CanonicalizationMethod" />
+   <element ref="ds:SignatureMethod" />
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType" />
+ <complexType mixed="true" name="CanonicalizationMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##any" />
+   <!-- (0,unbounded) elements from (1,1) namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="SignatureMethod" type="ds:SignatureMethodType" />
+ <complexType mixed="true" name="SignatureMethodType">
+  <sequence>
+   <element minOccurs="0" name="HMACOutputLength" type="ds:HMACOutputLengthType" />
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other" />
+   <!-- (0,unbounded) elements from (1,1) external namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- Start Reference -->
+ <element name="Reference" type="ds:ReferenceType" />
+ <complexType name="ReferenceType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+   <element ref="ds:DigestMethod" />
+   <element ref="ds:DigestValue" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="URI" type="anyURI" use="optional" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <element name="Transforms" type="ds:TransformsType" />
+ <complexType name="TransformsType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Transform" />
+  </sequence>
+ </complexType>
+ <element name="Transform" type="ds:TransformType" />
+ <complexType mixed="true" name="TransformType">
+  <choice maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+   <element name="XPath" type="string" />
+  </choice>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- End Reference -->
+ <element name="DigestMethod" type="ds:DigestMethodType" />
+ <complexType mixed="true" name="DigestMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+    processContents="lax" />
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="DigestValue" type="ds:DigestValueType" />
+ <simpleType name="DigestValueType">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- End SignedInfo -->
+ <!-- Start KeyInfo -->
+ <element name="KeyInfo" type="ds:KeyInfoType" />
+ <complexType mixed="true" name="KeyInfoType">
+  <choice maxOccurs="unbounded">
+   <element ref="ds:KeyName" />
+   <element ref="ds:KeyValue" />
+   <element ref="ds:RetrievalMethod" />
+   <element ref="ds:X509Data" />
+   <element ref="ds:PGPData" />
+   <element ref="ds:SPKIData" />
+   <element ref="ds:MgmtData" />
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+  </choice>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="KeyName" type="string" />
+ <element name="MgmtData" type="string" />
+ <element name="KeyValue" type="ds:KeyValueType" />
+ <complexType mixed="true" name="KeyValueType">
+  <choice>
+   <element ref="ds:DSAKeyValue" />
+   <element ref="ds:RSAKeyValue" />
+   <any namespace="##other" processContents="lax" />
+  </choice>
+ </complexType>
+ <element name="RetrievalMethod" type="ds:RetrievalMethodType" />
+ <complexType name="RetrievalMethodType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+  </sequence>
+  <attribute name="URI" type="anyURI" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <!-- Start X509Data -->
+ <element name="X509Data" type="ds:X509DataType" />
+ <complexType name="X509DataType">
+  <sequence maxOccurs="unbounded">
+   <choice>
+    <element name="X509IssuerSerial" type="ds:X509IssuerSerialType" />
+    <element name="X509SKI" type="base64Binary" />
+    <element name="X509SubjectName" type="string" />
+    <element name="X509Certificate" type="base64Binary" />
+    <element name="X509CRL" type="base64Binary" />
+    <any namespace="##other" processContents="lax" />
+   </choice>
+  </sequence>
+ </complexType>
+ <complexType name="X509IssuerSerialType">
+  <sequence>
+   <element name="X509IssuerName" type="string" />
+   <element name="X509SerialNumber" type="integer" />
+  </sequence>
+ </complexType>
+ <!-- End X509Data -->
+ <!-- Begin PGPData -->
+ <element name="PGPData" type="ds:PGPDataType" />
+ <complexType name="PGPDataType">
+  <choice>
+   <sequence>
+    <element name="PGPKeyID" type="base64Binary" />
+    <element minOccurs="0" name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+   <sequence>
+    <element name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+  </choice>
+ </complexType>
+ <!-- End PGPData -->
+ <!-- Begin SPKIData -->
+ <element name="SPKIData" type="ds:SPKIDataType" />
+ <complexType name="SPKIDataType">
+  <sequence maxOccurs="unbounded">
+   <element name="SPKISexp" type="base64Binary" />
+   <any minOccurs="0" namespace="##other" processContents="lax" />
+  </sequence>
+ </complexType>
+ <!-- End SPKIData -->
+ <!-- End KeyInfo -->
+ <!-- Start Object (Manifest, SignatureProperty) -->
+ <element name="Object" type="ds:ObjectType" />
+ <complexType mixed="true" name="ObjectType">
+  <sequence maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##any" processContents="lax" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="MimeType" type="string" use="optional" />
+  <attribute name="Encoding" type="anyURI" use="optional" />
+  <!-- add a grep facet -->
+ </complexType>
+ <element name="Manifest" type="ds:ManifestType" />
+ <complexType name="ManifestType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperties" type="ds:SignaturePropertiesType" />
+ <complexType name="SignaturePropertiesType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:SignatureProperty" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperty" type="ds:SignaturePropertyType" />
+ <complexType mixed="true" name="SignaturePropertyType">
+  <choice maxOccurs="unbounded">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (1,unbounded) namespaces -->
+  </choice>
+  <attribute name="Target" type="anyURI" use="required" />
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <!-- End Object (Manifest, SignatureProperty) -->
+ <!-- Start Algorithm Parameters -->
+ <simpleType name="HMACOutputLengthType">
+  <restriction base="integer" />
+ </simpleType>
+ <!-- Start KeyValue Element-types -->
+ <element name="DSAKeyValue" type="ds:DSAKeyValueType" />
+ <complexType name="DSAKeyValueType">
+  <sequence>
+   <sequence minOccurs="0">
+    <element name="P" type="ds:CryptoBinary" />
+    <element name="Q" type="ds:CryptoBinary" />
+   </sequence>
+   <element minOccurs="0" name="G" type="ds:CryptoBinary" />
+   <element name="Y" type="ds:CryptoBinary" />
+   <element minOccurs="0" name="J" type="ds:CryptoBinary" />
+   <sequence minOccurs="0">
+    <element name="Seed" type="ds:CryptoBinary" />
+    <element name="PgenCounter" type="ds:CryptoBinary" />
+   </sequence>
+  </sequence>
+ </complexType>
+ <element name="RSAKeyValue" type="ds:RSAKeyValueType" />
+ <complexType name="RSAKeyValueType">
+  <sequence>
+   <element name="Modulus" type="ds:CryptoBinary" />
+   <element name="Exponent" type="ds:CryptoBinary" />
+  </sequence>
+ </complexType>
+
+<xs:element name="Message">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Header" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Body" minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+Header
+
+signalID
+
+SPADData
+
+SPAD
+
+DiagnosticAlarms
+
+GeneratedAlarms
+
+Interlocking
+
+EmergencyAlarms
+
+NVFB3
+
+ <xs:element name="TD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Interpose" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Clear" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Step" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin
+
+Time
+
+UnitID
+
+SequenceNumber
+
+dateTime
+
+timeStatus
+
+typedef String_t TimeStatus_t;
+
+unitStatus
+
+UnitStatus_t
+
+unitStatus
+
+sourceLinkStatus
+
+SourceLinkStatus_t
+
+base64Binary
+
+dGVzdA==
+
+EncodedDataTextBox
+
+int b = (int)charry[0];
+
+DiagnosticAlarms
+
+EquipmentID_t
+
+linkStatus
+
+GeneratedAlarms
+
+OSTO
+
+trackID
+
+nonEmptyString
+
+GenericAlarm
+
+Interlocking_t
+
+SPAD_unbounded_t
+
+SSIID
+
+SPAD
+
+typedef struct
+{
+
+}NVFB3_t;
+
+
+signalID
+
+NVFB3
+
+Interlocking_t
+
+arsSubAreaID
+
+ControlRequestRejected_t
+
+requestID
+
+arsSubAreaID
+
+ArsSubAreaID_unbounded_t
+
+ArsSubAreaID_t
+
+trainID
+
+Interpose_unbounded_t
+
+Clear_unbounded_t
+
+Step_unbounded_t
+
+GeneratedAlarms_t
+
+void Control(char *control);
+
+void HandleControlRequest(const char *request)
+
+HandleControlRequest
+
+#include "Iconis_IF.h"
+
+HandleControlRequest
+
+MTIzNDU2Nzg5MDEyMzQ1Ng==
+
+MTIzNDU2Nzg5MDEyMzQ1Ng
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+Ng==
+
+Message_t
+
+Header
+
+SourceUnitID
+
+Interlocking_limited_t
+
+NVFB
+
+C:\\Windows\\MCSCORUN.INI
+
+NVFB
+
+IconisTransmitTimePeriod
+
+ICONIS_CONNECTION
+
+void CALLBACK MMtimer(UINT wTimerID, UINT msg, DWORD dwUser, DWORD dw1, DWORD dw2)
+
+void CALLBACK IconisTransmitPerid(UINT wTimerID, UINT msg, DWORD dwUser, DWORD dw1, DWORD dw2)
+
+3E16AE47qOpk1r4R2V2krPqW2WcoPN4dqVgk
+
+IconisTransmitPerid
+
+IconisTransmitPeriod
+
+TIME_PERIODIC | TIME_CALLBACK_FUNCTION);
+
+timeSetEvent
+
+LinkStatus_e
+
+WSAGETSELECTEVENT
+
+  SequenceNumber_t SequenceNumber;
+    UnitID_t SourceUnitID;
+    UnitID_t LogicalSourceID;
+    UnitStatus_t SourceStatus;
+
+ConnectionListInformation_t
+
+MAX_NUMBER_OF_CONNECTIONS
+
+linkStatus
+
+typedef struct
+{
+    DWORD InUse;
+    DWORD Socket;
+    LinkStatus_e linkStatus;
+    SequenceNumber_t SequenceNumber;
+    SequenceNumber_t PreviousNumber;
+    UnitID_t SourceUnitID;
+    UnitID_t LogicalSourceID;
+    UnitStatus_t SourceStatus; 
+}ConnectionListInformation_t;
+
+

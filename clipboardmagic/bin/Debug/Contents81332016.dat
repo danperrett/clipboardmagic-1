@@ -1,0 +1,82 @@
+C:\StarTeam\Products\Modular Control System\Software\Source Code\Generic - Current\0005 Archive and Analysis_bak\Configuration\config.vcxproj.filters
+
+C:\StarTeam\Products\Modular Control System\Software\Source Code\Generic - Current\0005 Archive and Analysis_bak\Configuration\config.vcxproj.user
+
+C:\StarTeam\Products\Modular Control System\Software\Source Code\Generic - Current\0005 Archive and Analysis_bak\Configuration\config.sln
+
+C:\StarTeam\Products\Modular Control System\Software\Source Code\Generic - Current\0005 Archive and Analysis_bak\Configuration\config.vcxproj
+
+C:\StarTeam\Products\Modular Control System\Software\Source Code\Generic - Current\0005 Archive and Analysis_bak\Configuration\res\RailEdge.ico
+
+026399641
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Minutes and Reviews\48-019-A-0010- Design Review Record.doc
+
+https://blogs.technet.microsoft.com/askds/2007/10/23/high-accuracy-w32time-requirements/
+
+?Support boundary to configure the Windows Time service for high accuracy environments?
+
+?We do not guarantee and we do not support the accuracy of the W32Time service between nodes on a network. The W32Time service is not a full-featured NTP solution that meets time-sensitive application needs. The W32Time service is primarily designed to do the following:
+
+Make the Kerberos version 5 authentication protocol work. 
+Provide loose sync time for client computers.
+The W32Time service cannot reliably maintain sync time to the range of 1 to 2 seconds. Such tolerances are outside the design specification of the W32Time service.?
+
+Alstom Transport UK Ltd
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Images
+
+C:\StarTeam\48SA019 Win32 MCS Logger\Software\Source Code\Images\favicon.ico
+
+C:\StarTeam\Products\Modular Control System\Software\Source Code\Generic - Current\0005 Archive and Analysis\res\icon1.ico
+
+icon1
+
+17/010/A/1723
+
+Joseph O?Flaherty
+
+17/010/A/1723
+
+48-019-A-0010
+
+48-019-A-0010 For Logger with LAN
+
+memcpy(date, &timedate[DATE], 2);
+
+enum
+{
+    YEAR = 0,
+    MONTH = 5,
+    DATE = 8,
+    HOUR = 11,
+    MIN = 14,
+    SEC = 17
+}DateMonthSeperation;
+void extractDate(BYTE* timedate)
+{
+    char* date = "--/--/----\0";
+    
+    memcpy(date, &timedate[DATE], 2);
+    memcpy(date, &timedate[MONTH], 2);
+    memcpy(date, &timedate[YEAR], 4);
+}
+
+BYTE CheckifDigits(char* input, WORD length)
+
+&timedate[DATE]
+
+CHECKPARAMANDEXIT
+
+CHECKPARAMANDEXIT(CheckifDigits((char *)&timedate[DATE], 2), 0, "Unreadable Date");
+
+setupTime
+
+extractDate
+
+time_t->Current.value
+
+LOGGER("Extract the date Stamp to force internal clock date to be the same", "", ALWAYS);
+
+Microphone
+

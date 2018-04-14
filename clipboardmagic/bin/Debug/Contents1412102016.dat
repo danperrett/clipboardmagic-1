@@ -1,0 +1,24 @@
+ 10.164.114.181
+
+SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter"
+
+C:\Logs\Adapters\JourneyTimeAdapter
+
+error MSB8013: This project doesn't contain the Configuration and Platform combination of Debug|Win32.
+
+32269
+
+C:\Users\Daniel.Perrett\Desktop\JourneyTimeAdapter\JourneyTimeAdapter.dll
+
+SubscriberService/SubscriberWebService/Core/LocationItem.cs
+
+SubscriberService/SubscriberWebService/SubscriberWebService.csproj
+
+\Core\Adapters\JourneyTimeAdapter\Config
+
+JourneyTimeAdapter_x64.reg
+
+JourneyTimeAdapter_x64.reg 
+
+SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter"
+

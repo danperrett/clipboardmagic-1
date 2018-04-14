@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7381C5D2-46CF-4E7F-885D-DDC8FC87495F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>clipboardmagic</RootNamespace>
+    <AssemblyName>clipboardmagic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>FOLDER.ICO</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClipBoardPoller.cs" />
+    <Compile Include="DisplayText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayText.Designer.cs">
+      <DependentUpon>DisplayText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDialog.Designer.cs">
+      <DependentUpon>MainDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DisplayText.resx">
+      <DependentUpon>DisplayText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDialog.resx">
+      <DependentUpon>MainDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchDatabase.resx">
+      <DependentUpon>SearchDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadClipboard.resx">
+      <DependentUpon>DownloadClipboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadSchedule.resx">
+      <DependentUpon>UploadSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCredentials.resx">
+      <DependentUpon>UserCredentials.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SearchDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDatabase.Designer.cs">
+      <DependentUpon>SearchDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ClipboardServiceTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CodinggainClipboardService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadClipboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadClipboard.Designer.cs">
+      <DependentUpon>DownloadClipboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadSchedule.Designer.cs">
+      <DependentUpon>UploadSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCredentials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCredentials.Designer.cs">
+      <DependentUpon>UserCredentials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCredentialsStore.cs" />
+    <Compile Include="webclient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <None Include="Service References\ClipboardServiceTest\ClipboardInterface.wsdl" />
+    <None Include="Service References\ClipboardServiceTest\clipboardmagic.ClipboardServiceTest.EncryptionData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClipboardServiceTest\clipboardmagic.ClipboardServiceTest.ReturnInterface.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FOLDER.ICO" />
+    <None Include="Service References\ClipboardServiceTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ClipboardServiceTest\configuration.svcinfo" />
+    <None Include="Service References\ClipboardServiceTest\configuration91.svcinfo" />
+    <None Include="Service References\CodinggainClipboardService\ClipboardInterface1.wsdl" />
+    <None Include="Service References\CodinggainClipboardService\clipboardmagic.CodinggainClipboardService.EncryptionData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CodinggainClipboardService\clipboardmagic.CodinggainClipboardService.ReturnInterface.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CodinggainClipboardService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CodinggainClipboardService\configuration.svcinfo" />
+    <None Include="Service References\CodinggainClipboardService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ClipboardServiceTest\" />
+    <WCFMetadataStorage Include="Service References\CodinggainClipboardService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

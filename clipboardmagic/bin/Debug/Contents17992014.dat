@@ -1,0 +1,73 @@
+opera&q=UMC+drive&sourceid=opera&ie=UTF-8&oe=UTF-8#q=UMS+drive
+
+AMR MULTIMODE AUDIO TESTING
+
+LOG_AMR_MULTIMODE_AUDIO_TESTING
+
+AMR_MULTIMODE_AUDIO_TESTING
+
+PESQ_score_summary
+
+DoElement
+
+processFilePass
+
+AudioTesting
+
+DoElement
+
+AudioTesting
+
+void __fastcall GetAudioTestInformation();
+
+TPlaybackThread::
+
+GetAudioTestInformation
+
+71754
+
+playFile
+
+DoProcessResults
+
+RTTFileName
+
+PostProcessResultsLibrary
+
+ProcessResults
+
+playBackFile
+
+GetAudioTestInformation
+
+PESQ_score_summary
+
+ifstream f
+
+std::fstream::in
+
+#include <iostream>     // std::cout
+#include <fstream>  
+
+The IR 68658 has been set to Fixed awaiting release.
+
+S:\SAS\07 - Test and Development Builds\SAS 46.3.655-ER
+
+Release 29.0.0.0 W35-14B1
+
+pesq_file
+
+CReportToMMI::ReportSilent(Message.c_str());
+
+GetAudioTestInformation
+
+ GetAudioTestInformation(playBackFile.c_str());
+
+The installer would normally do all this for you 
+
+http://www.businessinsider.com/how-cochineal-insects-color-your-food-and-drinks-2012-3?op=1
+
+AudioTesting
+
+Release 29.0.0.0 W35-14B1
+

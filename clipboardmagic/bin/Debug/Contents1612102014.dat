@@ -1,0 +1,19 @@
+messageCounter.LTECount[str]
+
+messageCounter.variableToCountTo
+
+if (messageCounter.variableToCountTo.ContainsKey(str))
+                            {
+                                vars.SetVariableByName(messageCounter.variableToCountTo[str], messageCounter.LTECount[str]);
+                            }
+
+resetMessageCountList
+
+scriptedModeInactivityTimerSet
+
+resetMessageCountList
+
+LogAndTraceRTTMessageCount
+
+ messageCounter.RttCountMessage = true;
+

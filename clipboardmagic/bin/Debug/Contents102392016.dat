@@ -1,0 +1,456 @@
+6530
+
+SoapUI-x64-5.2.1.sh
+
+10309
+
+void SetStatus(string status);
+
+AdapterStatus(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+	void SetStatus(string status);
+
+	string GetStatus();
+
+AdapterStatus(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+const char* AdapterSCN, CDBInterfaceManager* cdbInterface
+
+currentStatus
+
+void Initialise(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+AdapterStatus::
+
+#include "cdbinterfacemanager.h"
+
+
+using std::string;
+
+currentStatus
+
+cdbInterface
+
+static void ThreadTask();
+
+AdapterStatus::
+
+LPVOID lpParam 
+
+CreateThread
+
+ThreadTask
+
+ DWORD ThreadTask(LPVOID lpParam );
+
+ThreadTask
+
+ AdapterStatus::ThreadTask
+
+using namespace System::Threading;
+
+There is a problem with th JTMS
+
+CA-ANPR-JTMS
+
+th
+
+${equipmentSCN2}
+
+context.equipmentSCN2 = Devices[rand.nextInt(5)];
+
+  HANDLE m_heartbeatThreadHandle;
+
+m_heartbeatThreadHandle = CreateThread( 0 , 0 , heartbeat, this, CREATE_SUSPENDED , &m_heartbeatThreadID ) ;
+
+AdapterStatus::ThreadTask
+
+ unsigned long m_heartbeatThreadID;
+
+m_updateStatusThreadID
+
+m_updateStatusThreadHandle
+
+void *data
+
+unsigned long
+
+_stdcall
+
+cdbInterface
+
+running
+
+AdapterStatus
+
+adapterStatus
+
+CVMSAdaptorDlg
+
+m_cdbManager
+
+SNMPManager
+
+ this->adapterStatus->Initialise("VMSAdapter", m_pmanager->m_cdbManager);
+
+SetStatus
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniConnectionMgmt413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniORB413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omnithread34_vc8_rtd.dll
+
+ this->adapterStatus->Initialise("VMSAdapter", m_pmanager->m_cdbManager);
+
+VMSDefinition.xml
+
+C:\Secure\SourceNew\Core\Adapters\VMSAdapterAsyn\Config\VMSDefinition.xml
+
+7971
+
+m_pokeTimerID
+
+  int result = ResumeThread( m_heartbeatThreadHandle );
+
+m_updateStatusThreadHandle
+
+ResumeThread
+
+promissory
+
+'registrar@iloilo.sti.edu'
+
+retrycount
+
+SCNName
+
+TypeID
+
+bool checkAndAddAdapter(const char* AdapterSCN, long TypeID);
+
+CDBInterfaceManager::
+
+char queryCode[400] = {0}; 
+
+checkAndAddAdapter
+
+cdbInterface
+
+SCNName
+
+TypeID
+
+12 Picket Post Close in Bracknell, Berkshire
+
+sprintf(queryCode, "SELECT * FROM SUBSYSTEM_DEFINITION WHERE SYSTEMCODENUMBER='%s' AND DATASOURCE_TYPEID=%ld\0", AdapterSCN, TypeID);
+
+dob = query(queryCode);
+
+dob.size()
+
+dob.size()-1
+
+if(dob.size() > 0)
+	{
+		if(dob[dob.size()-1]->attributes().size() > 0)
+		{
+			const char* val = dob[dob.size()-1]->attributes()[0]->value();
+			num = atoi(val);
+		}
+	}
+
+cdbInterface->updateAdapterStatus(this->AdapterSCN.c_str(), this->currentStatus.c_str());
+
+adapterStatus
+
+vector<DeviceObject *> dob = query(queryCode);
+
+if(dob.size() > 0)
+		{
+			if(dob[dob.size()-1]->attributes().size() > 0)
+			{	
+				const char* val = dob[dob.size()-1]->attributes()[0]->value();
+				num = atoi(val);
+			}
+			if(num == 0)return false;
+		}
+
+UPDATE SUBSYSTEM_STATUS set STATUS='Initialisation', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='VMSAdapter1'
+
+sprintf(queryCode, "UPDATE SUBSYSTEM_STATUS set STATUS='%s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='%s'", Status, AdapterSCN);
+
+INSERT INTO
+
+VALUES('%s', %ld)\0
+
+	dob = query(queryCode);
+		if(dob.size() > 0)
+		{
+			if(dob[dob.size()-1]->attributes().size() > 0)
+			{	
+				const char* val = dob[dob.size()-1]->attributes()[0]->value();
+				num = atoi(val);
+			}
+			if(num == 0)return false; //cant add the sybsytem then no bother trying to add into status table
+		}
+
+A programming error has been detected
+
+this->adapterStatus->SetStatus("Initialisation");
+
+@dynniq.co.uk
+
+AdapterStatus
+
+4967
+
+adapterStatus
+
+AdapterStatus
+
+adapterStatus = AdapterStatus::GetInstance();
+
+startManager
+
+Unknown error when trying to initiate the manager" );
+
+(adapterStatus != NULL)
+
+string GetSCN() const;
+
+	long GetTypeId() const;
+
+AdapterStatus::
+
+AdapterSCN
+
+TypeID
+
+adapterStatus->SetStatus("OK");
+
+this->running = true;
+
+void SetStatus(string status)
+
+SetAdapterStatus
+
+12321
+
+http://visual-studio-2005-remote-debugger.software.informer.com/
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter
+
+pt-vm-uk-sim-03.peek.prv
+
+C:\Secure\SourceNew\Core\Adapters\VMSAdapterAsyn\Config\vmsadapter.reg
+
+C:\Secure\SourceNew\Core\Adapters\VMSAdapterAsyn\Config\vmsadapter_x64.reg
+
+Microsoft.VC80.DebugCRT
+
+C:\Users\Daniel.Perrett\Downloads\vcredist_x86.exe
+
+msvcr80d.dll
+
+C:\Windows\winsxs\x86_microsoft.vc80.debugcrt_1fc8b3b9a1e18e3b_8.0.50727.6195_none_e4a70117006762dd\msvcp80d.dll
+
+C:\Windows\winsxs\x86_microsoft.vc80.debugcrt_1fc8b3b9a1e18e3b_8.0.50727.6195_none_e4a70117006762dd\msvcr80d.dll
+
+C:\Windows\winsxs\x86_microsoft.vc80.debugcrt_1fc8b3b9a1e18e3b_8.0.50727.6195_none_e4a70117006762dd\msvcm80d.dll
+
+C:\Program Files (x86)\Microsoft Visual Studio 8\VC\redist\Debug_NonRedist\x86\Microsoft.VC80.DebugCRT
+
+C:\Program Files (x86)\Microsoft Visual Studio 8\VC\redist\Debug_NonRedist\x86\Microsoft.VC80.DebugMFC
+
+C:\Program Files (x86)\Microsoft Visual Studio 8\VC\redist\Debug_NonRedist\x86\Micorosft.VC80.DebugOpenMP
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omnithread34_vc8_rt.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rt.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniORB413_vc8_rt.dll
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter
+
+ 10.164.114.181
+
+pt-sr-uk-tt-047
+
+ pt-sr-uk-tt-047.peek.prv
+
+10.164.114.181
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter
+
+pt-vm-uk-sim-03.peek.prv
+
+pt-vm-uk-sim-03.peek.prv?
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter
+
+pt-vm-uk-sim-03.peek.prv
+
+	Logger::log("Error Connecting Status to database");
+
+Logger::log("Error Connecting Status to database");
+
+char buffer[256] = {0};
+	sprintf(buffer, "Initialise %s %d", AdapterSCN, TypeID);
+	Logger::log(buffer);
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniConnectionMgmt413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omniORB413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Debug\VMSAdapter\omnithread34_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+pt-vm-uk-sim-03.peek.prv
+
+Manager_Response
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+faultStatus 
+
+configError
+
+invalidSignAddress
+
+FAULT_STATUS
+
+Manager_Error 
+
+Manager_Error
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+SetStatus
+
+C:\Secure\SourceNew\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+ cdb-peek-02.peek.prv
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\GZipEncoder\bin\Release\GZipEncoder.dll
+
+WebServiceSubscriber.svc?wsdl
+
+SubscriberService/SubscriberWebService/Core/DetectorManager.cs
+
+SubscriberService-soapui-project.xml
+
+192.168.110.10
+
+adminutmc
+
+imcity
+
+192.168.110.10
+
+NTIS Model
+
+NorthBoundLatitude
+
+ProcessLocationData
+
+Invalid Area of Interest
+
+All shapes
+
+log.
+
+ProcessSqlList
+
+http://www.teaandsympathy.com/
+
+PredefinedLocationsPublication
+
+adminutmc
+
+imcity
+
+LocationByReference
+
+Possible invalid LocationByReferenc
+
+6090
+
+http://localhost:15513/WebServiceSubscriber.svc
+
+SubscriberService-soapui-project.xml
+
+X:\development\datexIIadapterOriginal\datexiipushadapter\SoapUI Tests\SubscriberService-soapui-project.xml
+
+C:\Users\Daniel.Perrett\Desktop\NTISModel-2016-09-20-v5.0.zip
+
+NTISModel-2016-09-20-v5.0.zip
+
+C:\NTISModel-2016-09-20-v5.0.zip
+
+53.91
+
+-2.09
+
+53.06
+
+-0.34
+
+IM-425
+
+            string temp = ConfigurationManager.AppSettings["NorthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("NorthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_northBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse NorthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["NorthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["SouthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("SouthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_southBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse SouthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["SouthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["EastBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("EastBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_eastBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse EastBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["EastBoundLongitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["WestBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("WestBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_westBoundLongitude))
+            {
+
+        private double m_northBoundLatitude = 60.85;
+        private double m_westBoundLongitude = -9.23;
+        private double m_southBoundLatitude = 49.84;
+        private double m_eastBoundLongitude = 2.69;
+
+(PointCoordinates from, PointCoordinates to)
+

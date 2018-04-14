@@ -1,0 +1,248 @@
+BorderStyle = bsDialog
+
+BorderStyle = bsDialog
+
+
+BorderStyle = bsDialog
+
+Store Message Type
+
+Any Message Type'
+
+SystemInformationBlockType12 c
+
+36.413
+
+9.2.1.44
+
+messageIdentifier
+
+CMAS Presidential Level Alerts
+
+4370
+
+ 23.041
+
+9.4.1.2.2.
+
+TComboBox
+
+data.cellID
+
+data.CellVariable.length()
+
+279673339
+
+NumberOfStringVariables
+
+NumberOfMessageTypeVariables
+
+NumberOfStringVariables
+
+NumberOfMessageTypeVariables
+
+NumberOfStringVariables
+
+StoreCellIDCheckBox
+
+StoreCellIDComboBox->ItemIndex = 0;
+
+StoreCellIDComboBox->
+
+ for(int n = 0; n < NumberOfStringVariables; n++)
+       {
+           StoreCellIDComboBox->ItemIndex = n;
+           char *temp = StoreCellIDComboBox->Text.c_str();
+           char *temp2 = (char *)data.CellVariable.c_str();
+           if(strcmp(temp, temp2) == 0)
+           {
+               break;
+           }
+       }
+
+NumberOfMessageTypeVariables
+
+StoreMessageTypeComboBox
+
+ Ok->Enabled = true;
+
+StoreCellIDCheckBox
+
+StoreMessageTypeCheckBox->Checked
+
+Ok->Enabled = true;
+
+void EnableOKButton();
+
+TWaitForAnyMessageDialog::
+
+    if(StoreCellIDCheckBox->Checked || StoreMessageTypeCheckBox->Checked)
+    {
+        Ok->Enabled = true;
+    }
+    else
+    {
+        Ok->Enabled = false;
+    }
+
+
+EnableOKButton
+
+attaboytv.com
+
+  EnableOKButton();
+
+NameTextBox->Text
+
+VariableNameComboBox->Text
+
+InitialValueTextBox->Text
+
+EndValueTextBox->Text
+
+OKButton
+
+OKButton->Enabled = false;
+
+m_CellIDVariableList
+
+Cell.RATType
+
+InitialValueTextBoxChange
+
+(TObject *Sender);
+
+void InitialValueTextBoxChange(TObject *Sender);
+
+TStartSubScript::
+
+InitialValueTextBox
+
+VariableNameComboBox
+
+NameTextBox
+
+EndValueTextBox
+
+ OKButton->Enabled = false;
+
+void EnableOKButton();
+
+TStartSubScript::
+
+  if(InitialValueTextBox->Text.IsEmpty() ||
+       VariableNameComboBox->Text.IsEmpty() ||
+       NameTextBox->Text.IsEmpty() || 
+       EndValueTextBox->Text.IsEmpty())
+    {
+         OKButton->Enabled = false;
+    }
+    else
+    {
+
+    }
+
+OKButton->Enabled = false;
+
+__fastcall
+
+EnableOKButton
+
+This is now fixed checked in under the initial IR which is linked in here  63462,:6, 7, 8
+
+Evaluator_PreprocessExpression
+
+PreprocessExpression
+
+OptimalExpressionEvaluation
+
+ExpressionReadyForEvaluation
+
+doProcessMessage
+
+Scheduling element
+
+(TAU_UpdateType == 1) || (TAU_UpdateType == 2)
+
+ScheduleSequenceElementMessage
+
+msg.Message_Type.SubProtocol
+
+074900500BF600F1100001010000000154064000F110000157022000
+
+0749015AE1500BF600F1100001010000000154064000F1100001570220001300F110000B2305F412345678
+
+m_SequenceElementsNASMobility
+
+Attach_Accept
+
+Tracking_Area_Update_Accept
+
+HandleNAS_TrackingAreaUpdateAccept
+
+EpcProcHandler_TrackingAreaUpdate
+
+Handle_ProcedureEnded
+
+wait for DT Event ACk
+
+0749015AE1500BF600F1100001010000000154064000F1100001570220001300F110000B2305F412345678
+
+Message is not the same as the element in the script
+
+Tracking Area Update
+
+ProcedureStarted
+
+Tracking_Area_Update_Accept
+
+DTEventAcknowledgeNASMobility
+
+DTEventAcknowledgeRRC
+
+DTEventAcknowledgeNASMobility
+
+NASMobility_DLMessageEncoded - waiting for RRC
+
+hold of releasing the NAS Mobility thread - until the RRC SMC and UE Capability procedures have had a chance to run
+
+Both cases we are "NASMobility_DLMessageEncoded - waiting for RRC"
+
+both cases have this DOWNLINK - E-Cell A - RRC_Security_Mode_Command
+
+SecurityMode_DLMessageEncoded: Msg Received:
+
+UL Message RRC_Security_Mode_Complete is expected on Serving Cell E-Cell A
+
+DTEventAcknowledgeRRC
+
+Sequence Element 6
+
+NAS - Tracking_Area_Update_Complete
+
+HandleDTEventReceived
+
+m_L3ProcStatus_RRC.NextMessage
+
+m_NASMobility_WaitingForRRC
+
+SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC");
+
+m_NASMobility_WaitingForRRC
+
+SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC" +  string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+ SASDebugLogger.InfoLog("DANP: after check on m_NASMobility_WaitingForRRC" + string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+m_NASSession_WaitingForRRC
+
+SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC" +  string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+UE_Capability_Information
+
+ SASDebugLogger.InfoLog(string.Format("DANP: Message is :- {0}", m_L3ProcStatus_RRC.NextMessage));
+
+  SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC" +  string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+OnChange = InitialValueTextBoxChange
+

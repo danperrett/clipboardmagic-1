@@ -1,0 +1,1107 @@
+ else
+                {
+
+                }
+
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\clipboardmagic\clipboardmagic
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\LteInteractive.zip
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSUtils.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSManagedWrapper_R10_03_2012.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\ThirdPartyComponents
+
+61978
+
+62603
+
+C:\Development\SASSandboxes\SAS-cs29\SAS\NS\src\MMI\PlaybackThread.cpp
+
+                            dwTimeOut = pL3p->L3Sequence[i].WaitTime + pCopyCommandObject->DeltaTime+ 1000;  //nidhi 62603
+
+
+Nidhi Bajaj
+
+Nidhi Bajaj <nidhi.b@hcl.com>
+
+Todd, Martin <martin.todd@anite.com>; Hudson, Colin <colin.hudson@anite.com>
+
+  dwTimeOut = pL3p->L3Sequence[i].WaitTime + pCopyCommandObject->DeltaTime+ 1000;  //nidhi 62603
+
+
+WaitForTask
+
+o
+
+62603
+
+o
+
+HandleSequenceCompleteWaitEvent
+
+EditWaitForAnyMessage
+
+InitialiseCellIDComboBox
+
+  if(StoreMessageTypeComboBox->ItemIndex == -1)
+       StoreMessageTypeComboBox->ItemIndex = 0;
+
+VariableNameComboBox
+
+TStartSubScript
+
+ int NumberOfStringVariables;
+
+NumberOfStringVariables
+
+ NumberOfStringVariables(0)
+
+NumberOfStringVariables = 0;
+
+NumberOfStringVariables
+
+  for(int n = 0; n < NumberOfStringVariables; n++)
+       {
+           StoreCellIDComboBox->ItemIndex = n;
+           char *temp = StoreCellIDComboBox->Text.c_str();
+           char *temp2 = (char *)data.CellVariable.c_str();
+           if(strcmp(temp, temp2) == 0)
+           {
+               break;
+           }
+       }
+
+VariableNameComboBox
+
+variable
+
+VariableNameComboBox->Text
+
+varc
+
+72848
+
+data.CellVariable.c_str();
+
+string varc(VariableNameComboBox->Text.c_str());
+
+Hi Nidhi Bajaj,
+
+string varc(VariableNameComboBox->Text.c_str());
+
+ int lenc = varc.length();
+
+ if(lenc >= length)
+        {
+            char *temp = (char *)varc.c_str();
+
+StoreCellIDComboBox
+
+ string varc(StoreCellIDComboBox->Text.c_str());
+
+StoreMessageTypeComboBox
+
+ int lenc = varc.length();
+           if(lenc >= length)
+           {
+
+72848 
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_2_to_V15_3.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ConvertScriptToCurrentSchema.cs
+
+                new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+                m_Trunk_Converter_Info.EndVersion = "15.3";
+
+
+Anite.Script.Utils
+
+71574
+
+    new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+                m_Trunk_Converter_Info.EndVersion = "15.3";
+
+
+
+72643
+
+                Correct the ?@? at the end of some SMS message displays.
+                Checks the correct length from the message and truncates if it?s too long after decoding.
+
+
+72848
+
+              GUI changes to Sub Script and Wait for any message Variable Combo box selection
+
+change variable 
+then click OK.
+Double click again 
+the previously chosen variable is not reflected in the combon box.
+This is a GUI problem only and the actuall variable DOES change.
+
+              GUI changes to Sub Script and Wait for any message Variable Combo box selection
+
+C:\AniteSAS\TestBatch
+
+CommandLineActivated
+
+ swf.CommandLineActivated = true;
+
+userScript_BatchName
+
+userScript_License
+
+UserScript_SASLTEVersion
+
+userScript_Version
+
+foreach (EMyEnum val in Enum.GetValues(typeof(EMyEnum)))
+{
+
+userScript_Version
+
+textBox_SASLTEVersion.Text
+
+userScript_Version
+
+ textBox_SASLTEVersion.Text = userScript_Version;
+
+userScript_License
+
+ this.textBox_BatchName.Text = userScript_BatchName;
+            this.textBox_License.Text = userScript_License;
+
+C:\Users\dan.perrett\Documents\_CV_.doc
+
+C:\Users\dan.perrett\Documents\IMG_1678.JPG
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_2_to_V15_3.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V14_8_to_V15_0.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V14_9_to_V15_1.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_0_to_V15_1.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_1_to_V15_2.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V14_8_to_V14_9.cs
+
+ new ConvertFrom_V14_8_to_V15_0(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.0");
+                new ConvertFrom_V15_0_to_V15_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.1");
+                new ConvertFrom_V15_1_to_V15_2(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.2");
+                new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+                m_Trunk_Converter_Info.EndVersion = "15.3";
+
+ if (m_SAS_46_3_Converters == null)
+            {
+                m_SAS_46_3_Converters = new ConvertDictInfo();
+                m_SAS_46_3_Converters.Converters = new Dictionary<string, ConvertFromBase>();
+                m_SAS_46_3_Converters.Versions = new List<string>();
+
+                m_SAS_46_3_Converters.StartVersion = "14.8";
+                m_SAS_46_3_Converters.Versions.Add("14.8");
+                new ConvertFrom_V14_8_to_V14_9(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("14.9");
+                new ConvertFrom_V14_9_to_V15_1(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("15.1");
+
+                m_SAS_46_3_Converters.EndVersion = "15.1";
+
+                ConverterDictionaryInfos.Add(m_SAS_46_3_Converters);
+            }
+
+
+      static ConvertDictInfo m_SAS_46_3_Converters = null;
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Tools\BinDebug
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly
+
+ScriptWatermarking.exe
+
+peace1g@yahoo.co.uk
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.pdb
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.vshost.exe
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.vshost.exe.manifest
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SequencerInterfaces.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SequencerInterfaces.pdb
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\FieldValueMaps
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\01 - Attach and Detach - [Band 7].SSC
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SASCommonLibrary.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SASLTEInterfaces.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\SASProtocolFieldValueMapperUtil.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptAuthentication.dll
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.0.659_TestBuildOnly\BinDebug\ScriptWatermarking.exe
+
+D:\Anite Docs\Build PC\47.0.659_TestBuildOnly
+
+O'Gara, Mick <mick.ogara@anite.com>
+
+S:\Releases\IOT\SAS\Internal\SAS 47.0\SASv47.0.659_A
+
+<html>
+<head>
+<script>
+function showResult(str) {
+  if (str.length==0) { 
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","livesearch.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<form>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<div id="livesearch"></div>
+</form>
+
+</body>
+</html>
+
+<html>
+<head>
+<script>
+function showResult(str) {
+  if (str.length==0) { 
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","livesearch.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<form>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<div id="livesearch"></div>
+</form>
+
+</body>
+</html>
+
+
+NumericVariable
+
+TreeNode variableCommandNode = new TreeNode();
+            variableCommandNode.Text = ELEMENTANDDBTREE.IEVariable;
+            variableCommandNode.ImageIndex = 2;
+            variableCommandNode.SelectedImageIndex = 2;
+            variablesGroupNode.Nodes.Add(variableCommandNode);
+
+NumericVariableCommandNode
+
+  ElementDragDropData ScriptVariableNode = new ElementDragDropData();
+            IEVariable ScriptVariableMessageData = new IEVariable();
+            ScriptVariableNode.VariableDragDropData = ScriptVariableMessageData;
+            ScriptVariableNode.ElementDragDropHandler = new ElementDragDropData.ManageElementDropCommand(
+                ScriptVariableMessageData.DisplayScriptVariableInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.IEVariable] = ScriptVariableNode;
+
+NumericVariable
+
+NumericScriptVariableNode
+
+NumericScriptVariableMessageData
+
+NumericVariable
+
+NumericScriptVariableNode
+
+NumericVariable
+
+NumericScriptVariableMessageData
+
+NumericScriptVariableNode
+
+ public partial class NumericVariable
+    {
+        ScriptVariable copyOfVarFromGUI = null;
+
+        public override DialogResult DisplayScriptVariableInGUI(int dummy)
+        {
+            ScriptVariableForm_CreateEdit variableDlg = new ScriptVariableForm_CreateEdit(typeof(NumericVariable));
+            
+            // ensure that VarType is defaulted if it's not defined as Decimal or Hexadecimal for NumericVariable
+            if ((VarType != VarTypeEnum.Signed_Integer) && (VarType != VarTypeEnum.Unsigned_Integer))
+            {
+                VarType = VarTypeEnum.Unsigned_Integer;
+            }
+
+            variableDlg.UpdateDataInGUI(this);
+            DialogResult varDlgResult = variableDlg.ShowDialog();
+
+            if (varDlgResult == DialogResult.OK)
+            {
+                copyOfVarFromGUI = variableDlg.GetScriptVariableFromGUI();
+            }
+
+            return varDlgResult;
+        }
+
+
+        public override string GetToolTipText()
+        {
+            string toolTipText = string.Empty;
+
+            toolTipText = string.Format("{0} - {1}", ELEMENTANDDBTREE.NumericVariable, this.VarType.ToString());
+
+            return toolTipText;
+        }
+
+
+        public override string[] GetVariableInGridFormat()
+        {
+            string[] variableRow = new string[4];
+            variableRow[0] = Name;
+            variableRow[1] = string.Format("{0} - {1}", ProgramVarType.Numeric.ToString(), this.VarType.ToString());
+            variableRow[1] = variableRow[1].Replace("_", " ");
+            variableRow[2] = Description;
+            return variableRow;
+        }
+
+
+        public override ScriptVariable GetScriptVariableCopy()
+        {
+            NumericVariable copyOfVar = new NumericVariable();
+            copyOfVar.Name = Name;
+            copyOfVar.Description = Description;
+
+            return copyOfVar;
+        }
+
+        public override ScriptVariable GetScriptVariableCopyFromGUI()
+        {
+            return copyOfVarFromGUI;
+        }
+
+        public override ProgramVariableBase GetScriptVariableInDriverFormat()
+        {
+            NumericProgramVariable driverProgramVar = new NumericProgramVariable(Name, (ProgramVariableBase.VariableTypeEnum)VarType);
+            return driverProgramVar;
+        }
+
+        public override bool AreVariablesEqual(ScriptVariable newVariable)
+        {
+            bool equalStatus = false;
+
+            NumericVariable changedVariable = (NumericVariable)newVariable;
+
+            equalStatus = ((changedVariable != null) && (Name != changedVariable.Name) &&
+                           (Description != changedVariable.Description));
+
+            return equalStatus;
+        }
+    }
+
+S:\Releases\IOT\SAS\Internal\SAS 47.0\SASv47.0.659_A
+
+72699 
+
+72643 
+
+?	Fix for RTT crash problem caused by ?{15}? being sent to WriteLine function
+
+Fix for RTT crash problem caused by ?{15}? being sent to WriteLine function
+
+72848 
+
+72672
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\NumericVariableForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\NumericVariableForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\NumericVariableForm.cs
+
+61125
+
+72948
+
+Samatshetti, Mrutyunjay <mrutyunjay.samatshet@anite.com>
+
+O'Gara, Mick <mick.ogara@anite.com>
+
+http://www.danperrett.com:8000/GetMusicInfo?req=
+
+parameterisation
+
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\FileServerApplication\FileListTestApplication\webclient.cs
+
+ System.Reflection
+
+http://www.danperrett.com:8000/GetMusicInfo?req=
+
+  SetAllowUnsafeHeaderParsing20();
+
+
+                HttpWebRequest myHttpWebRequest1 =
+                       (HttpWebRequest)WebRequest.Create(url);
+
+                myHttpWebRequest1.KeepAlive = false;
+                myHttpWebRequest1.Timeout = 5 * 60 * 1000;
+                // Assign the response object of HttpWebRequest to a HttpWebResponse variable.
+                HttpWebResponse myHttpWebResponse1 =
+                  (HttpWebResponse)myHttpWebRequest1.GetResponse();
+
+
+                // we will read data via the response stream
+                Stream resStream = myHttpWebResponse1.GetResponseStream();
+
+setUpWeb
+
+He who believes he can and he who believes he cannot are both correct
+
+            string SearchBox.Te
+
+
+simplesearch
+
+http://www.danperrett.com:8000/Alive
+
+ParameterInterface
+
+UserControl
+
+<?xml version="1.0" encoding="utf-8"?>
+
+
+  <xs:complexType name="ECell">
+    <xs:complexContent>
+
+name="ECellsList
+
+c:\program files\microsoft sdks\windows\v7.0a\bin\xsd.exe
+
+$(ProjectDir)
+
+/c /n:Anite.Interfaces   /out:$(ProjectDir)
+
+ResultsRichTextBox
+
+ResultsRichTextBox.
+
+http://www.danperrett.com:8000/GetMusicInfo?req=
+
+parameterisationTestApp
+
+c:\program files\microsoft sdks\windows\v7.0a\bin\xsd.exe
+
+$(ProjectDir)Schema\Scenario.xsd  /c /n:Anite.Interfaces   /out:$(ProjectDir)Schema
+
+c:\program files\microsoft sdks\windows\v7.0a\bin\xsd.exe
+
+$(ProjectDir)
+
+ /c /n:Anite.Interfaces   
+
+:$(ProjectDir)
+
+ public static class XML
+    {
+
+        public static object DeSerialise(string xmlFileName, Type objectType)
+        {
+            StreamReader xmlReader = null;
+
+            try
+            {
+                XmlSerializer serialiser = new XmlSerializer(objectType);
+                xmlReader = new StreamReader(xmlFileName);
+
+                object topLevelObject = (object)(serialiser.Deserialize(xmlReader));
+                xmlReader.Close();
+                return topLevelObject;
+            }
+            catch (Exception e)
+            {
+                // Try to catch everything, this is an important function;
+                // anything going wrong here should be caught and handled.
+                // May be the schema is changed, try to load it using the previous versions
+
+                TRACE.Write("Exception: Error loading file " + xmlFileName + " - " + e.Message);
+
+                if (xmlReader != null)
+                {
+                    xmlReader.Close();
+                }
+
+                return null;
+            }
+        }
+
+        public static bool Serialise(string xmlFileName, object objectToSerialize, Type objectType)
+        {
+            bool status = false;
+
+            try
+            {
+                if (objectToSerialize != null)
+                {
+                    XmlSerializer serialiser = new XmlSerializer(objectType);
+                    TextWriter xmlWriter = new StreamWriter(xmlFileName);
+                    serialiser.Serialize(xmlWriter, objectToSerialize);
+                    xmlWriter.Close();
+                    status = true;
+                }
+                else
+                {
+                    status = false;
+                }
+            }
+            catch (Exception exAll)
+            {
+                // Try to catch everything, this is important function
+                // anything going wrong her should be caught and handled.
+                MessageBox.Show("Error saving file " + xmlFileName + ".\n" + "Error Message : " + exAll.Message);
+                TRACE.Write("Error saving file " + xmlFileName + ".\n" + "Error Message : " + exAll.Message);
+                status = false;
+            }
+            
+            return status;
+        }
+
+        public static string SerializeObject(object toSerialize, Type type)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(toSerialize.GetType());
+            StringWriter textWriter = new StringWriter();
+
+            xmlSerializer.Serialize(textWriter, toSerialize);
+            return textWriter.ToString();
+        }
+
+        public static object XmlDeserializeFromString(string objectData, Type type)
+        {
+            var serializer = new XmlSerializer(type);
+            object result;
+
+            using (TextReader reader = new StringReader(objectData))
+            {
+                result = serializer.Deserialize(reader);
+            }
+
+            return result;
+        }
+    }
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\46.0.650
+
+ParameterTabs
+
+TabItem _item = new TabItem();
+
+            ParameterTabs.Items.Add(_item);
+
+TabControl tabControl1 = new TabControl();
+
+SAS
+
+46.3
+
+ConvertFrom_V15_2_to_V15_3.cs
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Clwyd Jones (cjones) $
+ * $Date: 2014/09/18 17:48:27BST $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V15_2_to_V15_3.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V15_2_to_V15_3 : ConvertFromBase
+    {
+        public ConvertFrom_V15_2_to_V15_3(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("15.2", "15.3", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                //ADD TO NEW Convert file
+                scriptElements = _ScriptElementList.ToArray();
+
+                foreach (ScriptElement scriptElement in scriptElements)
+                {
+                    ProcedureControl procCtrl = scriptElement.ElementData as ProcedureControl;
+
+                    if (procCtrl != null)
+                    {
+                        procCtrl.CalledSubScriptName = "";
+
+                        if (procCtrl.ProcedureSteps != null && procCtrl.ProcedureSteps.Length > 0)
+                        {
+                            for (int i = 0; i < procCtrl.ProcedureSteps.Length; i++)
+                            {
+                                if (procCtrl.ProcedureSteps[i].MsgFields != null &&
+                                   procCtrl.ProcedureSteps[i].MsgFields.Length > 0)
+                                {
+                                    for (int j = 0; j < procCtrl.ProcedureSteps[i].MsgFields.Length; j++)
+                                    {
+                                        if (procCtrl.ProcedureSteps[i].MsgFields[j] != null)
+                                        {
+                                            procCtrl.ProcedureSteps[i].MsgFields[j].IsActive = true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+
+new ConvertFrom_V15_2_to_V15_3(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.3");
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_3_to_V15_4.cs
+
+   new ConvertFrom_V15_3_to_V15_4(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.4");
+
+                m_Trunk_Converter_Info.EndVersion = "15.4";
+
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\LTE-InteractiveScript-Editor\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_3_to_V15_4.cs
+
+Anite.Script.Utils
+
+  new ConvertFrom_V15_3_to_V15_4(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.4");
+
+                m_Trunk_Converter_Info.EndVersion = "15.4";
+
+
+RCMIGuardTimerValue
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-B
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\StringVariableForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\StringVariableForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\StringVariableForm.cs
+
+IMPLICITCONVERSIONTYPE
+
+Short Message Services
+
+ public static class VARTYPE
+    {
+        public static string Convert(VarTypeEnum _VarType)
+        {
+            string varTypeString = _VarType.ToString().Replace('_', ' ');
+            return varTypeString;
+        }
+
+        public static VarTypeEnum Convert(string _VarTypeString)
+        {
+            string varTypeString = _VarTypeString.Replace(' ', '_');
+            VarTypeEnum varType = (VarTypeEnum)Enum.Parse(typeof(VarTypeEnum), varTypeString);
+            return varType;
+        }
+    }
+
+    public static class ADJUSTVARIABLEOPERATORTYPE
+    {
+        public static string Convert(AdjustVariableOperatorType _VarType)
+        {
+            string varTypeString = _VarType.ToString().Replace('_', ' ');
+            return varTypeString;
+        }
+
+        public static AdjustVariableOperatorType Convert(string _VarTypeString)
+        {
+            string varTypeString = _VarTypeString.Replace(' ', '_');
+            AdjustVariableOperatorType operatorType = (AdjustVariableOperatorType)Enum.Parse(typeof(AdjustVariableOperatorType), varTypeString);
+            return operatorType;
+        }
+    }
+
+    public static class IMPLICITCONVERSIONTYPE
+    {
+        public static string Convert(ImplicitConversionType _ImplicitConversionType)
+        {
+            string implicitConversionTypeString = _ImplicitConversionType.ToString().Replace('_', ' ');
+            return implicitConversionTypeString;
+        }
+
+        public static ImplicitConversionType Convert(string _ImplicitConversionTypeString)
+        {
+            string implicitConversionTypeString = _ImplicitConversionTypeString.Replace(' ', '_');
+            ImplicitConversionType implicitConversionType = (ImplicitConversionType)Enum.Parse(typeof(ImplicitConversionType), implicitConversionTypeString);
+            return implicitConversionType;
+        }
+    }
+
+    public static class RRCCONNECTIONRELEASECAUSE
+    {
+        public static string Convert(RRCConnectionReleaseCause _ImplicitConversionType)
+        {
+            string implicitConversionTypeString = _ImplicitConversionType.ToString().Replace('_', ' ');
+            return implicitConversionTypeString;
+        }
+
+        public static RRCConnectionReleaseCause Convert(string _ImplicitConversionTypeString)
+        {
+            string implicitConversionTypeString = _ImplicitConversionTypeString.Replace(' ', '_');
+            RRCConnectionReleaseCause implicitConversionType = (RRCConnectionReleaseCause)Enum.Parse(typeof(RRCConnectionReleaseCause), implicitConversionTypeString);
+            return implicitConversionType;
+        }
+    }
+
+    public static class ANTENNACONFIG
+    {
+        public struct AntennaConfig
+        {
+            public uint DLLogicalAntennaCount;
+            public uint DLPhysicalAntennaCount;
+
+            public AntennaConfig(uint _DLLogicalAntennaCount, uint _DLPhysicalAntennaCount)
+            {
+                DLLogicalAntennaCount = _DLLogicalAntennaCount;
+                DLPhysicalAntennaCount = _DLPhysicalAntennaCount;
+            }
+            public static bool operator ==(AntennaConfig lhs, AntennaConfig rhs)
+            {
+                bool equal = false;
+
+                if ((lhs != null) && (rhs != null))
+                {
+
+                    equal = ((lhs.DLLogicalAntennaCount == rhs.DLLogicalAntennaCount) &&
+                             (lhs.DLPhysicalAntennaCount == rhs.DLPhysicalAntennaCount));
+                }
+
+                return equal;
+            }
+
+            public static bool operator !=(AntennaConfig lhs, AntennaConfig rhs)
+            {
+                return (lhs == rhs) ? false : true;
+            }
+
+            public override bool Equals(object obj)
+            {
+                bool equal = false;
+
+                if ((obj != null) && (GetType() == obj.GetType()))
+                {
+                    AntennaConfig point = (AntennaConfig)obj;
+
+                    equal = (DLLogicalAntennaCount == point.DLLogicalAntennaCount) &&
+                            (DLPhysicalAntennaCount == point.DLPhysicalAntennaCount);
+                }
+
+                return equal;
+            }
+
+            public override int GetHashCode()
+            {
+
+                return System.Convert.ToInt32(DLLogicalAntennaCount) ^ System.Convert.ToInt32(DLPhysicalAntennaCount);
+            }
+
+        };
+
+        private static Dictionary<string, AntennaConfig> m_AntennaConfig = new Dictionary<string, AntennaConfig>()
+        {
+            { "SISO", new AntennaConfig(1, 1) },
+            { "MIMO 2x2", new AntennaConfig(2, 2) },
+            { "MIMO 4x2", new AntennaConfig(4, 2) },
+            { "MIMO 4x4", new AntennaConfig(4, 4) },
+        };
+
+        public static void PopulateComboBox(ComboBox _ComboBox)
+        {
+            string[] elements = new string[m_AntennaConfig.Count];
+            m_AntennaConfig.Keys.CopyTo(elements, 0);
+            _ComboBox.Items.AddRange(elements);
+        }
+
+        public static string Convert(AntennaConfig _Value)
+        {
+            string config = string.Empty;
+
+            foreach (KeyValuePair<string, AntennaConfig> entry in m_AntennaConfig)
+            {
+                if (entry.Value == _Value)
+                {
+                    config = entry.Key;
+                    break;
+                }
+            }
+
+            return config;
+        }
+
+        public static AntennaConfig Convert(string _Key)
+        {
+            AntennaConfig config = default(AntennaConfig);
+
+            if ((_Key != null) && m_AntennaConfig.ContainsKey(_Key))
+            {
+                config = m_AntennaConfig[_Key];
+            }
+
+            return config;
+        }
+    }
+
+    public static class TRXCATEGORY
+    {
+        public static string Convert(TRxCategory _ImplicitConversionType)
+        {
+            string implicitConversionTypeString = _ImplicitConversionType.ToString().Replace('_', ' ');
+            return implicitConversionTypeString;
+        }
+
+        public static TRxCategory Convert(string _ImplicitConversionTypeString)
+        {
+            string implicitConversionTypeString = _ImplicitConversionTypeString.Replace(' ', '_');
+            TRxCategory implicitConversionType = (TRxCategory)Enum.Parse(typeof(TRxCategory), implicitConversionTypeString);
+            return implicitConversionType;
+        }
+    }
+
+
+SetSelectedItem
+
+ if (box.SelectedIndex < 0)
+            {
+                box.SelectedIndex = 0;
+            }
+
+ElementDragDropData NumericScriptVariableNode = new ElementDragDropData();
+            NumericVariable NumericScriptVariableMessageData = new NumericVariable();
+            NumericScriptVariableNode.VariableDragDropData = NumericScriptVariableMessageData;
+            NumericScriptVariableNode.ElementDragDropHandler = new ElementDragDropData.ManageElementDropCommand(
+                NumericScriptVariableMessageData.DisplayScriptVariableInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.NumericVariable] = NumericScriptVariableNode;
+
+StringScriptVariableNode
+
+StringScriptVariableMessageData
+
+StringScriptVariableNode
+
+   TreeNode NumericVariableCommandNode = new TreeNode();
+            NumericVariableCommandNode.Text = ELEMENTANDDBTREE.NumericVariable;
+            NumericVariableCommandNode.ImageIndex = 2;
+            NumericVariableCommandNode.SelectedImageIndex = 2;
+            variablesGroupNode.Nodes.Add(NumericVariableCommandNode);
+
+StringVariableCommandNode
+
+StringScriptVariableNode
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\HandleSubScriptControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls
+
+    <Compile Include="ScriptForms\NumericVariableForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScriptForms\NumericVariableForm.Designer.cs">
+      <DependentUpon>NumericVariableForm.cs</DependentUpon>
+    </Compile>
+
+
+ProcedureControls
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ProcedureControlForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ProcedureControlForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ProcedureControlForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ProcedureControNasMessage.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ProcedureControNasMessage.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ProcedureControNasMessage.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ComboControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ComboControl.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\ComboControl.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\DataListControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\DataListControl.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\DataListControl.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\IgnoreRejectAcceptControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\IgnoreRejectAcceptControl.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\IgnoreRejectAcceptControl.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\IntegerInputControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\IntegerInputControl.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\IntegerInputControl.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\MessageControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\MessageControl.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\MessageControl.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IESelectionForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlCombo.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlCombo.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlCombo.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlData.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlList.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlList.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\SubScriptControlList.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\BeginScriptProcedure.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\BeginScriptProcedure.designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\BeginScriptProcedure.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IeListControl.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IeListControl.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IeListControl.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IeListData.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IESelectionForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IESelectionForm.Designer.cs
+
+ProcedureControlConfiguration
+
+SubScriptControlList
+
+SUB_SCRIPT_CONTROL
+
+ internal static string SUB_SCRIPT_CONTROL {
+            get {
+                return ResourceManager.GetString("SUB_SCRIPT_CONTROL", resourceCulture);
+            }
+        }
+
+SUB_SCRIPT_CONTROL
+
+Sub-Script Control
+
+ProcedureControlConfiguration
+

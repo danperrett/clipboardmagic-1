@@ -1,0 +1,1001 @@
+
+copy /Y C:\Secure\Source_x64\Core\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniDynamic420_vc10_rt.dll $(ProjectDir)..\..\bin
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniORB420_vc10_rt.dll $(ProjectDir)..\..\bin
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omnithread40_vc10_rt.dll $(ProjectDir)..\..\bin
+
+..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\
+
+10.164.114.184
+
+D:\Logs\CDBServer\
+
+..\..\$(Configuration)_x64\$(ProjectName)\
+
+..\..\$(Configuration)_x64\MoServices\
+
+..\..\$(Configuration)_x64\$(ProjectName)\
+
+C:\Secure\Source_x64\Core\version;..\..\ThirdParty\omniORB-4.2.0\include;..\..\ThirdParty\boost\boost_1_59_0;..\..\include;..\IDLCore-OmniOrb;..\DBConnection\utmcdbif;%(AdditionalIncludeDirectories)
+
+$(CutlasCore)
+
+C:\local\boost_1_59_0\lib64-msvc-10.0;C:\omniORB-4.2.0\lib\x86_win32;..\..\lib;%(AdditionalLibraryDirectories)
+
+..\..\Release_x64\CDBService\
+
+IF EXIST "%PROGRAMFILES(X86)%"
+
+C:\Secure\Source\cutlas\Core\ToolKits_x64\MoServices
+
+MoServices
+
+Core\ToolKits_x64\
+
+CutlasBase
+
+\CDBServer_x64
+
+CDBCore
+
+.;..\..\ThirdParty\boost\boost_1_59_0;%(AdditionalIncludeDirectories)
+
+..\..\$(Configuration)_x64\$(ProjectName)\
+
+copy /Y  $(TargetPath) $(CutlasCore)\Lib_x64
+
+$(TargetPath) 
+
+del C:\Secure\Source\cutlas\Core\ToolKits_x64\CutlasBase\..\..\Debug_x64\CutlasBase\CutlasBase.lib\*.*
+
+del C:\secure\source\cutlas\core\Debug_x64\CutlasBase\*.*
+
+del /Y C:\secure\source\cutlas\core\Debug_x64\CutlasBase\*.*
+
+del /q /f $(CutlasCore)\$(Configuration)_x64\$(ProjectName)\*.*
+
+IF EXIST "%PROGRAMFILES(X86)%"
+
+devenv "Core\ToolKits_x64\MoServices.sln" /
+
+devenv "Core\ToolKits_x64\CutlasBase.sln" /
+
+devenv "Core\\CDBServer_x64\CDBCore.sln" /
+
+C:\Secure\Source\cutlas\Core
+
+C:\Secure\Source\cutlas\Core\ThirdParty
+
+C:\Secure\Source\cutlas\Core\ThirdParty\boost\boost_1_59_0
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.2.0
+
+Start_Build_VS10_x64.bat
+
+C:\Secure\Source\cutlas\AutoBuild
+
+C:\Secure\Source\cutlas\Core\CDBServer
+
+elephone number
+
+C:\Program Files (x86)\boost\boost_1_42\lib
+
+C:\Secure\Source\cutlas\Core\ThirdParty\boost\boost_1_42\lib
+
+C:\Secure\Source\cutlas\Core\ThirdParty
+
+C:\local\
+
+$(CutlasCore)\ThirdPartyl
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.2.0\lib\x86_win32
+
+$(CutlasCore)\ThirdParty\boost\boost_1_59_0\lib64-msvc-10.0;$(CutlasCore)\ThirdParty\omniORB-4.2.0\lib\x86_win32;..\..\lib_x64;%(AdditionalLibraryDirectories)
+
+$(CutlasCore)
+
+stuart@squibb.eu
+
+@echo
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE
+
+visual studio 2010 cmd prompt
+
+omniORB420_rt.lib;omniDynamic420_rt.lib;omnithread40_rt.lib;moservices.lib;cutlasbase.lib;%(AdditionalDependencies)
+
+
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniDynamic420_vc10_rt.dll $(ProjectDir)..\..\bin
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniORB420_vc10_rt.dll $(ProjectDir)..\..\bin
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omnithread40_vc10_rt.dll $(ProjectDir)..\..\bin
+
+..\..\ThirdParty\boost\boost_1_42\lib;"..\..\ThirdParty\omniORB-4.1.3\lib\x86_win32";..\..\lib
+
+ar
+
+IPPROTO_IPV6
+
+ 'IPPROTO_IPV6' : undeclared identifier
+
+FindINET6Addr
+
+error C2065: 'IPPROTO_IPV6' : undeclared identifier
+
+Z:\dan\Exported-2016-05-06.vssettings
+
+ettings are not persistent
+
+"C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+
+window
+
+%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 8\VC\vcvarsall.bat"" x86
+
+CurrentSettings.vssettings
+
+http://svnserver.infra.imtech.nl/ImCity/Products/ImCity/trunk/Source
+
+<ToolsOptionsCategory name="Projects" RegisteredName="Projects">
+			<ToolsOptionsSubCategory name="VBDefaults" RegisteredName="VBDefaults" PackageName="Visual Basic Project System">
+				<PropertyValue name="OptionCompare">0</PropertyValue>
+				<PropertyValue name="OptionStrict">0</PropertyValue>
+				<PropertyValue name="OptionExplicit">1</PropertyValue>
+			</ToolsOptionsSubCategory>
+			<ToolsOptionsSubCategory name="VCDirectories" RegisteredName="VCDirectories" PackageName="Visual C++ Project System Package">
+				<PropertyValue name="LibraryDirectories">Win32|$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)atlmfc\lib\i386;$(VCInstallDir)PlatformSDK\lib;$(VCInstallDir)PlatformSDK\common\lib;$(FrameworkSDKDir)lib;$(VSInstallDir);$(VSInstallDir)lib;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Lib\vc80;C:\Program Files (x86)\boost\boost_1_42\lib;C:\Program Files (x86)\MSXML 6.0\lib|Pocket PC 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\PocketPC2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;|Smartphone 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;</PropertyValue>
+				<PropertyValue name="ReferenceDirectories">Win32|$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib|Pocket PC 2003 (ARMV4)||Smartphone 2003 (ARMV4)|</PropertyValue>
+				<PropertyValue name="ExcludeDirectories">Win32|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;$(FrameworkSDKDir)include;$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;;</PropertyValue>
+				<PropertyValue name="IncludeDirectories">Win32|c:\secure\Source\cutlas\Core\version;C:\Program Files (x86)\MSXML 6.0\inc;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;c:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Source;c:\Program Files (x86)\boost\boost_1_42;c:\secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include;C:\Program Files(x86)\Microsoft Visual Studio 8\VC\PlatformSDK\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include;C:\secure\Source\cutlas\Core\Simulation\ProviderUI;C:\secure\Source\cutlas\Core\Simulation\Replay|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;</PropertyValue>
+				<PropertyValue name="SourceDirectories">Win32|$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\atlmfc\src\atl\;$(VCInstallDir)ce\atlmfc\src\mfc\;$(VCInstallDir)ce\crt\src\|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\atlmfc\src\atl\;$(VCInstallDir)ce\atlmfc\src\mfc\;$(VCInstallDir)ce\crt\src\</PropertyValue>
+				<PropertyValue name="ExecutableDirectories">Win32|$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)PlatformSDK\common\bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)bin;$(FrameworkDir)$(FrameworkVersion);$(VSInstallDir);$(VSInstallDir)\SDK\v2.0\bin;$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\bin\x86_arm;$(VCInstallDir)bin;$(VSInstallDir)Common7\Tools;$(VSInstallDir)Common7\IDE;$(VSInstallDir)Common\Tools;$(VSInstallDir)Common\IDE;$(VSInstallDir);$(FrameworkSDKDir)Bin;$(PATH);|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\bin\x86_arm;$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)Common7\Tools;$(VSInstallDir)Common7\IDE;$(VSInstallDir)Common\Tools;$(VSInstallDir)Common\IDE;$(VSInstallDir);$(FrameworkSDKDir)Bin;$(PATH);</PropertyValue>
+			</ToolsOptionsSubCategory>
+			<ToolsOptionsSubCategory name="VCGeneral" RegisteredName="VCGeneral" PackageName="Visual C++ Project System Package">
+				<PropertyValue name="ShowNoMatchingRuleDlg">true</PropertyValue>
+				<PropertyValue name="ExtensionsToInclude">.cpp;.cxx;.cc;.c;.inl;.h;.hpp;.hxx;.hm;.inc;.rc;.resx;.idl;.rc2;.def;.odl;.asm;.asmx;.xsd;.bin;.rgs;.html;.htm;.manifest</PropertyValue>
+				<PropertyValue name="CPPExtensions">*.cpp;*.cxx;*.cc;*.c</PropertyValue>
+				<PropertyValue name="ValidateSchemas">true</PropertyValue>
+				<PropertyValue name="ToolFileSearchPaths"/>
+				<PropertyValue name="ShowEnvironmentInBuildLog">false</PropertyValue>
+				<PropertyValue name="ExtensionsToHide">.suo;.sln;.ncb;.vcproj;.csproj;.user;.vbproj;.scc;.vsscc;.vspscc;.old</PropertyValue>
+				<PropertyValue name="ShowMatchingRuleDlg">true</PropertyValue>
+				<PropertyValue name="DefaultSolutionExplorerMode">0</PropertyValue>
+				<PropertyValue name="BuildTiming">false</PropertyValue>
+				<PropertyValue name="BuildLogging">true</PropertyValue>
+			</ToolsOptionsSubCategory>
+		</ToolsOptionsCategory>
+
+VCDirectories
+
+<ToolsOptionsSubCategory name="VCDirectories" RegisteredName="VCDirectories" PackageName="Visual C++ Project System Package">
+				<PropertyValue name="LibraryDirectories">Win32|$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)atlmfc\lib\i386;$(VCInstallDir)PlatformSDK\lib;$(VCInstallDir)PlatformSDK\common\lib;$(FrameworkSDKDir)lib;$(VSInstallDir);$(VSInstallDir)lib;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Lib\vc80;C:\Program Files (x86)\boost\boost_1_42\lib;C:\Program Files (x86)\MSXML 6.0\lib|x64|$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(VCInstallDir)PlatformSDK\lib\amd64;$(VSInstallDir)SDK\v2.0\lib\amd64|Pocket PC 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\PocketPC2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;|Smartphone 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;</PropertyValue>
+				<PropertyValue name="ReferenceDirectories">Win32|$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib|x64|$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib\amd64|Pocket PC 2003 (ARMV4)||Smartphone 2003 (ARMV4)|</PropertyValue>
+				<PropertyValue name="ExcludeDirectories">Win32|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;$(FrameworkSDKDir)include;$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib|x64|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(FrameworkSDKDir)include;$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib\amd64|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;;</PropertyValue>
+				<PropertyValue name="IncludeDirectories">Win32|c:\secure\Source\cutlas\Core\version;C:\Program Files (x86)\MSXML 6.0\inc;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;c:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Source;c:\Program Files (x86)\boost\boost_1_42;c:\secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include;C:\Program Files(x86)\Microsoft Visual Studio 8\VC\PlatformSDK\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include;C:\secure\Source\cutlas\Core\Simulation\ProviderUI;C:\secure\Source\cutlas\Core\Simulation\Replay|x64|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(FrameworkSDKDir)include|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;</PropertyValue>
+				<PropertyValue name="SourceDirectories">Win32|$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src|x64|$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\atlmfc\src\atl\;$(VCInstallDir)ce\atlmfc\src\mfc\;$(VCInstallDir)ce\crt\src\|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\atlmfc\src\atl\;$(VCInstallDir)ce\atlmfc\src\mfc\;$(VCInstallDir)ce\crt\src\</PropertyValue>
+				<PropertyValue name="ExecutableDirectories">Win32|$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)PlatformSDK\common\bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)bin;$(FrameworkDir)$(FrameworkVersion);$(VSInstallDir);$(VSInstallDir)\SDK\v2.0\bin;$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80|x64|$(VCInstallDir)bin\x86_amd64;$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)bin;$(FrameworkSDKDir)lib\win64;$(FrameworkDir)$(FrameworkVersion);$(FxCopDir);$(PATH)|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\bin\x86_arm;$(VCInstallDir)bin;$(VSInstallDir)Common7\Tools;$(VSInstallDir)Common7\IDE;$(VSInstallDir)Common\Tools;$(VSInstallDir)Common\IDE;$(VSInstallDir);$(FrameworkSDKDir)Bin;$(PATH);|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\bin\x86_arm;$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)Common7\Tools;$(VSInstallDir)Common7\IDE;$(VSInstallDir)Common\Tools;$(VSInstallDir)Common\IDE;$(VSInstallDir);$(FrameworkSDKDir)Bin;$(PATH);</PropertyValue>
+			</ToolsOptionsSubCategory>
+
+		<ToolsOptionsCategory name="Projects" RegisteredName="Projects">
+			<ToolsOptionsSubCategory name="VBDefaults" RegisteredName="VBDefaults" PackageName="Visual Basic Project System">
+				<PropertyValue name="OptionCompare">0</PropertyValue>
+				<PropertyValue name="OptionStrict">0</PropertyValue>
+				<PropertyValue name="OptionExplicit">1</PropertyValue>
+			</ToolsOptionsSubCategory><ToolsOptionsSubCategory name="VCDirectories" RegisteredName="VCDirectories" PackageName="Visual C++ Project System Package">
+				<PropertyValue name="LibraryDirectories">Win32|$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)atlmfc\lib\i386;$(VCInstallDir)PlatformSDK\lib;$(VCInstallDir)PlatformSDK\common\lib;$(FrameworkSDKDir)lib;$(VSInstallDir);$(VSInstallDir)lib;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Lib\vc80;C:\Program Files (x86)\boost\boost_1_42\lib;C:\Program Files (x86)\MSXML 6.0\lib|x64|$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(VCInstallDir)PlatformSDK\lib\amd64;$(VSInstallDir)SDK\v2.0\lib\amd64|Pocket PC 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\PocketPC2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;|Smartphone 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;</PropertyValue>
+				<PropertyValue name="ReferenceDirectories">Win32|$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib|x64|$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib\amd64|Pocket PC 2003 (ARMV4)||Smartphone 2003 (ARMV4)|</PropertyValue>
+				<PropertyValue name="ExcludeDirectories">Win32|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;$(FrameworkSDKDir)include;$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib|x64|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(FrameworkSDKDir)include;$(FrameworkDir)$(FrameworkVersion);$(VCInstallDir)atlmfc\lib\amd64|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;;</PropertyValue>
+				<PropertyValue name="IncludeDirectories">Win32|c:\secure\Source\cutlas\Core\version;C:\Program Files (x86)\MSXML 6.0\inc;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;c:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Source;c:\Program Files (x86)\boost\boost_1_42;c:\secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include;C:\Program Files(x86)\Microsoft Visual Studio 8\VC\PlatformSDK\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include;C:\secure\Source\cutlas\Core\Simulation\ProviderUI;C:\secure\Source\cutlas\Core\Simulation\Replay|x64|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(FrameworkSDKDir)include|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;</PropertyValue>
+				<PropertyValue name="SourceDirectories">Win32|$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src|x64|$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\atlmfc\src\atl\;$(VCInstallDir)ce\atlmfc\src\mfc\;$(VCInstallDir)ce\crt\src\|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\atlmfc\src\atl\;$(VCInstallDir)ce\atlmfc\src\mfc\;$(VCInstallDir)ce\crt\src\</PropertyValue>
+				<PropertyValue name="ExecutableDirectories">Win32|$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)PlatformSDK\common\bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)bin;$(FrameworkDir)$(FrameworkVersion);$(VSInstallDir);$(VSInstallDir)\SDK\v2.0\bin;$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80|x64|$(VCInstallDir)bin\x86_amd64;$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)bin;$(FrameworkSDKDir)lib\win64;$(FrameworkDir)$(FrameworkVersion);$(FxCopDir);$(PATH)|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\bin\x86_arm;$(VCInstallDir)bin;$(VSInstallDir)Common7\Tools;$(VSInstallDir)Common7\IDE;$(VSInstallDir)Common\Tools;$(VSInstallDir)Common\IDE;$(VSInstallDir);$(FrameworkSDKDir)Bin;$(PATH);|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\bin\x86_arm;$(VCInstallDir)bin;$(VCInstallDir)PlatformSDK\bin;$(VSInstallDir)Common7\Tools;$(VSInstallDir)Common7\IDE;$(VSInstallDir)Common\Tools;$(VSInstallDir)Common\IDE;$(VSInstallDir);$(FrameworkSDKDir)Bin;$(PATH);</PropertyValue>
+			</ToolsOptionsSubCategory><ToolsOptionsSubCategory name="VCGeneral" RegisteredName="VCGeneral" PackageName="Visual C++ Project System Package">
+				<PropertyValue name="ShowNoMatchingRuleDlg">true</PropertyValue>
+				<PropertyValue name="ExtensionsToInclude">.cpp;.cxx;.cc;.c;.inl;.h;.hpp;.hxx;.hm;.inc;.rc;.resx;.idl;.rc2;.def;.odl;.asm;.asmx;.xsd;.bin;.rgs;.html;.htm;.manifest</PropertyValue>
+				<PropertyValue name="CPPExtensions">*.cpp;*.cxx;*.cc;*.c</PropertyValue>
+				<PropertyValue name="ValidateSchemas">true</PropertyValue>
+				<PropertyValue name="ToolFileSearchPaths"/>
+				<PropertyValue name="ShowEnvironmentInBuildLog">false</PropertyValue>
+				<PropertyValue name="ExtensionsToHide">.suo;.sln;.ncb;.vcproj;.csproj;.user;.vbproj;.scc;.vsscc;.vspscc;.old</PropertyValue>
+				<PropertyValue name="ShowMatchingRuleDlg">true</PropertyValue>
+				<PropertyValue name="DefaultSolutionExplorerMode">0</PropertyValue>
+				<PropertyValue name="BuildTiming">false</PropertyValue>
+				<PropertyValue name="BuildLogging">true</PropertyValue>
+			</ToolsOptionsSubCategory></ToolsOptionsCategory>
+
+<PropertyValue name="LibraryDirectories">Win32|$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)atlmfc\lib\i386;$(VCInstallDir)PlatformSDK\lib;$(VCInstallDir)PlatformSDK\common\lib;$(FrameworkSDKDir)lib;$(VSInstallDir);$(VSInstallDir)lib;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Lib\vc80;C:\Program Files (x86)\boost\boost_1_42\lib;C:\Program Files (x86)\MSXML 6.0\lib|x64|$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(VCInstallDir)PlatformSDK\lib\amd64;$(VSInstallDir)SDK\v2.0\lib\amd64|Pocket PC 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\PocketPC2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;|Smartphone 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;</PropertyValue>
+
+<PropertyValue name="LibraryDirectories">Win32|$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)atlmfc\lib\i386;$(VCInstallDir)PlatformSDK\lib;$(VCInstallDir)PlatformSDK\common\lib;$(FrameworkSDKDir)lib;$(VSInstallDir);$(VSInstallDir)lib;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Lib\vc80;C:\Program Files (x86)\boost\boost_1_42\lib;C:\Program Files (x86)\MSXML 6.0\lib|Pocket PC 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\PocketPC2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;|Smartphone 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;</PropertyValue>
+
+<PropertyValue name="LibraryDirectories">Win32|$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)atlmfc\lib\i386;$(VCInstallDir)PlatformSDK\lib;$(VCInstallDir)PlatformSDK\common\lib;$(FrameworkSDKDir)lib;$(VSInstallDir);$(VSInstallDir)lib;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Lib\vc80;C:\Program Files (x86)\boost\boost_1_42\lib;C:\Program Files (x86)\MSXML 6.0\lib|x64|$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(VCInstallDir)PlatformSDK\lib\amd64;$(VSInstallDir)SDK\v2.0\lib\amd64|Pocket PC 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\PocketPC2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;|Smartphone 2003 (ARMV4)|$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\lib\ARMV4;$(VCInstallDir)ce\atlmfc\lib\ARMV4;$(VCInstallDir)ce\lib\ARMV4;</PropertyValue>
+
+<PropertyValue name="IncludeDirectories">Win32|c:\secure\Source\cutlas\Core\version;C:\Program Files (x86)\MSXML 6.0\inc;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;c:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Source;c:\Program Files (x86)\boost\boost_1_42;c:\secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include;C:\Program Files(x86)\Microsoft Visual Studio 8\VC\PlatformSDK\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include;C:\secure\Source\cutlas\Core\Simulation\ProviderUI;C:\secure\Source\cutlas\Core\Simulation\Replay|x64|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(FrameworkSDKDir)include|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;</PropertyValue>
+
+	<PropertyValue name="IncludeDirectories">Win32|c:\secure\Source\cutlas\Core\version;C:\Program Files (x86)\MSXML 6.0\inc;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;c:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Source;c:\Program Files (x86)\boost\boost_1_42;c:\secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include;C:\Program Files(x86)\Microsoft Visual Studio 8\VC\PlatformSDK\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include;C:\secure\Source\cutlas\Core\Simulation\ProviderUI;C:\secure\Source\cutlas\Core\Simulation\Replay|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;</PropertyValue>
+
+<PropertyValue name="IncludeDirectories">Win32|c:\secure\Source\cutlas\Core\version;C:\Program Files (x86)\MSXML 6.0\inc;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)PlatformSDK\common\include;c:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Source;c:\Program Files (x86)\boost\boost_1_42;c:\secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include;C:\Program Files(x86)\Microsoft Visual Studio 8\VC\PlatformSDK\Include;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include;C:\secure\Source\cutlas\Core\Simulation\ProviderUI;C:\secure\Source\cutlas\Core\Simulation\Replay|x64|$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(VCInstallDir)PlatformSDK\include;$(FrameworkSDKDir)include|Pocket PC 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\PocketPC2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;|Smartphone 2003 (ARMV4)|$(VCInstallDir)ce\include;$(VSInstallDir)SmartDevices\SDK\SmartPhone2003\include;$(VCInstallDir)ce\atlmfc\include;$(VSInstallDir)SmartDevices\SDK\SQL Server\Mobile\v3.0;</PropertyValue>
+
+$(VCInstallDir)atlmfc\lib\i386
+
+$(VCInstallDir)atlmfc\lib
+
+$(VCInstallDir)PlatformSDK\common\include
+
+svn log -q | awk -F '|' '/^r/ {sub("^ ", "", $2); sub(" $", "", $2); print $2" = "$2" <"$2">"}' | sort -u > authors-transform.txt
+
+..\..\..\workarea\$(Configuration)_x64\$(ProjectName)\
+
+..\workarea\
+
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniDynamic420_vc10_rt.dll $(ProjectDir)..\..\..\workarea\bin_x64
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omniORB420_vc10_rt.dll $(ProjectDir)..\..\..\workarea\bin_x64
+copy /Y ..\..\ThirdParty\omniORB-4.2.0\bin\x86_win32\omnithread40_vc10_rt.dll $(ProjectDir)..\..\..\workarea\bin_x64
+
+x64 Build for CDBService, required libraries and associated build script.
+checked into seperate *_x64 folders to seperate from current win32 code.
+requested by John Ball approved by Tina Turner.
+
+lib64-msvc-10.0
+
+x64 Build for CDBService, required libraries and associated build script.
+checked into seperate *_x64 folders to seperate from current win32 code.
+requested by John Ball approved by Tina Turner.
+
+
+initialise
+
+x64 Build for CDBService, required libraries and associated build script.
+checked into seperate *_x64 folders to seperate from current win32 code.
+requested by John Ball approved by Tina Turner.
+
+http://svnserver.infra.imtech.nl/ImCity/Products/ImCity/trunk/Source
+
+r
+
+x64 Build for CDBService, required libraries and associated build script.
+checked into seperate *_x64 folders to seperate from current win32 code.
+requested by John Ball approved by Tina Turner.
+
+
+..\CPAdapterAsyn;..\..\include;..\..\thirdparty;..\AsynAdapterCore
+
+C:\Secure\Source\cutlas\Core\ThirdParty
+
+C:\Secure\Source\cutlas\Core\ThirdParty\DartSnmp2.dll
+
+CSNMPManager
+
+ProviderInfo
+
+m_activeProvider
+
+AQEquipmentOptions
+
+_CONSTANTS_H__
+
+CSNMPManager
+
+AQEquipmentOptions
+
+C:\Secure\Source\cutlas\Core\Adapters\AdapterCore\adaptercore.h
+
+C:\Secure\Source\cutlas\Core\Adapters\AsynAdapterCore\AsynAdapter.h
+
+C:\Secure\Source\cutlas\Core\Adapters\CounterCarParkAdapter\TimeUtility.h
+
+C:\Secure\Source\cutlas\Core\Adapters\CounterCarParkAdapter\CriticalSection.h
+
+IDD_AQADAPTOR_DIALOG
+
+VERSION_RELEASE_TEXT
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\AQAdaptor.rc
+
+afxres
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\res\AQAdaptor.rc2
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Air Quality Adapter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           VERSION_RELEASE_TEXT,IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    EDITTEXT        IDC_EDIT_ABOUT,35,26,178,56,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+
+IDD_AQADAPTOR_DIALOG DIALOGEX 0, 0, 307, 207
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Air Quality / Meteorological Adapter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Start Monitoring",IDC_START_MONITOR,236,25,58,14
+    PUSHBUTTON      "Show Manual",IDC_SHOWDETAIL_BUT,235,44,58,14
+    PUSHBUTTON      "Close",IDCANCEL,235,6,58,14
+    PUSHBUTTON      "Clear",IDC_CLEAR_BUT,171,117,50,14
+    PUSHBUTTON      "Get Info",IDC_GETINFO,17,162,50,14
+    PUSHBUTTON      "Set Info",IDC_SET_INFO_BUT,17,178,50,14
+    PUSHBUTTON      "AQ Dynamics",IDC_GETDYNAMIC_AQ,79,162,50,14
+    PUSHBUTTON      "Read Config",IDC_READCONFIG,138,162,50,14
+    PUSHBUTTON      "Write Config",IDC_WRITE_CONFIG,138,179,50,14
+    PUSHBUTTON      "MET Dynamics",IDC_GET_MET_DYNAMICS,198,162,53,14
+    PUSHBUTTON      "Fault",IDC_BUT_FAULT,198,179,53,14
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    16,6,100,15
+    EDITTEXT        IDC_EDIT_OUTPUT,19,33,201,80,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    GROUPBOX        "Manual panel",IDC_DETAILRECT,7,150,292,50
+    LTEXT           "",IDC_DEVICE_NAME,121,9,56,8
+    GROUPBOX        "System Response",IDC_STATIC,13,24,214,110
+END
+
+
+IDD_LOGON DIALOG DISCARDABLE  0, 0, 187, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AQ Adapter Logon"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,65,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,67,50,14
+    EDITTEXT        IDC_EDIT1,73,13,91,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,73,31,91,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Name :",IDC_STATIC,14,13,23,8
+    LTEXT           "Password :",IDC_STATIC,13,31,34,8
+END
+
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Air Quality Adapter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           VERSION_RELEASE_TEXT,IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    EDITTEXT        IDC_EDIT_ABOUT,35,26,178,56,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_AQADAPTOR_DIALOG DIALOGEX 0, 0, 307, 207
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Air Quality / Meteorological Adapter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Start Monitoring",IDC_START_MONITOR,236,25,58,14
+    PUSHBUTTON      "Show Manual",IDC_SHOWDETAIL_BUT,235,44,58,14
+    PUSHBUTTON      "Close",IDCANCEL,235,6,58,14
+    PUSHBUTTON      "Clear",IDC_CLEAR_BUT,171,117,50,14
+    PUSHBUTTON      "Get Info",IDC_GETINFO,17,162,50,14
+    PUSHBUTTON      "Set Info",IDC_SET_INFO_BUT,17,178,50,14
+    PUSHBUTTON      "AQ Dynamics",IDC_GETDYNAMIC_AQ,79,162,50,14
+    PUSHBUTTON      "Read Config",IDC_READCONFIG,138,162,50,14
+    PUSHBUTTON      "Write Config",IDC_WRITE_CONFIG,138,179,50,14
+    PUSHBUTTON      "MET Dynamics",IDC_GET_MET_DYNAMICS,198,162,53,14
+    PUSHBUTTON      "Fault",IDC_BUT_FAULT,198,179,53,14
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    16,6,100,15
+    EDITTEXT        IDC_EDIT_OUTPUT,19,33,201,80,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    GROUPBOX        "Manual panel",IDC_DETAILRECT,7,150,292,50
+    LTEXT           "",IDC_DEVICE_NAME,121,9,56,8
+    GROUPBOX        "System Response",IDC_STATIC,13,24,214,110
+END
+
+IDD_LOGON DIALOG DISCARDABLE  0, 0, 187, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AQ Adapter Logon"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,65,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,67,50,14
+    EDITTEXT        IDC_EDIT1,73,13,91,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,73,31,91,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Name :",IDC_STATIC,14,13,23,8
+    LTEXT           "Password :",IDC_STATIC,13,31,34,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#include "version.h"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_FILEVERSION
+ PRODUCTVERSION VERSION_PRODUCTVERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "ImCity AQ Adapter MFC Application\0"
+            VALUE "InternalName", "AQ Adaptor\0"
+            VALUE "OriginalFilename", "AQ Adapter.EXE"
+			VALUE "FileVersion", VERSION_FileVersionDot
+			VALUE "CompanyName", VERSION_CompanyName
+			VALUE "ProductName", VERSION_ProductName
+			VALUE "ProductVersion", VERSION_ProductVersionDot
+			VALUE "LegalCopyright", VERSION_LegalCopyright
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Air Quality Adapter..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AQDYNAMIC_DLG DIALOG DISCARDABLE  0, 0, 130, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Get AQ Dynamics"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,180,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,73,180,50,14
+    CONTROL         "NO",IDC_CHECK_NO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    18,60,64,10
+    CONTROL         "NOX",IDC_CHECK_NOX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,72,31,10
+    CONTROL         "NO2",IDC_CHECK_NO2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,84,31,10
+    CONTROL         "OZONE",IDC_CHECK_OZONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,96,41,10
+    CONTROL         "PAH",IDC_CHECK_PAH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,108,31,10
+    CONTROL         "SO2",IDC_CHECK_SO2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,120,30,10
+    CONTROL         "PM10",IDC_CHECK_PM10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,132,35,10
+    CONTROL         "BTX",IDC_CHECK_BTX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,144,30,10
+    CONTROL         "SUMMARY",IDC_CHECK_SUMMARY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,156,53,10
+    GROUPBOX        "",IDC_STATIC,7,6,116,167
+    EDITTEXT        IDC_START_TIME_EDIT,15,15,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PERIOD_EDIT,15,28,40,12,ES_AUTOHSCROLL
+    LTEXT           "Start Time",IDC_STATIC,62,16,34,8
+    LTEXT           "Period",IDC_STATIC,63,30,33,8
+    CONTROL         "CO",IDC_CHECK_CO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    18,48,64,10
+END
+
+IDD_SYSCONFIG_DLG DIALOGEX 0, 0, 164, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configuration Information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "CO Threshold",IDC_CHECK_TCO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,16,75,10
+    CONTROL         "NO Threshold",IDC_CHECK_TNO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,30,75,10
+    CONTROL         "NOX Threshold",IDC_CHECK_TNOX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,44,75,10
+    CONTROL         "NO2 Threshold",IDC_CHECK_TNO2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,58,75,10
+    CONTROL         "OZONE Threshold",IDC_CHECK_TOZONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,72,75,10
+    CONTROL         "PAH Threshold",IDC_CHECK_TPAH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,86,75,10
+    CONTROL         "SO2 Threshold",IDC_CHECK_SO2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,100,75,10
+    CONTROL         "PM10 Threshold",IDC_CHECK_PM10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,114,75,10
+    CONTROL         "BTX Threshold",IDC_CHECK_BTX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,128,75,10,0,HIDC_CHECK_BTX
+    CONTROL         "Measurement Units",IDC_CHECK_MEA_UNITS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,142,75,10
+    EDITTEXT        IDC_EDIT_CO,95,16,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NO,95,30,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NOX,95,44,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NO2,95,58,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6_OZONE,95,72,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PAH,95,86,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_S02,95,100,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PM10,95,114,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BTX,95,128,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MEASURMENT_UNIT,95,142,40,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,25,181,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,98,181,50,14
+    GROUPBOX        "",IDC_STATIC,7,7,144,169
+END
+
+IDD_GEN_INFO_DLG DIALOG DISCARDABLE  0, 0, 175, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,20,168,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,168,50,14
+    CONTROL         "SystemCodeNumber",IDC_CHECK_SYSTEMCODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,13,80,10
+    CONTROL         "Name",IDC_CHECK_NAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,30,35,10
+    CONTROL         "Long Description",IDC_CHECK_LONGDESC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,48,69,10
+    CONTROL         "Northing",IDC_CHECK_NORTHING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,66,43,10
+    CONTROL         "Easting",IDC_CHECK_EASTING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,84,39,10
+    CONTROL         "Link Reference",IDC_CHECK_LINKREF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,102,65,10
+    CONTROL         "Link Distance",IDC_CHECK_LINKDISTANCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,120,59,10
+    EDITTEXT        IDC_EDIT_SYSTEMCODENUMBER,112,11,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NAME,112,29,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LONGDESC,112,47,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NORTHING,112,65,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_EASTING,112,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LINKREF,112,101,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LINKDIST,112,119,40,12,ES_AUTOHSCROLL
+    CONTROL         "Time",IDC_CHECK_GENTIME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,138,31,10
+    EDITTEXT        IDC_EDIT_GENTIME,111,136,40,12,ES_AUTOHSCROLL
+END
+
+IDD_METDYNAMIC_DLG DIALOG DISCARDABLE  0, 0, 151, 218
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Get Met Dynamics"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,94,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,94,24,50,14
+    CONTROL         "Road Condition",IDC_CHECK_ROADCON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,14,65,10
+    CONTROL         "Road Temp",IDC_CHECK_ROADTEMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,27,65,10
+    CONTROL         "Visibility Type",IDC_CHECKVIS_TYPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,40,65,10
+    CONTROL         "Visibility Distance",IDC_CHECKVIS_DIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,53,69,10
+    CONTROL         "Precipitation Type",IDC_CHECKPRECIP_TYPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,66,71,10
+    CONTROL         "Precipatation Intensity",IDC_CHECK_PRECIP_INTENSITY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,79,85,10
+    CONTROL         "Air Temp",IDC_CHECK_AIRTEMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,92,65,10
+    CONTROL         "Min Temp",IDC_CHECK_MINTEMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,105,65,10
+    CONTROL         "Max Temp",IDC_CHECK_MAXTEMP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,118,49,10
+    CONTROL         "Humidity",IDC_CHECK_HUM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,131,43,10
+    CONTROL         "Pressure",IDC_CHECK_PRESSURE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,144,43,10
+    CONTROL         "Wind Speed",IDC_CHECK_WINDSPEED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,157,55,10
+    CONTROL         "Max Wind Speed",IDC_CHECK_MAXWIND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,170,71,10
+    CONTROL         "Wind Direction",IDC_CHECK_WIND_DIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,183,63,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_AQDYNAMIC_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_SYSCONFIG_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 157
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_GEN_INFO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 170
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_METDYNAMIC_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\AQAdaptor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\AQAdaptor.ico"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\AQAdaptor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+
+IDD_AQADAPTOR_DIALOG
+
+Logger::initialise
+
+m_messagetimeout
+
+DeviceEntry
+
+ws2_32.lib
+mswsock.lib
+advapi32.lib
+omniORB413_rtd.lib
+omniDynamic413_rtd.lib
+omnithread34_rtd.lib
+
+..\..\lib,..\..\ThirdParty\omniORB-4.1.3\lib\x86_win32
+
+"$(mapl_path)\..\lib"
+"$(CutlasCore)\lib"
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniORB413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omnithread34_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omnithread34_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniORB413_vc8_rtd.dll
+
+smiMib
+
+OnInitDialog
+
+CLogonDlg
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniORB413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omnithread34_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omnithread34_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniDynamic413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniORB413_vc8_rt.dll
+
+Air quality monitor
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\YorkAQ.mib
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\YorkAQ-2-01.mib
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\aq.ini
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\aqadapter.def
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\Header.MIB
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\smi.mib
+
+SNMPManager
+
+ProviderInfo
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniORB413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniORB413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omnithread34_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omnithread34_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniDynamic413_vc8_rt.dll
+
+ catch( _com_error e )
+  {
+    AfxMessageBox(e.Description());
+
+MibList
+
+Compile
+
+Dart.SnmpMib
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniORB413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omnithread34_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omnithread34_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniDynamic413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Debug\omniORB413_vc8_rt.dll
+
+m_pmanager = new SNMPManager( dlg.m_name , dlg.m_password,  (LPCSTR)theApp.m_cmdInfo.m_psRegistryKey, 
+                                                        (CVMSAdaptorDlg*)AfxGetMainWnd() , controlIds );
+
+m_pMyManager
+
+C:\Secure\Source\cutlas\Core\Adapters\AsynAdapterCore
+
+m_autoStart
+
+CAQAdaptorDlg
+
+m_cmdInfo
+
+  CString     m_psRegistryKey;
+
+controlIds
+
+ vector<long> controlIds;
+    controlIds.push_back( IDC_EDIT_OUTPUT );
+
+
+setActiveProvider
+
+CarParkProvider
+
+AQProvider
+
+CCTVProvider
+
+VMSProvider
+
+class ProviderInfo;
+
+class VMSProvider : public ProviderInfo  //## Inherits: <unnamed>%491171D60269
+{
+
+_AQPROVIDER
+
+  //## Other Operations (specified)
+      //## Operation: initialiseProvider%3F0BFC2B004B
+      //	Initialise the provider base on the CDBManager DeviceEntry
+      virtual bool initialiseProvider ();
+
+      //## Operation: verifyMessage%3EC4B3B500DF
+      //	When a message is received the message will need to be checked to see if it
+      //	has been successfully SET.
+      virtual bool verifyMessage (DartSnmp::ISnmpMessagePtr msg);
+
+      //## Operation: verifyMessage%3EC4B3B500DF
+      //	When a message is received the message will need to be checked to see if it
+      //	has been successfully SET.
+      virtual bool verifyMessage (DartSnmp::ISnmpMessagePtr msg);
+
+
+//## Operation: verifyTrap%3F0ACCBF0360
+      bool verifyTrap (DartSnmp::ISnmpMessagePtr msg);
+
+     //## Operation: initMonitoring%3F0AD6A3020C
+      void initMonitoring ();
+
+//## Other Operations (specified)
+      //## Operation: initialiseProvider%3F0BFC2B004B
+      //	Initialise the provider base on the CDBManager DeviceEntry
+      virtual bool initialiseProvider ();
+
+COMMUNICATIONS_FAULTTYPE
+
+SNMPUtilityHelper
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\smi.mib
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\YorkAQ.mib
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\YorkAQ-2-01.mib
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\aq.ini
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\aqadapter.def
+
+C:\Secure\Source\cutlas\Core\Adapters\AQAdapter\Data\Header.MIB
+
+//## Other Operations (specified)
+      //## Operation: initialiseProvider%3F0BFC2B004B
+      //	Initialise the provider base on the CDBManager DeviceEntry
+      virtual bool initialiseProvider ();
+
+ OnShowdetailBut();
+
+COINIT_APARTMENTTHREADED
+
+vector<ProviderInfo*> providers;
+
+loadProviders(vector<ProviderInfo*>& providers)
+
+ bool loadProviders(vector<ProviderInfo*>& providers);
+  bool associateProviders(vector<ProviderInfo*>& providers);
+
+CAQAdaptorDlg::
+
+https://sourceforge.net/projects/snmpsim/
+
+  long count = m_pmanager->m_cdbManager->getDeviceCount();
+  for ( int i = 0 ; i < count ; ++i ) 
+  {
+
+m_pMyManager
+
+loadProviders
+
+  loadProviders(providers);
+      associateProviders(providers);
+
+vim-gnome 2:7.4.488-7
+

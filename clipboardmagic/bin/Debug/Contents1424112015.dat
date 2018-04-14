@@ -1,0 +1,208 @@
+Base64encode(
+
+<SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+    <Reference>
+        <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>1dfBS/h6Chturb7HzSfq7iKbMm8=</DigestValue>
+    </Reference>
+</SignedInfo>
+
+://
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+    <Reference>
+        <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+        <DigestValue>1dfBS/h6Chturb7HzSfq7iKbMm8=</DigestValue>
+    </Reference>
+</SignedInfo>
+
+0x6d, 0x2d, 0xc0, 0xd4, 0x01, 0x2a, 0x0e, 0x92, 0xff, 0x4a, 0x84, 0x2f, 0x37, 0x23, 0x58, 0x05, 0x0b, 0xe5, 0x14, 0xe0
+
+Base64encode((char *)digestbase, (const char*)digest, 20);
+
+base64digest
+
+signedinfoDigest
+
+q/lo4NMAzMzMzMzMzMzMzMwjAMw=
+
+poFjCu0UARYVrhr9NwctEcr12rs=
+
+"http://www.w3.org/2000/09/xmldsig#"
+
+CanonicalizationMethod
+
+SignatureMethod
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+<Reference>
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+<DigestValue>9ZLZD11LI01YajnKOy1Yt3rP9gY=</DigestValue>
+</Reference>
+</SignedInfo>
+
+poFjCu0UARYVrhr9NwctEcr12rs=
+
+>9ZLZD11LI01YajnKOy1Yt3rP9gY=
+
+poFjCu0
+
+poFjCu0UARYVrhr9NwctEcr12rs=
+
+  if(input[n] == '<')
+                {
+                    plausibleStart = 1;
+                }
+
+plausibleEnd
+
+ if(input[n] == tag[j])
+                {
+                    j++;
+                    if(j == taglen)
+                    {
+                        foundStart = 1;
+                    }
+                }
+                else
+                {
+                    j = 0;
+                    plausibleStart = 0;
+                }
+
+GetXMLElementsFromTag
+
+ output[k++] = input[n];
+
+output[k++] = input[n];
+
+  output[k++] = input[n];
+
+output[k++] = input[n];
+
+plausibleEnd = 1;
+
+foundEnd && foundStart)
+
+writeToLoggerFile
+
+WriteSrifInputToInterfaceDebugFile
+
+WORD endOfTagName = 0;
+
+startOfTagName
+
+endOfTagName
+
+startOfTagName
+
+ExpandEmptyTags
+
+endOfTagName
+
+output[l++]
+
+startOfTagName
+
+startOfTag
+
+char SignedInfoOutput[500] = {0};
+
+ExpandEmptyTags
+
+SignedInfoOutput
+
+SignedInfoOutput2
+
+  WriteSrifInputToInterfaceDebugFile(output);
+
+SignedInfoOutput2
+
+// You must free the result if result is non-NULL.
+char *str_replace(char *orig, char *rep, char *with) {
+    char *result; // the return string
+    char *ins;    // the next insert point
+    char *tmp;    // varies
+    int len_rep;  // length of rep
+    int len_with; // length of with
+    int len_front; // distance between rep and end of last rep
+    int count;    // number of replacements
+
+    if (!orig)
+        return NULL;
+    if (!rep)
+        rep = "";
+    len_rep = strlen(rep);
+    if (!with)
+        with = "";
+    len_with = strlen(with);
+
+    ins = orig;
+    for (count = 0; tmp = strstr(ins, rep); ++count) {
+        ins = tmp + len_rep;
+    }
+
+    // first time through the loop, all the variable are set correctly
+    // from here on,
+    //    tmp points to the end of the result string
+    //    ins points to the next occurrence of rep in orig
+    //    orig points to the remainder of orig after "end of rep"
+    tmp = result = malloc(strlen(orig) + (len_with - len_rep) * count + 1);
+
+    if (!result)
+        return NULL;
+
+    while (count--) {
+        ins = strstr(orig, rep);
+        len_front = ins - orig;
+        tmp = strncpy(tmp, orig, len_front) + len_front;
+        tmp = strcpy(tmp, with) + len_with;
+        orig += len_front + len_rep; // move to next "end of rep"
+    }
+    strcpy(tmp, orig);
+    return result;
+}
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+
+"<SignedInfo
+
+SignedInfoOutput2
+
+WriteSrifInputToInterfaceDebugFile(SignedInfoOutput2);
+
+SignedInfoChar
+
+NewSignedInfo
+
+SignedInfoOutput3
+
+<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+<Reference>
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+<DigestValue>1dfBS/h6Chturb7HzSfq7iKbMm8=</DigestValue>
+</Reference>
+</SignedInfo>
+
+0x21, 0x79, 0xfe, 0x2f, 0x25, 0x1c, 0x14, 0x63, 0x88, 0xb8, 0xb8, 0xc7, 0x5a, 0x16, 0x93, 0x7b, 0x8b, 0xd3, 0xa8, 0x74
+

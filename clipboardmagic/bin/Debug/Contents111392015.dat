@@ -1,0 +1,941 @@
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
+
+UK/York/IXL/001/OF
+
+void PopulateStringField(String_t *field, const char *text)
+
+PopulateStringField
+
+interlockingData->Interlocking[0].UniqueID
+
+NVFB3_t
+
+Base64encode
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
+
+Base64encode
+
+void PopulateNVF3BField(NVFB3_t *field, const char* data)
+
+PopulateNVF3BField
+
+/******************************************************************************
+* 
+* 
+******************************************************************************/
+
+PopulateNVF3BField
+
+SPAD_unbounded_t
+
+SPAD_t
+
+PopulateNVF3BField
+
+PopulateStringField
+
+spad->SPADData.length = 1;
+
+PopulateSpad
+
+interlockingData->Interlocking[0].SPAD.SPAD
+
+DiagnosticAlarms
+
+EmergencyAlarms
+
+Interlocking_limited_t
+
+DoProcessDiagnosticAlarms
+
+#include "DoProcess.h"
+
+message.Body.DiagnosticAlarms
+
+DoProcessGeneratedAlarms
+
+message.Body.GeneratedAlarms
+
+ Message_t message;
+
+    message.Body.DiagnosticAlarms = (DiagnosticAlarms_t *)malloc(sizeof(DiagnosticAlarms_t));
+    DoProcessDiagnosticAlarms(message.Body.DiagnosticAlarms);
+    message.Body.GeneratedAlarms = (GeneratedAlarms_t *)malloc(sizeof(GeneratedAlarms_t));
+    DoProcessGeneratedAlarms(message.Body.GeneratedAlarms);
+    message.Body.Interlocking = (Interlocking_limited_t *)malloc(sizeof(Interlocking_limited_t));
+    message.Body.EmergencyAlarms = (NVFB3_t *)malloc(sizeof(NVFB3_t));
+    message.Body.TD = (TD_t *)malloc(sizeof(TD_t));
+
+PopulateStringField
+
+PopulateStringField(
+
+PopulateStringField
+
+PopulateStringField(&
+
+EmergencyAlarms
+
+DoProcessInterLockingData
+
+message.Body.Interlocking
+
+DoProcessEmergencyAlarms
+
+message.Body.EmergencyAlarms
+
+TD_t
+
+DWORD DoProcessTD(TD_t *tddata)
+
+void PopulateStringField(String_t *field, const char *text);
+void PopulateNVF3BField(NVFB3_t *field, const char* data);
+
+DoProcessTD
+
+message.Body.TD
+
+PopulateStringField
+
+1T22
+
+PopulateStringField(&
+
+PopulateStringField
+
+0123
+
+PopulateStringField(&
+
+MAX_UNLIMITED_SIZE
+
+Interlocking
+
+MX_INTERLOCKING_OCCURANCE
+
+MAX_UNLIMITED_SIZE
+
+MAX_TEXT_FIELD_SIZE
+
+GetHeaderInformation
+
+PopulateHeaderInformation
+
+Header_t
+
+DWORD PopulateHeaderInformation(Header_t *header)
+{
+    header->
+    return 0;
+}
+
+DWORD PopulateHeaderInformation(Header_t *header)
+
+DWORD sequencerNumber = 0;
+
+sequenceNumber
+
+PopulateStringField
+
+SRIF-1-Unit-A
+
+Version_t
+
+ICONIS-1-Unit-A
+
+ICONIS-1
+
+MAX_TEXT_FIELD_SIZE
+
+Courier New
+
+message-v0.1
+
+PopulateStringField
+
+data-v0.1
+
+software-v1
+
+Current
+
+2015-01-18T14:54:23.423Z
+
+GetTickCount
+
+PopulateVersionInformation
+
+GetTickCount
+
+Message_t message;
+
+message
+
+#include "tinyxml2.h
+
+	element->InsertEndChild( sub[2] );
+		XMLNode* comment = element->InsertFirstChild( doc->NewComment( "comment" ) );
+		element->InsertAfterChild( comment, sub[0] );
+		element->InsertAfterChild( sub[0], sub[1] );
+		sub[2]->InsertFirstChild( doc->NewText( "& Text!" ));
+		doc->Print();
+
+Envolope
+
+XMLElement* sub[3] = { doc->NewElement( "sub" ), doc->NewElement( "sub" ), doc->NewElement( "sub" ) };
+
+XMLTest( "Programmatic DOM", "comment", doc->FirstChildElement( "element" )->FirstChild()->Value() );
+		XMLTest( "Programmatic DOM", "0", doc->FirstChildElement( "element" )->FirstChildElement()->Attribute( "attrib" ) );
+		XMLTest( "Programmatic DOM", 2, doc->FirstChildElement()->LastChildElement( "sub" )->IntAttribute( "attrib" ) );
+		XMLTest( "Programmatic DOM", "& Text!",
+				 doc->FirstChildElement()->LastChildElement( "sub" )->FirstChild()->ToText()->Value() );
+
+		// And now deletion:
+		element->DeleteChild( sub[2] );
+		doc->DeleteNode( comment );
+
+		element->FirstChildElement()->SetAttribute( "attrib", true );
+		element->LastChildElement()->DeleteAttribute( "attrib" );
+
+		XMLTest( "Programmatic DOM", true, doc->FirstChildElement()->FirstChildElement()->BoolAttribute( "attrib" ) );
+		int value = 10;
+		int result = doc->FirstChildElement()->LastChildElement()->QueryIntAttribute( "attrib", &value );
+		XMLTest( "Programmatic DOM", result, (int)XML_NO_ATTRIBUTE );
+		XMLTest( "Programmatic DOM", value, 10 );
+
+		doc->Print();
+
+		{
+			XMLPrinter streamer;
+			doc->Print( &streamer );
+			printf( "%s", streamer.CStr() );
+		}
+		{
+			XMLPrinter streamer( 0, true );
+			doc->Print( &streamer );
+			XMLTest( "Compact mode", "<element><sub attrib=\"1\"/><sub/></element>", streamer.CStr(), false );
+		}
+		doc->SaveFile( "./resources/out/pretty.xml" );
+		doc->SaveFile( "./resources/out/compact.xml", true );
+
+void CALLBACK IconisTransmitPeriod(UINT wTimerID, UINT msg, DWORD dwUser, DWORD dw1, DWORD dw2)
+
+Message
+
+Signature
+
+	sub[2]->InsertFirstChild( doc.NewText( "& Text!" ));
+
+
+InsertFirstChild
+
+doc.Value();
+
+XMLText* text = doc.FirstChildElement()->FirstChildElement()->FirstChild()->ToText();
+
+ProcessEntities
+
+int example_3()
+{
+	static const char* xml =
+		"<?xml version=\"1.0\"?>"
+		"<!DOCTYPE PLAY SYSTEM \"play.dtd\">"
+		"<PLAY>"
+		"<TITLE>A Midsummer Night's Dream</TITLE>"
+		"</PLAY>";
+
+	XMLDocument doc;
+	doc.Parse( xml );
+
+	XMLElement* titleElement = doc.FirstChildElement( "PLAY" )->FirstChildElement( "TITLE" );
+	const char* title = titleElement->GetText();
+	printf( "Name of play (1): %s\n", title );
+
+	XMLText* textNode = titleElement->FirstChild()->ToText();
+	title = textNode->Value();
+	printf( "Name of play (2): %s\n", title );
+
+	return doc.ErrorID();
+}
+
+example_3
+
+XMLText text = doc.ToText();
+
+XMLNode* comment
+
+Envelope
+
+XMLElement *Message
+
+XMLElement *Signature
+
+XMLElement *Header
+
+XMLElement *Body
+
+  XMLPrinter printer; 
+    doc.Accept(&printer);
+    const char *text = printer.CStr();
+
+Envelope
+
+Envelope->DeleteChildren();
+
+static XMLDocument doc;
+static XMLNode *Envelope;
+static XMLNode* comment;
+static XMLElement *Message;
+static XMLElement *Signature;
+static XMLElement *Header;
+static XMLElement *Body;
+
+ Envelope = doc.InsertEndChild(doc.NewElement("Envolope"));
+   
+	comment = Envelope->InsertFirstChild( doc.NewComment( "comment" ) );
+    Message = doc.NewElement("Message");
+    Signature = doc.NewElement("Signature");
+    Header = doc.NewElement("Header");
+    Message->InsertFirstChild(Header);
+    Body = doc.NewElement("Body");
+    Message->InsertAfterChild(Header, Body);
+    Envelope->InsertFirstChild(Message);
+    
+    Envelope->InsertAfterChild(Message, Signature);
+	
+
+outBuffer
+
+Message->InsertFirstChild(Header);
+    Body = doc.NewElement("Body");
+    Message->InsertAfterChild(Header, Body);
+    Envelope->InsertFirstChild(Message);
+    
+
+Envelope->InsertAfterChild(Message, Signature);
+
+MessageFormat
+
+XMLElement *MessageFormat = doc.NewElement("MessageFormat");
+
+XMLElement* 
+
+doc.NewElement("Data");
+
+   MessageFormat->SetText(message->Header.version.MessageFormat.value);
+        Version->InsertFirstChild(MessageFormat);
+
+Data->SetText(message->Header.version.Data.value);
+        Version->InsertFirstChild(Data);
+
+  if(message->Header.version.MessageFormat.included)
+    {
+        XMLElement* MessageFormat = doc.NewElement("MessageFormat");
+        MessageFormat->SetText(message->Header.version.MessageFormat.value);
+        Version->InsertFirstChild(MessageFormat);
+    }
+
+    if(message->Header.version.Data.included)
+    {
+        XMLElement* Data = doc.NewElement("Data");
+        Data->SetText(message->Header.version.Data.value);
+        Version->InsertFirstChild(Data);
+    }
+
+    if(message->Header.version.Software.included)
+    {
+        XMLElement* Software = doc.NewElement("Software");
+        Software->SetText(message->Header.version.Software.value);
+        Version->InsertFirstChild(Software);
+    }
+
+AddVerionInfoToSMLDocument
+
+//deal with header
+    Version = doc.NewElement("Version");
+     
+
+ XMLDocument doc;
+
+static void AddVerionInfoToSMLDocument(Version_t* version, XMLElement* Version, XMLDocument*  doc)
+
+XMLElement *Current = doc->NewElement("Current");
+        Current->SetText(time->Current.value);
+        Time->InsertEndChild(Current);
+
+AddTimeInfoToSMLDocument
+
+Header->InsertEndChild(Version);
+
+static void
+
+  XMLElement *Version;
+    XMLElement *Time;
+
+ //deal with header
+    Version = doc.NewElement("Version");
+    
+    AddVerionInfoToSMLDocument(&message->Header.version, Version, &doc);
+	Header->InsertEndChild(Version);
+
+    Time = doc.NewElement("Time");
+    AddTimeInfoToSMLDocument(&message->Header.Time, Time, &doc);
+    Header->InsertEndChild(Time);
+
+AddHeaderInformationToXMLDocument
+
+SequenceNumber
+
+XMLElement* SequenceNumber = doc->NewElement("SequenceNumber");
+    SequenceNumber->SetText((unsigned int)header->SequenceNumber);
+    Header->InsertEndChild(SequenceNumber);
+
+ if(header->SourceUnitID.included)
+    {
+        XMLElement* SourceUnitID = doc->NewElement("SourceUnitID");
+        SourceUnitID->SetText(header->SourceUnitID.value);
+        Header->InsertEndChild(SourceUnitID);
+    }
+
+LogicalSourceID
+
+if(header->LogicalSourceID.included)
+    {
+        XMLElement* LogicalSourceID = doc->NewElement("LogicalSourceID");
+        LogicalSourceID->SetText(header->LogicalSourceID.value);
+        Header->InsertEndChild(LogicalSourceID);
+    }
+
+SourceStatus
+
+ if(header->SourceStatus.included)
+    {
+        XMLElement* SourceStatus = doc->NewElement("SourceStatus");
+        SourceStatus->SetText(header->SourceStatus.value);
+        Header->InsertEndChild(SourceStatus);
+    }
+
+SourceLinkStatus
+
+ XMLDocument*  doc
+
+ XMLElement *Current = doc->NewElement("Current");
+        Current->SetText(time->Current.value);
+        Time->InsertEndChild(Current);
+
+PopulateAXMLTextField
+
+Element
+
+doc
+
+Element
+
+PopulateAXMLTextField
+
+"Current"
+
+time->Current.value
+
+ PopulateXMLTextField(Time, doc, 
+
+time->TimeStatus.value
+
+PopulateXMLTextField(
+
+"MessageFormat"
+
+version->MessageFormat.value
+
+PopulateXMLTextField(Version, doc, 
+
+PopulateXMLTextField(
+
+"Time"
+
+PopulateXMLTextField(
+
+PopulateXMLTextField(Header, doc,
+
+DestinationUnitID
+
+PopulateXMLTextField(Header, doc, 
+
+DestinationUnitID
+
+PopulateXMLTextField(Header, doc, "DestinationUnitID", header->DestinationUnitID.value);
+
+LogicalDestinationID
+
+AddHeaderInformationToXMLDocument
+
++		outBuffer	0x056cd400 "<Envolope>
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-01-18T14:54:23.423Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+            </Time>
+            <SequenceNumber>86</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>Master</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body/>
+    </Message>
+    <Signature/>
+    <!--comment-->
+</Envolope>
+"	char *
+
+
+(Header_t* header, XMLElement* Header, XMLDocument* doc)
+
+static void AddHeaderInformationToXMLDocument(Header_t* header, XMLElement* Header, XMLDocument* doc)
+
+AddBodyInformationToXMLDocument
+
+DiagnosticAlarms_t *DiagnosticAlarms
+
+diagnosticAlarms
+
+XMLDocument* doc
+
+AddDiagnostocAlarmsToXML
+
+DiagnosticAlarms
+
+if(body->DiagnosticAlarms != NULL)
+    {
+        XMLElement* DiagnosticAlarms = doc->NewElement("DiagnosticAlarms");
+        AddDiagnostocAlarmsToXML(body->DiagnosticAlarms, DiagnosticAlarms, doc);
+    }
+
+EmergencyAlarms
+
+static void AddDiagnostocAlarmsToXML(DiagnosticAlarms_t *diagnosticAlarms, XMLElement* DiagnosticAlarms, XMLDocument* doc)
+{
+
+}
+
+EmergencyAlarms
+
+AddEmergencyAlarmsToXML
+
+GeneratedAlarms_t
+
+AddGeneratedAlarmsToXML
+
+GeneratedAlarms_t
+
+GeneratedAlarms
+
+Interlocking_limited_t
+
+XMLElement
+
+AddInterlockingToXML
+
+ XMLElement* GeneratedAlarms = doc->NewElement("GeneratedAlarms");
+
+Interlocking
+
+NVFB3_t
+
+NVFB3_t *EmergencyAlarms
+
+AddEmergencyAlarms
+
+XMLElement*
+
+EmergencyAlarms
+
+TD_t
+
+doc->NewElement("
+
+AddTDToXML
+
+AddBodyInformationToXMLDocument
+
++		outBuffer	0x05341d50 "<Envolope>
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-01-18T14:54:23.423Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+            </Time>
+            <SequenceNumber>90</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>Master</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body/>
+    </Message>
+    <Signature/>
+    <!--comment-->
+</Envolope>
+"	char *
+
+
+DiagnosticAlarms
+
+Body->InsertEndChild(DiagnosticAlarms);
+
+GeneratedAlarms
+
+ Body->InsertEndChild(
+
++		outBuffer	0x04526ae8 "<Envolope>
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-01-18T14:54:23.423Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+            </Time>
+            <SequenceNumber>14</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>Master</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body>
+            <DiagnosticAlarms/>
+            <GeneratedAlarms/>
+            <Interlocking/>
+            <EmergencyAlarms/>
+            <TD/>
+        </Body>
+    </Message>
+    <Signature/>
+    <!--comment-->
+</Envolope>
+"	char *
+
+
+diagnosticAlarms->Link->From
+
+PopulateXMLTextField
+
+diagnosticAlarms
+
+outBuffer = 0x03463df8 "<Envolope>
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+          ...
+
++		outBuffer	0x03463df8 "<Envolope>
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-01-18T14:54:23.423Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+            </Time>
+            <SequenceNumber>106</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>Master</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body>
+            <DiagnosticAlarms>
+                <Link>
+                    <From>SRIF-1</From>
+                    <To>IXL-1</To>
+                    <Status>UP</Status>
+                </Link>
+            </DiagnosticAlarms>
+            <GeneratedAlarms/>
+            <Interlocking/>
+            <EmergencyAlarms/>
+            <TD/>
+        </Body>
+    </Message>
+    <Signature/>
+    <!--comment-->
+</Envolope>
+"	char *
+
+
+GeneratedAlarms
+
+osto_length
+
+XMLElement *OSTO = doc->NewElement("OSTO");
+
+Track1
+
+ PopulateXMLTextField(OSTO, doc, "Track1", generatedAlarms->OSTO[n].Track1.value);
+
+GenericAlarm
+
+MAX_UNLIMITED_SIZE
+
+GenericAlarms_unbounded_t
+
+GeneratedAlarms->InsertEndChild(
+
+Interlocking
+
+UniqueID
+
+        PopulateXMLTextField(Interlocking_, doc, "interlocking->Interlocking[n].UniqueID
+
+
+UniqueID
+
+PopulateXMLTextField(Interlocking_, doc, "
+
+XMLElement *Interlocking_ = doc->NewElement("Interlocking");
+
+Interlocking->InsertEndChild(Interlocking_);
+
+interlocking->Interlocking[n].SPAD
+
+PopulateXMLTextField
+
+interlocking->Interlocking[n].SPAD.SPAD[k].SPADData
+
+SPADData
+
+SPAD->InsertEndChild(SignalMap);
+
+SignalID
+
+(XMLElement* Element, XMLDocument*  doc, const char* fieldName, const char* fieldValue)
+
+PopulateXMLTextField(
+
+fieldBuffer
+
+PopulateXMLIntField
+
+Signal
+
+PopulateXMLTextField
+
+PopulateXMLTextField(SPADData, doc, "Signal", interlocking->Interlocking[n].SPAD.SPAD[k].SPADData.SPADData[m].Signal.value);
+
+Interlocking_
+
+Indications
+
+interlocking->Interlocking[n]
+
+PopulateXMLTextField(Interlocking_, doc, "Indications", interlocking->Interlocking[n].Indications.value);
+
+ControlRequests
+
+MAX_UNLIMITED_SIZE
+
+ControlRequestRejected_unbounded_t
+
+interlocking->Interlocking[n].ControlRequestRejected
+
+ControlRequestRejected
+
+Interlocking_->InsertEndChild(
+
+ControlRequestRejected
+
+RequestNumber
+
+ControlRequestRejected
+
+RejectReason
+
+interlocking->Interlocking[n].ControlRequestRejected.ControlRequestRejected[k].
+
+ARSSubAreaStatus
+
+interlocking->Interlocking[n].ARSSubAreaStatus
+
+ARSDisableSubArea
+
+interlocking->Interlocking[n].ARSDisableSubArea
+
+PopulateXMLIntField
+
+arsSubAreaID
+
+5.2.1.7.9	arsSubAreaID
+
+ARSDisableSubArea
+
+interlocking->Interlocking[n].ARSDisableSubArea
+
+Interlocking_->InsertEndChild(
+
+ARSDisableSubArea
+
+PopulateXMLTextField
+
+StatusByte
+
+interlocking->Interlocking[n].StatusByte
+
+PopulateXMLTextField
+
+emergencyAlarms
+
+TD
+
+XMLElement *Interpose = doc->NewElement("Interpose");
+
+
+
+
+XMLElement *Interpose = doc->NewElement("Interpose");
+
+ //add interpose
+    TD->InsertEndChild(Interpose);
+
+PopulateXMLTextField
+
+TrainID
+
+td->Interpose.Interpose[n].TrainID
+
+PopulateXMLTextField(Interpose, doc, "TrainID", td->Interpose.Interpose[n].TrainID.value);
+
+ for(n = 0; n < td->Clear.length; n++)
+    {
+
+td->Clear.Clear[n].Berth
+
+PopulateXMLTextField
+
+td->Step.Step[n].TrainID
+
+if(td->Step.Step[n].FromBerth.included)
+
+PopulateXMLTextField(Step, doc, "
+
+td->Step.Step[n].FromBerth.value
+
+message.Body.DiagnosticAlarms
+
+DiagnosticAlarms_t
+
+ZeroMemory(message.Body.DiagnosticAlarms, sizeof(DiagnosticAlarms_t));
+
+message.Body.Interlocking
+
+Interlocking_limited_t
+
+message.Body.EmergencyAlarms
+
+message.Body.TD
+
+    outBuffer = (char *)printer.CStr();
+
+
++		outBuffer	0x04499680 "<Envolope>
+    <Message>
+        <Header>
+            <Version>
+                <MessageFormat>message-v0.1</MessageFormat>
+                <Data>data-v0.1</Data>
+                <Software>software-v1</Software>
+            </Version>
+            <Time>
+                <Current>2015-01-18T14:54:23.423Z</Current>
+                <TimeStatus>SYNCHRONISED</TimeStatus>
+            </Time>
+            <SequenceNumber>25</SequenceNumber>
+            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+            <LogicalSourceID>SRIF-1</LogicalSourceID>
+            <SourceStatus>Master</SourceStatus>
+            <SourceLinkStatus>UP</SourceLinkStatus>
+            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+        </Header>
+        <Body>
+            <DiagnosticAlarms>
+                <Link>
+                    <From>SRIF-1</From>
+                    <To>IXL-1</To>
+                    <Status>UP</Status>
+                </Link>
+            </DiagnosticAlarms>
+            <GeneratedAlarms>
+                <OSTO>
+                    <Track1>T123</Track1>
+                    <Track2>T124</Track2>
+                </OSTO>
+                <GenericAlarm>
+                    <GenericAlarm>Free Text Alarm</GenericAlarm>
+                </GenericAlarm>
+            </GeneratedAlarms>
+            <Interlocking>
+                <Interlocking>
+                    <UniqueID>UK//York//IXL//001//OF</UniqueID>
+                    <SSIID>0F</SSIID>
+                    <SPAD>
+                        <SignalMap>
+                            <SignalMap>MTIzNDU2Nzg5MA==</SignalMap>
+                        </SignalMap>
+                        <SPADData>
+                            <SignalID>16</SignalID>
+                            <Signal>S123</Signal>
+                            <Track>T123</Track>
+                        </SPADData>
+                    </SPAD>
+                </Interlocking>
+            </Interlocking>
+            <EmergencyAlarms>
+            	char *
+
+
+Envelope
+
+subtree
+
+TiXmlDeclaration* decl = new TiXmlDeclaration( "1.0", "", "" );
+
+TIXMLASSERT( _textPool.CurrentAllocs()      == _textPool.Untracked() );
+
+void AddLength(BYTE *buffer, int length)
+
+BigEndianToLittle
+

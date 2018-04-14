@@ -1,0 +1,107 @@
+IDC_BUTTON_SEND_TI_BAD_LENGTH
+
+IDC_BUTTON_SEND_SPAD_NO_SIGNAL
+
+IDC_BUTTON_SEND_SPAD_NO_TRACK
+
+IDC_BUTTON_SEND_CA
+
+IDC_BUTTON_SEND_CA_BAD_LENGTH
+
+IDC_BUTTON_SEND_CA_BAD_B1
+
+IDC_BUTTON_SEND_CA_BAD_B2
+
+IDC_BUTTON_SEND_CA_BAD_TRAIN
+
+IDC_BUTTON_SEND_CB
+
+IDC_BUTTON_SEND_CB_BAD_LENGTH
+
+IDC_BUTTON_SEND_CB_BAD_BERTH
+
+IDC_BUTTON_SEND_CC_BAD_LENGTH
+
+IDC_BUTTON_SEND_CC_BAD_BERTH
+
+IDC_BUTTON_SEND_CC_BAD_TRAIN
+
+IDC_BUTTON_SEND_ARS
+
+IDC_BUTTON_SEND_GA
+
+IDC_EDIT_GENERIC_TEXT
+
+ClearAllButton
+
+logpointCount
+
+*****************************LOGPOINT*****************************"
+
+logpointCount
+
+DALinkFromTextBox
+
+DestinationUnitIDTextBox
+
+public static void EmptyTextBoxes(Control parent)
+    {
+     foreach (Control c in parent.Controls) {
+       if (c.GetType() == typeof(TextBox))
+       {
+         ((TextBox)(c)).Text = string.Empty;
+       }
+    }
+
+groupBox2
+
+*****************************LOGPOINT%d*****************************
+
+1639 
+
+MasterORStandby
+
+BOOL MasterORStandby 
+
+if(MasterORStandby == TRUE)  //this stuff only gets sent to the MCS if we are the MASTER in standby we dont care
+    {
+
+extern BOOL MasterORStandby;
+
+MasterORStandby
+
+starteam://tspukwgapp01:49201/348;ns=Project;scheme=id/396;ns=View;scheme=id/
+
+starteam://tspukwgapp01:49201/348;ns=Project;scheme=id/396;ns=View;scheme=id/958960;ns=Folder;scheme=id;scope=full/
+
+?Service Provider Notice
+Period?
+no entitlement to give notice;
+
+24 Mar 2016 or (if earlier) the date on which the G2
+Notice Period or the Service Provider Notice Period (if
+applicable) expires or such other date a
+
+as G2 and the
+Service Provider may agree in writing;
+
+F1	Print Stats about the current session.
+F2	Start Input Logging
+F3	Start Output Logging
+F4	Print Connection Information
+F5	Unused
+F6	Unused
+F7	Test GUI interface (only available in debug mode)
+F8	Unused
+F9	Unused
+F10	Unused
+F11	Clear screen
+F12	Inject a marker into log (for debugging use)
+
+
+Dan.Perrett@sigsol.onmicrosoft.com
+
+1639 
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF-V1003preRelease.zip
+

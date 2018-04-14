@@ -1,0 +1,2 @@
+enData = remoteClipboard.getAccessRights(store.Username, store.getPassword(r), true, r);
+

@@ -1,0 +1,201 @@
+Torque settings
+
+[Engine] [MEMS] [Cooling] [Manifold and Exhaust] [Clutch] [Gearbox] [Drive Shafts] [Steering] [Suspension] [Brakes] [SRS] [Body] [Heating&Ventilation] [Aircon] [Wipers] [Electrical]
+ 
+Bolt/fixing 	Nm 	ft.lb
+
+Engine
+Camshaft cover bolts 	9 	7
+Camshaft gear bolt
+8mm bolt
+10mm bolt 	
+33
+65 	
+24
+48
+Crankshaft pulley bolt 	205 	151
+Cylinder head bolts
+tighten progressively
+1st stage
+2nd stage
+3rd stage 	
+
+20
+180 degrees
+180 degrees 	 
+
+15
+180 degrees
+180 degrees
+Flywheel to crankshaft bolks 	85 	63
+Oil Pressure switch 	12 	9
+Sump bolts 	10 	7
+Sump to gearbox bolts 	45 	33
+Sump drain plug 	25 	18
+Tensioner pulley backplate bolt 	10 	7
+Tensioner pulley Allen screw 	45 	33
+Timing belt, front top cover 	9 	7
+Timing belt, front lower cover 	9 	7
+Timing belt, rear cover to coolant pump 	10 	7
+ 
+
+Engine mountings
+	  	 
+RH mounting to butress 	82 	60
+RH mounting to RH upper longitudinal 	45 	33
+Butress LH to subframe 	45 	33
+Upper & Lower RH mounting bracket to engine 	60 	44
+Bridge bracket to RH mounting bracket 	155 	114
+Bridge bracket assembly to upper tie bar 	88 	65
+Upper tie bar to RH longitudinal 	88 	65
+Lower tie bar to RH upper longitudinal 	100 	74
+Lower tie bar to sump bracket 	100 	74
+Bracket to sump 	80 	59
+LH mounting to LH upper longitudinal 	80 	59
+LH mounting to gearbox 	48 	35
+LH mounting to engine 	45 	33
+
+Denise Borromeo
+
+https://beeznest.wordpress.com/2008/04/25/how-to-configure-https-on-apache-2/
+
+ /etc/ssl/certs/
+
+/etc/ssl/certs
+
+ 
+
+openssl req -new -x509 -days 365 -keyout key/vhost1.key -out crt/vhost1.crt -nodes -subj  ?/O=VirtualHost Website Company name/OU=Virtual Host Website department/CN=
+
+openssl req -new -x509 -days 365 -keyout key/vhost1.key -out crt/vhost1.crt -nodes -subj  ?/O=VirtualHost Website Company name/OU=Virtual Host Website department/CN=www.virtualhostdomain.com?
+
+openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
+
+openssl x509 -text -noout -in certificate.pem
+
+openssl pkcs12 -inkey key.pem -in certificate.pem -export -out certificate.p12
+
+openssl pkcs12 -in certificate.p12 -noout -info
+
+/etc/apache2/key
+
+authn_socache.load
+
+cache_socache.load
+
+socache_dbm.load
+
+socache_memcache.load
+
+socache_shmcb.load
+
+socache_memcache.load
+
+socache_dbm.load
+
+cache_socache.load
+
+authn_socache.load
+
+ssl.load
+
+ssl.conf
+
+socache_shmcb.load
+
+
+root@ns3069374:/etc/apache2/mods-enabled# ln -s ../mods-available/socache_shmcb.load
+
+socache_shmcb.load
+
+workers.tomcat_home
+
+Codinggain
+
+a
+
+ClipboardConnection
+
+AudioService
+
+:11 ..
+lrwxrwxrwx   1 root root   33 Oct 31  20
+
+/etc/alternatives/java
+
+        JkMount /ClipboardConnection* ajp13_worker
+
+
+/ClipboardConnection
+
+        JkMount /ClipboardConnection* ajp13_worker
+
+
+t
+5269/tcp open  xmpp-server
+
+ http://localhost:8080/DatabaseInterface/services/DatabaseInterface?wsdl
+
+DatabaseInterface
+
+https://www.danperrett.com/DatabaseInterface/services/DatabaseInterface?wsdl
+
+ServicePointManager
+    .ServerCertificateValidationCallback += 
+    (sender, cert, chain, sslPolicyErrors) => true;
+
+ServerCertificateValidationCallback 
+
+ServicePointManager
+
+ServicePointManager
+    .ServerCertificateValidationCallback += 
+    (sender, cert, chain, sslPolicyErrors) => true;
+
+https://www.danperrett.com/DatabaseInterface/services/DatabaseInterface?wsdl
+
+Bp270h
+
+LGC 106970LGC 106970
+
+K Sport
+
+LGC106970
+
+10777610
+
+C:\Users\Daniel\Downloads\www.codinggain.com_private_key.key
+
+openssl req 
+
+/etc/apache2/sites-available
+
+/etc/apache2/
+
+/etc/apache2/certs
+
+
+
+
+/etc/apache2/certs
+
+codinggain.csr 
+
+/etc/apache2/certs
+
+www.codinggain.com_private_key.key
+
+www.codinggain.com
+
+        ServerName www.codinggain.com
+
+
+       SSLCertificateFile     /etc/apache2/certs/codinggain.csr
+                SSLCertificateKeyFile  /etc/apache2/certs/www.codinggain.com_private_key.key
+
+
+http://prosody.im/doc/creating_accounts
+
+p = Runtime.getRuntime().exec("host -t a " + domain);
+    p.waitFor();
+

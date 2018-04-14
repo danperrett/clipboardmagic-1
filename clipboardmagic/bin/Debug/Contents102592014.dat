@@ -1,0 +1,140 @@
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\SAS\Common\SASRemoteUserPlaneApp.exe
+
+  string text = GetUserText(userdata, codingScheme, concatonated);
+            //check the length
+            int length = GetMOUserTextLength();
+            if (text.Length > length)
+            {
+                text = text.Substring(0, GetMOUserTextLength());
+            }
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\SAS\Common\SMSManagedWrapper_R10_03_2012.dll
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\SAS\Common\SMSUtils.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSManagedWrapper_R10_03_2012.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSUtils.dll
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\LteInteractive.zip
+
+72324
+
+     int CP_DATA_PDU_::GetMOUserTextLength()
+     {
+         int ret = 0;
+         if(m_pdu)
+         {
+             ret = m_pdu->CPdata.rpdata.rpusrdat.tpsubmit.udl.GetValue();
+         }
+         return ret;
+     }
+
+
+        array<Byte> ^GetMTUserText();
+
+        int GetMTUserTextLength();
+
+
+        public int GetMOUserTextLength()
+        {
+            int ret = 0;
+            if (cp_data != null)
+            {
+                ret = cp_data.GetMOUserTextLength();
+            }
+
+            return ret;
+        }
+
+
+        private string GetUserText(byte[] userdata, int codingScheme, bool concatonated, bool bUserHeaderPresent)
+
+
+        public string GetMTProtocolIdentifier()
+        {
+            string _ret = "";
+
+            int ProtocolIdentifier = 0;
+
+            if (cp_data != null)
+            {
+                ProtocolIdentifier = cp_data.GetMTProtocolIdentifier();
+                _ret = Convert.ToString(ProtocolIdentifier, 2);
+            }
+            return _ret;
+        }
+
+        public bool SetMTUserHeaderText(string text, bool userHeaderPresent)
+        {
+            bool _ret = false;
+            byte[] _out = new byte[1];
+            if (cp_data != null)
+            {
+                Hex _dec = new Hex(_out);
+                cp_data.SetMTUserHeaderText(text, userHeaderPresent);
+                _ret = true;
+            }
+            return _ret;
+        }
+
+
+            int length = GetMOUserTextLength();
+            if (text.Length > length)
+            {
+                text = text.Substring(0, GetMOUserTextLength());
+            }
+
+
+            return GetUserText(userdata, codingScheme, false, bUserHeaderPresent);
+
+
+                 if (bUserHeaderPresent)
+                 {
+                     NumberOfFillBits = cp_data.CalculateNumberOfFillBits();
+                 }
+
+
+                        GSM7Encoder.DecodeGSM7Default(_bytes, out _out, NumberOfFillBits, bUserHeaderPresent);
+
+
+            int messagelength = 0;
+
+
+                            if (numberOfFillBits > 0)
+                            {
+                                messagelength = text.Length;
+                            }
+
+                            GSM7Encoder.EncodeGSM7Default(text, text.Length, out _out, out length, false, numberOfFillBits);
+                            Hex _dec = new Hex(_out);
+                            cp_data.SetMTUserText(_dec.ToString(), messagelength);
+
+
+                            Hex _dec = new Hex(_out);
+                            cp_data.SetMTUserText(_dec.ToString(), messagelength);
+                            _ret = true;
+                        }
+                        break;
+                    case 2:
+                        {
+                            code = 0x4 | classMark;
+                            codingGroup = 15;
+                            cp_data.SetMTUserText(text, text.Length);
+                        }
+
+
+            cp_data.SetMTCodingScheme(code);
+            cp_data.SetMTCodingGroup(codingGroup);
+
+
+        public bool GetMTUserDataHeaderIncluded()
+        {
+            return cp_data.MTUserDataHeaderIncluded();
+        }
+
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSManagedWrapper_R10_03_2012.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SAS\Common\SMSUtils.dll
+

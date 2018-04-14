@@ -1,0 +1,320 @@
+Properties
+
+
+			//AdapterUtility.ps(logger, "\t'" + keyStr + "'");
+
+port
+
+Integer.parseInt("
+
+port
+
+System.out.println("Hello World");
+
+new String[5] =
+
+Random _r = new Random(4);
+
+? Faults Hardware and software when they occur, where they are from (specific street information) and when they cleared (New Faults and Fixed Fault information).
+ What sort of faults can you provide for us and we will need a specific fault code table, if there is any codes.
+
+
+Faults including Communication faults: 
+Camera to Instation
+Instation to JTMS
+Hardware Faults:
+	Camera
+	Instation
+	JTMS
+
+
+ 
+
+Hi Peter,
+  In answer to your questions
+?	We?d like to see  Hardware and software faults when they occur, where they are from (specific street information) and when they cleared (New Faults and Fixed Fault information). What sort of faults can you provide for us and we will need a specific fault code table, if there is any codes?
+StartTime and EndTime TTU format, times to have a resolution of minutes, seconds not necessary. 
+?	Fault information for any component from the Street to the ANPR JTMS system are needed.
+Faults including Communication faults: 
+Camera to Instation
+Instation to JTMS
+Hardware Faults:
+                                Camera
+                                Instation
+                                JTMS
+?	Below is a general diagram describing the interface
+
+
+ 
+
+?	We don?t like the idea of login in  to a database to retrieve fault information but we?d like if possible an XML web interface that we can request information from, we could periodically poll the interface so it will need to keep a certain level of historical faults that have occurred so that none are missed.  This will probably need to be hammered out a bit more once we find out what sort of fault information you can supply us with.
+
+Thanks.
+
+Dan Perrett
+01256891814
+
+
+
+images
+
+0
+
+ ChatManager chatm = ChatManager.getInstanceFor(conn);
+        chatm.addChatListener(new ChatManagerListener() 
+        {
+
+			@Override
+			public void chatCreated(Chat chat, boolean arg1) 
+			{
+				// TODO Auto-generated method stub
+				 chat.addMessageListener(new ChatMessageListener()
+			     {
+
+					@Override
+					public void processMessage(Chat arg0, Message arg1) 
+					{
+						    System.out.println("Message: " + arg1.getBody());
+							
+					}
+			     });
+				
+			}
+		});
+
+chat = ChatManager.getInstanceFor((XMPPConnection)connection).createChat("clearview@localhost");
+        	
+        	chat.sendMessage("s");
+
+/*
+
+if(To == "dan")
+				 {
+					 
+				
+
+Device: KLtest
+Type: Time synchronisation request
+Time: 2016-06-08 07:35:08
+
+No time zone for device
+
+Device: M720_Insight
+Category: Device Faults
+Type: GPRS/Ethernet Connection Failure
+Time: 2016-06-08 07:47:19
+
+9430
+
+Device: M720_Insight
+Category: Device Faults
+Type: GPRS/Ethernet Connection Failure
+Time: 2016-06-08 07:47:19
+
+ Set<ChatMessageListener> chats = chat.getListeners();
+				 chats.clear();
+
+String
+
+// TODO Auto-generated method stub
+
+Category
+
+information
+
+keyValue[1].replaceAll("\\s+", "")
+
+		inputManager.ReceivedMessage(fault, id);
+
+Kind regards / Met vriendelijke groet / Lijepi pozdrav / Z powa?aniem / Med venlig hilsen / Med v?nlig h?lsning,
+
+Tina Turner 
+Senior Software Engineer  ? ImCity Architect ? Innovation and Professional Services
+T. +44(0) 1256 891836 M. +44(0) 77 3340 3677  | E. tina.turner@dynniq.co.uk |   tina.turner.peek
+
+
+INSERT INTO DETECTOR_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION, EQUIPMENTFAULT) VALUES ("1", "111", TO_DATE('06/06/2006', 'mm/dd/yyyy'), 2, 3, "test", 1, )
+
+INSERT INTO "ADMINUTMC"."DETECTOR_FAULTS" (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('M720_Insight', TO_DATE('2016-06-08 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2016-06-08 12:00:30', 'YYYY-MM-DD HH24:MI:SS'), '525', '10000', '12345', 'y', 'n', 'a test')
+
+
+INSERT INTO \"ADMINUTMC\".\"DETECTOR_FAULTS\" (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('M720_Insight', TO_DATE('2016-06-08 13:20:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2016-06-08 12:00:30', 'YYYY-MM-DD HH24:MI:SS'), '525', '10000', '12345', 'y', 'n', 'a test')";
+
+INSERT INTO DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('M720_Insight', TO_DATE('2016-06-08 13:31:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2016-06-08 12:00:30', 'YYYY-MM-DD HH24:MI:SS'), '525', '10000', '12345', 'y', 'n', 'a test')
+
+ADMINUTMC
+
+ORA-02291: integrity constraint (ADMINUTMC.FK_DETECTORFAULTS) violated - parent key not found
+
+SELECT * FROM DETECTOR_DEFINITION where SYSTEMCODENUMBER='M720_Insight';
+
+EFINITION 
+
+INSERT INTO "ADMINUTMC"."DETECTOR_FAULTTYPE" (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) VALUES ('110', '1', 'A test', '10000')
+
+ORA-02291: integrity constraint (ADMINUTMC.FK_DETECTORFAULTTYPES) violated - parent key not found
+
+"INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('M720_Insight', TO_DATE('2016-06-08 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2016-06-08 12:00:30', 'YYYY-MM-DD HH24:MI:SS'), 525, 10000, '12345', 'y', 'n', 'a test')";
+
+"INSERT INTO ADMINUTMC.DETECTOR_FAULTTYPE (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) VALUES ('111', '1', 'A test', '10000')";
+
+SELECT * FROM DETECTOR_FAULTS where SYSTEMCODENUMBER='M720_Insight'";
+
+
+		return diagInt;
+
+	String sqlCommand = "INSERT INTO ADMINUTMC.DETECTOR_FAULTTYPE (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) VALUES ('111', '1', 'A test', '10000')";
+
+					//String sqlCommand = "SELECT * FROM DETECTOR_FAULTS where SYSTEMCODENUMBER='M720_Insight'";
+					CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+					// Update changes to existing device if INSERT failed
+					if ( queryResults.getWarnings() != null ) 
+					{
+						if ( queryResults.getWarnings().value.length > 0 ) 
+						{
+							CorbaSQLWarning[] warning = queryResults.getWarnings().value;
+							for (CorbaSQLWarning cw : warning) 
+							{
+								int code = cw.errorCode;
+								if ( code == AdapterConstant.ONE) 
+								{
+									// Perform Update as Insert failed
+								}
+							}
+						}
+					}
+
+String sqlCommand = "INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('M720_Insight', TO_DATE('2016-06-08 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2016-06-08 12:00:30', 'YYYY-MM-DD HH24:MI:SS'), 525, 10000, '12345', 'y', 'n', 'a test')";
+
+"INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('
+
+%1$s
+
+'YYYY-MM-DD HH24:MI:SS')
+
+TO_DATE('2016-06-08 12:00:30', 'YYYY-MM-DD HH24:MI:SS')
+
+525,
+
+INSERT INTO ADMINUTMC.DETECTOR_FAULTTYPE (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) VALUES ('111', '1', 'A test', '10000')"
+
+/
+
+incomingfault
+
+String sqlCommand = 
+							String.format("INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('%1$s', TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS'),  TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS'), %4$s, %5$s, '%6$s', '%7$s', %8$s', '%9$s'", incomingfault.Device, fault.getCreationDate(), incomingfault.Time, incomingfault.Fault, "10000", "12345", "y", "n", "a test" );
+
+incomingfault
+
+String.format("INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('%1$s', TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS'),  TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS'), %4$s, %5$s, '%6$s', '%7$s', '%8$s'", incomingfault.Device, fault.getCreationDate(), incomingfault.Time, incomingfault.Fault, "10000", "12345", "y", "n" );
+
+String.format("INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('%1$s', TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS'),  TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS'), %4$s, %5$s, '%6$s', '%7$s', %8$s', '%9$s'", incomingfault.Device, fault.getCreationDate(), incomingfault.Time, incomingfault.Fault, "10000", "12345", "y", "n",  );
+
+INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('M720_Insight', TO_DATE('Wed Jun 08 15:46:04 BST 2016', 'YYYY-MM-DD HH24:MI:SS'),  TO_DATE('2016-05-25 14', 'YYYY-MM-DD HH24:MI:SS'), , 10000, '12345', 'y', 'n'
+
+INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('M720_Insight', TO_DATE('Wed Jun 08 16:14:21 BST 2016', 'YYYY-MM-DD HH24:MI:SS'),  TO_DATE('2016-05-25 14', 'YYYY-MM-DD HH24:MI:SS'), 525, 10000, '12345', 'y', 'n'
+
+INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, LASTUPDATED, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('M720_Insight', TO_DATE('Wed Jun 08 16:16:17 BST 2016', 'YYYY-MM-DD HH24:MI:SS'),  TO_DATE('2016-05-25 14', 'YYYY-MM-DD HH24:MI:SS'), 525, 10000, '12345', 'y', 'n')
+
+INSERT INTO DETECTOR_FAULTTYPE (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) VALUES ('116', '1', 'A test', '10000')
+
+connection.login("clearviewadapter", "imcity");
+
+SmackException: SASL Authentication failed. No known authentication mechanisims.
+
+FaultTypeTable.
+
+ URL oracle = new URL("http://www.oracle.com/");
+
+Dynniq UK Ltd | Hazelwood House | Lime Tree Way | Chineham Business Park | Basingstoke | RG24 8WZ
+T  +44 1256  891800 | www.dynniq.co.uk 
+
+
+configArgsIn
+
+
+        XMPPConnection conn = connection;
+
+					String sqlCommand = "INSERT INTO ADMINUTMC.DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('M720_Insight', TO_DATE('2016-06-09 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), 525, 10000, '12345', 'y', 'n', 'a test')";
+
+
+M720_Insight
+
+ (ADMINUTMC.FK_DETECTORFAULTS_1) violated - parent key not 
+
+ADMINUTMC
+
+INSERT INTO DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('ATC3', TO_DATE('2016-06-09 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), 525, 1, '12345', 'y', 'n', 'a test')
+
+A
+
+INSERT INTO DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('ATC3', TO_DATE('2016-06-09 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), 111, 10000, '12345', 'y', 'n', 'a test')
+
+cdbusername=master03
+
+
+SQL_INS_PRO_DEF
+
+// TODO Auto-generated method stub
+
+108622 31010
+
+Thread
+
+X:\development\imcitydevelopment\3-Workspace
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-jid-0.4.1-alpha1.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-util-cache-0.2.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\kxml2-2.3.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-core-0.4.1.jar
+
+String sqlCommand = "INSERT INTO DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('ATC3', TO_DATE('2016-06-09 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), 111, 10000, '12345', 'y', 'n', 'a test')";
+
+void
+
+https://insight.clearviewtraffic.com/api/feed/1623/json?username=merseybridge&password=XKxEff8fUxQ9XVn&start_time=20160320010000&end_time=20160322010000
+
+URL oracle = new URL("http://www.oracle.com/");
+
+oracle
+
+URLConnection yc = oracle.openConnection();
+        BufferedReader in = new BufferedReader(new InputStreamReader(
+                                    yc.getInputStream()));
+
+String inputLine;
+        while ((inputLine = in.readLine()) != null) 
+            System.out.println(inputLine);
+        in.close();
+
+https://insight.clearviewtraffic.com/api/feed/1623/json?username=merseybridge&password=XKxEff8fUxQ9XVn&start_time=20160320010000&end_time=20160322010000"
+
+Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>; Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>
+
+
+				"https://insight.clear
+
+org.jivesoftware.smack.sasl.SASLErrorException: SASLError using PLAIN: not-authorized
+
+INSERT INTO DETECTOR_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT, DESCRIPTION) VALUES ('ATC3', TO_DATE('2016-06-09 14:04:00', 'YYYY-MM-DD HH24:MI:SS'), 111, 10000, '12345', 'y', 'n', 'a test')";
+
+pt-sr-uk-tt-058.peek.prv
+
+imcity
+
+fault.setFaultId("test: " + incomingfault.ID);
+
+incomingfault
+
+SYSTEMCODENUMBER
+
+'mm/dd/yyyy'
+
+/getPictureProjects?id=danperre
+
+8000
+

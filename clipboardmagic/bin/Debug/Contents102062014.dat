@@ -1,0 +1,154 @@
+void __fastcall TPlaybackThread::HandlePlaybackTerminated(const char * Message, FailReason reason)
+
+
+HandlePlaybackTerminated
+
+CONTROL_INTERFACE::SetSASModeAsPlayback();
+
+bLogToRTT = false;
+
+// if we terminate then the RTT gets a specific ERROR message
+        // with the string we pass above, so do not log a separate message to the RTT
+
+ // delete the copy of the commandobject
+    delete pCopyCommandObject;
+    pCopyCommandObject = NULL;
+
+HandleScriptTerminated
+
+ PB_DEBUGLOG("HandleScriptTerminated() entered")
+
+HandlePlaybackTerminated
+
+   m_bMSActive = false;
+
+DoWaitCellActive
+
+DoWaitForEvent
+
+//read back for test
+
+ErrorProcessingResults
+
+TCommonFormControls::
+
+TCommonFormControls::ErrorNone
+
+stLayer3Sequence * L3ProcedureEncDec::Create_Empty_ProgrammingProcedureWithData(PROCEDURE_TYPE L3LogType, stLayer3Data *data)
+
+
+    if(GetNumberOfVariables(VAR_TYPE_STORE_MSG) == 0)
+
+
+    if ((expression->Var1.VarType == VAR_TYPE_STRING) && (strcmp(expression->Var1.VarName, "") > 0))
+
+
+    if((expression->Var2.VarType == VAR_TYPE_STORE_MSG) && (strcmp(expression->Var2.VarName, "") > 0))
+
+
+Create_Empty_ProgrammingProcedureWithData
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2007. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/05/22 18:15:15BST $
+ * $Revision: 1.80 $
+ * $Source: src/L3pEncDec/Misc_L3ProcedureEncDec.cpp $
+ *
+ ****************************************************************************/
+
+67699
+
+pathType
+
+string currentDirectory
+
+
+
+
+string currentDirectory
+
+"RelativeToScriptLocation":
+
+"RelativeToUTRAN_GERANDirectory":
+
+UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+
+currentDirectory
+
+C:\\SAS\\LTE-Interactive-46.0-cs28\\Code\\SASLTEProgrammedPlayEditor
+
+..\\..\\Configuration\\User Configuration\\Scenario Library\\default.sro
+
+UserPreferences.FolderPreferences.ScriptRootDir
+
+string scriptDirectory
+
+currentScriptLocation
+
+CurrentScriptLocation
+
+userPreferences.CurrentScriptLocation
+
+folderPref = UserPreferences.CurrentScriptLocation;
+
+UserPreferences.CurrentScriptLocation;
+
+  if ((fullPathRadio.Checked == true) && (pathType != "Full"))
+            {
+                string filename = scenarioPath.Text;
+                string fullPath = folderPref + "\\" + filename;
+                fullPath = DIR.GetFileFullPath(false, fullPath);
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                scenarioPath.Text = fullPath;
+                pathType = "Full";
+            }
+
+    if (scriptsRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string fullPath;
+                if (pathType != "Full")
+                {
+                    fullPath = folderPref + "\\" + filename;
+                    fullPath = DIR.GetFileFullPath(false, fullPath);
+                }
+                else
+                {
+                    fullPath = filename;
+                }
+                if (String.IsNullOrEmpty(UserPreferences.DefaultScript) || !System.IO.File.Exists(UserPreferences.DefaultScript))
+                {
+                    folderPref = UserPreferences.FolderPreferences.ScriptRootDir;
+                }
+                else
+                {
+                    folderPref = System.IO.Path.GetDirectoryName(UserPreferences.DefaultScript);
+                }         
+                setScenarioPath(filename, folderPref, fullPath);
+
+                pathType = "RelativeToScriptLocation";
+            }
+
+ if (rootRadio.Checked == true)
+            {
+                string filename = scenarioPath.Text;
+                string fullPath;
+                if (pathType != "Full")
+                {
+                    fullPath = folderPref + "\\" + filename;
+                    fullPath = DIR.GetFileFullPath(false, fullPath);
+                }
+                else
+                {
+                    fullPath = filename;
+                }
+                folderPref = UserPreferences.FolderPreferences.SASScenarioFileRootDir;
+                setScenarioPath(filename, folderPref, fullPath);
+
+
+                pathType = "RelativeToUTRAN_GERANDirectory";
+            }
+

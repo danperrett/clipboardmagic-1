@@ -1,0 +1,256 @@
+text
+
+ DateTime _now = DateTime.Now;
+            string file = "Contents" + _now.Hour + _now.Day + _now.Month + _now.Year + ".dat";
+            FileStream _file = new FileStream(file, FileMode.CreateNew, FileAccess.Write);
+            string clipboard = clipboardText.Text;
+           
+
+DoWaitForAnyMessage
+
+WaitForAnyMessage
+
+MatchWaitForProcedure
+
+string matchMessage = "";
+                                    if (MatchWaitForProcedure(message, ref matchMessage))
+                                    {
+                                        WaitForProcedureComplete(true, m_WaitForProcedureIndex, matchMessage);
+                                    }
+                                    else
+                                    {
+                                        WaitForProcedureComplete(false, m_WaitForProcedureIndex, matchMessage);
+                                    }
+                                    m_RxMsgWaitingState = RxMsgWaitingState.NotWaiting;
+
+ case RxMsgWaitingState.WaitForAnyMessage:
+
+    case RxMsgWaitingState.WaitForAnyMessage:
+
+lock (m_L3PEventMutex)
+            {
+                RetVal = InternalWaitForProcedure(_ElementIndex, ProcedureName, _Rat, _CellId, variable);
+            }
+
+Cell_ID_enum.A
+
+updateCellIdVariable
+
+m_WaitForTimer
+
+WaitForAnyMessage
+
+RxMsgWaitingState
+
+Cell_ID_enum.A
+
+
+WaitForAnyMessage
+
+ m_RxMsgWaitingState = RxMsgWaitingState.WaitForProcedureWaiting;
+
+SendMsg
+
+SendTheMessage
+
+pszMessage
+
+Data
+
+SendTheMessage
+
+WM_SAS_SILENT_MESSAGE
+
+pszMessage
+
+63154
+
+pReceivedMessage
+
+DoWaitForAnyMessage
+
+ProtocolDiscriminator
+
+pReceivedMessage->
+
+Layer3MessageType
+
+Var2.VarName
+
+expression->Var1.VarName = NULL;
+
+SetMTButtonClick
+
+TProgCmdForm
+
+InsertIfMenuItemClick
+
+oAEtsnLe  
+
+oAEtsnLe
+
+HandleIF_ELSEIF_MT
+
+ProcessExpectedMessageReceived_PROGRAM_COMMAND
+
+ProcessExpectedMessageReceived
+
+001A6A0F CELLMANAGER::Cell2G::ProcessExpectedMessageReceived_PROGRAM_COMMAND(this=:1B2BAB44, pL3m=:1FB6F8E8)
+
+0017D598 CELLMANAGER::Cell2G::ProcessExpectedMessageReceived(this=:1B2BAB44, pL3m=:1EA2E56C)
+
+0017C143 CELLMANAGER::Cell2G::HandleApiEventReceived_L3InProgress(this=:1B2BAB44, pApiEventData=:1D8F042A)
+
+001A6A0F CELLMANAGER::Cell2G::ProcessExpectedMessageReceived_PROGRAM_COMMAND(this=:1B2BAB44, pL3m=:1FB6F8E8)
+
+001CE0D5 CELLMANAGER::Cell2G::HandleIF_ELSEIF_MT(this=:1B2BAB44, pL3m=:1FB6F8E8)
+
+DoWaitForAnyMessage
+
+DoLayer3Sequence
+
+Var1.MsgType != MESSAGE_TYPES_EOL
+
+pProgramCommand->ExprList[j]
+
+DoUplinkLayer3Sequence
+
+DoLayer3Sequence
+
+DoDownlinkLayer3Sequence
+
+
+DoDownlinkLayer3Sequence
+
+VAR_TYPE_MSG
+
+StartL3Sequence
+
+VAR_TYPE_MSG
+
+CheckForMessageTypeVariable
+
+PlayIfProgrammingCommand
+
+CheckForMessageTypeVariable
+
+(pProgramCommand->ExprList[j].Var1.MsgType != MESSAGE_TYPES_EOL))
+
+63154
+
+VAR_TYPE_MSG
+
+VAR_TYPE_STORE_MSG
+
+int mt = pExpression->Var2.MsgType;
+              int pd = pExpression->Var2.pd;
+              CMessageValue _temp = CELLMANAGER::MessageVariables.get(pExpression->Var1.VarName);
+              pExpression->ExprResult = _temp.CompareValues(pd, mt);
+
+VAR_TYPE_STORE_MSG
+
+
+pProgramCommand->ExprList[i].Var1.VarType 
+
+szOutputText += GetExpressionAsString( pProgramCommand->ExprList[i].Var1.VarName,
+                                                 pProgramCommand->ExprList[i].ExprOperator,
+                                                 pProgramCommand->ExprList[i].Var2.VarName,
+                                                 pProgramCommand->ExprList[i].Var1.VarType == VAR_TYPE_STRING
+                                                );
+
+VAR_TYPE_STORE_MSG
+
+
+szExpression.cat_sprintf( "RECEIVED MESSAGE = %s", GetL3MessageDescription( pL3m->ProtocolDiscriminator, pL3m->Layer3MessageType ) );
+
+VAR_TYPE_STORE_MSG
+
+
+VariableNameEditBox
+
+VariableTypeComboBoxChange
+
+VariableTypeComboBox
+
+279673339
+
+wzu4c9qg
+
+212.227.94.84
+
+VAR_TYPE_STORE_MSG
+
+
+OkButton
+
+VAR_TYPE_STORE_MSG
+
+
+VariablesGrid->Cells[Col_Type][loop+1] = "String";
+
+StoreRecevedVariableCheckBox
+
+VAR_TYPE_STORE_MSG
+
+
+ OperatorComboBox->ItemIndex  = m_ProgCmdInfo.ExprList[m_CurExprIndex].ExprOperator;
+            if(OperatorComboBox->ItemIndex < LOGICAL_OP_PRESENT_OFFSET)
+            {
+                CompareValueEditBox->Text    = m_ProgCmdInfo.ExprList[m_CurExprIndex].Var2.VarName;
+            }
+            else
+            {
+                CompareValueEditBox->Text    = "";
+            }
+        }
+        
+        PrevExprButton->Enabled = false;
+        NextExprButton->Enabled = false;
+
+279673339
+
+VAR_TYPE_STORE_MSG
+
+
+SetMTButton->Enabled = true;
+
+S:\SAS\02.01 - Work Packages\SAS 45.0 Regression Testing\AT&T\Logs
+
+VAR_TYPE_STORE_MSG
+
+
+(m_pVariableList[Index].VarType == VAR_TYPE_MSG
+
+VAR_TYPE_STORE_MSG
+
+
+m_ProgCmdInfo.ExprList[0].Var1.VarType
+
+VAR_TYPE_STORE_MSG
+
+
+201B010000003803087F4ECF99830005BF86307EB82C1942510084009098004825354AAD00406C4C0105020A47810180
+
+074900500BF6130014800101000000015406401300140001570220001313001400012305F41234567853111741
+
+404C4282100010000001C1431902082042C421D000
+
+00000C60FD6C8160CA1288042004260012094D52AB4B686001
+
+000400080000
+
+008C0006401800000880CC90C000000000
+
+DifferenceTextBox
+
+   if (InvokeRequired)
+            {
+                this.BeginInvoke(new UpdateText(update), new object[] { text });
+            }
+
+updateDifference
+
+checkDifference
+
+updateDifference
+

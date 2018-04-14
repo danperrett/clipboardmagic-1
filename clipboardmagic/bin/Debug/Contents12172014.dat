@@ -1,0 +1,102 @@
+LOG_SYNC_POINT
+
+UpdateLogFile
+
+  C:\SAS\SAS-cs28\Code\NS\src\CellManager\Cell_Layer3Sequencer.cpp(67):    PLAYBACKLOG::PlaybackLog::UpdateLogFile(NOT_TO_LOG, SAS_L3P, m_CellData->CellId, NULL);
+
+
+LOG_ACTIVATE_CELL
+
+UpdateLogFile
+
+WM_ADD_LOG_RECORD
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+UpdateLogFile
+
+CONTROL_INTERFACE::UpdateLogFile(
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+
+pData
+
+stProgramCommand *pData = (stProgramCommand *)pCommandObject->Data;
+
+LOG_L3_RECEIVE_ANY_MESSAGE
+
+
+stProgramCommand 
+
+stProgramCommand *pData
+
+LOG_START_SUB_SCRIPT
+
+LOG_END_SUB_SCRIPT
+
+stProgramCommand
+
+CopyLayer3ProgramCommand(DestProgCmd,ProgCmd);
+
+DestProgCmd
+
+case LOG_START_SUB_SCRIPT:
+
+UpdateLogFile
+
+InitialiseLayer3Data(&pProgramCommand->L3m);
+
+DestProgCmd
+
+stProgramCommand
+
+ memset(programCommand, 0, sizeof(stProgramCommand));
+
+InitialiseLayer3Data
+
+#include "l3sequenceutils.h"
+
+DestProgCmd
+
+#include "l3sequenceutils.h"
+
+GD68FL 
+
+d_per89@axcetly.net
+
+GD68FL 
+
+ case LOG_L3_RECEIVE_ANY_MESSAGE:
+                case LOG_START_SUB_SCRIPT:
+
+stProgramCommand *ProgCmd = static_cast<stProgramCommand*>(Data);
+
+pLogRecord->Data
+
+  CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+   CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+LOG_START_SUB_SCRIPT
+
+pCommandObject->Data
+
+  CONTROL_INTERFACE::UpdateLogFile(LOG_START_SUB_SCRIPT, SAS_MSG, -1, pCommandObject->Data);
+
+LOG_END_SUB_SCRIPT
+
+   CONTROL_INTERFACE::UpdateLogFile(LOG_L3_RECEIVE_ANY_MESSAGE, SAS_MSG, -1, pData);
+
+CONTROL_INTERFACE::UpdateLogFile(LOG_END_SUB_SCRIPT, SAS_MSG, -1, NULL);
+
+DoEndSubScript
+
+?	IR63462 
+
+IR63462 
+
+https://developer.amazonservices.co.uk/doc/products/products/v20111001/cSharp.html
+

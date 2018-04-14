@@ -1,0 +1,125 @@
+6530
+
+SoapUI-x64-5.2.1.sh
+
+10309
+
+void SetStatus(string status);
+
+AdapterStatus(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+	void SetStatus(string status);
+
+	string GetStatus();
+
+AdapterStatus(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+const char* AdapterSCN, CDBInterfaceManager* cdbInterface
+
+currentStatus
+
+void Initialise(const char* AdapterSCN, CDBInterfaceManager* cdbInterface);
+
+AdapterStatus::
+
+#include "cdbinterfacemanager.h"
+
+
+using std::string;
+
+currentStatus
+
+cdbInterface
+
+static void ThreadTask();
+
+AdapterStatus::
+
+LPVOID lpParam 
+
+CreateThread
+
+ThreadTask
+
+ DWORD ThreadTask(LPVOID lpParam );
+
+ThreadTask
+
+ AdapterStatus::ThreadTask
+
+using namespace System::Threading;
+
+There is a problem with th JTMS
+
+CA-ANPR-JTMS
+
+th
+
+${equipmentSCN2}
+
+context.equipmentSCN2 = Devices[rand.nextInt(5)];
+
+  HANDLE m_heartbeatThreadHandle;
+
+m_heartbeatThreadHandle = CreateThread( 0 , 0 , heartbeat, this, CREATE_SUSPENDED , &m_heartbeatThreadID ) ;
+
+AdapterStatus::ThreadTask
+
+ unsigned long m_heartbeatThreadID;
+
+m_updateStatusThreadID
+
+m_updateStatusThreadHandle
+
+void *data
+
+unsigned long
+
+_stdcall
+
+cdbInterface
+
+running
+
+AdapterStatus
+
+adapterStatus
+
+CVMSAdaptorDlg
+
+m_cdbManager
+
+SNMPManager
+
+ this->adapterStatus->Initialise("VMSAdapter", m_pmanager->m_cdbManager);
+
+SetStatus
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniConnectionMgmt413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniDynamic413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omniORB413_vc8_rtd.dll
+
+C:\Secure\SourceNew\Core\ThirdParty\omniORB-4.1.3\bin\x86_win32\omnithread34_vc8_rtd.dll
+
+ this->adapterStatus->Initialise("VMSAdapter", m_pmanager->m_cdbManager);
+
+VMSDefinition.xml
+
+C:\Secure\SourceNew\Core\Adapters\VMSAdapterAsyn\Config\VMSDefinition.xml
+
+7971
+
+m_pokeTimerID
+
+  int result = ResumeThread( m_heartbeatThreadHandle );
+
+m_updateStatusThreadHandle
+
+ResumeThread
+
+promissory
+
+'registrar@iloilo.sti.edu'
+

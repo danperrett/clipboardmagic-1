@@ -1,0 +1,495 @@
+mediaUri
+
+uriField = "http://www.gwelltimes.com/manage/Upload/Pic/20147914514701.jpg"
+
+"http://www.gwelltimes.com/manage/Upload/Pic/20147914514701.jpg
+
+1.0 (Release)
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+					
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+CAANPRFaultInterfaceAdapter.docx
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter\ClearviewCounterAdapter.docx
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\CA-ANPR-JTMS\CAANPRFaultInterfaceAdapter.docx
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter
+
+0.2	2016-06-17	A Newman	Update after proofreading review	
+
+0.1				
+
+
+
+
+Mersey Gateway Project
+
+PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification
+
+CAANPRFaultInterfaceAdapter.docx
+
+PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter
+
+ClearviewCounterAdapter.docx
+
+Ball, John - UK <John.Ball@dynniq.co.uk>
+
+GetSnapshotUri
+
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Header><VsDebuggerCausalityData xmlns="http://schemas.microsoft.com/vstudio/diagnostics/servicemodelsink">uIDPo1AntcHNWSxKlfJyMoLj8U4AAAAA3YFnL9KfN0K4LPh8ZmUmSRjJhnWTrf1MnVz0s21Bm2cACQAA</VsDebuggerCausalityData></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri></s:Body></s:Envelope>
+
+<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GotoPreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\"><ProfileToken>main</ProfileToken><PresetToken>P00{0}</PresetToken><Speed><PanTilt x=\"1\" y=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /><Zoom x=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /></Speed></GotoPreset></soap:Body></soap:Envelope>"
+
+<GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri>
+
+ string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GotoPreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\"><ProfileToken>main</ProfileToken><PresetToken>P00{0}</PresetToken><Speed><PanTilt x=\"1\" y=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /><Zoom x=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /></Speed></GotoPreset></soap:Body></soap:Envelope>", preset);
+
+<GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri>
+
+MediaClient
+
+ClientCredentials
+
+AuthenticationScheme = AuthenticationSchemes.Basic;
+
+    and
+
+
+[2017-01-03T14:51:42] INFO: switch from "ukdt0348" to "UKLT1086" at 1439,352
+[2017-01-03T14:51:42] INFO: leaving screen
+[2017-01-03T14:52:49] INFO: switch from "UKLT1086" to "ukdt0348" at 4,850
+[2017-01-03T14:52:49] INFO: entering screen
+[2017-01-03T14:52:57] INFO: switch from "ukdt0348" to "UKLT1086" at 1439,656
+[2017-01-03T14:52:57] INFO: leaving screen
+[2017-01-03T14:54:06] INFO: screen "UKLT1086" grabbed clipboard 0 from "ukdt0348"
+[2017-01-03T14:54:06] INFO: screen "UKLT1086" grabbed clipboard 1 from "ukdt0348"
+
+
+string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>main</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>");
+
+using (WebClient client = new WebClient())
+            {
+                client.Headers[HttpRequestHeader.UserAgent] = "Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 4.0.30319.42000)";
+                client.Headers[HttpRequestHeader.ContentType] = "application/soap+xml; charset=utf-8; action=\"http://www.onvif.org/ver20/ptz/wsdl/GotoPreset\"";
+                string result = client.UploadString("http://192.168.16.102/onvif/services", param);
+            }
+
+http://www.onvif.org/ver10/media/wsdl/GetSnapshotUri
+
+  string url = GetSnapShotURL(2);
+
+GetSnapshotUriResponse
+
+cameraNum
+
+http://stackoverflow.com/questions/25798200/java-record-mic-to-byte-array-and-play-sound
+
+: j.saarelainen
+
+/home/daniel.perrett/workspaceneon
+
+9999
+
+4170ac2a2782a1516fe9e13d7322ae482c1bd594
+
+http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest
+
+4170ac2a2782a1516fe9e13d7322ae482c1bd594
+
+ string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>main</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>");
+
+8888
+
+=
+
+8888
+
+=
+
+8888
+
+0ddb5877c896f43e8734e10b001e7f1eb92889cd
+
+DVTelIpAddress
+
+DVtelUsername
+
+DVTelPassword
+
+password
+
+ ipAddress[cameraNum]
+
+ /usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.TJ2290 --address :24800
+
+
+   tycoInterface.setupCameraCredentials("admin", "9999");
+
+
+
+
+   tycoInterface.setupCameraCredentials("admin", "9999");
+
+route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+route add 10.0.0.0 mask 255.0.0.0 192.168.0.1 metric 2 
+
+ void setupCameraCredentials(string username, string password)
+
+ public void setupDvtel(string ipaddress, string username, string password)
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\TycoTestProject\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\TycoTestProject\bin\x86\Release
+
+10.164.114.163
+
+SASRemotableConnectionService
+
+TcpPort_GUI
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+Hi Dan,
+
+I don?t think there should be any conflict, but can you assume that all cameras support ONVIF at any potential production site?
+Regarding marking the video, we have the concept of Bookmarks and Incidents:
+
+?	A Bookmark is a mark on the recorded video of a single camera at a certain time, with a textual description field.
+?	An Incident may include multiple cameras. When creating an incident, a bookmark will be created for each camera participating in the incident.
+
+You may search for these terms in the SDK help file, and also use the DVTel.SDK.Samples.Incidents sample as a reference.
+Two relevant APIs would be the Recording API and Incidents API.
+The SDK also allows querying for Bookmarks and Incidents using the same APIs.
+
+Regards,
+
+Boaz Arzi
+Director, Applications and Integration Center
+
+FLIR Systems, Inc.
+65 Challenger Road, Ridgefield Park, NJ 07660 USA
+Direct:  +1 201 708 9852 | Mobile: +1 973 906 4008
+Email: boaz.arzi@flir.com | www.flir.com
+
+
+3380
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_v2\ManagedDll.tlb
+
+10.164.114.163
+
+CCTV010
+
+cctv_interface
+
+threadProc
+
+m_ServerIP
+
+m_cameraID
+
+//Read the username
+  if ( !file.read( scn, "ServerUsername", m_username ) )
+  {
+    sprintf( output, "Tyco Camera failed to read the username for camera '%s'", scn );
+    log( output );
+    return false;
+  }
+
+m_CameraUsername
+
+  //Read the password
+  file.read( scn, "ServerPassword", m_password, "" );
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+Username,
+	         const char* Password,
+			 const char* ipAddress,
+			 const char* cameraUsername,
+			 const char* cameraPassword);
+
+ void Setup(const char* Username,
+	         const char* Password,
+			 const char* ipAddress,
+			 const char* cameraUsername,
+			 const char* cameraPassword);
+
+char Username[256];
+  char Password[256];
+  char ipAddress[256];
+  char cameraUsername[256];
+  char cameraPassword[256];
+
+Setup
+
+m_username
+
+m_password
+
+m_ServerIP
+
+cameraUsername
+
+m_CameraUsername
+
+m_CameraPassword
+
+ char Username[256];
+  char Password[256];
+  char ipAddress[256];
+  char cameraUsername[256];
+  char cameraPassword[256];
+
+ void Setup(const char* Username,
+	         const char* Password,
+			 const char* ipAddress,
+			 const char* cameraUsername,
+			 const char* cameraPassword)
+ {
+     strcpy(this->Username, Username);
+     strcpy(this->Password, Password);
+     strcpy(this->ipAddress, ipAddress);
+     strcpy(this->cameraUsername, cameraUsername);
+     strcpy(this->cameraPassword, cameraPassword);
+ }
+
+TycoInterfaceManager
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ int num = tycoInterface.InitiliseNumberOfCameras();
+
+this->ipAddress
+
+NumberOfDVtelCameras
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ HRESULT hr =  CoInitialize(NULL);
+
+  if ( hr == S_OK )
+  {
+	  ITycoCCTVInterfacePtr cctv_interface(__uuidof(ManagedClass));
+	  this->m_interface = cctv_interface;
+	  cctv_interface->Initialise("");
+	  cctv_interface->Logon(this->ipAddress, this->Username, this->Password);
+      this->NumberOfDVtelCameras = cctv_interface->InitiliseNumberOfCameras();
+  }
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+this->m_interface
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+
+Getting dynamic data
+
+processCommand
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+Figure 1 shows an overview of the system. Everything in the yellow box is provided by Dynniq
+
+set_preset
+
+if ( !parameters )
+      {
+        fireCommandResponse( commandid, 1, 0.0, "No parameters" );
+        return true;
+      }
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+CutlasIniFile file( m_inifile );
+
+file.read( scn, "ServerIPAddress", m_ServerIP )
+
+Camera* camera
+
+sharedObject
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+SharedObject
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+getMapName( const char* name )
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+string mapName
+
+mapName = getMapName( camera->name() );
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+/usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.TJ7882 --address :24800
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestItem::RequestType_SetPreset
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '2', '0');
+commit;
+
+const char *deviceKey  = devObj->getAttribute( "SYSTEMCODENUMBER" );
+
+commandObject
+
+deviceKey
+
+virtual void IntendedSCNCommand(const char* scn){};
+
+long commandid,
+
+void IntendedSCNCommand(long commandid, const char* scn);
+
+TycoCamera::
+
+char commandScn[256];
+
+commandScn
+
+m_scnCommandID
+
+IntendedSCNCommand
+
+deviceKey
+
+m_commandScn
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+IntendedSCNCommand
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+logger("gotoPreset");
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+     m_camera->requestCompleted( m_currentRequest );
+      delete m_currentRequest;
+      m_currentRequest = 0;
+
+      SetEvent( m_addEvent );
+    }
+    else if ( m_currentRequest->stage() == RequestItem::Stage_Failed )
+    {
+      m_camera->requestCompleted( m_currentRequest );
+      delete m_currentRequest;
+      m_currentRequest = 0;
+
+      SetEvent( m_addEvent );
+    }
+
+10.164.114.163
+
+     FileInfo file1 = new FileInfo("C:\\temp\\tempafter.jpg");
+            FileStream stream1 = file1.OpenWrite();
+            stream1.Write(arr1, 0, arr1.Length);
+            stream1.Close();
+
+byte[] arr = tycoInterface.GetSnapshot(cam);
+                FileInfo file = new FileInfo("C:\\temp\\thumbnail.jpg");
+                FileStream stream = file.OpenWrite();
+                stream.Write(arr, 0, arr.Length);
+                stream.Close();
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '2', '0');
+commit;
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+GetCameraNumberFromName
+
+char m_scn[256];
+
+m_scn
+
+static_cast< RequestSetPreset* >( m_currentRequest )
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+SQL_INSERT_W_PRESET
+
+SQL_INSERT_WO_PRESET
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestDynamic
+

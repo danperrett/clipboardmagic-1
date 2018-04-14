@@ -1,0 +1,117 @@
+$(FrameworkSDKDir)include
+
+IPPROTO_IPV6
+
+WIN32_WINNT
+
+C:\Program Files (x86)\MSXML 6.0\inc
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include
+
+C:\Secure\Source\cutlas\Core\ThirdParty\ComponentOneChart\Include
+
+8925
+
+C:\Program Files (x86)\MSXML 6.0\inc
+
+5E(zcZ0Q_1
+
+C:\Program Files (x86)\MSXML 6.0\inc
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150023_UTMS_Mersey_Gateway_HR/trunk/17_Document_Reviews/CCTV%20SDK/
+
+daldridge@tycoint.com
+
+ANPR Route
+
+INSERT INTO TL_DEFINITION ( SYSTEMCODENUMBER, CREATIONDATE, DATASOURCE_TYPEID, TYPEID )
+
+SCN field on TL_ANPR_DYNAMIC only 32 characters
+
+The DatexIIAdapter code does not properley handle the SCN 's when inserting dynamic information into the database. 
+It tries to insert a SCN greater than 32 character and always gets rejected.
+Other areas of the code properly truncate the SCN down to the last 8 digits. and its this code that we need to copy.
+
+SCN field on TL_ANPR_DYNAMIC only 32 characters
+
+The DatexIIAdapter code does not properley handle the SCN 's when inserting dynamic information into the database. 
+It tries to insert a SCN greater than 32 character and always gets rejected.
+Other areas of the code properly truncate the SCN down to the last 8 digits. and its this code that we need to copy.
+
+ string[] text = rec.id.Split('_');
+                        string scn = text.Last();
+
+UpdateAnprSites
+
+AnprInsertSiteDefinition
+
+CheckDefinition
+
+rec.id.Split('_')
+
+.Split('_')
+
+ANPR_Measurement_Site_30072495
+
+ANPR_Measurement_Site_30071594
+
+192.168.50.45
+
+measurementsForSite.measurementSiteReference.id
+
+ANPRIDPrefix=ANPR_Measurement_Site_
+
+  string temp = ConfigurationManager.AppSettings["PublishAnpr"];
+
+ANPRIDPrefix
+
+m_AnprManager
+
+siteID = measurementsForSite.measurementSiteReference.id.Split('_').Last();
+
+m_AnprManager.ANPRIDPrefix
+
+anprIDPrefix
+
+anprTypeID
+
+ANPRIDPrefix
+
+ANPR_Measurement_Site_
+
+28619
+
+siteID = measurementsForSite.measurementSiteReference.id
+
+10.164.114.181
+
+\\10.164.114.30\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+add key="ANPRIDPrefix" value="ANPR_Measurement_Site_"/>
+
+m_lastUpdated
+
+process
+
+http://www.bbc.co.uk/iplayer/episode/p04b183c/adam-curtis-hypernormalisation
+
+JourneyTime
+
+Line 1294: TransportLink 118119: JourneyTime = 300s, Num Plates Used = 1
+
+TL_ANPR_DYNAMIC
+
+cctv_anpr_vrn_dynamic
+
+DATABASE_VIEW_NAME
+
+C:\Secure\Source\cutlas\ImtechCE
+
+DVTel installation
+
+\\10.164.114.30\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+C:\Temp\DatexIIAdapter\bin\SubscriberWebService.dll
+
+purgeDatabaseAfterReading
+

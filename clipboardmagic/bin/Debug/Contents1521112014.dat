@@ -1,0 +1,299 @@
+foreach (string str in filePaths)
+            {
+                FillInScriptRow(str, count);
+                ret = true;
+                count++;
+            }
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_4_to_V15_5.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_5_to_V15_6.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\ConvertScriptToCurrentSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\BinDebug\FieldValueMaps
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4_variable.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\LTE-BTR-1-1838.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\2 - AttachDetachv16.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4_counter.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4IF.isc
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.vshost.exe.manifest
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SequencerInterfaces.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SequencerInterfaces.pdb
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\FieldValueMaps
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SASCommonLibrary.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SASLTEInterfaces.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SASProtocolFieldValueMapperUtil.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptAuthentication.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.exe
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.pdb
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.vshost.exe
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.1.668
+
+PROCEDURE complete LOCATION UPDATE MO G Cell G
+
+
+C:\AniteSAS\ResultData\InterPlay Scripts\testPowerSAS.isc
+
+20141119102233118
+
+C:\Users\dan.perrett\Desktop\Preference.pfs
+
+dummy
+
+DoLayer3Sequence
+
+StartWaitForAnyMessage
+
+SetWaitingForAnyMessageFlag
+
+GetReceivedMessageData
+
+GetRecevMessage
+
+10.7.8.213
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\SASLTEProgrammedPlayEditor\Preference.pfs
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+        private void doProcessMessage(SASSyncQueue<Sequencer_Struct> _SequenceElementQueue, L3ProcedureStatus _L3ProcedureStatus, int _ElementIndexAck)
+
+
+new ConvertFrom_V16_0_to_V16_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("16.1");
+
+m_Ignore_Event_CellID
+
+LoadScenario
+
+getFromQueue
+
+SASLTEInteractiveScriptMode
+
+ScriptedModeMain
+
+scriptModeMain
+
+list[length - 3] == "G"
+
+ found = true;
+
+m_Ignore_Event_RATType
+
+m_Ignore_Event_CellID
+
+list[length - 1]
+
+if (m_Ignore_Event_CellID.ToString() != list[length - 1])
+                                {
+                                    found = false;
+                                }
+
+ message = message.Trim().Replace("\n\r", "");
+                        string[] list = message.Split(' ');
+                        int length = list.Length;
+                        string cell = list[length - 3] + " " + list[length - 2] + " " + list[length - 1];
+                        if (list[length - 3] == "G") //GERAN
+                        {
+                            if (m_Ignore_Event_RATType != RAT_Type_enum.GERAN)
+                            {
+                                found = false;
+                            }
+                            else
+                            {
+                                if (m_Ignore_Event_CellID.ToString() != list[length - 1])
+                                {
+                                    found = false;
+                                }
+                            }
+                        }
+                        else if (list[length - 3] == "U") //UTRAN
+                        {
+                            if (m_Ignore_Event_RATType != RAT_Type_enum.UTRAN)
+                            {
+                                found = false;
+                            }
+                            else
+                            {
+                                if (m_Ignore_Event_CellID.ToString() != list[length - 1])
+                                {
+                                    found = false;
+                                }
+                            }
+                        }
+
+verifyCellAndRATFromMessage
+
+found = verifyCellAndRATFromMessage(message);
+
+(m_Ignore_Event_type == Ignore_Event_type.IgnoreAllEvents)
+
+ if (m_Ignore_Event_CellID == Cell_ID_enum.ANY)
+                    {
+
+"Ignore all events according to script step"
+
+reportToRTT = "Ignore all events according to script step";
+
+ if (m_Ignore_Event_CellID == Cell_ID_enum.ANY)
+                    {
+
+found = false;
+
+verifyCellAndRATFromMessage(message)
+
+CheckingDone
+
+CheckingDone = true;
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS48.0-A\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS48.0-A\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS48.0-A\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V16_1_to_V16_2.cs
+
+Anite.Script.Utils
+
+ConvertFrom_V16_1_to_V16_2
+
+new ConvertFrom_V16_0_to_V16_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("16.1");
+
+
+        protected static bool IsIgnoreEvent(ScriptElement _scriptElement)
+        {
+            return (_scriptElement.ElementData is IgnoreEvents);
+        }
+
+new ConvertFrom_V16_0_to_V16_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("16.1");
+
+P:\Today\seci\4Dan\AWP.The.CPP.Programming.Language.4th.Edition.Jul.2013.pdf
+
+P:\Today\seci\4Dan\Deitel.C++.HowToProgram.pdf
+
+P:\Today\seci\4Dan\Addison.Wesley.Absolute.CPP.5th.Edition.Mar.2012.pdf
+
+P:\Today\seci\4Dan\Addison.Wesley.The.CPP.Standard.Library.2nd.Edition.Mar.2012.pdf
+
+P:\Today\seci\4Dan\Artima.Overview.of.the.New.CPP.Apr.2011.pdf
+
+Preference.pfs
+
+AniteSAS
+
+10.7.8.213
+
+SelectedPath
+
+FILES
+
+SavePreferences
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\SASLTEProgrammedPlayEditor
+
+GUIWinConfig
+
+GenericPrefFile
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\SASLTEProgrammedPlayEditor
+
+P:\Today\DanP\SASLTEProgrammedPlayEditor
+
+SAS_PPE_ConfigFilesDir
+
+SDIWrapper
+
+FilePathIDs
+
+GetSASPath
+
+WDIFilePath
+
+SAS_PPE_ConfigFilesDir
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\SASLTEProgrammedPlayEditor
+
+    <Reference Include="System.Design" />
+
+
+    <Compile Include="ElementDataHandlers\ProgrammingCommands\HandleENDParallelActivityBlock.cs" />
+    <Compile Include="ElementDataHandlers\ProgrammingCommands\HandleBEGINParallelActivityBlock.cs" />
+    <Compile Include="ElementDataHandlers\ProgrammingCommands\HandleBEGINParallelActivity.cs" />
+    <Compile Include="ElementDataHandlers\ProgrammingCommands\HandleENDParallelActivity.cs" />
+
+
+    <Compile Include="ScriptForms\IpMonitorIPv6Tab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScriptForms\IpMonitorIPv6Tab.Designer.cs">
+      <DependentUpon>IpMonitorIPv6Tab.cs</DependentUpon>
+    </Compile>
+
+
+    <Compile Include="ScriptForms\BEGINParallelActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptForms\BEGINParallelActivity.designer.cs">
+      <DependentUpon>BEGINParallelActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptForms\BEGINParallelActivityBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptForms\BEGINParallelActivityBlock.designer.cs">
+      <DependentUpon>BEGINParallelActivityBlock.cs</DependentUpon>
+    </Compile>
+
+
+    <EmbeddedResource Include="ScriptForms\IpMonitorIPv6Tab.resx">
+      <DependentUpon>IpMonitorIPv6Tab.cs</DependentUpon>
+    </EmbeddedResource>
+
+
+    <EmbeddedResource Include="ScriptForms\BEGINParallelActivity.resx">
+      <DependentUpon>BEGINParallelActivity.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScriptForms\BEGINParallelActivityBlock.resx">
+      <DependentUpon>BEGINParallelActivityBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+
+
+    <PostBuildEvent>
+        copy /Y "$(ProjectDir)obj\DebugBuild\*.pdb" "$(TargetDir)"
+        cscript "$(SolutionDir)BuildScripts\LTESequencerPostBuild.wsf" "$(ConfigurationName)" "$(TargetDir)" "$(ProjectDir)" "CS23.0 {0160} SAS48"
+  </PostBuildEvent>
+
+
+del "$(ProjectDir)obj\DebugBuild\*.pdb"
+
+
+13973956
+
+20-61-82
+

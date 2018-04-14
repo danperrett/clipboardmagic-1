@@ -1,0 +1,209 @@
+C:\Users\502525009\Documents\Alstom Report.dotm
+
+The SRIF SSL interface module implements the S-RIF System Architecture Ref 1 design. This is the interface from the SRIF to the ICONIS Safety gateway.  The messages back and forth are in xml format and are described in Ref 1 chapter 5.2. 
+The SRIF module will set up a listener on a specific port and wait for a connection from one or more safety gateways. 
+The messages could also consist of up to 20 interlocking data element all of which are encoded using a NVF3B protocol so special consideration in the software is needed for that.
+2.	Security Considerations		SJS
+The protection mechanisms used, being  a sequence number, timeout and XML signing, meet the EN50159 criteria of  sequence number (7.3.1), timeout (7.3.3) and cryptographic techniques (7.3.8) and so, as depicted in the threat/defence matrix (7.4.2), provide protection against all seven threats.  Specifically, 
+?	the sequence number implemented in the Iconis Interface module protects against repetition, re-sequencing, insertion and deletion
+?	the timeout in the TCP Handler module protects against delay
+?	the XML signing protects against corruption and masquerade.
+XML signing is a type A1 security mechanism as described in EN50159 clause C2 and is therefore suitable for use in systems where unauthorised access cannot be excluded.
+The NVFB3 protocol is used for rail state information and control requests passed between the Safety Gateway and the SSL S-RIF.  This provides additional protection against five of the seven threats
+Scope
+	This document only covers the design of the SRIF interface with the ICONIS Safety gateway interface.
+
+3.	Design Overview
+ 
+Figure 1SRIF Overview
+Figure 1 give a brief overview of the different component to the SRIF ICONIS Safety gateway.
+The design can be broken down into 10 major components.
+?	Win32 Message Handler
+?	TCP Handler
+?	250 ms Timer
+?	Shared Memory
+?	Decode IF Messages
+?	Encode IF Messages
+?	Do Process
+?	XML Signing
+?	NVFB3 Encode/Decode
+?	PS9 Handler
+Mode details about each of the components can be found in the Design Section. Some of the component have multiple decode and encode uses.
+4.	Module Design
+Win32 Message Handler Module
+Main Function is to route and re-route messages.  This handler sits in the middle sending messages back and forth between the Encoder, Decode and the TCP Handler.  This handler has several jobs;
+?	At start up the init function will send a message to this handler to initialise all of the modules.
+?	On receipt of data from the TCP Handler it will forward this data to the Decode IF Message entity.
+?	On Receipt of the 250ms event tick the Handler calls the Encode Message IF routines.
+?	All Decode and Encode of NVFB3 messages are routed via the Win32 Handler module.
+
+TCP Handler Module
+The TCP handler is the main interface between the outside world and the SRIF itself.  During the initial setup the handler will start to listen on a certain port number which can be specified in the setup configuration.
+?	Upon receipt of data through the socket the TCP handler will cast off the first 4 byte which is the Length (Big Endian).
+?	Once the length is found and verified it can then receive the rest of the data, the first few bytes are validated to verify that we are receiving and xml structured message.
+?	With the information now received and packed into a receive buffer this then get forwarded to the Decode IF module.
+?	If no input message is found within a configurable timeout, the connection is regarded as dead and so the link is dropped. 	SJS
+250 MS Timer
+It is important that this timer is accurate so a multimedia timer is started after start-up which is initially set to 250ms. On expiry of this timer the Do Process Function are called in sequence to see what data is available for transmission.
+Decode IF messages Module
+Upon receipt of data from the TCP handler this module will firstly check that it can decode the information as a XML structure, failure to do this will result in the link being dropped. 
+Once the structure has been XML decoded a few check are carried out.
+?	Decode the signature and make sure it can be verified against the public key
+?	Decode the Header Element updating all internal structures that we have about this connection
+?	Decode the body element keeping a structure of the decoded information.
+?	If the message contains NVF3B data send this of to be decoded.
+?	If this is validated check the connection is in Available or greater state;  if it is available move it to Up state.
+?	Note the time received and track the time difference.
+?	Check the sequence number and if it is not one greater than the previous sequence number drop the connection		SJS
+
+Do Process
+The DoProcess Module run through data it has received from the MCS, if there is any, and starts to build and output message to be sent to the Safety gateway the procedure in short is:
+?	Check for Diagnostic alarms
+?	Check for Generated Alarms
+?	Check for all interlocking data
+?	Check for emergency alarms
+This is all packaged up and sent to the encode IF for transmission.
+
+NVFB3 Encode Decode Module.
+It?s down to this module to Encode and Decode the NVFB3 Data. When decoding it will:
+?	Decode the NVFB3 header and check the 2 CRC are valid.
+?	Check the Authenticity of the data by checking the source and destination address
+?	Check the correct sequence
+?	Check the Timeliness
+?	If any of the above fail then the data is discarded 
+?	If they pass then the data is forwarded to the MCS
+In the Encode this module:
+?	Reads data from the PS9 Module to encode
+?	Reads Echo responses from the Decoder to encode.
+?	Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRC?s to byte array
+?	Adds data to the byte array
+?	Calculates and adds the last 16 bit CRC to the byte array.
+?
+XML Signing 
+The XML signing module does two things encode of the xml message, decode of the xml message.  The signing process is better described in ref 2 
+During the encode procedure the following steps are taken:
+?	Create a SHA1 Digest value for the XML message
+?	Sign that Digest using a RSA-SHA1 encryption method
+?	Add CA Certificate to the xml structure 
+?	Place both the SHA1 Digest and RSA-SHA1 signature in the XML structure and send to the TCP handler for transition.
+
+During the Decode the following procedure is followed:
+?	The SHA1 digest is generated for the XML message and compared to the one which is sent.
+?	The RSA-SHA1 encryption is generated and then compared to the one which is sent.
+?	The Certificate and public key which are supplied are verified (on first message only) to verify that?s it from the CE and correct.
+If any of these above steps fail then the link to that Safety Gateway is closed.
+Shared Memory 
+The Shared memory gets created at initialisation and enables the monitoring of watchdog timers as well as communication from other processors.
+
+Encode IF Module
+The Encode IF Module follows the following procedures:
+?	Add Header information 
+?	Add Body information
+?	Create XML structured Text
+?	Sign XML
+?	Add four byte length information at front of message for receiving purposes, send to t TCP Handler
+MCS_PS9 Module
+The interface between the S-RIF and the MCS-CE makes use of the PS9 protocol (with 16-bit CRC extension) across a TCP/IP connection.   The MCS_PS9 source module implements a thread to manage the incoming and outgoing PS9 protocol state machines, queueing notification events and updating lock-protected shared state data for use by the XML-forming ICONIS Safety Gateway interface .
+The MCS-CE runs as server and listens on a TCP/IP port for a connection request.  After link connection a time message is sent by the MCS-CE every 30 seconds to check the link is still up.  If the S-RIF does not receive a time message within a configurable timeout, the connection is closed, a Diagnostic Alarm Link Down message is sent to ICONIS and the link is re-established.  On reconnection a Diagnostic Alarm Link Up message is sent to ICONIS.  
+While the link is active, it is monitored for incoming PS9 messages from MCS-CE.  
+Messages sent to the MCS-CE have the following content:
+ControlRequests  On detection of a Control Request from the ICONIS Safety Gateway, a MCS-CE TC message is built containing the relevant panel request numbers.
+ARSSubAreaStatus TBD
+MCS_IF
+This module manages the shared data that pass between the ICONIS Safety Gateway and MCS-CE.  It contains state data for the interlockings and queue mechanisms to manage the flow of event data between the 2 systems.  Access to all shared data structures is controlled using Windows critical sections.  For each interlocking, this module manages data stores for:
+?	Status Byte		(byte 0x1c1) 
+?	SPAD SignalMap	128 element bitmap indicating SPAD status for each signal 
+?	Control Requests	255 element bitmap bit for each panel request
+?	Indications		448 byte data containing the SSI defined railway state information
+Queues of event notifications are used for informing DoProcess of event notifications containing
+
+5.	References
+[ ] 	S-RIF System Architecture Specification, SSL/PR046/SYS/REP/00001Issue 2.0, 19th June 2015
+[2]	XML Specification, http://www.w3.org/TR/2008/REC-xml-20081126/, Issue 1.0 (Fifth Edition), 26 November 2008
+[3] 	XML Signature Syntax and Processing (Second Edition), http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/, Second Edition, 10 June 2008
+[4] 	EN50159 - Railway applications - Communication, signalling and processing systems - Safety-related communication in transmission systems.  September 2010
+
+
+Packs header information into byte array.
+?	Adds 32 bit and 16 bit CRC for header and data to header.
+?	Adds CRC?s to byte array
+?	Adds data to the byte 
+
+void  Dosha1Encode(BYTE* bufout, const char* bufin)
+
+Dosha1Encode
+
+Base64encode(encryptionBase64, (const char*)encryption, 128);
+
+Base64encode_len
+
+buffer64
+
+sprintf(buffer, "<Message><Status>%s</Status><SequenceNumber>%ld</SequenceNumber></Message>", localconnecstatus, sequenceNumber);
+
+Dosha1Encode((BYTE *)bufferOut, buffer);
+        Base64encode(buffer64, bufferOut, 20);
+
+CHECKANDEXIT(SequenceNumber, "decodeInterSRIFMessage SequenceNumber");
+
+1639
+
+GES C++ SOFTWARE ENGINEER
+
+int bufferCount = 0;
+
+//For Display only.
+char DisplayBuffer[END_OF_DISPLAY][256];
+char RepaintBuffer[DEBUG_LINES_END][256];
+
+
+BOOL bShuttingDown = FALSE;
+
+//Test Only
+LONG ddcount = 0;
+WORD ocount = 0;
+
+
+int APIENTRY _tWinMain(HINSTANCE hInstance,
+                       HINSTANCE hPrevInstance,
+                       LPTSTR    lpCmdLine,
+                       int       nCmdShow)
+
+char connectionStatus[10] = {0};
+BOOL MasterORStandby   = TRUE;  //True for MASTER
+
+
+void PrintDisplayBufferToScreen()
+
+void PrintDebugToScreen(const char *text, UINT32 logmask)
+
+void PrintToScreen(const char* text, int number)
+
+BOOL CALLBACK UnitTestDlgProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
+
+void initialiseSharedMemory()
+
+void CALLBACK MMtimer(UINT wTimerID, UINT msg, DWORD dwUser, DWORD dw1, DWORD dw2)
+
+void Queue_message_from_MCS(const char* buffer)
+
+******************************************************************************
+
+void SendTextToWindow(const char * text, UINT32 logmask)
+
+LONG SPRINT( HWND hDlg, LONG Row, LONG Col, LONG Ink, const char *PrintStr)
+
+WORD decodeInterSRIFMessage(char* input)
+
+<Message><Status>%s</Status><SequenceNumber>%ld</SequenceNumber><DigestValue>%s</DigestValue></Message>
+
+DWORD WINAPI recvThread(LPVOID lpParameter)
+
+WORD SendUDPMessage(char* ipaddress, char* message)
+
+void ShowText(DISPLAY_Location_e location, const char *otxt)
+
+******************************************************************************
+

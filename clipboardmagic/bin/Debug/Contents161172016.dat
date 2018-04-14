@@ -1,0 +1,2119 @@
+xml
+
+er.M
+
+tte
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewFaultThread.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewFaultThreadTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\IClearviewFaultInterface.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\InboundFaultQueue.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\InboundFaultQueueTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\CAANPRAdapterHttpInterface.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCDBServiceAdapter.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCDBServiceAdapterTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCDBServiceAdapterTest.xml
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCounterAdapterMain.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCounterAdapterMainTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCounterFaultInputManager.java
+
+localhost:57868/CAInterface.aspx?StartTime=2016-03-20-01-00-00
+
+ class Fault {
+    
+    private string deviceSCNField;
+    
+    private string categoryField;
+    
+    private string typeField;
+    
+    private string startTimeField;
+    
+    private string endTimeField;
+    
+    private long updateTimeField;
+    
+    private string updateTimeStringField;
+    
+    private string miscField;
+    
+    public Fault() {
+        this.deviceSCNField = "";
+        this.categoryField = "";
+        this.typeField = "";
+        this.startTimeField = "";
+        this.endTimeField = "";
+        this.updateTimeStringField = "";
+        this.miscField = "";
+    }
+
+FaultInformation
+
+Faults 
+
+s
+
+a
+
+LastLogTimeStamp
+
+Date time = new Date();
+				    long now = time.getTime();
+
+SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss.ssss" );
+
+http://localhost:57868/CAInterface.aspx?StartTime=2016-07-05-14-07-20
+
+24735
+
+asp:Content
+
+Dynniq 
+Hazelwood House
+Chineham Business Park,
+Hazelwood,
+Chineham, Basingstoke,
+RG248WZ
+
+
+Tel:  07879335173
+
+5284
+
+Faults
+
+<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:22:39</StartTime>
+
+<Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+ Cannot create XmlPullParser
+	at com.thoughtworks.xstream.io.xml.AbstractXppDriver.createReader(AbstractXppDriver.java:56)
+
+runat="server"
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+GetXMLInformation()
+
+<%= GetXMLInformation() %>
+
+System.Web.UI.WebControls.Xml myXML = 
+    new System.Web.UI.WebControls.Xml();
+
+myXML.DocumentSource = "SourceDoc.xml";
+myXML.TransformSource = "SourceTrans.xsl";
+
+MainContent
+
+			String test = "<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>";
+
+<FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateT
+
+stream.alias("FaultInformation", FaultInformation.class);
+				stream.alias("Faults ", Faults .class);
+				stream.addImplicitCollection(Faults .class, "list", FaultInformation.class);
+
+RTHING = 4;
+				test.list.add(e);
+
+ class FaultInformation 
+ {
+    
+    private String DeviceSCN;
+    
+    private String Category;
+    
+    private String type;
+    
+    private String StartTime;
+    
+    private String EndTime;
+    
+    private long UpdateTime;
+    
+    private String UpdateTimeString;
+    
+    private String Misc;
+    
+    public FaultInformation() 
+    {
+        
+    }
+ };
+ 
+ class Faults
+ {
+	 public List<FaultInformation> list;
+	 
+	 public Faults()
+	 {
+		 list = new ArrayList<FaultInformation>();
+	 }
+ };
+
+m
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation>
+
+at com.thoughtworks.xstream.mapper.DefaultMapper.realClass(DefaultMapper.java:81)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.DynamicProxyMapper.realClass(DynamicProxyMapper.java:55)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+Cannot create XmlPullParser
+	at com.thoughtworks.xstream.io.xml.AbstractXppDriver.createReader
+
+D:\3-Workspace\ImCityAdapters\jxmpp-jid-0.4.1-alpha1.jar
+
+D:\3-Workspace\ImCityAdapters\jxmpp-util-cache-0.2.0.jar
+
+D:\3-Workspace\ImCityAdapters\kxml2-2.3.0.jar
+
+D:\3-Workspace\ImCityAdapters\jxmpp-core-0.3.0.jar
+
+D:\3-Workspace\ImCityAdapters\jxmpp-core-0.4.1.jar
+
+LastLogTimeStamp
+
+List<FaultInformation> list;
+
+localListOfFaults
+
+public
+
+localListOfFaults
+
+	FaultInformation fault = new FaultInformation();
+
+InboundFaultQueue inboundQueue = null;
+
+inboundQueue
+
+7305
+
+inboundQueue = InboundFaultQueue.GetInstance();
+
+ReceivedInformation
+
+for(LocalFaultInformation ff: localListOfFaults)
+			{
+				if((fault.DeviceSCN == ff.DeviceSCN) &&
+				   (fault.Category == ff.Category) &&
+				   (fault.StartTime == ff.StartTime) &&
+				   (fault.type == ff.type))
+				{
+
+12702
+
+FaultInformation fault = new FaultInformation();
+		fault.messageType = FaultMessageType.CreateFault;
+
+import dynniq.imcity.myAdapter.support.FaultInformation;
+import dynniq.imcity.myAdapter.support.FaultMessageType;
+import dynniq.imcity.myAdapter.support.FaultTypeTable;
+
+public class FaultInformation
+{
+	public FaultMessageType messageType;
+	public String From = "";
+	public String To = "";
+	public int ID = 0;
+	public String Device = "";
+	public String Fault = "";
+	public String Category = "";
+    public FaultTypeTable type = FaultTypeTable.NotConnected;
+    public String Time = ""; //YYYY-MM-DD HH:MM::SS
+    public String EndTime = ""; //YYYY-MM-DD HH:MM::SS
+    public String TimeReceived = ""; //YYYY-MM-DD HH:MM::SS
+    
+    public FaultInformation(FaultMessageType messageType,
+    				 String From, 
+			         String To, 
+			         int ID, 
+			         String Device, 
+			         String Fault, 
+			         FaultTypeTable type, 
+			         String Time, //YYYY-MM-DD HH:MM::SS
+                     String EndTime //YYYY-MM-DD HH:MM::SS
+                     )
+    {
+    	this.messageType = messageType;
+    	this.From = From;
+    	this.To = To;
+    	this.ID = ID;
+    	this.Device = Device;
+    	this.Fault = Fault;
+    	this.type = type;
+    	this.Time = Time;
+    	this.EndTime = EndTime;
+    }
+
+	public FaultInformation() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+}
+
+	queuefault.messageType = FaultMessageType.CreateFault;
+
+fault.Fault = datasourcetypeid;
+
+queuefault
+
+private String datasourcetypeid = "";
+
+FaultTypeTable
+
+inputManager.ReceivedMessage(fault, id);
+
+private ClearviewCounterFaultInputManager inputManager = null;
+
+this.id = id;
+		inputManager = inputObject;
+
+queuefault
+
+ReceivedInformation
+
+	clearviewMonitor = new ClearViewHttpMonitor();
+		Enumeration<?> en = config.keys();
+		//get right config for this 
+		while (en.hasMoreElements()) 
+		{
+			String key  = (String) en.nextElement();
+			String keyStr = config.getProperty(key);
+			System.out.println(key + ":" + keyStr);
+			switch(key)
+			{
+				case "datasourcetypeid":
+					datasourcetypeid =  keyStr;
+					break;
+
+ReceivedInformation(fault);
+
+# ImCity CDB Adapter data source ID - Value reserved to Imtech
+datasourcetypeid=1724
+CDBTableName=DETECTOR_FAULTS
+
+CDBTableName=DETECTOR_FAULTS
+
+http://localhost:57868/CAInterface.aspx?StartTime=
+
+addRequestProperty
+
+Secure\cutlas\Core\ThirdParty
+
+prerequisite
+
+http://wiki.imtech.uk.com/display/CUST/ImCity+building+64+bit+CDB+Server.
+
+EvoX
+
+http://wiki.imtech.uk.com/display/CUST/ImCity+Build+Projects
+
+http://localhost:57868/CAInterface.aspx?StartTime=2016-07-07-15-55-44
+
+http://localhost:57868/CAInterface.aspx?StartTime=2016-07-07-16-03-11
+
+List<LocalFaultInformation> localListOfFaults = new ArrayList<LocalFaultInformation>();
+
+684533371/1
+
+TOO@help.vodafone.co.uk 
+
+listofFaults
+
+SerialiseFaults
+
+String local_url = url + _date;
+
+String _date
+
+K10892626
+
+08300
+
+HP135XB 
+
+daniel.perrett
+
+danielp
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Base class for a single VMS Basic data CDB object.
+ */
+package imtech.imcity.cdb.objects;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class DetectorFaults extends BaseFaults {
+
+	private final String objectName = "DetectorFaults";
+
+	/**
+	 * Default Constructor
+	 */
+	public DetectorFaults() {
+		super();
+	}
+
+	/**
+	 * @return the objectName
+	 */
+	public String getObjectName() {
+		return objectName;
+	}
+}
+
+<xs:schema id="CAInterface"
+    targetNamespace="http://tempuri.org/CAInterface.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CAInterface.xsd"
+    xmlns:mstns="http://tempuri.org/CAInterface.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="Fault">
+    <xs:sequence>
+      <xs:element name="DeviceSCN" type="xs:string" default="" />
+      <xs:element name="Category" type="xs:string" default="" />
+      <xs:element name="type" type="xs:string" default="" />
+      <xs:element name="StartTime" type="xs:string" default="" />
+      <xs:element name="EndTime" type="xs:string" default="" />
+      <xs:element name="UpdateTime" type="xs:long" />
+      <xs:element name="UpdateTimeString" type="xs:string" default="" />
+      <xs:element name="Misc" type="xs:string" default="" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Faults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="FaultInformation" type="Fault" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Version" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+	void vmsFaultsUpdate(ArrayList<VMSFaults> vmsFaults, boolean deleted);
+
+void vmsFaultsUpdate(ArrayList<VMSFaults> vmsFaults, boolean deleted);
+
+Birmingham Road
+Allesley
+Coventry 
+Warwickshire 
+CV5 9AL 
+
+
+Best Western Plus Windmill Village Hotel Golf and Leisure Club
+Birmingham Road
+Allesley
+Coventry 
+Warwickshire 
+CV5 9AL 
+
+
+VMSSubscriptionData
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Manager Consumer subscriptions to fault changes from the UTMC cdb CORBA Client.
+ */
+package imtech.imcity.cdb.submanagers;
+
+import imtech.imcity.cdb.interfaces.VMSSubscriber;
+
+import java.util.ArrayList;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSSubscriptionManager {
+
+	private VMSSubscriberCollection subscribers;
+
+	/**
+	 * Default Constructor
+	 */
+	public VMSSubscriptionManager() {
+		subscribers = new VMSSubscriberCollection();
+	}
+
+	/**
+	 * @param subscriberRef
+	 */
+	public void addSubscriber(VMSSubscriber subscriberRef) {
+		synchronized (subscribers) {
+			if (!subscribers.contains(subscriberRef)) {
+				subscribers.add(subscriberRef);
+			}
+		}
+	}
+
+	/**
+	 * @param subscriberRef
+	 */
+	public void removeSubscriber(VMSSubscriber subscriberRef) {
+		synchronized (subscribers) {
+			if (subscribers.contains(subscriberRef)) {
+				subscribers.remove(subscriberRef);
+			}
+		}
+	}
+
+	/**
+	 * @return an Array List of CDBSubscriber objects
+	 */
+	public ArrayList<VMSSubscriber> getSubscribers() {
+		ArrayList<VMSSubscriber> subs = new ArrayList<VMSSubscriber>();
+		synchronized (subscribers) {
+			subs = subscribers.getSubscribers();
+		}
+		return subs;
+	}
+}
+
+CCTVSubscriptionManager
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Consumer subscription collection POJO.
+ */
+package imtech.imcity.cdb.submanagers;
+
+import imtech.imcity.cdb.interfaces.VMSSubscriber;
+
+import java.util.ArrayList;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSSubscriberCollection {
+
+	private ArrayList<VMSSubscriber> collection = new ArrayList<VMSSubscriber>();
+
+	/**
+	 * Default constructor.
+	 */
+	public VMSSubscriberCollection() {
+		// Do Nothing.
+	}
+
+	protected ArrayList<VMSSubscriber> getSubscribers() {
+		synchronized (collection) {
+			ArrayList<VMSSubscriber> result = new ArrayList<VMSSubscriber>();
+			for (VMSSubscriber sub : collection) {
+				result.add(sub);
+			}
+			return result;
+		}
+	}
+
+	protected void add(VMSSubscriber subscriberRef) {
+		synchronized (collection) {
+			if (!collection.contains(subscriberRef)) {
+				collection.add(subscriberRef);
+			}
+		}
+	}
+
+	protected void remove(VMSSubscriber subscriberRef) {
+		synchronized (collection) {
+			if (collection.contains(subscriberRef)) {
+				collection.remove(subscriberRef);
+			}
+		}
+	}
+
+	/**
+	 * @param subscriberRef
+	 * @return TRUE is the Subscriber reference is in the Subscriber collection
+	 */
+	public boolean contains(VMSSubscriber subscriberRef) {
+		boolean result = false;
+		synchronized (collection) {
+			result = collection.contains(subscriberRef);
+		}
+		return result;
+	}
+}
+
+CCTVSubscriberCollection
+
+CCTVSubscriber
+
+CCTVSubscriberCollection
+
+CCTVSubscriber
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * UTMC CDB CORBA Client
+ */
+package imtech.imcity.cdb.transforms;
+
+import imtech.imcity.cdb.CDBUtility;
+import imtech.imcity.cdb.objects.VMSCommands;
+import imtech.imcity.cdb.objects.VMSConfiguration;
+import imtech.imcity.cdb.objects.VMSData;
+import imtech.imcity.cdb.objects.VMSDefinition;
+import imtech.imcity.cdb.objects.VMSDynamic;
+import imtech.imcity.cdb.objects.VMSFaults;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.Properties;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSTransformResults {
+
+	private final String scn = "SystemCodeNumber";
+	private final String shortDesc = "shortDescription";
+	private final String longDesc = "longDescription";
+	private final String dsTypId = "datasource_TypeId";
+	
+	/**
+	 * Default constructor.
+	 */
+	public VMSTransformResults() {
+		// Nothing
+	}
+
+	public ArrayList<VMSData> transformVmsData(Properties queryResults) {
+		ArrayList<VMSData> vmsData = new ArrayList<VMSData>();
+		int maxIndex = 0;
+		// First pass to create the objects in an array list, populating one field
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			if (scn.equalsIgnoreCase(es.getKey().toString().toUpperCase())) {
+				@SuppressWarnings("unchecked")
+				List<String> eValu = (List<String>) es.getValue();
+				maxIndex = eValu.size();
+				for (int i = 0; i < maxIndex; i++) {
+					VMSData item = new VMSData();
+					item.setSystemCodeNumber(eValu.get(i));
+					vmsData.add(item);
+				}
+			}
+		}
+		// Second pass to assign the other fields
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			// Only process keys that we recognise
+			String key = es.getKey().toString().toUpperCase();
+			@SuppressWarnings("unchecked")
+			List<String> valu = (List<String>) es.getValue();
+
+			// Pick off each column (SystemCodeNumber already extracted above)
+			if ("alignment_TypeId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsData.get(i).setAlignmentTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("allowFreeText".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsData.get(i).setAllowFreeText(valu.get(i));
+				}
+			}
+		}
+		return vmsData;
+	}
+
+	public ArrayList<VMSDefinition> transformVmsDefinition(Properties queryResults) {
+		ArrayList<VMSDefinition> vmsDefinition = new ArrayList<VMSDefinition>();
+		int maxIndex = 0;
+		// First pass to create the objects in an array list, populating one field
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			if (scn.equalsIgnoreCase(es.getKey().toString().toUpperCase())) {
+				@SuppressWarnings("unchecked")
+				List<String> eValu = (List<String>) es.getValue();
+				maxIndex = eValu.size();
+				for (int i = 0; i < maxIndex; i++) {
+					VMSDefinition item = new VMSDefinition();
+					item.setSystemCodeNumber(eValu.get(i));
+					vmsDefinition.add(item);
+				}
+			}
+		}
+		// Second pass to assign the other fields
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			// Only process keys that we recognise
+			String key = es.getKey().toString().toUpperCase();
+			@SuppressWarnings("unchecked")
+			List<String> valu = (List<String>) es.getValue();
+
+			// Pick off each column (SystemCodeNumber already extracted above)
+			if (shortDesc.equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setShortDescription(valu.get(i));
+				}
+			}
+			if (longDesc.equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setLongDescription(valu.get(i));
+				}
+			}
+			if (dsTypId.equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setDatasourceTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("northing".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setNorthing(CDBUtility.StringToDouble(valu.get(i)));
+				}
+			}
+			if ("easting".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setEasting(CDBUtility.StringToDouble(valu.get(i)));
+				}
+			}
+			if ("geometryId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setGeometryId(valu.get(i));
+				}
+			}
+			if ("networkpathReference".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setNetworkpathReference(valu.get(i));
+				}
+			}
+			if ("transportlinkReference".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setTransportlinkReference(valu.get(i));
+				}
+			}
+			if ("typeId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("linkDistance".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setLinkDistance(CDBUtility.StringToDouble(valu.get(i)));
+				}
+			}
+			if ("creationDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsDefinition.get(i).setCreationDate(cd);
+				}
+			}
+			if ("deletionDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsDefinition.get(i).setDeletionDate(cd);
+				}
+			}
+			if ("qualityStatementId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setQualityStatementId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("displayOption".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setDisplayOption(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("strStatus".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setStrStatus(valu.get(i));
+				}
+			}
+			if ("dvm_Enabled".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setDvmEnabled(valu.get(i));
+				}
+			}
+			if ("dvm_DeployedBy".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDefinition.get(i).setDvmDeployedBy(valu.get(i));
+				}
+			}
+		}
+		return vmsDefinition;
+	}
+
+	public ArrayList<VMSConfiguration> transformVmsConfiguration(Properties queryResults) {
+		ArrayList<VMSConfiguration> vmsConfiguration = new ArrayList<VMSConfiguration>();
+		int maxIndex = 0;
+		// First pass to create the objects in an array list, populating one field
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			if (scn.equalsIgnoreCase(es.getKey().toString().toUpperCase())) {
+				@SuppressWarnings("unchecked")
+				List<String> eValu = (List<String>) es.getValue();
+				maxIndex = eValu.size();
+				for (int i = 0; i < maxIndex; i++) {
+					VMSConfiguration item = new VMSConfiguration();
+					item.setSystemCodeNumber(eValu.get(i));
+					vmsConfiguration.add(item);
+				}
+			}
+		}
+		// Second pass to assign the other fields
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			// Only process keys that we recognise
+			String key = es.getKey().toString().toUpperCase();
+			@SuppressWarnings("unchecked")
+			List<String> valu = (List<String>) es.getValue();
+
+			// Pick off each column (SystemCodeNumber already extracted above)
+			if ("configurationDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsConfiguration.get(i).setConfigurationDate(cd);
+				}
+			}
+			if ("serialNumber".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setSerialNumber(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("lanternsAvailable".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setLanternsAvailable(valu.get(i));
+				}
+			}
+			if ("width".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setWidth(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("height".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setHeight(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("fontWidth".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setFontWidth(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("fontHeight".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setFontHeight(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("fontSpacing".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setFontSpacing(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if (shortDesc.equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setShortDescription(valu.get(i));
+				}
+			}
+			if (longDesc.equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsConfiguration.get(i).setLongDescription(valu.get(i));
+				}
+			}
+		}
+		return vmsConfiguration;
+	}
+
+	public ArrayList<VMSDynamic> transformVmsDynamic(Properties queryResults) {
+		ArrayList<VMSDynamic> vmsDynamic = new ArrayList<VMSDynamic>();
+		int maxIndex = 0;
+		// First pass to create the objects in an array list, populating one field
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			if (scn.equalsIgnoreCase(es.getKey().toString().toUpperCase())) {
+				@SuppressWarnings("unchecked")
+				List<String> eValu = (List<String>) es.getValue();
+				maxIndex = eValu.size();
+				for (int i = 0; i < maxIndex; i++) {
+					VMSDynamic item = new VMSDynamic();
+					item.setSystemCodeNumber(eValu.get(i));
+					vmsDynamic.add(item);
+				}
+			}
+		}
+		// Second pass to assign the other fields
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			// Only process keys that we recognise
+			String key = es.getKey().toString().toUpperCase();
+			@SuppressWarnings("unchecked")
+			List<String> valu = (List<String>) es.getValue();
+
+			// Pick off each column (SystemCodeNumber already extracted above)
+			if ("lastupdated".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsDynamic.get(i).setLastupdated(cd);
+				}
+			}
+			if ("msgId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDynamic.get(i).setMsgId(valu.get(i));
+				}
+			}
+			if ("msgTxt".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDynamic.get(i).setMsgText(valu.get(i));
+				}
+			}
+			if ("lanternState".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDynamic.get(i).setLanternState(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("luminescenceOverride".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDynamic.get(i).setLuminescenceOverride(valu.get(i));
+				}
+			}
+			if ("luminescenceLevel".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDynamic.get(i).setLuminescenceLevel(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if (dsTypId.equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsDynamic.get(i).setDatasourceTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+		}
+		return vmsDynamic;
+	}
+
+	public ArrayList<VMSFaults> transformVmsFaults(Properties queryResults) {
+		ArrayList<VMSFaults> vmsFaults = new ArrayList<VMSFaults>();
+		int maxIndex = 0;
+		// First pass to create the objects in an array list, populating one field
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			if (scn.equalsIgnoreCase(es.getKey().toString().toUpperCase())) {
+				@SuppressWarnings("unchecked")
+				List<String> eValu = (List<String>) es.getValue();
+				maxIndex = eValu.size();
+				for (int i = 0; i < maxIndex; i++) {
+					VMSFaults item = new VMSFaults();
+					item.setSystemCodeNumber(eValu.get(i));
+					vmsFaults.add(item);
+				}
+			}
+		}
+		// Second pass to assign the other fields
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			// Only process keys that we recognise
+			String key = es.getKey().toString().toUpperCase();
+			@SuppressWarnings("unchecked")
+			List<String> valu = (List<String>) es.getValue();
+
+			if ("faultId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setFaultId(valu.get(i));
+				}
+			}
+			if ("creationDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsFaults.get(i).setCreationDate(cd);
+				}
+			}
+			if ("lastupdated".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsFaults.get(i).setLastUpdated(cd);
+				}
+			}
+			if ("faultType".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setFaultType(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("subSystemId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setSubSystemId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("datasourceTypeId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setDatasourceTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("supplierFaultNumber".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setSupplierFaultNumber(valu.get(i));
+				}
+			}
+			if ("clearedDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsFaults.get(i).setClearedDate(cd);
+				}
+			}
+			if ("ackDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsFaults.get(i).setAckDate(cd);
+				}
+			}
+			if ("ackTypeId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setAckTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("equipmentFault".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setEquipmentFault(valu.get(i));
+				}
+			}
+			if ("communicationsFault".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setCommunicationsFault(valu.get(i));
+				}
+			}
+			if ("description".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setDescription(valu.get(i));
+				}
+			}
+			if ("comments".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setComments(valu.get(i));
+				}
+			}
+			if ("fmsId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setFmsId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("fmsStatus".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setFmsStatus(valu.get(i));
+				}
+			}
+			if ("fmsUserId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setFmsUserId(valu.get(i));
+				}
+			}
+			if ("fmsExpectedFixDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsFaults.get(i).setFmsExpectedFixDate(cd);
+				}
+			}
+			if ("fmsClearanceDate".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsFaults.get(i).setFmsClearanceDate(cd);
+				}
+			}
+			if ("fmsNote".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsFaults.get(i).setFmsNote(valu.get(i));
+				}
+			}
+		}
+		return vmsFaults;
+	}
+
+
+	public ArrayList<VMSCommands> transformVMSCommands(Properties queryResults) {
+		ArrayList<VMSCommands> vmsCommands = new ArrayList<VMSCommands>();
+		int maxIndex = 0;
+		// First pass to create the objects in an array list, populating one field
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			if (scn.equalsIgnoreCase(es.getKey().toString().toUpperCase())) {
+				@SuppressWarnings("unchecked")
+				List<String> eValu = (List<String>) es.getValue();
+				maxIndex = eValu.size();
+				for (int i = 0; i < maxIndex; i++) {
+					VMSCommands item = new VMSCommands();
+					item.setSystemCodeNumber(eValu.get(i));
+					vmsCommands.add(item);
+				}
+			}
+		}
+		// Second pass to assign the other fields
+		for (Entry<Object, Object> es : queryResults.entrySet()) {
+			// Only process keys that we recognise
+			String key = es.getKey().toString().toUpperCase();
+			@SuppressWarnings("unchecked")
+			List<String> valu = (List<String>) es.getValue();
+
+			// Pick off each column (SystemCodeNumber already extracted above)
+			if ("commandId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setCommandId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("commandFormat".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setCommandFormat(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("datasource_TypeId".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setDatasourceTypeId(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("command".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setCommand(valu.get(i));
+				}
+			}
+			if ("parameters".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setParameters(valu.get(i));
+				}
+			}
+			if ("priority".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setPriority(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("reqTime".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsCommands.get(i).setRequestTime(cd);
+				}
+			}
+			if ("ackTime".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsCommands.get(i).setAcknowledgeTime(cd);
+				}
+			}
+			if ("responseTime".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					java.util.Date cd = CDBUtility.stringToDate(valu.get(i));
+					vmsCommands.get(i).setResponseTime(cd);
+				}
+			}
+			if ("responseResult".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setResponseResult(CDBUtility.StringToInt(valu.get(i)));
+				}
+			}
+			if ("responseComment".equalsIgnoreCase(key)) {
+				for (int i = 0; i < maxIndex; i++) {
+					vmsCommands.get(i).setResponseComment(valu.get(i));
+				}
+			}
+		}
+		return vmsCommands;
+	}
+
+}
+
+CCTVTransformResults
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Base class for a single VMS Basic data CDB object.
+ */
+package imtech.imcity.cdb.objects;
+
+import imtech.imcity.cdb.CDBConstant;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSData {
+
+	private String systemCodeNumber;
+	private int alignmentTypeId;
+	private boolean allowFreeText;
+
+	/**
+	 * Default Constructor
+	 */
+	public VMSData() {
+		setSystemCodeNumber(CDBConstant.BLANK);
+		setAlignmentTypeId(CDBConstant.ZERO);
+		setAllowFreeText(false);
+	}
+
+	/**
+	 * @return the systemCodeNumber
+	 */
+	public String getSystemCodeNumber() {
+		return systemCodeNumber;
+	}
+
+	/**
+	 * @param systemCodeNumberIn the systemCodeNumber to set
+	 */
+	public void setSystemCodeNumber(String systemCodeNumberIn) {
+		systemCodeNumber = systemCodeNumberIn;
+	}
+
+	/**
+	 * @return the alignmentTypeId
+	 */
+	public int getAlignmentTypeId() {
+		return alignmentTypeId;
+	}
+
+	/**
+	 * @param alignmentTypeIdIn the alignmentTypeId to set
+	 */
+	public void setAlignmentTypeId(int alignmentTypeIdIn) {
+		alignmentTypeId = alignmentTypeIdIn;
+	}
+
+	/**
+	 * @return the allowFreeText
+	 */
+	public boolean isAllowFreeText() {
+		return allowFreeText;
+	}
+
+	/**
+	 * @param allowFreeTextIn the allowFreeText to set
+	 */
+	public void setAllowFreeText(boolean allowFreeTextIn) {
+		allowFreeText = allowFreeTextIn;
+	}
+
+	/**
+	 * @param allowFreeTextIn the allowFreeText to set
+	 */
+	public void setAllowFreeText(String allowFreeTextIn) {
+		if (allowFreeTextIn == null) {
+			allowFreeText = false;
+		} else {
+			allowFreeText = "Y".equalsIgnoreCase(allowFreeTextIn);
+		}
+	}	
+}
+
+CCTVData
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Base class for a single VMS Basic data CDB object.
+ */
+package imtech.imcity.cdb.objects;
+
+import imtech.imcity.cdb.CDBConstant;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSDefinition extends BaseDefinition {
+
+	private final String objectName = "VMSDefinition";
+
+	private boolean dvmEnabled;
+	private String dvmDeployedBy;
+
+	/**
+	 * Default Constructor
+	 */
+	public VMSDefinition() {
+		super();
+		setDvmEnabled(false);
+		setDvmDeployedBy(CDBConstant.BLANK);
+	}
+
+	/**
+	 * @return the objectName
+	 */
+	public String getObjectName() {
+		return objectName;
+	}
+
+	/**
+	 * @return the dvmEnabled
+	 */
+	public boolean isDvmEnabled() {
+		return dvmEnabled;
+	}
+
+	/**
+	 * @param dvmEnabledIn the dvmEnabled to set
+	 */
+	public void setDvmEnabled(boolean dvmEnabledIn) {
+		dvmEnabled = dvmEnabledIn;
+	}
+
+	/**
+	 * @param dvmEnabledIn the dvmEnabled to set
+	 */
+	public void setDvmEnabled(String dvmEnabledIn) {
+		if (dvmEnabledIn != null) {
+			dvmEnabled = "Y".equalsIgnoreCase(dvmEnabledIn);
+		} else {
+			dvmEnabled = false;
+		}
+	}
+
+	/**
+	 * @return the dvmDeployedBy
+	 */
+	public String getDvmDeployedBy() {
+		return dvmDeployedBy;
+	}
+
+	/**
+	 * @param dvmDeployedByIn the dvmDeployedBy to set
+	 */
+	public void setDvmDeployedBy(String dvmDeployedByIn) {
+		dvmDeployedBy = dvmDeployedByIn;
+	}
+}
+
+CCTVDefinition
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Base class for a single VMS Configuration data CDB object.
+ */
+package imtech.imcity.cdb.objects;
+
+import imtech.imcity.cdb.CDBConstant;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSConfiguration extends BaseConfiguration {
+
+	private final String objectName = "VMSConfiguration";
+
+	private int serialNumber;
+	private boolean lanternsAvailable;
+	private int width;
+	private int height;
+	private int fontWidth;
+	private int fontHeight;
+	private int fontSpacing;
+	private String shortDescription;
+	private String longDescription;
+
+	/**
+	 * Default Constructor
+	 */
+	public VMSConfiguration() {
+		super();
+		setSerialNumber(CDBConstant.ZERO);
+		setLanternsAvailable(false);
+		setWidth(CDBConstant.ZERO);
+		setHeight(CDBConstant.ZERO);
+		setFontWidth(CDBConstant.ZERO);
+		setFontHeight(CDBConstant.ZERO);
+		setFontSpacing(CDBConstant.ZERO);		
+		setShortDescription(CDBConstant.BLANK);
+		setLongDescription(CDBConstant.BLANK);
+	}
+
+	/**
+	 * @return the objectName
+	 */
+	public String getObjectName() {
+		return objectName;
+	}
+
+	/**
+	 * @return the shortDescription
+	 */
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	/**
+	 * @param shortDescriptionIn the shortDescription to set
+	 */
+	public void setShortDescription(String shortDescriptionIn) {
+		shortDescription = shortDescriptionIn;
+	}
+
+	/**
+	 * @return the longDescription
+	 */
+	public String getLongDescription() {
+		return longDescription;
+	}
+
+	/**
+	 * @param longDescriptionIn the longDescription to set
+	 */
+	public void setLongDescription(String longDescriptionIn) {
+		longDescription = longDescriptionIn;
+	}
+
+	/**
+	 * @return the serialNumber
+	 */
+	public int getSerialNumber() {
+		return serialNumber;
+	}
+
+	/**
+	 * @param serialNumberIn the serialNumber to set
+	 */
+	public void setSerialNumber(int serialNumberIn) {
+		serialNumber = serialNumberIn;
+	}
+	
+	/**
+	 * @return the lanternsAvailable
+	 */
+	public boolean isLanternsAvailable() {
+		return lanternsAvailable;
+	}
+
+	/**
+	 * @param lanternsAvailableIn the lanternsAvailable to set
+	 */
+	public void setLanternsAvailable(boolean lanternsAvailableIn) {
+		lanternsAvailable = lanternsAvailableIn;
+	}
+
+	/**
+	 * @param lanternsAvailableIn the lanternsAvailable to set
+	 */
+	public void setLanternsAvailable(String lanternsAvailableIn) {
+		if (lanternsAvailableIn != null) {
+			lanternsAvailable = "Y".equalsIgnoreCase(lanternsAvailableIn);
+		} else {
+			lanternsAvailable = false;
+		}
+	}
+
+	/**
+	 * @return the width
+	 */
+	public int getWidth() {
+		return width;
+	}
+
+	/**
+	 * @param widthIn the width to set
+	 */
+	public void setWidth(int widthIn) {
+		width = widthIn;
+	}
+
+	/**
+	 * @return the height
+	 */
+	public int getHeight() {
+		return height;
+	}
+
+	/**
+	 * @param heightIn the height to set
+	 */
+	public void setHeight(int heightIn) {
+		height = heightIn;
+	}
+
+	/**
+	 * @return the fontWidth
+	 */
+	public int getFontWidth() {
+		return fontWidth;
+	}
+
+	/**
+	 * @param fontWidthIn the fontWidth to set
+	 */
+	public void setFontWidth(int fontWidthIn) {
+		fontWidth = fontWidthIn;
+	}
+
+	/**
+	 * @return the fontHeight
+	 */
+	public int getFontHeight() {
+		return fontHeight;
+	}
+
+	/**
+	 * @param fontHeightIn the fontHeight to set
+	 */
+	public void setFontHeight(int fontHeightIn) {
+		fontHeight = fontHeightIn;
+	}
+
+	/**
+	 * @return the fontSpacing
+	 */
+	public int getFontSpacing() {
+		return fontSpacing;
+	}
+
+	/**
+	 * @param fontSpacingIn the fontSpacing to set
+	 */
+	public void setFontSpacing(int fontSpacingIn) {
+		fontSpacing = fontSpacingIn;
+	}
+}
+
+CCTVConfiguration
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Base class for a single VMS Dynamic data CDB object.
+ */
+package imtech.imcity.cdb.objects;
+
+import imtech.imcity.cdb.CDBConstant;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSDynamic extends BaseDynamic {
+
+	private final String objectName = "VMSDynamic";
+	
+	private String msgId;
+	private String msgText;
+	private int lanternState;
+	private boolean luminescenceOverride;
+	private int luminescenceLevel;
+	private int datasourceTypeId;
+
+	/**
+	 * Default Constructor
+	 */
+	public VMSDynamic() {
+		super();
+		setMsgId(CDBConstant.BLANK);
+		setMsgText(CDBConstant.BLANK);
+		setLanternState(CDBConstant.ZERO);
+		setLuminescenceOverride(false);
+		setLuminescenceLevel(CDBConstant.ZERO);
+		setDatasourceTypeId(CDBConstant.ZERO);
+	}
+
+	/**
+	 * @return the objectName
+	 */
+	public String getObjectName() {
+		return objectName;
+	}
+
+	/**
+	 * @return the msgId
+	 */
+	public String getMsgId() {
+		return msgId;
+	}
+
+	/**
+	 * @param msgIdIn the msgId to set
+	 */
+	public void setMsgId(String msgIdIn) {
+		msgId = msgIdIn;
+	}
+
+	/**
+	 * @return the msgText
+	 */
+	public String getMsgText() {
+		return msgText;
+	}
+
+	/**
+	 * @param msgTextIn the msgText to set
+	 */
+	public void setMsgText(String msgTextIn) {
+		msgText = msgTextIn;
+	}
+
+	/**
+	 * @return the lanternState
+	 */
+	public int getLanternState() {
+		return lanternState;
+	}
+
+	/**
+	 * @param lanternStateIn the lanternState to set
+	 */
+	public void setLanternState(int lanternStateIn) {
+		lanternState = lanternStateIn;
+	}
+
+	/**
+	 * @return the luminescenceOverride
+	 */
+	public boolean isLuminescenceOverride() {
+		return luminescenceOverride;
+	}
+
+	/**
+	 * @param luminescenceOverrideIn the luminescenceOverride to set
+	 */
+	public void setLuminescenceOverride(boolean luminescenceOverrideIn) {
+		luminescenceOverride = luminescenceOverrideIn;
+	}
+
+	/**
+	 * @param luminescenceOverrideIn the luminescenceOverride to set
+	 */
+	public void setLuminescenceOverride(String luminescenceOverrideIn) {
+		if (luminescenceOverrideIn != null) {
+			luminescenceOverride = "Y".equalsIgnoreCase(luminescenceOverrideIn);
+		} else {
+			luminescenceOverride = false;
+		}
+	}
+
+	/**
+	 * @return the luminescenceLevel
+	 */
+	public int getLuminescenceLevel() {
+		return luminescenceLevel;
+	}
+
+	/**
+	 * @param luminescenceLevelIn the luminescenceLevel to set
+	 */
+	public void setLuminescenceLevel(int luminescenceLevelIn) {
+		luminescenceLevel = luminescenceLevelIn;
+	}
+
+	/**
+	 * @return the datasourceTypeId
+	 */
+	public int getDatasourceTypeId() {
+		return datasourceTypeId;
+	}
+
+	/**
+	 * @param datasourceTypeIdIn the datasourceTypeId to set
+	 */
+	public void setDatasourceTypeId(int datasourceTypeIdIn) {
+		datasourceTypeId = datasourceTypeIdIn;
+	}
+}
+
+CCTVDynamic
+
+CCTVFaults
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Base class for a single VMS Basic data CDB object.
+ */
+package imtech.imcity.cdb.objects;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSCommands extends BaseCommands {
+
+	private final String objectName = "VMSCommands";
+
+	/**
+	 * Default Constructor
+	 */
+	public VMSCommands() {
+		super();
+	}
+
+	/**
+	 * @return the objectName
+	 */
+	public String getObjectName() {
+		return objectName;
+	}
+}
+
+CCTVCommands
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * UTMC CDB CORBA Client Traffic Signal Faults subscription.
+ */
+package imtech.imcity.cdb.subdata;
+
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBDataCacheHeartBeat;
+import imtech.imcity.cdb.CDBUtility;
+import imtech.imcity.cdb.interfaces.VMSSubscriber;
+import imtech.imcity.cdb.objects.VMSCommands;
+import imtech.imcity.cdb.objects.VMSConfiguration;
+import imtech.imcity.cdb.objects.VMSData;
+import imtech.imcity.cdb.objects.VMSDefinition;
+import imtech.imcity.cdb.objects.VMSDynamic;
+import imtech.imcity.cdb.submanagers.VMSSubscriptionManager;
+import imtech.imcity.cdb.transforms.VMSTransformResults;
+import imtech.imcity.corba.SessionManagement.Manager;
+import imtech.imcity.corba.SessionManagement.Session;
+import imtech.imcity.corba.Subscriptions.DataNotification;
+import imtech.imcity.corba.Subscriptions.DatabaseAction;
+import imtech.imcity.corba.Subscriptions.NotificationException;
+import imtech.imcity.corba.Subscriptions.NotificationRequest;
+import imtech.imcity.corba.Subscriptions.NotificationRequestHelper;
+import imtech.imcity.corba.Subscriptions.SubscriptionRequest;
+import imtech.imcity.corba.Subscriptions.SubscriptionRequestHelper;
+import imtech.imcity.corba.TabularResults.ResultSet;
+
+import java.util.ArrayList;
+import java.util.Map.Entry;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+/**
+ * @author tina.turner
+ * 
+ */
+public class VMSSubscriptionData extends Thread {
+
+	private final Logger logger = LogManager.getLogger(VMSSubscriptionData.class);
+
+	/**
+	 * SubscribeToFaults is the thread class that subscribes to Traffic Signal Faults and processes them.
+	 */
+	private VMSSubscriptionManager subscriptionManager;
+	private Manager cdbManager;
+	private Session cdbSession;
+	private String userName;
+	private String userPass;
+	private int status;
+	private int keepAlive;
+	private int diagInt;
+	private ArrayList<String> views;
+
+	private boolean hbId;
+
+	private VMSTransformResults tr;
+
+	/**
+	 * Default Constructor - NOT USED.
+	 */
+	public VMSSubscriptionData() {
+		// Nothing
+	}
+
+	/**
+	 * CDBSubscriptionData implements the CORBA subscription to views
+	 * 
+	 * @param cdbManagerIn
+	 *            CORBA ORB Manager object
+	 * @param userNameIn
+	 *            CORBA access user name
+	 * @param userPassIn
+	 *            CORBA access user password
+	 * @param keepAliveIn
+	 *            CORBA heart beat interval
+	 * @param statusIn
+	 *            parent class status
+	 * @param diagIntIn
+	 *            diagnostic level
+	 * @param viewsIn
+	 *            CDB database view names
+	 */
+	public VMSSubscriptionData(VMSSubscriptionManager subscriptionManagerIn, Manager cdbManagerIn, String userNameIn, String userPassIn, int keepAliveIn, int statusIn,
+			int diagIntIn, ArrayList<String> viewsIn) {
+		subscriptionManager = subscriptionManagerIn;
+		cdbManager = cdbManagerIn;
+		userName = userNameIn;
+		userPass = userPassIn;
+		setKeepAlive(keepAliveIn);
+		setStatus(statusIn);
+		setDiagInt(diagIntIn);
+		views = viewsIn;
+
+		// Prepare CORBA Results transformer
+		tr = new VMSTransformResults();
+	}
+
+	@Override
+	public void run() {
+		if (cdbManager != null) {
+			setStatus(CDBConstant.RUNNING);
+			while (getStatus() == CDBConstant.RUNNING) {
+				subscription();
+			}
+			if (testDiagInt(CDBConstant.DIAGNOSTIC_T)) {
+				CDBUtility.ps(logger, "Subscription thread closed");
+			}
+		} else {
+			CDBUtility.ps(logger, "Null CDBManager object\rSubscription thread closed");			
+		}
+	}
+
+	/**
+	 * Subscribe and process Faults.
+	 */
+	private void subscription() {
+		try {
+
+			// Create an authenticated session
+			if (testDiagInt(CDBConstant.DIAGNOSTIC_T)) {
+				CDBUtility.ps(logger, "Subscription thread logging in " + userName);
+			}
+			cdbSession = null;
+			while (cdbSession == null ) {
+				// Create a session to the CDB
+				cdbSession = cdbManager.createSession(userName, userPass);
+				if ( cdbSession == null ) {
+					CDBUtility.ps(logger, "Subscription thread login failed for " + userName);
+					CDBUtility.sleeping(CDBConstant.RESTARTWAITERROR);
+				}
+			}
+			if (testDiagInt(CDBConstant.DIAGNOSTIC_T)) {
+				CDBUtility.ps(logger, "Subscription thread logged in");
+			}
+
+			// Register connection details with the CDBServer
+			cdbSession.registerInformation(CDBConstant.SUBSCRIBER);
+
+			// Create a session subscription object for the CDB
+			org.omg.CORBA.Object corbaSubscriptionObj = cdbSession.createObject(CDBConstant.IDL_SUB_SUB);
+
+			// Track subscription requests
+			ArrayList<SubscriptionRequest> requests = new ArrayList<SubscriptionRequest>();
+
+			// Setup session heart beat and monitor
+			CDBDataCacheHeartBeat hbt = null;
+			hbId = cdbSession.registerHeartbeat(keepAlive);
+			if ( hbId ) {
+				if (testDiagInt(CDBConstant.DIAGNOSTIC_T)) {
+					CDBUtility.ps(logger, "Session Heart beat registered");
+				}
+
+				hbt = new CDBDataCacheHeartBeat(cdbSession, hbId, keepAlive, getStatus());
+				hbt.setPriority(CDBConstant.COMMANDPRIORITY);
+				hbt.start();
+				yield();
+
+				// Establish Subscriptions for views
+				for (String vu: views) {
+					SubscriptionRequest subReq = SubscriptionRequestHelper.narrow(corbaSubscriptionObj);
+					if (subReq != null) {
+						String table = vu;
+						// FALSE result in IF below is good - subscription created
+						if (!subReq.createSubscription(table, vu)) {
+							// Create a session notification object for the CDB
+							requests.add(subReq);
+							if (testDiagInt(CDBConstant.DIAGNOSTIC_T)) {
+								CDBUtility.ps(logger, "Subscribed to CDB view " + vu);
+							}
+						} else {
+							CDBUtility.ps(logger, "Failed to subscribe to CDB View " + vu);
+						}
+					}
+				}
+
+				// Only process notifications if there are subscriptions
+				if (requests.size() > CDBConstant.ZERO) {
+
+					// Establish notification for subscriptions
+					org.omg.CORBA.Object corbaNotificationObj = cdbSession.createObject(CDBConstant.IDL_SUB_NOT);
+					NotificationRequest notReq = NotificationRequestHelper.narrow(corbaNotificationObj);
+					DataNotification dataNotifications = null;
+
+					while (getStatus() == CDBConstant.RUNNING) {
+						try {
+							// This thread blocks here waiting for data
+							dataNotifications = notReq.pull();							
+
+							// This thread resumes here when data is available or timeout
+							ResultSet notresults = dataNotifications.results;
+							DatabaseAction action = dataNotifications.action;
+							boolean deleted = action.value() == 1;
+							
+							if (notresults != null) {
+								Properties rp = CDBUtility.getResults(notresults, getDiagInt());
+								String view = dataNotifications.viewName;
+
+								if (testDiagInt(CDBConstant.TRACE_T)) {
+									CDBUtility.ps(logger, "Data Recieved for " + view);
+								}
+								if (testDiagInt(CDBConstant.DATADUMP)) { // DATADUMP
+									CDBUtility.ps(logger, "Data ");
+									for (Entry<Object, Object> es : rp.entrySet()) {
+										CDBUtility.ps(logger, "Column " + es.getKey() + "\r\n Values " + es.getValue());
+									}
+								}
+
+								// Get the latest list of subscribed consumers
+								ArrayList<VMSSubscriber> subs = subscriptionManager.getSubscribers();
+
+								// Skip if there are no subscriptions
+								if (!subs.isEmpty()) {
+									// VIEW SPECIFIC PROCESSING FROM THIS POINT
+									// in each case below, Create an Array of data objects
+									// and Push the array to the each subscribed consumer
+
+									// Synchronise on the manager 
+									synchronized(subscriptionManager) {
+
+										// VMS view processing
+										if (view.equalsIgnoreCase(CDBConstant.VMS_DATA_VIEW)) {
+											ArrayList<VMSData> vmsData = tr.transformVmsData(rp);
+											for (VMSSubscriber fs : subs) {
+												fs.vmsDataUpdate(vmsData, deleted);
+											}
+										}
+
+										if (view.equalsIgnoreCase(CDBConstant.VMS_DEFINITION_VIEW)) {
+											ArrayList<VMSDefinition> vmsDefinition = tr.transformVmsDefinition(rp);
+											for (VMSSubscriber fs : subs) {
+												fs.vmsDefinitionUpdate(vmsDefinition, deleted);
+											}
+										}
+
+										if (view.equalsIgnoreCase(CDBConstant.VMS_CONFIGURATION_VIEW)) {
+											ArrayList<VMSConfiguration> vmsConfiguration = tr.transformVmsConfiguration(rp);
+											for (VMSSubscriber fs : subs) {
+												fs.vmsConfigurationUpdate(vmsConfiguration, deleted);
+											}
+										}
+
+										if (view.equalsIgnoreCase(CDBConstant.VMS_DYNAMIC_VIEW)) {
+											ArrayList<VMSDynamic> vmsDynamic = tr.transformVmsDynamic(rp);
+											for (VMSSubscriber fs : subs) {
+												fs.vmsDynamicUpdate(vmsDynamic, deleted);
+											}
+										}
+
+										if (view.equalsIgnoreCase(CDBConstant.VMS_COMMANDS_VIEW)) {
+											ArrayList<VMSCommands> vmsCommands = tr.transformVMSCommands(rp);
+											for (VMSSubscriber fs : subs) {
+												fs.vmsCommandUpdate(vmsCommands, deleted);
+											}
+										}
+									
+
+									} // end synch
+								}
+							}
+							yield();
+						} catch (NotificationException e) {
+							// Can continue after this exception - a pull time out after ~ 1 minute
+							if (testDiagInt(CDBConstant.DIAGNOSE_16_T)) {
+								CDBUtility.ps(logger, "CORBA Subscription NotificationException " + e.getMessage());
+							}
+						} catch (org.omg.CORBA.OBJECT_NOT_EXIST dne) {
+							// Cannot continue after this exception - a server side pull delivers null
+							if (testDiagInt(CDBConstant.DIAGNOSE_16_T)) {
+								CDBUtility.ps(logger, "CORBA Subscription OBJECT_NOT_EXIST " + dne.getMessage());
+							}
+							setStatus(CDBConstant.ERROREXIT);
+						} catch (org.omg.CORBA.MARSHAL e) {
+							// Cannot continue after this exception
+							CDBUtility.ps(logger, "CORBA Marshal error " + e.getMessage());
+							setStatus(CDBConstant.ERROREXIT);
+						} catch ( NullPointerException np ) {
+							CDBUtility.ps(logger, "NullPointerExceptionl error " + np.getMessage());
+							setStatus(CDBConstant.ERROREXIT);
+						} catch (Exception e) {
+							if ( e.getMessage() != null ) {
+								CDBUtility.ps(logger, "Exception " + e.getMessage());
+							} else {
+								CDBUtility.ps(logger, "Exception class " + e.getClass().getSimpleName());
+								e.printStackTrace();
+							}
+							setStatus(CDBConstant.ERROREXIT);
+						}
+					} // end while
+
+				} else {
+					CDBUtility.ps(logger, "Session Heart beat not registered - keep alive interval out of range " + keepAlive);
+				}
+			}
+
+			// Terminate the Heart Beat thread and allow time for the thread to run down
+			if ( hbt != null ) {
+				hbt.setStatus(CDBConstant.FINISHED);
+				yield();
+			}
+
+			// Release the subscription, the request and the notification objects
+			for (SubscriptionRequest sr: requests) {
+				sr._release();
+			}
+
+			// Release the session and object
+			corbaSubscriptionObj._release();
+			cdbSession._release();
+
+		} catch (org.omg.CORBA.OBJECT_NOT_EXIST dne) {
+			// Cannot continue after this exception - a server side pull delivers null
+			if (testDiagInt(CDBConstant.DIAGNOSE_16_T)) {
+				CDBUtility.ps(logger, "CORBA Subscription OBJECT_NOT_EXIST " + dne.getMessage());
+			}
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.MARSHAL e) {
+			// Cannot continue after this exception
+			CDBUtility.ps(logger, "CORBA Marshal error " + e.getMessage());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (Exception e) {
+			if ( e.getMessage() != null ) {
+				CDBUtility.ps(logger, "Exception " + e.getMessage());
+			} else {
+				CDBUtility.ps(logger, "Exception class " + e.getClass().getSimpleName());
+				e.printStackTrace();
+			}
+			setStatus(CDBConstant.ERROREXIT);
+		}
+	}
+
+	/**
+	 * @return the status
+	 */
+	public int getStatus() {
+		return status;
+	}
+
+	/**
+	 * @param statusIn
+	 *            the status to set
+	 */
+	public void setStatus(int statusIn) {
+		status = statusIn;
+	}
+
+	/**
+	 * @param level
+	 * @return TRUE if the diagnostic level is enabled
+	 */
+	public boolean testDiagInt(int level) {
+		int match = getDiagInt() & level;
+		return match == level;
+	}
+
+	/**
+	 * @return the diagInt
+	 */
+	public int getDiagInt() {
+		return diagInt;
+	}
+
+	/**
+	 * @param diagIntIn
+	 *            the diagInt to set
+	 */
+	public void setDiagInt(int diagIntIn) {
+		diagInt = diagIntIn;
+	}
+
+	/**
+	 * @return the keepAlive
+	 */
+	public int getKeepAlive() {
+		return keepAlive;
+	}
+
+	/**
+	 * @param keepAliveIn
+	 *            the keepAlive to set
+	 */
+	public void setKeepAlive(int keepAliveIn) {
+		keepAlive = keepAliveIn;
+	}
+}
+
+/**
+	 * VMS Data change subscriptions.
+	 */
+	/**
+	 * vmsDataUpdate - from VMS_BASIC_DATA
+	 * @param vmsData
+	 * @param deleted
+	 */
+	void vmsDataUpdate(ArrayList<VMSData> vmsData, boolean deleted);
+
+	/**
+	 * vmsDefinitionUpdate - from VMS_DEFINITION
+	 * @param vmsDefinition
+	 * @param deleted
+	 */
+	void vmsDefinitionUpdate(ArrayList<VMSDefinition> vmsDefinition, boolean deleted);
+
+	/**
+	 * vmsConfigurationUpdate - from VMS_CONFIGURATION
+	 * @param vmsConfiguration
+	 * @param deleted
+	 */
+	void vmsConfigurationUpdate(ArrayList<VMSConfiguration> vmsConfiguration, boolean deleted);
+
+	/**
+	 * vmsDynamicUpdate - from VMS_DYNAMIC
+	 * @param vmsDynamic
+	 * @param deleted
+	 */
+	void vmsDynamicUpdate(ArrayList<VMSDynamic> vmsDynamic, boolean deleted);
+
+	/**
+	 * vmsFaultsUpdate - from VMS_FAULTS
+	 * @param vmsFaults
+	 * @param deleted
+	 */
+	void vmsFaultsUpdate(ArrayList<VMSFaults> vmsFaults, boolean deleted);
+
+	/**
+	 * vmsCommandUpdate - from VMS_COMMANDS
+	 * @param vmsCommand
+	 * @param deleted
+	 */
+	void vmsCommandUpdate(ArrayList<VMSCommands> vmsCommand, boolean deleted);
+
+Coventry Rd, Solihull B92 0EJ
+

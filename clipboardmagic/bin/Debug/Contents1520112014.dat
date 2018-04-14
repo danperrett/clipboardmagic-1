@@ -1,0 +1,100 @@
+foreach (string str in filePaths)
+            {
+                FillInScriptRow(str, count);
+                ret = true;
+                count++;
+            }
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_4_to_V15_5.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_5_to_V15_6.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\SequencerGUI\Schema\ConvertScriptToCurrentSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Code\BinDebug\FieldValueMaps
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4_variable.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\LTE-BTR-1-1838.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\2 - AttachDetachv16.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4_counter.isc
+
+C:\AniteSAS\ResultData\InterPlay Scripts\1 - AttachIgnoreExample15_4IF.isc
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.vshost.exe.manifest
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SequencerInterfaces.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SequencerInterfaces.pdb
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\FieldValueMaps
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SASCommonLibrary.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SASLTEInterfaces.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\SASProtocolFieldValueMapperUtil.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptAuthentication.dll
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.exe
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.pdb
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.1\LTE Sequencer\Tools\BinDebug\ScriptWatermarking.vshost.exe
+
+S:\SAS\18 - Scripts\12 - Tools\Watermarking and Signing tool for SAS Sequencer\47.1.668
+
+PROCEDURE complete LOCATION UPDATE MO G Cell G
+
+
+C:\AniteSAS\ResultData\InterPlay Scripts\testPowerSAS.isc
+
+20141119102233118
+
+C:\Users\dan.perrett\Desktop\Preference.pfs
+
+dummy
+
+DoLayer3Sequence
+
+StartWaitForAnyMessage
+
+SetWaitingForAnyMessageFlag
+
+GetReceivedMessageData
+
+GetRecevMessage
+
+10.7.8.213
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\SASLTEProgrammedPlayEditor\Preference.pfs
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+        private void doProcessMessage(SASSyncQueue<Sequencer_Struct> _SequenceElementQueue, L3ProcedureStatus _L3ProcedureStatus, int _ElementIndexAck)
+
+
+new ConvertFrom_V16_0_to_V16_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("16.1");
+
+m_Ignore_Event_CellID
+
+LoadScenario
+
+getFromQueue
+
+SASLTEInteractiveScriptMode
+
+ScriptedModeMain
+
+scriptModeMain
+

@@ -1,0 +1,179 @@
+ProcedureControlConfiguration
+
+Sub-Script Control
+
+SUB_PROCEDURE_ELEMENT_NAME
+
+Sub-Script
+
+ProtocolVersion
+
+C:\Development\SASSandboxes\LTE-Interactive-SAS47.0-D\Code\LTE-InteractiveScript-Editor\Code\SequencerGUI\ScriptForms\ProcedureControls\SubScriptControl\IESelectionForm.cs
+
+HELPSECTIONIDS
+
+DLG_SUBSCRIPT_PROCEDURE_CONTROL
+
+  public const string DLG_SUBSCRIPT_PROCEDURE_CONTROL = "696";
+
+DLG_AUTO_PROCEDURE_CONTROL
+
+  public const string DLG_AUTO_PROCEDURE_CONTROL = "694";
+
+ELEMENTANDDBTREE
+
+ public const string BEGINInlineSubScript = "BEGIN INLINE SUB-SCRIPT";
+        public const string ENDInlineSubScript = "END INLINE SUB-SCRIPT";
+
+BEGINInlineSubScript
+
+   TreeNode BEGINInlineSubScriptNode = new TreeNode();
+            BEGINInlineSubScriptNode.Text = ELEMENTANDDBTREE.BEGINInlineSubScript;
+            BEGINInlineSubScriptNode.ImageIndex = 2;
+            BEGINInlineSubScriptNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(BEGINInlineSubScriptNode);
+
+            TreeNode ENDInlineSubScriptNode = new TreeNode();
+            ENDInlineSubScriptNode.Text = ELEMENTANDDBTREE.ENDInlineSubScript;
+            ENDInlineSubScriptNode.ImageIndex = 2;
+            ENDInlineSubScriptNode.SelectedImageIndex = 2;
+            programmingGroupNode.Nodes.Add(ENDInlineSubScriptNode);
+
+  // Store Inline BEGIN Sub-Script
+            ElementDragDropData BEGINInlineSubScriptMessageNode = new ElementDragDropData();
+            ProgrammingData BEGINInlineSubScriptMessageNodeMessageData = new ProgrammingData();
+            BEGINInlineSubScriptMessageNodeMessageData.ProgrammingCmdData = new BEGINInlineSubScriptCmdData();
+
+            BEGINInlineSubScriptMessageNode.ScriptDragDropData = BEGINInlineSubScriptMessageNodeMessageData;
+            BEGINInlineSubScriptMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        BEGINInlineSubScriptMessageNodeMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.BEGINInlineSubScript] = BEGINInlineSubScriptMessageNode;
+
+            // Store Inline END Sub-Script
+            ElementDragDropData ENDInlineSubScriptMessageNode = new ElementDragDropData();
+            ProgrammingData ENDInlineSubScriptMessageNodeMessageData = new ProgrammingData();
+            ENDInlineSubScriptMessageNodeMessageData.ProgrammingCmdData = new ENDInlineSubScriptCmdData();
+
+            ENDInlineSubScriptMessageNode.ScriptDragDropData = ENDInlineSubScriptMessageNodeMessageData;
+            ENDInlineSubScriptMessageNode.ElementDragDropHandler =
+                new ElementDragDropData.ManageElementDropCommand(
+                        ENDInlineSubScriptMessageNodeMessageData.DisplayElementDataInGUI);
+
+            ElementDragDropHandlers[ELEMENTANDDBTREE.ENDInlineSubScript] = ENDInlineSubScriptMessageNode;
+
+
+BEGINInlineSubScriptCmdData
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleENDInlineSubScript.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleBEGINInlineSubScript.cs
+
+ListViewFontColor
+
+  public static Color InlineSubScriptColor
+        {
+            get
+            {
+                return (Color)userColorPreferences.ScriptColours[ColourEntries.InlineSubScriptColor];
+            }
+        }
+
+ public const string InlineSubScriptColor = "INLINE SUB-SCRIPT";
+
+BEGINInlineSubScript
+
+  /// <remarks/>
+        BEGINInlineSubScript,
+        
+        /// <remarks/>
+        ENDInlineSubScript,
+
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\BEGINInlineSubScript.designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\BEGINInlineSubScript.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\ScriptForms\BEGINInlineSubScript.cs
+
+DLG_INLINE_START_SUB_SCRIPT
+
+   public const string DLG_INLINE_START_SUB_SCRIPT = "667";
+
+PopulateComboBoxWithStringVariables
+
+ // Populate ComboBox with string variables and return true if
+        // number of variables > 0, otherwise return false.
+        public bool PopulateComboBoxWithStringVariables(string _CurrentVariableName, ComboBox _ComboBox)
+        {
+            string[] scriptVariables = GetVariablesNamesAsSortedArray(typeof(StringVariable));
+            return PopulateComboBox(scriptVariables, _CurrentVariableName, _ComboBox);
+        }
+
+  public string[] GetVariablesNamesAsSortedArray(Type _VariableType)
+        {
+            ScriptVariable[] scriptVariables = GetAllScriptVariables();
+
+            ArrayList tempVarList = new ArrayList();
+
+            foreach (ScriptVariable scriptVariable in scriptVariables)
+            {
+                if (scriptVariable.GetType() == _VariableType)
+                {
+                    tempVarList.Add(scriptVariable.Name);
+                }
+            }
+
+            tempVarList.Sort();
+
+            string[] variablesArray = (String[])tempVarList.ToArray(typeof(string));
+
+            return variablesArray;
+        }
+
+   private static bool PopulateComboBox(string[] scriptVariables, string _CurrentVariableName, ComboBox _ComboBox)
+        {
+            bool retVal = false;
+
+            //Add to Request and response combo boxes
+            _ComboBox.Items.AddRange(scriptVariables);
+
+            if (_ComboBox.Items.Count > 0)
+            {
+                retVal = true;
+
+                int index = 0;
+                if (!string.IsNullOrEmpty(_CurrentVariableName) && _ComboBox.Items.Contains(_CurrentVariableName))
+                {
+                    index = _ComboBox.Items.IndexOf(_CurrentVariableName);
+                }
+
+                _ComboBox.SelectedItem = _ComboBox.Items[index];
+            }
+
+            return retVal;
+        }
+
+GetListViewItem
+
+variablesGridView_CellFormatting
+
+variablesGridView_CellFormatting
+
+
+variablesGridView
+
+   variablesGridView.Rows.Clear();
+            variablesGridView.Columns.Add("Name", "Name");
+            variablesGridView.Columns.Add("Type", "Type");
+            variablesGridView.Columns.Add("Description", "Description");
+
+GetListViewItem
+
+ListViewFontColor
+
+InlineSubScriptColor
+
+variablesGridView_CellFormatting
+

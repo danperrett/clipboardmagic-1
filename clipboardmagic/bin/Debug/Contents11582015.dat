@@ -1,0 +1,508 @@
+C:\Users\502525009\Downloads\CSharpMQ.zip
+
+ 
+000005af  call        776CDF4F 
+000005b4  mov         eax,dword ptr [
+
+SimpleAsyncProducer
+
+xmsInit
+
+SimpleProducer -h localhost -p 1506 -d topic://A
+
+ SimpleProducer -d A
+
+Error Block
+
+Connection Factory created
+
+54.247.175.93
+
+xmsSessCreateTextMessage
+
+N:\Software Dev Team\srif4
+
+ghInstance
+
+ghDlg
+
+L Index AS LONG
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug
+
+CreateApplication_MACE_CAC_SEG ALIAS
+
+TYPE AHRIF_INI                         'Atkins/Hitachi RIF start up config
+    TechIP         AS DWORD            'IP address of remote terminal /logger
+    TXRXnum        AS DWORD            'number of nx dlink transmitters
+    UDPport        AS DWORD            'UDP port number, RIF core UDPport number
+    TCPport        AS DWORD            'TCP port number, CE link
+
+    TXRX1handle    AS DWORD            'NX-hndl
+    TXRX1comtype   AS DWORD            'NX com type
+    TXRX1datafield AS DWORD            'NX datafield DF
+    TXRX1MCG       AS DWORD            'NX multicast group
+    TXRX1srcHndl   AS DWORD            'NX source handle
+    ProcessID1     AS DWORD            'this instance procID
+    UDPport1       AS DWORD            'UDP port number
+    TXRX1msgID     AS WORD             'msgID for this data stream
+    MsgType1       AS LONG             'Message type. see msg type constants
+
+    TXRX2handle    AS DWORD            'NX-hndl
+    TXRX2comtype   AS DWORD            'NX com type
+    TXRX2datafield AS DWORD            'NX datafield DF
+    TXRX2MCG       AS DWORD            'NX multicast group
+    TXRX2srcHndl   AS DWORD            'NX source handle
+    ProcessID2     AS DWORD            'this instance procID
+    UDPport2       AS DWORD            'UDP port number
+    TXRX2msgID     AS WORD             'msgID for this data stream
+    MsgType2       AS LONG             'Message type. see msg type constants
+
+    TXRX3handle    AS DWORD            'NX-hndl
+    TXRX3comtype   AS DWORD            'NX com type
+    TXRX3datafield AS DWORD            'NX datafield DF
+    TXRX3MCG       AS DWORD            'NX multicast group
+    TXRX3srcHndl   AS DWORD            'NX source handle
+    ProcessID3     AS DWORD            'this instance procID
+    UDPport3       AS DWORD            'UDP port number
+    TXRX3msgID     AS WORD             'msgID for this data stream
+    MsgType3       AS LONG             'Message type. see msg type constants
+
+    TXRX4handle    AS DWORD            'NX-hndl
+    TXRX4comtype   AS DWORD            'NX com type
+    TXRX4datafield AS DWORD            'NX datafield DF
+    TXRX4MCG       AS DWORD            'NX multicast group
+    TXRX4srcHndl   AS DWORD            'NX source handle
+    ProcessID4     AS DWORD            'this instance procID
+    UDPport4       AS DWORD            'UDP port number
+    TXRX4msgID     AS WORD             'msgID for this data stream
+    MsgType4       AS LONG             'Message type. see msg type constants
+
+    TXRX5handle    AS DWORD            'NX-hndl
+    TXRX5comtype   AS DWORD            'NX com type
+    TXRX5datafield AS DWORD            'NX datafield DF
+    TXRX5MCG       AS DWORD            'NX multicast group
+    TXRX5srcHndl   AS DWORD            'NX source handle
+    ProcessID5     AS DWORD            'this instance procID
+    UDPport5       AS DWORD            'UDP port number
+    TXRX5msgID     AS WORD             'msgID for this data stream
+    MsgType5       AS LONG             'Message type. see msg type constants
+
+    TXRX6handle    AS DWORD            'NX-hndl
+    TXRX6comtype   AS DWORD            'NX com type
+    TXRX6datafield AS DWORD            'NX datafield DF
+    TXRX6MCG       AS DWORD            'NX multicast group
+    TXRX6srcHndl   AS DWORD            'NX source handle
+    ProcessID6     AS DWORD            'this instance procID
+    UDPport6       AS DWORD            'UDP port number
+    TXRX6msgID     AS WORD             'msgID for this data stream
+    MsgType6       AS LONG             'Message type. see msg type constants
+
+    TXRX7handle    AS DWORD            'NX-hndl
+    TXRX7comtype   AS DWORD            'NX com type
+    TXRX7datafield AS DWORD            'NX datafield DF
+    TXRX7MCG       AS DWORD            'NX multicast group
+    TXRX7srcHndl   AS DWORD            'NX source handle
+    ProcessID7     AS DWORD            'this instance procID
+    UDPport7       AS DWORD            'UDP port number
+    TXRX7msgID     AS WORD             'msgID for this data stream
+    MsgType7       AS LONG             'Message type. see msg type constants
+
+    TXRX8handle    AS DWORD            'NX-hndl
+    TXRX8comtype   AS DWORD            'NX com type
+    TXRX8datafield AS DWORD            'NX datafield DF
+    TXRX8MCG       AS DWORD            'NX multicast group
+    TXRX8srcHndl   AS DWORD            'NX source handle
+    ProcessID8     AS DWORD            'this instance procID
+    UDPport8       AS DWORD            'UDP port number
+    TXRX8msgID     AS WORD             'msgID for this data stream
+    MsgType8       AS LONG             'Message type. see msg type constants
+
+    TXRX9handle    AS DWORD            'NX-hndl
+    TXRX9comtype   AS DWORD            'NX com type
+    TXRX9datafield AS DWORD            'NX datafield DF
+    TXRX9MCG       AS DWORD            'NX multicast group
+    TXRX9srcHndl   AS DWORD            'NX source handle
+    ProcessID9     AS DWORD            'this instance procID
+    UDPport9       AS DWORD            'UDP port number
+    TXRX9msgID     AS WORD             'msgID for this data stream
+    MsgType9       AS LONG             'Message type. see msg type constants
+
+    TXRX10handle    AS DWORD            'NX-hndl
+    TXRX10comtype   AS DWORD            'NX com type
+    TXRX10datafield AS DWORD            'NX datafield DF
+    TXRX10MCG       AS DWORD            'NX multicast group
+    TXRX10srcHndl   AS DWORD            'NX source handle
+    ProcessID10     AS DWORD            'this instance procID
+    UDPport10       AS DWORD            'UDP port number
+    TXRX10msgID     AS WORD             'msgID for this data stream
+    MsgType10       AS LONG             'Message type. see msg type constants
+
+    TXRX11handle    AS DWORD            'NX-hndl
+    TXRX11comtype   AS DWORD            'NX com type
+    TXRX11datafield AS DWORD            'NX datafield DF
+    TXRX11MCG       AS DWORD            'NX multicast group
+    TXRX11srcHndl   AS DWORD            'NX source handle
+    ProcessID11     AS DWORD            'this instance procID
+    UDPport11       AS DWORD            'UDP port number
+    TXRX11msgID     AS WORD             'msgID for this data stream
+    MsgType11       AS LONG             'Message type. see msg type constants
+
+    TXRX12handle    AS DWORD            'NX-hndl
+    TXRX12comtype   AS DWORD            'NX com type
+    TXRX12datafield AS DWORD            'NX datafield DF
+    TXRX12MCG       AS DWORD            'NX multicast group
+    TXRX12srcHndl   AS DWORD            'NX source handle
+    ProcessID12     AS DWORD            'this instance procID
+    UDPport12       AS DWORD            'UDP port number
+    TXRX12msgID     AS WORD             'msgID for this data stream
+    MsgType12       AS LONG             'Message type. see msg type constants
+
+    TotDDI          AS DWORD            'total number of DDI modules in system
+    TotDD0          AS DWORD            'total number of DDO modules in system
+    NumDDI          AS DWORD            'number of DDI modules allocated to this application
+    NumDDO          AS DWORD            'number of DDO modules allocated to this application
+    A1D1_Type       AS ASCIIZ * 4  'Application 1 digital I/O slot D1 module type
+    A1D2_Type       AS ASCIIZ * 4  'Application 1 digital I/O slot D2 module type
+    A1D3_Type       AS ASCIIZ * 4  'Application 1 digital I/O slot D3 module type
+    A1D4_Type       AS ASCIIZ * 4  'Application 1 digital I/O slot D4 module type
+    A1D5_Type       AS ASCIIZ * 4  'Application 1 digital I/O slot D5 module type
+    A1D6_Type       AS ASCIIZ * 4  'Application 1 digital I/O slot D6 module type
+
+    MACEID1 AS ASCIIZ * 256             'application memory segment name
+    SegName AS ASCIIZ * 256
+    AppSegName AS ASCIIZ * 256
+END TYPE
+
+TYPE APP_CAC_APP                       'Application type struct
+     App_hfile        AS DWORD
+     App_lpMapAddress AS DWORD PTR     'segment address
+     App_lpAppPID     AS DWORD PTR     'OS PID address
+     App_lpAppWD      AS DWORD PTR     'App WD address
+     App_lpAppName    AS BYTE PTR      'address of first byte of app identity
+END TYPE
+
+
+TYPE APP_DIO_MAP
+    DI_App AS DWORD PTR
+    DO_App AS DWORD PTR
+    DI_hndl AS DWORD
+    DO_hndl AS DWORD
+    DI_1 AS DWORD PTR
+    DI_2 AS DWORD PTR
+    DI_3 AS DWORD PTR
+    DI_5 AS DWORD PTR
+    DI_6 AS DWORD PTR
+    DO_1 AS WORD PTR
+    DO_2 AS WORD PTR
+    DO_3 AS WORD PTR
+    DO_5 AS WORD PTR
+    DO_6 AS WORD PTR
+END TYPE
+
+TYPE AHRIFHDR
+    SenderROCid AS BYTE
+    SenderAreaID AS BYTE
+    SenderEquipmentIDmsb AS BYTE
+    SenderEquipmentIDlsb AS BYTE
+    ReceiverROCid AS BYTE
+    ReceiverAreaID AS BYTE
+    ReceiverEquipmentIDmsb AS BYTE
+    ReceiverEquipmentIDlsb AS BYTE
+    MessageTypemsb AS BYTE
+    MessageTypelsb AS BYTE
+    MessageLengthmsb AS BYTE
+    MessageLengthlsb AS BYTE
+    MessageIDmsb AS BYTE
+    MessageIDlsb AS BYTE
+    Yearmsb AS BYTE
+    Yearlsb AS BYTE
+    Month AS BYTE
+    Day AS BYTE
+    Hour AS BYTE
+    Minute AS BYTE
+    Second AS BYTE
+    blank AS BYTE
+    MilliSecmsb AS BYTE
+    MilliSeclsb AS BYTE
+END TYPE
+
+TYPE NXCFG
+    TXRXhandle    AS DWORD            'NX-hndl
+    TXRXcomtype   AS DWORD            'NX com type
+    TXRXdatafield AS DWORD            'NX datafield DF
+    TXRXMCG       AS DWORD            'NX multicast group
+    TXRXsrcHndl   AS DWORD            'NX source handle
+END TYPE
+
+
+%Version = 1001
+%MMperiod = 100
+%makeDIPseg = 23
+%makeDOPseg = 24
+
+
+'msg type constants
+'%Indications      =62
+'%Controls         = %Indications + 1
+'%CtrlAck          = %Controls + 1
+'%Alarm            = %CtrlAck + 1
+'%AlarmAck         = %Alarm + 1
+'%HeartBeat        = %AlarmAck + 1
+'%IDreqFromIIF     = %HeartBeat + 1
+'%IDreqAckToIIF    = %IDreqFromIIF + 1
+'%IDreqToIIF       = %IDreqAckToIIF + 1
+'%IDreqAckFromIIF  = %IDreqToIIF + 1
+
+%MaxWaitCount = 30 'attempts to  detect NX Dlink prior to starting.
+
+'CUSTOM windows messages
+%CM_START        = %WM_USER + &h0400     'delayed start up event for eg display of data that would not be shown at WM_INITDIALOG as window not visible
+%CM_COLLECT_MSG  = %CM_START + 1         'msg from serial/main app to tell NXTX msg available
+%CM_COLLECT_OK   = %CM_COLLECT_MSG + 1   'msg from NXTX to tell serial/main msg collected
+%GEUDP_MSG       = %CM_COLLECT_OK + 1    'msg to start tx of received serial data
+%WM_UDPmsg       = %GEUDP_MSG
+%NXRX_CLOSE      = %WM_UDPmsg + 1
+
+$AppName = "GE AH S-RIF"
+$INI_filename = "C:\Windows\MCSCORUN.INI"
+$DIP_Prefix = "MACE_DIP_"
+$DOP_Prefix = "MACE_DOP_"
+
+'GLOBAL NXRX_CLOSE AS dword
+GLOBAL ghDlg AS LONG
+GLOBAL Index AS LONG
+
+
+GLOBAL AppInit AS AHRIF_INI
+GLOBAL AppSeg AS APP_CAC_APP
+GLOBAL AppDIO AS APP_DIO_MAP
+
+
+DECLARE FUNCTION RIF_DLL_Version CDECL LIB "RIFmain.dll"  ALIAS "RIF_DLL_Version"()AS LONG
+
+DECLARE FUNCTION ReadINI CDECL LIB "RIFmain.dll" ALIAS "ReadINI"(BYVAL INI_FileName AS ASCIIZ * 256,BYREF AppInit AS AHRIF_INI )AS LONG
+
+DECLARE FUNCTION CreateApplication_MACE_CAC_SEG CDECL LIB "RIFmain.dll" ALIAS "CreateApplication_MACE_CAC_SEG"(BYVAL SegmentName AS STRING,BYVAL SegmentSize AS DWORD,BYREF AppSeg AS APP_CAC_APP)AS DWORD
+
+DECLARE FUNCTION GetDWIP CDECL LIB "RIFmain.dll" ALIAS "GetDWIP"(BYVAL IP1 AS BYTE, BYVAL IP2 AS BYTE, BYVAL IP3 AS BYTE, BYVAL IP4 AS BYTE)AS DWORD
+
+DECLARE FUNCTION Is_CAC_Created CDECL LIB "RIFmain.dll" ALIAS "Is_CAC_Created"(BYVAL ObjectName AS ASCIIZ * 256) AS LONG
+
+'DECLARE FUNCTION OpenMACE_DIOseg1 CDECL LIB "RIFmain.dll" ALIAS "OpenMACE_DIOseg"(BYVAL SegmentName AS ASCIIZ * 256,BYVAL BlockType AS DWORD,BYVAL diocfg AS DWORD)AS LONG
+
+DECLARE FUNCTION OpenMACE_DIOseg CDECL LIB "RIFmain.dll" ALIAS "OpenMACE_DIOseg"(BYVAL SegmentName AS ASCIIZ * 256,BYVAL BlockType AS DWORD,BYVAL diocfg AS DWORD,BYREF AppDIO AS APP_DIO_MAP)AS LONG
+'declare FUNCTION OpenMACE_DIOseg CDECL LIB "RIFmain.dll" ALIAS "OpenMACE_DIOseg"(BYVAL fobjName AS ASCIIZ * 256 ,BYVAL SegmentSize AS DWORD,BYVAL BlockType AS DWORD,BYVAL diocfg AS DWORD) AS LONG
+DECLARE FUNCTION AllocateDIO CDECL LIB "RIFmain.dll" ALIAS "AllocateDIO"(BYVAL D1 AS ASCIIZ PTR,BYVAL D2 AS ASCIIZ PTR,BYVAL D3 AS ASCIIZ PTR,BYVAL D4 AS ASCIIZ PTR,BYVAL D5 AS ASCIIZ PTR,BYVAL D6 AS ASCIIZ PTR) AS DWORD
+
+DECLARE FUNCTION Initialise_DIO CDECL LIB "RIFmain.dll" ALIAS "Initialise_DIO"(BYREF AppInit AS AHRIF_INI, BYREF AppDIO AS APP_DIO_MAP)AS LONG
+
+DECLARE FUNCTION GetCACaddr CDECL LIB "RIFmain.dll" ALIAS "GetCACaddr"(BYVAL ObjectName AS ASCIIZ * 32)AS DWORD
+
+DECLARE FUNCTION CRC32 CDECL LIB "RIFmain.dll" ALIAS "CRC32"(BYVAL Address AS DWORD,BYVAL Length AS LONG,BYVAL Seed AS LONG) AS LONG
+
+DECLARE FUNCTION SocketCreateUDP CDECL LIB "RIFmain.dll" ALIAS "SocketCreateUDP"(BYVAL PortNumber AS LONG,BYVAL hWnd AS LONG,BYVAL wMsg AS LONG) AS LONG
+
+DECLARE FUNCTION SocketCloseUDP CDECL LIB "RIFmain.dll" ALIAS "SocketCloseUDP"(BYVAL hfNum AS LONG) AS LONG
+
+
+DECLARE FUNCTION SocketRecieveUDP CDECL LIB "RIFmain.dll" ALIAS "SocketRecieveUDP"(BYVAL hfNum AS LONG, BYVAL rxIP AS DWORD PTR,BYVAL PortNumber AS LONG PTR, BYVAL zrxBuf AS ASCIZ PTR) AS LONG
+'DECLARE FUNCTION SocketRecieveUDP CDECL LIB "RIFmain.dll" ALIAS "SocketRecieveUDP"(BYVAL hfNum AS LONG, BYREF rxIP AS LONG,BYREF PortNumber AS LONG, BYVAL rxBuf AS STRING PTR) AS LONG
+
+DECLARE FUNCTION SocketSendUDP CDECL LIB "RIFmain.dll" ALIAS "SocketSendUDP"(BYVAL hfNum AS LONG, BYREF txIP AS LONG,BYREF PortNumber AS LONG, BYVAL txBuf AS STRING PTR) AS LONG
+
+ //Atkins/Hitachi RIF start up config
+
+DWORD
+
+AHRIF_INI_D
+
+BYTE
+
+DWORD
+
+Mike Lazaridis
+
+WM_USER
+
+You want to investigate me, roll the dice and take your chances. I eat breakfast 300 yards from 4000 Cubans who are trained to kill me
+
+APP_CAC_APP
+
+APP_DIO_MAP
+
+fobjName
+
+GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL ) ;
+
+hMap = CreateFileMapping( hFile, NULL, PAGE_READWRITE, 0, *client_size + sizeof( *file_size ), szName ) ; 
+
+if( hFile != INVALID_HANDLE_VALUE ) 
+	{
+		MACE_Log( "Using file \'%s\' for shared memory", szName ) ;
+	}
+
+flpMapAddress
+
+MapViewOfFile
+
+CreateApplication_MACE_CAC_SEG
+
+DWORD *CreateApplication_MACE_CAC_SEG(const char * SegmentName, int segmentsize, APP_CAC_APP *AppSeg)
+
+flpMapAddress = (DWORD *)MapViewOfFile(fhMemSeg, FILE_MAP_ALL_ACCESS, 0, 0, 0);
+
+AppSeg
+
+HANDLE
+
+fhFile
+
+CreateFileMapping
+
+1>SRIFmainA4.obj : error LNK2005: "long Index" (?Index@@3JA) already defined in exampleWin32Proj.obj
+
+
+DWORD CreateApplication_MACE_CAC_SEG(const char * SegmentName, int segmentsize, APP_CAC_APP *AppSeg)
+
+
+DWORD CreateApplication_MACE_CAC_SEG(const char * SegmentName, int segmentsize, APP_CAC_APP *AppSeg);
+
+AHRIF_INI
+
+APP_CAC_APP
+
+APP_DIO_MAP
+
+AHRIFHDR
+
+NXCFG
+
+char *AppName = "GE AH S-RIF";
+char *INI_filename = "C:\Windows\MCSCORUN.INI";
+char *DIP_Prefix = "MACE_DIP_";
+char *DOP_Prefix = "MACE_DOP_";
+
+//GLOBAL NXRX_CLOSE AS dword
+LONG ghDlg;
+LONG Index;
+
+
+AHRIF_INI AppInit;
+APP_CAC_APP AppSeg;
+APP_DIO_MAP AppDIO;
+
+APP_CAC_APP *AppSeg
+
+CreateApplication_MACE_CAC_SEG
+
+(const char * SegmentName
+
+wlpMapAddress
+
+wlpMapAddress++;
+
+DWORD OpenMACE_DIOseg(const char * SegmentName, DWORD BlockType, DWORD diocfg, APP_DIO_MAP *AppDIO)
+
+APP_DIO_MAP
+
+OpenMACE_DIOseg
+
+FUNCTION Initialise_DIO ALIAS "Initialise_DIO"(BYREF AppInit AS AHRIF_INI,BYREF AppDIO AS APP_DIO_MAP) EXPORT AS LONG
+    LOCAL Retval AS DWORD
+
+     RetVal = AllocateDIO(VARPTR(AppInit.A1D1_Type),VARPTR(AppInit.A1D2_Type),VARPTR(AppInit.A1D3_Type),VARPTR(AppInit.A1D4_Type),VARPTR(AppInit.A1D5_Type),VARPTR(AppInit.A1D6_Type))
+     'IF BIT(RetVal,23) THEN CALL OpenMace_DIOseg("MACE_DIP_" + AppInit.MaceId1,5,RetVal)  'creat DIP memory segment for application 1
+     'IF BIT(RetVal,24) THEN CALL OpenMace_DIOseg("MACE_DOP_" + AppInit.MaceId1,6,RetVal)  'creat DOP memory segment for application 1
+     IF BIT(RetVal,%makeDIPseg) THEN CALL OpenMace_DIOseg("MACE_DIP_" + AppInit.MaceId1,5,RetVal,AppDIO)  'creat DIP memory segment for application 1
+     IF BIT(RetVal,%makeDOPseg) THEN CALL OpenMace_DIOseg("MACE_DOP_" + AppInit.MaceId1,6,RetVal, AppDIO)  'creat DOP memory segment for application 1
+
+     FUNCTION = retval
+END FUNCTION
+
+AHRIF_INI
+
+APP_DIO_MAP
+
+AllocateDIO
+
+OpenMACE_DIOseg
+
+MaceId1
+
+makeDOPseg
+
+OpenMace_DIOseg("MACE_DOP_" + AppInit.MaceId1,6,RetVal, AppDIO)
+
+AppInit->MACEID1
+
+segmentname
+
+ char *name = "MACE_DIP_";
+		 int len = strlen(name);
+		 strncpy(segmentname, name, len);
+		 len = strlen(AppInit->MACEID1);
+		 strncpy(&segmentname[len], AppInit->MACEID1, len);
+
+DWORD OpenMACE_DIOseg(const char * SegmentName, DWORD BlockType, DWORD diocfg, APP_DIO_MAP *AppDIO)
+
+LONG Initialise_DIO(AHRIF_INI *AppInit,APP_DIO_MAP *AppDIO)
+
+FUNCTION AllocateDIO ALIAS "AllocateDIO"(BYVAL D1 AS ASCIIZ PTR,BYVAL D2 AS ASCIIZ PTR,BYVAL D3 AS ASCIIZ PTR,BYVAL D4 AS ASCIIZ PTR,BYVAL D5 AS ASCIIZ PTR,BYVAL D6 AS ASCIIZ PTR) EXPORT AS DWORD
+LOCAL DIOconfig AS DWORD
+
+  SELECT CASE @D1
+      CASE "DDI"
+          BIT SET DIOconfig,23                          'flagbit to mark DDI PRESENT SO NEED TO MAKE DIPSEG.
+          BIT SET DIOconfig,0                           'if input set bit 0 of DIO config flag
+      CASE "DDO"
+          BIT SET DIOconfig,24                          'flagbit to mark DDI present so need to make DOPseg
+          BIT SET DIOconfig,16                          'if output set bit 16 of dio config flag
+  END SELECT
+
+  SELECT CASE @D2
+      CASE "DDI"
+          BIT SET DIOconfig,23
+          BIT SET DIOconfig,1                           'if input set bit 0 of DIO config flag
+      CASE "DDO"
+          BIT SET DIOconfig,24
+          BIT SET DIOconfig,17                          'if output set bit 16 of dio config flag
+  END SELECT
+
+  SELECT CASE @D3
+      CASE "DDI"
+          BIT SET DIOconfig,23
+          BIT SET DIOconfig,2                           'if input set bit 0 of DIO config flag
+      CASE "DDO"
+          BIT SET DIOconfig,24
+          BIT SET DIOconfig,18                          'if output set bit 16 of dio config flag
+  END SELECT
+
+  'SELECT CASE @D4
+      'CASE "DDI"
+          'BIT SET DIOconfig,0                           'if input set bit 0 of DIO config flag
+      'CASE "DDIO"
+          'BIT SET DIOconfig,16                          'if output set bit 16 of dio config flag
+  'END SELECT
+
+   SELECT CASE @D5
+      CASE "DDI"
+          BIT SET DIOconfig,23
+          BIT SET DIOconfig,3                           'if input set bit 0 of DIO config flag
+      CASE "DDO"
+          BIT SET DIOconfig,24
+          BIT SET DIOconfig,19                          'if output set bit 16 of dio config flag
+  END SELECT
+
+   SELECT CASE @D6
+      CASE "DDI"
+          BIT SET DIOconfig,23
+          BIT SET DIOconfig,4                           'if input set bit 0 of DIO config flag
+      CASE "DDO"
+          BIT SET DIOconfig,24
+          BIT SET DIOconfig,20                          'if output set bit 16 of dio config flag
+  END SELECT
+  FUNCTION = DIOconfig
+END FUNCTION
+
+

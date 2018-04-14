@@ -1,0 +1,154 @@
+http://uklt1086:8088/mockJTMSDiagnosticsFeedBinding?WSDL
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\JTMSDiagnosticsFeedService.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\ObjectFactory.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\package-info.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\DiagnosticData.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\DiagnosticDataArray.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\DiagnosticDataLogin.java
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\CASoapClient\JTMSDiagnosticsFeedPortType.java
+
+CAJTMS.merseygateway.co.uk
+
+C:\CAJTMSFault\CASoapClient\JTMSDiagnosticsFeedService.java
+
+C:\CAJTMSFault\CASoapClient\ObjectFactory.java
+
+C:\CAJTMSFault\CASoapClient\package-info.java
+
+C:\CAJTMSFault\CASoapClient\DiagnosticData.java
+
+C:\CAJTMSFault\CASoapClient\DiagnosticDataArray.java
+
+C:\CAJTMSFault\CASoapClient\DiagnosticDataLogin.java
+
+C:\CAJTMSFault\CASoapClient\JTMSDiagnosticsFeedPortType.java
+
+http://uklt1086:8088/mockJTMSDiagnosticsFeedBinding?WSDL
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\JTMSDiagnosticsFeedService.cs
+
+JTMSDiagnosticsFeedService
+
+http://uklt1086:8088/mockJTMSDiagnosticsFeedBinding?WSDL
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1\JTMSDiagnosticsFeedService.cs
+
+2002-05-30T09:00:00
+
+C:\CAJTMSFault\JTMSDiagnosticsFeed.wsdl
+
+/home/daniel.perrett/workspaceneon/JTMSSoapTest/WebContent/wsdl/JTMSDiagnosticsFeed.wsdl
+
+Exception occurred during code generation for the WSDL  : java.lang.NoClassDefFoundError
+
+
+         <wsdl:input message="impl:GetDiagno
+
+C:\CAJTMSFault\JTMSDiagnosticsFeed.old.wsdl
+
+X:\workspaceneon\JTMSDiagnosticsFeed.old.wsdl
+
+188.166.158.22
+
+?wsdl
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\JTMSDiagnosticsFeedPortType.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\JTMSDiagnosticsFeedService.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\ObjectFactory.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\package-info.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\DiagnosticData.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\DiagnosticDataArray.java
+
+D:\3-Workspace\ImCityAdapters\WebClient\src\CASoapClient\DiagnosticDataLogin.java
+
+JTMSDiagnosticsFeedService webService = new JTMSDiagnosticsFeedService();
+		JTMSDiagnosticsFeedPortType service = webService.getJTMSDiagnosticsFeedPort();
+		DiagnosticDataLogin login = new DiagnosticDataLogin();
+
+JTMSDiagnosticsFeedService webService = new JTMSDiagnosticsFeedService();
+
+JTMSDiagnosticsFeedPortType service
+
+DiagnosticDataLogin login
+
+login.setUserName("Dan");
+		login.setUserPassword("test");
+		GregorianCalendar gcal = new GregorianCalendar();
+		XMLGregorianCalendar xgcal;
+	    try 
+	    {
+		     xgcal = DatatypeFactory.newInstance()
+			        .newXMLGregorianCalendar(gcal);
+		     login.setStartTimestamp(xgcal);
+		     login.setEndTimestamp(xgcal);
+		}
+
+Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>; Azam, Mohammed - UK <Mohammed.Azam@dynniq.co.uk>
+
+
+login.setUserName("Dan");
+		login.setUserPassword("test");
+		GregorianCalendar gcal = new GregorianCalendar();
+		XMLGregorianCalendar xgcal;
+	    try 
+	    {
+		     xgcal = DatatypeFactory.newInstance()
+			        .newXMLGregorianCalendar(gcal);
+		     login.setStartTimestamp(xgcal);
+		     login.setEndTimestamp(xgcal);
+		}
+
+
+GregorianCalendar gcal = new GregorianCalendar();
+		XMLGregorianCalendar xgcal;
+	    try 
+	    {
+		     xgcal = DatatypeFactory.newInstance()
+			        .newXMLGregorianCalendar(gcal);
+		     login.setStartTimestamp(xgcal);
+		     login.setEndTimestamp(xgcal);
+		}
+
+login.setStartTimestamp(xgcal);
+
+XMLGregorianCalendar 
+
+setEndTimestamp
+
+DiagnosticDataArray ar = service.getDiagnosticData(login);
+
+http://93.95.10.164/JTMSDiagnosticsFeed/schema_1-1/JTMSDiagnosticsFeed.wsdl
+
+DiagnosticDataArray ar = service.getDiagnosticData(login);
+
+8000/getPictureProjects?id=danperre
+
+XMLGregorianCalendar
+
+ DatatypeFactory.newInstance()
+			        .newXMLGregorianCalendar(gcal);
+
+
+XMLGregorianCalendar
+
+FiveMinPrevious
+
+gcalEnd
+
+DatatypeFactory.newInstance().newXMLGregorianCalendar(gcalEnd);
+
+login.setStartTimestamp(gregStart);
+				login.setEndTimestamp(gregEnd);
+

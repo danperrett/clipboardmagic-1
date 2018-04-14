@@ -1,0 +1,906 @@
+                        case WAIT_ANY_MESSAGE:
+                            DoWaitForAnyMessage(CommandObject);
+                            break;
+
+
+#ifdef _DEBUG
+#include <sstream>
+#endif
+// DoWaitForAnyMessage
+//----------------------------------------------------------------------------
+void __fastcall TPlaybackThread::DoWaitForAnyMessage(TCommandObject *pCommandObject)
+{
+     PB_DEBUGLOG("DoWaitForAnyMessage() - Enter...")
+  
+     stProgramCommand *pData = (stProgramCommand *)pCommandObject->Data;
+
+     if(pCommandObject->ProcedureType == LOG_L3_RECEIVE_ANY_MESSAGE)
+     {
+         CONTROL_INTERFACE::StartWaitForAnyMessage(LOG_L3_RECEIVE_ANY_MESSAGE);
+     }
+
+     if (!WaitForTask(PL_LAYER3_COMPLETE, pCommandObject, pCommandObject->DeltaTime/*dwTimeOut+200*/))
+     {
+         //timeout accured must stop the test case
+        AnsiString szMessage = GetLogMessageDescription(pCommandObject->ProcedureType);
+
+        szMessage += " failed due to a timeout.";
+        HandlePlaybackTerminated(szMessage.c_str());
+        return;
+     }
+ 
+     Sleep(50); //add a slight delay before processing the next procedures
+
+     stLayer3Data *data  = new stLayer3Data();
+     try
+     {  
+        memset(data, 0, sizeof(stLayer3Data) );
+        data->szHexstring = NULL;
+        CONTROL_INTERFACE::GetReceivedMessageData(data);
+#ifdef _DEBUG
+/*
+class stLayer3Data
+{
+public:
+  SAS_LOGICAL_CHANNEL    LogicalChannel;
+  int                    CellId;
+  MESSAGE_TYPES          Layer3MessageType;
+  PROTOCOL_DISCRIMINATOR ProtocolDiscriminator;
+  DIRECTION_FLAG         Direction;
+  int                    WaitTime;
+  int                    Commented;
+  char*                  szHexstring;
+  CProgramBase*          ProgramCommand;
+};*/
+
+        std::stringstream  temp;
+
+        temp << "LogicalChannel " << data->LogicalChannel << 
+            "CellId " << data->CellId << 
+            "Layer3MessageType " << data->Layer3MessageType << 
+            "ProtocolDiscriminator " << data->ProtocolDiscriminator << 
+            "Direction " << data->Direction;
+
+        PB_DEBUGLOG(temp.str().c_str());
+        
+
+#endif
+        stProgramCommand* programmingCommand = static_cast<stProgramCommand*>(pCommandObject->Data);
+        stExpression *expression = &(programmingCommand->ExprList[0]);
+        
+        if(expression->Var1.VarName != NULL)
+        {
+            // Just using same code as used in common control, will change it latter
+            char FCellLabel[MAX_GSM_CELLS + MAX_UTRA_CELLS + MAX_GAN_CONFIGS][9];
+        
+            for (UINT i=0; i<MAX_GSM_CELLS; i++)
+            {
+                sprintf(FCellLabel[i], "G-Cell %c", 'A' + i);
+            }
+
+            for (UINT i=0; i<MAX_UTRA_CELLS; i++)
+            {
+                sprintf(FCellLabel[i + MAX_GSM_CELLS], "U-Cell %c", 'A' + i);
+            }
+
+            int iTempCellId;
+
+            string strRRcCellId;
+
+            if(data->CellId != -1)
+            {
+                if (data->CellId < MAX_GSM_CELLS + MAX_UTRA_CELLS + MAX_GAN_CONFIGS)
+                {
+                    strRRcCellId  =   FCellLabel[data->CellId-1];
+                }
+
+           
+                CELLMANAGER::StringVariables.set(expression->Var1.VarName, strRRcCellId.c_str());
+
+                //test read back
+               // CStringValue test = CELLMANAGER::StringVariables.get(expression->Var1.VarName);
+
+                PB_DEBUGLOG(strRRcCellId.c_str());
+            }
+        }
+
+        if(expression->Var2.VarName != NULL)
+        {
+            unsigned __int32 _temp = (((data->Layer3MessageType&0xFFFF) << 16)&0xFFFF0000) | (data->ProtocolDiscriminator&0xFFFF);
+            char _local[9];
+            sprintf(_local, "%d", _temp);
+            CELLMANAGER::StoreMessageVariables.set(expression->Var2.VarName, _local);         
+        }
+
+     }
+     catch(...)
+     {
+          PB_DEBUGLOG("DoWaitForAnyMessage() - Error getting Received Data...")
+     }
+
+    // delete the copy of the commandobject
+   // delete pCopyCommandObject;
+    //pCopyCommandObject = NULL;
+
+//    delete data;
+     PB_DEBUGLOG("DoWaitForAnyMessage() - Exit...")
+}
+
+
+        if(( pCommandObject->ProcedureType ==  LOG_L3_RECEIVE_RRC_CONNECTION_REQUEST_PROCEDURE) ||
+           ( pCommandObject->ProcedureType ==  LOG_L3_RECEIVE_ANY_MESSAGE))
+
+
+    CELLMANAGER::StoreMessageVariables.clear();
+
+
+            case VAR_TYPE_STORE_MSG:
+                CELLMANAGER::StoreMessageVariables.add(var->VarName);
+                break;
+
+
+void LogDebug(string message)
+{
+    ofstream myfile;
+    myfile.open ("C:\\AniteSAS\\Debug\\ApiInterfaceDebug.log", ios::app );
+    myfile << message.c_str() << endl;
+    myfile.close();
+}
+
+/*
+class stLayer3Data
+{
+public:
+  SAS_LOGICAL_CHANNEL    LogicalChannel;
+  int                    CellId;
+  MESSAGE_TYPES          Layer3MessageType;
+  PROTOCOL_DISCRIMINATOR ProtocolDiscriminator;
+  DIRECTION_FLAG         Direction;
+  int                    WaitTime;
+  int                    Commented;
+  char*                  szHexstring;
+  CProgramBase*          ProgramCommand;
+};
+*/
+void Cell2G::LogReceivedMessage(stApiEventData *pApiEventData)
+{
+  try
+  {
+    ofstream myfile;
+    myfile.open ("C:\\AniteSAS\\Debug\\ApiInterfaceDebug.log", ios::app );
+    myfile << "MESSAGE" << endl;
+    myfile << "CELLID: " << GetCellId() << endl;
+    bool bProcessMessage;
+    stLayer3Data *pMessageReceived = NULL;
+
+    if (pApiEventData)
+    {
+        switch (pApiEventData->ApiEventRatType)
+        {
+        case GERAN_API_RAT_EVENT:
+        {
+            myfile << "GERAN" << endl;
+            stSatGprsApiEventRxData *pSatGprsApiEventRxData = pApiEventData->u.pSatGprsApiData;
+            myfile << "APIEvent: " << pSatGprsApiEventRxData->APIEvent << endl;
+            pMessageReceived = ExtractMessage2G( bProcessMessage, pSatGprsApiEventRxData->APIEvent, pSatGprsApiEventRxData->data );
+        }
+        break;
+
+        case UTRAN_API_RAT_EVENT:
+        {
+            myfile << "UTRAN" << endl;
+            pMessageReceived = ExtractMessage3G( bProcessMessage, pApiEventData->u.pCell3GEventData );
+        }
+        break;
+
+        case GAN_API_RAT_EVENT:
+        {
+            myfile << "GAN" << endl;
+            pMessageReceived = ExtractMessageGAN( bProcessMessage, pApiEventData->u.pGANEventData);
+        }
+        break;
+
+        case REMOTE_API_RAT_EVENT:
+        {
+            pMessageReceived = ExtractMessageRemote( bProcessMessage, pApiEventData->u.pRemoteEventData );
+        }
+        break;
+
+        default:
+            ;
+        }
+    }
+
+
+    if(pMessageReceived != NULL)
+    {
+        myfile << "LogicalChannel: " << pMessageReceived->LogicalChannel << endl;
+        myfile << "CellID: " << pMessageReceived->CellId << endl;
+        myfile << "Layer3MessageType: " << pMessageReceived->Layer3MessageType << endl;
+        myfile << "ProtocolDiscriminator: " << pMessageReceived->ProtocolDiscriminator << endl;
+        myfile << "Direction: " << pMessageReceived->Direction << endl;
+        if(pMessageReceived->szHexstring != NULL)
+        {
+            myfile << "szHexstring: " << pMessageReceived->szHexstring << endl;
+        }
+    }
+    myfile << endl;
+    myfile.close();
+  }
+  catch(...)
+  {
+
+  }
+}
+
+
+        if((PLAYBACKLOG::PlaybackLog::GetprocedureType()== LOG_L3_RECEIVE_ANY_MESSAGE) && CellManagerThread::IsCellManagerWaitingForResponse())
+        {
+            //LOG_L3_RECEIVE_ANY_MESSAGE
+            bool bThereIsAMessage = false;
+            stLayer3Data * pMessageReceived = ExtractMessage( bThereIsAMessage, pApiEventData );
+            pMessageReceived->CellId = GetCellId();
+            SendLayer3MessageToRealTimeTrace( pMessageReceived );
+
+
+            CellManagerThread::PutRecvMessage(pMessageReceived);
+            CellManagerThread::ReportLayer3SequenceCompleteWithout_CellID(); 
+            CellManagerThread::IsCellManagerWaitingForResponse();
+
+            if(CellManagerThread::IsNamedPipeControl())
+            {
+                LogProcedureCompleteToLTEMRAT(LOG_L3_RECEIVE_ANY_MESSAGE); 
+            }
+        }
+        else
+        {
+            HandleApiEventReceived_NoL3( pApiEventData );
+        }
+
+
+#include <iostream>
+#include <fstream>
+
+
+Taurus 
+
+ Randy California's
+
+IsCellManagerWaitingForResponse
+
+SetWaitingForAnyMessageFlag
+
+m_procedureNotification
+
+Release 28.0.0.0 W18-14B1
+
+m_bLayer3SequenceInProgress
+
+DoWaitForAnyMessage
+
+StartWaitForAnyMessage
+
+m_bLayer3SequenceInProgress
+
+
+m_bLayer3SequenceInProgress = false;
+
+CompleteLayer3Sequence
+
+m_bLayer3SequenceInProgress
+
+ProcessMeasurementReportProcedure
+
+PlayNextLayer3Message
+
+HandleApiEventReceived
+
+m_bPlaybackMode
+
+SetSASModeAsInteractive
+
+m_bPlaybackMode
+
+
+SetPlaybackMode
+
+CellManagerThread::SetPlaybackMode();
+
+StartWaitForAnyMessage
+
+CellManagerThread::SetPlaybackMode();
+
+
+m_bPlaybackMode
+
+ReportLayer3SequenceComplete
+
+IsPlaybackMode
+
+L3MessageDescriptions
+
+    {LOG_SUPRESS_PROCEDURE_NOTIFICATION,                SUPRESS_PROCEDURE_NOTIFICATION,      "SUPRESS PROCEDURAL REPORTING"},
+
+
+Procedure
+
+    WAIT_ANY_MESSAGE,
+	SUPRESS_PROCEDURE_NOTIFICATION,
+
+
+oAEtsnLe
+
+    LOG_L3_RECEIVE_ANY_MESSAGE,
+    LOG_SUPRESS_PROCEDURE_NOTIFICATION,
+
+
+    {LOG_L3_RECEIVE_ANY_MESSAGE,                        WAIT_ANY_MESSAGE,                     "WAIT FOR ANY MESSAGE"},
+    {LOG_SUPRESS_PROCEDURE_NOTIFICATION,                SUPRESS_PROCEDURE_NOTIFICATION,      "SUPRESS PROCEDURAL REPORTING"},
+
+
+
+EditWaitForAnyMessage
+
+oAEtsnLe
+
+StartWaitForAnyMessage
+
+SelectL3MForm
+
+            }
+
+
+18:08:20.54                                 ERROR: Failed to create SASPortAccess component. Please ensure that SAS software is installed correctly
+18:08:20.56                                 Failed to create SASPortAccess component. Please ensure that SAS software is installed correctly
+18:08:20.56                                 Verdict : FAIL
+
+
+Regasm SASTCPIPPortsRepository.dll /Codebase
+
+67699
+
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+class ATest
+{
+public:
+    ATest()
+    {
+        throw 20;
+    }
+
+    ~ATest()
+    {
+        cout << "Does this get Destroyed" << endl;
+    }
+
+}
+
+int main()
+{
+    try
+    {
+        ATest A;
+    }
+    catch(int e)
+    {
+        cout << "Caught a cold " << e << endl;
+    }
+}
+
+
+    try
+    {
+        ATest A;
+    }
+    catch(int e)
+    {
+        cout << "Caught a cold " << e << endl;
+    }
+
+
+67699
+
+DoRun
+
+DoLayer3Sequence
+
+Terminate
+
+HandlePlaybackTerminated
+
+ScriptFail
+
+ 0000b	16		 ldc.i.0 0	; i32 0x0
+  0000c	0a		 stloc.0 	; $T37264
+  0000d	12 06		 ldloca.s 6	; $T37259
+  0000f	0d		 stloc.3 	; $T29193
+  00010	09		 ldloc.3 	; $T29193
+  00011	7f 00 00 00 00	 ldsflda $SG29194
+  00016	28 00 00 00 00	 call ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$FQAE@PBD@Z
+  0001b	0c		 stloc.2 	; $T37266
+  0001c	12 05		 ldloca.s 5	; _A$
+  0001e	08		 ldloc.2 	; $T37266
+  0001f	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+  00024	26		 pop 
+$LN5@main:
+
+; 38   :         throw A;
+
+  00026	12 04		 ldloca.s 4	; $T29199
+  00028	12 05		 ldloca.s 5	; _A$
+  0002a	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@ABV0@@Z
+  0002f	26		 pop 
+  00030	12 04		 ldloca.s 4	; $T29199
+  00032	7f 00 00 00 00	 ldsflda __TI1?AVScriptFail@@
+  00037	28 00 00 00 00	 call ?_CxxThrowException@@$$J18YGXPAXPBU_s__ThrowInfo@@@Z
+
+00018	12 0b		 ldloca.s 11	; $T37290
+  0001a	13 05		 stloc.s 5	; $T29194
+  0001c	11 05		 ldloc.s 5	; $T29194
+  0001e	7f 00 00 00 00	 ldsflda $SG29195
+  00023	28 00 00 00 00	 call ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$FQAE@PBD@Z
+  00028	13 04		 stloc.s 4	; $T37323
+  0002a	12 0a		 ldloca.s 10	; _A$29193
+  0002c	11 04		 ldloc.s 4	; $T37323
+  0002e	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+  00033	26		 pop 
+$LN30@main:
+
+; 38   :         throw A;
+
+  00034	12 09		 ldloca.s 9	; $T29200
+  00036	12 0a		 ldloca.s 10	; _A$29193
+  00038	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@ABV0@@Z
+  0003d	26		 pop 
+  0003e	12 09		 ldloca.s 9	; $T29200
+  00040	7f 00 00 00 00	 ldsflda __TI1?AVScriptFail@@
+  00045	28 00 00 00 00	 call ?_CxxThrowException@@$$J18YGXPAXPBU_s__ThrowInfo@@@Z
+  0004a	de 0e		 leave.s $LN31@main
+$LN32@main:
+  0004c	fe 06 00 00 00
+	00		 ldftn ??1ScriptFail@@$$FQAE@XZ
+  00052	12 0a		 ldloca.s 10	; _A$29193
+  00054	28 00 00 00 00	 call ?___CxxCallUnwindDtor@@$$J0YMXP6MXPAX@Z0@Z
+  00059	dc		 endfinally 
+
+  0000b	16		 ldc.i.0 0	; i32 0x0
+  0000c	0a		 stloc.0 	; $T37236
+  0000d	12 05		 ldloca.s 5	; $T37231
+  0000f	0d		 stloc.3 	; $T29193
+  00010	09		 ldloc.3 	; $T29193
+  00011	7f 00 00 00 00	 ldsflda $SG29194
+  00016	28 00 00 00 00	 call ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$FQAE@PBD@Z
+  0001b	0c		 stloc.2 	; $T37238
+  0001c	12 04		 ldloca.s 4	; _A$
+  0001e	08		 ldloc.2 	; $T37238
+  0001f	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+  00024	26		 pop 
+
+  0000b	16		 ldc.i.0 0	; i32 0x0
+  0000c	0a		 stloc.0 	; $T37264
+  0000d	12 06		 ldloca.s 6	; $T37259
+  0000f	0d		 stloc.3 	; $T29193
+  00010	09		 ldloc.3 	; $T29193
+  00011	7f 00 00 00 00	 ldsflda $SG29194
+  00016	28 00 00 00 00	 call ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$FQAE@PBD@Z
+  0001b	0c		 stloc.2 	; $T37266
+  0001c	12 05		 ldloca.s 5	; _A$
+  0001e	08		 ldloc.2 	; $T37266
+  0001f	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+  00024	26		 pop 
+
+  00018	12 0b		 ldloca.s 11	; $T37290
+  0001a	13 05		 stloc.s 5	; $T29194
+  0001c	11 05		 ldloc.s 5	; $T29194
+  0001e	7f 00 00 00 00	 ldsflda $SG29195
+  00023	28 00 00 00 00	 call ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$FQAE@PBD@Z
+  00028	13 04		 stloc.s 4	; $T37323
+  0002a	12 0a		 ldloca.s 10	; _A$29193
+  0002c	11 04		 ldloc.s 4	; $T37323
+  0002e	28 00 00 00 00	 call ??0ScriptFail@@$$FQAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
+  00033	26		 pop
+
+  0000b	16		 ldc.i.0 0	; i32 0x0
+  0000c	0c		 stloc.2 	; $T37321
+  0000d	28 00 00 00 00	 call ?__CxxQueryExceptionSize@@$$J0YAHXZ
+  00012	17		 ldc.i.1 1	; i32 0x1
+  00013	5a		 mul 
+  00014	fe 0f		 localloc 
+  00016	0b		 stloc.1 	; _storage$0$
+
+  0000b	16		 ldc.i.0 0	; i32 0x0
+  0000c	0c		 stloc.2 	; $T37340
+  0000d	28 00 00 00 00	 call ?__CxxQueryExceptionSize@@$$J0YAHXZ
+  00012	17		 ldc.i.1 1	; i32 0x1
+  00013	5a		 mul 
+  00014	fe 0f		 localloc 
+  00016	0b		 stloc.1 	; _storage$0$
+
+DoWaitForAnyMessage
+
+HandlePlaybackTerminated
+
+67467
+
+66975
+
+66839
+
+64687
+
+67770
+
+66261
+
+LOG_L3_USER_DEFINED_PROCEDURE
+
+class FailScript
+{
+public:
+    enum Reason {Timeout, Other};
+    string text;
+};
+
+HandlePlaybackTerminated
+
+void __fastcall TPlaybackThread::HandlePlaybackTerminated(const char * Message)
+
+FailScript
+
+Reason
+
+                if (CommandObject->Commented == 0)
+                {
+                    // execute command
+                    if (CommandObject->RecordType == SAS_L3P)
+                    {
+                        DoLayer3Sequence(CommandObject);
+                    }
+                    else if ((CommandObject->RecordType == SAS_MMI) &&
+                             (CommandObject->ProcedureType == LOG_CELL_TRANSFER))
+                    {
+                        DoCellTransfer(CommandObject);
+                    }
+                    else
+                    {
+                        CONTROL_INTERFACE::ReleaseStoredEvent(CommandObject->CellID+1);
+                        switch (CommandObject->CommandType)
+                        {
+                            // SYSTEM COMMANDS
+                        case LOAD_SCENARIO:
+                            DoLoadScenario(CommandObject);
+                            break;
+                        case REMOTE_ENABLE:
+                            DoRemoteEnable(CommandObject);
+                            break;
+                        case REMOTE_DISABLE:
+                            DoRemoteDisable(CommandObject);
+                            break;
+                        case REMOTE_STRING:
+                            DoRemoteString(CommandObject);
+                            break;
+                        case USER_PROMPT:
+                            DoUserPrompt(CommandObject);
+                            break;
+                        case SYNC_POINT:
+                            DoSyncPoint(CommandObject);
+                            break;
+                        case ACTIVATE:
+                            DoActivate(CommandObject);
+                            break;
+                        case DEACTIVATE:
+                            DoDeactivate(CommandObject);
+                            break;
+                        case RECONFIGURE_LUP:
+                            DoReconfigureLup(CommandObject);
+                            break;
+                        case RECONFIGURE_MO_CALL:
+                            DoReconfigureMOCallSetup(CommandObject);
+                            break;
+                        case RECONFIGURE_OTHERPROC:
+                            DoReconfigureOtherProc(CommandObject);
+                            break;
+                        case RECONFIGURE_LUP_MO_OTHER:
+                            DoReconfigureLupMoOther(CommandObject);
+                            break;
+                        case RECONFIGURE_CELL:
+                            DoReconfigureCell(CommandObject);
+                            break;
+                        case RECONFIGURE_CELLDESC:
+                            DoReconfigureCellDesc(CommandObject);
+                            break;
+                        case DEDICATED_CONTROL:
+                            DoDedicatedControl(CommandObject);
+                            break;
+                        case CELL_SIM_CONTROL:
+                            DoCellSimControl(CommandObject);
+                            break;
+                        case RESET_ALL:
+                            DoResetAll(CommandObject);
+                            break;
+                        case ACTIVATE_DYNAMIC_TRX:
+                            DoDynamicTrxActivation(true);
+                            break;
+                        case DEACTIVATE_DYNAMIC_TRX:
+                            DoDynamicTrxActivation(false);
+                            break;
+                        case START_LOOP:
+                            DoLoopStatement(CommandObject,
+                                            loopCmdObject,
+                                            LoopStartCommand,
+                                            bGoToEndLoop);
+                            break;
+                        case END_LOOP:
+                            DoEndLoopStatement(CommandObject,
+                                               loopCmdObject,
+                                               LoopStartCommand,
+                                               bGoToEndLoop);
+                            break;
+                        case AMR_COMMAND:
+                            DoAmrCommand(CommandObject);
+                            break;
+                        case AMR_RESPONSE:
+                            DoAmrResponse(CommandObject);
+                            break;
+                        case LOG_TO_FILE:
+                            DoLogPrintText(CommandObject);
+                            break;
+                        case LOG_COMMENT_TO_FILE:
+                            DoLogComment(CommandObject);
+                            break;
+                        case ENABLE_MEASUREMENT_REPORT_LOGGING:
+                            DoMeasurementReportLogging(CommandObject, true);
+                            break;
+                        case DISABLE_MEASUREMENT_REPORT_LOGGING:
+                            DoMeasurementReportLogging(CommandObject, false);
+                            break;
+                        case AGPS_INITIALISE_SYSTEM:
+                            DoAgpsInitialiseSystem(CommandObject);
+                            break;
+                        case AGPS_START_SATELLITE:
+                            DoAgpsSatelliteStatus(CommandObject, true);
+                            break;
+                        case AGPS_STOP_SATELLITE:
+                            DoAgpsSatelliteStatus(CommandObject, false);
+                            break;
+                        case DL_AMR_RATE_CHANGE:
+                            DoDLAMRRateChange(CommandObject);
+                            break;
+                        case AMR_MULTIMODE_AUDIO_TESTING:
+                            DoAMRMultiModeAudioTesting(CommandObject);
+                            break;
+                        case WAIT_FOR_EVENT:
+                            DoWaitForEvent(CommandObject);
+                            break;//Enhanced Read Cell Id changes
+                        case WAIT_FOR_SPECIFIC_EVENT:
+                            DoWaitForSpecificEvent(CommandObject);
+                            break;//Enhanced Read Cell Id changes
+                        case WAIT_ANY_MESSAGE:
+                            DoWaitForAnyMessage(CommandObject);
+                            break;
+                        case SET_ACTIVATE_CFU:
+                            DoSetCFUStatus(CommandObject, true);
+                            break;
+                        case SET_DEACTIVATE_CFU:
+                            DoSetCFUStatus(CommandObject, false);
+                            break;
+                        case PROCESS_RESULTS:
+                            processFilePass = DoProcessResults(CommandObject, playBackFile, UEfile);
+                            break;
+                        case REBROADCAST_SIB:
+                            DoSIBReBroadcast(CommandObject);
+                            break;
+                        case NO_MESSAGE_RECEIVED:
+                            DoNoMessageReceived(CommandObject);
+                            break;
+                        default:
+                            break;
+
+                        }
+
+TCommandObject
+
+                if (CommandObject->Commented == 0)
+                {
+                    // execute command
+                    if (CommandObject->RecordType == SAS_L3P)
+                    {
+                        DoLayer3Sequence(CommandObject);
+                    }
+                    else if ((CommandObject->RecordType == SAS_MMI) &&
+                             (CommandObject->ProcedureType == LOG_CELL_TRANSFER))
+                    {
+                        DoCellTransfer(CommandObject);
+                    }
+                    else
+                    {
+                        CONTROL_INTERFACE::ReleaseStoredEvent(CommandObject->CellID+1);
+                        switch (CommandObject->CommandType)
+                        {
+                            // SYSTEM COMMANDS
+                        case LOAD_SCENARIO:
+                            DoLoadScenario(CommandObject);
+                            break;
+                        case REMOTE_ENABLE:
+                            DoRemoteEnable(CommandObject);
+                            break;
+                        case REMOTE_DISABLE:
+                            DoRemoteDisable(CommandObject);
+                            break;
+                        case REMOTE_STRING:
+                            DoRemoteString(CommandObject);
+                            break;
+                        case USER_PROMPT:
+                            DoUserPrompt(CommandObject);
+                            break;
+                        case SYNC_POINT:
+                            DoSyncPoint(CommandObject);
+                            break;
+                        case ACTIVATE:
+                            DoActivate(CommandObject);
+                            break;
+                        case DEACTIVATE:
+                            DoDeactivate(CommandObject);
+                            break;
+                        case RECONFIGURE_LUP:
+                            DoReconfigureLup(CommandObject);
+                            break;
+                        case RECONFIGURE_MO_CALL:
+                            DoReconfigureMOCallSetup(CommandObject);
+                            break;
+                        case RECONFIGURE_OTHERPROC:
+                            DoReconfigureOtherProc(CommandObject);
+                            break;
+                        case RECONFIGURE_LUP_MO_OTHER:
+                            DoReconfigureLupMoOther(CommandObject);
+                            break;
+                        case RECONFIGURE_CELL:
+                            DoReconfigureCell(CommandObject);
+                            break;
+                        case RECONFIGURE_CELLDESC:
+                            DoReconfigureCellDesc(CommandObject);
+                            break;
+                        case DEDICATED_CONTROL:
+                            DoDedicatedControl(CommandObject);
+                            break;
+                        case CELL_SIM_CONTROL:
+                            DoCellSimControl(CommandObject);
+                            break;
+                        case RESET_ALL:
+                            DoResetAll(CommandObject);
+                            break;
+                        case ACTIVATE_DYNAMIC_TRX:
+                            DoDynamicTrxActivation(true);
+                            break;
+                        case DEACTIVATE_DYNAMIC_TRX:
+                            DoDynamicTrxActivation(false);
+                            break;
+                        case START_LOOP:
+                            DoLoopStatement(CommandObject,
+                                            loopCmdObject,
+                                            LoopStartCommand,
+                                            bGoToEndLoop);
+                            break;
+                        case END_LOOP:
+                            DoEndLoopStatement(CommandObject,
+                                               loopCmdObject,
+                                               LoopStartCommand,
+                                               bGoToEndLoop);
+                            break;
+                        case AMR_COMMAND:
+                            DoAmrCommand(CommandObject);
+                            break;
+                        case AMR_RESPONSE:
+                            DoAmrResponse(CommandObject);
+                            break;
+                        case LOG_TO_FILE:
+                            DoLogPrintText(CommandObject);
+                            break;
+                        case LOG_COMMENT_TO_FILE:
+                            DoLogComment(CommandObject);
+                            break;
+                        case ENABLE_MEASUREMENT_REPORT_LOGGING:
+                            DoMeasurementReportLogging(CommandObject, true);
+                            break;
+                        case DISABLE_MEASUREMENT_REPORT_LOGGING:
+                            DoMeasurementReportLogging(CommandObject, false);
+                            break;
+                        case AGPS_INITIALISE_SYSTEM:
+                            DoAgpsInitialiseSystem(CommandObject);
+                            break;
+                        case AGPS_START_SATELLITE:
+                            DoAgpsSatelliteStatus(CommandObject, true);
+                            break;
+                        case AGPS_STOP_SATELLITE:
+                            DoAgpsSatelliteStatus(CommandObject, false);
+                            break;
+                        case DL_AMR_RATE_CHANGE:
+                            DoDLAMRRateChange(CommandObject);
+                            break;
+                        case AMR_MULTIMODE_AUDIO_TESTING:
+                            DoAMRMultiModeAudioTesting(CommandObject);
+                            break;
+                        case WAIT_FOR_EVENT:
+                            DoWaitForEvent(CommandObject);
+                            break;//Enhanced Read Cell Id changes
+                        case WAIT_FOR_SPECIFIC_EVENT:
+                            DoWaitForSpecificEvent(CommandObject);
+                            break;//Enhanced Read Cell Id changes
+                        case WAIT_ANY_MESSAGE:
+                            DoWaitForAnyMessage(CommandObject);
+                            break;
+                        case SET_ACTIVATE_CFU:
+                            DoSetCFUStatus(CommandObject, true);
+                            break;
+                        case SET_DEACTIVATE_CFU:
+                            DoSetCFUStatus(CommandObject, false);
+                            break;
+                        case PROCESS_RESULTS:
+                            processFilePass = DoProcessResults(CommandObject, playBackFile, UEfile);
+                            break;
+                        case REBROADCAST_SIB:
+                            DoSIBReBroadcast(CommandObject);
+                            break;
+                        case NO_MESSAGE_RECEIVED:
+                            DoNoMessageReceived(CommandObject);
+                            break;
+                        default:
+                            break;
+
+                        }
+
+void __fastcall TPlaybackThread::DoElement(TCommandObject *CommandObject)
+
+FailScript
+
+loopCmdObject
+
+TCommandObject *loopCmdObject = NULL;
+
+ int LoopStartCommand = -1;
+    bool bGoToEndLoop = false;
+
+playBackFile
+
+AnsiString playBackFile
+
+LoopStartCommand
+
+UEfile
+
+processFilePass
+
+bool &processFilePass
+
+void __fastcall TPlaybackThread::HandleScriptTerminated(FailScript  &reason)
+
+HandleScriptTerminated
+
+void __fastcall TPlaybackThread::HandleScriptTerminated(FailScript  &reason)
+
+
+class FailScript
+{
+public:
+    enum {Timeout, Other}Reason;
+    string Message;
+};
+
+HandlePlaybackTerminated
+
+FailScript
+
+HandleScriptTerminated
+
+  enum {Timeout, Other}Reason;
+
+FailScript
+
+WAIT_ANY_MESSAGE
+
+FailScript
+

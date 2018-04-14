@@ -1,0 +1,866 @@
+Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>; Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>
+
+Accessibility recovered
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.dll
+
+28228
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.tlb
+
+SetAdapterStatus
+
+this->adapterStatus->SetStatus("Waiting to Start Monitoring");
+
+SetStatus
+
+vms_configuration 
+
+CONFIG_TABLE
+
+VMS_COMMAND_TABLE
+
+VMS_COMMANDS
+
+vms_configuration 
+
+CONFIG_TABLE
+
+CONFIGURATIONDATE 
+
+ route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+
+C:\Program Files (x86)\Imtech\ImCity\Adapters\VMSAdapte
+
+ route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+
+C:\cctvadapter\omniORB413_vc8_rtd.dll
+
+C:\cctvadapter\omnithread34_vc8_rt.dll
+
+C:\cctvadapter\omnithread34_vc8_rtd.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rt.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rtd.dll
+
+C:\cctvadapter\omniORB413_vc8_rt.dll
+
+10.164.114.182
+
+C:\cctvadapter\omniORB413_vc8_rtd.dll
+
+C:\cctvadapter\omnithread34_vc8_rt.dll
+
+C:\cctvadapter\omnithread34_vc8_rtd.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rt.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rtd.dll
+
+C:\cctvadapter\omniORB413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+
+
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+C:\VMSAdapter\VMSAsynAdapter.exe
+
+Msvsmon.exe
+
+C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\Remote Debugger
+
+10.164.114.182
+
+29920
+
+Sent-Resent-Failed
+
+select * from vms_configuration where SYSTEMCODENUMBER='VMS031' and CONFIGURATIONDATE = ( select max(CONFIGURATIONDATE) from vms_configuration where SYSTEMCODENUMBER='VMS031'); 
+
+char queryCode[400] = {0}; 
+
+    sprintf(queryCode, "UPDATE SUBSYSTEM_STATUS set STATUS='%s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='%s'", Status, AdapterSCN);
+
+std::vector< DeviceObject *> objectSet 
+
+CheckCurrentAndPrevious(DeviceEntry* device, std::vector< DeviceObject *> objectSet)
+
+select * from vms_configuration where SYSTEMCODENUMBER='VMS030' and CONFIGURATIONDATE = ( select max(CONFIGURATIONDATE) from vms_configuration where SYSTEMCODENUMBER='VMS030'); 
+
+DeviceObject *obj
+
+CheckCurrentAndPreviousConfig
+
+
+URL http://www.bbc.co.uk/sport/live/football/38571746
+
+ vector<DeviceObject *> dob
+
+ vector<DeviceObject *> dob = query(queryCode);
+	if(dob.size() > 0)
+	{
+		int num = 0;
+		if(dob[dob.size()-1]->attributes().size() > 0)
+		{	
+			const char* val = dob[dob.size()-1]->attributes()[0]->value();
+			num = atoi(val);
+		}
+		if(num == 0)return false;
+	}
+
+ vector<DeviceObject *> dob =
+
+LANTERNSAVAILABLE
+
+obj->setAttribute(  "HEIGHT" , "(null)" );
+  obj->setAttribute(  "WIDTH", "(null)" );
+  obj->setAttribute(  "FONTSPACING" , "(null)" );
+  obj->setAttribute(  "FONTWIDTH" , "(null)" );
+  obj->setAttribute(  "FONTHEIGHT" , "(null)" );
+
+dob[0]
+
+dob[0]->getAttribute("LANTERNSAVAILABLE")
+
+dob[0]->getAttribute( "HEIGHT" );
+
+dob[0]->getAttribute( "WIDTH" )
+
+(strcmp(dob[0]->getAttribute( "WIDTH" ), obj->getAttribute( "WIDTH" ) != 0) ||
+
+CheckCurrentAndPreviousConfig
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+sprintf(debug, "%s, %s, %s, %s, %s, %s\0"
+
+obj->getAttribute("LANTERNSAVAILABLE")
+
+obj->getAttribute( "HEIGHT" )
+
+obj->getAttribute( "WIDTH" )
+
+obj->getAttribute( "FONTSPACING" )
+
+obj->getAttribute( "FONTWIDTH" )
+
+obj->getAttribute( "FONTHEIGHT" )
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+if(dob[dob.size()-1]->attributes().size() > 0)
+		{	
+			const char* val = dob[dob.size()-1]->attributes()[0]->value();
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+device
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+lanterns
+
+height
+
+width
+
+fontspace
+
+fontwidth
+
+fontheight
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+createCommsFault
+
+item->GetScn()
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+clearFault
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '8', '0');
+00341: commit;
+
+
+http://www.bbc.co.uk/news/uk-politics-38813629
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '2', '0');
+commit;
+
+
+INSERT INTO "ADMINUTMC"."TBLSUBSYSTEMFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) values (0,1,'Tyco DVTel Server Offline',1261);
+INSERT INTO "ADMINUTMC"."TBLSUBSYSTEMFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) values (1,1,'DVTel CCTV Adapter Internal Fault',1261);
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+10.164.114
+
+RequestSetPreset
+
+processCommand
+
+30534
+
+processCommand
+
+cdbManager
+
+CDBInterfaceManager
+
+1.03 barg
+
+parameterReq
+
+szParameter
+
+parameters
+
+incidentType
+
+incidentSCN
+
+incidentSCN = "";
+		incidentType = "";
+
+SetParameters
+
+parameters
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+
+m_collectionPeriod
+
+collectionPeriod
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\JourneyTimeAdapter
+
+C:\\Program Files (x86)\\Imtech\\Imcity\\Adapters
+
+it->c_str()
+
+pair
+
+ bool loadConfig(string scn);
+
+bool loadConfig(string scn);
+
+bool loadConfig(string scn)
+
+Camera::
+
+ //Now attempt to load the plugin dll
+  if ( !loadPlugin() )
+  {
+    return false;
+  }
+
+21445
+
+CameraParameter_t
+
+string usernam, string password, int collectionPeriod
+
+C:\Program Files\AStyle\bin
+
+if ( !file.read( scn.c_str(), "UpdatePeriod", m_updatePeriod, defaultUpdatePeriod ) )
+  {
+    LogHandler::log( "Error:  No update period specified!" );
+    return false;
+  }
+
+  map<string, CameraParameter_t> cameraParameter;
+
+typedef struct
+{
+	string username;
+	string password;
+	int collectionperiod;
+}CameraParameter_t;
+
+CameraParameter_t
+
+const char* inifile
+
+ //Attempt to load the settings from the ini file for this camera
+    CutlasIniFile file( m_inifile );
+
+ unsigned long updatePeriod = 1;
+    if ( !file.read( scn, "UpdatePeriod", updatePeriod, 1 ) )
+    {
+        log( "Error:  No update period specified!" );
+        return false;
+    }
+
+ //Read the camera username
+    if ( !file.read( scn, "CameraUsername", m_CameraUsername ) )
+    {
+        sprintf( output, "Tyco Camera failed to read the username for camera '%s'", scn );
+        log( output );
+        return false;
+    }
+
+file.read( scn, "CameraPassword", m_CameraPassword, "" );
+
+ CameraParameter_t cameraparameter;
+    cameraparameter.collectionperiod = updatePeriod;
+    cameraparameter.username = m_CameraUsername;
+    cameraparameter.password = m_CameraPassword;
+
+cameraParameters
+
+this->cameraParameters.insert(make_pair(string(scn), cameraparameter));
+
+
+ char output[512];
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+No Transport Links obtained from database
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+
+
+UpdatePeriod=1
+
+UpdatePeriod=2
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+cameraPort
+
+CameraAccessPort
+
+cameraPort
+
+file.read( scn, "CameraAccessPort", cameraPort, 80);
+
+h.pires@gilroyandbrookes.co.uk
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Accident~223456', '0');
+commit;
+
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+C:\cctvadapter
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release
+
+%SystemRoot%\Microsoft.NET\Framework
+
+SET PATH = "%PATH%;
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+D:\Oracle\product\11.2.0\dbhome_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Utils;C:\Utils\SysInternals;%CUTLAS_HOME%\Common Files;C:\Program Files\Java\jre1.8.0_101\bin;;C:\Program Files (x86)\NTP\bin
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+Costa Laguna Park
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+C:\cctvadapter\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package
+
+C:\Users\Administrator\Desktop\Release
+
+f
+
+C:\Users\Administrator\Desktop\Release
+
+C:\Users\Daniel.Perrett\Desktop\Latitude_Update_7.0.0.5762.exe
+
+
+
+
+C:\Users\Administrator\Desktop\Release
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Accident~223456', '0');
+commit;
+
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+writeToLog
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+GetInfoLog
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+pecha kucha
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+C:\Users\Administrator\Desktop\Release
+
+\\192.168.11.210\daniel.perrett\DVC.exe
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+https://en.wikipedia.org/wiki/General_Motors_EV1
+
+m_collectionCount
+
+CameraParameter_t
+
+cameraParameters
+
+m_collectionCount
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestSnapShot
+
+string username, string password, int port)
+
+int port
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+GetUsername
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\cctvadapter
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release
+
+C:\cctvadapter\DVTelInterfaceLibrary\Release
+
+string username, string password
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+http://www.lagunapark2.com/
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+http://www.aqualand.es/costa-adeje/en/opening-hours-and-prices/
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+Sending error replies for 1 queued stanzas because of failed outgoing connection to 
+
+24741
+
+merseygateway
+
+Birmingham Road, Allesley, Coventry CV5 9AL ? 
+
+http://192.168.114.50:81/UTMS
+
+dperrett
+
+password01!
+
+terminate
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+CDBInterfaceManager
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\cctvadapter\DVtelAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ running = false;
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+m_terminateEvent
+
+SetEvent(
+
+timeoutRequest
+
+SetEvent
+
+m_terminateEvent
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+uk-politics-38723261
+
+Asked to verify a dialback key that was incorrect. An imposter is claiming to be 
+
+vlan
+
+apt-get install --only-upgrade prosody
+
+Asked to verify a dialback key that was incorrect. An imposter is claiming to be
+
+localhost.key
+
+ key = "/etc/prosody/certs/xmpp.utms.uk.key";
+                certificate = "/etc/prosody/certs/xmpp.utms.uk.crt";
+                password = "secretxmpp";
+
+
+http://localhost:5280/admin/
+
+ http://localhost:5280/admin/
+
+individual files in /usr/share/doc/*/copyright.
+
+
+http://localhost:5280/admin/
+
+http://localhost:5280/admin
+
+82a65df1d840f0ec
+
+178.62.53.98
+
+https://startssl.com
+
+178.62.53.98
+
+endorsing his daughter's brands on live TV.
+
+
+https://startssl.com
+
+Error: unable to get local issuer certificate
+
+Codinggain/GetBlog.jsp?name=dan
+
+nggain.com:8080/AudioService/services/AudioReflect?wsdl
+
+http://www.codinggain.com:8080/AudioService/services/AudioReflect?wsdl
+
+-- Tyco Camera System
+INSERT INTO "ADMINUTMC"."TBLCCTVFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, DATASOURCE_TYPEID, FAULTDESCRIPTION) values (0,1,1261,'Camera hardware error');
+INSERT INTO "ADMINUTMC"."TBLCCTVFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, DATASOURCE_TYPEID, FAULTDESCRIPTION) values (1,1,1261,'Camera communications error');
+INSERT INTO "ADMINUTMC"."TBLCCTVFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, DATASOURCE_TYPEID, FAULTDESCRIPTION) values (2,1,1261,'Camera snap shot error');
+
+
+55041-009-6375142-86427-33154120705102
+
+merseygateway@xmpp.utms.uk 
+
+merseygateway@xmpp.utms.uk/
+
+merseygateway@insight.clearviewtraffic.com
+
+Jw3^cjl3df\sr875q2
+
+54.246.187.36
+
+
+
+A free and open-source XMPP chat client in your browser
+
+Converse.js is written in Javascript and runs in your browser.
+
+You can start using it here immediately, or you can integrate it into your own website.
+
+You can connect to any publically accessible XMPP/Jabber server, either from a public provider, or one you have set up yourself.
+Don't have an XMPP/Jabber account?
+
+No problem! With converse.js you can register an account on any public XMPP server that allows registration.
+Integration
+
+    Ruby on Rails
+    Plone
+    Django (option 1)
+    Django (option 2)
+    Roundcube
+    Wordpress
+    Patternslib
+    Alfresco
+    Friendica
+
+Features
+
+    Presence information (online, busy, away)
+    Single-user chat
+    Contacts and groups
+    Multi-user chatrooms (XEP 45)
+    Chatroom bookmarks (XEP 48)
+    Direct invitations to chat rooms (XEP 249)
+    vCard support (XEP 54)
+    Service discovery (XEP 30)
+    In-band registration (XEP 77)
+    Roster item exchange (XEP 144)
+    Custom status messages
+    Typing and chat state notifications (XEP 85)
+    Desktop notifications
+    Messages appear in all connected chat clients (XEP 280)
+    Third person "/me" messages (XEP 245)
+    XMPP Ping (XEP 199)
+    Server-side archiving of messages (XEP 313)
+    Client state indication (XEP 352)
+    Off-the-record encryption
+    Supports anonymous logins, see the anonymous login demo.
+    Translated into 16 languages
+
+Screencasts
+
+    In a Plone site
+    Chatting with buddies from Jabber.org and Gmail
+    Off-the-record encryption
+
+Contact
+
+    Follow me on Twitter or chat with me via XMPP at jc@opkode.com.
+    For technical support, you can ask on Stack Overflow or if you have a more simple question you can ask us in the Converse.js chat room: discuss@conference.conversejs.org.
+    Please file bugs on Github.
+    I'm available for paid-for features, custom development and consulting. Here's my contact form.
+
+Converse.js is supported by KeyCDN
+
+
+merseygateway@insight.clearviewtraffic.com
+
+Jw3^cjl3df\sr875q2
+
+merseygateway@insight.clearviewtraffic.com
+
+/home/daniel.perrett/development/imcitydevelopment/3-Workspace
+
+Jw3^cjl3df\sr875q2
+
+./imtech/myadapter/config/ClearviewCounterAdapter.ini
+
+Jw3^cjl3df\sr875q2
+
+
+
+
+Jw3^cjl3df\sr875q2
+
+ifpossible
+
+Jw3^cjl3df\sr875q2
+
+required
+
+https://www.kimsufi.com/uk/servers.xml
+
+XMPPPassWord=imcity
+
+Jw3^cjl3df\sr875q2
+
+insight.clearviewtraffic.com
+
+username
+
+true
+
+The following addresses failed: 'insight.clearviewtraffic.com:5222' failed because java.net.ConnectException: Connection refused: connect
+
+I
+
+insight.clearviewtraffic.com
+
+
+The Adapter uses an interface library written in C# which connects to the Tyco Server. This C# library has been exported as a COM object which will enable it to be loaded into the current ImCity CCTV Adapter Framework. 
+
+Install FLIR(DVTel) Latitude software V7.0.0 Minimum required will be the SDK libraries
+
+installing the update package, Latitude V7.0.0.57 which will update this release.
+
+import tigase.jaxmpp.j2se.Jaxmpp
+
+import tigase.jaxmpp.j2se.connectors.bosh.BoshConnector
+import tigase.jaxmpp.core.client.SessionObject
+import tigase.jaxmpp.core.client.JID
+import tigase.jaxmpp.core.client.BareJID
+import tigase.jaxmpp.j2se.ConnectionConfiguration
+
+final Jaxmpp contact = new Jaxmpp();
+
+import tigase.jaxmpp.j2se.Jaxmpp;
+
+contact.getModulesManager().getModule( PresenceModule.class ).addListener( PresenceModule.ContactChangedPresence, new Listener<PresenceModule.PresenceEvent>() {
+
+            @Override
+            public void handleEvent( PresenceEvent be ) throws JaxmppException {
+                System.out.println( String.format( "Presence received:\t %1$s is now %2$s (%3$s)", be.getJid(), be.getShow(), be.getStatus() != null ? be.getStatus() : "none" ) );
+            }
+        } );
+
+import tigase.jaxmpp.core.client.BareJID;
+import tigase.jaxmpp.core.client.SessionObject;
+import tigase.jaxmpp.core.client.exceptions.JaxmppException;
+import tigase.jaxmpp.core.client.observer.Listener;
+import tigase.jaxmpp.core.client.xmpp.modules.presence.PresenceModule;
+import tigase.jaxmpp.core.client.xmpp.modules.presence.PresenceModule.PresenceEvent;
+
+ contact.getProperties().setUserProperty( SessionObject.USER_BARE_JID, BareJID.bareJIDInstance( "user@domain" ) );
+        contact.getProperties().setUserProperty( SessionObject.PASSWORD, "pass" );
+
+merseygateway@insight.clearviewtraffic.com
+
+Jw3^cjl3df\sr875q2
+
+contact.login();
+
+ jaxmpp.addListener(SocketConnector.StanzaReceived, new Listener<SocketConnector.ConnectorEvent>() {
+
+                        public void handleEvent(ConnectorEvent be) throws JaxmppException {
+                                log.info("RECEIVED: " + be.getStanza().getAsString());
+                        }
+
+                });
+
+jaxmpp.getSessionObject().setUserProperty(JaxmppCore.AUTOADD_STANZA_ID_KEY, true);
+
+                jaxmpp.addListener(SocketConnector.StanzaReceived, new Listener<SocketConnector.ConnectorEvent>() {
+
+                        public void handleEvent(ConnectorEvent be) throws JaxmppException {
+                                log.info("RECEIVED: " + be.getStanza().getAsString());
+                        }
+
+                });
+
+contact
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import tigase.jaxmpp.core.client.AsyncCallback;
+import tigase.jaxmpp.core.client.BareJID;
+import tigase.jaxmpp.core.client.Connector;
+import tigase.jaxmpp.core.client.Connector.ConnectorEvent;
+import tigase.jaxmpp.core.client.JID;
+import tigase.jaxmpp.core.client.JaxmppCore;
+import tigase.jaxmpp.core.client.PacketWriter;
+import tigase.jaxmpp.core.client.exceptions.JaxmppException;
+import tigase.jaxmpp.core.client.observer.Listener;
+import tigase.jaxmpp.core.client.xml.DefaultElement;
+import tigase.jaxmpp.core.client.xml.Element;
+import tigase.jaxmpp.core.client.xmpp.modules.jingle.JingleModule;
+import tigase.jaxmpp.core.client.xmpp.modules.jingle.JingleModule.JingleSessionInitiationEvent;
+import tigase.jaxmpp.core.client.xmpp.modules.jingle.JingleModule.JingleSessionTerminateEvent;
+import tigase.jaxmpp.core.client.xmpp.stanzas.Stanza;
+import tigase.jaxmpp.j2se.Jaxmpp;
+import tigase.jaxmpp.j2se.connectors.socket.SocketConnector;
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+         
+
+prosody.log.1
+
+163
+

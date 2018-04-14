@@ -1,0 +1,30 @@
+DTEventAcknowledgeRRC
+
+Sequence Element 6
+
+NAS - Tracking_Area_Update_Complete
+
+HandleDTEventReceived
+
+m_L3ProcStatus_RRC.NextMessage
+
+m_NASMobility_WaitingForRRC
+
+SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC");
+
+m_NASMobility_WaitingForRRC
+
+SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC" +  string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+ SASDebugLogger.InfoLog("DANP: after check on m_NASMobility_WaitingForRRC" + string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+m_NASSession_WaitingForRRC
+
+SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC" +  string.Format("{0}", m_NASMobility_WaitingForRRC));
+
+UE_Capability_Information
+
+ SASDebugLogger.InfoLog(string.Format("DANP: Message is :- {0}", m_L3ProcStatus_RRC.NextMessage));
+
+  SASDebugLogger.InfoLog("DANP: before check on m_NASMobility_WaitingForRRC" +  string.Format("{0}", m_NASMobility_WaitingForRRC));
+

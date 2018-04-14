@@ -1,0 +1,129 @@
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+LOGMASK_TCP
+
+MSCCE_inputs
+
+LOGMASK_MCSPS9
+
+There has been a problem retrieving what was expected from the Recv Buffer
+
+ZeroMemory(szHistory, LENGTH_OF_BUFFER);
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+SendTextToWindow
+
+*** Error with the received Length ***
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\tinyxml2-master\tinyxml2\bin\Win32-Release-Lib\tinyxml2.lib
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Release\tinyxml2_rel.lib
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Release\SSLSRIF.exe
+
+BIT MAP IS EMPTY BUT RETURN 1 
+
+Received control request message for unknown interlocking
+
+ControlRequestCount
+
+Sending a control request to MCS
+
+AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+AAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAA=
+
+CqMBAAIA+IyBJeBkBACqVQIAAQAAAIc6pBSUZQCARmM=
+
+CqMBAAIAHJaBJaptBACqVQIAAQAAAG4TD/o0DwCAJCg=
+
+CqMBAAIAl6CBJWh4BACqVQIAAQAAAM7AMX4FRQCAarE=
+
+TCP: The Length Of Receive is
+
+SequenceNumber:
+
+Sending a control request to MCS
+
+CqMCAAwAAk7YbAVN2GyqVYAAAQAAAMyw37//PgAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC7I=
+
+Sending a control request to MCS
+
+
+CqMCAAwAAk7YbAVN2GyqVYAAAQAAAMyw37//PgAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC7I=
+
+0aa302000c00024ed86c054dd86caa55800001000000ccb0dfbfff3e00000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bb2
+
+MCS_getControlRequestsBitmap
+
+LOGMASK_MCSIF
+
+LOGMASK_NVFB3
+
+WM_NVFB3_MESSAGE
+
+LOGMASK_ICONISIF
+
+message
+
+LOGMASK_ICONISIF
+
+message->Header.SequenceNumber
+
+LOGSTRINT("Decode
+
+message->Body.Interlocking->length
+
+LOGMASK_ICONISIF
+
+SequenceNumber
+
+decodeInterlockingElement
+
+LOGMASK_ICONISIF
+
+SequenceNumber
+
+LOGMASK_NVFB3
+
+LOGSTRINT("Decode the NVFB3 data for sequence Number ", input->SequenceNumber, LOGMASK_NVFB3); 
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+SEND NVFB3 Data to be decoded
+
+NVFB3: Decode the NVFB3 data for sequence Number
+
+Failed to decode data for sequence Number
+
+Decode the NVFB3 data for sequence Number
+
+Received TimeCounter value of
+
+Received a control request
+
+MCS_getControlRequestsBitmap
+
+memcpy(MCS_interlockings[iIxl].Control_Requests_Bitmap, input, CONTROL_REQUEST_BITMAP_SIZE);
+
+input
+
+   if (!BitmapIsEmpty(MCS_interlockings[iIxl].Control_Requests_Bitmap, CONTROL_REQUEST_BITMAP_SIZE))
+
+BIT MAP IS
+
+D:\GETransportation\SRIFInputInterfaceDebug.txt
+
+CqMCAAwAAk7YbAVN2GyqVYAAAQAAAMyw37//PgAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC7I=
+
+BIT MAP IS EMPTY
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+D:\GETransportation\SRIFInputInterfaceDebug.txt
+
+MCS_getControlRequestsBitmap
+
+CONTROL_REQUEST_BITMAP_SIZE
+

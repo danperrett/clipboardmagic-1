@@ -1,0 +1,170 @@
+void Pan(int cameraNum, int movement)
+
+C:\Users\Daniel.Perrett\Pictures\$_35.JPG
+
+ThumbnailsSession
+
+ThumbnailIsAvailable 
+
+IThumbnailsSession
+
+-	Thumbnail search returns the original images from the recorded video, so their size is the same as in the recording (no resizing is being done).
+
+public void Pan(int cameraNum, int movement)
+        {
+            IDeviceAPI deviceAPI = cameras[cameraNum].DvtelSystem.GetAPI<IDeviceAPI>();
+            IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+            m_ptzClient = deviceAPI.AcquirePTZControl(scene);
+
+            if(m_ptzClient != null)
+            {
+                if (movement < 0)
+                {
+                    m_ptzClient.Pan(PanAction.Left, 20);
+                }
+                else
+                {
+                    m_ptzClient.Pan(PanAction.Right, 20);
+                }
+                int seconds = (movement < 0)? (-1*movement):movement;
+
+                Thread.Sleep(seconds * 1000);
+                m_ptzClient.Pan(PanAction.Stop, 10);
+            }
+
+void Tilt(int cameraNum, int movement)
+
+Hi Dan,
+
+The Player sample should be a fully working example demonstrating usage of the thumbnail retrieval feature of the Playback API.
+We would recommend to review that sample and step into it. Indeed the following event m_ThumbnailsSession.ThumbnailIsAvailable should allow you to register to a method callback providing the thumbnail Bitmaps. If you encounter any issues where this sample is failing on a client machine that has a properly working ControlCenter client, please let us know.
+
+Some additional information about the feature that may be useful:
+-	Thumbnail search returns the original images from the recorded video, so their size is the same as in the recording (no resizing is being done).
+-	Thumbnail search gets the closest key frame, so the interval between thumbnails is blocked by the key frame interval that was set on the camera.
+We have managed to get thumbnails every second, after reducing the key frame interval to 1. 
+Otherwise, your minimal interval will depend on the key frame interval for that camera.
+-	Most of the work that thumbnail search requires, runs on the client side. The Archiver is hardly affected.
+
+Dan, we just wanted to make you aware that we currently have 7.5H of recorded SDK support usage out of your current 10H support package.
+
+Regards,
+
+
+  DateTime timeend = DateTime.Now;
+                        //DateTime timestart = DateTime.Now.Subtract(new TimeSpan(0, 0, 10));
+                        DateTime timestart = DateTime.Now.Add(new TimeSpan(0, 0, 10));
+                        IThumbnailsSession thumbs = recordingAPI.CreateThumbnailsSession(scene as IVideoInSceneEntity, timeend, timestart);
+                        
+                        thumbs.ThumbnailIsAvailable += thumbs_ThumbnailIsAvailable;
+                        thumbs.ThumbnailsRetrievalCompleted += thumbs_ThumbnailsRetrievalCompleted;
+                        thumbs.FailRetrievingThumbnail += thumbs_FailRetrievingThumbnail;
+                        
+                        thumbs.GetThumbnails(timeend, new TimeSpan(0, 0, 2), 1);
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll
+
+  DateTime timeend = DateTime.Now;
+                        //DateTime timestart = DateTime.Now.Subtract(new TimeSpan(0, 0, 10));
+                        DateTime timestart = DateTime.Now.Add(new TimeSpan(0, 0, 10));
+                        IThumbnailsSession thumbs = recordingAPI.CreateThumbnailsSession(scene as IVideoInSceneEntity, timeend, timestart);
+                        
+                        thumbs.ThumbnailIsAvailable += thumbs_ThumbnailIsAvailable;
+                        thumbs.ThumbnailsRetrievalCompleted += thumbs_ThumbnailsRetrievalCompleted;
+                        thumbs.FailRetrievingThumbnail += thumbs_FailRetrievingThumbnail;
+                        
+                        thumbs.GetThumbnails(timeend, new TimeSpan(0, 0, 2), 1);
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+shot
+
+NorthBoundLatitude
+
+<add value>
+			<name="AreaOfInterest" value = "53.91, 53.06, -2.09, -0.34"/>
+		</add>
+
+ <ArrayOfEndPoint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<name="AreaOfInterest" value="53.91, 53.06, -2.09, -0.34"/>
+			<name="AreaOfInterest" value="53.91, 53.06, -2.09, -0.34"/>
+			<name="AreaOfInterest" value="53.91, 53.06, -2.09, -0.34"/>
+
+NorthBoundLatitude
+
+WestBoundLongitude
+
+SouthBoundLatitude
+
+EastBoundLongitude
+
+<Area>
+				<NorthBoundLatitude>53.91</NorthBoundLatitude>
+				<WestBoundLongitude>-2.09</WestBoundLongitude>
+				<SouthBoundLatitude>53.06</SouthBoundLatitude>
+				<EastBoundLongitude>-0.34</EastBoundLongitude>
+			</Area>
+
+https://santatracker.google.com/village.html
+
+<setting name="MyEndPoints"
+          serializeAs="Xml">
+
+"AreasOfInterest"
+
+53.46
+
+-1.57
+
+53.32
+
+-1.30
+
+53.56
+
+-1.25
+
+53.45
+
+-0.99
+
+m_northBoundLatitude
+
+NumberOfSpecificAreas
+
+ temp = ConfigurationManager.AppSettings["PublishVms"];
+
+numberOfSpecificAreas
+
+AreasOfInterest
+
+ ConfigurationManager.AppSettings[
+
+private double m_northBoundLatitude = 60.85;
+        private double m_westBoundLongitude = -9.23;
+        private double m_southBoundLatitude = 49.84;
+        private double m_eastBoundLongitude = 2.69;
+
+areaOfInterest
+
+log.Error("No Areas of specific interest defined!");
+
+public double northBoundLatitude = 0.0;
+            public double westBoundLongitude = 0.0;
+            public double southBoundLatitude = 0.0;
+            public double eastBoundLongitude = 0.0;
+
+iArea.
+
+Int32.Parse(coor[0]);
+
+Int32.Parse(coor[0]); 
+
+Int32.Parse(coor[2])
+

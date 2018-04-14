@@ -1,0 +1,29 @@
+
+NewUserHandler.jar
+nwu_KJkECNpYuFZwmnFt33rwVXG8pZY1Suwx0nqkQXg
+public_html
+rails
+Servlets
+sslcerts
+startupscripts
+workspace
+www.codinggain.com_private_key.key
+x.dat
+xmpp.log
+dperrett@ubuntu-512mb-lon1-01:~$ vi get.2
+<html>
+
+
+select sum(row_size) 
+from (
+  select 
+    char_length(column1)+
+    char_length(column2)+
+    char_length(column3)+
+    char_length(column4) ... <-- repeat for all columns
+  as row_size 
+  from your_table
+) as tbl1;
+
+ GILROY & BROOKES 40-26-12 42162113 
+

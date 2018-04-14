@@ -1,0 +1,24 @@
+/etc/prosody/certs
+
+xmpp.utms.uk.crt
+
+password = "youllneverguess";
+
+C:\Users\Daniel.Perrett\Downloads\$_35.JPG
+
+CDBInterfaceManager
+
+https://msdn.microsoft.com/en-us/library/xz88758e.aspx
+
+scholar 1900 block
+
+CDBInterfaceManager
+
+bool updateAdapterStatus(const char* AdapterSCN, const char* Status);
+
+CDBInterfaceManager::
+
+String sqlCommand = String.format("UPDATE SUBSYSTEM_STATUS set STATUS='%1$s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS'", status);
+
+UPDATE SUBSYSTEM_STATUS set STATUS='%1$s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS
+

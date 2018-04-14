@@ -1,0 +1,8 @@
+try 
+	    				 {
+	    					System.out.println(stanza.getBody());
+	    				} catch (XMLException e) {
+	    					// TODO Auto-generated catch block
+	    					e.printStackTrace();
+	    				}
+

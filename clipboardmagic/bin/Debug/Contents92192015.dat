@@ -1,0 +1,968 @@
+		result	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-15T09:18:28.341691+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>83441175</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests><ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>YUUqU2hZPfGiJMXQsr3mbqIPzCg=</DigestValue></Reference></SignedInfo><SignatureValue>dt6T4cZQ4/nYBzDMINaVK3H5HhtoNsXj+Fqs7/ufPg1irVV3PklUthMV/33rlXVKQs2pjQhWSL90Q3+LFZjCBCrGANGK3BYkFPvxXLKPHYS6X+7MBPZKXg0kfqZ/9F1vuC2SdX/3Juq7owHHHdy7RMPoIsAZxHKsJS84ywD/22c=</SignatureValue></Signature></Envelope>"	string
+
+
+<Message>
+		<Header>
+			<Version>
+				<MessageFormat>message-v0.1</MessageFormat>
+				<Data>data-v0.1</Data>
+				<Software>software-v1</Software>
+			</Version>
+			<Time>
+				<Current>2015-01-18T14:54:23.423Z</Current>
+				<TimeStatus>SYNCHRONISED</TimeStatus>
+				<Monotonic>1436175143</Monotonic>
+			</Time>
+			<SequenceNumber>746</SequenceNumber>
+			<SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+			<LogicalSourceID>SRIF-1</LogicalSourceID>
+			<SourceStatus>MASTER</SourceStatus>
+			<SourceLinkStatus>UP</SourceLinkStatus>
+			<DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+			<LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+		</Header>
+
+		<Body>
+			<DiagnosticAlarms>
+				<Link>
+					<From>SRIF-1</From>
+					<To>IXL-1</To>
+					<Status>UP</Status>
+				</Link>
+				<Link>
+					<From>SRIF-1</From>
+					<To>IXL-2</To>
+					<Status>DOWN</Status>
+				</Link>
+			</DiagnosticAlarms>
+			<Interlocking>
+				<UniqueID>UK/York/IXL/001</UniqueID>
+				<SSIID>0F</SSIID>
+				<SPAD>
+					<SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap>
+				</SPAD>
+				<Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications>
+				<StatusByte>Ng==</StatusByte>
+			</Interlocking>
+			<EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms>
+		</Body>
+
+	</Message>
+
+Signature
+
+X509Certificate2
+
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+
+xmlDoc.PreserveWhitespace = false;
+                    xmlDoc.Load("test.xml");
+
+// Sign the XML document. 
+                    SignXml(xmlDoc, rsaKey);
+
+ // Save the document.
+                    xmlDoc.Save("test.xml");
+
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqc
+DBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzR
+QrtxClXnCUEvlbPbFL0=
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+SequenceNumberTextBox
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+time_t timer;
+    char buffer[26];
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(buffer, 26, "%Y:%m:%d %H:%M:%S", tm_info);
+    puts(buffer);
+
+time
+
+void GetFormatedTime(char* time)
+{
+    time_t timer;
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(time, 26, "%Y:%m:%d %H:%M:%S", tm_info);
+    puts(time);
+}
+
+
+void GetFormatedTime(char* time)
+
+GetFormatedTime
+
+DWORD DoProcessGeneratedAlarms(GeneratedAlarms_t* generatedAlarms)
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD DoProcessInterLockingData(Interlocking_limited_t* interlockingData)
+
+void PopulateSpad(SPAD_t *spad)
+
+DWORD DoProcessEmergencyAlarms(NVFB3_t* EmergencyAlarms)
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD DoProcessTD(TD_t *tddata)
+
+void PopulateStringField(String_t *field, const char* text) 
+
+/******************************************************************************
+*
+*
+******************************************************************************/
+
+DWORD PopulateHeaderInformation(Header_t *header, char *DestinationUnitID, char *LogicalDestinationID)
+
+DWORD PopulateTimeInformation(Time_t *time)
+
+DWORD PopulateVersionInformation(Version_t *version)
+
+void GetFormatedTime(char* buffer)
+
+SequenceNumberTextBox
+
+SRIFTimeTextBox
+
+<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015:09:15 13:22:16</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>98069482</MonoTonic>\n            </Time>\n            <SequenceNumber>478</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n                <Interlocking>\n                    <UniqueID>UK//York//IXL//001//OF</UniqueID>\n                    <SSIID>0F</SSIID>\n                    <SPAD>\n                        <SignalMap>\n                            <SignalMap>MTIzNDU2Nzg5MA==</SignalMap>\n                        </SignalMap>\n                        <SPADData>\n                            <SignalID>16</SignalID>\n                            <Signal>S123</Signal>\n                            <Track>T123</Track>\n                        </SPADData>\n                    </SPAD>\n                </Interlocking>\n            </Interlocking>\n            <EmergencyAlarms>\n                <EmergencyAlarms></EmergencyAlarms>\n            </EmergencyAlarms>\n            <TD>\n                <Interpose>\n                    <TrainID>1T22</TrainID>\n                    <BerthID>0123</BerthID>\n                </Interpose>\n                <Clear>\n                    <Berth>0123</Berth>\n                </Clear>\n                <Step>\n                    <TrainID>1T22</TrainID>\n                    <FromBerth>0123</FromBerth>\n                    <ToBerth>0124</ToBerth>\n                </Step>\n            </TD>\n        </Body>\n    </Message>\n    <Signature/>\n</Envelope>\n
+
+NVFB3
+
+COM_HEADER_T
+
+BOOLEAN_T
+
+Slib_MemCopy
+
+KER_MBX_T
+
+KER_SEM_T
+
+COM_ID
+
+#include "stdafx.h"
+
+ker_malloc
+
+CNF_RET
+
+CNF_WRONG_VALUE
+
+CNF_OK
+
+CNF_MALLOC_FAILED
+
+ker_free
+
+CNF_LIST_EL
+
+CNF_UNKNOWN_SEC
+
+CNF_UNKNOWN_KEY
+
+CNF_TOO_FEW_KEYS
+
+CNF_TOO_MANY_KEYS
+
+CNF_TOO_MANY_SEC
+
+CNF_NO_INIT
+
+appl_domain
+
+CNF_RET
+
+CNF_RET cnf_init(const char* file, UINT16 num)
+{
+
+}
+
+Smartlock 400 Generic Product Interface Description NVFB/3 Protocol, 
+
+cnfInst
+
+cnf_register_decoding(cnfInst
+
+msg_type
+
+crc  crcTable[256];
+
+void
+crcInit(void)
+{
+    crc  remainder;
+
+
+    /*
+     * Compute the remainder of each possible dividend.
+     */
+    for (int dividend = 0; dividend < 256; ++dividend)
+    {
+        /*
+         * Start with the dividend followed by zeros.
+         */
+        remainder = dividend << (WIDTH - 8);
+
+        /*
+         * Perform modulo-2 division, a bit at a time.
+         */
+        for (uint8_t bit = 8; bit > 0; --bit)
+        {
+            /*
+             * Try to divide the current data bit.
+             */			
+            if (remainder & TOPBIT)
+            {
+                remainder = (remainder << 1) ^ POLYNOMIAL;
+            }
+            else
+            {
+                remainder = (remainder << 1);
+            }
+        }
+
+        /*
+         * Store the result into the table.
+         */
+        crcTable[dividend] = remainder;
+    }
+
+}   /* crcInit() */
+
+#define WIDTH  (8 * sizeof(crc))
+#define TOPBIT (1 << (WIDTH - 1))
+
+
+typedef uint8_t crc;
+
+#define POLYNOMIAL 0xD8  /* 11011 followed by 0's */
+
+void crcInit(void)
+
+#include "EncodeDecodeCRC.h"
+
+/******************************************************************************
+*
+* 
+******************************************************************************/
+
+void writeToLoggerFile(const char *text);
+
+hWnd
+
+::SendMessageA(hWnd, WM_SETTEXT, 0, (LPARAM)buffer);
+
+WM_LOGGER
+
+writeToLoggerFile
+
+crcInit
+
+crc
+crcFast(uint8_t const message[], int nBytes)
+{
+    uint8_t data;
+    crc remainder = 0;
+
+
+    /*
+     * Divide the message by the polynomial, a byte at a time.
+     */
+    for (int byte = 0; byte < nBytes; ++byte)
+    {
+        data = message[byte] ^ (remainder >> (WIDTH - 8));
+        remainder = crcTable[data] ^ (remainder << 8);
+    }
+
+    /*
+     * The final remainder is the CRC.
+     */
+    return (remainder);
+
+}   /* crcFast() */
+
+#define POLY 0x8408
+/*
+//                                      16   12   5
+// this is the CCITT CRC 16 polynomial X  + X  + X  + 1.
+// This works out to be 0x1021, but the way the algorithm works
+// lets us use 0x8408 (the reverse of the bit pattern).  The high
+// bit is always assumed to be set, thus we only use 16 bits to
+// represent the 17 bit value.
+*/
+
+unsigned short crc16(char *data_p, unsigned short length)
+{
+      unsigned char i;
+      unsigned int data;
+      unsigned int crc = 0xffff;
+
+      if (length == 0)
+            return (~crc);
+
+      do
+      {
+            for (i=0, data=(unsigned int)0xff & *data_p++;
+                 i < 8; 
+                 i++, data >>= 1)
+            {
+                  if ((crc & 0x0001) ^ (data & 0x0001))
+                        crc = (crc >> 1) ^ POLY;
+                  else  crc >>= 1;
+            }
+      } while (--length);
+
+      crc = ~crc;
+      data = crc;
+      crc = (crc << 8) | (data >> 8 & 0xff);
+
+      return (crc);
+}
+
+typedef uint8_t crc;
+
+typedef unsigned char uint8_t;
+
+crcFast
+
+crc crcFast(uint8_t const message[], int nBytes)
+
+crcFast
+
+Impostare a 1, da Multisim, tutte le variabili che CLC manda a CLCL e viceversa e verificare che in assenza della comunicazione fra i due host (= staccando la 
+
+NVFB_header
+
+
+
+
+ReceivedTimeCounter
+
+BitConverter.GetBytes(ApplicationDomain)
+
+MessageType
+
+BitConverter.GetBytes(
+
+createFakeNVFB3Heade
+
+            mess.Body.Interlocking[0].ControlRequests = createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890"));
+
+
+createFakeNVFB3Heade(
+
+ASCIIEncoding.ASCII.GetBytes(
+
+System.Convert.ToBase64String(
+
+Convert.ToBase64String((createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("12345678901234567890")))
+
+AgEKAAsAAAAAAAAAAAABABQAAQAAADEyMzQ1Njc4OTAxMjM0NTY3ODkw//8=
+
+createFakeNVFB3Heade(ASCIIEncoding.ASCII.GetBytes("1234567890123456"))
+
+NVFB_header
+
+CheckThe16BitCRC
+
+'timesheets@g2recruitment.com'
+
+ExtractTheNVFB3Header
+
+
+WORD CheckThe16BitCRC(const char* data, const char *r)
+
+void ExtractTheData(const char* input, char *output, int length)
+
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header)
+
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header)
+
+WORD HandleControlRequestData(const char *)
+
+HandleControlRequestData
+
+interlocking_t->ControlRequest.value
+
+DecodeNVFB3
+
+17503
+
+CRC16_POLYNOM
+
+#define CRC16_POLYNOM                   (UINT16)0x8810 
+
+crc16
+
+unsigned short crc16(char *data_p, unsigned short length)
+
+CheckThe16BitCRC
+
+CRC16_POLYNOM
+
+crcFast
+
+#define CRC16_POLYNOM                   (UINT16)0x8810 
+
+CRC16_POLYNOM
+
+POLYNOMIAL
+
+crc
+crcSlow(uint8_t const message[], int nBytes)
+{
+    crc  remainder = 0;	
+
+
+    /*
+     * Perform modulo-2 division, a byte at a time.
+     */
+    for (int byte = 0; byte < nBytes; ++byte)
+    {
+        /*
+         * Bring the next byte into the remainder.
+         */
+        remainder ^= (message[byte] << (WIDTH - 8));
+
+        /*
+         * Perform modulo-2 division, a bit at a time.
+         */
+        for (uint8_t bit = 8; bit > 0; --bit)
+        {
+            /*
+             * Try to divide the current data bit.
+             */
+            if (remainder & TOPBIT)
+            {
+                remainder = (remainder << 1) ^ POLYNOMIAL;
+            }
+            else
+            {
+                remainder = (remainder << 1);
+            }
+        }
+    }
+
+    /*
+     * The final remainder is the CRC result.
+     */
+    return (remainder);
+
+}   /* crcSlow() */
+
+crcSlow
+
+((const uint8_t *)data, length);
+
+crc crcFast(uint8_t const message[], int nBytes);
+
+ExtractTheData
+
+0x9429e296
+
+udp.stream eq 27
+
+af 27 14 f6 03 af 
+
+0a a3 02 00 01
+
+8810
+
+312323334353637383930
+
+#define poly 0x1021
+
+/* On entry, addr=>start of data
+             num = length of data
+             crc = incoming CRC     */
+int crc16(char *addr, int num, int crc)
+{
+int i;
+
+for (; num>0; num--)               /* Step through bytes in memory */
+  {
+  crc = crc ^ (*addr++ << 8);      /* Fetch byte from memory, XOR into CRC top byte*/
+  for (i=0; i<8; i++)              /* Prepare to rotate 8 bits */
+    {
+    crc = crc << 1;                /* rotate */
+    if (crc & 0x10000)             /* bit 15 was set (now bit 16)... */
+      crc = (crc ^ poly) & 0xFFFF; /* XOR with XMODEM polynomic */
+                                   /* and ensure CRC remains 16-bit value */
+    }                              /* Loop for 8 bits */
+  }                                /* Loop until num=0 */
+  return(crc);                     /* Return updated CRC */
+}
+
+int _crc16(char *addr, int num, int crc)
+
+int _crc16(char *addr, int num)
+
+DECLARE FUNCTION Add_CRC16(BYVAL char AS BYTE,BYVAL crc AS WORD,BYVAL Tcrc AS WORD PTR) AS WORD
+FUNCTION Add_CRC16( BYVAL char AS BYTE, BYVAL crc AS WORD, BYVAL Tcrc AS WORD PTR ) AS WORD
+    #REGISTER NONE
+    LOCAL crcout AS WORD
+    !xor edx,edx            ;clear 32 bit registers
+    !xor eax,eax
+    !xor ebx,ebx
+    !mov dx,crc             ;crc = dx
+    !mov al,char            ;move char into al
+    !xor dx,ax              ; crc xor char
+    !and dx,&h000F          ; crc and &h000F?? = first crctable array element offset
+    !mov bx,dx              ; keep in bx
+    !mov dx,crc             ;put crc back in dx
+    !xor dx,ax              ;crc xor char
+    !and dx,&h00F0          ;(crc xor char) and &h00F0
+    !shr dx,4               ;((crc xor char) and &h00F0) \ 16 )
+    !add dx,16              ;((crc xor char) and &h00F0) \ 16 ) + 16 = second crctable array element offset
+    !mov eax,Tcrc           ;load eax with CRC table address
+    !mov ax,[eax + ebx * 2] ;load ax with CRC table array element @ first crctable array element offset
+    !push ax                ;save on stack
+    !mov eax,Tcrc           ;set table index
+    !mov bx,[eax + edx * 2] ;load bx with CRC table array element @ second crctable array element offset
+    !pop ax                 ; restore ax with CRC table array element @ first crctable array element offset
+    !xor ax,bx              ;xor CRC table array values
+    !mov dx,crc             ; put crc in dx
+    !shr dx,8               ; CRC \ 256
+    !and dx,&h00FF          ; CRC = (CRC \ 256) AND &h00FF
+    !xor ax,dx              ; xor'ed CRC table array values xor CRC
+    !mov crcout,ax          ;put CRC in crcout variable
+    FUNCTION = crcout
+END FUNCTION
+
+Add_CRC16
+
+WORD Add_CRC16( BYTE c, WORD crc , WORD *Tcrc )
+
+0x8408
+
+(char *)data
+
+crctable
+
+GetStringCRC16
+
+FUNCTION GetStringCRC16(BYVAL tBuff AS DWORD,BYVAL lenBuff AS WORD,BYVAL Tcrc AS DWORD) AS WORD
+    #REGISTER NONE
+    LOCAL crc AS WORD
+    !mov esi,tBuff          ;ptr to buffer
+    !mov cx,lenBuff         ;length of buffer
+    !cld                    ;set direction Move forward through the buffer
+    !xor edx,edx            ;clear 32 bit registers
+    !xor eax,eax
+    !xor ebx,ebx
+    !mov crc,dx             ;crc = dx
+C1:
+    !mov al,[esi]           ;move char indexed by esi into al
+    !inc esi                ;increment char position
+    !xor dx,ax              ; crc xor char
+    !and dx,&h000F          ; crc and &h000F?? = first crctable array element offset
+    !mov bx,dx              ; keep in bx
+    !mov dx,crc             ;put crc back in dx
+    !xor dx,ax              ;crc xor char
+    !and dx,&h00F0          ;(crc xor char) and &h00F0
+    !shr dx,4               ;((crc xor char) and &h00F0) \ 16 )
+    !add dx,16              ;((crc xor char) and &h00F0) \ 16 ) + 16 = second crctable array element offset
+    !mov eax,Tcrc           ;load eax with CRC table address
+    !mov ax,[eax + ebx * 2] ;load ax with CRC table array element @ first crctable array element offset
+    !push ax                ;save on stack
+    !mov eax,Tcrc           ;set table index
+    !mov bx,[eax + edx * 2] ;load bx with CRC table array element @ second crctable array element offset
+    !pop ax                 ; restore ax with CRC table array element @ first crctable array element offset
+    !xor ax,bx              ;xor CRC table array values
+    !mov dx,crc             ; put crc in dx
+    !shr dx,8               ; CRC \ 256
+    !and dx,&h00FF          ; CRC = (CRC \ 256) AND &h00FF
+    !xor ax,dx              ; xor'ed CRC table array values xor CRC
+    !mov crc,ax             ;put CRC in crc variable
+    !mov dx,crc             ;put CRC in dx for next iteration
+    !loop C1                ; loop if cx not zero to end of string
+    FUNCTION = crc
+END FUNCTION
+
+ crcTable( 0 ) = &h0000
+    crcTable( 1 ) = &hC0C1
+    crcTable( 2 ) = &hC181
+    crcTable( 3 ) = &h0140
+    crcTable( 4 ) = &hC301
+    crcTable( 5 ) = &h03C0
+    crcTable( 6 ) = &h0280
+    crcTable( 7 ) = &hC241
+    crcTable( 8 ) = &hC601
+    crcTable( 9 ) = &h06C0
+    crcTable( 10 ) = &h0780
+    crcTable( 11 ) = &hC741
+    crcTable( 12 ) = &h0500
+    crcTable( 13 ) = &hC5C1
+    crcTable( 14 ) = &hC481
+    crcTable( 15 ) = &h0440
+    crcTable( 16 ) = &h0000
+    crcTable( 17 ) = &hCC01
+    crcTable( 18 ) = &hD801
+    crcTable( 19 ) = &h1400
+    crcTable( 20 ) = &hF001
+    crcTable( 21 ) = &h3C00
+    crcTable( 22 ) = &h2800
+    crcTable( 23 ) = &hE401
+    crcTable( 24 ) = &hA001
+    crcTable( 25 ) = &h6C00
+    crcTable( 26 ) = &h7800
+    crcTable( 27 ) = &hB401
+    crcTable( 28 ) = &h5000
+    crcTable( 29 ) = &h9C01
+    crcTable( 30 ) = &h8801
+    crcTable( 31 ) = &h4400
+    crcTable( 32 ) = &h0000
+
+_crcTable
+
+GetStringCRC16
+
+WORD TestCRCCode(DWORD buff, WORD lenBuff)
+{
+
+}
+
+GetStringCRC16
+
+_crcTable
+
+lenBuff
+
+Tcrc
+
+TestCRCCode
+
+WORD TestCRCCode(DWORD *buff, WORD lenBuff)
+
+TestCRCCode
+
+FUNCTION GetArrayCRC16(BYVAL tBuff AS BYTE PTR,BYVAL lenBuff AS WORD,BYVAL Tcrc AS WORD PTR) AS WORD
+    #REGISTER NONE
+    LOCAL crc AS WORD
+    !mov esi,tBuff          ;ptr to buffer
+    !mov cx,lenBuff         ;length of buffer
+    !cld                    ;set direction Move forward through the buffer
+    !xor edx,edx            ;clear 32 bit registers
+    !xor eax,eax
+    !xor ebx,ebx
+    !mov crc,dx             ;crc = dx
+C1:
+    !mov al,[esi]           ;move char indexed by esi into al
+    !inc esi                ;increment char position
+    !xor dx,ax              ; crc xor char
+    !and dx,&h000F          ; crc and &h000F?? = first crctable array element offset
+    !mov bx,dx              ; keep in bx
+    !mov dx,crc             ;put crc back in dx
+    !xor dx,ax              ;crc xor char
+    !and dx,&h00F0          ;(crc xor char) and &h00F0
+    !shr dx,4               ;((crc xor char) and &h00F0) \ 16 )
+    !add dx,16              ;((crc xor char) and &h00F0) \ 16 ) + 16 = second crctable array element offset
+    !mov eax,Tcrc           ;load eax with CRC table address
+    !mov ax,[eax + ebx * 2] ;load ax with CRC table array element @ first crctable array element offset
+    !push ax                ;save on stack
+    !mov eax,Tcrc           ;set table index
+    !mov bx,[eax + edx * 2] ;load bx with CRC table array element @ second crctable array element offset
+    !pop ax                 ; restore ax with CRC table array element @ first crctable array element offset
+    !xor ax,bx              ;xor CRC table array values
+    !mov dx,crc             ; put crc in dx
+    !shr dx,8               ; CRC \ 256
+    !and dx,&h00FF          ; CRC = (CRC \ 256) AND &h00FF
+    !xor ax,dx              ; xor'ed CRC table array values xor CRC
+    !mov crc,ax             ;put CRC in crc variable
+    !mov dx,crc             ;put CRC in dx for next iteration
+    !loop C1                ; loop if cx not zero to end of string
+    FUNCTION = crc
+END FUNCTION
+
+
+GetArrayCRC16
+
+CheckTheHeaderCRCs
+
+CheckTheHeaderCRCs(
+
+WORD CheckTheHeaderCRCs(NVFB_header* header, const char* data)
+{
+    return 1;
+}
+
+
+
+CheckTheAuthenticity
+
+DecodeNVFB3Data
+
+
+WORD HandleControlRequestData(const char *input)
+{
+    WORD ret = 0;
+    NVFB_header header;
+    char data[448];
+    ZeroMemory(data, 448);
+    DecodeNVFB3(input, data, &header);  //also checks integrity
+    if(CheckTheAuthenticity(header, data) == 0)  //check Authenticity
+    {
+
+    }
+    return ret;
+}
+
+
+
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header)
+{
+     WORD ret = 1;
+     ExtractTheNVFB3Header(input, header);
+     if(ExtractTheData(input, (BYTE *)data, header->AppDataSize) == 0)
+     {
+         return 0;
+     }
+
+     if(CheckTheHeaderCRCs(header, data) == 0)
+     {
+         return 0;
+     }
+     
+     return ret;
+}
+
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header)
+{
+    header->ApplicationDomain = input[0];
+    header->MsgType = input[1];
+    header->SourceAddress = (WORD)input[2];
+    header->DestinationAddress = (WORD)input[4];
+    header->TimeCounter = (DWORD)input[6];
+    header->EchoCounter = (DWORD)input[10];
+    header->EchoValid =  input[14];
+    header->AppDataSize = input[16];
+    header->DataVer = input[18];
+
+}
+
+WORD ExtractTheData(const char* input, BYTE *output, int length)
+{
+    unsigned char CRC[2];
+    int n = 0;
+    int k = 0;
+    for(k = 22, n = 0; n < length; n++, k++)
+    {
+        output[n] = input[k];
+    }
+
+    //get the CRC
+    k = 0;
+    for(n = (22 + length); n < (22 + length + 2); n++, k++)
+    {
+        CRC[k] = input[n];
+    }
+    return CheckThe16BitCRC(output, (const char *)CRC, length);
+
+}
+
+
+WORD CheckTheAuthenticity(NVFB_header* header, const char* data)
+{
+    return 1;
+}
+
+WORD CheckTheHeaderCRCs(NVFB_header* header, const char* data)
+{
+    return 1;
+}
+
+
+
+WORD CheckThe16BitCRC(BYTE* data, const char *r, short length)
+{
+    WORD ret = crc16((const char *)data, length);
+    WORD ret1 = crcSlow((const uint8_t *)data, length);
+    WORD ret2 = crcFast((const uint8_t *)data, length);
+    WORD ret3 = _crc16((char *)data, length);
+    WORD ret4 = TestCRCCode(data, length);
+    return 1;
+}
+
+
+WORD CheckThe16BitCRC(BYTE* data, const char *r, short length);
+void ExtractTheData(const char* input, BYTE *output, int length);
+void ExtractTheNVFB3Header(const char* input, NVFB_header* header);
+WORD DecodeNVFB3(const char* input, char* data, NVFB_header* header);
+WORD HandleControlRequestData(const char *);
+
+
+#include "EncodeDecodeCRC.h"
+
+#include "decodeICONIDIFMessage.h"
+
+WORD CheckTheAuthenticity(NVFB_header* header, const char* data)
+
+WORD CheckTheHeaderCRCs(NVFB_header* header, const char* data)
+
+HandleControlRequestData
+
+WORD CheckSequenceCorrect(NVFB_header* header)
+
+CheckSequenceCorrect
+
+WORD CheckSequenceCorrect(NVFB_header* header)
+
+WORD CheckTimlinessAlgorithm(NVFB_header* header)
+
+CheckTimlinessAlgorithm
+
+/******************************************************************************
+
+******************************************************************************/
+
+/******************************************************************************
+
+******************************************************************************/
+
+/******************************************************************************
+Checks the Sequence of each message 
+RecievedTimeCounter > LastReceivedTimeCounter
+******************************************************************************/
+
+/******************************************************************************
+
+******************************************************************************/
+
+/******************************************************************************
+
+/******************************************************************************
+******************************************************************************/
+
+LastReceivedTimeCounter
+
+header->TimeCounter
+
+FRESH_TOLERANCE
+
+WORD GetArrayCRC16(DWORD tBuff , WORD lenBuff, DWORD Tcrc)
+
+CreateCRCTable
+
+LastReceivedTimeCounter
+
+APPLICATION_DOMAIN
+
+MSG_TYPE
+
+SOURCE_ADDRESS
+
+DESTINATION_ADDRESS
+
+TIME_COUNTER
+
+ECHO_COUNTER
+
+ECHO_VALID
+
+APP_DATA_SIZE
+
+APP_DATA_VER
+
+FRESH_TOLERANCE
+
+FirstMessageReceived
+
+(NVFB_header* header)
+
+/******************************************************************************
+Check Timeliness of each  message received
+The Timeliness Check algorithm must verify the ECHO VALID and ECHO Counter fields
+if the ECHO VALID field is FALSE the packet received must be discarded. Other wise
+ECHO COUNTER field of the message received must be compared with the time of the
+receiver if the value is bigger than the FreshTolerance threshold the packet must be discarded
+******************************************************************************/
+
+FirstMessageReceived
+
+Configuration Data
+
+TimeCounterValidTolerences
+
+EchoCounterValidTolerences
+
+TimeCounterValidFlag
+
+LastTimeCounterValid
+
+EchoCounterValidFlag = 0;
+static WORD EchoCounterFlag
+
+EchoCounterValidFlag
+
+EchoCounterFlag
+
+TimeCounterValidFlag
+
+LastTimeCounterValid
+
+EchoCounterValidFlag
+
+EchoCounterFlag
+
+TolerenceCounter = time;
+
+removed at the expense of the Secretary of State
+
+https://www.bic-immigration.com/immigration-news/item/256-what-will-happen-if-i-overstay-in-the-uk/256-what-will-happen-if-i-overstay-in-the-uk
+
+removed at the expense of the Secretary of State
+
+https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/270043/chapter62.pdf
+
+http://www.choices-avr.org.uk/choices
+
+CheckCounterTolerence
+
+WORD CheckCounterTolerence(NVFB_header* header)
+

@@ -1,0 +1,191 @@
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
+
+UK/York/IXL/001/OF
+
+void PopulateStringField(String_t *field, const char *text)
+
+PopulateStringField
+
+interlockingData->Interlocking[0].UniqueID
+
+NVFB3_t
+
+Base64encode
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678
+
+Base64encode
+
+void PopulateNVF3BField(NVFB3_t *field, const char* data)
+
+PopulateNVF3BField
+
+/******************************************************************************
+* 
+* 
+******************************************************************************/
+
+PopulateNVF3BField
+
+SPAD_unbounded_t
+
+SPAD_t
+
+PopulateNVF3BField
+
+PopulateStringField
+
+spad->SPADData.length = 1;
+
+PopulateSpad
+
+interlockingData->Interlocking[0].SPAD.SPAD
+
+DiagnosticAlarms
+
+EmergencyAlarms
+
+Interlocking_limited_t
+
+DoProcessDiagnosticAlarms
+
+#include "DoProcess.h"
+
+message.Body.DiagnosticAlarms
+
+DoProcessGeneratedAlarms
+
+message.Body.GeneratedAlarms
+
+ Message_t message;
+
+    message.Body.DiagnosticAlarms = (DiagnosticAlarms_t *)malloc(sizeof(DiagnosticAlarms_t));
+    DoProcessDiagnosticAlarms(message.Body.DiagnosticAlarms);
+    message.Body.GeneratedAlarms = (GeneratedAlarms_t *)malloc(sizeof(GeneratedAlarms_t));
+    DoProcessGeneratedAlarms(message.Body.GeneratedAlarms);
+    message.Body.Interlocking = (Interlocking_limited_t *)malloc(sizeof(Interlocking_limited_t));
+    message.Body.EmergencyAlarms = (NVFB3_t *)malloc(sizeof(NVFB3_t));
+    message.Body.TD = (TD_t *)malloc(sizeof(TD_t));
+
+PopulateStringField
+
+PopulateStringField(
+
+PopulateStringField
+
+PopulateStringField(&
+
+EmergencyAlarms
+
+DoProcessInterLockingData
+
+message.Body.Interlocking
+
+DoProcessEmergencyAlarms
+
+message.Body.EmergencyAlarms
+
+TD_t
+
+DWORD DoProcessTD(TD_t *tddata)
+
+void PopulateStringField(String_t *field, const char *text);
+void PopulateNVF3BField(NVFB3_t *field, const char* data);
+
+DoProcessTD
+
+message.Body.TD
+
+PopulateStringField
+
+1T22
+
+PopulateStringField(&
+
+PopulateStringField
+
+0123
+
+PopulateStringField(&
+
+MAX_UNLIMITED_SIZE
+
+Interlocking
+
+MX_INTERLOCKING_OCCURANCE
+
+MAX_UNLIMITED_SIZE
+
+MAX_TEXT_FIELD_SIZE
+
+GetHeaderInformation
+
+PopulateHeaderInformation
+
+Header_t
+
+DWORD PopulateHeaderInformation(Header_t *header)
+{
+    header->
+    return 0;
+}
+
+DWORD PopulateHeaderInformation(Header_t *header)
+
+DWORD sequencerNumber = 0;
+
+sequenceNumber
+
+PopulateStringField
+
+SRIF-1-Unit-A
+
+Version_t
+
+ICONIS-1-Unit-A
+
+ICONIS-1
+
+MAX_TEXT_FIELD_SIZE
+
+Courier New
+
+message-v0.1
+
+PopulateStringField
+
+data-v0.1
+
+software-v1
+
+Current
+
+2015-01-18T14:54:23.423Z
+
+GetTickCount
+
+PopulateVersionInformation
+
+GetTickCount
+
+Message_t message;
+
+message
+
+#include "tinyxml2.h
+
+	element->InsertEndChild( sub[2] );
+		XMLNode* comment = element->InsertFirstChild( doc->NewComment( "comment" ) );
+		element->InsertAfterChild( comment, sub[0] );
+		element->InsertAfterChild( sub[0], sub[1] );
+		sub[2]->InsertFirstChild( doc->NewText( "& Text!" ));
+		doc->Print();
+
+Envolope
+
+XMLElement* sub[3] = { doc->NewElement( "sub" ), doc->NewElement( "sub" ), doc->NewElement( "sub" ) };
+

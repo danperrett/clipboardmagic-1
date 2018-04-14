@@ -1,0 +1,238 @@
+John Ball 
+
+ Hannah South
+
+C:\StarTeam\48SA007 Generic Logger\Software\Source Code\Logger\Installation\ODBC
+
+C:\StarTeam\48SA007 Generic Logger\Software\Source Code\Logger\Logger Install\SystemDlls\MYODBC.DLL
+
+C:\StarTeam\48SA007 Generic Logger\Software\Source Code\Logger\Logger Install\SystemDlls\DLPORTIO.dll
+
+Test 1(I): Received All Data from TCP Connection 0
+
+Test 1(II) Test1(III) Unknown or Error with Receive length
+
+a.	Within the Simulator set the output length to
+
+b.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+
+a.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+
+ICONIS-1-Unit-c
+
+ if(connectionInformation != NULL)
+    {
+
+Socket
+
+in section 2.1.1 first
+
+Test 2(I): Length added 
+
+Test 2(II): Message Just Sent OK
+
+Test 3(I)
+
+for all tests complete steps in section 2.1.1 first
+
+Test 3(I): information is correct
+
+Test 3(II): Setting link status to UP
+
+Test 3(III): Bad decode setting the Status to DOWN
+
+for all tests complete steps in section 2.1.1 first
+
+Test 4(I) a: Digest length OK
+
+Test 4(II) a: TheCalculated DIGEST value is
+
+repeat test 1.1 (iv)d
+
+Test 4(VI): Certificate is Good
+
+for all tests complete steps in section 2.1.1 first 
+
+For all tests complete steps in section 2.1.1 first
+
+a.	Confirm in log for: ?Test 7(IV) a: Servicing for connection {connection number}]? 
+b.	Confirm in log for: ?Test 7(IV) b: Sequence number as reference  {sequence number}??
+
+
+2.1.1	Prerequisite for all TCP/IP tests.
+SSL-S-RIF must be running ICONIS Simulator must be running.
+In order that the Simulator connects to the SSL S-RIF the Dest IP must be correct, if testing on the host as this can be then this should be set to ?localhost?
+To start the simulator click the Start button, and indication it?s connected should be in appear in the SSL S-RIF output screen. You should see an output in the simulator output window.
+ 
+
+Test No.	TCP/IP interface MODULE TESTS
+Test Description
+1.1	Main Receiving Loop ; for all test complete steps in section 2.1.1 first.
+(i)	Verify data is received, length has been extracted and that all data can be retrieved without corruption
+a.	Check log for Test Points; Test 1(I): Received All Data from TCP Connection 0
+(ii)	Check that received data with unknown length is ignored. Fail case if length field has been corrupted what happens;
+a.	Within the Simulator set the output length to 4294967296 which is 2^32.
+b.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+(iii)	Check for data that is too big ?(to simulate a message containing more than 20 interlocking?s which will be rejected)
+a.	Within the Simulator set the output length to 30,000.
+b.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+(iv)	Verify that multiple connection can connect and data from both will not be mixed
+a.	Start up two simulators and follow steps in section 2.1.1 for both 
+b.	In one of the simulators change the ?SOURCE UnitID? to something different. i.e. ICONIS-1-Unit-c and ?Source Status? as STANDBY.
+c.	Within the SSL S-RIF window press the F4 key (connection stats) you should see that there are now 2 connections one is master and one is STANDBY.
+d.	In both running Simulators click on the receive tab, the SRIF response name should now correspond to the ?SOURCE UnitID?
+
+1.2	TCP Sending Functionality ; for all tests complete steps in section 2.1.1 first
+(i)	Verify length is added to the beginning of the stream and that get sent first.
+a.	Within the test log you should see test points: Test 2(I): Length added .
+(ii)	Verify the entirety of the message gets sent.
+a.	Within the test log make sure that you see: Test 2(II): Message Just Sent OK
+(iii)	Check that when there are multiple connections and that the information is sent to both.
+a.	To verify this test case please repeat test 1.1 (iv)d 1.3	XML Decode functionality, for all tests complete steps in section 2.1.1 first
+(i)	Check that received XML message is correct has been correctly decoded:
+a.	This check verifies the integrity of the message; check the log for message Test 3(I): information is correct
+(ii)	Check that the information about the connection has been updated and that if it?s a good decode that connection is moved to UP.
+a.	This happens with receipt of the first message, check the log for : Test 3(II): Setting link status to UP
+(iii)	Check that if it?s a bad decode the XML message is ignored and the connection is set to DOWN.
+a.	This is a fail case and can be triggered by checking the ?Alter contents being transmitted? on the simulator application. After doing this check the S-RIF log for ; Test 3(III): Bad decode setting the Status to DOWN
+
+1.4	Decode Signing Functionality. for all tests complete steps in section 2.1.1 first 
+For these tests, the tester can run a good decoding and then a bad decoding run with the output from the Simulator corrupted.  The tester can then check the log for the test points defined below. Checking doesn?t have to be done in sequence shown.
+(i)	Check that the function decodes the signature of the XML message correctly. Check that we have 128 bytes for the RSA-SHA1 information and 20 bytes for the SHA1 information.
+a.	Confirm in log for: ?Test 4(I) a: Digest length OK?
+(ii)	Check that the SHA1 matches with what is expected.
+a.	Confirm log file for : ?Test 4(II) a: TheCalculated DIGEST value is  Test 4(II) b: ?????
+(iii)	Check that the SHA1 does not match in a fail case and fall out with exception.
+a.	Result would be the link gets dropped, Confirm log for: ?Test 4(III) SAH1 not matching?.
+(iv)	Check that the RSA ?SHA1 signature value matches in good case.
+a.	Again setup a good run, then confirm in the log for: ?Test 4(IV) : The Signature has been decoded correctly?.
+(v)	Check that the RSA-SHA1 signature does not match in a corrupted case
+a.	Confirm in Log for ?Test 4(V): RSA Signature Digest Failed?.
+(vi)	Check that the certificate has been decoded correctly and marked good if it is correct.
+a.	Confirm log for : ?Test 4(VI): Certificate is Good?.
+(vii)	Verify that any of the above fail cases will result in link being broken.
+a.	In the bad run log check that the link has been dropped, this is also can be checked when running.
+1.5	Encode Signing functionality. For all tests complete steps in section 2.1.1 first. Good run only.
+(i)	Verify that the SHA1 digest is correct, manually take canonicalized XML data and verify it by hand.
+a.	Confirm in log for: ?Test 5(I): XML Canicalised OK?.
+(ii)	Check that the RSA-SHA signature is encoded correctly. Again check the canonicalization by hand.
+a.	Use of visual studio debugger is required in this step.
+(No fail case for Encoding)
+1.6	Decode of header and body element functionality. The tester can again run one good test and then run one bad test case
+(i)	Check that header can be decoded and that the body can be decoded correctly.
+a.	Confirm in log for: ?Test 6(I) a:header element decoded correctly?.
+(ii)	Check that the sequence number is one greater than the previous sequence number, if not then the decode will fail and drop the connection.
+a.	Change the sequence number in the simulator
+b.	Confirm in log for: ?Test 6(II): Incorrect Sequence Number?
+(iii)	Check that the body decodes correctly and the NVFB3 decoder get invoked afterward. 
+a.	Confirm in log for: ?Test 6(III): SEND NVFB3 Data to be decoded, sequence number?
+(iv)	Check if there is a bad decode the connection get terminated.
+a.	Use a log from a previous bad run and confirm in log for: ?Test 6(IV): Bad decode drop link?
+1.7	XML Encoder of Envelope. For all tests complete steps in section 2.1.1 first. Only a good run is needed.
+(i)	Verify all data is consistent and the pending data is ready to transmit.
+a.	Confirm in log for: ?Test 7(I): Gathered all data concerning this connection information?
+(ii)	Verify that the sequence number gets incremented.
+a.	Confirm in log for: ?Test 7(II): Sequence number incremented?
+(iii)	Verify that the xml signing gets added to the Signature Element within the element.
+(iv)	Verify that all connections are serviced with the same information.
+a.	Confirm in log for: ?Test 7(IV) a: Servicing for connection {connection number}]? 
+b.	Confirm in log for: ?Test 7(IV) b: Sequence number as reference  {sequence number}??
+(v)	Upon Receipt of the XML message the ICONIS simulator should decode and verify signature OK.
+a.	Only verified because link will continuously stay connected.
+1.8	Make sure the connection is broken as soon as any information has been corrupted. This can be done by modifying the information on the ICONIS Simulator. As soon as the SRIF see the information is incorrect the link will be dropped. 
+The ICONIS Simulator should then be able to reconnect with no issue.
+1.9	TCP/IP Performance Test. (that can be performed in a unit test environment).
+(i)	Avalanche overloading: This is to simulate 20 interlockings with control requests configured on the Iconis  and  SSL S-RIF,  to verify that the SSL S-RIF can handle this much data, receiving and transmitting the maximum amount of data. (There are 20 interlocking configuration files available for both the simulator and the SSL S-RIF).  A good result will be one where the S-RIF is stable and all the control requests are sent through to the MCS. This should be viewable in the log.
+(ii)	Change the transmit time period of the Iconis Simulator to 100ms (number of interlockings not important) and to see how the SSL S-RIF copes with an increased frequency. The ideal result should be that the SSL S-RIF continues and processing the received NVFB3 control messages with no noticeable performance degradation. (In order to see the connection time from the SSL S-RIF, when within the SSL S-RIF window press the F4 key, this will display the connection information, the first field on the second line is the average connection time, you can see that this would have gone up to  about 100ms). Also viewable in the log.
+
+
+
+1.1.1	Prerequisite for all TCP/IP tests.
+SSL-S-RIF must be running ICONIS Simulator must be running.
+In order that the Simulator connects to the SSL S-RIF the Dest IP must be correct, if testing on the host as this can be then this should be set to ?localhost?
+To start the simulator click the Start button, and indication it?s connected should be in appear in the SSL S-RIF output screen. You should see an output in the simulator output window.
+?
+Test No.	TCP/IP interface MODULE TESTS
+Test Description
+1.1	Main Receiving Loop ; for all test complete steps in section 2.1.1 first.
+(i)	Verify data is received, length has been extracted and that all data can be retrieved without corruption
+a.	Check log for Test Points; Test 1(I): Received All Data from TCP Connection 0
+(ii)	Check that received data with unknown length is ignored. Fail case if length field has been corrupted what happens;
+a.	Within the Simulator set the output length to 4294967296 which is 2^32.
+b.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+(iii)	Check for data that is too big ?(to simulate a message containing more than 20 interlocking?s which will be rejected)
+a.	Within the Simulator set the output length to 30,000.
+b.	Check log for test point: Test 1(II) Test1(III) Unknown or Error with Receive length
+(iv)	Verify that multiple connection can connect and data from both will not be mixed
+a.	Start up two simulators and follow steps in section 2.1.1 for both 
+b.	In one of the simulators change the ?SOURCE UnitID? to something different. i.e. ICONIS-1-Unit-c and ?Source Status? as STANDBY.
+c.	Within the SSL S-RIF window press the F4 key (connection stats) you should see that there are now 2 connections one is master and one is STANDBY.
+d.	In both running Simulators click on the receive tab, the SRIF response name should now correspond to the ?SOURCE UnitID?
+
+1.2	TCP Sending Functionality ; for all tests complete steps in section 2.1.1 first
+(i)	Verify length is added to the beginning of the stream and that get sent first.
+a.	Within the test log you should see test points: Test 2(I): Length added .
+(ii)	Verify the entirety of the message gets sent.
+a.	Within the test log make sure that you see: Test 2(II): Message Just Sent OK
+(iii)	Check that when there are multiple connections and that the information is sent to both.
+a.	To verify this test case please repeat test 1.1 (iv)d 1.3	XML Decode functionality, for all tests complete steps in section 2.1.1 first
+(i)	Check that received XML message is correct has been correctly decoded:
+a.	This check verifies the integrity of the message; check the log for message Test 3(I): information is correct
+(ii)	Check that the information about the connection has been updated and that if it?s a good decode that connection is moved to UP.
+a.	This happens with receipt of the first message, check the log for : Test 3(II): Setting link status to UP
+(iii)	Check that if it?s a bad decode the XML message is ignored and the connection is set to DOWN.
+a.	This is a fail case and can be triggered by checking the ?Alter contents being transmitted? on the simulator application. After doing this check the S-RIF log for ; Test 3(III): Bad decode setting the Status to DOWN
+
+1.4	Decode Signing Functionality. for all tests complete steps in section 2.1.1 first 
+For these tests, the tester can run a good decoding and then a bad decoding run with the output from the Simulator corrupted.  The tester can then check the log for the test points defined below. Checking doesn?t have to be done in sequence shown.
+(i)	Check that the function decodes the signature of the XML message correctly. Check that we have 128 bytes for the RSA-SHA1 information and 20 bytes for the SHA1 information.
+a.	Confirm in log for: ?Test 4(I) a: Digest length OK?
+(ii)	Check that the SHA1 matches with what is expected.
+a.	Confirm log file for : ?Test 4(II) a: TheCalculated DIGEST value is  Test 4(II) b: ?????
+(iii)	Check that the SHA1 does not match in a fail case and fall out with exception.
+a.	Result would be the link gets dropped, Confirm log for: ?Test 4(III) SAH1 not matching?.
+(iv)	Check that the RSA ?SHA1 signature value matches in good case.
+a.	Again setup a good run, then confirm in the log for: ?Test 4(IV) : The Signature has been decoded correctly?.
+(v)	Check that the RSA-SHA1 signature does not match in a corrupted case
+a.	Confirm in Log for ?Test 4(V): RSA Signature Digest Failed?.
+(vi)	Check that the certificate has been decoded correctly and marked good if it is correct.
+a.	Confirm log for : ?Test 4(VI): Certificate is Good?.
+(vii)	Verify that any of the above fail cases will result in link being broken.
+a.	In the bad run log check that the link has been dropped, this is also can be checked when running.
+1.5	Encode Signing functionality. For all tests complete steps in section 2.1.1 first. Good run only.
+(i)	Verify that the SHA1 digest is correct, manually take canonicalized XML data and verify it by hand.
+a.	Confirm in log for: ?Test 5(I): XML Canicalised OK?.
+(ii)	Check that the RSA-SHA signature is encoded correctly. Again check the canonicalization by hand.
+a.	Use of visual studio debugger is required in this step.
+(No fail case for Encoding)
+1.6	Decode of header and body element functionality. The tester can again run one good test and then run one bad test case
+(i)	Check that header can be decoded and that the body can be decoded correctly.
+a.	Confirm in log for: ?Test 6(I) a:header element decoded correctly?.
+(ii)	Check that the sequence number is one greater than the previous sequence number, if not then the decode will fail and drop the connection.
+a.	Change the sequence number in the simulator
+b.	Confirm in log for: ?Test 6(II): Incorrect Sequence Number?
+(iii)	Check that the body decodes correctly and the NVFB3 decoder get invoked afterward. 
+a.	Confirm in log for: ?Test 6(III): SEND NVFB3 Data to be decoded, sequence number?
+(iv)	Check if there is a bad decode the connection get terminated.
+a.	Use a log from a previous bad run and confirm in log for: ?Test 6(IV): Bad decode drop link?
+1.7	XML Encoder of Envelope. For all tests complete steps in section 2.1.1 first. Only a good run is needed.
+(i)	Verify all data is consistent and the pending data is ready to transmit.
+a.	Confirm in log for: ?Test 7(I): Gathered all data concerning this connection information?
+(ii)	Verify that the sequence number gets incremented.
+a.	Confirm in log for: ?Test 7(II): Sequence number incremented?
+(iii)	Verify that the xml signing gets added to the Signature Element within the element.
+(iv)	Verify that all connections are serviced with the same information.
+a.	Confirm in log for: ?Test 7(IV) a: Servicing for connection {connection number}]? 
+b.	Confirm in log for: ?Test 7(IV) b: Sequence number as reference  {sequence number}??
+(v)	Upon Receipt of the XML message the ICONIS simulator should decode and verify signature OK.
+a.	Only verified because link will continuously stay connected.
+1.8	Make sure the connection is broken as soon as any information has been corrupted. This can be done by modifying the information on the ICONIS Simulator. As soon as the SRIF see the information is incorrect the link will be dropped. 
+The ICONIS Simulator should then be able to reconnect with no issue.
+1.9	TCP/IP Performance Test. (that can be performed in a unit test environment).
+(i)	Avalanche overloading: This is to simulate 20 interlockings with control requests configured on the Iconis  and  SSL S-RIF,  to verify that the SSL S-RIF can handle this much data, receiving and transmitting the maximum amount of data. (There are 20 interlocking configuration files available for both the simulator and the SSL S-RIF).  A good result will be one where the S-RIF is stable and all the control requests are sent through to the MCS. This should be viewable in the log.
+(ii)	Change the transmit time period of the Iconis Simulator to 100ms (number of interlockings not important) and to see how the SSL S-RIF copes with an increased frequency. The ideal result should be that the SSL S-RIF continues and processing the received NVFB3 control messages with no noticeable performance degradation. (In order to see the connection time from the SSL S-RIF, when within the SSL S-RIF window press the F4 key, this will display the connection information, the first field on the second line is the average connection time, you can see that this would have gone up to  about 100ms). Also viewable in the log.
+
+
+
+C:\stuart\si_net_dan.txt
+

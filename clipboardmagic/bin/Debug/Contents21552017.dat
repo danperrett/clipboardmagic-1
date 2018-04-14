@@ -1,0 +1,5 @@
+nt r = rand.Next();
+                UserCredentialsStore store = UserCredentialsStore.GetInstance();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteClipboard.get
+

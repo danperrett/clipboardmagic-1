@@ -1,0 +1,5539 @@
+C:\xmlsec\libxmlsec-1.2.18.win32\libxmlsec-1.2.18.win32\bin\libxmlsec-openssl.dll
+
+C:\xmlsec\libxmlsec-1.2.18.win32\libxmlsec-1.2.18.win32\bin\libxmlsec-mscrypto.dll
+
+rsakey.pem 
+
+C:\xmlsec\xmlsec1-1.2.20\examples\rsakey.pem
+
+C:\xmlsec\xmlsec1-1.2.20\examples\rsacert.pem
+
+xml_file
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\xmlsecTest\Debug\rsacert.pem
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\xmlsecTest\Debug\rsakey.pem
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\xmlsecTest\Debug\sign3-doc.xml
+
+xmlSecDSigCtxSign(dsigCtx, signNode)
+
+xmlSecDSigCtxSign
+
+xmlSecDSigCtxSign returns -1
+
+xmlDocDumpMemory 
+
+xmlSecDSigCtxSign
+
+/**
+ * xmlSecDSigCtxSign:
+ * @dsigCtx:            the pointer to <dsig:Signature/> processing context.
+ * @tmpl:               the pointer to <dsig:Signature/> node with signature template.
+ *
+ * Signs the data as described in @tmpl node.
+ *
+ * Returns: 0 on success or a negative value if an error occurs.
+ */
+int xmlSecDSigCtxSign(xmlSecDSigCtxPtr dsigCtx, xmlNodePtr tmpl)
+{
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigCtx->result == NULL, -1);
+    xmlSecAssert2(tmpl != NULL, -1);
+    xmlSecAssert2(tmpl->doc != NULL, -1);
+
+    /* add ids for Signature nodes */
+    dsigCtx->operation  = xmlSecTransformOperationSign;
+    dsigCtx->status     = xmlSecDSigStatusUnknown;
+    xmlSecAddIDs(tmpl->doc, tmpl, xmlSecDSigIds);
+
+    /* read signature template */
+    ret = xmlSecDSigCtxProcessSignatureNode(dsigCtx, tmpl);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecDSigCtxSignatureProcessNode",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    xmlSecAssert2(dsigCtx->signMethod != NULL, -1);
+    xmlSecAssert2(dsigCtx->signValueNode != NULL, -1);
+
+    /* references processing might change the status */
+    if(dsigCtx->status != xmlSecDSigStatusUnknown) {
+        return(0);
+    }
+
+    /* check what we've got */
+    dsigCtx->result = dsigCtx->transformCtx.result;
+    if((dsigCtx->result == NULL) || (xmlSecBufferGetData(dsigCtx->result) == NULL)) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    NULL,
+                    XMLSEC_ERRORS_R_INVALID_RESULT,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* write signed data to xml */
+    xmlNodeSetContentLen(dsigCtx->signValueNode,
+                            xmlSecBufferGetData(dsigCtx->result),
+                            xmlSecBufferGetSize(dsigCtx->result));
+
+    /* set success status and we are done */
+    dsigCtx->status = xmlSecDSigStatusSucceeded;
+    return(0);
+
+xmlSecError
+
+void
+xmlSecError(const char* file, int line, const char* func,
+            const char* errorObject, const char* errorSubject,
+            int reason, const char* msg, ...) {
+
+xmlSecAssert2
+
+xmlSecDSigCtxProcessSignatureNode
+
+/**
+ * xmlSecDSigCtxProcessSignatureNode:
+ *
+ * The Signature  element (http://www.w3.org/TR/xmldsig-core/#sec-Signature)
+ *
+ * The Signature element is the root element of an XML Signature.
+ * Implementation MUST generate laxly schema valid [XML-schema] Signature
+ * elements as specified by the following schema:
+ * The way in which the SignedInfo element is presented to the
+ * canonicalization method is dependent on that method. The following
+ * applies to algorithms which process XML as nodes or characters:
+ *
+ *  - XML based canonicalization implementations MUST be provided with
+ *  a [XPath] node-set originally formed from the document containing
+ *  the SignedInfo and currently indicating the SignedInfo, its descendants,
+ *  and the attribute and namespace nodes of SignedInfo and its descendant
+ *  elements.
+ *
+ *  - Text based canonicalization algorithms (such as CRLF and charset
+ *  normalization) should be provided with the UTF-8 octets that represent
+ *  the well-formed SignedInfo element, from the first character to the
+ *  last character of the XML representation, inclusive. This includes
+ *  the entire text of the start and end tags of the SignedInfo element
+ *  as well as all descendant markup and character data (i.e., the text)
+ *  between those tags. Use of text based canonicalization of SignedInfo
+ *  is NOT RECOMMENDED.
+ *
+ *  =================================
+ *  we do not support any non XML based C14N
+ *
+ * Schema Definition:
+ *
+ *  <element name="Signature" type="ds:SignatureType"/>
+ *  <complexType name="SignatureType">
+ *  <sequence>
+ *     <element ref="ds:SignedInfo"/>
+ *     <element ref="ds:SignatureValue"/>
+ *     <element ref="ds:KeyInfo" minOccurs="0"/>
+ *     <element ref="ds:Object" minOccurs="0" maxOccurs="unbounded"/>
+ *     </sequence> <attribute name="Id" type="ID" use="optional"/>
+ *  </complexType>
+ *
+ * DTD:
+ *
+ *  <!ELEMENT Signature (SignedInfo, SignatureValue, KeyInfo?, Object*)  >
+ *  <!ATTLIST Signature
+ *      xmlns   CDATA   #FIXED 'http://www.w3.org/2000/09/xmldsig#'
+ *      Id      ID  #IMPLIED >
+ *
+ */
+static int xmlSecDSigCtxProcessSignatureNode(xmlSecDSigCtxPtr dsigCtx, xmlNodePtr node) {
+    xmlSecTransformDataType firstType;
+    xmlNodePtr signedInfoNode = NULL;
+    xmlNodePtr keyInfoNode = NULL;
+    xmlNodePtr cur;
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2((dsigCtx->operation == xmlSecTransformOperationSign) || (dsigCtx->operation == xmlSecTransformOperationVerify), -1);
+    xmlSecAssert2(dsigCtx->status == xmlSecDSigStatusUnknown, -1);
+    xmlSecAssert2(dsigCtx->signValueNode == NULL, -1);
+    xmlSecAssert2(dsigCtx->signMethod == NULL, -1);
+    xmlSecAssert2(dsigCtx->c14nMethod == NULL, -1);
+    xmlSecAssert2(node != NULL, -1);
+
+    if(!xmlSecCheckNodeName(node, xmlSecNodeSignature, xmlSecDSigNs)) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(node)),
+                    XMLSEC_ERRORS_R_INVALID_NODE,
+                    "expected=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeSignature));
+        return(-1);
+    }
+
+    /* read node data */
+    xmlSecAssert2(dsigCtx->id == NULL, -1);
+    dsigCtx->id = xmlGetProp(node, xmlSecAttrId);
+
+    /* first node is required SignedInfo */
+    cur = xmlSecGetNextElementNode(node->children);
+    if((cur == NULL) || (!xmlSecCheckNodeName(cur, xmlSecNodeSignedInfo, xmlSecDSigNs))) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_INVALID_NODE,
+                    "expected=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeSignedInfo));
+        return(-1);
+    }
+    signedInfoNode = cur;
+    cur = xmlSecGetNextElementNode(cur->next);
+
+    /* next node is required SignatureValue */
+    if((cur == NULL) || (!xmlSecCheckNodeName(cur, xmlSecNodeSignatureValue, xmlSecDSigNs))) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_INVALID_NODE,
+                    "expected=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeSignatureValue));
+        return(-1);
+    }
+    dsigCtx->signValueNode = cur;
+    cur = xmlSecGetNextElementNode(cur->next);
+
+    /* next node is optional KeyInfo */
+    if((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeKeyInfo, xmlSecDSigNs))) {
+        keyInfoNode = cur;
+        cur = xmlSecGetNextElementNode(cur->next);
+    } else {
+        keyInfoNode = NULL;
+    }
+
+    /* next nodes are optional Object nodes */
+    while((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeObject, xmlSecDSigNs))) {
+        /* read manifests from objects */
+        if((dsigCtx->flags & XMLSEC_DSIG_FLAGS_IGNORE_MANIFESTS) == 0) {
+            ret = xmlSecDSigCtxProcessObjectNode(dsigCtx, cur);
+            if(ret < 0) {
+                xmlSecError(XMLSEC_ERRORS_HERE,
+                            NULL,
+                            "xmlSecDSigCtxProcessObjectNode",
+                            XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                            XMLSEC_ERRORS_NO_MESSAGE);
+                return(-1);
+            }
+        }
+        cur = xmlSecGetNextElementNode(cur->next);
+    }
+
+    /* if there is something left than it's an error */
+    if(cur != NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_UNEXPECTED_NODE,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* now validated all the references and prepare transform */
+    ret = xmlSecDSigCtxProcessSignedInfoNode(dsigCtx, signedInfoNode);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecDSigCtxProcessSignedInfoNode",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    /* references processing might change the status */
+    if(dsigCtx->status != xmlSecDSigStatusUnknown) {
+        return(0);
+    }
+
+    /* as the result, we should have sign and c14n methods set */
+    xmlSecAssert2(dsigCtx->signMethod != NULL, -1);
+    xmlSecAssert2(dsigCtx->c14nMethod != NULL, -1);
+
+    ret = xmlSecDSigCtxProcessKeyInfoNode(dsigCtx, keyInfoNode);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecDSigCtxProcessKeyInfoNode",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    /* as the result, we should have a key */
+    xmlSecAssert2(dsigCtx->signKey != NULL, -1);
+
+    /* if we need to write result to xml node then we need base64 encode result */
+    if(dsigCtx->operation == xmlSecTransformOperationSign) {
+        xmlSecTransformPtr base64Encode;
+
+        /* we need to add base64 encode transform */
+        base64Encode = xmlSecTransformCtxCreateAndAppend(&(dsigCtx->transformCtx),
+                                                         xmlSecTransformBase64Id);
+        if(base64Encode == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxCreateAndAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+        base64Encode->operation = xmlSecTransformOperationEncode;
+    }
+
+    firstType = xmlSecTransformGetDataType(dsigCtx->transformCtx.first,
+                                           xmlSecTransformModePush,
+                                           &(dsigCtx->transformCtx));
+    if((firstType & xmlSecTransformDataTypeXml) != 0) {
+        xmlSecNodeSetPtr nodeset = NULL;
+
+        xmlSecAssert2(signedInfoNode != NULL, -1);
+        nodeset = xmlSecNodeSetGetChildren(signedInfoNode->doc, signedInfoNode, 1, 0);
+        if(nodeset == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecNodeSetGetChildren",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(signedInfoNode)));
+            return(-1);
+        }
+
+        /* calculate the signature */
+        ret = xmlSecTransformCtxXmlExecute(&(dsigCtx->transformCtx), nodeset);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxXmlExecute",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            xmlSecNodeSetDestroy(nodeset);
+            return(-1);
+        }
+        xmlSecNodeSetDestroy(nodeset);
+    } else {
+        /* TODO */
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "the binary c14n transforms are not supported yet",
+                    XMLSEC_ERRORS_R_NOT_IMPLEMENTED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    return(0);
+}
+
+
+xmlSecError
+
+void
+xmlSecError(const char* file, int line, const char* func,
+            const char* errorObject, const char* errorSubject,
+            int reason, const char* msg, ...) {
+
+XMLSEC_ERRORS_HERE
+
+#define XMLSEC_ERRORS_HERE                      __FILE__,__LINE__,__XMLSEC_FUNCTION__
+
+xmlSecDSigCtxProcessObjectNode
+
+/**
+ * xmlSecDSigCtxProcessObjectNode:
+ *
+ * The Object Element (http://www.w3.org/TR/xmldsig-core/#sec-Object)
+ *
+ * Object is an optional element that may occur one or more times. When
+ * present, this element may contain any data. The Object element may include
+ * optional MIME type, ID, and encoding attributes.
+ *
+ * Schema Definition:
+ *
+ * <element name="Object" type="ds:ObjectType"/>
+ * <complexType name="ObjectType" mixed="true">
+ *   <sequence minOccurs="0" maxOccurs="unbounded">
+ *     <any namespace="##any" processContents="lax"/>
+ *   </sequence>
+ *   <attribute name="Id" type="ID" use="optional"/>
+ *   <attribute name="MimeType" type="string" use="optional"/>
+ *   <attribute name="Encoding" type="anyURI" use="optional"/>
+ * </complexType>
+ *
+ * DTD:
+ *
+ * <!ELEMENT Object (#PCDATA|Signature|SignatureProperties|Manifest %Object.ANY;)* >
+ * <!ATTLIST Object  Id  ID  #IMPLIED
+ *                   MimeType    CDATA   #IMPLIED
+ *                   Encoding    CDATA   #IMPLIED >
+ */
+static int
+xmlSecDSigCtxProcessObjectNode(xmlSecDSigCtxPtr dsigCtx, xmlNodePtr node) {
+    xmlNodePtr cur;
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigCtx->status == xmlSecDSigStatusUnknown, -1);
+    xmlSecAssert2(node != NULL, -1);
+
+    /* we care about Manifest nodes only; ignore everything else */
+    cur = xmlSecGetNextElementNode(node->children);
+    while(cur != NULL) {
+        if(xmlSecCheckNodeName(cur, xmlSecNodeManifest, xmlSecDSigNs)) {
+            ret = xmlSecDSigCtxProcessManifestNode(dsigCtx, cur);
+            if(ret < 0){
+                xmlSecError(XMLSEC_ERRORS_HERE,
+                            NULL,
+                            "xmlSecDSigCtxProcessManifestNode",
+                            XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                            XMLSEC_ERRORS_NO_MESSAGE);
+                return(-1);
+            }
+        }
+        cur = xmlSecGetNextElementNode(cur->next);
+    }
+    return(0);
+}
+
+xmlSecDSigCtxProcessSignedInfoNode
+
+/**
+ * xmlSecDSigCtxProcessSignedInfoNode:
+ *
+ * The SignedInfo Element (http://www.w3.org/TR/xmldsig-core/#sec-SignedInfo)
+ *
+ * The structure of SignedInfo includes the canonicalization algorithm,
+ * a result algorithm, and one or more references. The SignedInfo element
+ * may contain an optional ID attribute that will allow it to be referenced by
+ * other signatures and objects.
+ *
+ * SignedInfo does not include explicit result or digest properties (such as
+ * calculation time, cryptographic device serial number, etc.). If an
+ * application needs to associate properties with the result or digest,
+ * it may include such information in a SignatureProperties element within
+ * an Object element.
+ *
+ * Schema Definition:
+ *
+ *  <element name="SignedInfo" type="ds:SignedInfoType"/>
+ *  <complexType name="SignedInfoType">
+ *    <sequence>
+ *      <element ref="ds:CanonicalizationMethod"/>
+ *      <element ref="ds:SignatureMethod"/>
+ *      <element ref="ds:Reference" maxOccurs="unbounded"/>
+ *    </sequence>
+ *    <attribute name="Id" type="ID" use="optional"/>
+ *  </complexType>
+ *
+ * DTD:
+ *
+ *  <!ELEMENT SignedInfo (CanonicalizationMethod, SignatureMethod,  Reference+) >
+ *  <!ATTLIST SignedInfo  Id   ID      #IMPLIED>
+ *
+ */
+static int
+xmlSecDSigCtxProcessSignedInfoNode(xmlSecDSigCtxPtr dsigCtx, xmlNodePtr node) {
+    xmlSecDSigReferenceCtxPtr dsigRefCtx;
+    xmlNodePtr cur;
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigCtx->status == xmlSecDSigStatusUnknown, -1);
+    xmlSecAssert2(dsigCtx->signMethod == NULL, -1);
+    xmlSecAssert2(dsigCtx->c14nMethod == NULL, -1);
+    xmlSecAssert2((dsigCtx->operation == xmlSecTransformOperationSign) || (dsigCtx->operation == xmlSecTransformOperationVerify), -1);
+    xmlSecAssert2(xmlSecPtrListGetSize(&(dsigCtx->signedInfoReferences)) == 0, -1);
+    xmlSecAssert2(node != NULL, -1);
+
+    /* first node is required CanonicalizationMethod. */
+    cur = xmlSecGetNextElementNode(node->children);
+    if((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeCanonicalizationMethod, xmlSecDSigNs))) {
+        dsigCtx->c14nMethod = xmlSecTransformCtxNodeRead(&(dsigCtx->transformCtx),
+                                        cur, xmlSecTransformUsageC14NMethod);
+        if(dsigCtx->c14nMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxNodeRead",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(cur)));
+            return(-1);
+        }
+    } else if(dsigCtx->defC14NMethodId != xmlSecTransformIdUnknown) {
+        /* the dsig spec does require CanonicalizationMethod node
+         * to be present but in some case it application might decide to
+         * minimize traffic */
+        dsigCtx->c14nMethod = xmlSecTransformCtxCreateAndAppend(&(dsigCtx->transformCtx),
+                                                              dsigCtx->defC14NMethodId);
+        if(dsigCtx->c14nMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    } else {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "CanonicalizationMethod",
+                    XMLSEC_ERRORS_R_INVALID_NODE,
+                    "expected=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeCanonicalizationMethod));
+        return(-1);
+    }
+
+    /* insert membuf if requested */
+    if((dsigCtx->flags & XMLSEC_DSIG_FLAGS_STORE_SIGNATURE) != 0) {
+        xmlSecAssert2(dsigCtx->preSignMemBufMethod == NULL, -1);
+        dsigCtx->preSignMemBufMethod = xmlSecTransformCtxCreateAndAppend(&(dsigCtx->transformCtx),
+                                                xmlSecTransformMemBufId);
+        if(dsigCtx->preSignMemBufMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxCreateAndAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "transform=%s",
+                        xmlSecErrorsSafeString(xmlSecTransformKlassGetName(xmlSecTransformMemBufId)));
+        }
+    }
+
+    /* next node is required SignatureMethod. */
+    cur = xmlSecGetNextElementNode( ((cur != NULL) ? cur->next : node->children) );
+    if((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeSignatureMethod, xmlSecDSigNs))) {
+        dsigCtx->signMethod = xmlSecTransformCtxNodeRead(&(dsigCtx->transformCtx),
+                                        cur, xmlSecTransformUsageSignatureMethod);
+        if(dsigCtx->signMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxNodeRead",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(cur)));
+            return(-1);
+        }
+    } else if(dsigCtx->defSignMethodId != xmlSecTransformIdUnknown) {
+        /* the dsig spec does require SignatureMethod node
+         * to be present but in some case it application might decide to
+         * minimize traffic */
+        dsigCtx->signMethod = xmlSecTransformCtxCreateAndAppend(&(dsigCtx->transformCtx),
+                                                              dsigCtx->defSignMethodId);
+        if(dsigCtx->signMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    } else {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_INVALID_NODE,
+                    "expected=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeSignatureMethod));
+        return(-1);
+    }
+    dsigCtx->signMethod->operation = dsigCtx->operation;
+
+    /* calculate references */
+    cur = xmlSecGetNextElementNode(cur->next);
+    while((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeReference, xmlSecDSigNs))) {
+        /* create reference */
+        dsigRefCtx = xmlSecDSigReferenceCtxCreate(dsigCtx, xmlSecDSigReferenceOriginSignedInfo);
+        if(dsigRefCtx == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecDSigReferenceCtxCreate",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+
+        /* add to the list */
+        ret = xmlSecPtrListAdd(&(dsigCtx->signedInfoReferences), dsigRefCtx);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecPtrListAdd",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            xmlSecDSigReferenceCtxDestroy(dsigRefCtx);
+            return(-1);
+        }
+
+        /* process */
+        ret = xmlSecDSigReferenceCtxProcessNode(dsigRefCtx, cur);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecDSigReferenceCtxProcessNode",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(cur)));
+            return(-1);
+        }
+
+        /* bail out if next Reference processing failed */
+        if(dsigRefCtx->status != xmlSecDSigStatusSucceeded) {
+            dsigCtx->status = xmlSecDSigStatusInvalid;
+            return(0);
+        }
+        cur = xmlSecGetNextElementNode(cur->next);
+    }
+
+    /* check that we have at least one Reference */
+    if(xmlSecPtrListGetSize(&(dsigCtx->signedInfoReferences)) == 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    NULL,
+                    XMLSEC_ERRORS_R_DSIG_NO_REFERENCES,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* if there is something left than it's an error */
+    if(cur != NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_UNEXPECTED_NODE,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    return(0);
+}
+
+
+xmlSecTransformMemBufId
+
+_xmlSecTransformKlass
+
+xmlSecTransformId
+
+xmlSecTransformMemBufId
+
+xmlSecDSigCtxProcessManifestNode
+
+
+/**
+ * xmlSecDSigCtxProcessManifestNode:
+ *
+ * The Manifest  Element (http://www.w3.org/TR/xmldsig-core/#sec-Manifest)
+ *
+ * The Manifest element provides a list of References. The difference from
+ * the list in SignedInfo is that it is application defined which, if any, of
+ * the digests are actually checked against the objects referenced and what to
+ * do if the object is inaccessible or the digest compare fails. If a Manifest
+ * is pointed to from SignedInfo, the digest over the Manifest itself will be
+ * checked by the core result validation behavior. The digests within such
+ * a Manifest are checked at the application's discretion. If a Manifest is
+ * referenced from another Manifest, even the overall digest of this two level
+ * deep Manifest might not be checked.
+ *
+ * Schema Definition:
+ *
+ * <element name="Manifest" type="ds:ManifestType"/>
+ * <complexType name="ManifestType">
+ *   <sequence>
+ *     <element ref="ds:Reference" maxOccurs="unbounded"/>
+ *   </sequence>
+ *   <attribute name="Id" type="ID" use="optional"/>
+ *  </complexType>
+ *
+ * DTD:
+ *
+ * <!ELEMENT Manifest (Reference+)  >
+ * <!ATTLIST Manifest Id ID  #IMPLIED >
+ */
+static int
+xmlSecDSigCtxProcessManifestNode(xmlSecDSigCtxPtr dsigCtx, xmlNodePtr node) {
+    xmlSecDSigReferenceCtxPtr dsigRefCtx;
+    xmlNodePtr cur;
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigCtx->status == xmlSecDSigStatusUnknown, -1);
+    xmlSecAssert2(node != NULL, -1);
+
+    /* calculate references */
+    cur = xmlSecGetNextElementNode(node->children);
+    while((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeReference, xmlSecDSigNs))) {
+        /* create reference */
+        dsigRefCtx = xmlSecDSigReferenceCtxCreate(dsigCtx, xmlSecDSigReferenceOriginManifest);
+        if(dsigRefCtx == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecDSigReferenceCtxCreate",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+
+        /* add to the list */
+        ret = xmlSecPtrListAdd(&(dsigCtx->manifestReferences), dsigRefCtx);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecPtrListAdd",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            xmlSecDSigReferenceCtxDestroy(dsigRefCtx);
+            return(-1);
+        }
+
+        /* process */
+        ret = xmlSecDSigReferenceCtxProcessNode(dsigRefCtx, cur);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecDSigReferenceCtxProcessNode",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(cur)));
+            return(-1);
+        }
+
+        /* we don;t care if Reference processing failed because
+         * it's Manifest node */
+        cur = xmlSecGetNextElementNode(cur->next);
+    }
+
+    /* we should have nothing else here */
+    if(cur != NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_UNEXPECTED_NODE,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    return(0);
+}
+
+
+xmlSecDSigCtxProcessKeyInfoNode
+
+static int
+xmlSecDSigCtxProcessKeyInfoNode(xmlSecDSigCtxPtr dsigCtx, xmlNodePtr node) {
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigCtx->signMethod != NULL, -1);
+
+    /* set key requirements */
+    ret = xmlSecTransformSetKeyReq(dsigCtx->signMethod, &(dsigCtx->keyInfoReadCtx.keyReq));
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformSetKeyReq",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(dsigCtx->signMethod)));
+        return(-1);
+    }
+
+    /* ignore <dsig:KeyInfo /> if there is the key is already set */
+    /* todo: throw an error if key is set and node != NULL? */
+    if((dsigCtx->signKey == NULL) && (dsigCtx->keyInfoReadCtx.keysMngr != NULL)
+                        && (dsigCtx->keyInfoReadCtx.keysMngr->getKey != NULL)) {
+        dsigCtx->signKey = (dsigCtx->keyInfoReadCtx.keysMngr->getKey)(node, &(dsigCtx->keyInfoReadCtx));
+    }
+
+    /* check that we have exactly what we want */
+    if((dsigCtx->signKey == NULL) || (!xmlSecKeyMatch(dsigCtx->signKey, NULL, &(dsigCtx->keyInfoReadCtx.keyReq)))) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    NULL,
+                    XMLSEC_ERRORS_R_KEY_NOT_FOUND,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* set the key to the transform */
+    ret = xmlSecTransformSetKey(dsigCtx->signMethod, dsigCtx->signKey);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformSetKey",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(dsigCtx->signMethod)));
+        return(-1);
+    }
+
+    /* if we are signing document, update <dsig:KeyInfo/> node */
+    if((node != NULL) && (dsigCtx->operation == xmlSecTransformOperationSign)) {
+        ret = xmlSecKeyInfoNodeWrite(node, dsigCtx->signKey, &(dsigCtx->keyInfoWriteCtx));
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecKeyInfoNodeWrite",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    }
+
+    return(0);
+}
+
+xmlSecDSigIds
+
+/* The ID attribute in XMLDSig is 'Id' */
+static const xmlChar*           xmlSecDSigIds[] = { xmlSecAttrId, NULL };
+
+signMethod
+
+xmlSecDSigCtxPtr
+
+xmlSecDSigCtxCreate
+
+/**
+ * xmlSecDSigCtxCreate:
+ * @keysMngr:           the pointer to keys manager.
+ *
+ * Creates <dsig:Signature/> element processing context.
+ * The caller is responsible for destroying returned object by calling
+ * #xmlSecDSigCtxDestroy function.
+ *
+ * Returns: pointer to newly allocated context object or NULL if an error
+ * occurs.
+ */
+xmlSecDSigCtxPtr
+xmlSecDSigCtxCreate(xmlSecKeysMngrPtr keysMngr) {
+    xmlSecDSigCtxPtr dsigCtx;
+    int ret;
+
+    dsigCtx = (xmlSecDSigCtxPtr) xmlMalloc(sizeof(xmlSecDSigCtx));
+    if(dsigCtx == NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    NULL,
+                    XMLSEC_ERRORS_R_MALLOC_FAILED,
+                    "sizeof(xmlSecDSigCtx)=%d",
+                    sizeof(xmlSecDSigCtx));
+        return(NULL);
+    }
+
+    ret = xmlSecDSigCtxInitialize(dsigCtx, keysMngr);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecDSigCtxInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        xmlSecDSigCtxDestroy(dsigCtx);
+        return(NULL);
+    }
+    return(dsigCtx);
+}
+
+xmlSecDSigCtxCreateD
+
+xmlSecDSigCtxInitialize
+
+/**
+ * xmlSecDSigCtxInitialize:
+ * @dsigCtx:            the pointer to <dsig:Signature/> processing context.
+ * @keysMngr:           the pointer to keys manager.
+ *
+ * Initializes <dsig:Signature/> element processing context.
+ * The caller is responsible for cleaning up returned object by calling
+ * #xmlSecDSigCtxFinalize function.
+ *
+ * Returns: 0 on success or a negative value if an error occurs.
+ */
+int
+xmlSecDSigCtxInitialize(xmlSecDSigCtxPtr dsigCtx, xmlSecKeysMngrPtr keysMngr) {
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+
+    memset(dsigCtx, 0, sizeof(xmlSecDSigCtx));
+
+    /* initialize key info */
+    ret = xmlSecKeyInfoCtxInitialize(&(dsigCtx->keyInfoReadCtx), keysMngr);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecKeyInfoCtxInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    dsigCtx->keyInfoReadCtx.mode = xmlSecKeyInfoModeRead;
+
+    ret = xmlSecKeyInfoCtxInitialize(&(dsigCtx->keyInfoWriteCtx), keysMngr);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecKeyInfoCtxInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    dsigCtx->keyInfoWriteCtx.mode = xmlSecKeyInfoModeWrite;
+    /* it's not wise to write private key :) */
+    dsigCtx->keyInfoWriteCtx.keyReq.keyType = xmlSecKeyDataTypePublic;
+
+    /* initializes transforms dsigCtx */
+    ret = xmlSecTransformCtxInitialize(&(dsigCtx->transformCtx));
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* references lists from SignedInfo and Manifest elements */
+    xmlSecPtrListInitialize(&(dsigCtx->signedInfoReferences),
+                            xmlSecDSigReferenceCtxListId);
+    xmlSecPtrListInitialize(&(dsigCtx->manifestReferences),
+                            xmlSecDSigReferenceCtxListId);
+
+    dsigCtx->enabledReferenceUris = xmlSecTransformUriTypeAny;
+    return(0);
+}
+
+
+xmlSecDSigCtxInitialize
+
+xmlGetProp
+
+xmlSecDSigReferenceCtxCreate
+
+/**************************************************************************
+ *
+ * xmlSecDSigReferenceCtx
+ *
+ *************************************************************************/
+/**
+ * xmlSecDSigReferenceCtxCreate:
+ * @dsigCtx:            the pointer to parent <dsig:Signature/> node processing context.
+ * @origin:             the reference origin (<dsig:SignedInfo/> or <dsig:Manifest/> node).
+ *
+ * Creates new <dsig:Reference/> element processing context. Caller is responsible
+ * for destroying the returned context by calling #xmlSecDSigReferenceCtxDestroy
+ * function.
+ *
+ * Returns: pointer to newly created context or NULL if an error occurs.
+ */
+xmlSecDSigReferenceCtxPtr
+xmlSecDSigReferenceCtxCreate(xmlSecDSigCtxPtr dsigCtx, xmlSecDSigReferenceOrigin origin) {
+    xmlSecDSigReferenceCtxPtr dsigRefCtx;
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, NULL);
+
+    dsigRefCtx = (xmlSecDSigReferenceCtxPtr) xmlMalloc(sizeof(xmlSecDSigReferenceCtx));
+    if(dsigRefCtx == NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    NULL,
+                    XMLSEC_ERRORS_R_MALLOC_FAILED,
+                    "sizeof(xmlSecDSigReferenceCtx)=%d",
+                    sizeof(xmlSecDSigReferenceCtx));
+        return(NULL);
+    }
+
+    ret = xmlSecDSigReferenceCtxInitialize(dsigRefCtx, dsigCtx, origin);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecDSigReferenceCtxInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        xmlSecDSigReferenceCtxDestroy(dsigRefCtx);
+        return(NULL);
+    }
+    return(dsigRefCtx);
+}
+
+
+xmlSecDSigReferenceCtxCreate
+
+xmlSecDSigReferenceCtxInitialize
+
+/**
+ * xmlSecDSigReferenceCtxInitialize:
+ * @dsigRefCtx:         the pointer to <dsig:Reference/> element processing context.
+ * @dsigCtx:            the pointer to parent <dsig:Signature/> node processing context.
+ * @origin:             the reference origin (<dsig:SignedInfo/> or <dsig:Manifest/> node).
+ *
+ * Initializes new <dsig:Reference/> element processing context. Caller is responsible
+ * for cleaning up the returned context by calling #xmlSecDSigReferenceCtxFinalize
+ * function.
+ *
+ * Returns: 0 on succes or aa negative value otherwise.
+ */
+int
+xmlSecDSigReferenceCtxInitialize(xmlSecDSigReferenceCtxPtr dsigRefCtx, xmlSecDSigCtxPtr dsigCtx,
+                                xmlSecDSigReferenceOrigin origin) {
+    int ret;
+
+    xmlSecAssert2(dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigRefCtx != NULL, -1);
+
+    memset(dsigRefCtx, 0, sizeof(xmlSecDSigReferenceCtx));
+
+    dsigRefCtx->dsigCtx = dsigCtx;
+    dsigRefCtx->origin = origin;
+
+    /* initializes transforms dsigRefCtx */
+    ret = xmlSecTransformCtxInitialize(&(dsigRefCtx->transformCtx));
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* copy enabled transforms */
+    if(dsigCtx->enabledReferenceTransforms != NULL) {
+        ret = xmlSecPtrListCopy(&(dsigRefCtx->transformCtx.enabledTransforms),
+                                     dsigCtx->enabledReferenceTransforms);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecPtrListCopy",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    }
+    dsigRefCtx->transformCtx.preExecCallback = dsigCtx->referencePreExecuteCallback;
+    dsigRefCtx->transformCtx.enabledUris = dsigCtx->enabledReferenceUris;
+
+    if((dsigCtx->flags & XMLSEC_DSIG_FLAGS_USE_VISA3D_HACK) != 0) {
+        dsigRefCtx->transformCtx.flags |= XMLSEC_TRANSFORMCTX_FLAGS_USE_VISA3D_HACK;
+    }
+    return(0);
+}
+
+
+xmlSecDSigReferenceCtxInitialize
+
+xmlSecDSigReferenceCtxProcessNode
+
+/**
+ * xmlSecDSigReferenceCtxProcessNode:
+ * @dsigRefCtx:         the pointer to <dsig:Reference/> element processing context.
+ * @node:               the pointer to <dsig:Reference/> node.
+
+ * The Reference Element (http://www.w3.org/TR/xmldsig-core/#sec-Reference)
+ *
+ * Reference is an element that may occur one or more times. It specifies
+ * a digest algorithm and digest value, and optionally an identifier of the
+ * object being signed, the type of the object, and/or a list of transforms
+ * to be applied prior to digesting. The identification (URI) and transforms
+ * describe how the digested content (i.e., the input to the digest method)
+ * was created. The Type attribute facilitates the processing of referenced
+ * data. For example, while this specification makes no requirements over
+ * external data, an application may wish to signal that the referent is a
+ * Manifest. An optional ID attribute permits a Reference to be referenced
+ * from elsewhere.
+ *
+ * Returns: 0 on succes or aa negative value otherwise.
+ */
+int
+xmlSecDSigReferenceCtxProcessNode(xmlSecDSigReferenceCtxPtr dsigRefCtx, xmlNodePtr node) {
+    xmlSecTransformCtxPtr transformCtx;
+    xmlNodePtr digestValueNode;
+    xmlNodePtr cur;
+    int ret;
+
+    xmlSecAssert2(dsigRefCtx != NULL, -1);
+    xmlSecAssert2(dsigRefCtx->dsigCtx != NULL, -1);
+    xmlSecAssert2(dsigRefCtx->digestMethod == NULL, -1);
+    xmlSecAssert2(dsigRefCtx->digestMethod == NULL, -1);
+    xmlSecAssert2(dsigRefCtx->preDigestMemBufMethod == NULL, -1);
+    xmlSecAssert2(node != NULL, -1);
+    xmlSecAssert2(node->doc != NULL, -1);
+
+    transformCtx = &(dsigRefCtx->transformCtx);
+
+    /* read attributes first */
+    dsigRefCtx->uri = xmlGetProp(node, xmlSecAttrURI);
+    dsigRefCtx->id  = xmlGetProp(node, xmlSecAttrId);
+    dsigRefCtx->type= xmlGetProp(node, xmlSecAttrType);
+
+    /* set start URI (and check that it is enabled!) */
+    ret = xmlSecTransformCtxSetUri(transformCtx, dsigRefCtx->uri, node);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxSetUri",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "uri=%s",
+                    xmlSecErrorsSafeString(dsigRefCtx->uri));
+        return(-1);
+    }
+
+    /* first is optional Transforms node */
+    cur  = xmlSecGetNextElementNode(node->children);
+    if((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeTransforms, xmlSecDSigNs))) {
+        ret = xmlSecTransformCtxNodesListRead(transformCtx,
+                                        cur, xmlSecTransformUsageDSigTransform);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxNodesListRead",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(cur)));
+            return(-1);
+        }
+
+        cur = xmlSecGetNextElementNode(cur->next);
+    }
+
+    /* insert membuf if requested */
+    if(((dsigRefCtx->origin == xmlSecDSigReferenceOriginSignedInfo) &&
+        ((dsigRefCtx->dsigCtx->flags & XMLSEC_DSIG_FLAGS_STORE_SIGNEDINFO_REFERENCES) != 0)) ||
+       ((dsigRefCtx->origin == xmlSecDSigReferenceOriginManifest) &&
+        ((dsigRefCtx->dsigCtx->flags & XMLSEC_DSIG_FLAGS_STORE_MANIFEST_REFERENCES) != 0))) {
+
+        xmlSecAssert2(dsigRefCtx->preDigestMemBufMethod == NULL, -1);
+        dsigRefCtx->preDigestMemBufMethod = xmlSecTransformCtxCreateAndAppend(
+                                                transformCtx,
+                                                xmlSecTransformMemBufId);
+        if(dsigRefCtx->preDigestMemBufMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxCreateAndAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "transform=%s",
+                        xmlSecErrorsSafeString(xmlSecTransformKlassGetName(xmlSecTransformMemBufId)));
+            return(-1);
+        }
+    }
+
+    /* next node is required DigestMethod. */
+    if((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeDigestMethod, xmlSecDSigNs))) {
+        dsigRefCtx->digestMethod = xmlSecTransformCtxNodeRead(&(dsigRefCtx->transformCtx),
+                                        cur, xmlSecTransformUsageDigestMethod);
+        if(dsigRefCtx->digestMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxNodeRead",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "node=%s",
+                        xmlSecErrorsSafeString(xmlSecNodeGetName(cur)));
+            return(-1);
+        }
+
+        cur = xmlSecGetNextElementNode(cur->next);
+    } else if(dsigRefCtx->dsigCtx->defSignMethodId != xmlSecTransformIdUnknown) {
+        /* the dsig spec does require DigestMethod node
+         * to be present but in some case it application might decide to
+         * minimize traffic */
+        dsigRefCtx->digestMethod = xmlSecTransformCtxCreateAndAppend(&(dsigRefCtx->transformCtx),
+                                                              dsigRefCtx->dsigCtx->defSignMethodId);
+        if(dsigRefCtx->digestMethod == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    } else {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_INVALID_NODE,
+                    "expected=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeDigestMethod));
+        return(-1);
+    }
+    dsigRefCtx->digestMethod->operation = dsigRefCtx->dsigCtx->operation;
+
+    /* last node is required DigestValue */
+    if((cur != NULL) && (xmlSecCheckNodeName(cur, xmlSecNodeDigestValue, xmlSecDSigNs))) {
+        digestValueNode = cur;
+        cur = xmlSecGetNextElementNode(cur->next);
+    } else {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "node=%s",
+                    xmlSecErrorsSafeString(xmlSecNodeDigestValue));
+        return(-1);
+    }
+
+    /* if we have something else then it's an error */
+    if(cur != NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    xmlSecErrorsSafeString(xmlSecNodeGetName(cur)),
+                    XMLSEC_ERRORS_R_UNEXPECTED_NODE,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+
+    /* if we need to write result to xml node then we need base64 encode result */
+    if(dsigRefCtx->dsigCtx->operation == xmlSecTransformOperationSign) {
+        xmlSecTransformPtr base64Encode;
+
+        /* we need to add base64 encode transform */
+        base64Encode = xmlSecTransformCtxCreateAndAppend(transformCtx, xmlSecTransformBase64Id);
+        if(base64Encode == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxCreateAndAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+        base64Encode->operation = xmlSecTransformOperationEncode;
+    }
+
+    /* finally get transforms results */
+    ret = xmlSecTransformCtxExecute(transformCtx, node->doc);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxExecute",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    dsigRefCtx->result = transformCtx->result;
+
+    if(dsigRefCtx->dsigCtx->operation == xmlSecTransformOperationSign) {
+        if((dsigRefCtx->result == NULL) || (xmlSecBufferGetData(dsigRefCtx->result) == NULL)) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxExecute",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+
+        /* write signed data to xml */
+        xmlNodeSetContentLen(digestValueNode,
+                            xmlSecBufferGetData(dsigRefCtx->result),
+                            xmlSecBufferGetSize(dsigRefCtx->result));
+
+        /* set success status and we are done */
+        dsigRefCtx->status = xmlSecDSigStatusSucceeded;
+    } else {
+        /* verify SignatureValue node content */
+        ret = xmlSecTransformVerifyNodeContent(dsigRefCtx->digestMethod,
+                            digestValueNode, transformCtx);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformVerifyNodeContent",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+
+        /* set status and we are done */
+        if(dsigRefCtx->digestMethod->status == xmlSecTransformStatusOk) {
+            dsigRefCtx->status = xmlSecDSigStatusSucceeded;
+        } else {
+            dsigRefCtx->status = xmlSecDSigStatusInvalid;
+        }
+    }
+
+    return(0);
+}
+
+
+xmlSecDSigReferenceCtxProcessNode
+
+xmlSecTransformCtxExecute
+
+/**
+ * xmlSecTransformCtxExecute:
+ * @ctx:                the pointer to transforms chain processing context.
+ * @doc:                the pointer to input document.
+ *
+ * Executes transforms chain in @ctx.
+ *
+ * Returns: 0 on success or a negative value otherwise.
+ */
+int
+xmlSecTransformCtxExecute(xmlSecTransformCtxPtr ctx, xmlDocPtr doc) {
+    int ret;
+
+    xmlSecAssert2(ctx != NULL, -1);
+    xmlSecAssert2(ctx->result == NULL, -1);
+    xmlSecAssert2(ctx->status == xmlSecTransformStatusNone, -1);
+    xmlSecAssert2(doc != NULL, -1);
+
+    if((ctx->uri == NULL) || (xmlStrlen(ctx->uri) == 0)) {
+        xmlSecNodeSetPtr nodes;
+
+        if((ctx->xptrExpr != NULL) && (xmlStrlen(ctx->xptrExpr) > 0)){
+            /* our xpointer transform takes care of providing correct nodes set */
+            nodes = xmlSecNodeSetCreate(doc, NULL, xmlSecNodeSetNormal);
+            if(nodes == NULL) {
+                xmlSecError(XMLSEC_ERRORS_HERE,
+                            NULL,
+                            "xmlSecNodeSetCreate",
+                            XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                            XMLSEC_ERRORS_NO_MESSAGE);
+                return(-1);
+            }
+
+        } else {
+            /* we do not want to have comments for empty URI */
+            nodes = xmlSecNodeSetGetChildren(doc, NULL, 0, 0);
+            if(nodes == NULL) {
+                xmlSecError(XMLSEC_ERRORS_HERE,
+                            NULL,
+                            "xmlSecNodeSetGetChildren",
+                            XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                            XMLSEC_ERRORS_NO_MESSAGE);
+                return(-1);
+            }
+        }
+        ret = xmlSecTransformCtxXmlExecute(ctx, nodes);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxXmlExecute",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            xmlSecNodeSetDestroy(nodes);
+            return(-1);
+        }
+        /* TODO: don't destroy nodes here */
+        xmlSecNodeSetDestroy(nodes);
+    } else {
+        ret = xmlSecTransformCtxUriExecute(ctx, ctx->uri);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxUriExecute",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    }
+
+    return(0);
+}
+
+
+xmlSecTransformCtxExecute
+
+xmlSecTransformCtxXmlExecute
+
+/**
+ * xmlSecTransformCtxXmlExecute:
+ * @ctx:                the pointer to transforms chain processing context.
+ * @nodes:              the input node set.
+ *
+ * Process @nodes using transforms in the transforms chain in @ctx.
+ *
+ * Returns: 0 on success or a negative value otherwise.
+ */
+int
+xmlSecTransformCtxXmlExecute(xmlSecTransformCtxPtr ctx, xmlSecNodeSetPtr nodes) {
+    int ret;
+
+    xmlSecAssert2(ctx != NULL, -1);
+    xmlSecAssert2(ctx->result == NULL, -1);
+    xmlSecAssert2(ctx->status == xmlSecTransformStatusNone, -1);
+    xmlSecAssert2(nodes != NULL, -1);
+
+    xmlSecAssert2((ctx->uri == NULL) || (xmlStrlen(ctx->uri) == 0), -1);
+
+    ret = xmlSecTransformCtxPrepare(ctx, xmlSecTransformDataTypeXml);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxPrepare",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "type=xml");
+        return(-1);
+    }
+
+    /* it's better to do push than pop because all XML transform
+     * just don't care and c14n likes push more than pop */
+    ret = xmlSecTransformPushXml(ctx->first, nodes, ctx);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformPushXml",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(ctx->first)));
+        return(-1);
+    }
+
+    ctx->status = xmlSecTransformStatusFinished;
+    return(0);
+}
+
+
+xmlSecTransformPushXml
+
+/**
+ * xmlSecTransformPushXml:
+ * @transform:          the pointer to transform object.
+ * @nodes:              the input nodes.
+ * @transformCtx:       the pointer to transform context object.
+ *
+ * Processes @nodes and pushes result to the next transform in the chain.
+ *
+ * Returns: 0 on success or a negative value if an error occurs.
+ */
+int
+xmlSecTransformPushXml(xmlSecTransformPtr transform, xmlSecNodeSetPtr nodes,
+                    xmlSecTransformCtxPtr transformCtx) {
+    xmlSecAssert2(xmlSecTransformIsValid(transform), -1);
+    xmlSecAssert2(transform->id->pushXml != NULL, -1);
+    xmlSecAssert2(transformCtx != NULL, -1);
+
+    return((transform->id->pushXml)(transform, nodes, transformCtx));
+}
+
+xmlSecTransformPushXml
+
+pushXml
+
+xmlSecTransformPushXmlD
+
+xmlSecTransformCtxPrepare
+
+/**
+ * xmlSecTransformCtxPrepare:
+ * @ctx:                the pointer to transforms chain processing context.
+ * @inputDataType:      the expected input type.
+ *
+ * Prepares the transform context for processing data of @inputDataType.
+ *
+ * Returns: 0 on success or a negative value otherwise.
+ */
+int
+xmlSecTransformCtxPrepare(xmlSecTransformCtxPtr ctx, xmlSecTransformDataType inputDataType) {
+    xmlSecTransformDataType firstType;
+    xmlSecTransformPtr transform;
+    int ret;
+
+    xmlSecAssert2(ctx != NULL, -1);
+    xmlSecAssert2(ctx->result == NULL, -1);
+    xmlSecAssert2(ctx->status == xmlSecTransformStatusNone, -1);
+
+    /* add binary buffer to store result */
+    transform = xmlSecTransformCtxCreateAndAppend(ctx, xmlSecTransformMemBufId);
+    if(!xmlSecTransformIsValid(transform)) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCreate",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(xmlSecTransformMemBufId)));
+        return(-1);
+    }
+    ctx->result = xmlSecTransformMemBufGetBuffer(transform);
+    if(ctx->result == NULL) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformMemBufGetBuffer",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(xmlSecTransformMemBufId)));
+        return(-1);
+    }
+
+    firstType = xmlSecTransformGetDataType(ctx->first, xmlSecTransformModePush, ctx);
+    if(((firstType & xmlSecTransformDataTypeBin) == 0) &&
+       ((inputDataType & xmlSecTransformDataTypeBin) != 0)) {
+
+        /* need to add parser transform */
+        transform = xmlSecTransformCtxCreateAndPrepend(ctx, xmlSecTransformXmlParserId);
+        if(transform == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxCreateAndPrepend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "transform=%s",
+                        xmlSecErrorsSafeString(xmlSecTransformKlassGetName(xmlSecTransformXmlParserId)));
+            return(-1);
+        }
+    } else if(((firstType & xmlSecTransformDataTypeXml) == 0) &&
+       ((inputDataType & xmlSecTransformDataTypeXml) != 0)) {
+
+        /* need to add c14n transform */
+        transform = xmlSecTransformCtxCreateAndPrepend(ctx, xmlSecTransformInclC14NId);
+        if(transform == NULL) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "xmlSecTransformCtxCreateAndPrepend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "transform=%s",
+                        xmlSecErrorsSafeString(xmlSecTransformKlassGetName(xmlSecTransformInclC14NId)));
+            return(-1);
+        }
+    }
+
+    /* finally let application a chance to verify that it's ok to execte
+     * this transforms chain */
+    if(ctx->preExecCallback != NULL) {
+        ret = (ctx->preExecCallback)(ctx);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        NULL,
+                        "ctx->preExecCallback",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        XMLSEC_ERRORS_NO_MESSAGE);
+            return(-1);
+        }
+    }
+
+    ctx->status = xmlSecTransformStatusWorking;
+    return(0);
+}
+
+
+xmlSecTransformXmlParserId
+
+xmlSecTransformCtxPrepare
+
+xmlSecTransformXmlParserId
+
+xmlSecTransformCtxCreateAndAppend
+
+/**
+ * xmlSecTransformCtxCreateAndAppend:
+ * @ctx:                the pointer to transforms chain processing context.
+ * @id:                 the new transform klass.
+ *
+ * Creaeates new transform and connects it to the end of the chain of
+ * transforms in the @ctx (see #xmlSecTransformConnect function for details).
+ *
+ * Returns: pointer to newly created transform or NULL if an error occurs.
+ */
+xmlSecTransformPtr
+xmlSecTransformCtxCreateAndAppend(xmlSecTransformCtxPtr ctx, xmlSecTransformId id) {
+    xmlSecTransformPtr transform;
+    int ret;
+
+    xmlSecAssert2(ctx != NULL, NULL);
+    xmlSecAssert2(ctx->status == xmlSecTransformStatusNone, NULL);
+    xmlSecAssert2(id != xmlSecTransformIdUnknown, NULL);
+
+    transform = xmlSecTransformCreate(id);
+    if(!xmlSecTransformIsValid(transform)) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCreate",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(id)));
+        return(NULL);
+    }
+
+    ret = xmlSecTransformCtxAppend(ctx, transform);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxAppend",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "name=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(transform)));
+        xmlSecTransformDestroy(transform);
+        return(NULL);
+    }
+
+    return(transform);
+}
+
+
+xmlSecTransformMemBufId
+
+xmlSecTransformMemBufGetKlass
+
+/**
+ * xmlSecTransformMemBufGetKlass:
+ *
+ * The memory buffer transorm (used to store the data that go through it).
+ *
+ * Returns: memory buffer transform klass.
+ */
+xmlSecTransformId
+xmlSecTransformMemBufGetKlass(void) {
+    return(&xmlSecTransformMemBufKlass);
+}
+
+
+xmlSecTransformMemBufKlass
+
+static xmlSecTransformKlass xmlSecTransformMemBufKlass = {
+    /* klass/object sizes */
+    sizeof(xmlSecTransformKlass),               /* xmlSecSize klassSize */
+    xmlSecTransformMemBufSize,                  /* xmlSecSize objSize */
+
+    xmlSecNameMemBuf,                           /* const xmlChar* name; */
+    NULL,                                       /* const xmlChar* href; */
+    0,                                          /* xmlSecAlgorithmUsage usage; */
+
+    xmlSecTransformMemBufInitialize,            /* xmlSecTransformInitializeMethod initialize; */
+    xmlSecTransformMemBufFinalize,              /* xmlSecTransformFianlizeMethod finalize; */
+    NULL,                                       /* xmlSecTransformNodeReadMethod readNode; */
+    NULL,                                       /* xmlSecTransformNodeWriteMethod writeNode; */
+    NULL,                                       /* xmlSecTransformSetKeyReqMethod setKeyReq; */
+    NULL,                                       /* xmlSecTransformSetKeyMethod setKey; */
+    NULL,                                       /* xmlSecTransformValidateMethod validate; */
+    xmlSecTransformDefaultGetDataType,          /* xmlSecTransformGetDataTypeMethod getDataType; */
+    xmlSecTransformDefaultPushBin,              /* xmlSecTransformPushBinMethod pushBin; */
+    xmlSecTransformDefaultPopBin,               /* xmlSecTransformPopBinMethod popBin; */
+    NULL,                                       /* xmlSecTransformPushXmlMethod pushXml; */
+    NULL,                                       /* xmlSecTransformPopXmlMethod popXml; */
+    xmlSecTransformMemBufExecute,               /* xmlSecTransformExecuteMethod execute; */
+
+    NULL,                                       /* void* reserved0; */
+    NULL,                                       /* void* reserved1; */
+};
+
+#define xmlSecTransformMemBufSize \
+        (sizeof(xmlSecTransform) + sizeof(xmlSecBuffer))
+#define xmlSecTransformMemBufGetBuf(transform) \
+    ((xmlSecTransformCheckSize((transform), xmlSecTransformMemBufSize)) ? \
+        (xmlSecBufferPtr)(((xmlSecByte*)(transform)) + sizeof(xmlSecTransform)) : \
+        (xmlSecBufferPtr)NULL)
+
+static int              xmlSecTransformMemBufInitialize         (xmlSecTransformPtr transform);
+static void             xmlSecTransformMemBufFinalize           (xmlSecTransformPtr transform);
+static int              xmlSecTransformMemBufExecute            (xmlSecTransformPtr transform,
+          
+
+ int last,
+                                                                 xmlSecTransformCtxPtr transformCtx);
+
+xmlSecTransformMemBufInitialize
+
+static int
+xmlSecTransformMemBufInitialize(xmlSecTransformPtr transform) {
+    xmlSecBufferPtr buffer;
+    int ret;
+
+    xmlSecAssert2(xmlSecTransformCheckId(transform, xmlSecTransformMemBufId), -1);
+
+    buffer = xmlSecTransformMemBufGetBuf(transform);
+    xmlSecAssert2(buffer != NULL, -1);
+
+    ret = xmlSecBufferInitialize(buffer, 0);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(transform)),
+                    "xmlSecBufferInitialize",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+        return(-1);
+    }
+    return(0);
+}
+
+
+xmlSecTransformMemBufFinalize
+
+static void
+xmlSecTransformMemBufFinalize(xmlSecTransformPtr transform) {
+    xmlSecBufferPtr buffer;
+
+    xmlSecAssert(xmlSecTransformCheckId(transform, xmlSecTransformMemBufId));
+
+    buffer = xmlSecTransformMemBufGetBuf(transform);
+    xmlSecAssert(buffer != NULL);
+
+    xmlSecBufferFinalize(xmlSecTransformMemBufGetBuf(transform));
+}
+
+
+xmlSecTransformMemBufExecute
+
+static int
+xmlSecTransformMemBufExecute(xmlSecTransformPtr transform, int last, xmlSecTransformCtxPtr transformCtx) {
+    xmlSecBufferPtr buffer;
+    xmlSecBufferPtr in, out;
+    xmlSecSize inSize;
+    int ret;
+
+    xmlSecAssert2(xmlSecTransformCheckId(transform, xmlSecTransformMemBufId), -1);
+    xmlSecAssert2(transformCtx != NULL, -1);
+
+    buffer = xmlSecTransformMemBufGetBuf(transform);
+    xmlSecAssert2(buffer != NULL, -1);
+
+    in = &(transform->inBuf);
+    out = &(transform->outBuf);
+    inSize = xmlSecBufferGetSize(in);
+
+    if(transform->status == xmlSecTransformStatusNone) {
+        transform->status = xmlSecTransformStatusWorking;
+    }
+
+    if(transform->status == xmlSecTransformStatusWorking) {
+        /* just copy everything from in to our buffer and out */
+        ret = xmlSecBufferAppend(buffer, xmlSecBufferGetData(in), inSize);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        xmlSecErrorsSafeString(xmlSecTransformGetName(transform)),
+                        "xmlSecBufferAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "size=%d", inSize);
+            return(-1);
+        }
+
+        ret = xmlSecBufferAppend(out, xmlSecBufferGetData(in), inSize);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        xmlSecErrorsSafeString(xmlSecTransformGetName(transform)),
+                        "xmlSecBufferAppend",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "size=%d", inSize);
+            return(-1);
+        }
+
+        ret = xmlSecBufferRemoveHead(in, inSize);
+        if(ret < 0) {
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                        xmlSecErrorsSafeString(xmlSecTransformGetName(transform)),
+                        "xmlSecBufferRemoveHead",
+                        XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                        "size=%d", inSize);
+            return(-1);
+        }
+
+        if(last != 0) {
+            transform->status = xmlSecTransformStatusFinished;
+        }
+    } else if(transform->status == xmlSecTransformStatusFinished) {
+        /* the only way we can get here is if there is no input */
+        xmlSecAssert2(inSize == 0, -1);
+    } else {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(transform)),
+                    NULL,
+                    XMLSEC_ERRORS_R_INVALID_STATUS,
+                    "status=%d", transform->status);
+        return(-1);
+    }
+    return(0);
+}
+
+
+
+xmlSecTransformMemBufGetKlass
+
+#define xmlSecTransformMemBufId \
+        xmlSecTransformMemBufGetKlass()
+
+xmlSecTransformMemBufId
+
+xmlSecTransformMemBufGetBuffer
+
+/**
+ * xmlSecTransformMemBufGetBuffer:
+ * @transform:          the pointer to memory buffer transform.
+ *
+ * Gets the pointer to memory buffer transform buffer.
+ *
+ * Returns: pointer to the transform's #xmlSecBuffer.
+ */
+xmlSecBufferPtr
+xmlSecTransformMemBufGetBuffer(xmlSecTransformPtr transform) {
+    xmlSecBufferPtr buffer;
+
+    xmlSecAssert2(xmlSecTransformCheckId(transform, xmlSecTransformMemBufId), NULL);
+
+    buffer = xmlSecTransformMemBufGetBuf(transform);
+    xmlSecAssert2(buffer != NULL, NULL);
+
+    return(buffer);
+}
+
+
+xmlSecTransformMemBufGetBuffe
+
+xmlSecTransformCtxCreateAndAppend
+
+
+/**
+ * xmlSecTransformCtxCreateAndAppend:
+ * @ctx:                the pointer to transforms chain processing context.
+ * @id:                 the new transform klass.
+ *
+ * Creaeates new transform and connects it to the end of the chain of
+ * transforms in the @ctx (see #xmlSecTransformConnect function for details).
+ *
+ * Returns: pointer to newly created transform or NULL if an error occurs.
+ */
+xmlSecTransformPtr xmlSecTransformCtxCreateAndAppend(xmlSecTransformCtxPtr ctx, xmlSecTransformId id) 
+{
+    xmlSecTransformPtr transform;
+    int ret;
+
+    xmlSecAssert2(ctx != NULL, NULL);
+    xmlSecAssert2(ctx->status == xmlSecTransformStatusNone, NULL);
+    xmlSecAssert2(id != xmlSecTransformIdUnknown, NULL);
+
+    transform = xmlSecTransformCreate(id);
+    if(!xmlSecTransformIsValid(transform)) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCreate",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(id)));
+        return(NULL);
+    }
+
+    ret = xmlSecTransformCtxAppend(ctx, transform);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxAppend",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "name=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(transform)));
+        xmlSecTransformDestroy(transform);
+        return(NULL);
+    }
+
+    return(transform);
+}
+
+
+/**
+ * xmlSecTransformCtxCreateAndAppend:
+ * @ctx:                the pointer to transforms chain processing context.
+ * @id:                 the new transform klass.
+ *
+ * Creaeates new transform and connects it to the end of the chain of
+ * transforms in the @ctx (see #xmlSecTransformConnect function for details).
+ *
+ * Returns: pointer to newly created transform or NULL if an error occurs.
+ */
+xmlSecTransformPtr xmlSecTransformCtxCreateAndAppend(xmlSecTransformCtxPtr ctx, xmlSecTransformId id) 
+{
+    xmlSecTransformPtr transform;
+    int ret;
+
+    xmlSecAssert2(ctx != NULL, NULL);
+    xmlSecAssert2(ctx->status == xmlSecTransformStatusNone, NULL);
+    xmlSecAssert2(id != xmlSecTransformIdUnknown, NULL);
+
+    transform = xmlSecTransformCreate(id);
+    if(!xmlSecTransformIsValid(transform)) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCreate",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "transform=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(id)));
+        return(NULL);
+    }
+
+    ret = xmlSecTransformCtxAppend(ctx, transform);
+    if(ret < 0) {
+        xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecTransformCtxAppend",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    "name=%s",
+                    xmlSecErrorsSafeString(xmlSecTransformGetName(transform)));
+        xmlSecTransformDestroy(transform);
+        return(NULL);
+    }
+
+    return(transform);
+}
+
+
+xmlSecTransformCtxCreateAndAppend
+
+0x1001a320
+
+10019930
+
+100197B0
+
+C:\xmlsec\libxmlsec-nounicode-1.2.18.win32\libxmlsec-nounicode-1.2.18.win32\lib
+
+C:\xmlsec\libxmlsec-nounicode-1.2.18.win32\libxmlsec-nounicode-1.2.18.win32\bin\libxmlsec-mscrypto.dll
+
+C:\xmlsec\libxmlsec-nounicode-1.2.18.win32\libxmlsec-nounicode-1.2.18.win32\bin\libxmlsec-openssl.dll
+
+C:\xmlsec\libxmlsec-nounicode-1.2.18.win32\libxmlsec-nounicode-1.2.18.win32\bin\libxmlsec.dll
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\xmlsecTest\xmlsecTest\signed.cpp
+
+/** 
+ * XML Security Library example: Signing a file with a dynamicaly created template and an X509 certificate.
+ * 
+ * Signs a file using a dynamicaly created template, key from PEM file and
+ * an X509 certificate. The signature has one reference with one enveloped 
+ * transform to sign the whole document except the <dsig:Signature/> node 
+ * itself. The key certificate is written in the <dsig:X509Data/> node.
+ * 
+ * This example was developed and tested with OpenSSL crypto library. The 
+ * certificates management policies for another crypto library may break it.
+ * 
+ * Usage: 
+ *      sign3 <xml-doc> <pem-key> 
+ *
+ * Example:
+ *      ./sign3 sign3-doc.xml rsakey.pem rsacert.pem > sign3-res.xml
+ *
+ * The result signature could be validated using verify3 example:
+ *      ./verify3 sign3-res.xml rootcert.pem
+ *
+ * This is free software; see Copyright file in the source
+ * distribution for preciese wording.
+ * 
+ * Copyright (C) 2002-2003 Aleksey Sanin <aleksey@aleksey.com>
+ */
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+#include <libxml/tree.h>
+#include <libxml/xmlmemory.h>
+#include <libxml/parser.h>
+
+#ifndef XMLSEC_NO_XSLT
+#include <libxslt/xslt.h>
+#include <libxslt/security.h>
+#endif /* XMLSEC_NO_XSLT */
+
+#include <xmlsec/xmlsec.h>
+#include <xmlsec/xmltree.h>
+#include <xmlsec/xmldsig.h>
+#include <xmlsec/templates.h>
+#include <xmlsec/crypto.h>
+
+int sign_file(const char* xml_file, const char* key_file, const char* cert_file);
+
+int 
+main(int argc, char **argv) {
+#ifndef XMLSEC_NO_XSLT
+    xsltSecurityPrefsPtr xsltSecPrefs = NULL;
+#endif /* XMLSEC_NO_XSLT */
+
+    assert(argv);
+
+    if(argc != 4) {
+        fprintf(stderr, "Error: wrong number of arguments.\n");
+        fprintf(stderr, "Usage: %s <xml-file> <key-file> <cert-file>\n", argv[0]);
+        return(1);
+    }
+
+    /* Init libxml and libxslt libraries */
+    xmlInitParser();
+    LIBXML_TEST_VERSION
+    xmlLoadExtDtdDefaultValue = XML_DETECT_IDS | XML_COMPLETE_ATTRS;
+    xmlSubstituteEntitiesDefault(1);
+#ifndef XMLSEC_NO_XSLT
+    xmlIndentTreeOutput = 1; 
+#endif /* XMLSEC_NO_XSLT */
+
+    /* Init libxslt */
+#ifndef XMLSEC_NO_XSLT
+    /* disable everything */
+    xsltSecPrefs = xsltNewSecurityPrefs(); 
+    xsltSetSecurityPrefs(xsltSecPrefs,  XSLT_SECPREF_READ_FILE,        xsltSecurityForbid);
+    xsltSetSecurityPrefs(xsltSecPrefs,  XSLT_SECPREF_WRITE_FILE,       xsltSecurityForbid);
+    xsltSetSecurityPrefs(xsltSecPrefs,  XSLT_SECPREF_CREATE_DIRECTORY, xsltSecurityForbid);
+    xsltSetSecurityPrefs(xsltSecPrefs,  XSLT_SECPREF_READ_NETWORK,     xsltSecurityForbid);
+    xsltSetSecurityPrefs(xsltSecPrefs,  XSLT_SECPREF_WRITE_NETWORK,    xsltSecurityForbid);
+    xsltSetDefaultSecurityPrefs(xsltSecPrefs); 
+#endif /* XMLSEC_NO_XSLT */
+                
+    /* Init xmlsec library */
+    if(xmlSecInit() < 0) {
+        fprintf(stderr, "Error: xmlsec initialization failed.\n");
+        return(-1);
+    }
+
+    /* Check loaded library version */
+    if(xmlSecCheckVersion() != 1) {
+        fprintf(stderr, "Error: loaded xmlsec library version is not compatible.\n");
+        return(-1);
+    }
+
+    /* Load default crypto engine if we are supporting dynamic
+     * loading for xmlsec-crypto libraries. Use the crypto library
+     * name ("openssl", "nss", etc.) to load corresponding 
+     * xmlsec-crypto library.
+     */
+#ifdef XMLSEC_CRYPTO_DYNAMIC_LOADING
+    if(xmlSecCryptoDLLoadLibrary(BAD_CAST XMLSEC_CRYPTO) < 0) {
+        fprintf(stderr, "Error: unable to load default xmlsec-crypto library. Make sure\n"
+                        "that you have it installed and check shared libraries path\n"
+                        "(LD_LIBRARY_PATH) envornment variable.\n");
+        return(-1);     
+    }
+#endif /* XMLSEC_CRYPTO_DYNAMIC_LOADING */
+
+    /* Init crypto library */
+    if(xmlSecCryptoAppInit(NULL) < 0) {
+        fprintf(stderr, "Error: crypto initialization failed.\n");
+        return(-1);
+    }
+
+    /* Init xmlsec-crypto library */
+    if(xmlSecCryptoInit() < 0) {
+        fprintf(stderr, "Error: xmlsec-crypto initialization failed.\n");
+        return(-1);
+    }
+
+    if(sign_file(argv[1], argv[2], argv[3]) < 0) {
+        return(-1);
+    }    
+    
+    /* Shutdown xmlsec-crypto library */
+    xmlSecCryptoShutdown();
+    
+    /* Shutdown crypto library */
+    xmlSecCryptoAppShutdown();
+    
+    /* Shutdown xmlsec library */
+    xmlSecShutdown();
+
+    /* Shutdown libxslt/libxml */
+#ifndef XMLSEC_NO_XSLT
+    xsltFreeSecurityPrefs(xsltSecPrefs);
+    xsltCleanupGlobals();            
+#endif /* XMLSEC_NO_XSLT */
+    xmlCleanupParser();
+    
+    return(0);
+}
+
+/** 
+ * sign_file:
+ * @xml_file:           the XML file name.
+ * @key_file:           the PEM private key file name.
+ * @cert_file:          the x509 certificate PEM file.
+ *
+ * Signs the @xml_file using private key from @key_file and dynamicaly
+ * created enveloped signature template. The certificate from @cert_file
+ * is placed in the <dsig:X509Data/> node.
+ *
+ * Returns 0 on success or a negative value if an error occurs.
+ */
+int 
+sign_file(const char* xml_file, const char* key_file, const char* cert_file) {
+    xmlDocPtr doc = NULL;
+    xmlNodePtr signNode = NULL;
+    xmlNodePtr refNode = NULL;
+    xmlNodePtr keyInfoNode = NULL;
+    xmlSecDSigCtxPtr dsigCtx = NULL;
+    int res = -1;
+    
+    assert(xml_file);
+    assert(key_file);
+    assert(cert_file);
+
+    /* load doc file */
+    doc = xmlParseFile(xml_file);
+    if ((doc == NULL) || (xmlDocGetRootElement(doc) == NULL)){
+        fprintf(stderr, "Error: unable to parse file \"%s\"\n", xml_file);
+        goto done;      
+    }
+    
+    /* create signature template for RSA-SHA1 enveloped signature */
+    signNode = xmlSecTmplSignatureCreate(doc, xmlSecTransformExclC14NId,
+                                         xmlSecTransformRsaSha1Id, NULL);
+    if(signNode == NULL) {
+        fprintf(stderr, "Error: failed to create signature template\n");
+        goto done;              
+    }
+
+    /* add <dsig:Signature/> node to the doc */
+    xmlAddChild(xmlDocGetRootElement(doc), signNode);
+    
+    /* add reference */
+    refNode = xmlSecTmplSignatureAddReference(signNode, xmlSecTransformSha1Id,
+                                        NULL, NULL, NULL);
+    if(refNode == NULL) {
+        fprintf(stderr, "Error: failed to add reference to signature template\n");
+        goto done;              
+    }
+
+    /* add enveloped transform */
+    if(xmlSecTmplReferenceAddTransform(refNode, xmlSecTransformEnvelopedId) == NULL) {
+        fprintf(stderr, "Error: failed to add enveloped transform to reference\n");
+        goto done;              
+    }
+    
+    /* add <dsig:KeyInfo/> and <dsig:X509Data/> */
+    keyInfoNode = xmlSecTmplSignatureEnsureKeyInfo(signNode, NULL);
+    if(keyInfoNode == NULL) {
+        fprintf(stderr, "Error: failed to add key info\n");
+        goto done;              
+    }
+    
+    if(xmlSecTmplKeyInfoAddX509Data(keyInfoNode) == NULL) {
+        fprintf(stderr, "Error: failed to add X509Data node\n");
+        goto done;              
+    }
+
+    /* create signature context, we don't need keys manager in this example */
+    dsigCtx = xmlSecDSigCtxCreate(NULL);
+    if(dsigCtx == NULL) {
+        fprintf(stderr,"Error: failed to create signature context\n");
+        goto done;
+    }
+
+    /* load private key, assuming that there is not password */
+    dsigCtx->signKey = xmlSecCryptoAppKeyLoad(key_file, xmlSecKeyDataFormatPem, NULL, NULL, NULL);
+    if(dsigCtx->signKey == NULL) {
+        fprintf(stderr,"Error: failed to load private pem key from \"%s\"\n", key_file);
+        goto done;
+    }
+    
+    /* load certificate and add to the key */
+    if(xmlSecCryptoAppKeyCertLoad(dsigCtx->signKey, cert_file, xmlSecKeyDataFormatPem) < 0) {
+        fprintf(stderr,"Error: failed to load pem certificate \"%s\"\n", cert_file);
+        goto done;
+    }
+
+    /* set key name to the file name, this is just an example! */
+    if(xmlSecKeySetName(dsigCtx->signKey, key_file) < 0) {
+        fprintf(stderr,"Error: failed to set key name for key from \"%s\"\n", key_file);
+        goto done;
+    }
+
+    /* sign the template */
+    if(xmlSecDSigCtxSign(dsigCtx, signNode) < 0) {
+        fprintf(stderr,"Error: signature failed\n");
+        goto done;
+    }
+        
+    /* print signed document to stdout */
+    xmlDocDump(stdout, doc);
+    
+    /* success */
+    res = 0;
+
+done:    
+    /* cleanup */
+    if(dsigCtx != NULL) {
+        xmlSecDSigCtxDestroy(dsigCtx);
+    }
+    
+    if(doc != NULL) {
+        xmlFreeDoc(doc); 
+    }
+    return(res);
+}
+
+
+
+mainsigning
+
+Programming Research Ltd 
+
+Hello,
+     I need to develop code which will sign, and verify, a XML message. Once its signed the signing has to be certifies with a 509 certificate. There seems to be a reasonably good amount of information on the web about doing all this in C# or Java which I can use for test purposes, but I need to develop my main code in 'C' and it has to be light weight and free from dll's. 
+I found one website www.aleksey.com which does have some code I could use, but it seems quite heavy and I needs something more stripped down and light weight. 
+I was using TinyXML to do the original XML parsing but that doesn't seem to have a signing part to it.
+
+Would anyone be able to point me in the right direction or to the right website, any information I would be very greatful. 
+
+Thanks.
+
+extern void SendTextToWindow(const char * text);
+
+HandleControlRequestData
+
+DecodeNVFB3
+
+ExtractTheNVFB3Header
+
+UINT16 hdr_crcTable_16[256];
+UINT16 CCITT_crcTable_16[256];
+UINT32 CRC32_Table [256];
+
+UINT16 hdr_poly = 0x81a0;		// incorrect old version of Allstom poly to match test data
+// UINT16 hdr_poly = 0x91a0;	// the correct version
+UINT16 CCITT_poly = 0x8810;
+
+void buildCrc16Table(UINT16* table, UINT16 polynom) 
+{
+	for (UINT16 x = 0; x < 256; x++) 
+	{
+		UINT16 w = x;
+		for (int i = 0; i < 8; i++) 
+		{
+			if ((w & 1) != 0) 
+			{
+				w = (w >> 1) ^ polynom;
+			} 
+			else 
+			{
+				w = w >> 1;
+			}
+		}
+		table[x] = (short) w;
+	}
+}
+
+void buildCRC32_Table()
+{
+	UINT32 CRC32_POLYNOMIAL = 0x8806A731;
+
+	int i, j;
+	UINT32 crc;
+
+	for (i = 0; i <= 255; i++) 
+	{
+		crc = i;
+		for (j = 8; j > 0; j--)
+		{
+			if ((crc & 1) == 1)
+				crc = (crc >> 1) ^ CRC32_POLYNOMIAL;
+			else
+				crc >>= 1;
+		}
+
+		CRC32_Table[i] = crc;
+	}
+}
+
+void init_crc_tables()
+{
+	buildCRC32_Table();
+
+	buildCrc16Table(hdr_crcTable_16, hdr_poly);
+	buildCrc16Table(CCITT_crcTable_16, CCITT_poly);
+}
+
+void crcInit(void)
+{
+	init_crc_tables();
+}
+
+UINT16 calculate_crc_16(UINT16* table, BYTE *data, size_t length) 
+{
+	int p;
+
+	UINT16 crc = 0;
+	for (p = 0; p < length; p++) 
+	{
+		crc =	(crc >> 8) ^ 
+				(table[(crc & 0xFF) ^ (data[p] & 0xFF)] & 0xFFFF);
+	}
+	return crc;
+}
+
+UINT16 calculate_hdr_crc_16(BYTE *data, size_t length) 
+{
+	return calculate_crc_16(hdr_crcTable_16, data, length);
+}
+
+UINT16 calculate_CCITT_crc_16(BYTE *data, size_t length) 
+{
+	return calculate_crc_16(CCITT_crcTable_16, data, length);
+}
+
+UINT32 calculate_crc_32(BYTE *buffer, int count, int lastcrc)
+{
+	UINT32 temp1, temp2;
+	int i = 0;
+
+	UINT32 crc = lastcrc;
+
+	while (count-- != 0) 
+	{
+		temp1 = crc >> 8;
+		temp2 = CRC32_Table[(crc ^ buffer[i++]) & 0xFF];
+		crc = temp1 ^ temp2;
+	}
+
+	return crc;
+}
+
+
+
+calculate_hdr_crc_16
+
+RSA_ToXMLString
+
+  // Create an XmlDocument object.
+            XmlDocument xmlDoc = new XmlDocument();
+
+            // Load an XML file into the XmlDocument object.
+            xmlDoc.PreserveWhitespace = true;
+            xmlDoc.Load("test.xml");
+
+            // Open the X.509 "Current User" store in read only mode.
+            X509Store store = new X509Store(StoreLocation.CurrentUser);
+            store.Open(OpenFlags.ReadOnly);
+
+            // Place all certificates in an X509Certificate2Collection object.
+            X509Certificate2Collection certCollection = store.Certificates;
+
+            X509Certificate2 cert = null;
+
+            // Loop through each certificate and find the certificate 
+            // with the appropriate name.
+            foreach (X509Certificate2 c in certCollection)
+            {
+                if (c.Subject == "CN=XML_ENC_TEST_CERT")
+                {
+                    cert = c;
+
+                    break;
+                }
+            }
+
+            if (cert == null)
+            {
+                throw new CryptographicException("The X.509 certificate could not be found.");
+            }
+
+            // Close the store.
+            store.Close();
+
+            // Encrypt the "creditcard" element.
+            Encrypt(xmlDoc, "creditcard", cert);
+
+            // Save the XML document.
+            xmlDoc.Save("test.xml");
+
+            // Display the encrypted XML to the console.
+            Console.WriteLine("Encrypted XML:");
+            Console.WriteLine();
+            Console.WriteLine(xmlDoc.OuterXml);
+
+
+ public static void Encrypt(XmlDocument Doc, string ElementToEncrypt, X509Certificate2 Cert)
+    {
+        // Check the arguments.  
+        if (Doc == null)
+            throw new ArgumentNullException("Doc");
+        if (ElementToEncrypt == null)
+            throw new ArgumentNullException("ElementToEncrypt");
+        if (Cert == null)
+            throw new ArgumentNullException("Cert");
+
+        ////////////////////////////////////////////////
+        // Find the specified element in the XmlDocument
+        // object and create a new XmlElemnt object.
+        ////////////////////////////////////////////////
+
+        XmlElement elementToEncrypt = Doc.GetElementsByTagName(ElementToEncrypt)[0] as XmlElement;
+        // Throw an XmlException if the element was not found.
+        if (elementToEncrypt == null)
+        {
+            throw new XmlException("The specified element was not found");
+
+        }
+
+        //////////////////////////////////////////////////
+        // Create a new instance of the EncryptedXml class 
+        // and use it to encrypt the XmlElement with the 
+        // X.509 Certificate.
+        //////////////////////////////////////////////////
+
+        EncryptedXml eXml = new EncryptedXml();
+
+        // Encrypt the element.
+        EncryptedData edElement = eXml.Encrypt(elementToEncrypt, Cert);
+
+        ////////////////////////////////////////////////////
+        // Replace the element from the original XmlDocument
+        // object with the EncryptedData element.
+        ////////////////////////////////////////////////////
+        EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
+    }
+
+<root>
+    <creditcard>
+        <number>19834209</number>
+        <expiry>02/02/2002</expiry>
+    </creditcard>
+</root>
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\xmlSigning\xmlSigning\bin\Debug\test.xml
+
+makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified">
+
+ <!-- Import the XML Digital Signature XSD -->
+ <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+  schemaLocation="xmldsig-core-schema.xsd" />
+
+ <!-- Custom Types -->
+ <xs:simpleType name="nonEmptyString">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Version Number format, e.g. message/data/software etc... -->
+ <xs:simpleType name="versionNumber">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+   <xs:pattern value="[a-z0-9\-]*" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Sequence Numbering -->
+ <xs:simpleType name="sequenceNumber">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+   <xs:maxInclusive value="2147483647" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Unit Identifiers e.g. RIF-1-A etc... -->
+ <xs:simpleType name="unitID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Identifiers for remote links and other remote equipment -->
+ <xs:simpleType name="equipmentID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Track circuit ID's -->
+ <xs:simpleType name="trackID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Signal Names -->
+ <xs:simpleType name="signalID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How requests are identified -->
+ <xs:simpleType name="requestID">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- ARS Sub-Area identifier -->
+ <xs:simpleType name="arsSubAreaID">
+  <xs:restriction base="xs:int">
+   <xs:minInclusive value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Berth identifier -->
+ <xs:simpleType name="berthID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+<xs:simpleType name="trainID">
+  <xs:restriction base="xs:string">
+   <xs:minLength value="1" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- An SSI ID, e.g. 0F or 1B -->
+ <xs:simpleType name="SSIID">
+  <xs:restriction base="xs:string">
+   <xs:pattern value="[0-9A-Z]{2}" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How the time sync status should be described -->
+ <xs:simpleType name="timeStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="SYNCHRONISED" />
+   <xs:enumeration value="UNSYNCHRONISED" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- How the unit status can be described -->
+ <xs:simpleType name="unitStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="MASTER" />
+   <xs:enumeration value="STANDBY" />
+   <xs:enumeration value="UNAVAILABLE" />
+   <xs:enumeration value="ACTIVE" />
+   <xs:enumeration value="INACTIVE" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- The description of links to external systems -->
+ <xs:simpleType name="linkStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UP" />
+   <xs:enumeration value="DOWN" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- Link availability -->
+ <xs:simpleType name="sourceLinkStatus">
+  <xs:restriction base="xs:string">
+   <xs:enumeration value="UP" />
+   <xs:enumeration value="DOWN" />
+   <xs:enumeration value="AVAILABLE" />
+  </xs:restriction>
+ </xs:simpleType>
+
+ <!-- NVFB/3 data, base64 encoded -->
+ <xs:simpleType name="NVFB3">
+  <xs:restriction base="xs:base64Binary" />
+ </xs:simpleType>
+
+ <!-- Header Elements -->
+ <xs:element name="Version">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="MessageFormat" type="versionNumber"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="Data" type="versionNumber" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Software" type="versionNumber"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Time">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Current" type="xs:dateTime" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="TimeStatus" type="timeStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="Monotonic" type="xs:long" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Header">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Version" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Time" minOccurs="1" maxOccurs="1" />
+    <xs:element name="SequenceNumber" type="sequenceNumber"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceUnitID" type="unitID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="LogicalSourceID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceStatus" type="unitStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SourceLinkStatus" type="sourceLinkStatus"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="DestinationUnitID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="LogicalDestinationID" type="unitID"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Body Elements -->
+
+ <xs:element name="Link">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="From" type="equipmentID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="To" type="equipmentID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Status" type="linkStatus" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="DiagnosticAlarms">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Link" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="OSTO">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Track1" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Track2" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="GeneratedAlarms">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="OSTO" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="GenericAlarm" type="nonEmptyString"
+     minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SPADData">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="SignalID" type="xs:int" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Signal" type="signalID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Track" type="trackID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SPAD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="SignalMap" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="SignalMapResponse" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="SPADData" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="ControlRequestRejected">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="RequestNumber" type="requestID"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="RejectReason" type="nonEmptyString"
+     minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Interlocking">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="UniqueID" type="nonEmptyString"
+     minOccurs="1" maxOccurs="1" />
+    <xs:element name="SSIID" type="SSIID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element ref="SPAD" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="Indications" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="IndicationsResponse" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="ControlRequests" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="ControlRequestsResponse" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element ref="ControlRequestRejected" minOccurs="0"
+     maxOccurs="unbounded" />
+    <xs:element name="ARSDisableSubArea" type="arsSubAreaID"
+     minOccurs="0" maxOccurs="unbounded" />
+    <xs:element name="ARSSubAreaStatus" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="ARSSubAreaStatusResponse" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="StatusByte" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element name="StatusByteResponse" type="NVFB3" minOccurs="0"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Interpose">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="TrainID" type="trainID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="Berth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Clear">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="Berth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Step">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="TrainID" type="trainID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="FromBerth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+    <xs:element name="ToBerth" type="berthID" minOccurs="1"
+     maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="TD">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Interpose" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Clear" minOccurs="0" maxOccurs="unbounded" />
+    <xs:element ref="Step" minOccurs="0" maxOccurs="unbounded" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="Body">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="DiagnosticAlarms" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="GeneratedAlarms" minOccurs="0"
+     maxOccurs="1" />
+    <xs:element ref="Interlocking" minOccurs="0" maxOccurs="20" />
+    <xs:element name="EmergencyAlarms" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element name="EmergencyAlarmsResponse" type="NVFB3"
+     minOccurs="0" maxOccurs="1" />
+    <xs:element ref="TD" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Message Element -->
+
+ <xs:element name="Message">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Header" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Body" minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Envelope Element -->
+ <xs:element name="Envelope">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Message" minOccurs="1" maxOccurs="1" />
+    <!-- set minOccurs to 1 to mandate signatures, 0 to have them optional -->
+    <xs:element ref="dsig:Signature" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
+
+
+C:\srif\ICONIS.cxx
+
+C:\srif\ICONIS.hxx
+
+C:\srif\ICONIS.xml
+
+C:\srif\ICONIS.xsd
+
+C:\srif\ICONIS.cs
+
+
+</xs:schema>
+
+SignatureType
+
+ <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Header" minOccurs="1" maxOccurs="1" />
+    <xs:element ref="Body" minOccurs="1" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+
+base="xs:string">
+
+nonEmptyString
+
+C:\srif\Win32Srif4_3\minyEncoder\XML\ICONIS.cs
+
+if (output != null)
+                {
+
+public static byte[] StringToByteArray(string hex) {
+    return Enumerable.Range(0, hex.Length)
+                     .Where(x => x % 2 == 0)
+                     .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                     .ToArray();
+}
+
+StringToByteArray
+
+StringToByteArray(
+
+ System.Text.RegularExpressions.Regex.IsMatch(test, @"\A\b[0-9a-fA-F]+\b\Z");
+
+VerifyHexNumber
+
+textbox.Text
+
+CheckTexBoxesandEnableOK();
+
+ CheckTexBoxesandEnableOK();
+
+VerifyHexNumber
+
+if (ApplicationDomainTextBox.Text.Length < 3)
+            {
+                CheckTexBoxesandEnableOK();
+            }
+            else
+            {
+                OKButton.Enabled = false;
+            }
+
+VerifyHexNumber(
+
+Envelope configdata
+
+XmlSerializer serializer = new XmlSerializer(typeof(Envelope));
+                StreamReader reader = new StreamReader("lastconfig.xml");
+                configdata =  (Envelope)serializer.Deserialize(reader);
+
+result
+
+lastconfig.xml
+
+string.Format("{0:x}", data[0].ToString());
+
+resultNoSignature
+
+"<Envelope>"
+
+"</Envelope>"
+
+resultNoSignature
+
+resultNoSignature = "<Envelope>" + result + "</Envelope>";
+
+SourceUnitIDTextBox
+
+LogicalSourceIDTesxtBox
+
+interlockingList
+
+repopulateInterlockingList
+
+enableButtons
+
+  public static byte[] StringToByteArray(string hex)
+        {
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
+        }
+
+    public static byte[] StringToByteArray(string hex)
+        {
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
+        }
+
+StringToByteArray
+
+   public static byte[] StringToByteArray(string hex)
+        {
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
+        }
+
+StringToByteArray
+
+ByteArrayToString
+
+List<byte> temp = new List<byte>();
+                foreach (byte b in data.ControlRequests)
+                {
+                    temp.Add(b);
+                }
+                temp.RemoveAt(temp.Count - 1);
+                temp.RemoveAt(temp.Count - 1);
+
+
+data.ARSSubAreaStatus 
+
+		result	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-10-01T16:26:00.0098791+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>260560607</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>4</UniqueID><SSIID>4</SSIID><ControlRequests>o6MBAAEA39aHDwEAAACqVXwAAQAAANj7lS71zaOjAQABADdegw8BAAAAqlVeAAEAAACwsDmJihajowEAAQA0u2YPAQAAAKpVQAABAAAAj6TyjiZDMDEwMjAzMDAwNDAwMDUwMDAwMDAwNjAwMDAwMDA3MDAwMjAwMDAwMDA4MDAwMDAwMDAwMDAwMDAwMDAwMzAzOTG9g/aaJg==</ControlRequests></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>9jHfpiMS3qocbiPobSojHMKRq9E=</DigestValue></Reference></SignedInfo><SignatureValue>Gk+nca4/KvS0k5jIkM+Raexua/OVbx+c6qC0pIb0u2LoUzkUun6fpWwKOsVZcy0kuIIF2av6rkDo0Qeml4Ms9fkfZ1JV7FRRb3UXQrklv9P26dysSzOBNy3kz/quWhsTK3Fxv9Euvh8Fjf5U49W0uSWZVZsCHGgl2ehWRgUcI/Q=</SignatureValue></Signature></Envelope>"	string
+
+
+/*
+ * Copyright (c) 2000-2006 Apple Computer, Inc. All rights reserved.
+ *
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+ * 
+ * This file contains Original Code and/or Modifications of Original Code
+ * as defined in and that are subject to the Apple Public Source License
+ * Version 2.0 (the 'License'). You may not use this file except in
+ * compliance with the License. The rights granted to you under the License
+ * may not be used to create, or enable the creation or redistribution of,
+ * unlawful or unlicensed copies of an Apple operating system, or to
+ * circumvent, violate, or enable the circumvention or violation of, any
+ * terms of an Apple operating system software license agreement.
+ * 
+ * Please obtain a copy of the License at
+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
+ * 
+ * The Original Code and all software distributed under the License are
+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ * Please see the License for the specific language governing rights and
+ * limitations under the License.
+ * 
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+ */
+
+/*
+ * This SHA1 code is based on the basic framework from the reference
+ * implementation for MD5.  That implementation is Copyright (C)
+ * 1991-2, RSA Data Security, Inc. Created 1991. All rights reserved.
+ *
+ * License to copy and use this software is granted provided that it
+ * is identified as the "RSA Data Security, Inc. MD5 Message-Digest
+ * Algorithm" in all material mentioning or referencing this software
+ * or this function.
+ *
+ * License is also granted to make and use derivative works provided
+ * that such works are identified as "derived from the RSA Data
+ * Security, Inc. MD5 Message-Digest Algorithm" in all material
+ * mentioning or referencing the derived work.
+ *
+ * RSA Data Security, Inc. makes no representations concerning either
+ * the merchantability of this software or the suitability of this
+ * software for any particular purpose. It is provided "as is"
+ * without express or implied warranty of any kind.
+ *
+ * These notices must be retained in any copies of any part of this
+ * documentation and/or software.
+ *
+ * Based on the FIPS 180-1: Secure Hash Algorithm (SHA-1) available at
+ * http://www.itl.nist.gov/div897/pubs/fip180-1.htm
+ */
+
+#include <sys/types.h>
+#include <sys/systm.h>
+#include <libkern/OSAtomic.h>
+#include <libkern/crypto/sha1.h>
+
+#define	memset(x, y, z)	bzero(x, z);
+#define	memcpy(x, y, z)	bcopy(y, x, z)
+
+/* Internal mappings to the legacy sha1_ctxt structure. */
+#define	state	h.b32
+#define	bcount	c.b32
+#define	buffer	m.b8
+
+/*
+ * The digest algorithm interprets the input message as a sequence of 32-bit
+ * big-endian words.  We must reverse bytes in each word on x86/64 platforms,
+ * but not on big-endian ones such as PPC.  For performance, we take advantage
+ * of the bswap instruction on x86/64 to perform byte-reversal.  On PPC, we
+ * could do 4-byte load if the address is 4-byte aligned which should further
+ * improve the performance.  But for code simplicity, we punt and do 1-byte
+ * loads instead.
+ */
+#if (defined(__i386__) || defined(__x86_64__)) && defined(__GNUC__)
+#define	FETCH_32(p) ({							\
+	register u_int32_t l = (u_int32_t)*((const u_int32_t *)(p));	\
+	__asm__ __volatile__("bswap %0" : "=r" (l) : "0" (l));		\
+	l;								\
+})
+#else
+#define	FETCH_32(p)							\
+	(((u_int32_t)*((const u_int8_t *)(p) + 3)) |			\
+	(((u_int32_t)*((const u_int8_t *)(p) + 2)) << 8) |		\
+	(((u_int32_t)*((const u_int8_t *)(p) + 1)) << 16) |		\
+	(((u_int32_t)*((const u_int8_t *)(p))) << 24))
+#endif /* __i386__ || __x86_64__ */
+
+/*
+ * Encodes input (u_int32_t) into output (unsigned char). Assumes len is
+ * a multiple of 4. This is not compatible with memcpy().
+ */
+static void
+Encode(unsigned char *output, u_int32_t *input, unsigned int len)
+{
+	unsigned int i, j;
+
+	for (i = 0, j = 0; j < len; i++, j += 4) {
+		output[j + 3] = input[i] & 0xff;
+		output[j + 2] = (input[i] >> 8) & 0xff;
+		output[j + 1] = (input[i] >> 16) & 0xff;
+		output[j] = (input[i] >> 24) & 0xff;
+	}
+}
+
+static unsigned char PADDING[64] = { 0x80, /* zeros */ };
+
+/* Constants from FIPS 180-1 */
+#define	K_00_19		0x5a827999UL
+#define	K_20_39		0x6ed9eba1UL
+#define	K_40_59		0x8f1bbcdcUL
+#define	K_60_79		0xca62c1d6UL
+
+/* F, G, H and I are basic SHA1 functions. */
+#define	F(b, c, d)	((((c) ^ (d)) & (b)) ^ (d))
+#define	G(b, c, d)	((b) ^ (c) ^ (d))
+#define	H(b, c, d)	(((b) & (c)) | (((b) | (c)) & (d)))
+
+/* ROTATE_LEFT rotates x left n bits. */
+#define	ROTATE_LEFT(x, n) (((x) << (n)) | ((x) >> (32 - (n))))
+
+/* R, R1-R4 are macros used during each transformation round. */
+#define R(f, k, v, w, x, y, z, i) {				\
+	(v) = ROTATE_LEFT(w, 5) + f(x, y, z) + (v) + (i) + (k);	\
+	(x) = ROTATE_LEFT(x, 30);				\
+}
+
+#define	R1(v, w, x, y, z, i)	R(F, K_00_19, v, w, x, y, z, i)
+#define	R2(v, w, x, y, z, i)	R(G, K_20_39, v, w, x, y, z, i)
+#define	R3(v, w, x, y, z, i)	R(H, K_40_59, v, w, x, y, z, i)
+#define	R4(v, w, x, y, z, i)	R(G, K_60_79, v, w, x, y, z, i)
+
+/* WUPDATE represents Wt variable that gets updated for steps 16-79 */
+#define	WUPDATE(p, q, r, s) {		\
+	(p) = ((q) ^ (r) ^ (s) ^ (p));	\
+	(p) = ROTATE_LEFT(p, 1);	\
+}
+
+static void SHA1Transform(u_int32_t, u_int32_t, u_int32_t, u_int32_t,
+    u_int32_t, const u_int8_t *, SHA1_CTX *);
+
+void _SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen);
+
+void SHA1Final_r(SHA1_CTX *, void *);
+
+typedef kern_return_t (*InKernelPerformSHA1Func)(void *ref, const void *data, size_t dataLen, u_int32_t *inHash, u_int32_t options, u_int32_t *outHash, Boolean usePhysicalAddress); 
+void sha1_hardware_hook(Boolean option, InKernelPerformSHA1Func func, void *ref);
+static void *SHA1Ref;
+InKernelPerformSHA1Func performSHA1WithinKernelOnly; 
+#define SHA1_USE_HARDWARE_THRESHOLD 2048 //bytes 
+
+
+/*
+ * SHA1 initialization. Begins a SHA1 operation, writing a new context.
+ */
+void
+SHA1Init(SHA1_CTX *context)
+{
+	context->bcount[0] = context->bcount[1] = 0;
+	context->count = 0;
+
+	/* Load magic initialization constants.  */
+	context->state[0] = 0x67452301UL;
+	context->state[1] = 0xefcdab89UL;
+	context->state[2] = 0x98badcfeUL;
+	context->state[3] = 0x10325476UL;
+	context->state[4] = 0xc3d2e1f0UL;
+}
+
+/*
+ * SHA1 block update operation. Continues a SHA1 message-digest
+ * operation, processing another message block, and updating the
+ * context.
+ */
+void
+_SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	u_int32_t i, index, partLen;
+	const unsigned char *input = (const unsigned char *)inpp;
+
+	if (inputLen == 0)
+		return;
+
+	/* Compute number of bytes mod 64 */
+	index = (context->bcount[1] >> 3) & 0x3F;
+
+	/* Update number of bits */
+	if ((context->bcount[1] += (inputLen << 3)) < (inputLen << 3))
+		context->bcount[0]++;
+	context->bcount[0] += (inputLen >> 29);
+
+	partLen = 64 - index;
+
+	/* Transform as many times as possible. */
+	i = 0;
+	if (inputLen >= partLen) {
+		if (index != 0) {
+			memcpy(&context->buffer[index], input, partLen);
+			SHA1Transform(context->state[0], context->state[1],
+			    context->state[2], context->state[3],
+			    context->state[4], context->buffer, context);
+			i = partLen;
+		}
+
+		for (; i + 63 < inputLen; i += 64)
+			SHA1Transform(context->state[0], context->state[1],
+			    context->state[2], context->state[3],
+			    context->state[4], &input[i], context);
+
+		if (inputLen == i)
+			return;
+
+		index = 0;
+	}
+
+	/* Buffer remaining input */
+	memcpy(&context->buffer[index], &input[i], inputLen - i);
+}
+
+
+
+
+/*
+ * This function is called by the SHA1 hardware kext during its init. 
+ * This will register the function to call to perform SHA1 using hardware. 
+ */
+void sha1_hardware_hook(Boolean option, InKernelPerformSHA1Func func, void *ref)
+{
+	if(option) {
+		// Establish the hook. The hardware is ready.
+		OSCompareAndSwapPtr((void*)NULL, (void*)ref, (void * volatile*)&SHA1Ref); 
+
+		if(!OSCompareAndSwapPtr((void *)NULL, (void *)func, (void * volatile *)&performSHA1WithinKernelOnly)) {
+			panic("sha1_hardware_hook: Called twice.. Should never happen\n");
+		}
+	}
+	else {
+		// The hardware is going away. Tear down the hook. 	
+		performSHA1WithinKernelOnly = NULL;
+		SHA1Ref = NULL;
+	}
+}
+
+static u_int32_t SHA1UpdateWithHardware(SHA1_CTX *context, const unsigned char *data, size_t dataLen, Boolean usePhysicalAddress)
+{
+	u_int32_t *inHashBuffer = context->state;
+	u_int32_t options = 0;
+	int result;
+
+	result = performSHA1WithinKernelOnly(SHA1Ref, data, dataLen, inHashBuffer, options, inHashBuffer, usePhysicalAddress);
+	if(result != KERN_SUCCESS) {
+		//The hardware failed to hash for some reason. Fall back to software. 
+		return 0;
+	}
+
+	//Update the context with the total length.
+        /* Update number of bits */
+        if ((context->bcount[1] += (dataLen << 3)) < (dataLen << 3))
+                context->bcount[0]++;
+        context->bcount[0] += (dataLen >> 29);
+	return dataLen;
+}
+
+/*
+ * This is function is only called in from the pagefault path or from page_copy().
+ * So we assume that we can safely convert the virtual address to the physical address and use it.
+ * Assumptions: The passed in address(inpp) is a kernel virtual address 
+ * and a physical page has been faulted in. 
+ * The inputLen passed in should always be less than or equal to a  page size (4096) 
+ * and inpp should be on a page boundary. 
+ * "performSHA1WithinKernelOnly" is initialized only when the hardware driver exists and is ready.
+ */
+void SHA1UpdateUsePhysicalAddress(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	Boolean usePhysicalAddress = TRUE;
+	if((inputLen == PAGE_SIZE) && performSHA1WithinKernelOnly) { // If hardware exists and is ready.
+		if(SHA1UpdateWithHardware(context, (const unsigned char *)inpp, inputLen, usePhysicalAddress))
+			return;
+		//else for some reason the hardware failed.. 
+		//fall through to software and try the hash in software. 
+	}
+	//Use the software implementation since the hardware is absent or 
+	// has not been initialized yet or inputLen !=  PAGE_SIZE. 
+	_SHA1Update(context, inpp, inputLen);
+}
+
+/*
+ * A wrapper around _SHA1Update() to pick between software or hardware based SHA1. 
+ *
+ */
+void SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	const unsigned char *input = (const unsigned char *)inpp;
+	Boolean usePhysicalAddress = FALSE;
+	u_int32_t index;
+	
+	if((inputLen > SHA1_USE_HARDWARE_THRESHOLD) && performSHA1WithinKernelOnly) { 
+		index = (context->bcount[1] >> 3) & 0x3F;
+		if(index != 0) {  //bytes left in the context. Handle them first.
+			u_int32_t partLen = 64 - index;
+			memcpy(&context->buffer[index], input, partLen);
+			_SHA1Update(context, inpp, inputLen);
+			inputLen -= partLen; 
+			input += partLen; 
+		}
+		
+		u_int32_t lenForHardware = inputLen & (~0x3F); //multiple of 64
+		u_int32_t bytesHashed = 0;
+		bytesHashed = SHA1UpdateWithHardware(context, input, lenForHardware, usePhysicalAddress); 	
+		
+		inputLen -= bytesHashed;
+		input += bytesHashed;
+	}
+
+	//Fall through to the software implementation.
+	_SHA1Update(context, input, inputLen);
+}
+
+/*
+ * For backwards compatibility, sha1_result symbol is mapped to this
+ * routine since it's equivalent to SHA1Final with reversed parameters.
+ */
+void
+SHA1Final_r(SHA1_CTX *context, void *digest)
+{
+	SHA1Final(digest, context);
+}
+
+/*
+ * SHA1 finalization. Ends an SHA1 message-digest operation, writing the
+ * the message digest and zeroizing the context.
+ */
+void
+SHA1Final(void *digest, SHA1_CTX *context)
+{
+	unsigned char bits[8];
+	u_int32_t index = (context->bcount[1] >> 3) & 0x3f;
+
+	/* Save number of bits */
+	Encode(bits, context->bcount, 8);
+
+	/* Pad out to 56 mod 64. */
+	SHA1Update(context, PADDING, ((index < 56) ? 56 : 120) - index);
+
+	/* Append length (before padding) */
+	SHA1Update(context, bits, 8);
+
+	/* Store state in digest */
+	Encode(digest, context->state, 20);
+
+	/* Zeroize sensitive information. */
+	memset(context, 0, sizeof (*context));
+}
+
+/*
+ * SHA1 basic transformation. Transforms state based on block.
+ */
+static void
+SHA1Transform(u_int32_t a, u_int32_t b, u_int32_t c, u_int32_t d,
+    u_int32_t e, const u_int8_t block[64], SHA1_CTX *context)
+{
+	/* Register (instead of array) is a win in most cases */
+	register u_int32_t w0, w1, w2, w3, w4, w5, w6, w7;
+	register u_int32_t w8, w9, w10, w11, w12, w13, w14, w15;
+
+	w15 = FETCH_32(block + 60);
+	w14 = FETCH_32(block + 56);
+	w13 = FETCH_32(block + 52);
+	w12 = FETCH_32(block + 48);
+	w11 = FETCH_32(block + 44);
+	w10 = FETCH_32(block + 40);
+	w9  = FETCH_32(block + 36);
+	w8  = FETCH_32(block + 32);
+	w7  = FETCH_32(block + 28);
+	w6  = FETCH_32(block + 24);
+	w5  = FETCH_32(block + 20);
+	w4  = FETCH_32(block + 16);
+	w3  = FETCH_32(block + 12);
+	w2  = FETCH_32(block +  8);
+	w1  = FETCH_32(block +  4);
+	w0  = FETCH_32(block +  0);
+
+	/* Round 1 */
+					R1(e, a, b, c, d,  w0);		/*  0 */
+					R1(d, e, a, b, c,  w1);		/*  1 */
+					R1(c, d, e, a, b,  w2);		/*  2 */
+					R1(b, c, d, e, a,  w3);		/*  3 */
+					R1(a, b, c, d, e,  w4);		/*  4 */
+					R1(e, a, b, c, d,  w5);		/*  5 */
+					R1(d, e, a, b, c,  w6);		/*  6 */
+					R1(c, d, e, a, b,  w7);		/*  7 */
+					R1(b, c, d, e, a,  w8);		/*  8 */
+					R1(a, b, c, d, e,  w9);		/*  9 */
+					R1(e, a, b, c, d, w10);		/* 10 */
+					R1(d, e, a, b, c, w11);		/* 11 */
+					R1(c, d, e, a, b, w12);		/* 12 */
+					R1(b, c, d, e, a, w13);		/* 13 */
+					R1(a, b, c, d, e, w14);		/* 14 */
+					R1(e, a, b, c, d, w15);		/* 15 */
+	WUPDATE( w0, w13,  w8,  w2);	R1(d, e, a, b, c,  w0);		/* 16 */
+	WUPDATE( w1, w14,  w9,  w3);	R1(c, d, e, a, b,  w1);		/* 17 */
+	WUPDATE( w2, w15, w10,  w4);	R1(b, c, d, e, a,  w2);		/* 18 */
+	WUPDATE( w3,  w0, w11,  w5);	R1(a, b, c, d, e,  w3);		/* 19 */
+
+	/* Round 2 */
+	WUPDATE( w4,  w1, w12,  w6);	R2(e, a, b, c, d,  w4);		/* 20 */
+	WUPDATE( w5,  w2, w13,  w7);	R2(d, e, a, b, c,  w5);		/* 21 */
+	WUPDATE( w6,  w3, w14,  w8);	R2(c, d, e, a, b,  w6);		/* 22 */
+	WUPDATE( w7,  w4, w15,  w9);	R2(b, c, d, e, a,  w7);		/* 23 */
+	WUPDATE( w8,  w5,  w0, w10);	R2(a, b, c, d, e,  w8);		/* 24 */
+	WUPDATE( w9,  w6,  w1, w11);	R2(e, a, b, c, d,  w9);		/* 25 */
+	WUPDATE(w10,  w7,  w2, w12);	R2(d, e, a, b, c, w10);		/* 26 */
+	WUPDATE(w11,  w8,  w3, w13);	R2(c, d, e, a, b, w11);		/* 27 */
+	WUPDATE(w12,  w9,  w4, w14);	R2(b, c, d, e, a, w12);		/* 28 */
+	WUPDATE(w13, w10,  w5, w15);	R2(a, b, c, d, e, w13);		/* 29 */
+	WUPDATE(w14, w11,  w6,  w0);	R2(e, a, b, c, d, w14);		/* 30 */
+	WUPDATE(w15, w12,  w7,  w1);	R2(d, e, a, b, c, w15);		/* 31 */
+	WUPDATE( w0, w13,  w8,  w2);	R2(c, d, e, a, b,  w0);		/* 32 */
+	WUPDATE( w1, w14,  w9,  w3);	R2(b, c, d, e, a,  w1);		/* 33 */
+	WUPDATE( w2, w15, w10,  w4);	R2(a, b, c, d, e,  w2);		/* 34 */
+	WUPDATE( w3,  w0, w11,  w5);	R2(e, a, b, c, d,  w3);		/* 35 */
+	WUPDATE( w4,  w1, w12,  w6);	R2(d, e, a, b, c,  w4);		/* 36 */
+	WUPDATE( w5,  w2, w13,  w7);	R2(c, d, e, a, b,  w5);		/* 37 */
+	WUPDATE( w6,  w3, w14,  w8);	R2(b, c, d, e, a,  w6);		/* 38 */
+	WUPDATE( w7,  w4, w15,  w9);	R2(a, b, c, d, e,  w7);		/* 39 */
+
+	/* Round 3 */
+	WUPDATE( w8,  w5,  w0, w10);	R3(e, a, b, c, d,  w8);		/* 40 */
+	WUPDATE( w9,  w6,  w1, w11);	R3(d, e, a, b, c,  w9);		/* 41 */
+	WUPDATE(w10,  w7,  w2, w12);	R3(c, d, e, a, b, w10);		/* 42 */
+	WUPDATE(w11,  w8,  w3, w13);	R3(b, c, d, e, a, w11);		/* 43 */
+	WUPDATE(w12,  w9,  w4, w14);	R3(a, b, c, d, e, w12);		/* 44 */
+	WUPDATE(w13, w10,  w5, w15);	R3(e, a, b, c, d, w13);		/* 45 */
+	WUPDATE(w14, w11,  w6,  w0);	R3(d, e, a, b, c, w14);		/* 46 */
+	WUPDATE(w15, w12,  w7,  w1);	R3(c, d, e, a, b, w15);		/* 47 */
+	WUPDATE( w0, w13,  w8,  w2);	R3(b, c, d, e, a,  w0);		/* 48 */
+	WUPDATE( w1, w14,  w9,  w3);	R3(a, b, c, d, e,  w1);		/* 49 */
+	WUPDATE( w2, w15, w10,  w4);	R3(e, a, b, c, d,  w2);		/* 50 */
+	WUPDATE( w3,  w0, w11,  w5);	R3(d, e, a, b, c,  w3);		/* 51 */
+	WUPDATE( w4,  w1, w12,  w6);	R3(c, d, e, a, b,  w4);		/* 52 */
+	WUPDATE( w5,  w2, w13,  w7);	R3(b, c, d, e, a,  w5);		/* 53 */
+	WUPDATE( w6,  w3, w14,  w8);	R3(a, b, c, d, e,  w6);		/* 54 */
+	WUPDATE( w7,  w4, w15,  w9);	R3(e, a, b, c, d,  w7);		/* 55 */
+	WUPDATE( w8,  w5,  w0, w10);	R3(d, e, a, b, c,  w8);		/* 56 */
+	WUPDATE( w9,  w6,  w1, w11);	R3(c, d, e, a, b,  w9);		/* 57 */
+	WUPDATE(w10,  w7,  w2, w12);	R3(b, c, d, e, a, w10);		/* 58 */
+	WUPDATE(w11,  w8,  w3, w13);	R3(a, b, c, d, e, w11);		/* 59 */
+
+	WUPDATE(w12,  w9,  w4, w14);	R4(e, a, b, c, d, w12);		/* 60 */
+	WUPDATE(w13, w10,  w5, w15);	R4(d, e, a, b, c, w13);		/* 61 */
+	WUPDATE(w14, w11,  w6,  w0);	R4(c, d, e, a, b, w14);		/* 62 */
+	WUPDATE(w15, w12,  w7,  w1);	R4(b, c, d, e, a, w15);		/* 63 */
+	WUPDATE( w0, w13,  w8,  w2);	R4(a, b, c, d, e,  w0);		/* 64 */
+	WUPDATE( w1, w14,  w9,  w3);	R4(e, a, b, c, d,  w1);		/* 65 */
+	WUPDATE( w2, w15, w10,  w4);	R4(d, e, a, b, c,  w2);		/* 66 */
+	WUPDATE( w3,  w0, w11,  w5);	R4(c, d, e, a, b,  w3);		/* 67 */
+	WUPDATE( w4,  w1, w12,  w6);	R4(b, c, d, e, a,  w4);		/* 68 */
+	WUPDATE( w5,  w2, w13,  w7);	R4(a, b, c, d, e,  w5);		/* 69 */
+	WUPDATE( w6,  w3, w14,  w8);	R4(e, a, b, c, d,  w6);		/* 70 */
+	WUPDATE( w7,  w4, w15,  w9);	R4(d, e, a, b, c,  w7);		/* 71 */
+	WUPDATE( w8,  w5,  w0, w10);	R4(c, d, e, a, b,  w8);		/* 72 */
+	WUPDATE( w9,  w6,  w1, w11);	R4(b, c, d, e, a,  w9);		/* 73 */
+	WUPDATE(w10,  w7,  w2, w12);	R4(a, b, c, d, e, w10);		/* 74 */
+	WUPDATE(w11,  w8,  w3, w13);	R4(e, a, b, c, d, w11);		/* 75 */
+	WUPDATE(w12,  w9,  w4, w14);	R4(d, e, a, b, c, w12);		/* 76 */
+	WUPDATE(w13, w10,  w5, w15);	R4(c, d, e, a, b, w13);		/* 77 */
+	WUPDATE(w14, w11,  w6,  w0);	R4(b, c, d, e, a, w14);		/* 78 */
+	WUPDATE(w15, w12,  w7,  w1);	R4(a, b, c, d, e, w15);		/* 79 */
+
+	context->state[0] += a;
+	context->state[1] += b;
+	context->state[2] += c;
+	context->state[3] += d;
+	context->state[4] += e;
+
+	/* Zeroize sensitive information. */
+	w15 = w14 = w13 = w12 = w11 = w10 = w9 = w8 = 0;
+	w7 = w6 = w5 = w4 = w3 = w2 = w1 = w0 = 0;
+}
+
+C:\Users\502525009\Downloads\VS2010Express1.iso
+
+N:\Software Dev Team
+
+C:\Users\502525009\Downloads\7z920-x64.msi
+
+C:\Users\502525009\Downloads\msvcr71.zip
+
+C:\Users\502525009\Downloads\VirtualBox-5.0.4-102546-Win.exe
+
+/*
+ * Copyright (c) 2000-2006 Apple Computer, Inc. All rights reserved.
+ *
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+ * 
+ * This file contains Original Code and/or Modifications of Original Code
+ * as defined in and that are subject to the Apple Public Source License
+ * Version 2.0 (the 'License'). You may not use this file except in
+ * compliance with the License. The rights granted to you under the License
+ * may not be used to create, or enable the creation or redistribution of,
+ * unlawful or unlicensed copies of an Apple operating system, or to
+ * circumvent, violate, or enable the circumvention or violation of, any
+ * terms of an Apple operating system software license agreement.
+ * 
+ * Please obtain a copy of the License at
+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
+ * 
+ * The Original Code and all software distributed under the License are
+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ * Please see the License for the specific language governing rights and
+ * limitations under the License.
+ * 
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+ */
+
+/*
+ * This SHA1 code is based on the basic framework from the reference
+ * implementation for MD5.  That implementation is Copyright (C)
+ * 1991-2, RSA Data Security, Inc. Created 1991. All rights reserved.
+ *
+ * License to copy and use this software is granted provided that it
+ * is identified as the "RSA Data Security, Inc. MD5 Message-Digest
+ * Algorithm" in all material mentioning or referencing this software
+ * or this function.
+ *
+ * License is also granted to make and use derivative works provided
+ * that such works are identified as "derived from the RSA Data
+ * Security, Inc. MD5 Message-Digest Algorithm" in all material
+ * mentioning or referencing the derived work.
+ *
+ * RSA Data Security, Inc. makes no representations concerning either
+ * the merchantability of this software or the suitability of this
+ * software for any particular purpose. It is provided "as is"
+ * without express or implied warranty of any kind.
+ *
+ * These notices must be retained in any copies of any part of this
+ * documentation and/or software.
+ *
+ * Based on the FIPS 180-1: Secure Hash Algorithm (SHA-1) available at
+ * http://www.itl.nist.gov/div897/pubs/fip180-1.htm
+ */
+
+#include <sys/types.h>
+#include <sys/systm.h>
+#include <libkern/OSAtomic.h>
+#include <libkern/crypto/sha1.h>
+
+#define	memset(x, y, z)	bzero(x, z);
+#define	memcpy(x, y, z)	bcopy(y, x, z)
+
+/* Internal mappings to the legacy sha1_ctxt structure. */
+#define	state	h.b32
+#define	bcount	c.b32
+#define	buffer	m.b8
+
+/*
+ * The digest algorithm interprets the input message as a sequence of 32-bit
+ * big-endian words.  We must reverse bytes in each word on x86/64 platforms,
+ * but not on big-endian ones such as PPC.  For performance, we take advantage
+ * of the bswap instruction on x86/64 to perform byte-reversal.  On PPC, we
+ * could do 4-byte load if the address is 4-byte aligned which should further
+ * improve the performance.  But for code simplicity, we punt and do 1-byte
+ * loads instead.
+ */
+#if (defined(__i386__) || defined(__x86_64__)) && defined(__GNUC__)
+#define	FETCH_32(p) ({							\
+	register u_int32_t l = (u_int32_t)*((const u_int32_t *)(p));	\
+	__asm__ __volatile__("bswap %0" : "=r" (l) : "0" (l));		\
+	l;								\
+})
+#else
+#define	FETCH_32(p)							\
+	(((u_int32_t)*((const u_int8_t *)(p) + 3)) |			\
+	(((u_int32_t)*((const u_int8_t *)(p) + 2)) << 8) |		\
+	(((u_int32_t)*((const u_int8_t *)(p) + 1)) << 16) |		\
+	(((u_int32_t)*((const u_int8_t *)(p))) << 24))
+#endif /* __i386__ || __x86_64__ */
+
+/*
+ * Encodes input (u_int32_t) into output (unsigned char). Assumes len is
+ * a multiple of 4. This is not compatible with memcpy().
+ */
+static void
+Encode(unsigned char *output, u_int32_t *input, unsigned int len)
+{
+	unsigned int i, j;
+
+	for (i = 0, j = 0; j < len; i++, j += 4) {
+		output[j + 3] = input[i] & 0xff;
+		output[j + 2] = (input[i] >> 8) & 0xff;
+		output[j + 1] = (input[i] >> 16) & 0xff;
+		output[j] = (input[i] >> 24) & 0xff;
+	}
+}
+
+static unsigned char PADDING[64] = { 0x80, /* zeros */ };
+
+/* Constants from FIPS 180-1 */
+#define	K_00_19		0x5a827999UL
+#define	K_20_39		0x6ed9eba1UL
+#define	K_40_59		0x8f1bbcdcUL
+#define	K_60_79		0xca62c1d6UL
+
+/* F, G, H and I are basic SHA1 functions. */
+#define	F(b, c, d)	((((c) ^ (d)) & (b)) ^ (d))
+#define	G(b, c, d)	((b) ^ (c) ^ (d))
+#define	H(b, c, d)	(((b) & (c)) | (((b) | (c)) & (d)))
+
+/* ROTATE_LEFT rotates x left n bits. */
+#define	ROTATE_LEFT(x, n) (((x) << (n)) | ((x) >> (32 - (n))))
+
+/* R, R1-R4 are macros used during each transformation round. */
+#define R(f, k, v, w, x, y, z, i) {				\
+	(v) = ROTATE_LEFT(w, 5) + f(x, y, z) + (v) + (i) + (k);	\
+	(x) = ROTATE_LEFT(x, 30);				\
+}
+
+#define	R1(v, w, x, y, z, i)	R(F, K_00_19, v, w, x, y, z, i)
+#define	R2(v, w, x, y, z, i)	R(G, K_20_39, v, w, x, y, z, i)
+#define	R3(v, w, x, y, z, i)	R(H, K_40_59, v, w, x, y, z, i)
+#define	R4(v, w, x, y, z, i)	R(G, K_60_79, v, w, x, y, z, i)
+
+/* WUPDATE represents Wt variable that gets updated for steps 16-79 */
+#define	WUPDATE(p, q, r, s) {		\
+	(p) = ((q) ^ (r) ^ (s) ^ (p));	\
+	(p) = ROTATE_LEFT(p, 1);	\
+}
+
+static void SHA1Transform(u_int32_t, u_int32_t, u_int32_t, u_int32_t,
+    u_int32_t, const u_int8_t *, SHA1_CTX *);
+
+void _SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen);
+
+void SHA1Final_r(SHA1_CTX *, void *);
+
+typedef kern_return_t (*InKernelPerformSHA1Func)(void *ref, const void *data, size_t dataLen, u_int32_t *inHash, u_int32_t options, u_int32_t *outHash, Boolean usePhysicalAddress); 
+void sha1_hardware_hook(Boolean option, InKernelPerformSHA1Func func, void *ref);
+static void *SHA1Ref;
+InKernelPerformSHA1Func performSHA1WithinKernelOnly; 
+#define SHA1_USE_HARDWARE_THRESHOLD 2048 //bytes 
+
+
+/*
+ * SHA1 initialization. Begins a SHA1 operation, writing a new context.
+ */
+void
+SHA1Init(SHA1_CTX *context)
+{
+	context->bcount[0] = context->bcount[1] = 0;
+	context->count = 0;
+
+	/* Load magic initialization constants.  */
+	context->state[0] = 0x67452301UL;
+	context->state[1] = 0xefcdab89UL;
+	context->state[2] = 0x98badcfeUL;
+	context->state[3] = 0x10325476UL;
+	context->state[4] = 0xc3d2e1f0UL;
+}
+
+/*
+ * SHA1 block update operation. Continues a SHA1 message-digest
+ * operation, processing another message block, and updating the
+ * context.
+ */
+void
+_SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	u_int32_t i, index, partLen;
+	const unsigned char *input = (const unsigned char *)inpp;
+
+	if (inputLen == 0)
+		return;
+
+	/* Compute number of bytes mod 64 */
+	index = (context->bcount[1] >> 3) & 0x3F;
+
+	/* Update number of bits */
+	if ((context->bcount[1] += (inputLen << 3)) < (inputLen << 3))
+		context->bcount[0]++;
+	context->bcount[0] += (inputLen >> 29);
+
+	partLen = 64 - index;
+
+	/* Transform as many times as possible. */
+	i = 0;
+	if (inputLen >= partLen) {
+		if (index != 0) {
+			memcpy(&context->buffer[index], input, partLen);
+			SHA1Transform(context->state[0], context->state[1],
+			    context->state[2], context->state[3],
+			    context->state[4], context->buffer, context);
+			i = partLen;
+		}
+
+		for (; i + 63 < inputLen; i += 64)
+			SHA1Transform(context->state[0], context->state[1],
+			    context->state[2], context->state[3],
+			    context->state[4], &input[i], context);
+
+		if (inputLen == i)
+			return;
+
+		index = 0;
+	}
+
+	/* Buffer remaining input */
+	memcpy(&context->buffer[index], &input[i], inputLen - i);
+}
+
+
+
+
+/*
+ * This function is called by the SHA1 hardware kext during its init. 
+ * This will register the function to call to perform SHA1 using hardware. 
+ */
+void sha1_hardware_hook(Boolean option, InKernelPerformSHA1Func func, void *ref)
+{
+	if(option) {
+		// Establish the hook. The hardware is ready.
+		OSCompareAndSwapPtr((void*)NULL, (void*)ref, (void * volatile*)&SHA1Ref); 
+
+		if(!OSCompareAndSwapPtr((void *)NULL, (void *)func, (void * volatile *)&performSHA1WithinKernelOnly)) {
+			panic("sha1_hardware_hook: Called twice.. Should never happen\n");
+		}
+	}
+	else {
+		// The hardware is going away. Tear down the hook. 	
+		performSHA1WithinKernelOnly = NULL;
+		SHA1Ref = NULL;
+	}
+}
+
+static u_int32_t SHA1UpdateWithHardware(SHA1_CTX *context, const unsigned char *data, size_t dataLen, Boolean usePhysicalAddress)
+{
+	u_int32_t *inHashBuffer = context->state;
+	u_int32_t options = 0;
+	int result;
+
+	result = performSHA1WithinKernelOnly(SHA1Ref, data, dataLen, inHashBuffer, options, inHashBuffer, usePhysicalAddress);
+	if(result != KERN_SUCCESS) {
+		//The hardware failed to hash for some reason. Fall back to software. 
+		return 0;
+	}
+
+	//Update the context with the total length.
+        /* Update number of bits */
+        if ((context->bcount[1] += (dataLen << 3)) < (dataLen << 3))
+                context->bcount[0]++;
+        context->bcount[0] += (dataLen >> 29);
+	return dataLen;
+}
+
+/*
+ * This is function is only called in from the pagefault path or from page_copy().
+ * So we assume that we can safely convert the virtual address to the physical address and use it.
+ * Assumptions: The passed in address(inpp) is a kernel virtual address 
+ * and a physical page has been faulted in. 
+ * The inputLen passed in should always be less than or equal to a  page size (4096) 
+ * and inpp should be on a page boundary. 
+ * "performSHA1WithinKernelOnly" is initialized only when the hardware driver exists and is ready.
+ */
+void SHA1UpdateUsePhysicalAddress(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	Boolean usePhysicalAddress = TRUE;
+	if((inputLen == PAGE_SIZE) && performSHA1WithinKernelOnly) { // If hardware exists and is ready.
+		if(SHA1UpdateWithHardware(context, (const unsigned char *)inpp, inputLen, usePhysicalAddress))
+			return;
+		//else for some reason the hardware failed.. 
+		//fall through to software and try the hash in software. 
+	}
+	//Use the software implementation since the hardware is absent or 
+	// has not been initialized yet or inputLen !=  PAGE_SIZE. 
+	_SHA1Update(context, inpp, inputLen);
+}
+
+/*
+ * A wrapper around _SHA1Update() to pick between software or hardware based SHA1. 
+ *
+ */
+void SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	const unsigned char *input = (const unsigned char *)inpp;
+	Boolean usePhysicalAddress = FALSE;
+	u_int32_t index;
+	
+	if((inputLen > SHA1_USE_HARDWARE_THRESHOLD) && performSHA1WithinKernelOnly) { 
+		index = (context->bcount[1] >> 3) & 0x3F;
+		if(index != 0) {  //bytes left in the context. Handle them first.
+			u_int32_t partLen = 64 - index;
+			memcpy(&context->buffer[index], input, partLen);
+			_SHA1Update(context, inpp, inputLen);
+			inputLen -= partLen; 
+			input += partLen; 
+		}
+		
+		u_int32_t lenForHardware = inputLen & (~0x3F); //multiple of 64
+		u_int32_t bytesHashed = 0;
+		bytesHashed = SHA1UpdateWithHardware(context, input, lenForHardware, usePhysicalAddress); 	
+		
+		inputLen -= bytesHashed;
+		input += bytesHashed;
+	}
+
+	//Fall through to the software implementation.
+	_SHA1Update(context, input, inputLen);
+}
+
+/*
+ * For backwards compatibility, sha1_result symbol is mapped to this
+ * routine since it's equivalent to SHA1Final with reversed parameters.
+ */
+void
+SHA1Final_r(SHA1_CTX *context, void *digest)
+{
+	SHA1Final(digest, context);
+}
+
+/*
+ * SHA1 finalization. Ends an SHA1 message-digest operation, writing the
+ * the message digest and zeroizing the context.
+ */
+void
+SHA1Final(void *digest, SHA1_CTX *context)
+{
+	unsigned char bits[8];
+	u_int32_t index = (context->bcount[1] >> 3) & 0x3f;
+
+	/* Save number of bits */
+	Encode(bits, context->bcount, 8);
+
+	/* Pad out to 56 mod 64. */
+	SHA1Update(context, PADDING, ((index < 56) ? 56 : 120) - index);
+
+	/* Append length (before padding) */
+	SHA1Update(context, bits, 8);
+
+	/* Store state in digest */
+	Encode(digest, context->state, 20);
+
+	/* Zeroize sensitive information. */
+	memset(context, 0, sizeof (*context));
+}
+
+/*
+ * SHA1 basic transformation. Transforms state based on block.
+ */
+static void
+SHA1Transform(u_int32_t a, u_int32_t b, u_int32_t c, u_int32_t d,
+    u_int32_t e, const u_int8_t block[64], SHA1_CTX *context)
+{
+	/* Register (instead of array) is a win in most cases */
+	register u_int32_t w0, w1, w2, w3, w4, w5, w6, w7;
+	register u_int32_t w8, w9, w10, w11, w12, w13, w14, w15;
+
+	w15 = FETCH_32(block + 60);
+	w14 = FETCH_32(block + 56);
+	w13 = FETCH_32(block + 52);
+	w12 = FETCH_32(block + 48);
+	w11 = FETCH_32(block + 44);
+	w10 = FETCH_32(block + 40);
+	w9  = FETCH_32(block + 36);
+	w8  = FETCH_32(block + 32);
+	w7  = FETCH_32(block + 28);
+	w6  = FETCH_32(block + 24);
+	w5  = FETCH_32(block + 20);
+	w4  = FETCH_32(block + 16);
+	w3  = FETCH_32(block + 12);
+	w2  = FETCH_32(block +  8);
+	w1  = FETCH_32(block +  4);
+	w0  = FETCH_32(block +  0);
+
+	/* Round 1 */
+					R1(e, a, b, c, d,  w0);		/*  0 */
+					R1(d, e, a, b, c,  w1);		/*  1 */
+					R1(c, d, e, a, b,  w2);		/*  2 */
+					R1(b, c, d, e, a,  w3);		/*  3 */
+					R1(a, b, c, d, e,  w4);		/*  4 */
+					R1(e, a, b, c, d,  w5);		/*  5 */
+					R1(d, e, a, b, c,  w6);		/*  6 */
+					R1(c, d, e, a, b,  w7);		/*  7 */
+					R1(b, c, d, e, a,  w8);		/*  8 */
+					R1(a, b, c, d, e,  w9);		/*  9 */
+					R1(e, a, b, c, d, w10);		/* 10 */
+					R1(d, e, a, b, c, w11);		/* 11 */
+					R1(c, d, e, a, b, w12);		/* 12 */
+					R1(b, c, d, e, a, w13);		/* 13 */
+					R1(a, b, c, d, e, w14);		/* 14 */
+					R1(e, a, b, c, d, w15);		/* 15 */
+	WUPDATE( w0, w13,  w8,  w2);	R1(d, e, a, b, c,  w0);		/* 16 */
+	WUPDATE( w1, w14,  w9,  w3);	R1(c, d, e, a, b,  w1);		/* 17 */
+	WUPDATE( w2, w15, w10,  w4);	R1(b, c, d, e, a,  w2);		/* 18 */
+	WUPDATE( w3,  w0, w11,  w5);	R1(a, b, c, d, e,  w3);		/* 19 */
+
+	/* Round 2 */
+	WUPDATE( w4,  w1, w12,  w6);	R2(e, a, b, c, d,  w4);		/* 20 */
+	WUPDATE( w5,  w2, w13,  w7);	R2(d, e, a, b, c,  w5);		/* 21 */
+	WUPDATE( w6,  w3, w14,  w8);	R2(c, d, e, a, b,  w6);		/* 22 */
+	WUPDATE( w7,  w4, w15,  w9);	R2(b, c, d, e, a,  w7);		/* 23 */
+	WUPDATE( w8,  w5,  w0, w10);	R2(a, b, c, d, e,  w8);		/* 24 */
+	WUPDATE( w9,  w6,  w1, w11);	R2(e, a, b, c, d,  w9);		/* 25 */
+	WUPDATE(w10,  w7,  w2, w12);	R2(d, e, a, b, c, w10);		/* 26 */
+	WUPDATE(w11,  w8,  w3, w13);	R2(c, d, e, a, b, w11);		/* 27 */
+	WUPDATE(w12,  w9,  w4, w14);	R2(b, c, d, e, a, w12);		/* 28 */
+	WUPDATE(w13, w10,  w5, w15);	R2(a, b, c, d, e, w13);		/* 29 */
+	WUPDATE(w14, w11,  w6,  w0);	R2(e, a, b, c, d, w14);		/* 30 */
+	WUPDATE(w15, w12,  w7,  w1);	R2(d, e, a, b, c, w15);		/* 31 */
+	WUPDATE( w0, w13,  w8,  w2);	R2(c, d, e, a, b,  w0);		/* 32 */
+	WUPDATE( w1, w14,  w9,  w3);	R2(b, c, d, e, a,  w1);		/* 33 */
+	WUPDATE( w2, w15, w10,  w4);	R2(a, b, c, d, e,  w2);		/* 34 */
+	WUPDATE( w3,  w0, w11,  w5);	R2(e, a, b, c, d,  w3);		/* 35 */
+	WUPDATE( w4,  w1, w12,  w6);	R2(d, e, a, b, c,  w4);		/* 36 */
+	WUPDATE( w5,  w2, w13,  w7);	R2(c, d, e, a, b,  w5);		/* 37 */
+	WUPDATE( w6,  w3, w14,  w8);	R2(b, c, d, e, a,  w6);		/* 38 */
+	WUPDATE( w7,  w4, w15,  w9);	R2(a, b, c, d, e,  w7);		/* 39 */
+
+	/* Round 3 */
+	WUPDATE( w8,  w5,  w0, w10);	R3(e, a, b, c, d,  w8);		/* 40 */
+	WUPDATE( w9,  w6,  w1, w11);	R3(d, e, a, b, c,  w9);		/* 41 */
+	WUPDATE(w10,  w7,  w2, w12);	R3(c, d, e, a, b, w10);		/* 42 */
+	WUPDATE(w11,  w8,  w3, w13);	R3(b, c, d, e, a, w11);		/* 43 */
+	WUPDATE(w12,  w9,  w4, w14);	R3(a, b, c, d, e, w12);		/* 44 */
+	WUPDATE(w13, w10,  w5, w15);	R3(e, a, b, c, d, w13);		/* 45 */
+	WUPDATE(w14, w11,  w6,  w0);	R3(d, e, a, b, c, w14);		/* 46 */
+	WUPDATE(w15, w12,  w7,  w1);	R3(c, d, e, a, b, w15);		/* 47 */
+	WUPDATE( w0, w13,  w8,  w2);	R3(b, c, d, e, a,  w0);		/* 48 */
+	WUPDATE( w1, w14,  w9,  w3);	R3(a, b, c, d, e,  w1);		/* 49 */
+	WUPDATE( w2, w15, w10,  w4);	R3(e, a, b, c, d,  w2);		/* 50 */
+	WUPDATE( w3,  w0, w11,  w5);	R3(d, e, a, b, c,  w3);		/* 51 */
+	WUPDATE( w4,  w1, w12,  w6);	R3(c, d, e, a, b,  w4);		/* 52 */
+	WUPDATE( w5,  w2, w13,  w7);	R3(b, c, d, e, a,  w5);		/* 53 */
+	WUPDATE( w6,  w3, w14,  w8);	R3(a, b, c, d, e,  w6);		/* 54 */
+	WUPDATE( w7,  w4, w15,  w9);	R3(e, a, b, c, d,  w7);		/* 55 */
+	WUPDATE( w8,  w5,  w0, w10);	R3(d, e, a, b, c,  w8);		/* 56 */
+	WUPDATE( w9,  w6,  w1, w11);	R3(c, d, e, a, b,  w9);		/* 57 */
+	WUPDATE(w10,  w7,  w2, w12);	R3(b, c, d, e, a, w10);		/* 58 */
+	WUPDATE(w11,  w8,  w3, w13);	R3(a, b, c, d, e, w11);		/* 59 */
+
+	WUPDATE(w12,  w9,  w4, w14);	R4(e, a, b, c, d, w12);		/* 60 */
+	WUPDATE(w13, w10,  w5, w15);	R4(d, e, a, b, c, w13);		/* 61 */
+	WUPDATE(w14, w11,  w6,  w0);	R4(c, d, e, a, b, w14);		/* 62 */
+	WUPDATE(w15, w12,  w7,  w1);	R4(b, c, d, e, a, w15);		/* 63 */
+	WUPDATE( w0, w13,  w8,  w2);	R4(a, b, c, d, e,  w0);		/* 64 */
+	WUPDATE( w1, w14,  w9,  w3);	R4(e, a, b, c, d,  w1);		/* 65 */
+	WUPDATE( w2, w15, w10,  w4);	R4(d, e, a, b, c,  w2);		/* 66 */
+	WUPDATE( w3,  w0, w11,  w5);	R4(c, d, e, a, b,  w3);		/* 67 */
+	WUPDATE( w4,  w1, w12,  w6);	R4(b, c, d, e, a,  w4);		/* 68 */
+	WUPDATE( w5,  w2, w13,  w7);	R4(a, b, c, d, e,  w5);		/* 69 */
+	WUPDATE( w6,  w3, w14,  w8);	R4(e, a, b, c, d,  w6);		/* 70 */
+	WUPDATE( w7,  w4, w15,  w9);	R4(d, e, a, b, c,  w7);		/* 71 */
+	WUPDATE( w8,  w5,  w0, w10);	R4(c, d, e, a, b,  w8);		/* 72 */
+	WUPDATE( w9,  w6,  w1, w11);	R4(b, c, d, e, a,  w9);		/* 73 */
+	WUPDATE(w10,  w7,  w2, w12);	R4(a, b, c, d, e, w10);		/* 74 */
+	WUPDATE(w11,  w8,  w3, w13);	R4(e, a, b, c, d, w11);		/* 75 */
+	WUPDATE(w12,  w9,  w4, w14);	R4(d, e, a, b, c, w12);		/* 76 */
+	WUPDATE(w13, w10,  w5, w15);	R4(c, d, e, a, b, w13);		/* 77 */
+	WUPDATE(w14, w11,  w6,  w0);	R4(b, c, d, e, a, w14);		/* 78 */
+	WUPDATE(w15, w12,  w7,  w1);	R4(a, b, c, d, e, w15);		/* 79 */
+
+	context->state[0] += a;
+	context->state[1] += b;
+	context->state[2] += c;
+	context->state[3] += d;
+	context->state[4] += e;
+
+	/* Zeroize sensitive information. */
+	w15 = w14 = w13 = w12 = w11 = w10 = w9 = w8 = 0;
+	w7 = w6 = w5 = w4 = w3 = w2 = w1 = w0 = 0;
+}
+
+XML signing with 509 certification
+Hello,
+I need to develop code which will sign, and verify, a XML message. Once its signed the signing has to be certifies with a 509 certificate. There seems to be a reasonably good amount of information on the web about doing all this in C# or Java which I can use for test purposes, but I need to develop my main code in 'C' and it has to be light weight and free from dll's. 
+I found one website www.aleksey.com which does have some code I could use, but it seems quite heavy and I needs something more stripped down and light weight. 
+I was using TinyXML to do the original XML parsing but that doesn't seem to have a signing part to it.
+
+Would anyone be able to point me in the right direction or to the right website, any information I would be very greatful. 
+
+Thanks.
+
+/*
+ * Copyright (c) 2000-2006 Apple Computer, Inc. All rights reserved.
+ *
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_START@
+ * 
+ * This file contains Original Code and/or Modifications of Original Code
+ * as defined in and that are subject to the Apple Public Source License
+ * Version 2.0 (the 'License'). You may not use this file except in
+ * compliance with the License. The rights granted to you under the License
+ * may not be used to create, or enable the creation or redistribution of,
+ * unlawful or unlicensed copies of an Apple operating system, or to
+ * circumvent, violate, or enable the circumvention or violation of, any
+ * terms of an Apple operating system software license agreement.
+ * 
+ * Please obtain a copy of the License at
+ * http://www.opensource.apple.com/apsl/ and read it before using this file.
+ * 
+ * The Original Code and all software distributed under the License are
+ * distributed on an 'AS IS' basis, WITHOUT WARRANTY OF ANY KIND, EITHER
+ * EXPRESS OR IMPLIED, AND APPLE HEREBY DISCLAIMS ALL SUCH WARRANTIES,
+ * INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT OR NON-INFRINGEMENT.
+ * Please see the License for the specific language governing rights and
+ * limitations under the License.
+ * 
+ * @APPLE_OSREFERENCE_LICENSE_HEADER_END@
+ */
+
+/*
+ * This SHA1 code is based on the basic framework from the reference
+ * implementation for MD5.  That implementation is Copyright (C)
+ * 1991-2, RSA Data Security, Inc. Created 1991. All rights reserved.
+ *
+ * License to copy and use this software is granted provided that it
+ * is identified as the "RSA Data Security, Inc. MD5 Message-Digest
+ * Algorithm" in all material mentioning or referencing this software
+ * or this function.
+ *
+ * License is also granted to make and use derivative works provided
+ * that such works are identified as "derived from the RSA Data
+ * Security, Inc. MD5 Message-Digest Algorithm" in all material
+ * mentioning or referencing the derived work.
+ *
+ * RSA Data Security, Inc. makes no representations concerning either
+ * the merchantability of this software or the suitability of this
+ * software for any particular purpose. It is provided "as is"
+ * without express or implied warranty of any kind.
+ *
+ * These notices must be retained in any copies of any part of this
+ * documentation and/or software.
+ *
+ * Based on the FIPS 180-1: Secure Hash Algorithm (SHA-1) available at
+ * http://www.itl.nist.gov/div897/pubs/fip180-1.htm
+ */
+
+#include <sys/types.h>
+#include <sys/systm.h>
+#include <libkern/OSAtomic.h>
+#include <libkern/crypto/sha1.h>
+
+#define	memset(x, y, z)	bzero(x, z);
+#define	memcpy(x, y, z)	bcopy(y, x, z)
+
+/* Internal mappings to the legacy sha1_ctxt structure. */
+#define	state	h.b32
+#define	bcount	c.b32
+#define	buffer	m.b8
+
+/*
+ * The digest algorithm interprets the input message as a sequence of 32-bit
+ * big-endian words.  We must reverse bytes in each word on x86/64 platforms,
+ * but not on big-endian ones such as PPC.  For performance, we take advantage
+ * of the bswap instruction on x86/64 to perform byte-reversal.  On PPC, we
+ * could do 4-byte load if the address is 4-byte aligned which should further
+ * improve the performance.  But for code simplicity, we punt and do 1-byte
+ * loads instead.
+ */
+#if (defined(__i386__) || defined(__x86_64__)) && defined(__GNUC__)
+#define	FETCH_32(p) ({							\
+	register u_int32_t l = (u_int32_t)*((const u_int32_t *)(p));	\
+	__asm__ __volatile__("bswap %0" : "=r" (l) : "0" (l));		\
+	l;								\
+})
+#else
+#define	FETCH_32(p)							\
+	(((u_int32_t)*((const u_int8_t *)(p) + 3)) |			\
+	(((u_int32_t)*((const u_int8_t *)(p) + 2)) << 8) |		\
+	(((u_int32_t)*((const u_int8_t *)(p) + 1)) << 16) |		\
+	(((u_int32_t)*((const u_int8_t *)(p))) << 24))
+#endif /* __i386__ || __x86_64__ */
+
+/*
+ * Encodes input (u_int32_t) into output (unsigned char). Assumes len is
+ * a multiple of 4. This is not compatible with memcpy().
+ */
+static void
+Encode(unsigned char *output, u_int32_t *input, unsigned int len)
+{
+	unsigned int i, j;
+
+	for (i = 0, j = 0; j < len; i++, j += 4) {
+		output[j + 3] = input[i] & 0xff;
+		output[j + 2] = (input[i] >> 8) & 0xff;
+		output[j + 1] = (input[i] >> 16) & 0xff;
+		output[j] = (input[i] >> 24) & 0xff;
+	}
+}
+
+static unsigned char PADDING[64] = { 0x80, /* zeros */ };
+
+/* Constants from FIPS 180-1 */
+#define	K_00_19		0x5a827999UL
+#define	K_20_39		0x6ed9eba1UL
+#define	K_40_59		0x8f1bbcdcUL
+#define	K_60_79		0xca62c1d6UL
+
+/* F, G, H and I are basic SHA1 functions. */
+#define	F(b, c, d)	((((c) ^ (d)) & (b)) ^ (d))
+#define	G(b, c, d)	((b) ^ (c) ^ (d))
+#define	H(b, c, d)	(((b) & (c)) | (((b) | (c)) & (d)))
+
+/* ROTATE_LEFT rotates x left n bits. */
+#define	ROTATE_LEFT(x, n) (((x) << (n)) | ((x) >> (32 - (n))))
+
+/* R, R1-R4 are macros used during each transformation round. */
+#define R(f, k, v, w, x, y, z, i) {				\
+	(v) = ROTATE_LEFT(w, 5) + f(x, y, z) + (v) + (i) + (k);	\
+	(x) = ROTATE_LEFT(x, 30);				\
+}
+
+#define	R1(v, w, x, y, z, i)	R(F, K_00_19, v, w, x, y, z, i)
+#define	R2(v, w, x, y, z, i)	R(G, K_20_39, v, w, x, y, z, i)
+#define	R3(v, w, x, y, z, i)	R(H, K_40_59, v, w, x, y, z, i)
+#define	R4(v, w, x, y, z, i)	R(G, K_60_79, v, w, x, y, z, i)
+
+/* WUPDATE represents Wt variable that gets updated for steps 16-79 */
+#define	WUPDATE(p, q, r, s) {		\
+	(p) = ((q) ^ (r) ^ (s) ^ (p));	\
+	(p) = ROTATE_LEFT(p, 1);	\
+}
+
+static void SHA1Transform(u_int32_t, u_int32_t, u_int32_t, u_int32_t,
+    u_int32_t, const u_int8_t *, SHA1_CTX *);
+
+void _SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen);
+
+void SHA1Final_r(SHA1_CTX *, void *);
+
+typedef kern_return_t (*InKernelPerformSHA1Func)(void *ref, const void *data, size_t dataLen, u_int32_t *inHash, u_int32_t options, u_int32_t *outHash, Boolean usePhysicalAddress); 
+void sha1_hardware_hook(Boolean option, InKernelPerformSHA1Func func, void *ref);
+static void *SHA1Ref;
+InKernelPerformSHA1Func performSHA1WithinKernelOnly; 
+#define SHA1_USE_HARDWARE_THRESHOLD 2048 //bytes 
+
+
+/*
+ * SHA1 initialization. Begins a SHA1 operation, writing a new context.
+ */
+void
+SHA1Init(SHA1_CTX *context)
+{
+	context->bcount[0] = context->bcount[1] = 0;
+	context->count = 0;
+
+	/* Load magic initialization constants.  */
+	context->state[0] = 0x67452301UL;
+	context->state[1] = 0xefcdab89UL;
+	context->state[2] = 0x98badcfeUL;
+	context->state[3] = 0x10325476UL;
+	context->state[4] = 0xc3d2e1f0UL;
+}
+
+/*
+ * SHA1 block update operation. Continues a SHA1 message-digest
+ * operation, processing another message block, and updating the
+ * context.
+ */
+void
+_SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	u_int32_t i, index, partLen;
+	const unsigned char *input = (const unsigned char *)inpp;
+
+	if (inputLen == 0)
+		return;
+
+	/* Compute number of bytes mod 64 */
+	index = (context->bcount[1] >> 3) & 0x3F;
+
+	/* Update number of bits */
+	if ((context->bcount[1] += (inputLen << 3)) < (inputLen << 3))
+		context->bcount[0]++;
+	context->bcount[0] += (inputLen >> 29);
+
+	partLen = 64 - index;
+
+	/* Transform as many times as possible. */
+	i = 0;
+	if (inputLen >= partLen) {
+		if (index != 0) {
+			memcpy(&context->buffer[index], input, partLen);
+			SHA1Transform(context->state[0], context->state[1],
+			    context->state[2], context->state[3],
+			    context->state[4], context->buffer, context);
+			i = partLen;
+		}
+
+		for (; i + 63 < inputLen; i += 64)
+			SHA1Transform(context->state[0], context->state[1],
+			    context->state[2], context->state[3],
+			    context->state[4], &input[i], context);
+
+		if (inputLen == i)
+			return;
+
+		index = 0;
+	}
+
+	/* Buffer remaining input */
+	memcpy(&context->buffer[index], &input[i], inputLen - i);
+}
+
+
+
+
+/*
+ * This function is called by the SHA1 hardware kext during its init. 
+ * This will register the function to call to perform SHA1 using hardware. 
+ */
+void sha1_hardware_hook(Boolean option, InKernelPerformSHA1Func func, void *ref)
+{
+	if(option) {
+		// Establish the hook. The hardware is ready.
+		OSCompareAndSwapPtr((void*)NULL, (void*)ref, (void * volatile*)&SHA1Ref); 
+
+		if(!OSCompareAndSwapPtr((void *)NULL, (void *)func, (void * volatile *)&performSHA1WithinKernelOnly)) {
+			panic("sha1_hardware_hook: Called twice.. Should never happen\n");
+		}
+	}
+	else {
+		// The hardware is going away. Tear down the hook. 	
+		performSHA1WithinKernelOnly = NULL;
+		SHA1Ref = NULL;
+	}
+}
+
+static u_int32_t SHA1UpdateWithHardware(SHA1_CTX *context, const unsigned char *data, size_t dataLen, Boolean usePhysicalAddress)
+{
+	u_int32_t *inHashBuffer = context->state;
+	u_int32_t options = 0;
+	int result;
+
+	result = performSHA1WithinKernelOnly(SHA1Ref, data, dataLen, inHashBuffer, options, inHashBuffer, usePhysicalAddress);
+	if(result != KERN_SUCCESS) {
+		//The hardware failed to hash for some reason. Fall back to software. 
+		return 0;
+	}
+
+	//Update the context with the total length.
+        /* Update number of bits */
+        if ((context->bcount[1] += (dataLen << 3)) < (dataLen << 3))
+                context->bcount[0]++;
+        context->bcount[0] += (dataLen >> 29);
+	return dataLen;
+}
+
+/*
+ * This is function is only called in from the pagefault path or from page_copy().
+ * So we assume that we can safely convert the virtual address to the physical address and use it.
+ * Assumptions: The passed in address(inpp) is a kernel virtual address 
+ * and a physical page has been faulted in. 
+ * The inputLen passed in should always be less than or equal to a  page size (4096) 
+ * and inpp should be on a page boundary. 
+ * "performSHA1WithinKernelOnly" is initialized only when the hardware driver exists and is ready.
+ */
+void SHA1UpdateUsePhysicalAddress(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	Boolean usePhysicalAddress = TRUE;
+	if((inputLen == PAGE_SIZE) && performSHA1WithinKernelOnly) { // If hardware exists and is ready.
+		if(SHA1UpdateWithHardware(context, (const unsigned char *)inpp, inputLen, usePhysicalAddress))
+			return;
+		//else for some reason the hardware failed.. 
+		//fall through to software and try the hash in software. 
+	}
+	//Use the software implementation since the hardware is absent or 
+	// has not been initialized yet or inputLen !=  PAGE_SIZE. 
+	_SHA1Update(context, inpp, inputLen);
+}
+
+/*
+ * A wrapper around _SHA1Update() to pick between software or hardware based SHA1. 
+ *
+ */
+void SHA1Update(SHA1_CTX *context, const void *inpp, size_t inputLen)
+{
+	const unsigned char *input = (const unsigned char *)inpp;
+	Boolean usePhysicalAddress = FALSE;
+	u_int32_t index;
+	
+	if((inputLen > SHA1_USE_HARDWARE_THRESHOLD) && performSHA1WithinKernelOnly) { 
+		index = (context->bcount[1] >> 3) & 0x3F;
+		if(index != 0) {  //bytes left in the context. Handle them first.
+			u_int32_t partLen = 64 - index;
+			memcpy(&context->buffer[index], input, partLen);
+			_SHA1Update(context, inpp, inputLen);
+			inputLen -= partLen; 
+			input += partLen; 
+		}
+		
+		u_int32_t lenForHardware = inputLen & (~0x3F); //multiple of 64
+		u_int32_t bytesHashed = 0;
+		bytesHashed = SHA1UpdateWithHardware(context, input, lenForHardware, usePhysicalAddress); 	
+		
+		inputLen -= bytesHashed;
+		input += bytesHashed;
+	}
+
+	//Fall through to the software implementation.
+	_SHA1Update(context, input, inputLen);
+}
+
+/*
+ * For backwards compatibility, sha1_result symbol is mapped to this
+ * routine since it's equivalent to SHA1Final with reversed parameters.
+ */
+void
+SHA1Final_r(SHA1_CTX *context, void *digest)
+{
+	SHA1Final(digest, context);
+}
+
+/*
+ * SHA1 finalization. Ends an SHA1 message-digest operation, writing the
+ * the message digest and zeroizing the context.
+ */
+void
+SHA1Final(void *digest, SHA1_CTX *context)
+{
+	unsigned char bits[8];
+	u_int32_t index = (context->bcount[1] >> 3) & 0x3f;
+
+	/* Save number of bits */
+	Encode(bits, context->bcount, 8);
+
+	/* Pad out to 56 mod 64. */
+	SHA1Update(context, PADDING, ((index < 56) ? 56 : 120) - index);
+
+	/* Append length (before padding) */
+	SHA1Update(context, bits, 8);
+
+	/* Store state in digest */
+	Encode(digest, context->state, 20);
+
+	/* Zeroize sensitive information. */
+	memset(context, 0, sizeof (*context));
+}
+
+/*
+ * SHA1 basic transformation. Transforms state based on block.
+ */
+static void
+SHA1Transform(u_int32_t a, u_int32_t b, u_int32_t c, u_int32_t d,
+    u_int32_t e, const u_int8_t block[64], SHA1_CTX *context)
+{
+	/* Register (instead of array) is a win in most cases */
+	register u_int32_t w0, w1, w2, w3, w4, w5, w6, w7;
+	register u_int32_t w8, w9, w10, w11, w12, w13, w14, w15;
+
+	w15 = FETCH_32(block + 60);
+	w14 = FETCH_32(block + 56);
+	w13 = FETCH_32(block + 52);
+	w12 = FETCH_32(block + 48);
+	w11 = FETCH_32(block + 44);
+	w10 = FETCH_32(block + 40);
+	w9  = FETCH_32(block + 36);
+	w8  = FETCH_32(block + 32);
+	w7  = FETCH_32(block + 28);
+	w6  = FETCH_32(block + 24);
+	w5  = FETCH_32(block + 20);
+	w4  = FETCH_32(block + 16);
+	w3  = FETCH_32(block + 12);
+	w2  = FETCH_32(block +  8);
+	w1  = FETCH_32(block +  4);
+	w0  = FETCH_32(block +  0);
+
+	/* Round 1 */
+					R1(e, a, b, c, d,  w0);		/*  0 */
+					R1(d, e, a, b, c,  w1);		/*  1 */
+					R1(c, d, e, a, b,  w2);		/*  2 */
+					R1(b, c, d, e, a,  w3);		/*  3 */
+					R1(a, b, c, d, e,  w4);		/*  4 */
+					R1(e, a, b, c, d,  w5);		/*  5 */
+					R1(d, e, a, b, c,  w6);		/*  6 */
+					R1(c, d, e, a, b,  w7);		/*  7 */
+					R1(b, c, d, e, a,  w8);		/*  8 */
+					R1(a, b, c, d, e,  w9);		/*  9 */
+					R1(e, a, b, c, d, w10);		/* 10 */
+					R1(d, e, a, b, c, w11);		/* 11 */
+					R1(c, d, e, a, b, w12);		/* 12 */
+					R1(b, c, d, e, a, w13);		/* 13 */
+					R1(a, b, c, d, e, w14);		/* 14 */
+					R1(e, a, b, c, d, w15);		/* 15 */
+	WUPDATE( w0, w13,  w8,  w2);	R1(d, e, a, b, c,  w0);		/* 16 */
+	WUPDATE( w1, w14,  w9,  w3);	R1(c, d, e, a, b,  w1);		/* 17 */
+	WUPDATE( w2, w15, w10,  w4);	R1(b, c, d, e, a,  w2);		/* 18 */
+	WUPDATE( w3,  w0, w11,  w5);	R1(a, b, c, d, e,  w3);		/* 19 */
+
+	/* Round 2 */
+	WUPDATE( w4,  w1, w12,  w6);	R2(e, a, b, c, d,  w4);		/* 20 */
+	WUPDATE( w5,  w2, w13,  w7);	R2(d, e, a, b, c,  w5);		/* 21 */
+	WUPDATE( w6,  w3, w14,  w8);	R2(c, d, e, a, b,  w6);		/* 22 */
+	WUPDATE( w7,  w4, w15,  w9);	R2(b, c, d, e, a,  w7);		/* 23 */
+	WUPDATE( w8,  w5,  w0, w10);	R2(a, b, c, d, e,  w8);		/* 24 */
+	WUPDATE( w9,  w6,  w1, w11);	R2(e, a, b, c, d,  w9);		/* 25 */
+	WUPDATE(w10,  w7,  w2, w12);	R2(d, e, a, b, c, w10);		/* 26 */
+	WUPDATE(w11,  w8,  w3, w13);	R2(c, d, e, a, b, w11);		/* 27 */
+	WUPDATE(w12,  w9,  w4, w14);	R2(b, c, d, e, a, w12);		/* 28 */
+	WUPDATE(w13, w10,  w5, w15);	R2(a, b, c, d, e, w13);		/* 29 */
+	WUPDATE(w14, w11,  w6,  w0);	R2(e, a, b, c, d, w14);		/* 30 */
+	WUPDATE(w15, w12,  w7,  w1);	R2(d, e, a, b, c, w15);		/* 31 */
+	WUPDATE( w0, w13,  w8,  w2);	R2(c, d, e, a, b,  w0);		/* 32 */
+	WUPDATE( w1, w14,  w9,  w3);	R2(b, c, d, e, a,  w1);		/* 33 */
+	WUPDATE( w2, w15, w10,  w4);	R2(a, b, c, d, e,  w2);		/* 34 */
+	WUPDATE( w3,  w0, w11,  w5);	R2(e, a, b, c, d,  w3);		/* 35 */
+	WUPDATE( w4,  w1, w12,  w6);	R2(d, e, a, b, c,  w4);		/* 36 */
+	WUPDATE( w5,  w2, w13,  w7);	R2(c, d, e, a, b,  w5);		/* 37 */
+	WUPDATE( w6,  w3, w14,  w8);	R2(b, c, d, e, a,  w6);		/* 38 */
+	WUPDATE( w7,  w4, w15,  w9);	R2(a, b, c, d, e,  w7);		/* 39 */
+
+	/* Round 3 */
+	WUPDATE( w8,  w5,  w0, w10);	R3(e, a, b, c, d,  w8);		/* 40 */
+	WUPDATE( w9,  w6,  w1, w11);	R3(d, e, a, b, c,  w9);		/* 41 */
+	WUPDATE(w10,  w7,  w2, w12);	R3(c, d, e, a, b, w10);		/* 42 */
+	WUPDATE(w11,  w8,  w3, w13);	R3(b, c, d, e, a, w11);		/* 43 */
+	WUPDATE(w12,  w9,  w4, w14);	R3(a, b, c, d, e, w12);		/* 44 */
+	WUPDATE(w13, w10,  w5, w15);	R3(e, a, b, c, d, w13);		/* 45 */
+	WUPDATE(w14, w11,  w6,  w0);	R3(d, e, a, b, c, w14);		/* 46 */
+	WUPDATE(w15, w12,  w7,  w1);	R3(c, d, e, a, b, w15);		/* 47 */
+	WUPDATE( w0, w13,  w8,  w2);	R3(b, c, d, e, a,  w0);		/* 48 */
+	WUPDATE( w1, w14,  w9,  w3);	R3(a, b, c, d, e,  w1);		/* 49 */
+	WUPDATE( w2, w15, w10,  w4);	R3(e, a, b, c, d,  w2);		/* 50 */
+	WUPDATE( w3,  w0, w11,  w5);	R3(d, e, a, b, c,  w3);		/* 51 */
+	WUPDATE( w4,  w1, w12,  w6);	R3(c, d, e, a, b,  w4);		/* 52 */
+	WUPDATE( w5,  w2, w13,  w7);	R3(b, c, d, e, a,  w5);		/* 53 */
+	WUPDATE( w6,  w3, w14,  w8);	R3(a, b, c, d, e,  w6);		/* 54 */
+	WUPDATE( w7,  w4, w15,  w9);	R3(e, a, b, c, d,  w7);		/* 55 */
+	WUPDATE( w8,  w5,  w0, w10);	R3(d, e, a, b, c,  w8);		/* 56 */
+	WUPDATE( w9,  w6,  w1, w11);	R3(c, d, e, a, b,  w9);		/* 57 */
+	WUPDATE(w10,  w7,  w2, w12);	R3(b, c, d, e, a, w10);		/* 58 */
+	WUPDATE(w11,  w8,  w3, w13);	R3(a, b, c, d, e, w11);		/* 59 */
+
+	WUPDATE(w12,  w9,  w4, w14);	R4(e, a, b, c, d, w12);		/* 60 */
+	WUPDATE(w13, w10,  w5, w15);	R4(d, e, a, b, c, w13);		/* 61 */
+	WUPDATE(w14, w11,  w6,  w0);	R4(c, d, e, a, b, w14);		/* 62 */
+	WUPDATE(w15, w12,  w7,  w1);	R4(b, c, d, e, a, w15);		/* 63 */
+	WUPDATE( w0, w13,  w8,  w2);	R4(a, b, c, d, e,  w0);		/* 64 */
+	WUPDATE( w1, w14,  w9,  w3);	R4(e, a, b, c, d,  w1);		/* 65 */
+	WUPDATE( w2, w15, w10,  w4);	R4(d, e, a, b, c,  w2);		/* 66 */
+	WUPDATE( w3,  w0, w11,  w5);	R4(c, d, e, a, b,  w3);		/* 67 */
+	WUPDATE( w4,  w1, w12,  w6);	R4(b, c, d, e, a,  w4);		/* 68 */
+	WUPDATE( w5,  w2, w13,  w7);	R4(a, b, c, d, e,  w5);		/* 69 */
+	WUPDATE( w6,  w3, w14,  w8);	R4(e, a, b, c, d,  w6);		/* 70 */
+	WUPDATE( w7,  w4, w15,  w9);	R4(d, e, a, b, c,  w7);		/* 71 */
+	WUPDATE( w8,  w5,  w0, w10);	R4(c, d, e, a, b,  w8);		/* 72 */
+	WUPDATE( w9,  w6,  w1, w11);	R4(b, c, d, e, a,  w9);		/* 73 */
+	WUPDATE(w10,  w7,  w2, w12);	R4(a, b, c, d, e, w10);		/* 74 */
+	WUPDATE(w11,  w8,  w3, w13);	R4(e, a, b, c, d, w11);		/* 75 */
+	WUPDATE(w12,  w9,  w4, w14);	R4(d, e, a, b, c, w12);		/* 76 */
+	WUPDATE(w13, w10,  w5, w15);	R4(c, d, e, a, b, w13);		/* 77 */
+	WUPDATE(w14, w11,  w6,  w0);	R4(b, c, d, e, a, w14);		/* 78 */
+	WUPDATE(w15, w12,  w7,  w1);	R4(a, b, c, d, e, w15);		/* 79 */
+
+	context->state[0] += a;
+	context->state[1] += b;
+	context->state[2] += c;
+	context->state[3] += d;
+	context->state[4] += e;
+
+	/* Zeroize sensitive information. */
+	w15 = w14 = w13 = w12 = w11 = w10 = w9 = w8 = 0;
+	w7 = w6 = w5 = w4 = w3 = w2 = w1 = w0 = 0;
+}
+
+/*
+SHA-1 in C
+By Steve Reid <sreid@sea-to-sky.net>
+100% Public Domain
+
+-----------------
+Modified 7/98
+By James H. Brown <jbrown@burgoyne.com>
+Still 100% Public Domain
+
+Corrected a problem which generated improper hash values on 16 bit machines
+Routine SHA1Update changed from
+	void SHA1Update(SHA1_CTX* context, unsigned char* data, unsigned int
+len)
+to
+	void SHA1Update(SHA1_CTX* context, unsigned char* data, unsigned
+long len)
+
+The 'len' parameter was declared an int which works fine on 32 bit machines.
+However, on 16 bit machines an int is too small for the shifts being done
+against
+it.  This caused the hash function to generate incorrect values if len was
+greater than 8191 (8K - 1) due to the 'len << 3' on line 3 of SHA1Update().
+
+Since the file IO in main() reads 16K at a time, any file 8K or larger would
+be guaranteed to generate the wrong hash (e.g. Test Vector #3, a million
+"a"s).
+
+I also changed the declaration of variables i & j in SHA1Update to
+unsigned long from unsigned int for the same reason.
+
+These changes should make no difference to any 32 bit implementations since
+an
+int and a long are the same size in those environments.
+
+--
+I also corrected a few compiler warnings generated by Borland C.
+1. Added #include <process.h> for exit() prototype
+2. Removed unused variable 'j' in SHA1Final
+3. Changed exit(0) to return(0) at end of main.
+
+ALL changes I made can be located by searching for comments containing 'JHB'
+-----------------
+Modified 8/98
+By Steve Reid <sreid@sea-to-sky.net>
+Still 100% public domain
+
+1- Removed #include <process.h> and used return() instead of exit()
+2- Fixed overwriting of finalcount in SHA1Final() (discovered by Chris Hall)
+3- Changed email address from steve@edmweb.com to sreid@sea-to-sky.net
+
+-----------------
+Modified 4/01
+By Saul Kravitz <Saul.Kravitz@celera.com>
+Still 100% PD
+Modified to run on Compaq Alpha hardware.
+
+-----------------
+Modified 07/2002
+By Ralph Giles <giles@ghostscript.com>
+Still 100% public domain
+modified for use with stdint types, autoconf
+code cleanup, removed attribution comments
+switched SHA1Final() argument order for consistency
+use SHA1_ prefix for public api
+move public api to sha1.h
+*/
+
+/*
+Test Vectors (from FIPS PUB 180-1)
+"abc"
+  A9993E36 4706816A BA3E2571 7850C26C 9CD0D89D
+"abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq"
+  84983E44 1C3BD26E BAAE4AA1 F95129E5 E54670F1
+A million repetitions of "a"
+  34AA973C D4C4DAA4 F61EEB2B DBAD2731 6534016F
+*/
+
+/* #define SHA1HANDSOFF  */
+
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#include <stdio.h>
+#include <string.h>
+
+#include "os_types.h"
+#include "sha1.h"
+
+void SHA1_Transform(uint32_t state[5], const uint8_t buffer[64]);
+
+#define rol(value, bits) (((value) << (bits)) | ((value) >> (32 - (bits))))
+
+/* blk0() and blk() perform the initial expand. */
+/* I got the idea of expanding during the round function from SSLeay */
+/* FIXME: can we do this in an endian-proof way? */
+#ifdef WORDS_BIGENDIAN
+#define blk0(i) block->l[i]
+#else
+#define blk0(i) (block->l[i] = (rol(block->l[i],24)&0xFF00FF00) \
+    |(rol(block->l[i],8)&0x00FF00FF))
+#endif
+#define blk(i) (block->l[i&15] = rol(block->l[(i+13)&15]^block->l[(i+8)&15] \
+    ^block->l[(i+2)&15]^block->l[i&15],1))
+
+/* (R0+R1), R2, R3, R4 are the different operations used in SHA1 */
+#define R0(v,w,x,y,z,i) z+=((w&(x^y))^y)+blk0(i)+0x5A827999+rol(v,5);w=rol(w,30);
+#define R1(v,w,x,y,z,i) z+=((w&(x^y))^y)+blk(i)+0x5A827999+rol(v,5);w=rol(w,30);
+#define R2(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0x6ED9EBA1+rol(v,5);w=rol(w,30);
+#define R3(v,w,x,y,z,i) z+=(((w|x)&y)|(w&x))+blk(i)+0x8F1BBCDC+rol(v,5);w=rol(w,30);
+#define R4(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0xCA62C1D6+rol(v,5);w=rol(w,30);
+
+
+#ifdef VERBOSE  /* SAK */
+void SHAPrintContext(SHA1_CTX *context, char *msg){
+  printf("%s (%d,%d) %x %x %x %x %x\n",
+	 msg,
+	 context->count[0], context->count[1],
+	 context->state[0],
+	 context->state[1],
+	 context->state[2],
+	 context->state[3],
+	 context->state[4]);
+}
+#endif /* VERBOSE */
+
+/* Hash a single 512-bit block. This is the core of the algorithm. */
+void SHA1_Transform(uint32_t state[5], const uint8_t buffer[64])
+{
+    uint32_t a, b, c, d, e;
+    typedef union {
+        uint8_t c[64];
+        uint32_t l[16];
+    } CHAR64LONG16;
+    CHAR64LONG16* block;
+
+#ifdef SHA1HANDSOFF
+    static uint8_t workspace[64];
+    block = (CHAR64LONG16*)workspace;
+    memcpy(block, buffer, 64);
+#else
+    block = (CHAR64LONG16*)buffer;
+#endif
+
+    /* Copy context->state[] to working vars */
+    a = state[0];
+    b = state[1];
+    c = state[2];
+    d = state[3];
+    e = state[4];
+
+    /* 4 rounds of 20 operations each. Loop unrolled. */
+    R0(a,b,c,d,e, 0); R0(e,a,b,c,d, 1); R0(d,e,a,b,c, 2); R0(c,d,e,a,b, 3);
+    R0(b,c,d,e,a, 4); R0(a,b,c,d,e, 5); R0(e,a,b,c,d, 6); R0(d,e,a,b,c, 7);
+    R0(c,d,e,a,b, 8); R0(b,c,d,e,a, 9); R0(a,b,c,d,e,10); R0(e,a,b,c,d,11);
+    R0(d,e,a,b,c,12); R0(c,d,e,a,b,13); R0(b,c,d,e,a,14); R0(a,b,c,d,e,15);
+    R1(e,a,b,c,d,16); R1(d,e,a,b,c,17); R1(c,d,e,a,b,18); R1(b,c,d,e,a,19);
+    R2(a,b,c,d,e,20); R2(e,a,b,c,d,21); R2(d,e,a,b,c,22); R2(c,d,e,a,b,23);
+    R2(b,c,d,e,a,24); R2(a,b,c,d,e,25); R2(e,a,b,c,d,26); R2(d,e,a,b,c,27);
+    R2(c,d,e,a,b,28); R2(b,c,d,e,a,29); R2(a,b,c,d,e,30); R2(e,a,b,c,d,31);
+    R2(d,e,a,b,c,32); R2(c,d,e,a,b,33); R2(b,c,d,e,a,34); R2(a,b,c,d,e,35);
+    R2(e,a,b,c,d,36); R2(d,e,a,b,c,37); R2(c,d,e,a,b,38); R2(b,c,d,e,a,39);
+    R3(a,b,c,d,e,40); R3(e,a,b,c,d,41); R3(d,e,a,b,c,42); R3(c,d,e,a,b,43);
+    R3(b,c,d,e,a,44); R3(a,b,c,d,e,45); R3(e,a,b,c,d,46); R3(d,e,a,b,c,47);
+    R3(c,d,e,a,b,48); R3(b,c,d,e,a,49); R3(a,b,c,d,e,50); R3(e,a,b,c,d,51);
+    R3(d,e,a,b,c,52); R3(c,d,e,a,b,53); R3(b,c,d,e,a,54); R3(a,b,c,d,e,55);
+    R3(e,a,b,c,d,56); R3(d,e,a,b,c,57); R3(c,d,e,a,b,58); R3(b,c,d,e,a,59);
+    R4(a,b,c,d,e,60); R4(e,a,b,c,d,61); R4(d,e,a,b,c,62); R4(c,d,e,a,b,63);
+    R4(b,c,d,e,a,64); R4(a,b,c,d,e,65); R4(e,a,b,c,d,66); R4(d,e,a,b,c,67);
+    R4(c,d,e,a,b,68); R4(b,c,d,e,a,69); R4(a,b,c,d,e,70); R4(e,a,b,c,d,71);
+    R4(d,e,a,b,c,72); R4(c,d,e,a,b,73); R4(b,c,d,e,a,74); R4(a,b,c,d,e,75);
+    R4(e,a,b,c,d,76); R4(d,e,a,b,c,77); R4(c,d,e,a,b,78); R4(b,c,d,e,a,79);
+
+    /* Add the working vars back into context.state[] */
+    state[0] += a;
+    state[1] += b;
+    state[2] += c;
+    state[3] += d;
+    state[4] += e;
+
+    /* Wipe variables */
+    a = b = c = d = e = 0;
+}
+
+
+/* SHA1Init - Initialize new context */
+void SHA1_Init(SHA1_CTX* context)
+{
+    /* SHA1 initialization constants */
+    context->state[0] = 0x67452301;
+    context->state[1] = 0xEFCDAB89;
+    context->state[2] = 0x98BADCFE;
+    context->state[3] = 0x10325476;
+    context->state[4] = 0xC3D2E1F0;
+    context->count[0] = context->count[1] = 0;
+}
+
+
+/* Run your data through this. */
+void SHA1_Update(SHA1_CTX* context, const uint8_t* data, const size_t len)
+{
+    size_t i, j;
+
+#ifdef VERBOSE
+    SHAPrintContext(context, "before");
+#endif
+
+    j = (context->count[0] >> 3) & 63;
+    if ((context->count[0] += len << 3) < (len << 3)) context->count[1]++;
+    context->count[1] += (len >> 29);
+    if ((j + len) > 63) {
+        memcpy(&context->buffer[j], data, (i = 64-j));
+        SHA1_Transform(context->state, context->buffer);
+        for ( ; i + 63 < len; i += 64) {
+            SHA1_Transform(context->state, data + i);
+        }
+        j = 0;
+    }
+    else i = 0;
+    memcpy(&context->buffer[j], &data[i], len - i);
+
+#ifdef VERBOSE
+    SHAPrintContext(context, "after ");
+#endif
+}
+
+
+/* Add padding and return the message digest. */
+void SHA1_Final(SHA1_CTX* context, uint8_t digest[SHA1_DIGEST_SIZE])
+{
+    uint32_t i;
+    uint8_t  finalcount[8];
+
+    for (i = 0; i < 8; i++) {
+        finalcount[i] = (unsigned char)((context->count[(i >= 4 ? 0 : 1)]
+         >> ((3-(i & 3)) * 8) ) & 255);  /* Endian independent */
+    }
+    SHA1_Update(context, (uint8_t *)"\200", 1);
+    while ((context->count[0] & 504) != 448) {
+        SHA1_Update(context, (uint8_t *)"\0", 1);
+    }
+    SHA1_Update(context, finalcount, 8);  /* Should cause a SHA1_Transform() */
+    for (i = 0; i < SHA1_DIGEST_SIZE; i++) {
+        digest[i] = (uint8_t)
+         ((context->state[i>>2] >> ((3-(i & 3)) * 8) ) & 255);
+    }
+
+    /* Wipe variables */
+    i = 0;
+    memset(context->buffer, 0, 64);
+    memset(context->state, 0, 20);
+    memset(context->count, 0, 8);
+    memset(finalcount, 0, 8);	/* SWR */
+
+#ifdef SHA1HANDSOFF  /* make SHA1Transform overwrite its own static vars */
+    SHA1_Transform(context->state, context->buffer);
+#endif
+}
+
+/*************************************************************/
+
+#if 0
+int main(int argc, char** argv)
+{
+int i, j;
+SHA1_CTX context;
+unsigned char digest[SHA1_DIGEST_SIZE], buffer[16384];
+FILE* file;
+
+    if (argc > 2) {
+        puts("Public domain SHA-1 implementation - by Steve Reid <sreid@sea-to-sky.net>");
+        puts("Modified for 16 bit environments 7/98 - by James H. Brown <jbrown@burgoyne.com>");	/* JHB */
+        puts("Produces the SHA-1 hash of a file, or stdin if no file is specified.");
+        return(0);
+    }
+    if (argc < 2) {
+        file = stdin;
+    }
+    else {
+        if (!(file = fopen(argv[1], "rb"))) {
+            fputs("Unable to open file.", stderr);
+            return(-1);
+        }
+    }
+    SHA1_Init(&context);
+    while (!feof(file)) {  /* note: what if ferror(file) */
+        i = fread(buffer, 1, 16384, file);
+        SHA1_Update(&context, buffer, i);
+    }
+    SHA1_Final(&context, digest);
+    fclose(file);
+    for (i = 0; i < SHA1_DIGEST_SIZE/4; i++) {
+        for (j = 0; j < 4; j++) {
+            printf("%02X", digest[i*4+j]);
+        }
+        putchar(' ');
+    }
+    putchar('\n');
+    return(0);	/* JHB */
+}
+#endif
+
+/* self test */
+
+#ifdef TEST
+
+static char *test_data[] = {
+    "abc",
+    "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq",
+    "A million repetitions of 'a'"};
+static char *test_results[] = {
+    "A9993E36 4706816A BA3E2571 7850C26C 9CD0D89D",
+    "84983E44 1C3BD26E BAAE4AA1 F95129E5 E54670F1",
+    "34AA973C D4C4DAA4 F61EEB2B DBAD2731 6534016F"};
+
+
+void digest_to_hex(const uint8_t digest[SHA1_DIGEST_SIZE], char *output)
+{
+    int i,j;
+    char *c = output;
+
+    for (i = 0; i < SHA1_DIGEST_SIZE/4; i++) {
+        for (j = 0; j < 4; j++) {
+            sprintf(c,"%02X", digest[i*4+j]);
+            c += 2;
+        }
+        sprintf(c, " ");
+        c += 1;
+    }
+    *(c - 1) = '\0';
+}
+
+int main(int argc, char** argv)
+{
+    int k;
+    SHA1_CTX context;
+    uint8_t digest[20];
+    char output[80];
+
+    fprintf(stdout, "verifying SHA-1 implementation... ");
+
+    for (k = 0; k < 2; k++){
+        SHA1_Init(&context);
+        SHA1_Update(&context, (uint8_t*)test_data[k], strlen(test_data[k]));
+        SHA1_Final(&context, digest);
+	digest_to_hex(digest, output);
+
+        if (strcmp(output, test_results[k])) {
+            fprintf(stdout, "FAIL\n");
+            fprintf(stderr,"* hash of \"%s\" incorrect:\n", test_data[k]);
+            fprintf(stderr,"\t%s returned\n", output);
+            fprintf(stderr,"\t%s is correct\n", test_results[k]);
+            return (1);
+        }
+    }
+    /* million 'a' vector we feed separately */
+    SHA1_Init(&context);
+    for (k = 0; k < 1000000; k++)
+        SHA1_Update(&context, (uint8_t*)"a", 1);
+    SHA1_Final(&context, digest);
+    digest_to_hex(digest, output);
+    if (strcmp(output, test_results[2])) {
+        fprintf(stdout, "FAIL\n");
+        fprintf(stderr,"* hash of \"%s\" incorrect:\n", test_data[2]);
+        fprintf(stderr,"\t%s returned\n", output);
+        fprintf(stderr,"\t%s is correct\n", test_results[2]);
+        return (1);
+    }
+
+    /* success */
+    fprintf(stdout, "ok\n");
+    return(0);
+}
+#endif /* TEST */
+
+/* Copyright (C) 2001-2012 Artifex Software, Inc.
+   All Rights Reserved.
+
+   This software is provided AS-IS with no warranty, either express or
+   implied.
+
+   This software is distributed under license and may not be copied,
+   modified or distributed except as expressly authorized under the terms
+   of the license contained in the file LICENSE in this distribution.
+
+   Refer to licensing information at http://www.artifex.com or contact
+   Artifex Software, Inc.,  7 Mt. Lassen Drive - Suite A-134, San Rafael,
+   CA  94903, U.S.A., +1(415)492-9861, for further information.
+*/
+
+/*
+    jbig2dec
+*/
+
+/*
+   indirection layer for build and platform-specific definitions
+
+   in general, this header should ensure that the stdint types are
+   available, and that any optional compile flags are defined if
+   the build system doesn't pass them directly.
+*/
+
+#ifndef _JBIG2_OS_TYPES_H
+#define _JBIG2_OS_TYPES_H
+
+#if defined(__CYGWIN__) && !defined(HAVE_STDINT_H)
+# include <sys/types.h>
+# if defined(OLD_CYGWIN_SYS_TYPES)
+  /*
+   * Old versions of Cygwin have no stdint.h but define "MS types". Some of
+   * them conflict with a standard type emulation provided by config_types.h
+   * so we do a fixup here.
+   */
+   typedef u_int8_t uint8_t;
+   typedef u_int16_t uint16_t;
+   typedef u_int32_t uint32_t;
+#endif
+#elif defined(HAVE_CONFIG_H)
+# include "config_types.h"
+#elif defined(_WIN32) || defined(__WIN32__)
+# include "config_win32.h"
+#elif defined (STD_INT_USE_SYS_TYPES_H)
+# include <sys/types.h>
+#elif defined (STD_INT_USE_INTTYPES_H)
+# include <inttypes.h>
+#elif defined (STD_INT_USE_SYS_INTTYPES_H)
+# include <sys/inttypes.h>
+#elif defined (STD_INT_USE_SYS_INT_TYPES_H)
+# include <sys/int_types.h>
+#elif !defined(HAVE_STDINT_H)
+   typedef unsigned char  uint8_t;
+   typedef unsigned short uint16_t;
+   typedef unsigned int   uint32_t;
+   typedef signed char    int8_t;
+   typedef signed short   int16_t;
+   typedef signed int     int32_t;
+#endif
+
+#if defined(HAVE_STDINT_H) || defined(__MACOS__)
+# include <stdint.h>
+#elif defined(__VMS) || defined(__osf__)
+# include <inttypes.h>
+#endif
+
+#ifdef __hpux
+#include <sys/_inttypes.h>
+#endif
+
+#endif /* _JBIG2_OS_TYPES_H */
+
+/* public api for steve reid's public domain SHA-1 implementation */
+/* this file is in the public domain */
+
+#ifndef __SHA1_H
+#define __SHA1_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct {
+    uint32_t state[5];
+    uint32_t count[2];
+    uint8_t  buffer[64];
+} SHA1_CTX;
+
+#define SHA1_DIGEST_SIZE 20
+
+void SHA1_Init(SHA1_CTX* context);
+void SHA1_Update(SHA1_CTX* context, const uint8_t* data, const size_t len);
+void SHA1_Final(SHA1_CTX* context, uint8_t digest[SHA1_DIGEST_SIZE]);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __SHA1_H */
+
+/* Copyright (C) 2001-2012 Artifex Software, Inc.
+   All Rights Reserved.
+
+   This software is provided AS-IS with no warranty, either express or
+   implied.
+
+   This software is distributed under license and may not be copied,
+   modified or distributed except as expressly authorized under the terms
+   of the license contained in the file LICENSE in this distribution.
+
+   Refer to licensing information at http://www.artifex.com or contact
+   Artifex Software, Inc.,  7 Mt. Lassen Drive - Suite A-134, San Rafael,
+   CA  94903, U.S.A., +1(415)492-9861, for further information.
+*/
+
+/*
+    jbig2dec
+*/
+
+
+/* configuration header file for compiling under Microsoft Windows */
+
+/* update package version here */
+#define PACKAGE "jbig2dec"
+#define VERSION "0.12"
+
+#if defined(_MSC_VER) || (defined(__BORLANDC__) && defined(__WIN32__))
+  /* Microsoft Visual C++ or Borland C++ */
+  typedef signed char             int8_t;
+  typedef short int               int16_t;
+  typedef int                     int32_t;
+  typedef __int64                 int64_t;
+
+  typedef unsigned char             uint8_t;
+  typedef unsigned short int        uint16_t;
+  typedef unsigned int              uint32_t;
+  /* no uint64_t */
+
+#  if defined(_MSC_VER)
+#   if _MSC_VER < 1500	/* VS 2008 has vsnprintf */
+#    define vsnprintf _vsnprintf
+#   endif
+#  endif
+#  define snprintf _snprintf
+
+#endif /* _MSC_VER */
+
+The quick brown fox jumps over the lazy dog
+
+canonicalization
+
+http://www.w3.org/TR/2001/REC-xml-c14n-20010315
+
+if two documents have the same canonical form, then the two documents are logically equivalent
+
+using System;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Xml;
+using System.Xml;
+
+public class SignXML
+{
+
+    public static void Main(String[] args)
+    {
+        try
+        {
+            // Create a new CspParameters object to specify
+            // a key container.
+            CspParameters cspParams = new CspParameters();
+            cspParams.KeyContainerName = "XML_DSIG_RSA_KEY";
+
+            // Create a new RSA signing key and save it in the container. 
+            RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
+
+            // Create a new XML document.
+            XmlDocument xmlDoc = new XmlDocument();
+
+            // Load an XML file into the XmlDocument object.
+            xmlDoc.PreserveWhitespace = true;
+            xmlDoc.Load("test.xml");
+
+            // Sign the XML document. 
+            SignXml(xmlDoc, rsaKey);
+
+            Console.WriteLine("XML file signed.");
+
+            // Save the document.
+            xmlDoc.Save("test.xml");
+
+
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+
+
+    // Sign an XML file. 
+    // This document cannot be verified unless the verifying 
+    // code has the key with which it was signed.
+    public static void SignXml(XmlDocument xmlDoc, RSA Key)
+    {
+        // Check arguments.
+        if (xmlDoc == null)
+            throw new ArgumentException("xmlDoc");
+        if (Key == null)
+            throw new ArgumentException("Key");
+
+        // Create a SignedXml object.
+        SignedXml signedXml = new SignedXml(xmlDoc);
+
+        // Add the key to the SignedXml document.
+        signedXml.SigningKey = rsaKey;
+
+        // Create a reference to be signed.
+        Reference reference = new Reference();
+        reference.Uri = "";
+
+        // Add an enveloped transformation to the reference.
+        XmlDsigEnvelopedSignatureTransform env = new XmlDsigEnvelopedSignatureTransform();
+        reference.AddTransform(env);
+
+        // Add the reference to the SignedXml object.
+        signedXml.AddReference(reference);
+
+        // Compute the signature.
+        signedXml.ComputeSignature();
+
+        // Get the XML representation of the signature and save
+        // it to an XmlElement object.
+        XmlElement xmlDigitalSignature = signedXml.GetXml();
+
+        // Append the element to the XML document.
+        xmlDoc.DocumentElement.AppendChild(xmlDoc.ImportNode(xmlDigitalSignature, true));
+
+    }
+}
+
+<root>
+    <creditcard>
+        <number>19834209</number>
+        <expiry>02/02/2002</expiry>
+    </creditcard>
+</root>
+
+signedXml._digestedSignedInfo
+
+_digestedSignedInfo = {byte[0x00000014]}
+
+<root>
+    <creditcard>
+        <number>19834209</number>
+        <expiry>02/02/2002</expiry>
+    </creditcard>
+</root>
+
+<root><creditcard><number>19834209</number><expiry>02/02/2002</expiry></creditcard></root>
+
+ghOEPeYtAUs5Kb8VMOCIS3f2wIY=
+
+??=?-K9)?0??Kw???
+
+ghOEPeYtAUs5Kb8VMOCIS3f2wIY=
+
+XML_DSIG_RSA_KEY
+
++		digest	0x0044f938 "??=?-K9)?0??Kw???????????"	unsigned char [20]
+
+
+??=?-K9)?0??Kw???????????
+
+ghOEPeYtAUs5Kb8VMOCIS3f2wIY=
+
+??=?-K9)?0??Kw???????????
+
+
+??=?-K9)?0??Kw???
+
+VRdVVT2cNz7qu4rC2+lfoY2vgpniBFappghiyXr21EsStYGOXZAtfKzvn3NdioyqZTsmSLGd98L2vxWQOEpI+dWvByDKy0jfNaDlj8dATanrjFvvL7suwZPaWjIlb8wqyuymGDfDcNwQsOmoNGO4TleYipRrAIpe+2MiOza3+kE=
+
+UUU=?7>??????_?????V??b?z??K??]-|???s]???e;&H?????8JH??? ??H?5???@M???[?/?.???Z2%o?*???7?p????4c?NW???k?^?c";6??A
+
+rsa_verify_hash_ex
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+UUU=?7>??????_?????V??b?z??K??]-|???s]???e;&H?????8JH??? ??H?5???@M???[?/?.???Z2%o?*???7?p????4c?NW???k?^?c";6??A
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6YDcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOiJDh6XGzfWP/gvfANF5Q=
+
+e?5?H??Q??[;?vQ)???g?W?T?y;??????fq??34;!?????????
+?????3?YdPp??D?H???x
+?G????d??	H?&??iZ???jqRx??$8z\l?X????
+
+qWwoAabPMZn8vva4BBXTqadKdtc=
+
+?l(??1????????Jv?
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+
+G2W2gTUSyUiA4VHj71s7xwZ2USm/F9z9Z/ZXv1TseRs768KhuaezZnEbqbAzNDshwv3gl5el0s6Y
+DcWiAtft0DOoWWRQcNjKRByDSIvtk3gLnkceivWtl2QP8xd/5wlIvw6PJh2i12la0ZeXanFSeOOi
+JDh6XGzfWP/gvfANF5Q=
+
+e?5?H??Q??[;?vQ)???g?W?T?y;??????fq??34;!?????????
+?????3?YdPp??D?H???x
+?G????d??	H?&??iZ???jqRx??$8z\l?X????
+?
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+RSA is an asymmetric encryption algorithm, encrypting an input into an output that can then be decrypted (contrast a hash algorithm which can't be reversed). It uses a different key for encryption (the public one) than for decryption (the private one). This can therefore be used to receive encrypted messages from others - you can publish your public key, but only you with the private key can then decrypt the messages that have been encrypted with it.
+
+#include<stdio.h> 
+#include<conio.h> 
+#include<stdlib.h> 
+#include<math.h> 
+#include<string.h> 
+
+long int p,q,n,t,flag,e[100],d[100],temp[100],j,m[100],en[100],i; 
+char msg[100]; 
+int prime(long int); 
+void ce(); 
+long int cd(long int); 
+void encrypt(); 
+void decrypt(); 
+void main() 
+{ 
+clrscr(); 
+printf("\nENTER FIRST PRIME NUMBER\n"); 
+scanf("%d",&p); 
+flag=prime(p); 
+if(flag==0) 
+{ 
+    printf("\nWRONG INPUT\n"); 
+    getch(); 
+    exit(1); 
+} 
+printf("\nENTER ANOTHER PRIME NUMBER\n"); 
+scanf("%d",&q); 
+flag=prime(q); 
+if(flag==0||p==q) 
+{ 
+    printf("\nWRONG INPUT\n"); 
+    getch(); 
+    exit(1); 
+} 
+printf("\nENTER MESSAGE\n"); 
+fflush(stdin); 
+scanf("%s",msg); 
+for(i=0;msg[i]!=NULL;i++) 
+m[i]=msg[i]; 
+n=p*q; 
+t=(p-1)*(q-1); 
+ce(); 
+printf("\nPOSSIBLE VALUES OF e AND d ARE\n"); 
+for(i=0;i<j-1;i++) 
+printf("\n%ld\t%ld",e[i],d[i]); 
+encrypt(); 
+decrypt(); 
+getch(); 
+} 
+int prime(long int pr) 
+{ 
+int i; 
+j=sqrt(pr); 
+for(i=2;i<=j;i++) 
+{ 
+    if(pr%i==0) 
+    return 0; 
+} 
+return 1; 
+} 
+void ce() 
+{ 
+int k; 
+k=0; 
+for(i=2;i<t;i++) 
+{ 
+    if(t%i==0) 
+    continue; 
+    flag=prime(i); 
+    if(flag==1&&i!=p&&i!=q) 
+    { 
+        e[k]=i; 
+        flag=cd(e[k]); 
+        if(flag>0) 
+        { 
+            d[k]=flag; 
+            k++; 
+        } 
+        if(k==99) 
+        break; 
+    } 
+} 
+} 
+long int cd(long int x) 
+{ 
+long int k=1; 
+while(1) 
+{ 
+    k=k+t; 
+    if(k%x==0) 
+    return(k/x); 
+} 
+} 
+void encrypt() 
+{ 
+long int pt,ct,key=e[0],k,len; 
+i=0; 
+len=strlen(msg); 
+while(i!=len) 
+{ 
+    pt=m[i]; 
+    pt=pt-96; 
+    k=1; 
+    for(j=0;j<key;j++) 
+    { 
+        k=k*pt; 
+        k=k%n; 
+    } 
+    temp[i]=k; 
+    ct=k+96; 
+    en[i]=ct; 
+    i++; 
+} 
+en[i]=-1; 
+printf("\nTHE ENCRYPTED MESSAGE IS\n"); 
+for(i=0;en[i]!=-1;i++) 
+printf("%c",en[i]); 
+} 
+void decrypt() 
+{ 
+long int pt,ct,key=d[0],k; 
+i=0; 
+while(en[i]!=-1) 
+{ 
+    ct=temp[i]; 
+    k=1; 
+    for(j=0;j<key;j++) 
+    { 
+        k=k*ct; 
+        k=k%n; 
+    } 
+    pt=k+96; 
+    m[i]=pt; 
+    i++; 
+} 
+m[i]=-1; 
+printf("\nTHE DECRYPTED MESSAGE IS\n"); 
+for(i=0;m[i]!=-1;i++) 
+printf("%c",m[i]); 
+}
+
+30 81 89 02 81 81 00 e0 8e 49 31 37 59 1f a0 78 b3 3d ce 47 64 ec 98 52 63 16 db 4c 58 af cd 78 70 ea bd d3 eb 92 51 99 a9 71 f4 98 34 bc 25 3d f0 3b d8 02 49 97 71 d9 f9 54 bd e7 bb 60 ba 9c 0c 10 ef b0 1a bd aa 7f 63 79 b9 a3 8b 18 c9 89 37 c8 c3 8b 44 ec c6 dd 56 d6 2a 2c 9d 8d 0e be a8 8e 57 89 a3 49 da cd e7 31 43 f6 60 7e 96 cb 0a 23 d9 68 bd 70 e4 4c d1 42 bb 71 0a 55 e7 09 41 2f 95 b3 db 14 bd 02 03 01 00 01
+
+943343
+
+#include<stdio.h>
+#include<conio.h>
+
+int phi,M,n,e,d,C,FLAG;
+
+int check()
+{
+int i;
+for(i=3;e%i==0 && phi%i==0;i+2)
+{
+FLAG = 1;
+return;
+}
+FLAG = 0;
+}
+
+void encrypt()
+{
+int i;
+C = 1;
+for(i=0;i< e;i++)
+C=C*M%n;
+C = C%n;
+printf(?\n\tEncrypted keyword : %d?,C);
+}
+
+void decrypt()
+{
+int i;
+M = 1;
+for(i=0;i< d;i++)
+M=M*C%n;
+M = M%n;
+printf(?\n\tDecrypted keyword : %d?,M);
+}
+
+void main()
+{
+int p,q,s;
+clrscr();
+printf(?Enter Two Relatively Prime Numbers\t: ?);
+scanf(?%d%d?,&p,&q);
+n = p*q;
+phi=(p-1)*(q-1);
+printf(?\n\tF(n) phi value\t= %d?,phi);
+do
+{
+printf(?\n\nEnter e which is prime number and less than phi \t: ?,n);
+scanf(?%d?,&e);
+check();
+}while(FLAG==1);
+d = 1;
+do
+{
+s = (d*e)%phi;
+d++;
+}while(s!=1);
+d = d-1;
+printf(?\n\tPublic Key\t: {%d,%d}?,e,n);
+printf(?\n\tPrivate Key\t: {%d,%d}?,d,n);
+printf(?\n\nEnter The Plain Text\t: ?);
+scanf(?%d?,&M);
+encrypt();
+printf(?\n\nEnter the Cipher text\t: ?);
+scanf(?%d?,&C);
+decrypt();
+getch();
+}
+
+I, Daniel Perrett confirm that David Scarrett of Client Server Ltd has discussed the role of C++ Developer at Trayport Limited and confirm Client Server Ltd is my sole representative.
+
+62748517
+
+MIIGvTCCBKWgAwIBAgIJAKgf84kJaxK4MA0GCSqGSIb3DQEBCwUAMIGaMQswCQYD
+VQQGEwJHQjEOMAwGA1UECBMFRGVyYnkxDjAMBgNVBAcTBURlcmJ5MRYwFAYDVQQK
+Ew1Db2xvdXJuZXQub3JnMR4wHAYDVQQLExVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkx
+EDAOBgNVBAMTB0RhdmUgQ0ExITAfBgkqhkiG9w0BCQEWEmRhdmVAY29sb3VybmV0
+Lm9yZzAeFw0xNTAzMDcxOTU4MjNaFw0xNTA0MDYxOTU4MjNaMIGaMQswCQYDVQQG
+EwJHQjEOMAwGA1UECBMFRGVyYnkxDjAMBgNVBAcTBURlcmJ5MRYwFAYDVQQKEw1D
+b2xvdXJuZXQub3JnMR4wHAYDVQQLExVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkxEDAO
+BgNVBAMTB0RhdmUgQ0ExITAfBgkqhkiG9w0BCQEWEmRhdmVAY29sb3VybmV0Lm9y
+ZzCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANV4r7b2Ub3d256GhRiM
+BoWagvmzjPHGw8NQ9759mUwWuC2ee2eoLXrsAZdw/lGNF+SGrf8LOeX+0s5Dx8U4
+dkLHvgrvw5tdK/fE7tdlE3Cy+zCGHRLBPtudNLS7mOhySSWD8cjLjRm178u61+WP
+1yuFI/W+gI5pqQnbDg8IPDVYC36XRIdecbDMvdB5SNjJb/Ec9xEoPxn/GPdiJpsy
+C4n/P4Lwjt20e8pwAAr91vGkA9n5a4eAXB4woaSdeXAWSZNcx+0z0ouLbwb5E4JE
+S2f2+f/fkgcWMswWfSc/Ehtj1I0bPA5pJKXov7WKVaWJvuir6r65GGxMRuv8fuRQ
+DVXGwieWkBs2eubddm+PzhxjxLIRLjaM5YcHJKkJiBgMn9KsD8h1vv+gOi0egJiH
+KigRkjhOl6G6Gfb0tAeYbgPQChB5cZHb9HrUcM++Sz1oFJFwWUdAayFXeV0uaXmj
+WgZAzIHIapDo/Ezq9Blj6xabve1mkxpTNskKYO2z9F1UA2tPhZsdGiWeaVMjW68v
+t5T40AnkHAXbtf1cl0Wp/qyZGfVSaBxSTjeWVMDlTfMHWdj0WI0HvdBzseJSzUkD
+Yff8keaY1PjgEmNb7CKzGmAcAEbBzlo9Tv8BHBcLHMF+1bmYGMP0vvWxeDw1+Isn
+McC1yG+5y/qhYuko8letgalPAgMBAAGjggECMIH/MB0GA1UdDgQWBBQymqalVPaS
+r32zYyY3ylNBnX7VqTCBzwYDVR0jBIHHMIHEgBQymqalVPaSr32zYyY3ylNBnX7V
+qaGBoKSBnTCBmjELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MQ4wDAYDVQQH
+EwVEZXJieTEWMBQGA1UEChMNQ29sb3VybmV0Lm9yZzEeMBwGA1UECxMVQ2VydGlm
+aWNhdGUgQXV0aG9yaXR5MRAwDgYDVQQDEwdEYXZlIENBMSEwHwYJKoZIhvcNAQkB
+FhJkYXZlQGNvbG91cm5ldC5vcmeCCQCoH/OJCWsSuDAMBgNVHRMEBTADAQH/MA0G
+CSqGSIb3DQEBCwUAA4ICAQAnn03lInO8hqQiU9K07Pu0b5coljecL3818CQKXUKj
+1sTk1SlGJda35FOWdhfZeNApW0QKw7keUPe7t1tUEQ1qg8SzLAh7Ej5dhF4mvDEx
+tBKFGQggryykvT5jSCmgw/5AlfIFKI14/+CtLeMTG8XXE2UINBiIYegAtLx+Xh75
+xID7j9nN4g6kN2T9f/dP2mKX7+wT7GT531HnNgsDKHLboZMVCa78CM1qHzIRDMWw
+5cFZH5l9h0RW2kCg0SaKkfzqpHfy++5pjZXuLT5ipgwMYaWq1ue6aMoIDKKiAUH1
+FqLj8566XVuPP7Jc7frOxsl9smpdYAoxOEj8TTLLY37R//CyOa/5tFxBa8bV+c8Z
+io/0nLTCVvCc3G73KwhUkK7VI7JFrqrt5dMW65b9RrpTYgENzNMM0plFEzsrgx5K
+o3LW3EkTrog9v1imfiSzCrSu0kFLA2xEL6Rvt69ofKpz9+Ws5u4oc3lytOzsZALy
+qy4xJmn1yNZTTkeq4igENQYp9tGMhXJGMJUxAL0iQWfA9vcGYIYeHhs1dn1ogms+
+fmQ1g3lP9TOBzK0KQ0md63LHFdgNMqEyjcapZaUgiW9bw3u61duhsKWyMDPossd/
+FF7Ms5S17a3jK8nie1DmPVpGn2ZjEm/ODLB34TVcIMcP1FFSpKrBEzZWuzSIeQZW
+Kg==
+
+0021 9260 2715
+
+P.O. Box 25118
+
+Tampa, FL 33622-5118
+
+121000358 
+
+026009593 
+
+002192602715
+
+026009593 
+
+026009593
+
+#include<stdio.h> 
+#include<conio.h> 
+#include<stdlib.h> 
+#include<math.h> 
+#include<string.h> 
+
+long int p,q,n,t,flag,e[100],d[100],temp[100],j,m[100],en[100],i; 
+char msg[100]; 
+int prime(long int); 
+void ce(); 
+long int cd(long int); 
+void encrypt(); 
+void decrypt(); 
+void main() 
+{ 
+clrscr(); 
+printf("\nENTER FIRST PRIME NUMBER\n"); 
+scanf("%d",&p); 
+flag=prime(p); 
+if(flag==0) 
+{ 
+    printf("\nWRONG INPUT\n"); 
+    getch(); 
+    exit(1); 
+} 
+printf("\nENTER ANOTHER PRIME NUMBER\n"); 
+scanf("%d",&q); 
+flag=prime(q); 
+if(flag==0||p==q) 
+{ 
+    printf("\nWRONG INPUT\n"); 
+    getch(); 
+    exit(1); 
+} 
+printf("\nENTER MESSAGE\n"); 
+fflush(stdin); 
+scanf("%s",msg); 
+for(i=0;msg[i]!=NULL;i++) 
+m[i]=msg[i]; 
+n=p*q; 
+t=(p-1)*(q-1); 
+ce(); 
+printf("\nPOSSIBLE VALUES OF e AND d ARE\n"); 
+for(i=0;i<j-1;i++) 
+printf("\n%ld\t%ld",e[i],d[i]); 
+encrypt(); 
+decrypt(); 
+getch(); 
+} 
+int prime(long int pr) 
+{ 
+int i; 
+j=sqrt(pr); 
+for(i=2;i<=j;i++) 
+{ 
+    if(pr%i==0) 
+    return 0; 
+} 
+return 1; 
+} 
+void ce() 
+{ 
+int k; 
+k=0; 
+for(i=2;i<t;i++) 
+{ 
+    if(t%i==0) 
+    continue; 
+    flag=prime(i); 
+    if(flag==1&&i!=p&&i!=q) 
+    { 
+        e[k]=i; 
+        flag=cd(e[k]); 
+        if(flag>0) 
+        { 
+            d[k]=flag; 
+            k++; 
+        } 
+        if(k==99) 
+        break; 
+    } 
+} 
+} 
+long int cd(long int x) 
+{ 
+long int k=1; 
+while(1) 
+{ 
+    k=k+t; 
+    if(k%x==0) 
+    return(k/x); 
+} 
+} 
+void encrypt() 
+{ 
+long int pt,ct,key=e[0],k,len; 
+i=0; 
+len=strlen(msg); 
+while(i!=len) 
+{ 
+    pt=m[i]; 
+    pt=pt-96; 
+    k=1; 
+    for(j=0;j<key;j++) 
+    { 
+        k=k*pt; 
+        k=k%n; 
+    } 
+    temp[i]=k; 
+    ct=k+96; 
+    en[i]=ct; 
+    i++; 
+} 
+en[i]=-1; 
+printf("\nTHE ENCRYPTED MESSAGE IS\n"); 
+for(i=0;en[i]!=-1;i++) 
+printf("%c",en[i]); 
+} 
+void decrypt() 
+{ 
+long int pt,ct,key=d[0],k; 
+i=0; 
+while(en[i]!=-1) 
+{ 
+    ct=temp[i]; 
+    k=1; 
+    for(j=0;j<key;j++) 
+    { 
+        k=k*ct; 
+        k=k%n; 
+    } 
+    pt=k+96; 
+    m[i]=pt; 
+    i++; 
+} 
+m[i]=-1; 
+printf("\nTHE DECRYPTED MESSAGE IS\n"); 
+for(i=0;m[i]!=-1;i++) 
+printf("%c",m[i]); 
+}
+
+int i
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+

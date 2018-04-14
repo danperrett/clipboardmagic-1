@@ -1,0 +1,39 @@
+ControlRequestCount
+
+GetControlRequestCount
+
+DWORD GetControlRequestCount()
+
+GetControlRequestCount
+
+sprintf(debug, 
+
+SendTextToWindow(debug, ALWAYS);
+
+wParam == VK_F12)
+
+RepaintBuffer
+
+DEBUG_LINES_END
+
+256
+
+ SendTextToWindow(debug, ALWAYS)
+
+PrintToScreen(buffer, bufferCount&0x1F);
+
+for(k =0; k < DEBUG_LINES_END; k++)
+            {
+
+RepaintBuffer
+
+bufferCount
+
+InvalidateRect
+
+hWnd
+
+InvalidateRect
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+

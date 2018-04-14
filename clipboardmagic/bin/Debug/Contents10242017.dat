@@ -1,0 +1,311 @@
+merseygateway@insight.clearviewtraffic.com
+
+Could you please look into this?
+
+	for(Entry<Object, Object> ent : queryResults.getProps().entrySet())
+			{
+				if(ent != null)
+				{
+					String key = (String) ent.getKey();
+					List<Object> vals = (List<Object>)ent.getValue();
+					size = vals.size();
+					break;
+				}
+			}
+
+SELECT GEOMETRY FROM NETWORK_GEOMETRY where GEOMETRYID='DX6361109800609163'
+
+DX6361109800609163
+
+DX6361144222330044
+
+DX6361360331769031
+
+SELECT SYSTEMCODENUMBER, NORTHING, EASTING, GEOMETRYID FROM TL_DEFINITION WHERE GEOMETRYID like 'DX%' and DELETIONDATE is null;
+
+DX6361360331697153
+
+DX6361144222189830
+
+info.get("GEOMETRYID")
+
+SELECT * FROM NETWORK_GEOMETRY where GEOMETRYID='DX6361144222189830'
+
+danperrett07087@yahoo.com
+
+TO_CHAR( SDO_UTIL.TO_WKTGEOMETRY( geometry) ) 
+
+SELECT TO_CHAR( SDO_UTIL.TO_WKTGEOMETRY( geometry)) FROM NETWORK_GEOMETRY where GEOMETRYID='DX6361144222189830'
+
+declare
+  lstr varchar(2000);
+begin
+  select TO_CHAR( SDO_UTIL.TO_WKTGEOMETRY( geometry) ) into lstr from nwkgeometry where geometryid=149;
+--  'LINESTRING (350589.197591692 385051.516595478, 350623.417654342 385011.540899903, 350660.845935759 384971.520958852, 350716.265726562 384927.665039672, 350828.130028867 384869.161126546, 350968.85063715 384821.576365934, 351219.361781724 384789.776633677, 351344.343951841 384773.717656208, 351731.837748498 384782.04109186, 351894.147048388 384784.853424791, 351972.982270804 384760.000375865, 352051.50680801 384721.455893494, 352150.97372823 384653.306968949, 352275.449339426 384532.717249936, 352443.376486181 384400.647115148, 352625.479537619 384256.69263229, 352791.476737618 384126.07852868, 352959.433839829 383993.481688226, 353131.820183177 383857.464953908, 353217.047109934 383790.002563713, 353286.972958891 383710.576427221, 353320.324383344 383560.78461725, 353327.81092459 383504.948638613, 353334.933026301 383448.593353068, 353342.447328811 383323.09876183, 353346.321175513 383171.984013617, 353349.331837847 383042.072353807, 353324.350512132 382881.072487312, 353294.496616391 382769.118523855, 353277.834459786 382709.414880376)';
+  update nwkgeometry set geometry=SDO_GEOMETRY( lstr, 81989 ) where geometryid=149;
+end;
+
+
+'DX6361144222189830'
+
+SDO_UTIL.TO_WKTGEOMETRY(GEOMETRY)
+
+ += (easting*0.00023)
+
+-= (northing*0.00007); 
+
+String new_geos = "LINESTRING (";
+
+update nwkgeometry set geometry=SDO_GEOMETRY( lstr, 81989 ) where geometryid=149;
+
+%1$s
+
+"SDO_UTIL.TO_WKTGEOMETRY(GEOMETRY)"
+
+(double)
+
+ dataHandler.executeSQL(sql, geoFields);
+
+e *= 1000;
+		        						e = Math.round(e);
+		        						e /= 1000;
+		        						
+
+merseygateway@insight.clearviewtraffic.com
+
+messageHandler
+
+XmppInterfaceType
+
+jaxmpp1.getEventBus().addHandler(MessageModule.MessageReceivedHandler.MessageReceivedEvent.class, messageHandler);
+
+RosterModule
+
+public class RosterServiceImpl
+
+RosterModule
+
+public class RosterServiceImpl extends BaseServiceImpl implements RosterService
+
+jaxmpp.getModulesManager().getModule(MessageModule.class).addListener(
+            MessageModule.MessageReceived,
+            new Listener<MessageEvent>() {
+
+                 @Override
+                public void handleEvent(MessageEvent be) throws JaxmppException {
+                    if (be != null && be.getType() != null) {
+                        if (be.getType().equals(MessageModule.MessageReceived)) {
+                        System.out.println(be.getMessage().getAsString());
+                          }
+                    }
+
+                }
+            });
+
+MessageModule.MessageReceivedHandler
+
+jaxmpp1.getEventBus().addHandler(PresenceModule.ContactChangedPresenceHandler.ContactChangedPresenceEvent.class, presence);
+			    	
+					PresenceModule presenceModule = jaxmpp1.getModulesManager().getModule(PresenceModule.class);
+					presenceModule.subscribe(JID.jidInstance(subscribeTo));
+
+	presenceModule.subscribe(JID.jidInstance(subscribeTo));
+
+jaxmpp1.getModulesManager().register(new InBandRegistrationModule());
+		jaxmpp1.getModulesManager().register(new MessageModule());
+		try {
+			jaxmpp1.getModulesManager().register(new MessageCarbonsModule());
+		} catch (JaxmppException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		jaxmpp1.getEventBus().addHandler(MessageModule.MessageReceivedHandler.MessageReceivedEvent.class, messageHandler);
+		jaxmpp1.getModulesManager().register(new MucModule());
+		jaxmpp1.getModulesManager().register(new AdHocCommansModule());
+		jaxmpp1.getModulesManager().register(new RosterModule());
+		jaxmpp1.getModulesManager().register(new MessageArchivingModule());
+		jaxmpp1.getModulesManager().register(new PubSubModule());
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		try 
+		{
+			tigase.jaxmpp.j2se.Roster.initialize(jaxmpp1);
+			tigase.jaxmpp.j2se.Presence.initialize(jaxmpp1);
+		}
+		catch (JaxmppException e1) 
+		{
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		jaxmpp1.getProperties().setUserProperty( SessionObject.USER_BARE_JID, BareJID.bareJIDInstance( UserName ) );
+		jaxmpp1.getProperties().setUserProperty( SessionObject.PASSWORD, PassWord );
+		
+
+	jaxmpp1.getEventBus().addHandler(PresenceModule.ContactChangedPresenceHandler.ContactChangedPresenceEvent.class, presence);
+			    	
+					PresenceModule presenceModule = jaxmpp1.getModulesManager().getModule(PresenceModule.class);
+					
+					
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					jaxmpp1.login(true);
+					presenceModule.subscribe(JID.jidInstance(subscribeTo));
+
+MessageModule.MessageReceivedHandler messageHandler = new MessageModule.MessageReceivedHandler() 
+	{
+
+		public void onMessageReceived(SessionObject sessionObject,
+				Chat chat, Message stanza) 
+		{
+
+jaxmpp1.getProperties().setUserProperty(
+
+ jaxmpp.getSessionObject().setUserProperty(JaxmppCore.AUTOADD_STANZA_ID_KEY, true);
+
+jaxmpp1.getEventBus().addHandler(
+
+jaxmpp.getProperties().setUserProperty(SocketConnector.SERVER_HOST, "192.168.1.100");
+
+insight.clearviewtraffic.com
+
+jaxmpp.getConnectionConfiguration().setDisableTLS(true);
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+jaxmpp1.getProperties().setUserProperty(SocketConnector.TLS_DISABLED_KEY, true);
+
+jaxmpp1.getConnectionConfiguration().setUseSASL(false);
+
+RosterModule roster = new RosterModule()
+		{
+			@Override
+			
+		};
+		roster.
+
+plugin
+
+e
+
+plugin
+
+element
+
+import java.util.Properties;
+
+import javax.mail.Folder;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Store;
+
+public class MainClass {
+
+  public static void main(String[] args) throws Exception {
+
+    Properties props = new Properties();
+
+    String host = "yourHost.edu";
+    String username = "userName";
+    String password = "mypassword";
+    String provider = "pop3";
+
+    Session session = Session.getDefaultInstance(props, null);
+    Store store = session.getStore(provider);
+    store.connect(host, username, password);
+
+    Folder inbox = store.getFolder("INBOX");
+    if (inbox == null) {
+      System.out.println("No INBOX");
+      System.exit(1);
+    }
+    inbox.open(Folder.READ_ONLY);
+
+    Message[] messages = inbox.getMessages();
+    for (int i = 0; i < messages.length; i++) {
+      System.out.println("Message " + (i + 1));
+      messages[i].writeTo(System.out);
+    }
+    inbox.close(false);
+    store.close();
+  }
+}
+
+MainClass 
+
+import java.util.Properties;
+
+import javax.mail.Folder;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Store;
+
+public class MainClass {
+
+  public static void main(String[] args) throws Exception {
+
+    Properties props = new Properties();
+
+    String host = "yourHost.edu";
+    String username = "userName";
+    String password = "mypassword";
+    String provider = "pop3";
+
+    Session session = Session.getDefaultInstance(props, null);
+    Store store = session.getStore(provider);
+    store.connect(host, username, password);
+
+    Folder inbox = store.getFolder("INBOX");
+    if (inbox == null) {
+      System.out.println("No INBOX");
+      System.exit(1);
+    }
+    inbox.open(Folder.READ_ONLY);
+
+    Message[] messages = inbox.getMessages();
+    for (int i = 0; i < messages.length; i++) {
+      System.out.println("Message " + (i + 1));
+      messages[i].writeTo(System.out);
+    }
+    inbox.close(false);
+    store.close();
+  }
+}
+
+
+C:\Users\Daniel.Perrett\Downloads\mail-1.4.7.jar
+
+????????????????????????
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+Daniel.Perrett@dynniq.co.uk
+
+Images12!
+
+????
+
+Images12!
+
+javax.mail.MessagingException: Connect failed;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect
+	at com.sun.mail.pop3.POP3Store.protocolConnect(POP3Store.java:209)
+
+176.57.251.90
+
+C:\imtech\pop1.0.0.jar
+
+getConnectionConfiguration().setResource(resource);
+

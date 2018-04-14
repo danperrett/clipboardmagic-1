@@ -1,0 +1,863 @@
+not
+
+NameServiceRef
+
+corbaloc::192.168.50.107:2809/NameService
+
+CutlasNameService
+
+NameServiceLoc
+
+corbaloc::192.168.50.107:2809/NameService
+
+contextKind
+
+UTMC
+
+contextName
+
+CUTLAS
+
+resolve_initial_references
+
+serviceName
+
+MANAGER2
+
+resolve_initial_references
+
+utmcServices
+
+serviceName
+
+nameServiceReference
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+1.1.1.1 
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+ServerIPAddress
+
+ServerUsername
+
+CameraAccessPort
+
+CameraType
+
+CameraUsername
+
+CameraPassword
+
+SharedObject
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+appSettings
+
+InputDataDump
+
+m62
+
+ORA-00911: invalid character
+
++
+  "from dss_fin_user.acq_dashboard_src_load_success " 
+
+vmsUnitReference
+
+ New VMSTrafficData
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing from vms_definition where deletiondate is null and datasource_typeid = 3 and typeid in ( 4, 5, 6, 8  );
+
+GetTableFromDB
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+CFB613DE7D9A3254E0433CC411ACFD01
+
+SubscriberService/SubscriberWebService/Core/EventManager.cs
+
+wilmut.peek.prv
+
+GetDBQueryString
+
+CREATEDBY,
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\ReadImagesAgent\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+DVTelWrapperLibrary
+
+..\..\..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+@echo off
+
+@echo ***************************************************
+@echo ***************************************************
+@echo Filename: Start_Build_VS10_x64.bat
+@echo Description: Starts the build of ImCity for 2010 solutions
+@echo ---------------------------------------------------
+@echo Created by: Daniel Perrett	Date: May 2016
+@echo ---------------------------------------------------
+@echo ---------------------------------------------------
+
+REM Establish a build root
+cd C:\secure\Source\cutlas
+
+devenv "C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln"
+
+devenv "Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln" /Clean
+
+%1 /OUT "build_%1_VS2010_x64.log" > nul
+
+ %1 /OUT "build_%1_VS2010_x64.log"  > nul
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+sudo adduser -m -d /home/codinggain codinggain
+
+
+\Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+regasm /tlb /codebase Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+Core\%1\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll
+
+Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+0
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+My First Heading
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild
+
+..\..\Release\Helpers
+
+$(SolutionDir)..\Release
+
+$(OutDir)/
+
+$(SolutionDir)..\Debug\Helpers
+
+Camera CCTV001
+
+Camera CCTV002
+
+getClipboardText?username=danperre
+
+https://en.wikipedia.org/wiki/Component_Object_Model
+
+Component Object Model
+
+bool GotoPreset(int cameraNum, int presetnum);
+
+bool Logon(string server, string username, string password);
+
+ void Initialise(string config);
+
+ public bool Logon(string server, string username, string password)
+
+int InitiliseNumberOfCameras();
+
+public int GetCameraNumberFromName(string name)
+
+GetCameraNumberFromName
+
+ bool GotoPreset(int cameraNum, int presetnum);
+
+ bool Bookmark(int cam, string name, string description);
+
+ byte[] GetSnapshot(int camerNum, ref long length, ref int preset, string username, string password, int port, string cameraType = null);
+
+2755466/2/r8R/665
+
+Open Network Video Interface Forum
+
+DVTel Agent
+
+Blow is a list of command and parameters that have to be enabled by the :
+
+Whytrumpisgreat.com
+
+SharedObject=
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+4845
+
+??
+
+4845
+
+?????????????????????????????????????????????????????????????????????????????????????????
+
+, says the Tate.
+
+URL http://www.bbc.co.uk/news/entertainment-arts-39219709
+
+********************
+
+Source bbc-news
+
+Title Title: West Indies v England - Hales starring on return
+
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/Everest/trunk
+
+C:\Users\Daniel.Perrett\Documents\DVTelCCTVAdapter.docx
+
+g
+
+http://93.95.10.169:18080/
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification
+
+https://www.youtube.com/watch?v=GwbO_PdwK_4
+
+/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+
+	/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+	{
+		Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		formatter.setTimeZone(calendar.getTimeZone());
+		String startdateString = formatter.format(calendar.getTime());
+		int faulttype = GetFaultType(fault.diagnosticData);
+		int c = 0;
+		String sqlCommand = 
+				String.format("SELECT * FROM %1$s WHERE SYSTEMCODENUMBER='%2$s' AND FAULTTYPE=%3$d",
+					      databasetable,
+					      fault.diagnosticData.getEquipmentSCN(), 
+					      faulttype); 
+		
+		logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		
+		if(GetErrorWarning(c, queryResults) != "") return false;
+		
+		ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+	/*	for(ResultSet _r: _res)
+		{
+			boolean ignoreflag = false;
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+				switch(_c.name)
+				{
+				
+					
+				case "CLEAREDDATE":
+					Timestamp[] timestamp = _c.values.timestampValues();
+					if(timestamp != null)
+					{
+						if(timestamp.length > 0)
+						{
+							if(timestamp[0].dateValue != 0)
+							{
+								logger.log(logLevel, "Its Already been Cleared!");
+								return false;
+							}
+						}
+					}
+					break;
+				}
+			}
+			
+		}
+		*/
+		calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+		sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+		
+		logger.log(logLevel, sqlCommand);
+		queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		return GetErrorWarning(c, queryResults) == "";
+	}
+	
+
+anperrett.com:8000/getProjectsAndIds?id=danperre&pro_id=437
+
+clearUnavailableFault
+
+	logger.log(logLevel, "Error connection to server");
+        	connected = false;
+        	connectionAttempts++;
+        	if(connectionAttempts >= 3 && !unavailableFaultRaised)
+        	{
+        		createUnavailableFault("Cannot connect to the xmpp server!");
+        		
+        		connectionAttempts = 0;
+        	}
+
+  adapterStatus.setStatus("Succesfully Logged onto XMPP Server");
+            connectionAttempts = 0;
+            if(unavailableFaultRaised)
+            {
+            	unavailableFaultRaised = false;
+            	clearUnavailableFault();
+            }
+
+clearUnavailableFault
+
+c
+
+	sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+
+cdbTableName
+
+fault.EndTime
+
+fault.Device
+
+fault.type.ordinal()
+
+unavailableFaultRaised
+
+unavailableFault = new FaultInformation();
+
+InsightDetector
+
+unavailableFault.Device = "InsightDetector";
+
+logger.log(logLevel, "Error in the insertion of Status");
+
+TO_DATE('Fri Mar 10 11:37:57 GMT 2017', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='InsightDetector'
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('Fri Mar 10 11:37:57 GMT 2017', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='InsightDetector' AND FAULTTYPE=0 AND CLEAREDDATE is null AND DATASOURCE_TYPEID=1724
+
+SELECT * FROM SUBSYSTEM_FAULTS WHERE SYSTEMCODENUMBER='InsightDetector' AND CREATIONDATE=TO_DATE('', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=0
+
+calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+
+Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+Calendar calendar
+
+fault.EndTime,
+
+Calendar
+
+fault.EndTime
+
+SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
+			Date time = new Date();
+			date = sdf.format(time);
+
+String date = "";
+
+fault.EndTime
+
+CORBAQuery
+
+int c = 0;
+
+54.246.187.36
+
+adapter 
+
+
+
+
+Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>; Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>
+
+ReceiveMail
+
+    import java.io.IOException;  
+    import java.util.Properties;  
+    import javax.mail.Folder;  
+    import javax.mail.Message;  
+    import javax.mail.MessagingException;  
+    import javax.mail.NoSuchProviderException;  
+    import javax.mail.Session;  
+    import com.sun.mail.pop3.POP3Store;  
+      
+    public class ReceiveMail{  
+      
+     public static void receiveEmail(String pop3Host, String storeType,  
+      String user, String password) {  
+      try {  
+       //1) get the session object  
+       Properties properties = new Properties();  
+       properties.put("mail.pop3.host", pop3Host);  
+       Session emailSession = Session.getDefaultInstance(properties);  
+         
+       //2) create the POP3 store object and connect with the pop server  
+       POP3Store emailStore = (POP3Store) emailSession.getStore(storeType);  
+       emailStore.connect(user, password);  
+      
+       //3) create the folder object and open it  
+       Folder emailFolder = emailStore.getFolder("INBOX");  
+       emailFolder.open(Folder.READ_ONLY);  
+      
+       //4) retrieve the messages from the folder in an array and print it  
+       Message[] messages = emailFolder.getMessages();  
+       for (int i = 0; i < messages.length; i++) {  
+        Message message = messages[i];  
+        System.out.println("---------------------------------");  
+        System.out.println("Email Number " + (i + 1));  
+        System.out.println("Subject: " + message.getSubject());  
+        System.out.println("From: " + message.getFrom()[0]);  
+        System.out.println("Text: " + message.getContent().toString());  
+       }  
+      
+       //5) close the store and folder objects  
+       emailFolder.close(false);  
+       emailStore.close();  
+      
+      } catch (NoSuchProviderException e) {e.printStackTrace();}   
+      catch (MessagingException e) {e.printStackTrace();}  
+      catch (IOException e) {e.printStackTrace();}  
+     }  
+      
+     public static void main(String[] args) {  
+      
+      String host = "mail.javatpoint.com";//change accordingly  
+      String mailStoreType = "pop3";  
+      String username= "sonoojaiswal@javatpoint.com";  
+      String password= "xxxxx";//change accordingly  
+      
+      receiveEmail(host, mailStoreType, username, password);  
+      
+     }  
+    }  
+
+
+public class ReceiveMail {
+
+}
+
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+mail.javatpoint.com
+
+Daniel.Perrett@dynniq.co.uk
+
+
+ public static void main(String[] args) {  
+
+ pop.mail.yahoo.com
+
+Daniel.Perrett@dynniq.co.uk
+
+String host = "mail.javatpoint.com";//change accordingly  
+  String mailStoreType = "pop3";  
+  String username= "sonoojaiswal@javatpoint.com";  
+  String password= "xxxxx";//change accordingly  
+
+ String host = " pop.mail.yahoo.com";//change accordingly  
+  String mailStoreType = "pop3";  
+  String username= "danperrett07087@yahoo.com";  
+  String password= "M0nkeybra1ns";//change accordingly  
+  
+
+ pop.mail.yahoo.com
+
+sonoojaiswal@javatpoint.com
+
+ Properties properties = System.getProperties();
+    Session session = Session.getDefaultInstance(properties);
+    Store store = session.getStore("pop3");
+    store.connect(host, user, password);
+    Folder inbox = store.getFolder("Inbox");
+    inbox.open(Folder.READ_ONLY);
+
+@yahoo.com
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+op.mail.yahoo.com
+
+// get the list of inbox messages
+    Message[] messages = inbox.getMessages();
+
+	    
+
+ // get the list of inbox messages
+    Message[] messages = inbox.getMessages();
+
+
+g
+
+??
+
+if (messages.length == 0) System.out.println("No messages found.");
+
+x
+
+pop.gmail.com
+
+danperrett07087
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+pop.gmail.com
+
+/usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.U19215 --address :24800
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+Daniel.Perrett@dynniq.co.uk
+
+dperrett1969
+
+Errors were encountered while processing:
+ tomcat7
+
+
+sudo cp /etc/squirrelmail/apache.conf /etc/apache2/sites-available/squirrelmail.conf
+
+sudo a2ensite squirrelmail.conf
+
+.com/squirrelmail.
+
+ sudo mkdir -p /var/www/html
+
+usermod -m -d /var/www/html/
+
+Error: Failed to autocreate mailbox INBOX: Internal error occurred. Refer to server log for more information
+
+10777610
+
+23492
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+10862231010
+
+10860935182
+
+http://www.tecmint.com/setup-postfix-mail-server-in-ubuntu-debian/
+
+https://webmail.dynniq.co.uk/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.dynniq.co.uk%2fowa%2f
+
+http://www.bbc.co.uk/news/world-europe-39248188
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification/
+
+23866
+
+SOAP Request
+
+
+4.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+1.1.1	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+C:\Users\Daniel.Perrett\Documents\CATestDesign.vsdx
+
+C:\Users\Daniel.Perrett\Documents\ClearViewModuleTestingPhase1.vsdx
+
+93.95.10.169
+
+http://cajtmsfaults.co.uk:18080/JTMSDiagnosticFeed.wsdl
+
+93.95.10.169
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+C:6090	M	For each PTZ CCTV camera it must be possible to define on the map a number of zones of coverage. For each zone of coverage a camera pre-set position can be defined.	2.34.37. The objective is to be able to automatically point a CCTV camera at the site of an incident that falls within a zone of coverage.
+
+C:6095	M	When automatically creating (Incident Detection) or manually creating/editing an Incident it shall be possible to trigger all PTZ cameras which have a zone of coverage that includes the geo-location of the incident, to point at the incident.	2.34.37
+
+4.1.1	TC001
+
+C:6260	M	Creating a new Incident shall result in an automatic flag being created for all CCTV cameras in the system. The associated text shall be the Incident reference.	SDD pt 1 Issue 2 section 4.1.1.1
+
+C:6400	M	The following fault states must be available from the CCTV sub-system and stored in the CDB
+?	Per camera
+o	camera fault
+o	loss of connection
+?	Loss of connection to the CCTV sub-system. In this event ImCity must indicate all cameras as status unknown and prevent user interface operation.	Common sense.
+
+
+
+
+
+
+3.14.23 8th bullet
+
+
+C:6410	M	Clearance of a fault must result in all relevant faults being automatically cleared in ImCity (without manual intervention). 
+
+C:6080	W	It must be possible to bring up a full resolution moving image from the camera in a separate window.	Not actually stated anywhere but an obvious requirement for ImCity and CCTV. Solution to be discussed (note C:1812 that requires a single frame to be displayed on camera selection). Not a MG MCS requirement and project cannot afford ?extras?.
+
+TC002
+
+4.1.3	TC003
+Name	Description
+Summary	
+Ref requirements	
+Pre-condition	
+Test description	
+Expected result	
+Actual result	
+Pass / Fail	
+
+
+C:6090
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+Num	CCTV_COMMAND
+1	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+2	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+3	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '3', '0')
+4	INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+5	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+
+C:6260
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+TC002
+
+TC001
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+vmsRecord
+
+http://datex2.eu/schema/2/2_0
+
+http://www.datex2.eu/schema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+Webclientinterface
+
+delegate string 
+
+D2LogicalModel
+
+   if (gotinfo != null)
+            { 
+
+             }
+
+https://datex2.stratostraffic.com/vms/definition
+
+new NetworkCredential("username", "password");
+
+    string htmlCode = client.DownloadString("http://domain.loc/testpage.aspx");
+
+https://datex2.stratostraffic.com/vms/definition
+
+url
+
+namespace DatexIIv2PullAdapterLib
+
+using DatexIIv2PullAdapterLib;
+
+MainInterface
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+https://datex2.stratostraffic.com/vms/definition
+
+GetWebContent.Start();
+
+GetWebContent.Elapsed
+
+GetWebContent_Elapsed
+
+GetWebContent.Elapsed += GetWebContent_Elapsed;
+
+D2LogicalModel
+
+TextWriter writer = new StringWriter(sb)
+
+TextReader reader = new StringReader(operationXML)
+
+htmlCode
+
+reader
+
+D2LogicalModel
+
+PayloadPublication
+
+Test that the PTZ camera will go to a predefined pre-set
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+C:6090, C:6095
+
+C:6260
+
+'Incident~245436'
+
+C:6410
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_Clearview_Adapter_I2.docx
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_CA_Adapter_I2.docx
+

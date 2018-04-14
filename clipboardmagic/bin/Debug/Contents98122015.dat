@@ -1,0 +1,52 @@
+NELLY Srikanth <srikanth.nelly@transport.alstom.com>
+
+HandleIncomingDataStream
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+static DWORD myThreadID;
+
+
+MAX_NUMBER_OF_CONNECTIONS
+
+DWORD WINAPI ReceiveThread(LPVOID lpParameter)
+{
+    while(connected)
+    {
+         int inDataLength = 0;
+         char szIncoming[1024];
+
+		 ZeroMemory(szIncoming, 1024);
+        
+
+         while((inDataLength = recv(Socket, (char*)szIncoming, 1024, 0)) > 0)
+         {
+            SendTextToWindow("Reading the Information");
+            SendTextToWindow(szIncoming);
+         }
+         if(inDataLength <= 0)
+         {
+             Sleep(100);
+         }
+    }
+    return 0;
+}
+
+ReceiveThread
+
+ //HANDLE myHandle = CreateThread(0, 0, ReceiveThread, &Socket, 0, &myThreadID);//test
+
+static DWORD threadCount = 0;
+
+   //HANDLE myHandle = CreateThread(0, 0, ReceiveThread, &Socket, 0, &myThreadID);//test
+
+connected = true;
+
+SOCKET Socket=NULL;
+
+ n++; 
+
+CONTROL_REQUEST_BITMAP_SIZE
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+

@@ -1,0 +1,285 @@
+</Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message></Envelope>
+
+-----BEGIN RSA PRIVATE KEY-----\n"\
+                  "MIICXAIBAAKBgQDgjkkxN1kfoHizPc5HZOyYUmMW20xYr814cOq90+uSUZmpcfSY\n"\
+                  "NLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5uaOLGMmJN8jDi0Tsxt1W1ios\n"\
+                  "nY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFCu3EKVecJQS+Vs9sUvQIDAQAB\n"\
+                  "AoGAMBUnhPtWARiqX67/SXhJ1P/nKdDBU0gplf2Pth/3lDgW0BqPhjvcgZj2pMnH\n"\
+                  "C5z7CvKBe7xv+fFbUpYZzLqdG8seB0IBbT0XIuLzIQsRLZd03zfyim6syt220NYi\n"\
+                  "zZixeT+wuXX6gN5fbeV760Q9erGAHktWXSspMfSUpvDI5gECQQD9lKGtZohpLsEA\n"\
+                  "qb/GPe9DZCRbSTr2GzyCGFQzm/utZJIhpMC8AkpUbzukbiY5ibBxeSETK8VRh68E\n"\
+                  "LL1xKug9AkEA4rLC9Wd5nnfGVbIWbaiugtOT2DslslTXiTTy4puV7MiCWYjFJPOi\n"\
+                  "C862az7z7Dg4PEVvulGhAWkXjAuzgv8mgQJAeIIvB4Hnp9zhOdhx29tJHoSzxnIZ\n"\
+                  "xCWTbtvzAAfL5k4aKETslyybeF7YQD9ciRGHOZXwAvVVM3bA1MISUXqrnQJBAIuG\n"\
+                  "mpeP6DqwXVHBGizD9SRwND6RqNHphf7cp+DxAYWKoy+YDj5/9OxvfbbkOBzbPUFb\n"\
+                  "OzjhpMbJd8SqLwIhKAECQG/teiBHwE2d6rVM5flrHJvsVB1ssydU3CJbE+5PahUR\n"\
+                  "JG/IBu7hLeYTzmZLoP9V6wl1Hk6sD2sq3GA+jPW3Rho=\n"\
+                  "-----END RSA PRIVATE KEY-----
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\openssl-1.0.2d-32bit-release-static-vs2010\bin\
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDgjkkxN1kfoHizPc5HZOyYUmMW20xYr814cOq90+uSUZmpcfSY
+NLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5uaOLGMmJN8jDi0Tsxt1W1ios
+nY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFCu3EKVecJQS+Vs9sUvQIDAQAB
+AoGAMBUnhPtWARiqX67/SXhJ1P/nKdDBU0gplf2Pth/3lDgW0BqPhjvcgZj2pMnH
+C5z7CvKBe7xv+fFbUpYZzLqdG8seB0IBbT0XIuLzIQsRLZd03zfyim6syt220NYi
+zZixeT+wuXX6gN5fbeV760Q9erGAHktWXSspMfSUpvDI5gECQQD9lKGtZohpLsEA
+qb/GPe9DZCRbSTr2GzyCGFQzm/utZJIhpMC8AkpUbzukbiY5ibBxeSETK8VRh68E
+LL1xKug9AkEA4rLC9Wd5nnfGVbIWbaiugtOT2DslslTXiTTy4puV7MiCWYjFJPOi
+C862az7z7Dg4PEVvulGhAWkXjAuzgv8mgQJAeIIvB4Hnp9zhOdhx29tJHoSzxnIZ
+xCWTbtvzAAfL5k4aKETslyybeF7YQD9ciRGHOZXwAvVVM3bA1MISUXqrnQJBAIuG
+mpeP6DqwXVHBGizD9SRwND6RqNHphf7cp+DxAYWKoy+YDj5/9OxvfbbkOBzbPUFb
+OzjhpMbJd8SqLwIhKAECQG/teiBHwE2d6rVM5flrHJvsVB1ssydU3CJbE+5PahUR
+JG/IBu7hLeYTzmZLoP9V6wl1Hk6sD2sq3GA+jPW3Rho=
+-----END RSA PRIVATE KEY-----
+
+        public RSACryptoServiceProvider DecodeRSAPrivateKey(byte[] privkey)
+
+
+RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
+
+X509Certificate2
+
+SACryptoServiceProvider privateKeyProvider = 
+    (RSACryptoServiceProvider)certificate.PrivateKey
+
+ Base64encode(
+
+LOGSTRINT
+
+message->Header.SequenceNumber
+
+"TheCalculated DIGEST value is "
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+C:\Windows\MCSCORUN.INI
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message>
+
+<Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message></Envelope>
+
+1uOc+x9zUVrh0gwzCmBFUjYeHBg=
+
+/></
+
+1uOc+x9zUVrh0gwzCmBFUjYeHBg=
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message></Envelope>
+
+1dfBS/h6Chturb7HzSfq7iKbMm8=
+
+-----BEGIN CERTIFICATE-----
+MIIGvTCCBKWgAwIBAgIJAKgf84kJaxK4MA0GCSqGSIb3DQEBCwUAMIGaMQswCQYD
+VQQGEwJHQjEOMAwGA1UECBMFRGVyYnkxDjAMBgNVBAcTBURlcmJ5MRYwFAYDVQQK
+Ew1Db2xvdXJuZXQub3JnMR4wHAYDVQQLExVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkx
+EDAOBgNVBAMTB0RhdmUgQ0ExITAfBgkqhkiG9w0BCQEWEmRhdmVAY29sb3VybmV0
+Lm9yZzAeFw0xNTAzMDcxOTU4MjNaFw0xNTA0MDYxOTU4MjNaMIGaMQswCQYDVQQG
+EwJHQjEOMAwGA1UECBMFRGVyYnkxDjAMBgNVBAcTBURlcmJ5MRYwFAYDVQQKEw1D
+b2xvdXJuZXQub3JnMR4wHAYDVQQLExVDZXJ0aWZpY2F0ZSBBdXRob3JpdHkxEDAO
+BgNVBAMTB0RhdmUgQ0ExITAfBgkqhkiG9w0BCQEWEmRhdmVAY29sb3VybmV0Lm9y
+ZzCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANV4r7b2Ub3d256GhRiM
+BoWagvmzjPHGw8NQ9759mUwWuC2ee2eoLXrsAZdw/lGNF+SGrf8LOeX+0s5Dx8U4
+dkLHvgrvw5tdK/fE7tdlE3Cy+zCGHRLBPtudNLS7mOhySSWD8cjLjRm178u61+WP
+1yuFI/W+gI5pqQnbDg8IPDVYC36XRIdecbDMvdB5SNjJb/Ec9xEoPxn/GPdiJpsy
+C4n/P4Lwjt20e8pwAAr91vGkA9n5a4eAXB4woaSdeXAWSZNcx+0z0ouLbwb5E4JE
+S2f2+f/fkgcWMswWfSc/Ehtj1I0bPA5pJKXov7WKVaWJvuir6r65GGxMRuv8fuRQ
+DVXGwieWkBs2eubddm+PzhxjxLIRLjaM5YcHJKkJiBgMn9KsD8h1vv+gOi0egJiH
+KigRkjhOl6G6Gfb0tAeYbgPQChB5cZHb9HrUcM++Sz1oFJFwWUdAayFXeV0uaXmj
+WgZAzIHIapDo/Ezq9Blj6xabve1mkxpTNskKYO2z9F1UA2tPhZsdGiWeaVMjW68v
+t5T40AnkHAXbtf1cl0Wp/qyZGfVSaBxSTjeWVMDlTfMHWdj0WI0HvdBzseJSzUkD
+Yff8keaY1PjgEmNb7CKzGmAcAEbBzlo9Tv8BHBcLHMF+1bmYGMP0vvWxeDw1+Isn
+McC1yG+5y/qhYuko8letgalPAgMBAAGjggECMIH/MB0GA1UdDgQWBBQymqalVPaS
+r32zYyY3ylNBnX7VqTCBzwYDVR0jBIHHMIHEgBQymqalVPaSr32zYyY3ylNBnX7V
+qaGBoKSBnTCBmjELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MQ4wDAYDVQQH
+EwVEZXJieTEWMBQGA1UEChMNQ29sb3VybmV0Lm9yZzEeMBwGA1UECxMVQ2VydGlm
+aWNhdGUgQXV0aG9yaXR5MRAwDgYDVQQDEwdEYXZlIENBMSEwHwYJKoZIhvcNAQkB
+FhJkYXZlQGNvbG91cm5ldC5vcmeCCQCoH/OJCWsSuDAMBgNVHRMEBTADAQH/MA0G
+CSqGSIb3DQEBCwUAA4ICAQAnn03lInO8hqQiU9K07Pu0b5coljecL3818CQKXUKj
+1sTk1SlGJda35FOWdhfZeNApW0QKw7keUPe7t1tUEQ1qg8SzLAh7Ej5dhF4mvDEx
+tBKFGQggryykvT5jSCmgw/5AlfIFKI14/+CtLeMTG8XXE2UINBiIYegAtLx+Xh75
+xID7j9nN4g6kN2T9f/dP2mKX7+wT7GT531HnNgsDKHLboZMVCa78CM1qHzIRDMWw
+5cFZH5l9h0RW2kCg0SaKkfzqpHfy++5pjZXuLT5ipgwMYaWq1ue6aMoIDKKiAUH1
+FqLj8566XVuPP7Jc7frOxsl9smpdYAoxOEj8TTLLY37R//CyOa/5tFxBa8bV+c8Z
+io/0nLTCVvCc3G73KwhUkK7VI7JFrqrt5dMW65b9RrpTYgENzNMM0plFEzsrgx5K
+o3LW3EkTrog9v1imfiSzCrSu0kFLA2xEL6Rvt69ofKpz9+Ws5u4oc3lytOzsZALy
+qy4xJmn1yNZTTkeq4igENQYp9tGMhXJGMJUxAL0iQWfA9vcGYIYeHhs1dn1ogms+
+fmQ1g3lP9TOBzK0KQ0md63LHFdgNMqEyjcapZaUgiW9bw3u61duhsKWyMDPossd/
+FF7Ms5S17a3jK8nie1DmPVpGn2ZjEm/ODLB34TVcIMcP1FFSpKrBEzZWuzSIeQZW
+Kg==
+-----END CERTIFICATE-----
+
+-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDgjkkxN1kfoHizPc5HZOyYUmMW20xYr814cOq90+uSUZmpcfSY
+NLwlPfA72AJJl3HZ+VS957tgupwMEO+wGr2qf2N5uaOLGMmJN8jDi0Tsxt1W1ios
+nY0OvqiOV4mjSdrN5zFD9mB+lssKI9lovXDkTNFCu3EKVecJQS+Vs9sUvQIDAQAB
+AoGAMBUnhPtWARiqX67/SXhJ1P/nKdDBU0gplf2Pth/3lDgW0BqPhjvcgZj2pMnH
+C5z7CvKBe7xv+fFbUpYZzLqdG8seB0IBbT0XIuLzIQsRLZd03zfyim6syt220NYi
+zZixeT+wuXX6gN5fbeV760Q9erGAHktWXSspMfSUpvDI5gECQQD9lKGtZohpLsEA
+qb/GPe9DZCRbSTr2GzyCGFQzm/utZJIhpMC8AkpUbzukbiY5ibBxeSETK8VRh68E
+LL1xKug9AkEA4rLC9Wd5nnfGVbIWbaiugtOT2DslslTXiTTy4puV7MiCWYjFJPOi
+C862az7z7Dg4PEVvulGhAWkXjAuzgv8mgQJAeIIvB4Hnp9zhOdhx29tJHoSzxnIZ
+xCWTbtvzAAfL5k4aKETslyybeF7YQD9ciRGHOZXwAvVVM3bA1MISUXqrnQJBAIuG
+mpeP6DqwXVHBGizD9SRwND6RqNHphf7cp+DxAYWKoy+YDj5/9OxvfbbkOBzbPUFb
+OzjhpMbJd8SqLwIhKAECQG/teiBHwE2d6rVM5flrHJvsVB1ssydU3CJbE+5PahUR
+JG/IBu7hLeYTzmZLoP9V6wl1Hk6sD2sq3GA+jPW3Rho=
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN CERTIFICATE-----
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQI
+EwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsT
+FUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYS
+ZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkG
+A1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQL
+EwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5J
+MTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDv
+sBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtx
+ClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBH
+ZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1Ud
+IwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaSt
+RmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrR
+hxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcuf
+VocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2W
+oXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03Ehd
+TJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/
+aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0h
+LtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy
+8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+-----END CERTIFICATE-----
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message></Envelope>
+
+0xd6, 0xe3, 0x9c, 0xfb, 0x1f, 0x73, 0x51, 0x5a, 0xe1, 0xd2, 0x0c, 0x33, 0x0a, 0x60, 0x45, 0x52, 0x36, 0x1e, 0x1c, 0x18
+
+1uOc+x9zUVrh0gwzCmBFUjYeHBg=
+
+0xd6, 0xe3, 0x9c, 0xfb, 0x1f, 0x73, 0x51, 0x5a, 0xe1, 0xd2, 0x0c, 0x33, 0x0a, 0x60, 0x45, 0x52, 0x36, 0x1e, 0x1c, 0x18,
+
+1dfBS/h6Chturb7HzSfq7iKbMm8=
+
+0xd5, 0xd7, 0xc1, 0x4b, 0xf8, 0x7a, 0x0a, 0x1b, 0x6e, 0xad, 0xbe, 0xc7, 0xcd, 0x27, 0xea, 0xee, 0x22, 0x9b, 0x32, 0x6f,
+
+<Envelope xmlns="http://example.org/envelope">
+  <Body>
+    Ol? mundo
+  </Body>
+</Envelope>
+
+<Envelope xmlns="http://example.org/envelope">?
+??<Body>?
+????Ol? mundo?
+??</Body>?
+???
+</Envelope>
+
+<Envelope xmlns="http://example.org/envelope">
+  <Body>
+    Ol? mundo
+  </Body>
+  
+</Envelope>
+
+C:\srif\Win32Srif4_3.zip
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference>
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>1dfBS/h6Chturb7HzSfq7iKbMm8=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>Xzxo2pQNVCLKcVJvRevMZ9DHmNMIG0Zh68RwW02XIuc/6ETwDi6JFMoZH8igCqv5
+dc491V6uiwp1aavlxVBRSaRuheacGidghpBFhB8FHxDIOEgFTIUNykPXtUQPQyRG
+jCWIar/HBAhLRHoNjRMlv5EkJsKjJLVXOQn2O6RCtKg=</SignatureValue>
+<KeyInfo>
+<KeyValue>
+<RSAKeyValue>
+<Modulus>
+4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx
+2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0na
+zecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</KeyValue>
+<X509Data>
+<X509Certificate>MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdC
+MQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91
+cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UE
+AxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4X
+DTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAM
+BgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdT
+LVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkC
+gYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gC
+SZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJ
+o0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYD
+VR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlm
+aWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaA
+FDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2Hyqkeye
+PaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKs
+dlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUT
+lU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPP
+boEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVa
+BMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9
+w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkb
+jgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZ
+MrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJ
+Q6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+P
+wn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7Fwew
+rTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==</X509Certificate>
+</X509Data>
+</KeyInfo>
+</Signature></Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message>
+</Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message>
+  
+</Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message>
+
+</Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-18T11:09:20.980Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>HISMA-1-Unit-A</SourceUnitID><LogicalSourceID>HISMA-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAIAmdlIGgAAAAAAAAEAAQAAAIgGGUiytQCuBg==</ControlRequests><ARSSubAreaStatus>CqECAAMA+tlIGgAAAAAAAAEAAQAAACMfe4lXeEAWHQ==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse/></SPAD><IndicationsResponse/><ControlRequests>CqECAAgAO9pIGgAAAAAAAAEAAQAAAPxpUUQncQD/5Q==</ControlRequests><ARSSubAreaStatus>CqECAAkAkNpIGgAAAAAAAAEAAQAAAOZBK61opMDoDA==</ARSSubAreaStatus><StatusByteResponse/></Interlocking><EmergencyAlarmsResponse/></Body></Message></Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-05T06:21:36.611Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUA4r9O1gAAAAAAAAAAAQAAAOjoqtTzf7lw</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAIA479O1gAAAAAAAAEAAQAAAN/wuP/migA9jQ==</ControlRequests><ARSSubAreaStatus>CqECAAMA479O1gAAAAAAAAEAAQAAAHyWdzxn5ADGQA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQA4r9O1gAAAAAAAAAAAQAAAHZy+sx97V2P</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsA4r9O1gAAAAAAAAAAAQAAACVYrIymyV2Q</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAgA479O1gAAAAAAAAEAAQAAAKjjfxYvJgDJHg==</ControlRequests><ARSSubAreaStatus>CqECAAkA479O1gAAAAAAAAEAAQAAAAuFsNWuSAAy0w==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoA4r9O1gAAAAAAAAAAAQAAALvC/JQoW7lv</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</EmergencyAlarmsResponse></Body></Message>
+
+<Envelope>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-05T06:21:36.611Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUA4r9O1gAAAAAAAAAAAQAAAOjoqtTzf7lw</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAIA479O1gAAAAAAAAEAAQAAAN/wuP/migA9jQ==</ControlRequests><ARSSubAreaStatus>CqECAAMA479O1gAAAAAAAAEAAQAAAHyWdzxn5ADGQA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQA4r9O1gAAAAAAAAAAAQAAAHZy+sx97V2P</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsA4r9O1gAAAAAAAAAAAQAAACVYrIymyV2Q</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAgA479O1gAAAAAAAAEAAQAAAKjjfxYvJgDJHg==</ControlRequests><ARSSubAreaStatus>CqECAAkA479O1gAAAAAAAAEAAQAAAAuFsNWuSAAy0w==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoA4r9O1gAAAAAAAAAAAQAAALvC/JQoW7lv</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</EmergencyAlarmsResponse></Body></Message></Envelope>
+
+0xf4, 0x0b, 0xec, 0x8f, 0xbf, 0xc6, 0x46, 0x6d, 0xda, 0xc5, 0x9d, 0xf1, 0x86, 0xc0, 0xec, 0xd7, 0x7a, 0x57, 0xdf, 0xa8
+
+9Avsj7/GRm3axZ3xhsDs13pX36g=
+
+0xf4, 0x0b, 0xec, 0x8f, 0xbf, 0xc6, 0x46, 0x6d, 0xda, 0xc5, 0x9d, 0xf1, 0x86, 0xc0, 0xec, 0xd7, 0x7a, 0x57, 0xdf, 0xa8,
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-05T06:21:36.611Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUA4r9O1gAAAAAAAAAAAQAAAOjoqtTzf7lw</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAIA479O1gAAAAAAAAEAAQAAAN/wuP/migA9jQ==</ControlRequests><ARSSubAreaStatus>CqECAAMA479O1gAAAAAAAAEAAQAAAHyWdzxn5ADGQA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQA4r9O1gAAAAAAAAAAAQAAAHZy+sx97V2P</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsA4r9O1gAAAAAAAAAAAQAAACVYrIymyV2Q</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAgA479O1gAAAAAAAAEAAQAAAKjjfxYvJgDJHg==</ControlRequests><ARSSubAreaStatus>CqECAAkA479O1gAAAAAAAAEAAQAAAAuFsNWuSAAy0w==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoA4r9O1gAAAAAAAAAAAQAAALvC/JQoW7lv</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</EmergencyAlarmsResponse></Body></Message>
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-05T06:21:36.611Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUA4r9O1gAAAAAAAAAAAQAAAOjoqtTzf7lw</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAIA479O1gAAAAAAAAEAAQAAAN/wuP/migA9jQ==</ControlRequests><ARSSubAreaStatus>CqECAAMA479O1gAAAAAAAAEAAQAAAHyWdzxn5ADGQA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQA4r9O1gAAAAAAAAAAAQAAAHZy+sx97V2P</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsA4r9O1gAAAAAAAAAAAQAAACVYrIymyV2Q</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAgA479O1gAAAAAAAAEAAQAAAKjjfxYvJgDJHg==</ControlRequests><ARSSubAreaStatus>CqECAAkA479O1gAAAAAAAAEAAQAAAAuFsNWuSAAy0w==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoA4r9O1gAAAAAAAAAAAQAAALvC/JQoW7lv</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</EmergencyAlarmsResponse></Body></Message></Envelope>
+
+Interlocking
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>software-v1</Software></Version><Time><Current>2015-11-05T06:21:36.611Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>1</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001/OF</UniqueID><SSIID>OF</SSIID><SPAD><SignalMapResponse>CqECAAUA4r9O1gAAAAAAAAAAAQAAAOjoqtTzf7lw</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAIA479O1gAAAAAAAAEAAQAAAN/wuP/migA9jQ==</ControlRequests><ARSSubAreaStatus>CqECAAMA479O1gAAAAAAAAEAAQAAAHyWdzxn5ADGQA==</ARSSubAreaStatus><StatusByteResponse>CqMCAAQA4r9O1gAAAAAAAAAAAQAAAHZy+sx97V2P</StatusByteResponse></Interlocking><Interlocking><UniqueID>UK/York/IXL/001/OG</UniqueID><SSIID>OG</SSIID><SPAD><SignalMapResponse>CqECAAsA4r9O1gAAAAAAAAAAAQAAACVYrIymyV2Q</SignalMapResponse></SPAD><IndicationsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</IndicationsResponse><ControlRequests>CqECAAgA479O1gAAAAAAAAEAAQAAAKjjfxYvJgDJHg==</ControlRequests><ARSSubAreaStatus>CqECAAkA479O1gAAAAAAAAEAAQAAAAuFsNWuSAAy0w==</ARSSubAreaStatus><StatusByteResponse>CqMCAAoA4r9O1gAAAAAAAAAAAQAAALvC/JQoW7lv</StatusByteResponse></Interlocking><EmergencyAlarmsResponse>CqEBAAIA4r9O1gAAAAAAAAAAAQAAAG+l3r4f5v3Q</EmergencyAlarmsResponse></Body></Message></Envelope>
+
+0xf4, 0x0b, 0xec, 0x8f, 0xbf, 0xc6, 0x46, 0x6d, 0xda, 0xc5, 0x9d, 0xf1, 0x86, 0xc0, 0xec, 0xd7, 0x7a, 0x57, 0xdf, 0xa8,
+
+9Avsj7/GRm3axZ3xhsDs13pX36g=
+
+0xf4, 0x0b, 0xec, 0x8f, 0xbf, 0xc6, 0x46, 0x6d, 0xda, 0xc5, 0x9d, 0xf1, 0x86, 0xc0, 0xec, 0xd7, 0x7a, 0x57, 0xdf, 0xa8, 
+

@@ -1,0 +1,136 @@
+m_SAS_43_1_Converters
+
+SAS
+
+http://www.bbc.co.uk/news/uk-england-norfolk-29064891
+
+ProtocolMessageElements
+
+C:\AniteSAS\Configuration\Sequencer
+
+ProtocolMessageElements
+
+ProtocolMessageElements.xml 
+
+ProtocolMessageElements.xml
+
+C:\AniteSAS\Configuration\Sequencer\ProtocolMessageElements.xml
+
+01 - Attach and Detach - Any.ssc
+
+80-Attach_Detach_Utran_Recevie_Notification
+
+S:\SAS\07 - Test and Development Builds\SAS 46.3.655-ER
+
+     if (m_SAS_46_3_Converters == null)
+            {
+                m_SAS_46_3_Converters = new ConvertDictInfo();
+                m_SAS_46_3_Converters.Converters = new Dictionary<string, ConvertFromBase>();
+                m_SAS_46_3_Converters.Versions = new List<string>();
+
+                m_SAS_46_3_Converters.StartVersion = "14.8";
+                m_SAS_46_3_Converters.Versions.Add("14.8");
+                new ConvertFrom_V14_8_to_V14_9(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("14.9");
+                m_SAS_46_3_Converters.EndVersion = "14.9";
+
+                ConverterDictionaryInfos.Add(m_SAS_46_3_Converters);
+            }
+
+ static ConvertDictInfo m_SAS_46_3_Converters = null;
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/09/05 09:08:30BST $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V14_8_to_V14_9.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V14_8_to_V14_9 : ConvertFromBase
+    {
+        public ConvertFrom_V14_8_to_V14_9(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("14.8", "14.9", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                scriptElements = _ScriptElementList.ToArray();
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Dan Perrett (dperrett) $
+ * $Date: 2014/09/05 09:08:30BST $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V14_8_to_V14_9.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V14_9_to_V15_1 : ConvertFromBase
+    {
+        public ConvertFrom_V14_9_to_V15_1(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("14.9", "15.1", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                scriptElements = _ScriptElementList.ToArray();
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+new ConvertFrom_V14_8_to_V15_0(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.0");
+
+new ConvertFrom_V14_8_to_V14_9(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("14.9");
+

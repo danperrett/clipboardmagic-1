@@ -1,0 +1,115 @@
+loopdata
+
+currentloopdata
+
+loopdata
+
+       loopCounting[loopIndexIndex] = false;
+                    loopCount[loopIndexIndex] = 0;
+                    loopCount.RemoveAt(loopIndexIndex);
+                    loopCounting.RemoveAt(loopIndexIndex);
+                    maxCount.RemoveAt(loopIndexIndex);
+                    loopGroupData.RemoveAt(loopIndexIndex);
+                    LoopStartTime.RemoveAt(loopIndexIndex);
+                    LoopTimeOutTime.RemoveAt(loopIndexIndex);
+
+                    if (loopIndexIndex > 0)
+                    {
+                        loopdata.RemoveAt(loopIndexIndex);
+                        loopIndexIndex--;
+                        currentloopdata = loopdata[loopIndexIndex];
+                        currentlyLooping = true;
+                    }
+                    else if (loopIndexIndex == 0) //last one clear everything
+                    {
+                        loopdata.RemoveAt(loopIndexIndex);
+                        loopdata = null;
+                        loopdata = new List<List<int>>();
+                        currentloopdata = null;
+                        currentlyLooping = false;
+                    }
+
+cleanuplooping
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+P:\Today\DanP\LteInteractive.zip
+
+S:\SAS\07 - Test and Development Builds\ForMrutyunjay
+
+findConectutiveMesssages
+
+B[num2].MinToMaxElements[i].ToArray()
+
+A[num].elements.
+
+count
+
+J:\Temp\20141105170017708.pdf
+
+msgCount
+
+7653837
+
+ 113 5551 44
+
+ListMessages[index].MeasuredFromItem
+
+diff
+
+postProcessingLibrary
+
+The reason for this absence is of a compassionate 
+
+stage 4 pancreatic cancer
+
+MinOrMax
+
+previousCell
+
+previousRat
+
+PostProcessListDetails details
+
+  ref int previousTimeValue,
+                                                 ref RATType previousRat,
+                                                 ref string previousMsg, 
+                                                 ref string previousCell,
+
+GAPPreviousMessageInfomation
+
+    public class GAPPreviousMessageInfomation
+    {
+         public int previousTimeValue = 0;
+         public RATType previousRat = RATType.NONE;
+         public string previousMsg = "";
+         public string previousCell = "";
+    };
+
+
+ if ((previousTimeValue > -1) && (previousRat == details.rat) && (previousCell == details.Cell.CellID.ToString()))
+
+GAPPreviousMessageInfomation
+
+prevGapMessage
+
+addtoGapMeasurement
+
+, out GAPPreviousMessageInfomation _gap
+
+//  prevGapMessage.Remove(gap);
+
+GAPPreviousMessageInfomation gap
+
+postProcessingLibrary = new MultiRatPostProcessingLibrary();
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+P:\Today\DanP\LteInteractive.zip
+
+Eddie Phillips <ep@waconsultants.com>;
+
+'timesheets@waconsultants.com'
+
+'mb@waconsultants.com'
+

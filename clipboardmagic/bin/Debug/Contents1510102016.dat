@@ -1,0 +1,312 @@
+danC:\Secure\SourceNew\Core\Toolkits\UtmcSnmpBase
+
+C:\Secure\SourceNew\Core\Toolkits\CutlasBase.ncb
+
+C:\Secure\SourceNew\Core\Toolkits\CutlasBase.sln
+
+C:\Secure\SourceNew\Core\Toolkits\CutlData.sln
+
+C:\Secure\SourceNew\Core\Toolkits\CutlSnmp.sln
+
+C:\Secure\SourceNew\Core\Toolkits\MoServices.ncb
+
+C:\Secure\SourceNew\Core\Toolkits\MoServices.sln
+
+C:\Secure\SourceNew\Core\Toolkits\UTMCClient.sln
+
+C:\Secure\SourceNew\Core\Toolkits\UtmcSnmpBase.sln
+
+C:\Secure\SourceNew\Core\Toolkits\CutlasBase
+
+C:\Secure\SourceNew\Core\Toolkits\CutlData
+
+C:\Secure\SourceNew\Core\Toolkits\CutlSnmp
+
+C:\Secure\SourceNew\Core\Toolkits\MoServices
+
+C:\Secure\SourceNew\Core\Toolkits\UTMCClient
+
+C:\Secure\SourceNew\Core\Adapters\PrefectAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\PRISAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\RTIGAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\SdepAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\SdepService.sln
+
+C:\Secure\SourceNew\Core\Adapters\SkiDataAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\SymologyAdapterService.sln
+
+C:\Secure\SourceNew\Core\Adapters\TMXMLAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\TomTomAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\UtmcVmsPlugin.sln
+
+C:\Secure\SourceNew\Core\Adapters\UtmcVmsPluginFull.sln
+
+C:\Secure\SourceNew\Core\Adapters\VaisalaAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\WDMAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\ZeagAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\ACISServerTest
+
+C:\Secure\SourceNew\Core\Adapters\AdapterCore
+
+C:\Secure\SourceNew\Core\Adapters\AdapterService
+
+C:\Secure\SourceNew\Core\Adapters\AirMonitorsAdapter
+
+C:\Secure\SourceNew\Core\Adapters\AlfiaCPPlugin
+
+C:\Secure\SourceNew\Core\Adapters\AQAdapter
+
+C:\Secure\SourceNew\Core\Adapters\AsynAdapterCore
+
+C:\Secure\SourceNew\Core\Adapters\BarcoAdapter
+
+C:\Secure\SourceNew\Core\Adapters\BPSiemensPlugin
+
+C:\Secure\SourceNew\Core\Adapters\cctvAdapter
+
+C:\Secure\SourceNew\Core\Adapters\CivicaAdapter
+
+C:\Secure\SourceNew\Core\Adapters\ClearviewAdapter
+
+C:\Secure\SourceNew\Core\Adapters\CounterCarParkAdapter
+
+C:\Secure\SourceNew\Core\Adapters\CPAdapterAsyn
+
+C:\Secure\SourceNew\Core\Adapters\DatexIIAdapter
+
+C:\Secure\SourceNew\Core\Adapters\DisperantoPlugin
+
+C:\Secure\SourceNew\Core\Adapters\ElginService
+
+C:\Secure\SourceNew\Core\Adapters\emaildispatcher
+
+C:\Secure\SourceNew\Core\Adapters\EmailManager
+
+C:\Secure\SourceNew\Core\Adapters\EnviewAdapter
+
+C:\Secure\SourceNew\Core\Adapters\GoogleDirection
+
+C:\Secure\SourceNew\Core\Adapters\GRAdapter
+
+C:\Secure\SourceNew\Core\Adapters\JourneyTimeAdapter
+
+C:\Secure\SourceNew\Core\Adapters\KolaraPlugin
+
+C:\Secure\SourceNew\Core\Adapters\MayriseAdapter
+
+C:\Secure\SourceNew\Core\Adapters\MeteoAdapterMerseGateWay
+
+C:\Secure\SourceNew\Core\Adapters\MotusAdapter
+
+C:\Secure\SourceNew\Core\Adapters\ParkeonAdapter
+
+C:\Secure\SourceNew\Core\Adapters\PeekRMSAdapter
+
+C:\Secure\SourceNew\Core\Adapters\PrefectAdapter
+
+C:\Secure\SourceNew\Core\Adapters\PRISAdapter
+
+C:\Secure\SourceNew\Core\Adapters\PublicLighting
+
+C:\Secure\SourceNew\Core\Adapters\release
+
+C:\Secure\SourceNew\Core\Adapters\RTIGAdapter
+
+C:\Secure\SourceNew\Core\Adapters\SdepAdapter
+
+C:\Secure\SourceNew\Core\Adapters\SdepService
+
+C:\Secure\SourceNew\Core\Adapters\SkiDataAdapter
+
+C:\Secure\SourceNew\Core\Adapters\SymologyAdapterService
+
+C:\Secure\SourceNew\Core\Adapters\TCAdapterAsyn
+
+C:\Secure\SourceNew\Core\Adapters\TinyNodeAdapter
+
+C:\Secure\SourceNew\Core\Adapters\TMXMLadapter
+
+C:\Secure\SourceNew\Core\Adapters\TomTomAdapter
+
+C:\Secure\SourceNew\Core\Adapters\UtmcVmsPlugin
+
+C:\Secure\SourceNew\Core\Adapters\VaisalaAdapter
+
+C:\Secure\SourceNew\Core\Adapters\VMSAdapterAsyn
+
+C:\Secure\SourceNew\Core\Adapters\WDMAdapter
+
+C:\Secure\SourceNew\Core\Adapters\XMLAdapterCore
+
+C:\Secure\SourceNew\Core\Adapters\ZeagAdapter
+
+C:\Secure\SourceNew\Core\Adapters\AdapterService.ncb
+
+C:\Secure\SourceNew\Core\Adapters\AdapterService.sln
+
+C:\Secure\SourceNew\Core\Adapters\AirMonitorsAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\AirMonitorsAdapterFull.sln
+
+C:\Secure\SourceNew\Core\Adapters\AlfiaCPPlugin.sln
+
+C:\Secure\SourceNew\Core\Adapters\AsynchronousAdapters.ncb
+
+C:\Secure\SourceNew\Core\Adapters\AsynchronousAdapters.sln
+
+C:\Secure\SourceNew\Core\Adapters\BPSiemensPlugin.sln
+
+C:\Secure\SourceNew\Core\Adapters\cctvAdapter.ncb
+
+C:\Secure\SourceNew\Core\Adapters\cctvAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\CivicaAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\ClearviewAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\CounterCarParks.sln
+
+C:\Secure\SourceNew\Core\Adapters\DatexIIAdapter.ncb
+
+C:\Secure\SourceNew\Core\Adapters\DatexIIAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\DatexIIAdapterFull.ncb
+
+C:\Secure\SourceNew\Core\Adapters\DatexIIAdapterFull.sln
+
+C:\Secure\SourceNew\Core\Adapters\DisperantoPlugin.sln
+
+C:\Secure\SourceNew\Core\Adapters\ElginService.sln
+
+C:\Secure\SourceNew\Core\Adapters\GoldenRiver.sln
+
+C:\Secure\SourceNew\Core\Adapters\GoogleDirection.sln
+
+C:\Secure\SourceNew\Core\Adapters\JourneyTimeAdapter.ncb
+
+C:\Secure\SourceNew\Core\Adapters\JourneyTimeAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\KolaraPlugin.sln
+
+C:\Secure\SourceNew\Core\Adapters\MayriseAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\MotusAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\ParkeonAdapter.sln
+
+C:\Secure\SourceNew\Core\Adapters\PeekRMSAdapter.sln
+
+utmcclient.h
+
+C:\Secure\SourceNew\Core\Toolkits_vs2010_x86\UTMCClient
+
+C:\Secure\SourceNew\Core\Toolkits_vs2010_x86\UTMCClient.sln
+
+omniORB-4.2.0
+
+\version
+
+C:\Secure\SourceNew\Core\version\version.h
+
+CutlData.lib
+
+C:\Secure\SourceNew\Core\Toolkits_vs2010_x86\CutlData
+
+C:\Secure\SourceNew\Core\Toolkits_vs2010_x86\CutlData.sln
+
+C:\Secure\SourceNew\Core\ToolKits_x64\UTMCClient\version.h
+
+..\..\..\workarea\$(Configuration)_x64\$(ProjectName)\
+
+X:\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+omnithread
+
+C:\Secure\SourceNew\Core\ToolKits_x64\CutlData\Release\CutlData.lib
+
+MATCHES
+
+C:\Secure\SourceNew\Core\version\version.h
+
+CutlData.lib
+
+C:\Secure\SourceNew\Core\Release
+
+C:\Secure\SourceNew\Core\Release\CutlData.lib
+
+C:\Users\Daniel.Perrett\Desktop\JourneyTimeAdapter
+
+JourneyTimeAdapter
+
+create
+
+msvcp100.dll 
+
+C:\Users\Daniel.Perrett\Downloads\vcredist_x86 (1).exe
+
+C:\Users\Daniel.Perrett\Desktop\JourneyTimeAdapter
+
+http://www.ebay.co.uk/itm/Haynes-Brain-Manual-The-Step-by-Step-Guide-for-Men-Banks-Dr-Ian-Hardback/301946302706?_trksid=p2141725.c100338.m3726&_trkparms=aid%3D222007%26algo%3DSIC.MBE%26ao%3D1%26asc%3D20150313114020%26meid%3D3f32dad7962d41dea9d86448f9786e5d%26pid%3D100338%26rk%3D3%26rkt%3D17%26sd%3D261180099637
+
+SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter"
+
+-typedil
+
+is not an direction value
+
+-typedil
+
+fatal error C1007: unrecognized flag '-typedil' in 'p2'
+
+/OUT:"..\..\Release\JourneyTimeAdapter\JourneyTimeAdapter.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Secure\SourceNew\Core\ThirdParty\boost\boost_1_42\lib" /LIBPATH:"C:\Program Files\Envitia\MapLink Pro\7.1\bin64\..\lib" /LIBPATH:"C:\secure\source\cutlas\core\lib" /DLL /MANIFEST /MANIFESTFILE:"..\..\Release\JourneyTimeAdapter\JourneyTimeAdapter.dll.intermediate.manifest" /DEBUG /PDB:"C:\secure\source\cutlas\core\Symbols\JourneyTimeAdapter.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /MACHINE:X86 /ERRORREPORT:PROMPT cutldata.lib cutlasbase.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
+
+-typedil
+
+http://svnserver.infra.imtech.nl/ImCity/Products/ImCity/trunk/Source
+
+Read TransportLinks Camera ISLINKENTRY
+
+ISLINKENTRY
+
+tl_anpr_lanes
+
+select def.systemcodenumber, \
+        calc.entryperiod, calc.exitperiod, calc.Algorithm_TypeID, calc.PublishFreq, calc.PublishHourOffset, calc.PublishDelay, \
+        conf.fulllength, conf.length, \
+        lanes.cctvsystemcodenumber, lanes.lanenumber, lanes.islinkentry, cctv_conf.vehicledirection, \
+        count(*) over (partition by def.systemcodenumber) as numLanes \
+      from tl_definition def \
+      join tl_anpr_calculation calc \
+        on def.systemcodenumber = calc.systemcodenumber \
+      join tl_anpr_configuration conf \
+        on def.systemcodenumber = conf.systemcodenumber \
+      join tl_anpr_lanes lanes \
+        on def.systemcodenumber = lanes.systemcodenumber \
+      join cctv_lane_configuration cctv_conf \
+        on lanes.cctvsystemcodenumber = cctv_conf.systemcodenumber \
+        and lanes.lanenumber = cctv_conf.lanenumber \
+      where def.deletiondate is null \
+      and def.typeid = 2 \
+      and calc.publishenabled = 'Y'\
+      and conf.configurationdate = \
+        ( select max(configurationdate) from tl_anpr_configuration where systemcodenumber = conf.systemcodenumber ) \
+      and ( cctv_conf.configurationdate is null or \
+            cctv_conf.configurationdate = \
+            ( select max(configurationdate) from cctv_lane_configuration where systemcodenumber = cctv_conf.systemcodenumber ) \
+          )
+
+
+Not really a traditional greeting.
+
+Found no vrns
+

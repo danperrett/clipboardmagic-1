@@ -1,0 +1,346 @@
+xml
+
+er.M
+
+tte
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewFaultThread.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewFaultThreadTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\IClearviewFaultInterface.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\InboundFaultQueue.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\InboundFaultQueueTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\CAANPRAdapterHttpInterface.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCDBServiceAdapter.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCDBServiceAdapterTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCDBServiceAdapterTest.xml
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCounterAdapterMain.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCounterAdapterMainTest.java
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src\dynniq\imcity\myAdapter\ClearviewCounterFaultInputManager.java
+
+localhost:57868/CAInterface.aspx?StartTime=2016-03-20-01-00-00
+
+ class Fault {
+    
+    private string deviceSCNField;
+    
+    private string categoryField;
+    
+    private string typeField;
+    
+    private string startTimeField;
+    
+    private string endTimeField;
+    
+    private long updateTimeField;
+    
+    private string updateTimeStringField;
+    
+    private string miscField;
+    
+    public Fault() {
+        this.deviceSCNField = "";
+        this.categoryField = "";
+        this.typeField = "";
+        this.startTimeField = "";
+        this.endTimeField = "";
+        this.updateTimeStringField = "";
+        this.miscField = "";
+    }
+
+FaultInformation
+
+Faults 
+
+s
+
+a
+
+LastLogTimeStamp
+
+Date time = new Date();
+				    long now = time.getTime();
+
+SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss.ssss" );
+
+http://localhost:57868/CAInterface.aspx?StartTime=2016-07-05-14-07-20
+
+24735
+
+asp:Content
+
+Dynniq 
+Hazelwood House
+Chineham Business Park,
+Hazelwood,
+Chineham, Basingstoke,
+RG248WZ
+
+
+Tel:  07879335173
+
+5284
+
+Faults
+
+<?xml version="1.0" encoding="utf-8"?><Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:22:39</StartTime>
+
+<Faults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/CAInterface.xsd"><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+ Cannot create XmlPullParser
+	at com.thoughtworks.xstream.io.xml.AbstractXppDriver.createReader(AbstractXppDriver.java:56)
+
+runat="server"
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+GetXMLInformation()
+
+<%= GetXMLInformation() %>
+
+System.Web.UI.WebControls.Xml myXML = 
+    new System.Web.UI.WebControls.Xml();
+
+myXML.DocumentSource = "SourceDoc.xml";
+myXML.TransformSource = "SourceTrans.xsl";
+
+MainContent
+
+			String test = "<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>";
+
+<FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateT
+
+stream.alias("FaultInformation", FaultInformation.class);
+				stream.alias("Faults ", Faults .class);
+				stream.addImplicitCollection(Faults .class, "list", FaultInformation.class);
+
+RTHING = 4;
+				test.list.add(e);
+
+ class FaultInformation 
+ {
+    
+    private String DeviceSCN;
+    
+    private String Category;
+    
+    private String type;
+    
+    private String StartTime;
+    
+    private String EndTime;
+    
+    private long UpdateTime;
+    
+    private String UpdateTimeString;
+    
+    private String Misc;
+    
+    public FaultInformation() 
+    {
+        
+    }
+ };
+ 
+ class Faults
+ {
+	 public List<FaultInformation> list;
+	 
+	 public Faults()
+	 {
+		 list = new ArrayList<FaultInformation>();
+	 }
+ };
+
+m
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation>
+
+at com.thoughtworks.xstream.mapper.DefaultMapper.realClass(DefaultMapper.java:81)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.DynamicProxyMapper.realClass(DynamicProxyMapper.java:55)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:48:7</StartTime><EndTime /><UpdateTime>636033304879259969</UpdateTime><UpdateTimeString>05/07/2016 15:48:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:6</StartTime><EndTime /><UpdateTime>636033304866318675</UpdateTime><UpdateTimeString>05/07/2016 15:48:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:38:59</StartTime><EndTime>2016-7-5 15:47:51</EndTime><UpdateTime>636033304718253870</UpdateTime><UpdateTimeString>05/07/2016 15:47:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:38</StartTime><EndTime /><UpdateTime>636033304589390985</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:6:24</StartTime><EndTime>2016-7-5 15:47:38</EndTime><UpdateTime>636033304584090455</UpdateTime><UpdateTimeString>05/07/2016 15:47:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX12</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:15:38</StartTime><EndTime>2016-7-5 15:47:37</EndTime><UpdateTime>636033304573789425</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:37</StartTime><EndTime /><UpdateTime>636033304573169363</UpdateTime><UpdateTimeString>05/07/2016 15:47:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:18:28</StartTime><EndTime>2016-7-5 15:47:25</EndTime><UpdateTime>636033304452577305</UpdateTime><UpdateTimeString>05/07/2016 15:47:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:47:10</StartTime><EndTime /><UpdateTime>636033304309823031</UpdateTime><UpdateTimeString>05/07/2016 15:47:10</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:47:6</StartTime><EndTime /><UpdateTime>636033304266148664</UpdateTime><UpdateTimeString>05/07/2016 15:47:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX6</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:49</StartTime><EndTime /><UpdateTime>636033304097371788</UpdateTime><UpdateTimeString>05/07/2016 15:46:49</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:48</StartTime><EndTime /><UpdateTime>636033304083160367</UpdateTime><UpdateTimeString>05/07/2016 15:46:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:28:40</StartTime><EndTime>2016-7-5 15:46:38</EndTime><UpdateTime>636033303989230975</UpdateTime><UpdateTimeString>05/07/2016 15:46:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:1:7</StartTime><EndTime>2016-7-5 15:46:37</EndTime><UpdateTime>636033303973019354</UpdateTime><UpdateTimeString>05/07/2016 15:46:37</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:46:27</StartTime><EndTime /><UpdateTime>636033303877999853</UpdateTime><UpdateTimeString>05/07/2016 15:46:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:8</StartTime><EndTime /><UpdateTime>636033303680030058</UpdateTime><UpdateTimeString>05/07/2016 15:46:08</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:5:36</StartTime><EndTime>2016-7-5 15:46:7</EndTime><UpdateTime>636033303674879543</UpdateTime><UpdateTimeString>05/07/2016 15:46:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:46:6</StartTime><EndTime /><UpdateTime>636033303665978653</UpdateTime><UpdateTimeString>05/07/2016 15:46:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 14:53:2</StartTime><EndTime>2016-7-5 15:45:51</EndTime><UpdateTime>636033303517943851</UpdateTime><UpdateTimeString>05/07/2016 15:45:51</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX16</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:48</StartTime><EndTime /><UpdateTime>636033303486420699</UpdateTime><UpdateTimeString>05/07/2016 15:45:48</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:47</StartTime><EndTime /><UpdateTime>636033303474459503</UpdateTime><UpdateTimeString>05/07/2016 15:45:47</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX5</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:38</StartTime><EndTime /><UpdateTime>636033303383780436</UpdateTime><UpdateTimeString>05/07/2016 15:45:38</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX14</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:31</StartTime><EndTime /><UpdateTime>636033303315123571</UpdateTime><UpdateTimeString>05/07/2016 15:45:31</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:29</StartTime><EndTime /><UpdateTime>636033303295011560</UpdateTime><UpdateTimeString>05/07/2016 15:45:29</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:27</StartTime><EndTime /><UpdateTime>636033303277849844</UpdateTime><UpdateTimeString>05/07/2016 15:45:27</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX3</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 14:47:24</StartTime><EndTime>2016-7-5 15:45:25</EndTime><UpdateTime>636033303252257285</UpdateTime><UpdateTimeString>05/07/2016 15:45:25</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX15</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:20</StartTime><EndTime /><UpdateTime>636033303201872247</UpdateTime><UpdateTimeString>05/07/2016 15:45:20</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX7</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:45:7</StartTime><EndTime /><UpdateTime>636033303074719533</UpdateTime><UpdateTimeString>05/07/2016 15:45:07</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX4</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:45:6</StartTime><EndTime /><UpdateTime>636033303065818643</UpdateTime><UpdateTimeString>05/07/2016 15:45:06</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX13</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:44:59</StartTime><EndTime /><UpdateTime>636033302991261188</UpdateTime><UpdateTimeString>05/07/2016 15:44:59</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX2</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:19:27</StartTime><EndTime>2016-7-5 15:44:58</EndTime><UpdateTime>636033302987670829</UpdateTime><UpdateTimeString>05/07/2016 15:44:58</UpdateTimeString><Misc /></FaultInformation><FaultInformation><DeviceSCN>EvoX1</DeviceSCN><Category>Camera</Category><type>Hardware Fault</type><StartTime>2016-7-5 15:44:56</StartTime><EndTime /><UpdateTime>636033302967858848</UpdateTime><UpdateTimeString>05/07/2016 15:44:56</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+<Faults><FaultInformation><DeviceSCN>EvoX10</DeviceSCN><Category>Camera</Category><type>Software Fault</type><StartTime>2016-7-5 15:48:10</StartTime><EndTime /><UpdateTime>636033304909993042</UpdateTime><UpdateTimeString>05/07/2016 15:48:10</UpdateTimeString><Misc /></FaultInformation></Faults>
+
+Cannot create XmlPullParser
+	at com.thoughtworks.xstream.io.xml.AbstractXppDriver.createReader
+
+D:\3-Workspace\ImCityAdapters\jxmpp-jid-0.4.1-alpha1.jar
+
+D:\3-Workspace\ImCityAdapters\jxmpp-util-cache-0.2.0.jar
+
+D:\3-Workspace\ImCityAdapters\kxml2-2.3.0.jar
+
+D:\3-Workspace\ImCityAdapters\jxmpp-core-0.3.0.jar
+
+D:\3-Workspace\ImCityAdapters\jxmpp-core-0.4.1.jar
+
+LastLogTimeStamp
+
+List<FaultInformation> list;
+
+localListOfFaults
+
+public
+
+localListOfFaults
+
+	FaultInformation fault = new FaultInformation();
+
+InboundFaultQueue inboundQueue = null;
+
+inboundQueue
+
+7305
+
+inboundQueue = InboundFaultQueue.GetInstance();
+
+ReceivedInformation
+
+for(LocalFaultInformation ff: localListOfFaults)
+			{
+				if((fault.DeviceSCN == ff.DeviceSCN) &&
+				   (fault.Category == ff.Category) &&
+				   (fault.StartTime == ff.StartTime) &&
+				   (fault.type == ff.type))
+				{
+
+12702
+
+FaultInformation fault = new FaultInformation();
+		fault.messageType = FaultMessageType.CreateFault;
+
+import dynniq.imcity.myAdapter.support.FaultInformation;
+import dynniq.imcity.myAdapter.support.FaultMessageType;
+import dynniq.imcity.myAdapter.support.FaultTypeTable;
+
+public class FaultInformation
+{
+	public FaultMessageType messageType;
+	public String From = "";
+	public String To = "";
+	public int ID = 0;
+	public String Device = "";
+	public String Fault = "";
+	public String Category = "";
+    public FaultTypeTable type = FaultTypeTable.NotConnected;
+    public String Time = ""; //YYYY-MM-DD HH:MM::SS
+    public String EndTime = ""; //YYYY-MM-DD HH:MM::SS
+    public String TimeReceived = ""; //YYYY-MM-DD HH:MM::SS
+    
+    public FaultInformation(FaultMessageType messageType,
+    				 String From, 
+			         String To, 
+			         int ID, 
+			         String Device, 
+			         String Fault, 
+			         FaultTypeTable type, 
+			         String Time, //YYYY-MM-DD HH:MM::SS
+                     String EndTime //YYYY-MM-DD HH:MM::SS
+                     )
+    {
+    	this.messageType = messageType;
+    	this.From = From;
+    	this.To = To;
+    	this.ID = ID;
+    	this.Device = Device;
+    	this.Fault = Fault;
+    	this.type = type;
+    	this.Time = Time;
+    	this.EndTime = EndTime;
+    }
+
+	public FaultInformation() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+}
+
+	queuefault.messageType = FaultMessageType.CreateFault;
+
+fault.Fault = datasourcetypeid;
+
+queuefault
+
+private String datasourcetypeid = "";
+
+FaultTypeTable
+
+inputManager.ReceivedMessage(fault, id);
+
+private ClearviewCounterFaultInputManager inputManager = null;
+
+this.id = id;
+		inputManager = inputObject;
+
+queuefault
+
+ReceivedInformation
+
+	clearviewMonitor = new ClearViewHttpMonitor();
+		Enumeration<?> en = config.keys();
+		//get right config for this 
+		while (en.hasMoreElements()) 
+		{
+			String key  = (String) en.nextElement();
+			String keyStr = config.getProperty(key);
+			System.out.println(key + ":" + keyStr);
+			switch(key)
+			{
+				case "datasourcetypeid":
+					datasourcetypeid =  keyStr;
+					break;
+
+ReceivedInformation(fault);
+
+# ImCity CDB Adapter data source ID - Value reserved to Imtech
+datasourcetypeid=1724
+CDBTableName=DETECTOR_FAULTS
+
+CDBTableName=DETECTOR_FAULTS
+
+http://localhost:57868/CAInterface.aspx?StartTime=
+
+addRequestProperty
+
+Secure\cutlas\Core\ThirdParty
+
+prerequisite
+
+http://wiki.imtech.uk.com/display/CUST/ImCity+building+64+bit+CDB+Server.
+
+EvoX
+
+http://wiki.imtech.uk.com/display/CUST/ImCity+Build+Projects
+
+http://localhost:57868/CAInterface.aspx?StartTime=2016-07-07-15-55-44
+
+http://localhost:57868/CAInterface.aspx?StartTime=2016-07-07-16-03-11
+
+List<LocalFaultInformation> localListOfFaults = new ArrayList<LocalFaultInformation>();
+
+684533371/1
+
+TOO@help.vodafone.co.uk 
+
+listofFaults
+
+SerialiseFaults
+

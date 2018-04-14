@@ -1,0 +1,1780 @@
+mediaUri
+
+uriField = "http://www.gwelltimes.com/manage/Upload/Pic/20147914514701.jpg"
+
+"http://www.gwelltimes.com/manage/Upload/Pic/20147914514701.jpg
+
+1.0 (Release)
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+					
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+CAANPRFaultInterfaceAdapter.docx
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+0.1	Draft	2016-06-17	D Perrett	Tina Turner	
+0.2	Update to CA defined Soap Interface.	2016-12-09	D Perrett		Andrew Hodge
+1.0	Initial Release	2017-01-03	D Perrett	Tina Turner	John Ball
+
+Revision	Change detail	Doc Ref 
+0.2	Change overview diagram, and wording text.	2.1 0.2	Change to add request message.	2.3 0.2	Change response format to be inline with CA SOAP interface.	2.3.3 0.2	Change to design.	2.4 0.2	Appendix append wsdl format.	3 
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter\ClearviewCounterAdapter.docx
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\CA-ANPR-JTMS\CAANPRFaultInterfaceAdapter.docx
+
+C:\Secure\mgt\04 System Design Specification\PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter
+
+0.2	2016-06-17	A Newman	Update after proofreading review	
+
+0.1				
+
+
+
+
+Mersey Gateway Project
+
+PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification
+
+CAANPRFaultInterfaceAdapter.docx
+
+PJH3150022_UTMS_Mersey_Gateway_UK\04 System Design Specification\ClearviewAdapter
+
+ClearviewCounterAdapter.docx
+
+Ball, John - UK <John.Ball@dynniq.co.uk>
+
+GetSnapshotUri
+
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Header><VsDebuggerCausalityData xmlns="http://schemas.microsoft.com/vstudio/diagnostics/servicemodelsink">uIDPo1AntcHNWSxKlfJyMoLj8U4AAAAA3YFnL9KfN0K4LPh8ZmUmSRjJhnWTrf1MnVz0s21Bm2cACQAA</VsDebuggerCausalityData></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri></s:Body></s:Envelope>
+
+<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GotoPreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\"><ProfileToken>main</ProfileToken><PresetToken>P00{0}</PresetToken><Speed><PanTilt x=\"1\" y=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /><Zoom x=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /></Speed></GotoPreset></soap:Body></soap:Envelope>"
+
+<GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri>
+
+ string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GotoPreset xmlns=\"http://www.onvif.org/ver20/ptz/wsdl\"><ProfileToken>main</ProfileToken><PresetToken>P00{0}</PresetToken><Speed><PanTilt x=\"1\" y=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /><Zoom x=\"1\" xmlns=\"http://www.onvif.org/ver10/schema\" /></Speed></GotoPreset></soap:Body></soap:Envelope>", preset);
+
+<GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>main</ProfileToken></GetSnapshotUri>
+
+MediaClient
+
+ClientCredentials
+
+AuthenticationScheme = AuthenticationSchemes.Basic;
+
+    and
+
+
+[2017-01-03T14:51:42] INFO: switch from "ukdt0348" to "UKLT1086" at 1439,352
+[2017-01-03T14:51:42] INFO: leaving screen
+[2017-01-03T14:52:49] INFO: switch from "UKLT1086" to "ukdt0348" at 4,850
+[2017-01-03T14:52:49] INFO: entering screen
+[2017-01-03T14:52:57] INFO: switch from "ukdt0348" to "UKLT1086" at 1439,656
+[2017-01-03T14:52:57] INFO: leaving screen
+[2017-01-03T14:54:06] INFO: screen "UKLT1086" grabbed clipboard 0 from "ukdt0348"
+[2017-01-03T14:54:06] INFO: screen "UKLT1086" grabbed clipboard 1 from "ukdt0348"
+
+
+string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>main</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>");
+
+using (WebClient client = new WebClient())
+            {
+                client.Headers[HttpRequestHeader.UserAgent] = "Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 4.0.30319.42000)";
+                client.Headers[HttpRequestHeader.ContentType] = "application/soap+xml; charset=utf-8; action=\"http://www.onvif.org/ver20/ptz/wsdl/GotoPreset\"";
+                string result = client.UploadString("http://192.168.16.102/onvif/services", param);
+            }
+
+http://www.onvif.org/ver10/media/wsdl/GetSnapshotUri
+
+  string url = GetSnapShotURL(2);
+
+GetSnapshotUriResponse
+
+cameraNum
+
+http://stackoverflow.com/questions/25798200/java-record-mic-to-byte-array-and-play-sound
+
+: j.saarelainen
+
+/home/daniel.perrett/workspaceneon
+
+9999
+
+4170ac2a2782a1516fe9e13d7322ae482c1bd594
+
+http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest
+
+4170ac2a2782a1516fe9e13d7322ae482c1bd594
+
+ string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>main</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>");
+
+8888
+
+=
+
+8888
+
+=
+
+8888
+
+0ddb5877c896f43e8734e10b001e7f1eb92889cd
+
+DVTelIpAddress
+
+DVtelUsername
+
+DVTelPassword
+
+password
+
+ ipAddress[cameraNum]
+
+ /usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.TJ2290 --address :24800
+
+
+   tycoInterface.setupCameraCredentials("admin", "9999");
+
+
+
+
+   tycoInterface.setupCameraCredentials("admin", "9999");
+
+route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+route add 10.0.0.0 mask 255.0.0.0 192.168.0.1 metric 2 
+
+ void setupCameraCredentials(string username, string password)
+
+ public void setupDvtel(string ipaddress, string username, string password)
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\TycoTestProject\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\TycoTestProject\bin\x86\Release
+
+10.164.114.163
+
+SASRemotableConnectionService
+
+TcpPort_GUI
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\Debug
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+Hi Dan,
+
+I don?t think there should be any conflict, but can you assume that all cameras support ONVIF at any potential production site?
+Regarding marking the video, we have the concept of Bookmarks and Incidents:
+
+?	A Bookmark is a mark on the recorded video of a single camera at a certain time, with a textual description field.
+?	An Incident may include multiple cameras. When creating an incident, a bookmark will be created for each camera participating in the incident.
+
+You may search for these terms in the SDK help file, and also use the DVTel.SDK.Samples.Incidents sample as a reference.
+Two relevant APIs would be the Recording API and Incidents API.
+The SDK also allows querying for Bookmarks and Incidents using the same APIs.
+
+Regards,
+
+Boaz Arzi
+Director, Applications and Integration Center
+
+FLIR Systems, Inc.
+65 Challenger Road, Ridgefield Park, NJ 07660 USA
+Direct:  +1 201 708 9852 | Mobile: +1 973 906 4008
+Email: boaz.arzi@flir.com | www.flir.com
+
+
+3380
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_v2\ManagedDll.tlb
+
+10.164.114.163
+
+CCTV010
+
+cctv_interface
+
+threadProc
+
+m_ServerIP
+
+m_cameraID
+
+//Read the username
+  if ( !file.read( scn, "ServerUsername", m_username ) )
+  {
+    sprintf( output, "Tyco Camera failed to read the username for camera '%s'", scn );
+    log( output );
+    return false;
+  }
+
+m_CameraUsername
+
+  //Read the password
+  file.read( scn, "ServerPassword", m_password, "" );
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\TycoAgent_v2\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\TycoAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+Username,
+	         const char* Password,
+			 const char* ipAddress,
+			 const char* cameraUsername,
+			 const char* cameraPassword);
+
+ void Setup(const char* Username,
+	         const char* Password,
+			 const char* ipAddress,
+			 const char* cameraUsername,
+			 const char* cameraPassword);
+
+char Username[256];
+  char Password[256];
+  char ipAddress[256];
+  char cameraUsername[256];
+  char cameraPassword[256];
+
+Setup
+
+m_username
+
+m_password
+
+m_ServerIP
+
+cameraUsername
+
+m_CameraUsername
+
+m_CameraPassword
+
+ char Username[256];
+  char Password[256];
+  char ipAddress[256];
+  char cameraUsername[256];
+  char cameraPassword[256];
+
+ void Setup(const char* Username,
+	         const char* Password,
+			 const char* ipAddress,
+			 const char* cameraUsername,
+			 const char* cameraPassword)
+ {
+     strcpy(this->Username, Username);
+     strcpy(this->Password, Password);
+     strcpy(this->ipAddress, ipAddress);
+     strcpy(this->cameraUsername, cameraUsername);
+     strcpy(this->cameraPassword, cameraPassword);
+ }
+
+TycoInterfaceManager
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ int num = tycoInterface.InitiliseNumberOfCameras();
+
+this->ipAddress
+
+NumberOfDVtelCameras
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ HRESULT hr =  CoInitialize(NULL);
+
+  if ( hr == S_OK )
+  {
+	  ITycoCCTVInterfacePtr cctv_interface(__uuidof(ManagedClass));
+	  this->m_interface = cctv_interface;
+	  cctv_interface->Initialise("");
+	  cctv_interface->Logon(this->ipAddress, this->Username, this->Password);
+      this->NumberOfDVtelCameras = cctv_interface->InitiliseNumberOfCameras();
+  }
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+this->m_interface
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+
+Getting dynamic data
+
+processCommand
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+
+
+Dynniq, Hazelwood House, Lime Tree Way, Chineham Business Park, Basingstoke RG24 8WZ
+
+
+Figure 1 shows an overview of the system. Everything in the yellow box is provided by Dynniq
+
+set_preset
+
+if ( !parameters )
+      {
+        fireCommandResponse( commandid, 1, 0.0, "No parameters" );
+        return true;
+      }
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+CutlasIniFile file( m_inifile );
+
+file.read( scn, "ServerIPAddress", m_ServerIP )
+
+Camera* camera
+
+sharedObject
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+SharedObject
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+getMapName( const char* name )
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+string mapName
+
+mapName = getMapName( camera->name() );
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+/usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.TJ7882 --address :24800
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestItem::RequestType_SetPreset
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '2', '0');
+commit;
+
+const char *deviceKey  = devObj->getAttribute( "SYSTEMCODENUMBER" );
+
+commandObject
+
+deviceKey
+
+virtual void IntendedSCNCommand(const char* scn){};
+
+long commandid,
+
+void IntendedSCNCommand(long commandid, const char* scn);
+
+TycoCamera::
+
+char commandScn[256];
+
+commandScn
+
+m_scnCommandID
+
+IntendedSCNCommand
+
+deviceKey
+
+m_commandScn
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+IntendedSCNCommand
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+logger("gotoPreset");
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+     m_camera->requestCompleted( m_currentRequest );
+      delete m_currentRequest;
+      m_currentRequest = 0;
+
+      SetEvent( m_addEvent );
+    }
+    else if ( m_currentRequest->stage() == RequestItem::Stage_Failed )
+    {
+      m_camera->requestCompleted( m_currentRequest );
+      delete m_currentRequest;
+      m_currentRequest = 0;
+
+      SetEvent( m_addEvent );
+    }
+
+10.164.114.163
+
+     FileInfo file1 = new FileInfo("C:\\temp\\tempafter.jpg");
+            FileStream stream1 = file1.OpenWrite();
+            stream1.Write(arr1, 0, arr1.Length);
+            stream1.Close();
+
+byte[] arr = tycoInterface.GetSnapshot(cam);
+                FileInfo file = new FileInfo("C:\\temp\\thumbnail.jpg");
+                FileStream stream = file.OpenWrite();
+                stream.Write(arr, 0, arr.Length);
+                stream.Close();
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '2', '0');
+commit;
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+GetCameraNumberFromName
+
+char m_scn[256];
+
+m_scn
+
+static_cast< RequestSetPreset* >( m_currentRequest )
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+SQL_INSERT_W_PRESET
+
+SQL_INSERT_WO_PRESET
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestDynamic
+
+ string cameradetails = "";
+
+string[] faults
+
+public string[] getCameraFaults()
+
+  string[] getCameraFaults();
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+ if(this->m_interface != NULL)
+	   {
+
+  int cam = this->m_interface->GetCameraNumberFromName(requestSet->m_scn);
+
+getCameraFaults
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+internalTimerProc
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+getStatus
+
+bool getDVtelFaults();
+
+if ( m_currentRequest )
+  {
+     //Log on to the interface
+     logger("getStatus");
+     if(this->m_interface != NULL)
+	 {
+		 char* faults = this->m_interface->GetCameraFaults();
+	 }
+
+    return true;
+  }
+  return false;
+
+Stage_GetDVTelFaults
+
+RequestGetStatus
+
+doRequest
+
+RequestType_GetDVTelFaults
+
+RequestTypeEnum
+
+ enum RequestTypeEnum
+
+RequestSetPreset
+
+char m_scn[256];
+
+RequestTypeEnum
+
+RequestedItem
+
+RequestType_SetPreset
+
+RequestType_SnapShot
+
+RequestType_SetPreset
+
+RequestType_GetDVTelFaults
+
+commandId
+
+m_commandId
+
+string scn
+
+RequestedItem
+
+RequestFaults
+
+RequestSnapShot
+
+getStatus
+
+RequestType_GetDVTelFaults;
+
+getType
+
+RequestType_SnapShot
+
+getType
+
+GetStatus
+
+commandID
+
+m_commandId
+
+GetType
+
+item->GetStatus()
+
+RequestSnapShot
+
+RequestedItem
+
+GetScn
+
+RequestType_SnapShot
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\TycoAgent_v2\ManagedDll.tlb
+
+ delete m_currentRequest;
+		  m_currentRequest = 0;
+
+	  delete m_currentRequest;
+		  m_currentRequest = 0;
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestSetPreset
+
+GetScn
+
+commandID
+
+:
+		RequestedItem(request.GetScn(), request.commandID()),
+
+RequestSetPreset
+
+static_cast< RequestSetPreset* >( m_currentRequest )
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestSetPreset
+
+bool gotoPreset(RequestSetPreset request);
+
+TycoInterfaceManager::
+
+
+		  this->gotoPreset();
+		  
+		  m_camera->requestCompleted( m_currentRequest );
+	
+
+RequestSetPreset request
+
+RequestSetPreset* request
+
+gotoPresetThread
+
+RequestSetPreset
+
+request
+
+RequestSetPreset* requestSet = static_cast< RequestSetPreset* >( m_currentRequest );
+
+requestSet
+
+friend unsigned long _stdcall
+
+unsigned long _stdcall gotoPresetThread(RequestSetPreset* request);
+
+RequestSetPreset* requestSet = static_cast< RequestSetPreset* >( m_currentRequest );
+
+CreateThread( 0 , 0 , ThreadTask, this, 0 , &m_updateStatusThreadID ) ;
+
+unsigned long m_updateStatusThreadID;
+
+TycoInterfaceManager
+
+requestSet
+
+requestSet->manager
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+	  //if(logged on)
+
+
+request
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+requestSet->manager->m_camera->requestCompleted( requestSet );
+
+ requestSet->manager->m_camera->requestCompleted( requestSet );
+
+SetStatusOK
+
+requestSet->manager->
+
+setError
+
+m_interface
+
+RequestType_GetDVTelFaults
+
+RequestFaults
+
+unsigned long m_updateStatusThreadID;
+
+		  CreateThread( 0 , 0 , gotoPresetThread, (void*)copyRequest, 0, &m_updateStatusThreadID ) ;
+
+RequestType_MarkVideo
+
+commandID
+
+RequestFaults
+
+getDVtelFaults
+
+RequestType_MarkVideo
+
+friend unsigned long _stdcall markVideoThread(void request);
+  static unsigned long _stdcall markVideoThread(void request);
+
+RequestSnapShot
+
+RequestType_SnapShot
+
+m_currentRequest->GetType() == RequestType_SnapShot)
+
+RequestType_MarkVideo
+
+RequestSnapShot
+
+unsigned long m_updateStatusThreadID;
+
+		  CreateThread( 0 , 0 , gotoPresetThread, (void*)copyRequest, 0, &m_updateStatusThreadID ) ;
+
+getSnapShotThread
+
+nsigned long _stdcall getSnapShotThread(void request);
+
+RequestSnapShot
+
+bool getSnapShot(RequestSnapShot request);
+
+TycoInterfaceManager::
+
+unsigned long _stdcall getSnapShotThread(void* request);
+
+TycoInterfaceManager::
+
+unsigned long _stdcall markVideoThread(void* request);
+
+ bool markThread(RequestMark request);
+
+TycoInterfaceManager::
+
+->manager->
+
+requestSnapShot
+
+ requestSet->SetStatusOK();
+
+requestSnapShot
+
+->SetStatusFail();
+
+string errors = requestSet->manager->m_interface->GetErrors();
+
+requestSet->setError(errors);
+
+requestSnapShot
+
+ int cam = this->m_interface->GetCameraNumberFromName(request->GetScn().c_str());
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+SAFEARRAY
+
+RequestSnapShot
+
+RequestType_GetDVTelFaults
+
+RequestFaults
+
+GetCameraFaults
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+SetFaults
+
+requestSet->manager->m_camera->requestCompleted( requestSet );
+
+hasFaults
+
+processFault( status );
+
+vector<string> split(const string &s, char delim) {
+    stringstream ss(s);
+    string item;
+    vector<string> tokens;
+    while (getline(ss, item, delim)) {
+        tokens.push_back(item);
+    }
+    return tokens;
+}
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+vector<string> split(const string &s, char delim)
+{
+	std::stringstream ss(s);
+    string item;
+    vector<string> tokens;
+    while (getline(ss, item, delim)) {
+        tokens.push_back(item);
+    }
+    return tokens;
+}
+
+#include <iostream>
+#include <sstream>
+#include <string>
+
+split
+
+vector<string>
+
+getFaults
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestSetPreset
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+string getListOfCamera();
+
+GetCameraNumberFromName
+
+string GetCameraScnList(ref int length);
+
+foreach(IVideoInSceneEntity entity in cameras)
+            {
+                if(entity.DetailedInformation.
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+GetCameraScnList
+
+vector<string> split(const string &s, char delim)
+	{
+		std::stringstream ss(s);
+		string item;
+		vector<string> tokens;
+		while (getline(ss, item, delim)) 
+		{
+			tokens.push_back(item);
+		}
+		return tokens;
+	}
+
+vector<string> cameraList
+
+  vector<string> getListOfCamera()
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+10.164.114.163
+
+cameraList
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+ git config --global push.default simple
+
+Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>
+
+Millard, Kaya [TYCO I&S - Cambridge]
+
+Millard, Kaya [TYCO I&S - Cambridge] <kmillard@tycoint.com>
+
+Millard, Kaya [TYCO I&S - Cambridge]
+
+internalTimerProc
+
+http://www.ebay.co.uk/itm/Lotus-Honda-Indy-car-Indycar-F1-race-racing-used-Dallara-IR4/132043485696?_trksid=p2060778.c100276.m3476&_trkparms=aid%3D222007%26algo%3DSIC.MBE%26ao%3D1%26asc%3D20140725133651%26meid%3D206bc9d490284192922cd5c27ca15e86%26pid%3D100276%26rk%3D4%26rkt%3D4%26sd%3D361869899506
+
+cameraList
+
+m_manager->addRequest( new RequestSnapShot(
+
+RequestSnapShot
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+7210 SAS-D
+
+6850 Edge Router
+
+1696 Optical DWDM
+
+OmniPCX
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+GetInfoLog
+
+ public string GetInfoLog()
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+DVtelUsername
+
+  DVTelIpAddress = ipaddress;
+            DVtelUsername = username;
+            DVTelPassword = password;
+
+loggedInSystem
+
+if(loggedInSystem == null)
+            {
+               if(!string.IsNullOrEmpty(DVtelUsername))
+                {
+
+                }
+            }
+
+DVTelIpAddress
+
+   if(Logon(DVTelIpAddress, DVtelUsername, DVTelPassword))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+CheckLogedin
+
+videoStarted
+
+IPlayerAPI playerAPI = cameras[num].DvtelSystem.GetAPI<IPlayerAPI>();
+        
+                 IVideoController video = (IVideoController)playerAPI.CreateController((IDisplayableEntity)cameras[num]);
+
+IVideoInSceneEntity scene
+
+IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+
+39 Glendale Drive, Guildford, GU4 7HZ
+
+/var/lib/prosody
+
+alerts@insight.clearviewtraffic.com
+
+	info	incoming s2s connection tigase.im->codinggain.com complete
+Jan 11 09:25:47 c2s1983b00	info	Client disconnected: closed
+Jan 11 09:26:09 c2s1b7fe40	info	Client connected
+Jan 11 09:26:11 c2s1b7fe40	info	Authenticated as dan@codinggain.com
+Jan 11 09:26:27 s2sin1920e50	info
+
+52.212.159.37
+
+Hi Daniel
+
+Here is our experience with our application and the DvTel SDK
+We have an application the performs the following to gather snapshots for customers:
+
+1)	Optionally sends the camera to a pre-set and waits for the camera to arrive at position then
+a.	Takes a snap shot and saves JPEG with an on screen display to a file or FTP
+2)	Can handle multiple snaphots at one time.
+
+We have found using the GetSnapshot function of the SDK to be often problematic.
+We have not tried the new Thumbnails option as this requires control centre I believe and was added after our application was written.
+
+Here are the issues we have found with GetSnapShot from the SDK
+?	Requires an application not a service
+?	Requires a windows drawing service to work i.e. logged in and not locked
+?	Remote desktop will stop the snapshot process
+?	Can often fail to work and requires an application reset
+
+To get around this where it?s possible we go direct to the camera and request a snap shot and use a service not an application to do this.
+The SDK is reliable for PTZ work and this seems to work well for pre-sets.
+We have drivers for Axis and our RDC cameras which make up the have bulk of our customers requirements in the past.
+Most cameras have a way to get an image, one issue is that unless you use Onvif or MJPEG then each camera manufacturer has their own API.
+
+In the odd case where we have to use the SDK for snapshots  we us an application on a dedicated machine that is permanently logged in.
+
+When you think about it, converting a video stream to a JPEG,  can be  tricky as you have to wait for an iFrame before the snapshot can be taken.
+
+A note on scaling, you need to think about how often and how many cameras you want a snapshot from.
+I.e. 100 cameras at 1 min intervals will mean a snap shot taken on average  every 0.6 Secs also you have to expect camera to be not on line and sometimes fail.
+We have ended up with a queue of scheduled cameras and multiple threads to remove them, take the snapshot and re schedule.
+
+Versioning:
+Most of our experience with this was with 6.3 and 6.4 version of the SDK and things may have improved with version 7.
+Also when new versions of the SDK are released this often requires an rebuild of your application to ensure compatibility with the SDK dlls.
+
+Hope this helps in your project.
+
+Kaya.
+
+
+
+Hi Daniel
+
+Here is our experience with our application and the DvTel SDK
+We have an application the performs the following to gather snapshots for customers:
+
+1)	Optionally sends the camera to a pre-set and waits for the camera to arrive at position then
+a.	Takes a snap shot and saves JPEG with an on screen display to a file or FTP
+2)	Can handle multiple snaphots at one time.
+
+We have found using the GetSnapshot function of the SDK to be often problematic.
+We have not tried the new Thumbnails option as this requires control centre I believe and was added after our application was written.
+
+Here are the issues we have found with GetSnapShot from the SDK
+?	Requires an application not a service
+?	Requires a windows drawing service to work i.e. logged in and not locked
+?	Remote desktop will stop the snapshot process
+?	Can often fail to work and requires an application reset
+
+To get around this where it?s possible we go direct to the camera and request a snap shot and use a service not an application to do this.
+The SDK is reliable for PTZ work and this seems to work well for pre-sets.
+We have drivers for Axis and our RDC cameras which make up the have bulk of our customers requirements in the past.
+Most cameras have a way to get an image, one issue is that unless you use Onvif or MJPEG then each camera manufacturer has their own API.
+
+In the odd case where we have to use the SDK for snapshots  we us an application on a dedicated machine that is permanently logged in.
+
+When you think about it, converting a video stream to a JPEG,  can be  tricky as you have to wait for an iFrame before the snapshot can be taken.
+
+A note on scaling, you need to think about how often and how many cameras you want a snapshot from.
+I.e. 100 cameras at 1 min intervals will mean a snap shot taken on average  every 0.6 Secs also you have to expect camera to be not on line and sometimes fail.
+We have ended up with a queue of scheduled cameras and multiple threads to remove them, take the snapshot and re schedule.
+
+Versioning:
+Most of our experience with this was with 6.3 and 6.4 version of the SDK and things may have improved with version 7.
+Also when new versions of the SDK are released this often requires an rebuild of your application to ensure compatibility with the SDK dlls.
+
+Hope this helps in your project.
+
+Kaya.
+
+
+ if(!CheckLogedin())
+            {
+                return false;
+            }
+
+ IPlayerAPI playerAPI = cameras[num].DvtelSystem.GetAPI<IPlayerAPI>();
+        
+                 IVideoController video = (IVideoController)playerAPI.CreateController((IDisplayableEntity)cameras[num]);
+
+6623
+
+package audio;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.TargetDataLine;
+
+public class AudioTest {
+
+    public static void main(String[] args) {
+
+        AudioFormat format = new AudioFormat(8000.0f, 16, 1, true, true);
+        TargetDataLine microphone;
+        AudioInputStream audioInputStream;
+        SourceDataLine sourceDataLine;
+        try {
+            microphone = AudioSystem.getTargetDataLine(format);
+
+            DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+            microphone = (TargetDataLine) AudioSystem.getLine(info);
+            microphone.open(format);
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            int numBytesRead;
+            int CHUNK_SIZE = 1024;
+            byte[] data = new byte[microphone.getBufferSize() / 5];
+            microphone.start();
+
+            int bytesRead = 0;
+
+            try {
+                while (bytesRead < 100000) { // Just so I can test if recording
+                                                // my mic works...
+                    numBytesRead = microphone.read(data, 0, CHUNK_SIZE);
+                    bytesRead = bytesRead + numBytesRead;
+                    System.out.println(bytesRead);
+                    out.write(data, 0, numBytesRead);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            byte audioData[] = out.toByteArray();
+            // Get an input stream on the byte array
+            // containing the data
+            InputStream byteArrayInputStream = new ByteArrayInputStream(
+                    audioData);
+            audioInputStream = new AudioInputStream(byteArrayInputStream,format, audioData.length / format.getFrameSize());
+            DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
+            sourceDataLine = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
+            sourceDataLine.open(format);
+            sourceDataLine.start();
+            int cnt = 0;
+            byte tempBuffer[] = new byte[10000];
+            try {
+                while ((cnt = audioInputStream.read(tempBuffer, 0,tempBuffer.length)) != -1) {
+                    if (cnt > 0) {
+                        // Write data to the internal buffer of
+                        // the data line where it will be
+                        // delivered to the speaker.
+                        sourceDataLine.write(tempBuffer, 0, cnt);
+                    }// end if
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            // Block and wait for internal buffer of the
+            // data line to empty.
+            sourceDataLine.drain();
+            sourceDataLine.close();
+            microphone.close();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+package audio;
+
+public class AudioTest {
+
+}
+
+
+package audio;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.TargetDataLine;
+
+public class AudioTest {
+
+    public static void main(String[] args) {
+
+        AudioFormat format = new AudioFormat(8000.0f, 16, 1, true, true);
+        TargetDataLine microphone;
+        AudioInputStream audioInputStream;
+        SourceDataLine sourceDataLine;
+        try {
+            microphone = AudioSystem.getTargetDataLine(format);
+
+            DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+            microphone = (TargetDataLine) AudioSystem.getLine(info);
+            microphone.open(format);
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            int numBytesRead;
+            int CHUNK_SIZE = 1024;
+            byte[] data = new byte[microphone.getBufferSize() / 5];
+            microphone.start();
+
+            int bytesRead = 0;
+
+            try {
+                while (bytesRead < 100000) { // Just so I can test if recording
+                                                // my mic works...
+                    numBytesRead = microphone.read(data, 0, CHUNK_SIZE);
+                    bytesRead = bytesRead + numBytesRead;
+                    System.out.println(bytesRead);
+                    out.write(data, 0, numBytesRead);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            byte audioData[] = out.toByteArray();
+            // Get an input stream on the byte array
+            // containing the data
+            InputStream byteArrayInputStream = new ByteArrayInputStream(
+                    audioData);
+            audioInputStream = new AudioInputStream(byteArrayInputStream,format, audioData.length / format.getFrameSize());
+            DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
+            sourceDataLine = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
+            sourceDataLine.open(format);
+            sourceDataLine.start();
+            int cnt = 0;
+            byte tempBuffer[] = new byte[10000];
+            try {
+                while ((cnt = audioInputStream.read(tempBuffer, 0,tempBuffer.length)) != -1) {
+                    if (cnt > 0) {
+                        // Write data to the internal buffer of
+                        // the data line where it will be
+                        // delivered to the speaker.
+                        sourceDataLine.write(tempBuffer, 0, cnt);
+                    }// end if
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            // Block and wait for internal buffer of the
+            // data line to empty.
+            sourceDataLine.drain();
+            sourceDataLine.close();
+            microphone.close();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+package audio;
+
+public class AudioTest {
+
+}
+
+
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.TargetDataLine;
+
+ AudioFormat format = new AudioFormat(8000.0f, 16, 1, true, true);
+        TargetDataLine microphone;
+        AudioInputStream audioInputStream;
+        SourceDataLine sourceDataLine;
+
+	 AudioFormat format = new AudioFormat(8000.0f, 16, 1, true, true);
+     TargetDataLine microphone;
+     AudioInputStream audioInputStream;
+     SourceDataLine sourceDataLine;
+
+12147
+
+  try 
+        {
+            microphone = AudioSystem.getTargetDataLine(format);
+
+            DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+            microphone = (TargetDataLine) AudioSystem.getLine(info);
+            microphone.open(format);
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            int numBytesRead;
+            int CHUNK_SIZE = 1024;
+            byte[] data = new byte[microphone.getBufferSize() / 5];
+            microphone.start();
+
+            int bytesRead = 0;
+
+            try 
+            {
+                while (bytesRead < 100000) 
+                { // Just so I can test if recording
+                                                // my mic works...
+                    numBytesRead = microphone.read(data, 0, CHUNK_SIZE);
+                    bytesRead = bytesRead + numBytesRead;
+                    System.out.println(bytesRead);
+                    out.write(data, 0, numBytesRead);
+                }
+            } 
+            catch (Exception e) 
+            {
+                e.printStackTrace();
+            }
+            byte audioData[] = out.toByteArray();
+            // Get an input stream on the byte array
+            // containing the data
+            InputStream byteArrayInputStream = new ByteArrayInputStream(
+                    audioData);
+            audioInputStream = new AudioInputStream(byteArrayInputStream,format, audioData.length / format.getFrameSize());
+            DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
+            sourceDataLine = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
+            sourceDataLine.open(format);
+            sourceDataLine.start();
+            int cnt = 0;
+            byte tempBuffer[] = new byte[10000];
+            try {
+                while ((cnt = audioInputStream.read(tempBuffer, 0,tempBuffer.length)) != -1) {
+                    if (cnt > 0) {
+                        // Write data to the internal buffer of
+                        // the data line where it will be
+                        // delivered to the speaker.
+                        sourceDataLine.write(tempBuffer, 0, cnt);
+                    }// end if
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            // Block and wait for internal buffer of the
+            // data line to empty.
+            sourceDataLine.drain();
+            sourceDataLine.close();
+            microphone.close();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+data
+
+Benign paroxysmal positional vertigo (BPPV)
+
+AudioFormat
+
+public String getPictureName(int id)
+	{
+		return name;
+	}
+	
+
+Device: 006
+Type: Status received
+Time: 2017-01-11 15:45:47
+
+d
+
+N1c@nd3rCl13nt
+
+NicanderClient
+
+CortexDB
+
+HelloWorldJSP/helloWorld.jsp?name=dan
+
+93.95.10.169
+
+NicanderClient
+
+N1c@nd3rCl13nt
+
+LastLogTimeStamp = now;
+
+http://93.95.10.169:18080/JTMSDiagnosticsFeed.wsdl
+
+
+http://93.95.10.169:18080/JTMSDiagnosticsFeed.wsdl
+
+
+12749
+
+* 
+
+C:/imtech/CAFaultAdapter/config/JTMSDiagnosticsFeed.wsdl
+
+http://93.95.10.169:18080/JTMSDiagnosticsFeed.wsdl
+
+udioProcessing/services/AudioService.wsdl
+
+http://93.95.10.169/
+
+http://93.95.10.169:18080/
+
+APERRETT187738
+
+POST /JTMSDiagnosticFeed.wsdl HTTP/1.1
+Accept: text/xml, multipart/related
+Content-Type: text/xml; charset=utf-8
+SOAPAction: ""
+User-Agent: JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e
+Host: 93.95.10.169:18080
+Connection: keep-alive
+Content-Length: 393
+
+<?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><DiagnosticDataLogin xmlns="http://93.95.10.164/JTMSDiagnosticsFeed/schema_1-1"><UserName>TestName</UserName><UserPassword>TestPwd</UserPassword><StartTimestamp>2017-01-11T12:59:30.449Z</StartTimestamp><EndTimestamp>2017-01-13T12:59:30.449Z</EndTimestamp></DiagnosticDataLogin></S:Body></S:Envelope>HTTP/1.1 200 OK
+Server: gSOAP/2.8
+Content-Type: text/xml; charset=utf-8
+Content-Length: 6626
+Connection: close
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:JTMS="http://93.95.10.164/JTMSDiagnosticsFeed/schema_1-1"><SOAP-ENV:Body><JTMS:DiagnosticDataArray><JTMS:DiagnosticData><JTMS:FaultID>22</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>11</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 1 Southbound</JTMS:EquipmentSCN><JTMS:FaultType>Offline</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>Offline</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-11T14:39:32Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-11T15:42:32Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>4</JTMS:FaultID><JTMS:EquipmentType>JTMS</JTMS:EquipmentType><JTMS:EquipmentID>1</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Link Assessment Point C to Assessment Point B Northbound Main</JTMS:EquipmentSCN><JTMS:FaultType>Quality</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>JTMS Quality fault</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-11T18:14:04Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-11T21:53:04Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>26</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>1</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point A Speke Road Lane 1 Southbound</JTMS:EquipmentSCN><JTMS:FaultType>Software</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>encoderThread() : fatal exception : VIP Ch2 Dropped too many frames 896 (was 1 now 897)</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-11T20:48:51Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-11T23:15:51Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>36</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>11</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 1 Southbound</JTMS:EquipmentSCN><JTMS:FaultType>Hardware</JTMS:FaultType><JTMS:FaultSubType>21</JTMS:FaultSubType><JTMS:FaultDescription>Low RAM disk space</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-12T05:00:33Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-12T09:32:33Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>23</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>12</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 2 Southbound</JTMS:EquipmentSCN><JTMS:FaultType>Offline</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>Offline</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-12T05:10:03Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-12T06:00:03Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>8</JTMS:FaultID><JTMS:EquipmentType>InStation</JTMS:EquipmentType><JTMS:EquipmentID>1</JTMS:EquipmentID><JTMS:EquipmentSCN>CA InStation 1</JTMS:EquipmentSCN><JTMS:FaultType>Comms</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>Comms Fault</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-12T07:42:26Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-12T07:45:26Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>24</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>13</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 1 Northbound</JTMS:EquipmentSCN><JTMS:FaultType>Offline</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>Offline</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-12T18:34:00Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-12T19:43:00Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>37</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>12</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 2 Southbound</JTMS:EquipmentSCN><JTMS:FaultType>Hardware</JTMS:FaultType><JTMS:FaultSubType>25</JTMS:FaultSubType><JTMS:FaultDescription>Supply voltage failure</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-13T00:52:27Z</JTMS:StartedTimestamp><JTMS:ClearedTimestamp>2017-01-13T10:07:27Z</JTMS:ClearedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>38</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>13</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 1 Northbound</JTMS:EquipmentSCN><JTMS:FaultType>Quality</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>Alignment error</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-13T05:33:52Z</JTMS:StartedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>25</JTMS:FaultID><JTMS:EquipmentType>Camera</JTMS:EquipmentType><JTMS:EquipmentID>14</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Camera Assessment Point C Weston Point Expressway Lane 2 Northbound</JTMS:EquipmentSCN><JTMS:FaultType>Offline</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>Offline</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-13T06:41:29Z</JTMS:StartedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>11</JTMS:FaultID><JTMS:EquipmentType>InStation</JTMS:EquipmentType><JTMS:EquipmentID>1</JTMS:EquipmentID><JTMS:EquipmentSCN>CA InStation 1</JTMS:EquipmentSCN><JTMS:FaultType>Hardware</JTMS:FaultType><JTMS:FaultSubType>18</JTMS:FaultSubType><JTMS:FaultDescription>Low memory</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-13T12:32:34Z</JTMS:StartedTimestamp></JTMS:DiagnosticData><JTMS:DiagnosticData><JTMS:FaultID>5</JTMS:FaultID><JTMS:EquipmentType>JTMS</JTMS:EquipmentType><JTMS:EquipmentID>1</JTMS:EquipmentID><JTMS:EquipmentSCN>CA Link Assessment Point B to Assessment Point A Northbound Main</JTMS:EquipmentSCN><JTMS:FaultType>Quality</JTMS:FaultType><JTMS:FaultSubType>0</JTMS:FaultSubType><JTMS:FaultDescription>JTMS Quality fault</JTMS:FaultDescription><JTMS:StartedTimestamp>2017-01-13T12:40:36Z</JTMS:StartedTimestamp></JTMS:DiagnosticData></JTMS:DiagnosticDataArray></SOAP-ENV:Body></SOAP-ENV:Envelope>
+
+
+([EquipmentTypeID], [EquipmentID], [EquipmentSCN], [FaultTypeID], [FaultSubTypeID], [FaultDescription], [StartedTimestamp]
+
+2017-01-06 18:49:45.953
+
+}
+
+INSERT INTO SUBSYSTEM_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION) VALUES (44, 'JTMSCA002', TO_DATE('2017-01-13 14:19:04', 'YYYY-MM-DD HH24:MI:SS'), 0, 1723, 'Power Down')
+
+CCTV_FAULTS
+
+MLGregorianCalendar;
+
+
+jdbc:jtds:sqlserver://localhost/brandix;instance=sqlexpress
+
+93.95.10.169\SQL2014
+
+"jdbc:jtds:sqlserver://93.95.10.169/SQL2014;instance=sqlexpress";
+
+user
+
+NicanderClient
+
+N1c@nd3rCl13nt
+
+SQL2014
+
+
+		static String ConnectionURL = "jdbc:jtds:sqlserver://93.95.10.169:
+
+CortexDB
+
+b
+
+CortexDB
+
+93.95.10.169
+
+CortexDB
+
+SQL2014
+
+Password = "N1c@nd3rCl13nt";
+
+CloseSqlConnection
+
+insert into diagnostics.Faults (EquipmentTypeID, EquipmentID, EquipmentSCN, FaultTypeID, FaultSubTypeID, FaultDescription, StartedTimestamp) 
+VALUES(0, 1, 'JTMSCA002', 1, 0, 'Power Down', GETDATE());
+
+  Statement stmt = null;
+
+ResultSet rs = null;
+
+OpenSqlConnection
+
+CloseSqlConnection
+
+ con.createStatement();
+
+null
+
+stmt.executeQuery(SQL);
+
+20668
+
+	        		   if(!CAConnection.isClosed())
+
+
+con
+
+stmt.executeQuery(SQL);
+
+7820
+
+arg0
+
+	writer = new PrintWriter(new FileWriter("/home/daniel.perrett/GeneratedFaults.dat", true));
+	    			
+	        		if(writer != null)
+	        		{
+	        			writer.println("<New Fault>"); 
+	        		    writer.println(mess);
+	        		    writer.println("</New Fault>");
+	        		}
+	        		writer.close();
+	        		
+
+while (rs.next()) {
+                        System.out.println(rs.getString(4) + " " + rs.getString(6));
+                    }
+
+import java.sql.
+
+"CLC006"
+
+	count++;
+
+	        				   
+
+6
+
+hi our network guy has informed me there is only a short log in the firewall because of so much information. is there any chance that it can continually push to xmpp.utms.uk? or is it already doing this?
+
+8.	To be discussed
+Producing false positives vs not producing true positives:
+Many of the above ?fault? conditions are true ?hard? faults i.e. if you can?t communicate with a camera then clearly something is wrong.
+However, some are not quite so clear cut. Obvious examples are the ?quality? faults.
+If there is no traffic on the road, the JTMS can?t generate a valid journey time. This would be reported by the Diagnostics system as a JTMS quality fault ? but the JTMS isn?t ?faulty?.
+If a lane is partially coned off, then it is highly likely that the trajectory of the vehicles will change, resulting in a camera quality ?camera mis-alignment? fault message ? when the camera is in fact fine.
+
+
+Random rand = new Random();
+
+select * from diagnostics.Faults where ClearedTimestamp is NULL;
+
+	        		   
+
+select * from diagnostics.Faults where ClearedTimestamp is NULL; 
+
+OpenSqlConnection();
+	        		   if(!CAConnection.isClosed())
+	        		   {
+
+CloseSqlConnection();
+
+  
+	       /* try {
+				writer = new PrintWriter(new FileWriter("/home/daniel.perrett/GeneratedFaults.dat", true));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	writer.println("</Faults>");
+	    	writer.println("</New Run>");
+	    	writer.close();*/
+
+int
+
+String
+
+System.out.println(rs.getString(4) + " " + rs.getString(5));
+
+columnIndex
+
+192.168.114.50
+
+UES(0, 1, '" + mess +"', 1, 0, 'Power Down', GETDATE()
+
+while (rs.next()) 
+        				   {
+	        				   
+        				   }
+
+192.168.114.50
+
+LED temperature fault
+CPU temperature fault
+LED fault (faulty IR illuminator)
+Humidity fault
+High CPU load
+Low free RAM
+Low configuration disk space
+Low user disk space
+Low RAM disk space
+Voltage supply failure
+
+
+Not Connected",
+						   "Power Failure",
+						   "Charger Failure",
+						   "Battery Low",
+						   "Loop Sensor Failure",
+						   "Ethernet Card Shutdown",
+						   "Device Resetting",
+						   "Timing Error",
+						   "Watchdog Reset",
+						   "Device Initialising",
+						   "No Data",
+						   "Missing Data",
+						   "CSD Request Failure",
+						   "GPRS/Ethernet Connection Failure
+
+agnostics.Faults (EquipmentTypeID, EquipmentID, EquipmentSCN, FaultTypeID, FaultSubTypeID, FaultDescription, StartedTimestamp) VALUES(0, 1, 'JTMSCA003', 1, 0, 'Low RAM disk space', GETDATE())
+
+1000;
+
+Its Already been Cleared
+
+mmcs-cdb.hosted.urban.prv
+
+SELECT * FROM CCTV_FAULTS WHERE SYSTEMCODENUMBER='JTMSCA005' AND CREATIONDATE=TO_DATE('2017-01-16 15:04:58', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=0
+
+INSERT INTO CCTV_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION) VALUES (100, 'JTMSCA005', TO_DATE('2017-01-16 15:05:08', 'YYYY-MM-DD HH24:MI:SS'), 0, 1723, 'Low RAM disk space')
+
+SELECT * FROM CCTV_FAULTS WHERE SYSTEMCODENUMBER='JTMSCA001' AND CREATIONDATE=TO_DATE('2017-01-16 15:35:37', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=0
+
+inputFaultIntoDataBase(incomingfault, databasefault);
+
+if(!updateFaultInDatabase(incomingfault, databasefault))
+							{
+								logger.log(logLevel, "Error updating fault: " + incomingfault.diagnosticData.getFaultDescription());
+							}
+
+UPDATE CCTV_FAULTS set CLEAREDDATE=TO_DATE('2017-01-16 16:05:35', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='JTMSCA001' AND CREATIONDATE=TO_DATE('2017-01-16 10:42:32', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=0
+
+5
+
+1
+
+5
+
+(int)fault.diagnosticData.getFaultID().intValue()
+
+incomingfault
+
+
+        					   {
+
+D:\3-Workspace\ImCityAdapters\CAFaultAdapter\deploy\Plugins\CAFaultAdapter.jar
+
+_1.0.0
+
+C:\imtech\CAFaultAdapter.zip
+
+93.95.10.169
+
+argsIn
+
+args
+
+cdbTableName =
+
+  public void Bookmark(int cam)
+
+  IDeviceAPI deviceAPI = cameras[cameraNum].DvtelSystem.GetAPI<IDeviceAPI>();
+            IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+
+IVideoController video = (IVideoController)playerAPI.CreateController((IDisplayableEntity)cameras[num]);
+
+
+                 IPlayerAPI playerAPI = cameras[num].DvtelSystem.GetAPI<IPlayerAPI>();
+
+ recordingAPI.UpdateBookmarkDescription(entity as ILoggerBookmarkEntity, description);
+
+ IDvtelSystemId dvtelSystem = entity.DvtelSystem;
+                    // get a Recording API that belongs to our specific federation (system)
+                    IRecordingAPI recordingAPI = dvtelSystem.GetAPI<IRecordingAPI>();
+                    // execute action on the API
+                    recordingAPI.UpdateBookmarkDescription(entity as ILoggerBookmarkEntity, description);
+
+cameras[cam].DvtelSystem.
+
+cameras[cam]
+
+Bookmark
+
+ tycoInterface.Bookmark(cam);
+
+ IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+
+public void Bookmark(int cam, string name, string description)
+
+  ILoggerBookmarkEntity bookmark = cameras[cam] as ILoggerBookmarkEntity;
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+	int cam = this->m_interface->GetCameraNumberFromName(request->GetScn().c_str());
+
+Bookmark
+
+Bookmark(cam, "CCTV Adapter " + n, "Incident occured at preset " + n);
+
+currentPresetList
+
+presetnum
+
+APERRETT187738
+
+Bookmark(cam, "CCTV Adapter " + n, "Incident occured at preset " + n);
+
+int cam = this->m_interface->GetCameraNumberFromName(request->GetScn().c_str());
+	this->m_interface->Bookmark(cam, "CCTV Adapter " + n, "Incident occured at preset " + n);
+	return 1;
+
+RequestSnapShot* requestSnapShot = static_cast< RequestSnapShot* >(request);
+
+RequestMark
+
+if(requestSnapShot->manager->getSnapShot(requestSnapShot))
+	{
+
+requestMark
+
+ RequestSnapShot* requestSnapShot = static_cast< RequestSnapShot* >(m_currentRequest);
+		  RequestSnapShot* copyRequest = new RequestSnapShot(requestSnapShot);
+
+RequestMark
+
+markVideo
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Release\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+10.164.114.151
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ( 'CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+https://www.youtube.com/watch?v=txrILqlaUlE
+
+set_marker
+
+ if(stricmp( command, "set_marker") == 0)
+	{
+
+	}
+
+set_preset
+
+stricmp( command, "set_preset" ) == 0 )
+
+ if(commandid == m_scnCommandID)
+		{
+
+RequestMark
+
+string(m_commandScn), m_manager
+
+ if ( m_manager )
+      {
+
+fireCommandResponse( commandid, 1, 0.0, "No interface manager" );
+
+requestCompleted( requestSet );
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+RequestType_MarkVideo
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+93.95.10.169
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+192.168.50.88
+
+  sprintf( output, "%.32s:  set_preset command received", systemCodeNumber() );
+      log( output );
+
+string(m_commandScn)
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+

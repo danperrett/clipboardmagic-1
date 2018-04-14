@@ -1,0 +1,95 @@
+/onvif1
+
+Revision	Change detail	Doc Ref 
+Rev1	The purpose section clarified	1.1
+
+
+Version	Nature of Revision	Date	Author(s)	Reviewer	Approved
+Draft 6	Draft	30/6/2016	A.Mahdmina		
+Issue		23/09/16	A.Mahdmina	R Higginson
+	M Marsden
+
+
+Issue	Date	Author(s)	Nature of Revision (include Change Numbers)	Approved
+0.1	2016-06-17	D Perrett	Draft	
+0.2	2016-12-09	D Perrett	Update the SOAP interface	
+
+
+
+
+image
+
+http://www.videoipcamera.cn/view/
+
+Revie, Kenny [TYCO I&S - Cambridge] <krevie@tycoint.com>
+
+processcommandline
+
+ tycoInterface.Logoff();
+
+Console.ReadLine();
+
+captureimage
+
+ void Callback(IDvtelSystemId sender, IConfigurationEntity entity, IEventsApiArgs args)
+
+?	IAccessibilityLostEventEntity
+
+IDeviceAPI deviceAPI = cameras[cameraNum].DvtelSystem.GetAPI<IDeviceAPI>();
+            IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+
+SubscribeToEvents(typeof(IPTZMovementEndedEventEntity), scene, Callback);
+
+void subscribeToAllCameraFaults(int numberOfCamera)
+
+?	IAccessibilityLostEventEntity
+
+?	IAccessibilityRecoveredEventEnttity
+
+IAccessibilityRecoveredEventEnttity
+
+SubscribeToEvents(typeof(IAccessibilityLostEventService), scene, ErrorCallback);
+
+CameraEventCallBack
+
+SubscribeToEvents(typeof(IAccessibilityRecoveredEventEntity), scene, CameraEventCallBack);
+
+SubscribeToEvents(typeof(), scene, CameraEventCallBack);
+
+SubscribeToEvents(typeof(ICameraSignalLostEventEntity), scene, CameraEventCallBack);
+
+ManagedClass tycointerface = _tycointerface as ManagedClass;
+            bool running = true;
+            if(tycointerface != null)
+            {
+
+string waitOnEvents()
+
+monitorCameraEvents
+
+new Thread(new ParameterizedThreadStart(processcommandline));
+
+monitorCameraEvents
+
+subscribeToAllCameraFaults
+
+       tycoInterface.subscribeToAllCameraFaults(num);
+
+   tycoInterface.subscribeToAllCameraFaults(num);
+
+cameradetails
+
+9717
+
+playbackAPI.StartStream(scene as IStreamSendingSceneEntity);
+
+  IVideoController controller = (IVideoController)playerAPI.CreateController((IDisplayableEntity)scene);
+
+StartStream
+
+IStreamSendingSceneEntity
+
+m_nonVideoController
+
+IStreamController
+

@@ -1,0 +1,30 @@
+  C:\Users\dan.perrett\AppData\Local\Temp\WER9F1.tmp.WERInternalMetadata.xml
+
+
+  C:\Users\dan.perrett\AppData\Local\Temp\WERA814.tmp.mdmp
+
+
+72000 
+
+72089
+
+Praveen Bandakli
+
+Clear Results Data
+
+ CReportToMMI::ReportSilent("Opening PESQ Score file");
+
+PB_DEBUGLOG
+
+CReportToMMI::ReportSilent
+
+WM_SAS_SILENT_MESSAGE
+
+OnSASSilentMessage
+
+SILENT_MESSAGE_MT
+
+WM_MMI_RTT
+
+RTTLog
+

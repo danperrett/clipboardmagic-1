@@ -1,0 +1,148 @@
++		controlBuffer	0x0057cb14 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-04T08:47:39.2896267+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>"	char [8192]
+
+
++		controlBuffer	0x0057cb14 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-04T08:47:39.5444737+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>2</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>"	char [8192]
+
+
+void copyFromCircularBuffer(char* to, int length)
+
+Received Nothing from buffer
+
+Received Nothing from buffer need to receive
+
+LENGTH_OF_BUFFER
+
+            char debug[100];
+
+char debug[100];
+
+ZeroMemory(debug, 100);
+
+recv(Socket, temp, 512, 0);
+
+(inDataLength  < (Length - WhatsStillInTheCircularBuffer)
+
+192.168.1.80
+
+if((l < 0) && (inDataLength  >= (Length - WhatsStillInTheCircularBuffer)))
+                            {
+                                break;
+                            }
+
+ ZeroMemory(debug, 100);
+                            sprintf(debug, "Received Nothing from buffer need to receive %d ", Length);
+                            logger(debug);
+                            Sleep(100);
+
+DWORD CheckStartOfMessagIsPresent(const char *message)
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\exampleWin32Proj\TCPSocket.cpp
+
+CheckStartOfMessagIsPresent
+
+while((_l = recv(Socket, (char *)message_text, 8, MSG_PEEK)) != 8);
+
+szHistory
+
+safetyLoop
+
+_l = recv(Socket, (char *)szHistory, Length, MSG_PEEK)
+
+LENGTH_OF_BUFFER
+
+inDataLength
+
+connectionInformation->TimeOfLastReceive
+
+349570955277
+
+3,591.36
+
+3,673.66
+
+GetTickCount()
+
+GetTickCount();
+
+if(connectionInformation->TimeOfLastReceive > 0) // we must have received at least one
+
+timeOfReceived
+
+connectionInformation->TimeOfLastReceive
+
+TimeDifference
+
+connectionInformation->
+
+connectionInformation->TimeDifference
+
+PrintDebugToScreen
+
+SendMessageA
+
+WM_SOCKET
+
+WSAAsyncSelect
+
+System.Threading.Thread
+
+    int count = 0;
+

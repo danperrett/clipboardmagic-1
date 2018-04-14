@@ -1,0 +1,98 @@
+http://93.95.10.164/JTMSDiagnosticsFeed/schema_1-1/JTMSDiagnosticsFeed.wsdl
+
+e
+
+WebService1Soap
+
+C:\Secure\SourceNew\Core\WebServices_x64
+
+C:\Secure\SourceNew\Core\WebServices_x64\Envitia.ITS.Web.XmlService
+
+Envitia.ITS.Web.XmlService
+
+Envitia.ITS.Web.XmlService.Install
+
+\Core\WebServices_x64
+
+Damir Milicevic 
+
+\\UKSV0002\shared\dan\JTMS\JTMSDiagnosticsFeed.wsdl
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1
+
+C:\Program Files\Java\jdk1.7.0_79\bin
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2010\Projects\WebApplication1
+
+0
+
+org.arpit.javapostsforlearning.webservice
+
+package org.arpit.javapostsforlearning.webservice;  
+import javax.jws.WebMethod;  
+import javax.jws.WebService;  
+  
+@WebService  
+public interface HelloWorld {  
+  
+ @WebMethod public String helloWorld(String name);  
+}  
+
+Read more at http://www.java2blog.com/2013/03/jaxws-web-service-eclipse-tutorial.html#zjeORqdpLbPvsk4r.99
+
+package org.arpit.javapostsforlearning.webservice;  
+import javax.jws.WebService;  
+  
+@WebService(endpointInterface="org.arpit.javapostsforlearning.webservice.HelloWorld")  
+public class HelloWorldImpl implements HelloWorld{  
+  
+ public String helloWorld(String name) {  
+  return "Hello world from "+name;  
+ }  
+  
+}  
+
+Read more at http://www.java2blog.com/2013/03/jaxws-web-service-eclipse-tutorial.html#zjeORqdpLbPvsk4r.99
+
+package org.arpit.javapostsforlearning.webservice;  
+import javax.xml.ws.Endpoint;  
+  
+public class HelloWorldWSPublisher {  
+ public static void main(String[] args) {  
+  Endpoint.publish("http://localhost:8080/WS/HelloWorld",new HelloWorldImpl());  
+ }  
+}  
+
+javax.xml.ws.Endpoint
+
+javax.jws.WebService
+
+http://86.8.195.31:8080/
+
+http://www.java2blog.com/2013/03/jaxws-web-service-eclipse-tutorial.html
+
+https://spring.io/guides/gs/producing-web-service/
+
+http://localhost:8080/WS/HelloWorld?wsdl
+
+
+endpointInterface
+
+@WebMethod
+
+cpc90798-farn10-2-0-cust798.6-2.cable.virginm.net
+
+10892626
+
+endpointInterface
+
+https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiFjfKp7ZPOAhXDJ8AKHSQ1DJsQFggiMAE&url=http%3A%2F%2Fcrunchify.com%2Fcreate-sample-wsdl-in-eclipse-and-generate-client%2F&usg=AFQjCNGnsSELfvce7c9sIirofATd9aLfkA&sig2=FZt2nvs2aeW-lgip-zsSSw
+
+http://www.eclipse.org/webtools/community/tutorials/TopDownAxis2WebService/td_tutorial.html
+
+project zulu 1.8
+
+sudo apt-get install openjdk-8-jdk
+
+installing java 8 on ubuntu binary
+

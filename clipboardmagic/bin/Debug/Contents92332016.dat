@@ -1,0 +1,560 @@
+Falmouth 
+
+IPAddress.Parse("224.100.0.1")
+
+/* 
+
+multicast.c
+
+The following program sends or receives multicast packets. If invoked
+with one argument, it sends a packet containing the current time to an
+arbitrarily chosen multicast group and UDP port. If invoked with no
+arguments, it receives and prints these packets. Start it as a sender on
+just one host and as a receiver on all the other hosts
+
+*/
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <time.h>
+#include <stdio.h>
+
+#define EXAMPLE_PORT 6000
+#define EXAMPLE_GROUP "239.0.0.1"
+
+main(int argc)
+{
+   struct sockaddr_in addr;
+   int addrlen, sock, cnt;
+   struct ip_mreq mreq;
+   char message[50];
+
+   /* set up socket */
+   sock = socket(AF_INET, SOCK_DGRAM, 0);
+   if (sock < 0) {
+     perror("socket");
+     exit(1);
+   }
+   bzero((char *)&addr, sizeof(addr));
+   addr.sin_family = AF_INET;
+   addr.sin_addr.s_addr = htonl(INADDR_ANY);
+   addr.sin_port = htons(EXAMPLE_PORT);
+   addrlen = sizeof(addr);
+
+   if (argc > 1) {
+      /* send */
+      addr.sin_addr.s_addr = inet_addr(EXAMPLE_GROUP);
+      while (1) {
+	 time_t t = time(0);
+	 sprintf(message, "time is %-24.24s", ctime(&t));
+	 printf("sending: %s\n", message);
+	 cnt = sendto(sock, message, sizeof(message), 0,
+		      (struct sockaddr *) &addr, addrlen);
+	 if (cnt < 0) {
+ 	    perror("sendto");
+	    exit(1);
+	 }
+	 sleep(5);
+      }
+   } else {
+
+      /* receive */
+      if (bind(sock, (struct sockaddr *) &addr, sizeof(addr)) < 0) {        
+         perror("bind");
+	 exit(1);
+      }    
+      mreq.imr_multiaddr.s_addr = inet_addr(EXAMPLE_GROUP);         
+      mreq.imr_interface.s_addr = htonl(INADDR_ANY);         
+      if (setsockopt(sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
+		     &mreq, sizeof(mreq)) < 0) {
+	 perror("setsockopt mreq");
+	 exit(1);
+      }         
+      while (1) {
+ 	 cnt = recvfrom(sock, message, sizeof(message), 0, 
+			(struct sockaddr *) &addr, &addrlen);
+	 if (cnt < 0) {
+	    perror("recvfrom");
+	    exit(1);
+	 } else if (cnt == 0) {
+ 	    break;
+	 }
+	 printf("%s: message = \"%s\"\n", inet_ntoa(addr.sin_addr), message);
+        }
+    }
+}
+
+/*
+    Simple UDP Server
+    Silver Moon ( m00n.silv3r@gmail.com )
+*/
+ 
+#include<stdio.h>
+#include<winsock2.h>
+ 
+#pragma comment(lib,"ws2_32.lib") //Winsock Library
+ 
+#define BUFLEN 512  //Max length of buffer
+#define PORT 8888   //The port on which to listen for incoming data
+ 
+int main()
+{
+    SOCKET s;
+    struct sockaddr_in server, si_other;
+    int slen , recv_len;
+    char buf[BUFLEN];
+    WSADATA wsa;
+ 
+    slen = sizeof(si_other) ;
+     
+    //Initialise winsock
+    printf("\nInitialising Winsock...");
+    if (WSAStartup(MAKEWORD(2,2),&wsa) != 0)
+    {
+        printf("Failed. Error Code : %d",WSAGetLastError());
+        exit(EXIT_FAILURE);
+    }
+    printf("Initialised.\n");
+     
+    //Create a socket
+    if((s = socket(AF_INET , SOCK_DGRAM , 0 )) == INVALID_SOCKET)
+    {
+        printf("Could not create socket : %d" , WSAGetLastError());
+    }
+    printf("Socket created.\n");
+     
+    //Prepare the sockaddr_in structure
+    server.sin_family = AF_INET;
+    server.sin_addr.s_addr = INADDR_ANY;
+    server.sin_port = htons( PORT );
+     
+    //Bind
+    if( bind(s ,(struct sockaddr *)&server , sizeof(server)) == SOCKET_ERROR)
+    {
+        printf("Bind failed with error code : %d" , WSAGetLastError());
+        exit(EXIT_FAILURE);
+    }
+    puts("Bind done");
+ 
+    //keep listening for data
+    while(1)
+    {
+        printf("Waiting for data...");
+        fflush(stdout);
+         
+        //clear the buffer by filling null, it might have previously received data
+        memset(buf,'\0', BUFLEN);
+         
+        //try to receive some data, this is a blocking call
+        if ((recv_len = recvfrom(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, &slen)) == SOCKET_ERROR)
+        {
+            printf("recvfrom() failed with error code : %d" , WSAGetLastError());
+            exit(EXIT_FAILURE);
+        }
+         
+        //print details of the client/peer and the data received
+        printf("Received packet from %s:%d\n", inet_ntoa(si_other.sin_addr), ntohs(si_other.sin_port));
+        printf("Data: %s\n" , buf);
+         
+        //now reply the client with the same data
+        if (sendto(s, buf, recv_len, 0, (struct sockaddr*) &si_other, slen) == SOCKET_ERROR)
+        {
+            printf("sendto() failed with error code : %d" , WSAGetLastError());
+            exit(EXIT_FAILURE);
+        }
+    }
+ 
+    closesocket(s);
+    WSACleanup();
+     
+    return 0;
+}
+
+ Abigails Child Trust fund account is: 40-62-16 01905503
+Alexa is: 40-62-17 06885519
+
+ Abigails Child Trust fund account is: 40-62-16 01905503
+Alexa is: 40-62-17 06885519
+Both with HSBC bank.
+
+IPPROTO_IP, IP_MULTICAST_IF, &iaddr,
+              sizeof(struct in_addr));
+
+server
+
+IP_MULTICAST_IF
+
+D:\important\anite175-invoice.pdf
+
+D:\important\anite175-28-11-2014.pdf
+
+D:\important\anite174-invoice.pdf
+
+D:\important\anite174-24-11-2014.pdf
+
+D:\important\Contract.pdf
+
+D:\important\NDA.pdf
+
+D:\important\BankForm.pdf
+
+D:\important\CriminalRecordSearch.pdf
+
+D:\important\anite173-invoice.pdf
+
+D:\important\anite172-invoice.pdf
+
+D:\important\anite173-17-11-2014.pdf
+
+D:\important\068 - DT IOT Principal Engineer (3).pdf
+
+D:\important\bankstatement.pdf
+
+D:\important\passporthighquality.pdf
+
+D:\important\passportColour.pdf
+
+D:\important\ThaleSecurityForm.pdf
+
+D:\important\drivinglicense.pdf
+
+D:\important\vatcertificate.pdf
+
+D:\important\131 SAS Principal Engineer.pdf
+
+D:\important\cisco1032-invoice.pdf
+
+D:\important\certifiedCopies.pdf
+
+D:\important\danielCodinggainpayslip.pdf
+
+D:\important\DividendCertificate.pdf
+
+D:\important\companyCertificate.pdf
+
+D:\important\cisco1032-200715.pdf
+
+D:\important\cisco1031-invoice.pdf
+
+D:\important\131 SAS Principal Engineer (1).pdf
+
+D:\important\S-CORE Senior Engineer 140.pdf
+
+D:\important\DT & IOT Integration and Test Engineer 132.pdf
+
+D:\important\cisco1030-invoice.pdf
+
+D:\important\VATRegistration_.pdf
+
+D:\important\DifferencesBetweenWindowsXPEmbeddedandWindowsXPProfessional.pdf
+
+D:\important\cisco1028-invoice.pdf
+
+D:\important\June_2015_Newsletter.pdf
+
+D:\important\Graduate Engineer - Customer Support (1).pdf
+
+D:\important\Graduate Engineer - Customer Support.pdf
+
+D:\important\cisco1027-invoice.pdf
+
+D:\important\passport.pdf
+
+D:\important\cisco1026-invoice.pdf
+
+D:\important\cisco1025-invoice.pdf
+
+D:\important\cisco1024-invoice.pdf
+
+D:\important\cisco1023-invoice.pdf
+
+D:\important\cisco1022-invoice.pdf
+
+D:\important\cisco1021-invoice.pdf
+
+D:\important\cisco1020-invoice.pdf
+
+D:\important\cisco1019-invoice.pdf
+
+D:\important\cisco1018-invoice.pdf
+
+D:\important\cisco1017-invoice.pdf
+
+D:\important\cisco1015-invoice.pdf
+
+D:\important\cisco1014-invoice.pdf
+
+D:\important\cisco1013-invoice.pdf
+
+D:\important\cisco1012-invoice.pdf
+
+D:\important\cisco1011-invoice.pdf
+
+D:\important\cisco1010-16-02-2015.pdf
+
+D:\important\cisco1010-invoice.pdf
+
+D:\important\cisco1009-invoice.pdf
+
+D:\important\cisco1008-invoice.pdf
+
+D:\important\cisco1007-invoice.pdf
+
+D:\important\cisco1006-invoice.pdf
+
+D:\important\cisco1005-invoice.pdf
+
+D:\important\cisco1004-invoice.pdf
+
+D:\important\cisco1003-invoice.pdf
+
+D:\important\cisco1002-invoice.pdf
+
+D:\important\cisco1001-invoice.pdf
+
+D:\important\cisco1000-invoice.pdf
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\encrypt\encrypt\encrypt\bin\Debug
+
+C:\Users\502525009\Documents\GE10032-Invoice.pdf
+
+C:\Users\502525009\Documents\ThalesConfidentialAgreement.pdf
+
+C:\Users\502525009\Documents\GE10032-290216.pdf
+
+C:\Users\502525009\Documents\GE10029-Invoice-5.pdf
+
+C:\Users\502525009\Documents\GE10029-Invoice-b.pdf
+
+C:\Users\502525009\Documents\GE10031-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10031-220216.pdf
+
+C:\Users\502525009\Documents\GE10034-Invoice.pdf
+
+C:\Users\502525009\Documents\16-04-2014.ods
+
+C:\Users\502525009\Documents\GE10034-140316.pdf
+
+C:\Users\502525009\Documents\GE10033-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10033-070316.pdf
+
+C:\Users\502525009\Documents\contractpage9.pdf
+
+C:\Users\502525009\Documents\ThalesContract.pdf
+
+C:\Users\502525009\Documents\923644,Email Limited Contract 040416.rtf
+
+  if (CodeTextBox.Text.Length > 3)
+            {
+                CheckAndEnableGoButton();
+            }
+            else
+            {
+                CheckAndEnableGoButton(false);
+            }
+
+MessageTextBox.Enabled = true;
+                EncryptedTextBox.Enabled = true;
+
+            Encrypter encrypter = new Encrypter();
+            char[] c_array = CodeTextBox.Text.ToCharArray();
+            sbyte[] s_array = new sbyte[c_array.Length];
+            int l = CodeTextBox.Text.Length;
+            int total = 0;
+            int n = 0;
+
+using EncryptingLibrary
+
+ foreach (char c in c_array)
+            {
+                total += (int)c;
+                s_array[n] = (sbyte)c;
+                n++;
+            }
+
+ public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
+        }
+
+ MessageTextBox.Enabled = true;
+                EncryptedTextBox.Enabled = true;
+
+MessageTextBox.ReadOnly = true;
+                EncryptedTextBox.ReadOnly = false;
+
+ if (EncryptRadioButton.Checked)
+                {
+                    byte[] output;
+                    if ((length % 2) > 0)
+                    {
+                        output = new byte[length + 2 + 50];
+                    }
+                    else
+                    {
+                        output = new byte[length + 1 + 50];
+                    }
+                    encrypter.Encrypt(bytes, length, output, (short)total, s_array);
+
+                    try
+                    {
+
+                        using (BinaryWriter writer = new BinaryWriter(File.Open(fileIn + ".ec", FileMode.Create)))
+                        {
+                            writer.Write(output);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error Saving File");
+                    }
+                   // EncryptFileTextBox.Text = "";
+                    CheckAndEnableGoButton(false);
+                }
+                else //decrypt file
+                {
+                    byte[] test;
+                    bool flag = false;
+                    flag = (bytes[0] == 1);
+                    test = new byte[bytes.Length - 1];
+
+                    if (encrypter.Decrypt(bytes, bytes.Length, test, (short)total, s_array))
+                    {
+                        string file = fileIn.Replace(".ec", "");
+                        try
+                        {
+                            using (BinaryWriter writer = new BinaryWriter(File.Open(file, FileMode.Create)))
+                            {
+                                if (flag)
+                                {
+                                    writer.Write(test, 0, (test.Length - 1 - 50));
+                                }
+                                else
+                                {
+                                    writer.Write(test, 0, (test.Length - 50));
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error Saving file");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to decode File: " + fileIn);
+                    }
+
+                 //   EncryptFileTextBox.Text = "";
+                    CheckAndEnableGoButton(false);
+                }
+
+ byte[] bytes = reader.ReadBytes((int)reader.BaseStream.Length);
+                int length = bytes.Length;
+
+ foreach (char c in c_array)
+            {
+                total += (int)c;
+                s_array[n] = (sbyte)c;
+                n++;
+            }
+
+   public static byte[] StringToByteArray(string hex)
+        {
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
+        }
+
+public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
+        }
+
+ByteArrayToString
+
+EncryptedTextBox
+
+byte[] test;
+                    bool flag = false;
+                    flag = (bytes[0] == 1);
+                    test = new byte[bytes.Length - 1];
+
+EncryptRadioButton
+
+EncryptedTextBox_TextChanged
+
+   Encrypter encrypter = new Encrypter();
+            char[] c_array = CodeWordTextBox.Text.ToCharArray();
+            sbyte[] s_array = new sbyte[c_array.Length];
+            int l = CodeWordTextBox.Text.Length;
+            int total = 0;
+            int n = 0;
+
+if (encrypter.Decrypt(bytes, bytes.Length, test, (short)total, s_array))
+                    {
+
+  foreach (char c in c_array)
+            {
+                total += (int)c;
+                s_array[n] = (sbyte)c;
+                n++;
+            }
+
+003492b2e2c4cd3e21f4b9ddc9bf980ffa30ba80f09157a787efc7e4041756cef0e053ee3d61ebef233e22b43428b4d15c61ca05c9789c5f80e32044fbec635a7d00e6732c45c5
+
+004b058afd341842a0fe8d289f25e197b70927639c3e50d7307c65556f588d9b9da7952695146c7813c730b281af62e6385c88e26d4a6d
+
+server.Start();
+
+Hi Mate, 
+     Would there be any contracts going at Toshiba. my contract here at Alstom is coming to a conclusion on Thursday I did have something lined up to start at Thales in April and now they've gone and withdrawn there offer! which leave me up creak with no paddle. 
+If you here anything please let me know
+
+I, ?your name?, give Morson International to represent me for the Software Engineer C++ position with MBDA in Bristol ref SC6328.
+I, ?your name?, give Morson International to represent me for the Software Engineer C/C++ position with MBDA in Stevenage ref SC6327
+ 
+
+Dear Sir/Madam,
+ I'd like to apply for the position of Contract C++ developer.
+My current contract comes to a conclusion on the 24th March and I'm looking to get something in place straight away. Please find attach my CV for your viewing. I'm available any time after the Easter break.
+
+my phone number is 07879335173
+
+Thanks.
+Daniel Perrett
+
+I'd like to apply for the position of Contract C++ developer.
+My current contract comes to a conclusion on the 24th March and I'm looking to get something in place straight away. Please find attach my CV for your viewing. I'm available any time after the Easter break.
+
+
+?I, your name, give Morson International permission to represent me for the Software Engineer C/C++ contract position in Lostock, Bolton ref SC5708?
+
+I'd like to apply for the position of Contract C++ developer.
+My current contract comes to a conclusion on the 24th March and I'm looking to get something in place straight away. Please find attach my CV for your viewing. I'm available any time after the Easter break.
+
+Hi Tom,
+   I hope that you are well. I'd like to apply for the position of Contract C++ developer.My current contract comes to a conclusion on the 24th March. Up until this morning I did have a contract in place but I've been badly let down by the company and would like to start something ASAP.
+
+Please find attach my CV for your viewing. I'm available any time after the Easter break.
+
+Thanks.
+Daniel Perrett
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\TechnicianTerminal
+
+definitely
+
+description = description.TrimLeft();
+

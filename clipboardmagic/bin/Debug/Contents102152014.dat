@@ -1,0 +1,411 @@
+MessageVariables
+
+0742013E0640130014000100325202C101090601410150014E0501C0A800025D0100300C25911F8B96FEFE74470101003203845832270880000D0408080808500BF6130014800101000000011313001400012305F41234567853111741
+
+0742013E0640130014000100325201C101090601410150014E0501C0A800025D0100300C25911F8B96FEFE74470101003203845832270880000D0408080808500BF6130014800101000000011313001400012305F41234567853111741
+
+0742013E0640130014000100325201C101090601410150014E0501C0A800025D0100300C25911F8B96FEFE74470101003203845832270880000D0408080808500BF6130014800101000000011313001400012305F41234567853111741
+
+
+680000
+
+0742013E0640130014000100325201C101090601410150014E0501C0A800025D0100300C25911F8B96FEFE74470101003203845832270880000D0408080808500BF6130014800101000000011313001400012305F41234567853111741
+
+0742013E0640130014000100325202C101090601410150014E0501C0A800025D0100300C25911F8B96FEFE74470101003203845832270880000D0408080808500BF6130014800101000000011313001400012305F41234567853111741
+
+074900500BF6130014800101000000015406401300140001570220001313001400012305F41234567853111741
+
+201B010000003803087F4ECF99830005BF86307EB82C1942510084009098004825354AAD00406C4C0105020A47810180
+
+tufts.edu
+
+A container is a holder object that stores a collection of other objects (its elements). They are implemented as class templates, which allows a great flexibility in the types supported as elements.
+
+The container manages the storage space for its elements and provides member functions to access them, either directly or through iterators (reference objects with similar properties to pointers).
+
+Containers replicate structures very commonly used in programming: dynamic arrays (vector), queues (queue), stacks (stack), heaps (priority_queue), linked lists (list), trees (set), associative arrays (map)...
+
+
+http://www.cplusplus.com/reference/stl/
+
+SUPRESS_NOTIFICATION_MT
+
+SUPRESS_NOTIFICATION_MT
+
+
+void __fastcall TPlaybackForm::setUpExpression(stExpression *expression, WaitAnyMessageInterface_t &data)
+{
+    //VAR1
+    expression->Var1.VarName = NULL;
+    if(data.cellID)
+    {
+        expression->Var1.VarName = new char[data.CellVariable.length()];
+        memcpy(expression->Var1.VarName, data.CellVariable.c_str(), data.CellVariable.length());
+        expression->Var1.VarType = VAR_TYPE_STRING;
+        expression->Var1.MsgType = (MESSAGE_TYPES)255;
+        expression->Var1.pd = (PROTOCOL_DISCRIMINATOR)-1;
+        expression->Var1.MsgTypeString = new char[1];
+        expression->Var1.MsgTypeString = "";
+        expression->Var1.IeChosen = new char[1];
+        expression->Var1.IeChosen = "";
+        expression->Var1.ChosenIeValue = new char[1];
+        expression->Var1.ChosenIeValue = "";
+        expression->Var1.UsedCount = 0;
+        expression->Var1.Commented = 0;
+        expression->Var1.PDUIeId = 0;
+        expression->Var1.szPDUIeId = new char[1];
+        expression->Var1.szPDUIeId = "";
+        expression->Var1.Direction = (DIRECTION_FLAG)0;
+    
+    }
+
+    expression->ExprOperator = (EXPR_OPERATOR)0;
+
+
+    //VAR 2
+    expression->Var2.VarName = NULL;
+    if(data.MessageType)
+    {
+        expression->Var2.VarName = new char[data.MessageVariable.length()];
+        memcpy(expression->Var2.VarName, data.MessageVariable.c_str(), data.MessageVariable.length());
+        expression->Var2.VarType = (VAR_TYPE)0;
+        expression->Var2.MsgType = (MESSAGE_TYPES)0;
+        expression->Var2.pd = (PROTOCOL_DISCRIMINATOR)0;
+        expression->Var2.MsgTypeString = new char[1];
+        expression->Var2.MsgTypeString = "";
+        expression->Var2.IeChosen = new char[1];
+        expression->Var2.IeChosen = "";
+        expression->Var2.ChosenIeValue = new char[1];
+        expression->Var2.ChosenIeValue = "";
+        expression->Var2.UsedCount = 0;
+        expression->Var2.Commented = 0;
+        expression->Var2.PDUIeId = 0;
+        expression->Var2.szPDUIeId = new char[1];
+        expression->Var2.szPDUIeId = "";
+        expression->Var2.Direction = (DIRECTION_FLAG)0;
+        expression->ExprResult = false;
+    }
+}
+
+void __fastcall TPlaybackForm::ReceiveAnyMessage(TObject *Sender)
+{
+    TWaitForAnyMessageDialog  *WaitForAnyMessage = new TWaitForAnyMessageDialog(this);
+	int NoVariableCount = 0;
+
+    if (GetNumberOfVariables(VAR_TYPE_STRING) == 0)
+    {
+        WaitForAnyMessage->EnableSelectCellIDGroupBox(false);
+		NoVariableCount++;
+    }
+    else
+    {   
+        WaitForAnyMessage->EnableSelectCellIDGroupBox(true);
+        WaitForAnyMessage->InitialiseCellIDComboBox();
+    }
+    
+    if(GetNumberOfVariables(VAR_TYPE_STORE_MSG) == 0)
+    {
+        WaitForAnyMessage->EnableSelectMessageTypeGroupBox(false);
+		NoVariableCount++;
+    }
+    else
+    {
+        WaitForAnyMessage->EnableSelectMessageTypeGroupBox(true);
+        WaitForAnyMessage->InitialiseMessageTypeComboBox();
+    }
+	
+	if(NoVariableCount > 1)
+	{
+		Application->MessageBox("Must have a least one varaible of either\n"
+                                "String type or MessageType","Playback...", MB_OK | MB_ICONEXCLAMATION);
+		return;
+	}
+    
+    if (WaitForAnyMessage->ShowModal() != mrOk)
+    {
+        return;
+    }
+
+    WaitAnyMessageInterface_t data;
+    WaitForAnyMessage->GetData(&data);
+
+    TCommandObject *pCommandObject = new TCommandObject(LOG_FILE_VERSION, m_pCommonFormControls);
+    m_pLayer3Procedure->CreateEmptyProgrammingProcedure_WithoutCellID(pCommandObject, LOG_L3_RECEIVE_ANY_MESSAGE);
+
+    stProgramCommand *programCommand = new stProgramCommand;
+    memset(programCommand, 0, sizeof(stProgramCommand));
+    memset(&programCommand->L3m, 0, sizeof(stLayer3Data));
+    programCommand->WaitTime = 120000;
+    programCommand->TypeOfStatement = (int)DEFINE_VAR_MT;
+    programCommand->NumOfExpr = 1;
+    programCommand->NumOfLogicalOptrs = 1;
+    for(int i = 0; i < MAX_LOGICAL_OPERATOR; i++)
+    {
+         programCommand->LogicalOptrList[i] = 0;
+    }
+
+    setUpExpression(&(programCommand->ExprList[0]), data);
+
+    pCommandObject->ProcedureType = LOG_L3_RECEIVE_ANY_MESSAGE;
+    pCommandObject->RecordType    = SAS_MSG;
+    pCommandObject->CommandType   = GetPlaybackCommand(pCommandObject->ProcedureType);
+    pCommandObject->DeltaTime     = 120*1000; // two min timeout
+    pCommandObject->CellID        = -1;
+    pCommandObject->LogString     = SasStrDup(GetLogMessageDescription(pCommandObject->ProcedureType));
+    pCommandObject->Data = programCommand;
+  
+    if (EditWaitForSpecificEvent(pCommandObject))
+    {
+        if (!InsertCommand(pCommandObject))
+        {
+            delete pCommandObject;
+            pCommandObject = NULL;
+            return;
+        }
+    }
+}
+
+
+cat /etc/lsb-release
+
+    case SUPRESS_NOTIFICATION_MT:
+    {
+        pCanvas->TextOut(Rect.Left + 227, Rect.Top + 2, "Suppress Procedure notification to LTE.");
+    }
+    break;
+
+
+void __fastcall TPlaybackForm::SuppressProcedure1Click(TObject *Sender)
+{
+	TCommandObject *InsertionPointCommand = NULL;
+
+    // if the current command is not a l3p or l3m prevent new l3m command
+    int Index = GetSelectedCommand();
+
+    try
+    {
+        if (Index == -1)
+        {
+            if (CommandListBox->Items->Count > 0)
+            {
+                TCommandObject *LastCommandObject = (TCommandObject *)CommandListBox->Items->Objects[CommandListBox->Items->Count - 1];
+                if (LastCommandObject->RecordType != SAS_L3P && LastCommandObject->RecordType != SAS_L3M)
+                {
+                    throw Exception("Last command was not a L3M or L3P");
+                }
+
+                InsertionPointCommand = LastCommandObject;
+            }
+            else
+            {
+                throw Exception("No command in list!");
+            }
+        }
+        else
+        {
+            InsertionPointCommand = GetInsertionPointCommand(Index);
+            if (InsertionPointCommand->RecordType != SAS_L3M && InsertionPointCommand->RecordType != SAS_L3P)
+            {
+                InsertionPointCommand = GetInsertionPointCommand(Index -1);
+            }
+        }
+
+        // if the current command is not a l3p or l3m prevent new l3m command
+        if (InsertionPointCommand == NULL)
+        {
+            throw Exception("InsertionPointCommand = NULL");
+        }
+
+        if (InsertionPointCommand->RecordType != SAS_L3M && InsertionPointCommand->RecordType != SAS_L3P)
+        {
+            throw Exception("InsertionPointCommand not a L3M or L3P.");
+        }
+    }
+    catch (...)
+    {
+        Application->MessageBox("Layer 3 messages can only be\n"
+                                "added to Layer 3 procedures!",
+                                "Playback...",
+                                MB_OK | MB_ICONEXCLAMATION);
+        return;
+    }
+	
+	stLayer3Data *Layer3Data  = new stLayer3Data();
+    memset(Layer3Data, 0, sizeof(stLayer3Data) );
+    Layer3Data->szHexstring = NULL;
+	Layer3Data->ProtocolDiscriminator = PROGRAM_COMMAND_PD;
+	Layer3Data->Layer3MessageType = SUPRESS_NOTIFICATION_MT;
+	
+	TCommandObject *CommandObject = new TCommandObject(LOG_FILE_VERSION, m_pCommonFormControls);
+	CommandObject->RecordType    = SAS_L3M;
+    CommandObject->ProcedureType = LOG_UNKNOWN_PROCEDURE;;
+	CommandObject->LogString     = SasStrDup(GetL3MessageDescription(Layer3Data->ProtocolDiscriminator,
+                                       Layer3Data->Layer3MessageType));
+    CommandObject->Data          = Layer3Data;
+	
+	HandleInsertLayer3MessageForComment(Index, CommandObject);
+    CommandListBox->Perform(WM_SETREDRAW, false, 0); //Needs to be checked
+
+    if (!InsertCommand(CommandObject))
+    {
+        delete Layer3Data;
+	    Layer3Data = NULL;
+			
+		delete CommandObject;
+        CommandObject = NULL;
+			
+		return;
+	}
+		
+		
+	if (Index < 0)
+    {
+        CommandListBox->Selected[CommandListBox->Items->Count - 1] = true;
+    }
+    else
+    {
+        CommandListBox->Selected[Index] = true;
+    }
+
+    delete Layer3Data;
+    Layer3Data = NULL;
+
+    delete(CommandObject);
+    CommandObject = NULL;
+}
+//---------------------------------------------------------------------------
+
+
+#include "TWaitForAnyMessage.h"
+
+
+279673339
+
+// sort algorithm example
+#include <iostream>     // std::cout
+#include <algorithm>    // std::sort
+#include <vector>       // std::vector
+
+bool myfunction (int i,int j) { return (i<j); }
+
+struct myclass {
+  bool operator() (int i,int j) { return (i<j);}
+} myobject;
+
+int main () {
+  int myints[] = {32,71,12,45,26,80,53,33};
+  std::vector<int> myvector (myints, myints+8);               // 32 71 12 45 26 80 53 33
+
+  // using default comparison (operator <):
+  std::sort (myvector.begin(), myvector.begin()+4);           //(12 32 45 71)26 80 53 33
+
+  // using function as comp
+  std::sort (myvector.begin()+4, myvector.end(), myfunction); // 12 32 45 71(26 33 53 80)
+
+  // using object as comp
+  std::sort (myvector.begin(), myvector.end(), myobject);     //(12 26 32 33 45 53 71 80)
+
+  // print out content:
+  std::cout << "myvector contains:";
+  for (std::vector<int>::iterator it=myvector.begin(); it!=myvector.end(); ++it)
+    std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  return 0;
+}
+
+            else if(CommandObject->ProcedureType == LOG_L3_RECEIVE_ANY_MESSAGE)
+            {
+                TCommandObject *pCommandObject = (TCommandObject *)CommandListBox->Items->Objects[CommandListBox->ItemIndex];
+                stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+                if(pProgCommand != NULL)
+                {
+                    EditWaitForAnyMessage(pProgCommand);
+                }
+            }
+
+
+#include "TCellSimulationValuesVariableForm.h"
+
+
+            else if(CommandObject->ProcedureType == LOG_L3_RECEIVE_ANY_MESSAGE)
+            {
+                TCommandObject *pCommandObject = (TCommandObject *)CommandListBox->Items->Objects[CommandListBox->ItemIndex];
+                stProgramCommand *pProgCommand = (stProgramCommand *)pCommandObject->Data;
+                if(pProgCommand != NULL)
+                {
+                    EditWaitForAnyMessage(pProgCommand);
+                }
+            }
+
+
+EditWaitForAnyMessage
+
+void __fastcall TPlaybackForm::EditWaitForAnyMessage(stProgramCommand *programCommand)
+{
+    stExpression *expression = &(programCommand->ExprList[0]);
+    TWaitForAnyMessageDialog  *WaitForAnyMessage = new TWaitForAnyMessageDialog(this);
+
+    if (GetNumberOfVariables(VAR_TYPE_STRING) == 0)
+    {
+        WaitForAnyMessage->EnableSelectCellIDGroupBox(false);
+    }
+    else
+    {   
+        WaitForAnyMessage->EnableSelectCellIDGroupBox(true);
+        WaitForAnyMessage->InitialiseCellIDComboBox();
+    }
+    
+    if(GetNumberOfVariables(VAR_TYPE_ARITHMETIC) == 0)
+    {
+        WaitForAnyMessage->EnableSelectMessageTypeGroupBox(false);
+    }
+    else
+    {
+        WaitForAnyMessage->EnableSelectMessageTypeGroupBox(true);
+        WaitForAnyMessage->InitialiseMessageTypeComboBox();
+    }
+
+    WaitAnyMessageInterface_t data;
+    if ((expression->Var1.VarName != NULL) && (strcmp(expression->Var1.VarName, "") > 0))
+    {
+        data.CellVariable = string(expression->Var1.VarName);
+        data.cellID = true;
+    }
+    else
+    {  
+        data.cellID = false;
+    }
+    
+    if((expression->Var2.VarName != NULL) && (strcmp(expression->Var2.VarName, "") > 0))
+    {
+        data.MessageVariable = string(expression->Var2.VarName);
+        data.MessageType = true;
+    }
+    else
+    {
+        data.MessageType = false;
+    }
+    
+    WaitForAnyMessage->SetData(data);
+
+    if (WaitForAnyMessage->ShowModal() != mrOk)
+    {
+        return;
+    }
+    WaitAnyMessageInterface_t _data;
+    WaitForAnyMessage->GetData(&_data);
+
+    setUpExpression(expression, _data);
+
+    delete WaitForAnyMessage;
+}
+
+
+TCellSimulationValuesVariableForm
+
+#include "TCellSimulationValuesVariableForm.h"
+
+
+279673339
+

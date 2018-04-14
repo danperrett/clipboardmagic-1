@@ -1,0 +1,8 @@
+UserCredentialsStore store = UserCredentialsStore.GetInstance();
+
+WebClient
+
+Gb17Hr18m!
+
+ .\cctvAdapter.exe -u cctv01 -p CCTVImCity01928 -m Start
+

@@ -1,0 +1,60 @@
+ VCL_MESSAGE_HANDLER(WM_WARNING,                         TMessage, OnCellManagerWarning)
+            VCL_MESSAGE_HANDLER(WM_TEST_SCENARIO_ERROR,             TMessage, OnCellManagerTestError)
+            VCL_MESSAGE_HANDLER(WM_INSUFFICIENT_TRXS,               TMessage, OnCellManagerTestError)
+            VCL_MESSAGE_HANDLER(WM_LICENSE_ERROR,                   TMessage, OnCellManagerTestError)
+            VCL_MESSAGE_HANDLER(WM_DISPLAY_ERROR_AND_END_CURRENT_RUN,TMessage, OnCellManagerTestError)
+            VCL_MESSAGE_HANDLER(WM_REPORT_TRXS,                     TMessage, OnCellManagerReportTrxs)
+            VCL_MESSAGE_HANDLER(WM_RTT_WARNING,                     TMessage, OnCellManagerRTTWarning)
+			VCL_MESSAGE_HANDLER(WM_RECEIVED_ANYMESSAGE_LTE,         TMessage, OnRemoteAnyMessageReceived)
+            VCL_MESSAGE_HANDLER(WM_LAYER3_SEQUENCE_FAILED,          TMessage, OnLayer3SequenceFailure)
+            VCL_MESSAGE_HANDLER(WM_LAYER3_SEQUENCE_TERMINATING,     TMessage, OnLayer3SequenceTerminating)
+            VCL_MESSAGE_HANDLER(WM_NO_RESPONSE_FROM_PCP_CARD_ERROR, TMessage, OnNoResponseFormPcpCard)
+            VCL_MESSAGE_HANDLER(WM_PCP_SOFTWARE_VERSION,            TMessage, OnPcpSoftwareVersionReceive)
+            VCL_MESSAGE_HANDLER(WM_DESTROY_PLAYBACKFORM,            TMessage, OnDestroyPlaybackForm)
+            VCL_MESSAGE_HANDLER(WM_VERDICT_REPORT,                  TMessage, OnVerdictReport)
+            VCL_MESSAGE_HANDLER(WM_UPDATE_UE_CAPABILITY_BCAP,       TMessage, OnUpdateUECapabilityWindow)
+            VCL_MESSAGE_HANDLER(WM_UPDATE_UE_CAPABILITY_MSCLK,      TMessage, OnUpdateUECapabilityWindow)
+            VCL_MESSAGE_HANDLER(WM_UPDATE_UE_IDENTITY,              TMessage, OnUpdateUECapabilityWindow)
+
+WM_S3CONNECTION
+
+http://h71000.www7.hp.com/doc/83final/ba554_90007/ch05s03.html
+
+London Stansted - Arrecife Lanzarote
+
+Dates	15 Aug 2014
+Leaves:	London Stansted 12:10
+Arrives:	Arrecife Lanzarote 16:25
+Airline	Ryanair
+Flight number	FR8288
+
+Arrecife Lanzarote - London Stansted
+
+Date:	25 Aug 2014
+Leaves:	Arrecife Lanzarote 07:25
+Leaves:	London Stansted 11:30
+Airline	Ryanair
+Flight number	FR8286
+
+London Stansted - Arrecife Lanzarote
+
+Dates	15 Aug 2014
+Leaves:	London Stansted 12:10
+Arrives:	Arrecife Lanzarote 16:25
+Airline	Ryanair
+Flight number	FR8288
+Lcf
+
+Galeon Playa Costa Teguise, Lanzarote, Canaries 
+
+C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\xsd.exe
+
+$(ProjectDir)Schema\ScriptSchema.xsd  /c /n:Anite.Sequencer  /out:$(ProjectDir)Schema
+
+L3PPipeMessageHandler
+
+
+
+
+L3PPipeMessageHandler
+

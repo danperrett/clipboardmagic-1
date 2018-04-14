@@ -1,0 +1,148 @@
+LOGMASK_SIGNING
+
+void RemoveLF(char* input, char* output)
+
+x509certificateStripped
+
+RemoveLF
+
+x509certificateStripped
+
+strlen(x509certificateStripped)
+
+x509certificateStripped
+
+_x509certificateStripped
+
+_certificate
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==
+
+MIIEZTCCAk2gAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwgZoxCzAJBgNVBAYTAkdCMQ4wDAYDVQQIEwVEZXJieTEOMAwGA1UEBxMFRGVyYnkxFjAUBgNVBAoTDUNvbG91cm5ldC5vcmcxHjAcBgNVBAsTFUNlcnRpZmljYXRlIEF1dGhvcml0eTEQMA4GA1UEAxMHRGF2ZSBDQTEhMB8GCSqGSIb3DQEJARYSZGF2ZUBjb2xvdXJuZXQub3JnMB4XDTE1MDMwNzIwMDkwOVoXDTE2MDMwNjIwMDkwOVowVzELMAkGA1UEBhMCR0IxDjAMBgNVBAgTBURlcmJ5MRYwFAYDVQQKEw1Db2xvdXJuZXQub3JnMRAwDgYDVQQLEwdTLVJJRiAxMQ4wDAYDVQQDEwVzcmlmMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0CAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFHQsNF5yXGVjGXSpZxJiYB9G55QHMB8GA1UdIwQYMBaAFDKapqVU9pKvfbNjJjfKU0GdftWpMA0GCSqGSIb3DQEBBQUAA4ICAQCs2HyqkeyePaStRmCCIX7HW5f1GpzI3dZAiiQSUBXTImhTldyQVhWKi6j3Vtb3EYd4tFCjeuKsdlsyRMqUa3q3kxrRhxHVFgS9U7LpAPCaae6CtfJ4hd51WYPiue9RGKQbNlTSkuUTlU0KTb6+y3/rueoi5e+OoQertcufVocIbCqO20F4JLZeEjEyWcE/jeJc0a30NHPPboEXCugJECYDiJ0tgCaLeIznOzIXYT8GllWTkP2WoXKoKZ101DkmIsaUg9q1LXVaBMTQ7HV6RKwCkag0u6WIP9SEe5sDgFYUdcdnegjEb9JVCpy03EhdTJJ8m3RXoPn9w4FZcrUDDoTuiCUxUSPXheJRlzIi0RAA7jehf3sNQ1O47aJ7zkGktjM4VDgZ1wkbjgzae2RE5zDR6VYIOpICdL3zSXdZL5wbgTv9wf0MOpzYi+XaN4JaWKqeTUoQ3czZMrLMqJZ4nsW/aqv3MbmxCigwYdoGaCcZqe3g/JzB+QF+VwlnOrGZKnlqXHw1F4CJQ6cf2PvMhXp5DI6o5XhuWa0hLtwEJYfNqaNQ9CWClF7Gd/taqSb2qIn5fhmTrg+Pwn4zxMWUpob1aOp9ZcuNrbweQn+Vigk+BXPy8kXshKpnwKLQSh03FEwo/zL7FwewrTD7zNHSQVa3SaQhUmj1Os2Pzu75GTan4A==????????????????????
+
+'/'
+
+input[n+1] == '>'
+
+RemoveUnwantedSpaces
+
+_SignedInfoOutput
+
+RemoveUnwantedSpaces
+
+SignedInfoOutput
+
+_SignedInfoOutput
+
+IP_MULTICAST_IF
+
+ strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+            while (SPADMsg[i] == ' ')
+            {
+                SPADMsg[i--] = '\0';
+            }
+
+            // SignalID is 2-byte value; convert to 1-offset from 0-offset
+            iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1] + 1;
+
+            MCS_SetSpadBit(iIxl, iSignalId);
+
+            // Get the numeric signal id
+            _itoa_s(iSignalId, szSignalId, sizeof(szSignalId), 10);
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, szSignalId);
+
+ strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+            while (SPADMsg[i] == ' ')
+            {
+                SPADMsg[i--] = '\0';
+            }
+
+            iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1];
+            MCS_SetSpadBit(iIxl, iSignalId);
+
+            // Get the numeric signal id
+            _itoa_s(iSignalId, szSignalId, sizeof(szSignalId), 10);
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, szSignalId);
+
+ strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+
+ strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+            while (SPADMsg[i] == ' ')
+            {
+                SPADMsg[i--] = '\0';
+            }
+
+            iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1];
+            MCS_SetSpadBit(iIxl, iSignalId);
+
+            // Get the numeric signal id
+            _itoa_s(iSignalId, szSignalId, sizeof(szSignalId), 10);
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, szSignalId);
+
+ strcat(SPADMsg, "@");
+            strcat(SPADMsg, alarm_message->Paramtext[1].text);
+            i = strlen(SPADMsg) - 1;
+            while (SPADMsg[i] == ' ')
+            {
+                SPADMsg[i--] = '\0';
+            }
+
+            // SignalID is 2-byte value; convert to 1-offset from 0-offset
+            iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1] + 1;
+
+            MCS_SetSpadBit(iIxl, iSignalId);
+
+            // Get the numeric signal id
+            _itoa_s(iSignalId, szSignalId, sizeof(szSignalId), 10);
+            strcat(SPADMsg, "@");
+            strcat(SPADMsg, szSignalId);
+
+iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1] + 1;
+
+
+ iSignalId = 256 * alarm_message->ParamID[1].device_rec[0] + alarm_message->ParamID[1].device_rec[1];
+
+StackTrace = "   at System.ThrowHelper.ThrowArgumentOutOfRangeException()\r\n   at System.Collections.Generic.List`1.get_Item(Int32 index)\r\n   at minyEncoder.ICONISFaker.EncodeMessage(Int32 sequenceNumber) in C:\\srif\\Win32Srif4_3\\minyEncoder\\ICONISFaker.cs:line 71...
+
+"   at System.ThrowHelper.ThrowArgumentOutOfRangeException()\r\n   at System.Collections.Generic.List`1.get_Item(Int32 index)\r\n   at minyEncoder.ICONISFaker.EncodeMessage(Int32 sequenceNumber) in C:\\srif\\Win32Srif4_3\\minyEncoder\\ICONISFaker.cs:line 719\r\n   at minyEncoder.ICONISFaker.timer_Tick(Object sender, EventArgs e) in C:\\srif\\Win32Srif4_3\\minyEncoder\\ICONISFaker.cs:line 288\r\n   at System.Windows.Forms.Timer.OnTick(EventArgs e)\r\n   at System.Windows.Forms.Timer.TimerNativeWindow.WndProc(Message& m)\r\n   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)\r\n   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)\r\n   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)\r\n   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)\r\n   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)\r\n   at System.Windows.Forms.Application.Run(Form mainForm)\r\n   at minyEncoder.Program.Main() in C:\\srif\\Win32Srif4_3\\minyEncoder\\Program.cs:line 20"
+
+InterlockingsNVFB3List
+
+  Interlocking_NVFB3_contexts InterlockingNVBF = new Interlocking_NVFB3_contexts(IL.UniqueID);
+
+                        interlockingList.Add(IL);
+                        InterlockingsNVFB3List.Add(InterlockingNVBF);
+
+inter.UniqueID
+
+InterlockingDataListView
+
+Interlocking_NVFB3_contexts
+
+InterlockingsNVFB3List
+
+http://www.tenouk.com/Module41c.html
+
+http://www.tack.ch/multicast/bclient.c
+
+http://www.tack.ch/multicast/broadcast.shtml
+
+SO_BROADCAST
+
+NVFB3ListContains
+
+W32Time
+
+w32tm /config /syncfromflags:manual /manualpeerlist:"0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org"
+

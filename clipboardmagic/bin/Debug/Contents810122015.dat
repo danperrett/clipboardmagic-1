@@ -1,0 +1,135 @@
+canonicalization
+
+Function Keys
+
+F1	Print Stats about the current session.
+F2	Start Input Logging
+F3	Start Output Logging
+F4	Print Connection Information
+F5	Unused
+F6	Unused
+F7	Test GUI interface (only available in debug mode)
+F8	Unused
+F9	Unused
+F10	Unused
+F11	Clear screen
+F12	Inject a marker into log (for debugging use)
+
+
+
+pendingInterlockingMessages[iIxl]
+
+pendingInterlockingMessages
+
+ConnectionID
+
+[ConnectionID]
+
+1	TCP/IP interface MODULE TESTS
+
+ for(n = 0; n < MAX_NUMBER_OF_CONNECTIONS; n++)
+    {
+        if(ConnectionList[n].connectionInformation.InUse == 1)
+        {
+            if(ConnectionList[n].connectionInformation.linkStatus >= AVAILABLE)
+            {
+
+ConnectionID
+
+ConnectionID);
+
+ConnectionID
+
+ free(message.Body.DiagnosticAlarms);
+    free(message.Body.GeneratedAlarms);
+    free(message.Body.Interlocking);
+    free(message.Body.EmergencyAlarms);
+    free(message.Body.TD);
+
+1	TCP/IP interface MODULE TESTS
+Verification of Test can be achieved by checking the log file. All test will use the ICONIS simulator software.
+Test No.	TCP/IP interface MODULE TESTS
+ Test Description
+1	Main Receiving Loop 
+(i)	Verify data is received, length has been extracted and that all data can be retrieved without corruption
+(ii)	Check that received data with unknown length is ignored.
+(iii)	Check that data that is too big > 25000 max for 20 interlocking will be ignored.
+(iv)	Verify that multiple connection can connect and data from both will not be mixed
+
+2	TCP Sending Functionality 
+(i)	Verify length is added to the beginning of the stream and that get sent first.
+(ii)	Verify the entirety of the message gets sent.
+(iii)	Check that when there are multiple connection, that the information is sent to both.
+3	XML Decode functionality
+(i)	Check that the decode of the Received XML message is correct.
+(ii)	Check that the information about the connection has been updated and that if it?s a good decode that connection is moved to UP.
+(iii)	If it?s a bad decode the XML message is ignored and the connection is set to DOWN.
+4	Decode Signing Functionality. The signing takes place in two steps and the verification of the signing is the reverse of the
+(i)	Check that the function decodes the signature of the XML message correctly. Check that we have 128 bytes for the RSA-SHA1 information and 20 bytes for the SHA1 information.
+(ii)	Check that the SHA1 matches with what is expected.
+(iii)	Check that the SHA1 does not match in a fail case and fall out with exception.
+(iv)	Check that the RSA ?SHA1 signature value matches in good case.
+(v)	Check that the RSA-SHA1 signature does not match in a corrupted case.
+(vi)	check that the certificate has been decoded correctly and marked good if its correct.
+(vii)	check certificate is marked as incorrect if it is incorrect.
+(viii)	Any above fail case will result in link being broken.
+5	Encode Signing functionality.
+(i)	Verify that the SHA1 digest is correct, manually take Canicalized xml data and verify it by hand.
+(ii)	Check that the RSA-SHA signature is encoded correctly. Again check the canonicalization by hand.
+(iii)	No fail case for Encoding.
+6	Decode of header and body element functionality
+(i)	Check that header can be decoded and that the body can be decoded correctly.
+(ii)	Check that the sequence number is greater than the previous sequence number, if not then the decode will fail and drop the connection.
+(iii)	Check that the body decodes correctly and the NVFB3 decoder get invoked afterward. 
+(iv)	Check if there is a bad decode the connection get terminated.
+7	XML Encoder of Envelope
+(i)	Verify all data is consistent and we have gathered all data pending for transmit.
+(ii)	Verify that the sequence number gets incremented.
+(iii)	Verify that the xml signing gets added to the Signature Element within the element.
+(iv)	Verify that all connections are serviced with the same information.
+(v)	Upon Receipt of the XML message the ICONIS simulator should decode and verify signatureOK.
+8	Make sure the connection is broken as soon as any information has been corrupted. This can be done by modifying the information on the ICONIS Simulator. As soon as the SRIF see the information is incorrect the link will be dropped. 
+The ICONIS Simulator should then be able to reconnect with no issue.
+
+
+Michael.Holden@signallingsolutions.com
+
+Squibb, Stuart (GE Transportation, Non-GE) <stuart.squibb@ge.com>
+
+stuart.squibb@ge.com
+
+Dan.Perrett@sigsol.onmicrosoft.com
+
+Yuqa2110
+
+1639 
+
+MAX_NUMBER_OF_CONNECTIONS
+
+if(strcmp(ConnectionList[n].connectionInformation.ipaddress, ipaddress) == 0)
+                {
+
+logger("OldConnection OK", LOGMASK_ICONISIF);
+
+for(n = 0; n < MAX_NUMBER_OF_CONNECTIONS; n++)
+    {
+
+if(strcmp(ConnectionList[n].connectionInformation.ipaddress, ipaddress) == 0)
+        {
+
+IsAddressConnectedAlready
+
+ ConnectionList[n].connectionInformation.linkStatus = UP;
+
+if(ConnectionList[n].connectionInformation.InUse == 1)
+
+ConnectionList[n].connectionInformation.linkStatus = UP;
+
+ConnectionList[n].
+
+ WORD datasize
+
+ cri.header.AppDataSize
+
+ MCS_setControlRequestsBitmap(iIxl, bitmap, cri.header.AppDataSize);
+

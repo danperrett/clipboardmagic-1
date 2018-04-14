@@ -1,0 +1,93 @@
+.\TechnicianTerminal.exe *:9150 MCS_101
+
+C:\StarTeam\48SA009 Generic Tech Term\Software\Source Code\Debug\CHAN.X86
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\TechnicianTerminal\TechnicianTerminal\bin\Debug
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\TechnicianTerminal\TechnicianTerminal\bin\Release
+
+\\192.168.1.3\techterm\Debug\RunTechTerm.bat
+
+www.google.co.uk
+
+Imogen
+
+OutputDebugString
+
+OutputDebugString("Increment Count");
+
+ OutputDebugString("Increment Count");
+
+OutputDebugString
+
+comport->cp_tx_buffer_descriptor->cbd_io_ref_count
+
+Decrement Count
+
+InterlockedDecrement( &bd->cbd_io_ref_count ) ;
+            OutputDebugString("Decrement Count :F\n");
+
+OutputDebugString("Decrement Count :F\n");
+
+int count = 0;
+
+SSL-S-RIFCodeReview-PartA.doc
+
+OutputDebugString
+
+count++;
+
+Decrement Count :F
+
+OutputDebugString("Default Error :F\n");
+
+OutputDebugString
+
+OutputDebugString("TxCompletionEvent\n");
+
+COMMS_OnWriteEvent
+
+OutputDebugString("COMMS_OnWriteEvent\n");
+
+COMMS_RunPorts
+
+OutputDebugString("COMMS_RunPorts\n");
+
+COMMS_OnWriteEvent
+
+OutputDebugString("COMMS_OnWriteEvent\n");
+
+OutputDebugString("
+
+COMMS_OutFlushChannel
+
+No Tx Event pending
+
+OutputDebugString("
+
+BeginWrite
+
+OutputDebugString
+
+Handle != 0
+
+BeginWrite size <= 0
+
+Decrement Count :F
+
+bd->cbd_stored_size
+
+comport->cp_tx_buffer_offse
+
+comport->cp_tx_idle
+
+OutputDebugString
+
+203043529395
+
+20-25-36 93607690 
+
+93607690 
+
+203043529395
+

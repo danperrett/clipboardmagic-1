@@ -1,0 +1,23 @@
+    function SendTMSCommand(ACommand: string; MsgStatus: MsgStatus; PushFront: Boolean = False): Integer;
+* TITLE       SendTMSCommand                                                  *
+function TOSTxThread.SendTMSCommand(ACommand: string; MsgStatus: MsgStatus; PushFront: Boolean = False): Integer;
+  TLogger.LogDebug(mName, 'SendTMSCommand - Sending [' + sData + ']');
+    TLogger.LogSCN(LOGTYPE_OS, mName, 'SendTMSCommand - Failed to create new RMAMessage');
+  TLogger.LogDebug(mName, 'SendTMSCommand - Adding command to mQueueTxIn [' + FloatTostr(PTMessage.TransId) + ']');
+  TLogger.LogDebug(mName, 'SendTMSCommand - Finished adding [' + sData + ']');
+      RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'SDRL ' + mSCNFormat + K_CARRIAGE_RETURN, STARTCMD);
+      RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'CRSL ' + mSCNFormat + K_CARRIAGE_RETURN, STARTCMD);
+        RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'EQDL ' + mSCNFormat + ' DR' + K_CARRIAGE_RETURN, STARTCMD);
+        RetVal := SendTMSCommand(mTMSUser+ K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'DMES' + K_CARRIAGE_RETURN, ENDCMD);
+        RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'IMES ' + mSCNFormat + ' M02 ,' + K_CARRIAGE_RETURN, STARTCMD);
+          RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'IMES ' + mSCNFormat + ' M08 ,' + K_CARRIAGE_RETURN, STARTCMD);
+            RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'GRNG NOPIC' + K_CARRIAGE_RETURN, STARTCMD, True);
+            RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'OFFA CONT' + K_CARRIAGE_RETURN, STARTCMD);
+            RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'OFSL CONT' + K_CARRIAGE_RETURN, STARTCMD);
+                  RetVal := SendTMSCommand(mTMSUser + K_CARRIAGE_RETURN + mTMSPassword + K_CARRIAGE_RETURN + 'BSTA ' + mSCNFormat + ' ' + UpperCase(LongDayNames[DayOfWeek(LastBSTAProcessed)]) + K_CARRIAGE_RETURN, STARTCMD);
+
+
+
+
+void Initlialise(int argc, char *argv);
+

@@ -1,0 +1,86 @@
+C:\Program Files (x86)\Imtech\Imcity\Adapters\DatexIIAdapter\
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+http://datex2.tistrafficinfo.com/England/PredefinedLocation/metadata.xml
+
+http://datex2.tistrafficinfo.com/England/PredefinedLocation/content.xml
+
+=http://datex2.tistrafficinfo.com/England/VariableMessageSign/content.xml
+
+daniel.perrett
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+ClearViewSimulator.jar
+
+daniel.perrett
+
+imtech01
+
+Error connection to server
+
+merseygateway
+
+https://datex2.stratostraffic.com/traveltime/definition
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+https://drakewell01.drakewell.com/datex2/datex2_predefinedlocations.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP%5B&showmatchcount=1&routelinks=7
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+
+https://datex2.stratostraffic.com/vms/definition
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/metadata.xml
+
+http://datex2.tistrafficinfo.com/England/VariableMessageSign/content.xml
+
+https://datex2.stratostraffic.com/vms/definition
+
+https://datex2.stratostraffic.com/vms/status
+
+R2K+nfcaNPbo0Oa
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\Drakewell_BT\AdapterService.exe -n DrakewellBT
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\Barnsley_BMBCFeeds
+
+DatexIIAdapter.dll
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\Barnsley_BMBCFeeds
+
+Barnsley_BMBCFeeds
+
+52.212.159.37
+
+ merseygateway@xmpp.utms.uk
+
+Barnsley_BMBCFeeds
+
+t
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\Barnsley_BMBCFeeds
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\Drakewell_BT\
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\Drakewell_BT
+
+Barnsley_BMBCFeeds
+
+BarnsleyBMBCFeed
+
+https://datex2.stratostraffic.com/vms/definition
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+configPath
+

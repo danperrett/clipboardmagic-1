@@ -1,0 +1,889 @@
+NVFB3_config_t
+
+void MCS_get_Control_NVFB3Config(NVFB3_config_t *config)
+
+if(config != NULL)
+    {
+
+    }
+
+void MCS_get_Control_NVFB3Config(NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+
+    }
+}
+
+void MCS_get_ARSSubArea_NVFB3Config(NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+
+    }
+}
+
+MCS_interlockings[index]
+
+NVFB3_config_t
+
+ memcpy(config, &(MCS_interlockings[index].Control), sizeof(NVFB3_config_t));
+
+MCS_get_Control_NVFB3Config
+
+MCS_get_ARSSubArea_NVFB3Config
+
+(*context_array)[i]->
+
+&((*context_array)[i]->NVFB3ConfigControl
+
+NVFB3_config_t
+
+ZeroMemory(&((*context_array)[i]->NVFB3ConfigControl), sizeof(NVFB3_config_t));
+
+NVFB3ConfigARS
+
+NVFB3_config
+
+InterlockingControl_00_IconisAddress=4
+InterlockingControl_00_SRIFAddress=2
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=2
+InterlockingARS_00_SRIFAddress=3
+InterlockingARS_00_AppDomain=10
+
+SignalMapResponse
+
+CqECAAsAFD8h9rs2d8eqVQAAAQAAAESq7O/PYWZV
+
+CqEBAAIAFD8h9uonIfaqVQAAAQAAAH429ZmawfFu
+
+116444736000000000
+
+10000000
+
+116444736000000000
+
+C:\Windows\MCSCORUN.INI
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+11644473600000
+
+		GetSystemTime(&st);
+		SystemTimeToFileTime(&st, &ft);
+
+
+	SYSTEMTIME st;
+	FILETIME ft;
+	UINT32 ft32;
+
+
+    struct _SYSTEMTIME t;
+
+
+		UINT64 ft64;
+		ft64 = *(UINT64 *)&ft;
+
+		ft64 = ft64 / 10000;
+
+		ft32 = (UINT32)ft64;
+
+
+		UINT64 ft64;
+
+
+	ft64 = ft64 / 10000;	// convert from 100ns to 1ms
+
+
+ft64 / 10000
+
+ms1601to1970
+
+    return GetTickCount();
+
+
+DWORD NVFB3_get_time(NVFB3_context_t *NVFB3_context)
+{
+	SYSTEMTIME st;
+	FILETIME ft;
+	UINT32 ft32;
+
+//  GetLocalTime(&t);
+	UINT64 ms1601to1970 = 11644473600000;
+	UINT64 ft64;
+	
+	GetSystemTime(&st);
+	SystemTimeToFileTime(&st, &ft);
+	
+	ft64 = *(UINT64 *)&ft;
+	ft64 = ft64 / 10000;	// convert from 100ns to 1ms
+	ft64 -= ms1601to1970;	// go from since 1601 to since 170
+	
+	ft32 = (UINT32)ft64;
+	
+//  return GetTickCount();
+    return ft32;
+	
+}
+
+
+
+NVFB3_get_time
+
+    DWORD32 tick = NVFB3_get_time();
+
+
+NVFB3_context_t *NVFB3_context
+
+    DWORD32 tick = NVFB3_get_time();
+
+
+NVFB3_get_time
+
+	
+
+
+NVFB3_get_time
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+InterlockingControl_00_IconisAddress=2
+InterlockingControl_00_SRIFAddress=2
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=2
+InterlockingARS_00_SRIFAddress=3
+InterlockingARS_00_AppDomain=10
+
+
+InterlockingSignalMap
+
+InterlockingIndications
+
+InterlockingIndications_00_IconisAddress=2
+InterlockingIndications_00_SRIFAddress=3
+InterlockingIndications_00_AppDomain=10
+
+
+InterlockingStatusByte
+
+InterlockingSignalMap_00_IconisAddress
+
+sprintf(szIxlCfgName, "InterlockingARS_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.AppDomain = (WORD)atoi(temp);
+
+InterlockingSignalMap_00_IconisAddress
+
+%02d
+
+NVFB3_config_t ARSSubArea;
+
+ZeroMemory(&ARSSubArea, sizeof(NVFB3_config_t));
+
+SignalMap
+
+IconisAddress
+
+sprintf(szIxlCfgName, "InterlockingARS_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.SRIFAddress = (WORD)atoi(temp);
+
+
+InterlockingSignalMap
+
+SignalMap
+
+ sprintf(szIxlCfgName, "InterlockingARS_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.AppDomain = (WORD)atoi(temp);
+
+InterlockingSignalMap
+
+SignalMap
+
+ //Signal Map
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.AppDomain = (WORD)atoi(temp);
+
+Indications
+
+InterlockingIndications
+
+NVFB3_config_t SignalMap;
+
+ZeroMemory(&SignalMap, sizeof(NVFB3_config_t));
+
+Indications
+
+ //Indications Map
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.AppDomain = (WORD)atoi(temp);
+
+StatusByte
+
+InterlockingStatusByte
+
+NVFB3_config_t Indications;
+
+ZeroMemory(&Indications, sizeof(NVFB3_config_t));
+
+StatusByte
+
+NVFB3_config_t
+
+NVFB3_config_t *ARSSubArea,
+
+ memcpy(&(MCS_interlockings[iIxl].ControlConfig), control, sizeof(NVFB3_config_t));
+        memcpy(&(MCS_interlockings[iIxl].ARSSubAreaConfig), ARSSubArea, sizeof(NVFB3_config_t));
+
+memcpy(&(MCS_interlockings[iIxl].ARSSubAreaConfig), ARSSubArea, sizeof(NVFB3_config_t));
+
+void MCS_AddInterlockingFromConfig(int iIxl,
+                                   const char* SSIID, 
+                                   const char* UniqueId, 
+                                   WORD MCS_Interlocking_Index,
+                                   NVFB3_config_t *control,
+                                   NVFB3_config_t *ARSSubArea,
+                                   NVFB3_config_t *SignalMap,
+                                   NVFB3_config_t *Indications,
+                                   NVFB3_config_t *StatusByte)
+
+SignalMap
+
+Indications
+
+StatusByte
+
+_NVFB3Config(WORD index, NVFB3_config_t *config)
+
+if(config != NULL)
+    {
+        memcpy(config, &(MCS_interlockings[index].ARSSubAreaConfig), sizeof(NVFB3_config_t));
+    }
+
+void MCS_getSignalMap_NVFB3Config(WORD index, NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+        memcpy(config, &(MCS_interlockings[index].SignalMapConfig), sizeof(NVFB3_config_t));
+    }
+}
+
+void MCS_getIndications_NVFB3Config(WORD index, NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+        memcpy(config, &(MCS_interlockings[index].IndicationsConfig), sizeof(NVFB3_config_t));
+    }
+}
+
+NVFB3_context_t *NVFB3_context = get_NVFB3_context(UniqueID, element_type);
+
+get_NVFB3_context_by_index
+
+iIxl
+
+  NVFB3_config_t *config = NULL;
+
+if(element_type == NVFB3_CONTROLREQUESTS)
+    {
+        config = &(NVFB3_context->NVFB3ConfigControl);
+    }
+    else if(element_type == NVFB3_ARSSUBAREASTATUS)
+    {
+        config = &(NVFB3_context->NVFB3ConfigARS);
+    }
+
+ NVFB3_SIGNALMAP,
+    NVFB3_INDICATIONS,
+    NVFB3_CONTROLREQUESTS,
+    NVFB3_ARSSUBAREASTATUS,
+    NVFB3_STATUSBYTE,
+
+NVFB3_SIGNALMAP
+
+NVFB3_INDICATIONS
+
+NVFB3_STATUSBYTE
+
+element ==
+
+ config = &(NVFB3_context->NVFB3ConfigARS);
+
+ MCS_get_Control_NVFB3Config(i, &((*context_array)[i]->NVFB3ConfigControl));
+
+ NVFB3_config_t *config = NULL;
+
+eNVFB3_element_t element
+
+enum eNVFB3_element {
+    NVFB3_EMERGENCY_ALARMS	= 0,
+    NVFB3_SIGNALMAP,
+    NVFB3_INDICATIONS,
+    NVFB3_CONTROLREQUESTS,
+    NVFB3_ARSSUBAREASTATUS,
+    NVFB3_STATUSBYTE,
+};
+
+NVFB3_SIGNALMAP
+
+NVFB3_INDICATIONS
+
+NVFB3_CONTROLREQUESTS
+
+NVFB3_ARSSUBAREASTATUS
+
+NVFB3_STATUSBYTE
+
+eNVFB3_element_t element
+
+ NVFB3_config_t *config = NULL;
+
+NVFB3_SIGNALMAP
+
+
+NVFB3_INDICATIONS
+
+NVFB3_CONTROLREQUESTS
+
+NVFB3_ARSSUBAREASTATUS
+
+NVFB3_STATUSBYTE
+
+MCS_get_Control_NVFB3Config(i, &((*context_array)[i]->NVFB3ConfigControl));
+
+MCS_get_ARSSubArea_NVFB3Config(i, &((*context_array)[i]->NVFB3ConfigARS));
+
+MCS_getSignalMap_NVFB3Config
+
+(i, &((*context_array)[i]->NVFB3config));
+
+MCS_getIndications_NVFB3Config(
+
+i, &((*context_array)[i]->NVFB3config));
+
+MCS_getStatusBytes_NVFB3Config(
+
+i, &((*context_array)[i]->NVFB3config));
+
+void MCS_getSignalMap_NVFB3Config(WORD index, NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+        memcpy(config, &(MCS_interlockings[index].SignalMapConfig), sizeof(NVFB3_config_t));
+    }
+}
+
+void MCS_getIndications_NVFB3Config(WORD index, NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+        memcpy(config, &(MCS_interlockings[index].IndicationsConfig), sizeof(NVFB3_config_t));
+    }
+}
+
+void MCS_getStatusBytes_NVFB3Config(WORD index, NVFB3_config_t *config)
+{
+    if(config != NULL)
+    {
+        memcpy(config, &(MCS_interlockings[index].StatusByteConfig), sizeof(NVFB3_config_t));
+    }
+}
+
+ECHO_GOOD
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+C:\Windows\MCSCORUN.INI
+
+, LOGMASK_NVFB3
+
+    config = &(NVFB3_context->NVFB3config);
+
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+        logger("NVFB3 header crc failure", LOGMASK_NVFB3);
+
+
+        logger("NVFB3 header crc failure", ALWAYS);
+
+
+lastReceivedcounter
+
+logger_1("NVFB3 header crc failure", lastReceivedcounter, ALWAYS);
+
+
+
+if 
+
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+Echo Cou
+
+TimeCounterValidFlag 
+
+logger_1("In CheckCounterTolerance.  Clearing TimeCounterValidFlag", LOGMASK_NVFB3);
+
+
+LastReceivedTimeCounter
+
+EchoCounterFlag
+
+ToleranceCounter
+
+void CheckCounterTolerance(NVFB3_context_t *NVFB3_context, DWORD config);
+
+
+DDelay
+
+void CheckCounterTolerance(NVFB3_context_t *NVFB3_context, DWORD DDelay)
+
+    ::SendMessageA(hWnd, WM_LOGGER, logmask, (LPARAM)buffer);
+
+
+    writeToLoggerFile(szLine, logmask);
+
+
+    logger(szLine, logmask);
+
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+D:\Signature\IHI_HIDraA.ova
+
+, DWORD DDelay
+
+[Interlockings]
+NumInterlockings=1
+Interlocking_00_SSIID=O4
+Interlocking_00_UniqueID=Keighley
+Interlocking_00_MCSID=19
+Interlocking_01_SSIID=21
+Interlocking_01_UniqueID=Horsforth
+Interlocking_01_MCSID=21
+;keighley nvfb3 config
+InterlockingControl_00_IconisAddress=2
+InterlockingControl_00_SRIFAddress=12
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=3
+InterlockingARS_00_SRIFAddress=13
+InterlockingARS_00_AppDomain=10
+InterlockingSignalMap_00_IconisAddress=5
+InterlockingSignalMap_00_SRIFAddress=15
+InterlockingSignalMap_00_AppDomain=10
+InterlockingIndications_00_IconisAddress=1
+InterlockingIndications_00_SRIFAddress=11
+InterlockingIndications_00_AppDomain=10
+InterlockingStatusByte_00_IconisAddress=4
+InterlockingStatusByte_00_SRIFAddress=14
+InterlockingStatusByte_00_AppDomain=10
+;horsforth nvfb3 config
+InterlockingControl_01_IconisAddress=2
+InterlockingControl_01_SRIFAddress=2
+InterlockingControl_01_AppDomain=10
+InterlockingARS_01_IconisAddress=2
+InterlockingARS_01_SRIFAddress=3
+InterlockingARS_01_AppDomain=10
+InterlockingSignalMap_01_IconisAddress=2
+InterlockingSignalMap_01_SRIFAddress=1
+InterlockingSignalMap_01_AppDomain=10
+InterlockingIndications_01_IconisAddress=2
+InterlockingIndications_01_SRIFAddress=1
+InterlockingIndications_01_AppDomain=10
+InterlockingStatusByte_01_IconisAddress=2
+InterlockingStatusByte_01_SRIFAddress=1
+InterlockingStatusByte_01_AppDomain=10
+
+
+Digest Comparision Failed
+
+received Length
+
+            LOGSTRINT("Received Length = ", Length, ALWAYS);
+
+
+** Disabled for now**
+
+AHRIF_INI AppInit;
+
+extern AHRIF_INI AppInit;
+
+
+
+#define FRESH_TOLERANCE 3
+#define PERIOD			250
+
+
+
+AHRIF_INI AppInit;
+
+->
+
+get_NVFB3_DDelay()
+
+** Disabled for now** 
+
+** Disabled for now**
+
+Timeliness failed
+
+lastReceivedcounter
+
+lastReceivedcounter == 0
+
+Authenticity Failed
+
+Get_NVFB3_config
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+void GetInterlockingData(const char* iniFilename)
+{
+    char value1[256];
+    char value2[256];
+    char value3[256];
+    int iNumInterlockings;
+    char szIxlCfgName[64];
+    int iIxl;
+
+    GetPrivateProfileString("Interlockings", "NumInterlockings", "-1", value1, sizeof(value1), iniFilename);
+    iNumInterlockings = atol(value1);
+
+    if ((iNumInterlockings <= 0) || (iNumInterlockings > 32))
+    {
+        logger("Bad or missing interlocking count in config file", ALWAYS);
+        MessageBox(0, "Bad or missing interlocking count in config file", "Error", MB_OK);
+        exit(-1);
+    }
+
+    MCS_CreateInterlockingsArray(iNumInterlockings);
+    for (iIxl = 0; iIxl < iNumInterlockings; iIxl++)
+    {
+        char temp[6] = {0};
+        WORD MCS_Interlocking_Index;
+        NVFB3_config_t Control;
+        NVFB3_config_t ARSSubArea;
+        NVFB3_config_t SignalMap;
+        NVFB3_config_t Indications;
+        NVFB3_config_t StatusByte;
+
+        ZeroMemory(szIxlCfgName, 64);
+        ZeroMemory(&Control, sizeof(NVFB3_config_t));
+        ZeroMemory(&ARSSubArea, sizeof(NVFB3_config_t));
+        ZeroMemory(&SignalMap, sizeof(NVFB3_config_t));
+        ZeroMemory(&Indications, sizeof(NVFB3_config_t));
+        ZeroMemory(&StatusByte, sizeof(NVFB3_config_t));
+
+        sprintf(szIxlCfgName, "Interlocking_%02d_SSIID", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "", value1, sizeof(value1), iniFilename);
+
+        sprintf(szIxlCfgName, "Interlocking_%02d_UniqueID", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "", value2, sizeof(value2), iniFilename);
+
+        if ((strlen(value1) == 0) || (strlen(value2) == 0))
+        {
+            logger("ID strings for interlocking missing from config", ALWAYS);
+        }
+
+        sprintf(szIxlCfgName, "Interlocking_%02d_MCSID", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", value3, sizeof(value3), iniFilename);
+        MCS_Interlocking_Index = (WORD)atoi(value3);
+
+
+        //InterlockingControl Request NVFB3 information
+        sprintf(szIxlCfgName, "InterlockingControl_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingControl_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingControl_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Control.AppDomain = (WORD)atoi(temp);
+
+        //ARSSubArea Information 
+         sprintf(szIxlCfgName, "InterlockingARS_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingARS_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingARS_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.AppDomain = (WORD)atoi(temp);
+
+        //Signal Map
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.AppDomain = (WORD)atoi(temp);
+
+
+        //Indications Map
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.AppDomain = (WORD)atoi(temp);
+
+         //StatusByte Map
+        sprintf(szIxlCfgName, "InterlockingStatusByte_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        StatusByte.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingStatusByte_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        StatusByte.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingStatusByte_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        StatusByte.AppDomain = (WORD)atoi(temp);
+
+        MCS_AddInterlockingFromConfig(iIxl, value1, value2, MCS_Interlocking_Index, &Control, &ARSSubArea, &SignalMap, &Indications, &StatusByte);
+    }
+}	// GetInterlockingData
+
+
+
+GetEANVFB3Config
+
+        NVFB3_config_t ARSSubArea;
+        NVFB3_config_t SignalMap;
+        NVFB3_config_t Indications;
+        NVFB3_config_t StatusByte;
+
+
+        //ARSSubArea Information 
+         sprintf(szIxlCfgName, "InterlockingARS_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingARS_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingARS_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        ARSSubArea.AppDomain = (WORD)atoi(temp);
+
+        //Signal Map
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingSignalMap_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        SignalMap.AppDomain = (WORD)atoi(temp);
+
+
+        //Indications Map
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingIndications_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        Indications.AppDomain = (WORD)atoi(temp);
+
+         //StatusByte Map
+        sprintf(szIxlCfgName, "InterlockingStatusByte_%02d_IconisAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        StatusByte.IconisAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingStatusByte_%02d_SRIFAddress", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        StatusByte.SRIFAddress = (WORD)atoi(temp);
+
+        sprintf(szIxlCfgName, "InterlockingStatusByte_%02d_AppDomain", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", temp, sizeof(temp), iniFilename);
+        StatusByte.AppDomain = (WORD)atoi(temp);
+
+
+
+        if ((strlen(value1) == 0) || (strlen(value2) == 0))
+        {
+            logger("ID strings for interlocking missing from config", ALWAYS);
+        }
+
+
+
+        sprintf(szIxlCfgName, "Interlocking_%02d_SSIID", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "", value1, sizeof(value1), iniFilename);
+
+        sprintf(szIxlCfgName, "Interlocking_%02d_UniqueID", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "", value2, sizeof(value2), iniFilename);
+
+
+
+        sprintf(szIxlCfgName, "Interlocking_%02d_MCSID", iIxl);
+        GetPrivateProfileString("Interlockings", szIxlCfgName, "0", value3, sizeof(value3), iniFilename);
+        MCS_Interlocking_Index = (WORD)atoi(value3);
+
+
+
+
+        ZeroMemory(&ARSSubArea, sizeof(NVFB3_config_t));
+        ZeroMemory(&SignalMap, sizeof(NVFB3_config_t));
+        ZeroMemory(&Indications, sizeof(NVFB3_config_t));
+        ZeroMemory(&StatusByte, sizeof(NVFB3_config_t));
+
+
+    MCS_CreateInterlockingsArray(iNumInterlockings);
+    for (iIxl = 0; iIxl < iNumInterlockings; iIxl++)
+    {
+
+
+    }
+
+
+EmergencyAlarm
+
+NVFB3_context_t * _cdecl get_NVFB3_context(char *UniqueID, eNVFB3_element_t eNVFB3_Stream)
+
+
+ _cdecl 
+
+ eNVFB3_Stream
+
+NVFB3_EMERGENCY_ALARMS
+
+    GetPrivateProfileString("Interlockings", "NumInterlockings", "-1", value1, sizeof(value1), iniFilename);
+    iNumInterlockings = atol(value1);
+
+    if ((iNumInterlockings <= 0) || (iNumInterlockings > 32))
+    {
+        logger("Bad or missing interlocking count in config file", ALWAYS);
+        MessageBox(0, "Bad or missing interlocking count in config file", "Error", MB_OK);
+        exit(-1);
+    }
+
+
+
+    WORD MCS_Interlocking_Index;
+
+
+    NVFB3_config_t Control;
+
+
+    ZeroMemory(szIxlCfgName, 64);
+    ZeroMemory(&Control, sizeof(NVFB3_config_t));
+
+
+
+    int iNumInterlockings;
+    char szIxlCfgName[64];
+    int iIxl;
+
+
+    int iNumInterlockings;
+
+
+    int iIxl;
+
+
+%02d_
+
+"EmergencyAlarm_IconisAddress"
+
+    sprintf(szIxlCfgName, "EmergencyAlarm_IconisAddress", iIxl);
+
+
+EAContext
+
+    sprintf(szIxlCfgName, "EmergencyAlarm_%02d_SRIFAddress", iIxl);
+
+
+EmergencyAlarm_%02d_SRIFAddress
+
+    sprintf(szIxlCfgName, "EmergencyAlarm_%02d_SRIFAddress", iIxl);
+
+
+EAContext->NVFB3config.
+
+EmergencyAlarm_%02d_AppDomain
+
+EAContext->NVFB3config.
+
+    sprintf(szIxlCfgName, "EmergencyAlarm_%02d_AppDomain", iIxl);
+
+
+
+    MCS_AddInterlockingFromConfig(iIxl, value1, value2, MCS_Interlocking_Index, &Control, &ARSSubArea, &SignalMap, &Indications, &StatusByte);
+
+
+    char value1[256];
+    char value2[256];
+    char value3[256];
+
+
+    char szIxlCfgName[64];
+
+
+BYTE
+
+void GetEANVFB3Config(const char* iniFilename)
+
+
+void 
+
+Get_EA_NVFB3_config
+
+InterlockingStatusByte_01_IconisAddress=2
+InterlockingStatusByte_01_SRIFAddress=1
+InterlockingStatusByte_01_AppDomain=10
+
+
+EmergencyAlarm_IconisAddress
+
+EmergencyAlarm_
+
+Sequence Correctness 
+

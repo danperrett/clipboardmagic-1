@@ -1,0 +1,672 @@
++		controlBuffer	0x0057cb14 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-04T08:47:39.2896267+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>"	char [8192]
+
+
++		controlBuffer	0x0057cb14 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-04T08:47:39.5444737+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>2</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>"	char [8192]
+
+
+void copyFromCircularBuffer(char* to, int length)
+
+Received Nothing from buffer
+
+Received Nothing from buffer need to receive
+
+LENGTH_OF_BUFFER
+
+            char debug[100];
+
+char debug[100];
+
+ZeroMemory(debug, 100);
+
+recv(Socket, temp, 512, 0);
+
+(inDataLength  < (Length - WhatsStillInTheCircularBuffer)
+
+192.168.1.80
+
+if((l < 0) && (inDataLength  >= (Length - WhatsStillInTheCircularBuffer)))
+                            {
+                                break;
+                            }
+
+ ZeroMemory(debug, 100);
+                            sprintf(debug, "Received Nothing from buffer need to receive %d ", Length);
+                            logger(debug);
+                            Sleep(100);
+
+DWORD CheckStartOfMessagIsPresent(const char *message)
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\exampleWin32Proj\TCPSocket.cpp
+
+CheckStartOfMessagIsPresent
+
+while((_l = recv(Socket, (char *)message_text, 8, MSG_PEEK)) != 8);
+
+szHistory
+
+safetyLoop
+
+_l = recv(Socket, (char *)szHistory, Length, MSG_PEEK)
+
+LENGTH_OF_BUFFER
+
+inDataLength
+
+connectionInformation->TimeOfLastReceive
+
+349570955277
+
+3,591.36
+
+3,673.66
+
+GetTickCount()
+
+GetTickCount();
+
+if(connectionInformation->TimeOfLastReceive > 0) // we must have received at least one
+
+timeOfReceived
+
+connectionInformation->TimeOfLastReceive
+
+TimeDifference
+
+connectionInformation->
+
+connectionInformation->TimeDifference
+
+PrintDebugToScreen
+
+SendMessageA
+
+WM_SOCKET
+
+WSAAsyncSelect
+
+System.Threading.Thread
+
+    int count = 0;
+
+if (InvokeRequired)
+
+EncodedDataTextBox
+
+System.Text.Encoding.Default.GetString(result)
+
+client
+
+System.Windows.Forms.
+
+DWORD SendOverSocket(DWORD Socket, const char* data,int length)
+
+<DiagnosticAlarms>
+    <Link> ? </Link>
+</DiagnosticAlarms>
+
+
+<Link>
+     <From>SRIF-1</From>
+     <To>IXL-1</To>
+     <Status>UP</Status>
+    </Link>
+
+
+<GeneratedAlarms>
+ <OSTO> ? </OSTO>
+ <GenericAlarm>Free Text Alarm</GenericAlarm>
+</GeneratedAlarms>
+
+
+<OSTO>
+  <Track1>T123</Track1>
+  <Track2>T124</Track2>
+ </OSTO>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-01T09:21:47.8804309+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+	<DiagnosticAlarms>
+		<Link>
+			<From>SRIF-1</From>
+			<To>IXL-1</To>
+			<Status>UP</Status>
+		</Link>
+	</DiagnosticAlarms>
+	<GeneratedAlarms>
+	<OSTO>
+		<Track1>T123</Track1>
+		<Track2>T124</Track2>
+	</OSTO>
+	<GenericAlarm>Free Text Alarm</GenericAlarm>
+	</GeneratedAlarms>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>
+
+void InitialiseEncoderCONISIF()
+
+DWORD EncodeICONISIFMessageForTransmision(char* outBuffer)
+
+static char TestTextToSend[8129];
+
+InitialiseEncoderCONISIF
+
+NFVB/3 
+
+dave.robson@signallingsolutions.com
+
+InitialiseEncoderCONISIF
+
+EncodeICONISIFMessageForTransmision
+
+udp.stream eq 27
+
+0a a3 02 00 01 00 94 29 e2 96 93 29 e2 96 aa 
+
+0a a3 02 00 01 00 94 29 e2 96 93 29 e2 96 aa 55 58 1b 01 00 00 00 af 27 14 f6 03 af
+
+TestTextToSend
+
+EncodeICONISIFMessageForTransmision
+
+SendOverSocket
+
+Alstom 
+
+MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==
+
+Signature
+
+Envelope
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE schema PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "http://www.w3.org/2001/XMLSchema.dtd" 
+ [ <!ATTLIST schema xmlns:ds CDATA #FIXED "http://www.w3.org/2000/09/xmldsig#"> 
+ <!ENTITY dsig 'http://www.w3.org/2000/09/xmldsig#'> <!ENTITY % p ''> <!ENTITY 
+ % s ''> ]> -->
+<!-- Schema for XML Signatures http://www.w3.org/2000/09/xmldsig# $Revision: 
+ 4 $ on $Date: 2004-12-16 12:08:17 -0500 (Thu, 16 Dec 2004) $ by $Author: 
+ marcgratacos $ Copyright 2001 The Internet Society and W3C (Massachusetts 
+ Institute of Technology, Institut National de Recherche en Informatique et 
+ en Automatique, Keio University). All Rights Reserved. http://www.w3.org/Consortium/Legal/ 
+ This document is governed by the W3C Software License [1] as described in 
+ the FAQ [2]. [1] http://www.w3.org/Consortium/Legal/copyright-software-19980720 
+ [2] http://www.w3.org/Consortium/Legal/IPR-FAQ-20000620.html#DTD -->
+<schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#"
+ version="0.1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+ <!-- Basic Types Defined for Signatures -->
+ <simpleType name="CryptoBinary">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- Start Signature -->
+ <element name="Signature" type="ds:SignatureType" />
+ <complexType name="SignatureType">
+  <sequence>
+   <element ref="ds:SignedInfo" />
+   <element ref="ds:SignatureValue" />
+   <element minOccurs="0" ref="ds:KeyInfo" />
+   <element maxOccurs="unbounded" minOccurs="0" ref="ds:Object" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureValue" type="ds:SignatureValueType" />
+ <complexType name="SignatureValueType">
+  <simpleContent>
+   <extension base="base64Binary">
+    <attribute name="Id" type="ID" use="optional" />
+   </extension>
+  </simpleContent>
+ </complexType>
+ <!-- Start SignedInfo -->
+ <element name="SignedInfo" type="ds:SignedInfoType" />
+ <complexType name="SignedInfoType">
+  <sequence>
+   <element ref="ds:CanonicalizationMethod" />
+   <element ref="ds:SignatureMethod" />
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="CanonicalizationMethod" type="ds:CanonicalizationMethodType" />
+ <complexType mixed="true" name="CanonicalizationMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##any" />
+   <!-- (0,unbounded) elements from (1,1) namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="SignatureMethod" type="ds:SignatureMethodType" />
+ <complexType mixed="true" name="SignatureMethodType">
+  <sequence>
+   <element minOccurs="0" name="HMACOutputLength" type="ds:HMACOutputLengthType" />
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other" />
+   <!-- (0,unbounded) elements from (1,1) external namespace -->
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- Start Reference -->
+ <element name="Reference" type="ds:ReferenceType" />
+ <complexType name="ReferenceType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+   <element ref="ds:DigestMethod" />
+   <element ref="ds:DigestValue" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="URI" type="anyURI" use="optional" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <element name="Transforms" type="ds:TransformsType" />
+ <complexType name="TransformsType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Transform" />
+  </sequence>
+ </complexType>
+ <element name="Transform" type="ds:TransformType" />
+ <complexType mixed="true" name="TransformType">
+  <choice maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+   <element name="XPath" type="string" />
+  </choice>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <!-- End Reference -->
+ <element name="DigestMethod" type="ds:DigestMethodType" />
+ <complexType mixed="true" name="DigestMethodType">
+  <sequence>
+   <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+    processContents="lax" />
+  </sequence>
+  <attribute name="Algorithm" type="anyURI" use="required" />
+ </complexType>
+ <element name="DigestValue" type="ds:DigestValueType" />
+ <simpleType name="DigestValueType">
+  <restriction base="base64Binary" />
+ </simpleType>
+ <!-- End SignedInfo -->
+ <!-- Start KeyInfo -->
+ <element name="KeyInfo" type="ds:KeyInfoType" />
+ <complexType mixed="true" name="KeyInfoType">
+  <choice maxOccurs="unbounded">
+   <element ref="ds:KeyName" />
+   <element ref="ds:KeyValue" />
+   <element ref="ds:RetrievalMethod" />
+   <element ref="ds:X509Data" />
+   <element ref="ds:PGPData" />
+   <element ref="ds:SPKIData" />
+   <element ref="ds:MgmtData" />
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (0,unbounded) namespaces -->
+  </choice>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="KeyName" type="string" />
+ <element name="MgmtData" type="string" />
+ <element name="KeyValue" type="ds:KeyValueType" />
+ <complexType mixed="true" name="KeyValueType">
+  <choice>
+   <element ref="ds:DSAKeyValue" />
+   <element ref="ds:RSAKeyValue" />
+   <any namespace="##other" processContents="lax" />
+  </choice>
+ </complexType>
+ <element name="RetrievalMethod" type="ds:RetrievalMethodType" />
+ <complexType name="RetrievalMethodType">
+  <sequence>
+   <element minOccurs="0" ref="ds:Transforms" />
+  </sequence>
+  <attribute name="URI" type="anyURI" />
+  <attribute name="Type" type="anyURI" use="optional" />
+ </complexType>
+ <!-- Start X509Data -->
+ <element name="X509Data" type="ds:X509DataType" />
+ <complexType name="X509DataType">
+  <sequence maxOccurs="unbounded">
+   <choice>
+    <element name="X509IssuerSerial" type="ds:X509IssuerSerialType" />
+    <element name="X509SKI" type="base64Binary" />
+    <element name="X509SubjectName" type="string" />
+    <element name="X509Certificate" type="base64Binary" />
+    <element name="X509CRL" type="base64Binary" />
+    <any namespace="##other" processContents="lax" />
+   </choice>
+  </sequence>
+ </complexType>
+ <complexType name="X509IssuerSerialType">
+  <sequence>
+   <element name="X509IssuerName" type="string" />
+   <element name="X509SerialNumber" type="integer" />
+  </sequence>
+ </complexType>
+ <!-- End X509Data -->
+ <!-- Begin PGPData -->
+ <element name="PGPData" type="ds:PGPDataType" />
+ <complexType name="PGPDataType">
+  <choice>
+   <sequence>
+    <element name="PGPKeyID" type="base64Binary" />
+    <element minOccurs="0" name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+   <sequence>
+    <element name="PGPKeyPacket" type="base64Binary" />
+    <any maxOccurs="unbounded" minOccurs="0" namespace="##other"
+     processContents="lax" />
+   </sequence>
+  </choice>
+ </complexType>
+ <!-- End PGPData -->
+ <!-- Begin SPKIData -->
+ <element name="SPKIData" type="ds:SPKIDataType" />
+ <complexType name="SPKIDataType">
+  <sequence maxOccurs="unbounded">
+   <element name="SPKISexp" type="base64Binary" />
+   <any minOccurs="0" namespace="##other" processContents="lax" />
+  </sequence>
+ </complexType>
+ <!-- End SPKIData -->
+ <!-- End KeyInfo -->
+ <!-- Start Object (Manifest, SignatureProperty) -->
+ <element name="Object" type="ds:ObjectType" />
+ <complexType mixed="true" name="ObjectType">
+  <sequence maxOccurs="unbounded" minOccurs="0">
+   <any namespace="##any" processContents="lax" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+  <attribute name="MimeType" type="string" use="optional" />
+  <attribute name="Encoding" type="anyURI" use="optional" />
+  <!-- add a grep facet -->
+ </complexType>
+ <element name="Manifest" type="ds:ManifestType" />
+ <complexType name="ManifestType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:Reference" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperties" type="ds:SignaturePropertiesType" />
+ <complexType name="SignaturePropertiesType">
+  <sequence>
+   <element maxOccurs="unbounded" ref="ds:SignatureProperty" />
+  </sequence>
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <element name="SignatureProperty" type="ds:SignaturePropertyType" />
+ <complexType mixed="true" name="SignaturePropertyType">
+  <choice maxOccurs="unbounded">
+   <any namespace="##other" processContents="lax" />
+   <!-- (1,1) elements from (1,unbounded) namespaces -->
+  </choice>
+  <attribute name="Target" type="anyURI" use="required" />
+  <attribute name="Id" type="ID" use="optional" />
+ </complexType>
+ <!-- End Object (Manifest, SignatureProperty) -->
+ <!-- Start Algorithm Parameters -->
+ <simpleType name="HMACOutputLengthType">
+  <restriction base="integer" />
+ </simpleType>
+ <!-- Start KeyValue Element-types -->
+ <element name="DSAKeyValue" type="ds:DSAKeyValueType" />
+ <complexType name="DSAKeyValueType">
+  <sequence>
+   <sequence minOccurs="0">
+    <element name="P" type="ds:CryptoBinary" />
+    <element name="Q" type="ds:CryptoBinary" />
+   </sequence>
+   <element minOccurs="0" name="G" type="ds:CryptoBinary" />
+   <element name="Y" type="ds:CryptoBinary" />
+   <element minOccurs="0" name="J" type="ds:CryptoBinary" />
+   <sequence minOccurs="0">
+    <element name="Seed" type="ds:CryptoBinary" />
+    <element name="PgenCounter" type="ds:CryptoBinary" />
+   </sequence>
+  </sequence>
+ </complexType>
+ <element name="RSAKeyValue" type="ds:RSAKeyValueType" />
+ <complexType name="RSAKeyValueType">
+  <sequence>
+   <element name="Modulus" type="ds:CryptoBinary" />
+   <element name="Exponent" type="ds:CryptoBinary" />
+  </sequence>
+ </complexType>
+ <!-- End KeyValue Element-types -->
+ <!-- End Signature -->
+</schema>
+
+
+<!-- Envelope Element -->
+ <xs:element name="Envelope">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Message" minOccurs="1" maxOccurs="1" />
+    <!-- set minOccurs to 1 to mandate signatures, 0 to have them optional -->
+    <xs:element ref="dsig:Signature" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
+
+
+ <!-- Envelope Element -->
+ <xs:element name="Envelope">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref="Message" minOccurs="1" maxOccurs="1" />
+    <!-- set minOccurs to 1 to mandate signatures, 0 to have them optional -->
+    <xs:element ref="dsig:Signature" minOccurs="0" maxOccurs="1" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
+
+
+<!-- Import the XML Digital Signature XSD -->
+ <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"
+  schemaLocation="xmldsig-core-schema.xsd" />
+
+
+C:\srif\Signature.cs
+
+xs:int
+
+Body
+
+public partial class Envelope {
+    
+    private Message messageField;
+    
+    private Body bodyField;
+    
+    /// <remarks/>
+    public Message Message {
+        get {
+            return this.messageField;
+        }
+        set {
+            this.messageField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public Body Body {
+        get {
+            return this.bodyField;
+        }
+        set {
+            this.bodyField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
+[System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=false)]
+public partial class Envelope {
+    
+    private Message messageField;
+    
+    private Body bodyField;
+    
+    /// <remarks/>
+    public Message Message {
+        get {
+            return this.messageField;
+        }
+        set {
+            this.messageField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public Body Body {
+        get {
+            return this.bodyField;
+        }
+        set {
+            this.bodyField = value;
+        }
+    }
+}
+
+Signature
+
+signatureField
+
+SignatureType
+
+stream.Write(new byte[] { 0x02 }, 0, 1);
+
+serialsise
+
+char* message = &messagein[1];
+
+lengthCounter
+
+TrackEndOfMessage
+
+DWORD TrackEndOfMessage(const char* received, int length)
+
++		controlBuffer	0x0034d2d0 "<?xml version="1.0" encoding="utf-16"?>
+<Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>
+    <Header>
+      <Version>
+        <MessageFormat>message-v0.1</MessageFormat>
+        <Data>data-v0.1</Data>
+        <Software>software-v1</Software>
+      </Version>
+      <Time>
+        <Current>2015-09-08T12:04:31.8457288+01:00</Current>
+        <TimeStatus>SYNCHRONISED</TimeStatus>
+        <Monotonic>1436175143</Monotonic>
+      </Time>
+      <SequenceNumber>0</SequenceNumber>
+      <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+      <LogicalSourceID>ICONIS-1</LogicalSourceID>
+      <SourceStatus>MASTER</SourceStatus>
+      <SourceLinkStatus>UP</SourceLinkStatus>
+      <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+      <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+    </Header>
+    <Body>
+      <Interlocking>
+        <UniqueID>UK/York/IXL/001</UniqueID>
+        <SSIID>0F</SSIID>
+        <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+        <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+      </Interlocking>
+    </Body>
+  </Message>
+</Envelope>"	char [8192]
+
+

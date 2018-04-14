@@ -1,0 +1,232 @@
+118 Burlington Road New Malden Surrey, KT3 4NR
+
+SendTextToWindow
+
+C:\Windows\MCSCORUN.INI
+
+inDataLength = recv(Socket, (char *)szHistory, Length, 0);
+
+dataLength
+
+(char *)&szHistory[startlocation]
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\CRCEncoder.dll
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig - Copy.xml
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+inDataLength = recv(Socket, (char *)&szHistory[startlocation], copy_of_length, 0))
+
+inDataLength
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+unexpected errors
+
+has been designed to meet the requirements for SIL2 software development as per EN 50128(2011)
+
+1.1	Security Considerations
+The protection mechanisms used, being a sequence number, timeout and XML signing, meet the EN50159 criteria of sequence number (7.3.1), timeout (7.3.3) and cryptographic techniques (7.3.8) and so, as depicted in the threat/defence matrix (7.4.2), provide protection against all seven threats.  Specifically, 
+?	the sequence number implemented in the ICONIS Interface module protects against repetition, re-sequencing, insertion and deletion,
+?	the timeout in the TCP Handler module protects against delay (out of date data),
+?	the XML signing protects against corruption and masquerade.
+XML signing is a type A1 security mechanism as described in EN50159 clause C2 and is therefore suitable for use in systems where unauthorised access cannot be excluded.
+The NVFB3 protocol is used for rail state information and control requests passed between the Safety Gateway and the SSL S-RIF.  This provides additional protection against six of the seven threats.
+
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+array<Byte>^msg = Text::Encoding::ASCII->GetBytes( data );
+
+This will encode the information into XML based on the XSD given in the Appendix of Ref [1].
+
+The executable runs on a DXP card within the Sapphire T48 chassis. This has its own design and verification process, please see ref 9.
+
+[ICONIS_CONNECTION]
+IconisTransmitTimePeriod=250
+IconisReceiveTimeout=10000
+IconisPortNumber=3400
+SourceUnitID=SRIF-1-Unit-1
+LogicalSourceID=SRIF-1
+SourceStatus=MASTER
+MessageFormat=message-v01 
+DataLink=data-v01
+SequenceStartNumber=10001
+
+[Interlockings]
+NumInterlockings=2
+Interlocking_00_SSIID=O4
+Interlocking_00_UniqueID=Keighley
+Interlocking_00_MCSID=19
+Interlocking_01_SSIID=21
+Interlocking_01_UniqueNVID=Horsforth
+Interlocking_01_MCSID=21
+
+;keighley nvfb3 config
+InterlockingControl_00_IconisAddress=2
+InterlockingControl_00_SRIFAddress=12
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=3
+InterlockingARS_00_SRIFAddress=13
+InterlockingARS_00_AppDomain=10
+InterlockingSignalMap_00_IconisAddress=5
+InterlockingSignalMap_00_SRIFAddress=15
+InterlockingSignalMap_00_AppDomain=10
+InterlockingIndications_00_IconisAddress=1
+InterlockingIndications_00_SRIFAddress=11
+InterlockingIndications_00_AppDomain=10
+InterlockingStatusByte_00_IconisAddress=4
+InterlockingStatusByte_00_SRIFAddress=14
+InterlockingStatusByte_00_AppDomain=10
+;horsforth nvfb3 config
+InterlockingControl_01_IconisAddress=22
+InterlockingControl_01_SRIFAddress=32
+InterlockingControl_01_AppDomain=10
+InterlockingARS_01_IconisAddress=23
+InterlockingARS_01_SRIFAddress=33
+InterlockingARS_01_AppDomain=10
+InterlockingSignalMap_01_IconisAddress=25
+InterlockingSignalMap_01_SRIFAddress=35
+InterlockingSignalMap_01_AppDomain=10
+InterlockingIndications_01_IconisAddress=21
+InterlockingIndications_01_SRIFAddress=31
+InterlockingIndications_01_AppDomain=10
+InterlockingStatusByte_01_IconisAddress=24
+InterlockingStatusByte_01_SRIFAddress=34
+InterlockingStatusByte_01_AppDomain=10
+
+[NVFB3]
+TxPeriod=2500
+DDelay=10000
+FreshTolerance=10000
+AppDomain=10
+IconisAddress=6
+SRIFAddress=16
+DataVer=1
+
+[MCS_CE]
+Name=MCS-CE-1
+IPAddress=127.0.0.1
+PortNumber=999
+ActivityTimeout=40000
+
+[LOGGER]
+; LOGMASK_TCP         0x00000001
+; LOGMASK_MAIN        0x00000002
+; LOGMASK_SIGNING     0x00000004
+; LOGMASK_ICONISIF    0x00000008
+; LOGMASK_MCSIF       0x00000010
+; LOGMASK_MCSPS9      0x00000020
+; LOGMASK_NVFB3       0x00000040
+; LOGMASK_SRIFMAIN    0x00000080
+LogMask=ffffff00
+LogPath=C:\SRIF
+
+
+FreshTolerance
+
+DataVer
+
+https://tinyproxy.github.io/
+
+child_main_loop
+
+SERVER_COUNT_LOCK
+
+SERVER_INC
+
+child_listening_sockets
+
+Socket Error 10035
+
+Socket Error
+
+Received a chunk of size
+
+WSAEWOULDBLOCK
+
+LOGSTRINT("Socket Error", , ALWAYS);
+
+Failed To Send Message
+
+https://codility.com/programmers/
+
+All software is designed, developed and tested in accordance to GE software development process and all software will be validated to the SSL TMS S-RIF Prototype Verification and Validation Plan (ref 7). The GE Software Process meets EN 50128, SIL 2 safety requirements.
+
+I would expect to see reference to the GE V&V plan here instead
+
+SSL TMS S-RIF Prototype Verification and Validation Plan 
+
+int possibleStart[2]
+
+WORD FindStartOfNextPosition(char *input)
+
+FindStartOfNextPosition(input)
+
+szHistory
+
+ possibleStart[i]
+
+possibleStart[i]
+
+INT
+
+FindStartOfNextPosition(szHistory);
+
+recv(Socket, (char *)szHistory, LENGTH_OF_BUFFER, 0);
+
+receivedError
+
+ LOGSTRINT("*** Error with the received Length ***", Length, ALWAYS);
+                LOGGER("Test 1(II) Test1(III) Unknown or Error with Receive length", "", LOGMASK_TCP);
+
+                //dump data in the receive buffer.
+                INT possibleStartLocation = FindStartOfNextPosition(szHistory) - 4;
+                if((possibleStartLocation > -1) && (possibleStartLocation != 0))
+                {
+                    recv(Socket, (char *)szHistory, possibleStartLocation, 0);  // remove only up to the next plausible start 
+                }
+                else 
+                {
+                    //else get rid of everything in there
+                    recv(Socket, (char *)szHistory, LENGTH_OF_BUFFER, 0);
+                }
+
+                ZeroMemory(szHistory, LENGTH_OF_BUFFER);
+
+ClearReceivingBuffer
+
+recv(Socket, (char *)szHistory, LENGTH_OF_BUFFER, 0);
+
+ ClearReceivingBuffer();
+
+SOCKET Socket
+
+  LOGSTRINT("*** Error with the received Length ***", Length, ALWAYS);
+     LOGGER("Test 1(II) Test1(III) Unknown or Error with Receive length", "", LOGMASK_TCP);
+
+ SendTextToWindow("The connection has been Closed by Client", ALWAYS);
+
+3.11, 3.10
+
+3
+
+3.3
+
+A complete list of requirements for the whole system can be found in ref [2].This document is only concerned with contributing to the system communication requirement as specified in ref [1].
+The following table is a list of the requirements that the design contribute to and the specific sections:
+Requirement	Sections Covered
+RIF_4.2_002	3.5 3.7 3.3 RIF_4.2_004	3.3 RIF_4.7_001	3.3 and 3.5 RIF_4.7_002.	3.12 and 3.11 RIF 5.2_007	3.11 RIF 11.4_009	3.11 and 3.10 
+
+

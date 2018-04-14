@@ -1,0 +1,275 @@
+<Header>
+	<Version>
+	<MessageFormat>message-v0.1</MessageFormat>
+	<Data>data-v0.1</Data>
+	<Software>software-v1</Software>
+	</Version>
+	<Time>
+	<Current>2015-01-18T14:54:23.423Z</Current>
+	<TimeStatus>SYNCHRONISED</TimeStatus>
+	<MonoTonic>2502911</MonoTonic>
+	</Time>
+	<SequenceNumber>2</SequenceNumber>
+	<SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+	<LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>Master</SourceStatus>
+	<SourceLinkStatus>UP</SourceLinkStatus>
+	<DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+	<LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+	</Header>
+
+		input	"<Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><MonoTonic>2502911</MonoTonic></Time><SequenceNumber>2</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>Master</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header>"	string
+
+
+SourceStatus
+
+		input	"<Header>\n    <Version>\n        <MessageFormat>message-v0.1</MessageFormat>\n        <Data>data-v0.1</Data>\n        <Software>software-v1</Software>\n    </Version>\n    <Time>\n        <Current>2015-01-18T14:54:23.423Z</Current>\n        <TimeStatus>SYNCHRONISED</TimeStatus>\n        <MonoTonic>3410821</MonoTonic>\n    </Time>\n    <SequenceNumber>4</SequenceNumber>\n    <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n    <LogicalSourceID>SRIF-1</LogicalSourceID>\n    <SourceStatus>MASTER</SourceStatus>\n    <SourceLinkStatus>UP</SourceLinkStatus>\n    <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n    <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n</Head\0\0\0\0"	string
+
+
++		outBuffer	0x03f1d8f8 "<Header>
+    <Version>
+        <MessageFormat>message-v0.1</MessageFormat>
+        <Data>data-v0.1</Data>
+        <Software>software-v1</Software>
+    </Version>
+    <Time>
+        <Current>2015-01-18T14:54:23.423Z</Current>
+        <TimeStatus>SYNCHRONISED</TimeStatus>
+        <MonoTonic>3754569</MonoTonic>
+    </Time>
+    <SequenceNumber>1379</SequenceNumber>
+    <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>SRIF-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>ICONIS-1</LogicalDestinationID>
+</Header>
+"	char *
+
+
+int previousTime = 0;
+
+ // Verify the signature of an XML file against an asymmetric 
+    // algorithm and return the result.
+    public static Boolean VerifyXml(XmlDocument Doc, RSA Key)
+    {
+        // Check arguments.
+        if (Doc == null)
+            throw new ArgumentException("Doc");
+        if (Key == null)
+            throw new ArgumentException("Key");
+
+        // Create a new SignedXml object and pass it
+        // the XML document class.
+        SignedXml signedXml = new SignedXml(Doc);
+
+        // Find the "Signature" node and create a new
+        // XmlNodeList object.
+        XmlNodeList nodeList = Doc.GetElementsByTagName("Signature");
+
+        // Throw an exception if no signature was found.
+        if (nodeList.Count <= 0)
+        {
+            throw new CryptographicException("Verification failed: No Signature was found in the document.");
+        }
+
+        // This example only supports one signature for
+        // the entire XML document.  Throw an exception 
+        // if more than one signature was found.
+        if (nodeList.Count >= 2)
+        {
+            throw new CryptographicException("Verification failed: More that one signature was found for the document.");
+        }
+
+        // Load the first <signature> node.  
+        signedXml.LoadXml((XmlElement)nodeList[0]);
+
+        // Check the signature and return the result.
+        return signedXml.CheckSignature(Key);
+    }
+
+using System;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Xml;
+using System.Xml;
+
+  // Sign an XML file.  
+        // This document cannot be verified unless the verifying  
+        // code has the key with which it was signed. 
+        public static void SignXml(XmlDocument xmlDoc, RSA rsaKey)
+        {
+            // Check arguments. 
+            if (xmlDoc == null)
+                throw new ArgumentException("xmlDoc");
+            if (rsaKey == null)
+                throw new ArgumentException("Key");
+
+            // Create a SignedXml object.
+            SignedXml signedXml = new SignedXml(xmlDoc);
+
+            // Add the key to the SignedXml document.
+            signedXml.SigningKey = rsaKey;
+
+            // Create a reference to be signed.
+            Reference reference = new Reference();
+            reference.Uri = "";
+
+            // Add an enveloped transformation to the reference.
+            XmlDsigEnvelopedSignatureTransform env = new XmlDsigEnvelopedSignatureTransform();
+            reference.AddTransform(env);
+
+            // Add the reference to the SignedXml object.
+            signedXml.AddReference(reference);
+
+            // Compute the signature.
+            signedXml.ComputeSignature();
+
+            // Get the XML representation of the signature and save 
+            // it to an XmlElement object.
+            XmlElement xmlDigitalSignature = signedXml.GetXml();
+
+            // Append the element to the XML document.
+            xmlDoc.DocumentElement.AppendChild(xmlDoc.ImportNode(xmlDigitalSignature, true));
+
+        }
+
+CspParameters cspParams = new CspParameters();
+
+ RSACryptoServiceProvider rsaKey =
+
+  cspParams.KeyContainerName = "XML_DSIG_RSA_KEY";
+
+                // Create a new RSA signing key and save it in the container. 
+                RSACryptoServiceProvider rsaKey = new RSACryptoServiceProvider(cspParams);
+
+
+ XmlDocument xmlDoc
+
+XmlSerializer
+
+message.Body.DiagnosticAlarms
+
+message.Body.GeneratedAlarms
+
+message.Body.Interlocking
+
+message.Body.EmergencyAlarms
+
+message.Body.TD
+
+		input	"<Envelope>\n    <!--comment-->\n    <Message>\n        <Header>\n            <Version>\n                <MessageFormat>message-v0.1</MessageFormat>\n                <Data>data-v0.1</Data>\n                <Software>software-v1</Software>\n            </Version>\n            <Time>\n                <Current>2015-01-18T14:54:23.423Z</Current>\n                <TimeStatus>SYNCHRONISED</TimeStatus>\n                <MonoTonic>950949062</MonoTonic>\n            </Time>\n            <SequenceNumber>197</SequenceNumber>\n            <SourceUnitID>SRIF-1-Unit-A</SourceUnitID>\n            <LogicalSourceID>SRIF-1</LogicalSourceID>\n            <SourceStatus>MASTER</SourceStatus>\n            <SourceLinkStatus>UP</SourceLinkStatus>\n            <DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID>\n            <LogicalDestinationID>ICONIS-1</LogicalDestinationID>\n        </Header>\n        <Body>\n            <DiagnosticAlarms>\n                <Link>\n                    <From>SRIF-1</From>\n                    <To>IXL-1</To>\n                    <Status>UP</Status>\n                </Link>\n            </DiagnosticAlarms>\n            <GeneratedAlarms>\n                <OSTO>\n                    <Track1>T123</Track1>\n                    <Track2>T124</Track2>\n                </OSTO>\n                <GenericAlarm>\n                    <GenericAlarm>Free Text Alarm</GenericAlarm>\n                </GenericAlarm>\n            </GeneratedAlarms>\n            <Interlocking>\n    \0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"	string
+
+
+readsize
+
+ buffer[3] = length&0xFF;
+    buffer[2] = (length&0xFF00)>>8;
+    buffer[1] = (length&0xFF0000)>>16;
+    buffer[0] = (length&0xFF000000)>>24;
+
+buffer
+
+littleEdianToBigEndia
+
+  timer.Start();
+            thread.Start();
+
+  client = new TcpClient("192.168.1.80", 3400);
+            
+            stream = client.GetStream();
+
+RUNNING
+
+  PopulateHeaderInformation(&message.Header);
+
+DWORD PopulateHeaderInformation(Header_t *header, char *DestinationUnitID, char *LogicalDestinationID)
+
+SourceUnitID
+
+ICONIS-1-Unit-A
+
+ICONIS-1
+
+LogicalSourceID
+
+LogicalSourceIDTesxtBox
+
+SourceUnitIDTextBox
+
+DestinationUnitIDTextBox
+
+DestinationLogicalIDTextBox
+
+BeginInvoke(new WriteToScreenDelegate(writeToScreen), new object []{text});
+
+WriteToReceiveInformation
+
+env
+
+WriteToReceivedInfo
+
+DestinationUnitIDTextBox
+
+DestinationLogicalIDTextBox
+
+WriteToReceivedInfo
+
+SignXml
+
+StartSignXML
+
+XMLSigning
+
+XmlDocument
+
+StringWriter stringWriter = new StringWriter();
+XmlTextWriter xmlTextWriter = new XmlTextWriter(stringWriter);
+
+xmlDoc.WriteTo(xmlTextWriter);
+
+return stringWriter.ToString();
+
+GetText
+
+		result	"<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Message>\r\n    <Header>\r\n      <Version>\r\n        <MessageFormat>message-v0.1</MessageFormat>\r\n        <Data>data-v0.1</Data>\r\n        <Software>software-v1</Software>\r\n      </Version>\r\n      <Time>\r\n        <Current>2015-09-14T16:48:16.1037981+01:00</Current>\r\n        <TimeStatus>SYNCHRONISED</TimeStatus>\r\n        <Monotonic>24029801</Monotonic>\r\n      </Time>\r\n      <SequenceNumber>0</SequenceNumber>\r\n      <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>\r\n      <LogicalSourceID>ICONIS-1</LogicalSourceID>\r\n      <SourceStatus>MASTER</SourceStatus>\r\n      <SourceLinkStatus>UP</SourceLinkStatus>\r\n      <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>\r\n      <LogicalDestinationID>SRIF-1</LogicalDestinationID>\r\n    </Header>\r\n    <Body>\r\n      <Interlocking>\r\n        <UniqueID>UK/York/IXL/001</UniqueID>\r\n        <SSIID>0F</SSIID>\r\n        <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>\r\n        <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>\r\n      </Interlocking>\r\n    </Body>\r\n  </Message>\r\n</Envelope>"	string
+
+
+ StringWriter stringWriter = new StringWriter();
+            XmlTextWriter xmlTextWriter = new XmlTextWriter(stringWriter);
+
+            xmlDoc.WriteTo(xmlTextWriter);
+
+stringWriter.ToString();
+
+XmlSerializer ser = new XmlSerializer(typeof(Envelope));
+            StringWriter writer = new StringWriter();
+            ser.Serialize(writer, envolope);
+
+  XMLSigning xmlSigner = new XMLSigning(result);
+            xmlSigner.StartSignXML();
+            result = xmlSigner.GetText();
+
+result = writer.ToString();
+
+SignTheXml
+
+OmitXmlDeclaration 
+
+var settings = new XmlWriterSettings();
+
+XmlWriterSettings
+
+ using (var stream = new StringWriter())
+        using (var writer = XmlWriter.Create(stream, settings))
+        {
+            serializer.Serialize(writer, value, emptyNamepsaces);
+            return stream.ToString();
+        }
+
+StringWriter writer = new StringWriter();
+
+SignTheXml
+
+		result	"<Envelope><Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-09-15T09:18:28.341691+01:00</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>83441175</Monotonic></Time><SequenceNumber>0</SequenceNumber><SourceUnitID>ICONIS-1-Unit-A</SourceUnitID><LogicalSourceID>ICONIS-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID><LogicalDestinationID>SRIF-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests><ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus></Interlocking></Body></Message><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>YUUqU2hZPfGiJMXQsr3mbqIPzCg=</DigestValue></Reference></SignedInfo><SignatureValue>dt6T4cZQ4/nYBzDMINaVK3H5HhtoNsXj+Fqs7/ufPg1irVV3PklUthMV/33rlXVKQs2pjQhWSL90Q3+LFZjCBCrGANGK3BYkFPvxXLKPHYS6X+7MBPZKXg0kfqZ/9F1vuC2SdX/3Juq7owHHHdy7RMPoIsAZxHKsJS84ywD/22c=</SignatureValue></Signature></Envelope>"	string
+
+

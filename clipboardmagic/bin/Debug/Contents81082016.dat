@@ -1,0 +1,648 @@
+C:\CAJTMSFault
+
+/home/daniel.perrett/workspaceneon/Axis2WSTest/WebContent/JTMSDiagnosticsFeed.old.wsdl
+
+/home/daniel.perrett/workspaceneon/Axis2WSTest/WebContent/wsdl/JTMSDiagnosticsFeedold.wsdl
+
+C:\CAJTMSFault\JTMSDiagnosticsFeed.wsdl
+
+/home/daniel.perrett/development/CAJTMSFault/JTMSDiagnosticsFeed.wsdl
+
+http://www.bbc.co.uk/news/business-36854293
+
+package CASoapClient;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}UserName"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}UserPassword"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}StartTimestamp"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EndTimestamp"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "userName",
+    "userPassword",
+    "startTimestamp",
+    "endTimestamp"
+})
+@XmlRootElement(name = "DiagnosticDataLogin")
+public class DiagnosticDataLogin {
+
+    @XmlElement(name = "UserName", required = true)
+    protected String userName;
+    @XmlElement(name = "UserPassword", required = true)
+    protected String userPassword;
+    @XmlElement(name = "StartTimestamp", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar startTimestamp;
+    @XmlElement(name = "EndTimestamp", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar endTimestamp;
+
+    /**
+     * Gets the value of the userName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
+     * Sets the value of the userName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setUserName(String value) {
+        this.userName = value;
+    }
+
+    /**
+     * Gets the value of the userPassword property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    /**
+     * Sets the value of the userPassword property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setUserPassword(String value) {
+        this.userPassword = value;
+    }
+
+    /**
+     * Gets the value of the startTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getStartTimestamp() {
+        return startTimestamp;
+    }
+
+    /**
+     * Sets the value of the startTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setStartTimestamp(XMLGregorianCalendar value) {
+        this.startTimestamp = value;
+    }
+
+    /**
+     * Gets the value of the endTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEndTimestamp() {
+        return endTimestamp;
+    }
+
+    /**
+     * Sets the value of the endTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEndTimestamp(XMLGregorianCalendar value) {
+        this.endTimestamp = value;
+    }
+
+}
+
+package mockJTMSDiagnosticFeedBinding;
+
+public class DiagnosticDataLogin {
+
+}
+
+
+package CASoapClient;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}DiagnosticData" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "diagnosticData"
+})
+@XmlRootElement(name = "DiagnosticDataArray")
+public class DiagnosticDataArray {
+
+    @XmlElement(name = "DiagnosticData")
+    protected List<DiagnosticData> diagnosticData;
+
+    /**
+     * Gets the value of the diagnosticData property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the diagnosticData property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDiagnosticData().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DiagnosticData }
+     * 
+     * 
+     */
+    public List<DiagnosticData> getDiagnosticData() {
+        if (diagnosticData == null) {
+            diagnosticData = new ArrayList<DiagnosticData>();
+        }
+        return this.diagnosticData;
+    }
+
+}
+
+package mockJTMSDiagnosticFeedBinding;
+
+public class DiagnosticDataArray {
+
+}
+
+
+package CASoapClient;
+
+import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultID"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EquipmentType"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EquipmentID"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EquipmentSCN"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultType"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultSubType"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultDescription"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}StartedTimestamp"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}ClearedTimestamp" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "faultID",
+    "equipmentType",
+    "equipmentID",
+    "equipmentSCN",
+    "faultType",
+    "faultSubType",
+    "faultDescription",
+    "startedTimestamp",
+    "clearedTimestamp"
+})
+@XmlRootElement(name = "DiagnosticData")
+public class DiagnosticData {
+
+    @XmlElement(name = "FaultID", required = true)
+    @XmlSchemaType(name = "unsignedLong")
+    protected BigInteger faultID;
+    @XmlElement(name = "EquipmentType", required = true)
+    protected String equipmentType;
+    @XmlElement(name = "EquipmentID")
+    @XmlSchemaType(name = "unsignedInt")
+    protected long equipmentID;
+    @XmlElement(name = "EquipmentSCN", required = true)
+    protected String equipmentSCN;
+    @XmlElement(name = "FaultType", required = true)
+    protected String faultType;
+    @XmlElement(name = "FaultSubType")
+    @XmlSchemaType(name = "unsignedInt")
+    protected long faultSubType;
+    @XmlElement(name = "FaultDescription", required = true)
+    protected String faultDescription;
+    @XmlElement(name = "StartedTimestamp", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar startedTimestamp;
+    @XmlElement(name = "ClearedTimestamp")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar clearedTimestamp;
+
+    /**
+     * Gets the value of the faultID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getFaultID() {
+        return faultID;
+    }
+
+    /**
+     * Sets the value of the faultID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setFaultID(BigInteger value) {
+        this.faultID = value;
+    }
+
+    /**
+     * Gets the value of the equipmentType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEquipmentType() {
+        return equipmentType;
+    }
+
+    /**
+     * Sets the value of the equipmentType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEquipmentType(String value) {
+        this.equipmentType = value;
+    }
+
+    /**
+     * Gets the value of the equipmentID property.
+     * 
+     */
+    public long getEquipmentID() {
+        return equipmentID;
+    }
+
+    /**
+     * Sets the value of the equipmentID property.
+     * 
+     */
+    public void setEquipmentID(long value) {
+        this.equipmentID = value;
+    }
+
+    /**
+     * Gets the value of the equipmentSCN property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEquipmentSCN() {
+        return equipmentSCN;
+    }
+
+    /**
+     * Sets the value of the equipmentSCN property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEquipmentSCN(String value) {
+        this.equipmentSCN = value;
+    }
+
+    /**
+     * Gets the value of the faultType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaultType() {
+        return faultType;
+    }
+
+    /**
+     * Sets the value of the faultType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaultType(String value) {
+        this.faultType = value;
+    }
+
+    /**
+     * Gets the value of the faultSubType property.
+     * 
+     */
+    public long getFaultSubType() {
+        return faultSubType;
+    }
+
+    /**
+     * Sets the value of the faultSubType property.
+     * 
+     */
+    public void setFaultSubType(long value) {
+        this.faultSubType = value;
+    }
+
+    /**
+     * Gets the value of the faultDescription property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaultDescription() {
+        return faultDescription;
+    }
+
+    /**
+     * Sets the value of the faultDescription property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaultDescription(String value) {
+        this.faultDescription = value;
+    }
+
+    /**
+     * Gets the value of the startedTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getStartedTimestamp() {
+        return startedTimestamp;
+    }
+
+    /**
+     * Sets the value of the startedTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setStartedTimestamp(XMLGregorianCalendar value) {
+        this.startedTimestamp = value;
+    }
+
+    /**
+     * Gets the value of the clearedTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getClearedTimestamp() {
+        return clearedTimestamp;
+    }
+
+    /**
+     * Sets the value of the clearedTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setClearedTimestamp(XMLGregorianCalendar value) {
+        this.clearedTimestamp = value;
+    }
+
+}
+
+package mockJTMSDiagnosticFeedBinding;
+
+public class DiagnosticData {
+
+}
+
+  public DiagnosticDataArray getDiagnosticData(
+        @WebParam(name = "DiagnosticDataLogin", targetNamespace = "http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding", partName = "DiagnosticDataLogin")
+        DiagnosticDataLogin diagnosticDataLogin);
+
+}
+
+public interface JTMSDiagnosticsFeedPortType {
+
+
+JTMSDiagnosticsFeedPortType
+
+ public DiagnosticDataArray getDiagnosticData(
+        @WebParam(name = "DiagnosticDataLogin", targetNamespace = "http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding", partName = "DiagnosticDataLogin")
+        DiagnosticDataLogin diagnosticDataLogin);
+
+}
+
+JTMSDiagnosticFeedBinding
+
+The Drakewell data (joinery time for link) should be accompanied by the number of matches seen so that low number of matches can be ignored as possibly not representative.
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150023_UTMS_Mersey_Gateway_HR/trunk/05_System_Test_Specification/Template_for_Test_Report_Mersey_Gateway_Project_V01.docx
+
+C:10000	M	ImCity must automatically connect to the Clearview system.
+
+C:10000
+
+C:10010
+
+. Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online.
+
+3.3.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the xmpp server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the xmpp server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online.
+Actual result	
+Pass / Fail	
+
+
+1.1.1	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the xmpp server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the xmpp server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online.
+Actual result	
+Pass / Fail	
+
+
+
+       try
+
+ C10050
+
+A fault shall be automatically cleared in ImCity when the equipment is no longer reported as faulty.
+
+ImCity must log the lack of ability to connect to the Clearview system as a sub-system fault (just once per occasion please).
+
+Loss of connection to the Clearview system shall be made apparent to an operator within 5 minutes.
+
+XMPP 
+
+Extensible Messaging and Presence Protocol
+
+tenvis
+
+C:12000	M	ImCity must automatically connect to the CA system.
+
+C:12010	M	ImCity must log the lack of ability to connect to the CA system as a sub-system fault (just once per occasion please).
+
+
+
+C:12020	M	Loss of connection to the CA system shall be made apparent to an operator within 5 minutes.
+
+C:11040	M	It must be possible to display faults against specific camera (icons).
+
+C:11050	M	A specific fault is to be identified for cameras suspected as being out of alignment.
+
+C:12060	M	A fault shall be automatically cleared in ImCity when the equipment is no longer reported as faulty.
+
+C:12000
+
+C:12010
+
+C:12020
+
+C:11040
+
+4.1.2	TC002
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	After a period of running turn of the SOAP UI server. The adapter is polling every minute, this will fail and an error will get logged. After a couple of minute turn back on the SOAP UI.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+
+C:11050
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+CAJTMS.merseygateway.co.uk
+

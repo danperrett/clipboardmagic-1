@@ -1,0 +1,79 @@
+Arrecife Lanzarote - London Stansted
+
+Date:	25 Aug 2014
+Leaves:	Arrecife Lanzarote 07:25
+Leaves:	London Stansted 11:30
+Airline	Ryanair
+Flight number	FR8286
+
+London Stansted - Arrecife Lanzarote
+
+Dates	15 Aug 2014
+Leaves:	London Stansted 12:10
+Arrives:	Arrecife Lanzarote 16:25
+Airline	Ryanair
+Flight number	FR8288
+Lcf
+
+Galeon Playa Costa Teguise, Lanzarote, Canaries 
+
+C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\xsd.exe
+
+$(ProjectDir)Schema\ScriptSchema.xsd  /c /n:Anite.Sequencer  /out:$(ProjectDir)Schema
+
+L3PPipeMessageHandler
+
+
+
+
+L3PPipeMessageHandler
+
+L3PPipeMessageProcess
+
+m_EarlyL3MessageThread
+
+ProcessEarlyL3Message
+
+finish Scheduling elements
+
+I believe Colin would like to hand this over to me.
+
+HandleUnexpectedEventV2
+
+95.172.225.192
+
+L3PPipeMessageHandler
+
+HandleUnexpectedEventV2
+
+\\myanite\telecoms\ODCShare\SAS\18 - Scripts\11 - Projects\03 - SAS UL message handling\SAS Enhancement - UL Message Handling_v[latest].docx
+
+58405
+
+m_Ignore_Event_type
+
+                UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+
+
+UtranGeranEventObtained2Param
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", false);
+                        reportToRTT = "IGNORE - " + message.Trim();
+                        LogMessageToRTT(reportToRTT, false);
+                        SASDebugLogger.InfoLog("UtranGeran: IGNORING Unexpected Event Message: " + message.Trim());
+                    }
+                    else
+                    {
+                        // When this function is called before the WaitFor processing don't terminate the script if there is no match
+                        // When this function is called as default processing do terminate the script if there is no match
+                        if (_TerminateTheScript)
+                        {
+                            SASDebugLogger.InfoLog("UtranGeran: Unexpected Event Message: " + message.Trim());
+                            UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+                        }
+                    }
+
+Unexpected
+

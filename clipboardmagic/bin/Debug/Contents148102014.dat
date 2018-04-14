@@ -1,0 +1,70 @@
+Hashtable
+
+Hashtable hashtable = new Hashtable();
+
+using System;
+using System.Collections;
+
+variabletable
+
+    if (vars != null)
+                {
+                    BEGINInlineSubScriptCmdData begin =  progData.ProgrammingCmdData as BEGINInlineSubScriptCmdData;
+                    if (begin != null)
+                    {
+                        vars.SetVariableByName(begin.SubScriptCmdResult.VariableName, begin.SubScriptCmdResult.InitialValue);
+                    }     
+                }
+
+BEGINInlineSubScriptCmdData
+
+beginSubscript
+
+ ScriptEngine.BeginInlineSubScript();
+
+beginSubscript
+
+ScriptEngine.EndInlineSubScript();
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.xsd
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\ScriptSchema.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0\LTE Sequencer\Code\SequencerGUI\Schema\Conversions\ConvertFrom_V15_3_to_V15_4.cs
+
+m_Trunk_Converter_Info.Converters);
+
+m_Trunk_Converter_Info.Versions.Add("15.3");
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleELSECommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleELSEIFCommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleENDIFCommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ElementDataHandlers\ProgrammingCommands\HandleIFCommand.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\ExpressionForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\ExpressionForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\ExpressionForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IEVariableForm.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IFCondition.Designer.cs
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IFCondition.resx
+
+C:\Development\SASSandboxes\SAS-Sequencer-SAS47.0-C\LTE Sequencer\Code\SequencerGUI\ScriptForms\IFCondition.cs
+

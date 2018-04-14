@@ -1,0 +1,232 @@
+ 10.164.114.181
+
+SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter"
+
+C:\Logs\Adapters\JourneyTimeAdapter
+
+error MSB8013: This project doesn't contain the Configuration and Platform combination of Debug|Win32.
+
+32269
+
+C:\Users\Daniel.Perrett\Desktop\JourneyTimeAdapter\JourneyTimeAdapter.dll
+
+SubscriberService/SubscriberWebService/Core/LocationItem.cs
+
+SubscriberService/SubscriberWebService/SubscriberWebService.csproj
+
+\Core\Adapters\JourneyTimeAdapter\Config
+
+JourneyTimeAdapter_x64.reg
+
+JourneyTimeAdapter_x64.reg 
+
+SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter"
+
+tl_anpr_calculation
+
+tl_anpr_configuration
+
+tl_anpr_lanes
+
+cctv_lane_configuration
+
+TL_ANPR_ALGORITHM_TYPEID
+
+cctv_lane_configuration
+
+cctv_anpr_vrn_dynamic
+
+ASPlugin
+
+CCTV_ANPR_VRN_DYNAMIC 
+
+DATABASE_VIEW_NAME
+
+addSubscription
+
+ASManager
+
+hTimer
+
+http://wiki.imtech.uk.com/pages/viewpage.action?spaceKey=CUST&title=ImCity+FAQ
+
+http://www.bbc.co.uk/news/business/market_data/currency/11/12/intraday.stm
+
+ImCity JourneyTime Adapter in a nutshell!.
+
+Contents
+ImCity JourneyTime Adapter in a nutshell!.	1
+Introduction	1
+Building	1
+Deployment	1
+How it Works?	2
+
+
+
+Introduction
+	The Journey time adapter is a complicated adapter written in C++ Win32, its currently only been updated to be built within a VS2005 project, although updating to VS2010 is possible and has been tried with some success it left a bad side effect in the environment that was un-recoverable from.
+The Journey time adapter is a dll that plugs into the AdapterService.
+Building
+This is best done using the auto-build procedure which is available in Secure\Source\Autobuild as described in the ImCity installation document.
+If needed the individual projects for the Journey time adapter can be built using VS2005 they?re:
+Project	Internal dependencies	External dependencies
+AdapterService	Utmcclient.lib
+Cutldata.lib
+moservices.lib
+cutlbase.lib	Boost_1_4_2
+JourneyTimeAdapter	Cutldata.lib
+Cutlasbase.lib	Boost_1_4_2
+
+The individual project UTMCCLIENT, CUTLDATA, MOSERVICES and CUTLASBASE libraries need to be built first and any dependents (mainly OmniOrb) they have will have to be resolved but that?s outside the scope of this document.
+Deployment
+So long as you the CDBClient service set up in your registry location you should be able to deploy the JourneyTimeAdapter on your
+There is a configuration directory in $(SOURCE) \Core\Adapters\JourneyTimeAdapter\Config 
+Which contains:
+              JourneyTimeAdapter.reg
+	JourneyTimeAdapter_x64.reg 
+The JourneyTimeAdapter_x64.reg is the only one which is relevant for us nowadays as it installs the 32bit reg-entries into Wow6432Node. (for now).
+?	Adjust the JourneyTimeAdapter_x64.reg as to how you need it directories, logs etc.
+?	Double click on JourneyTimeAdaoter_x64.reg
+?	Ensure that the registration entries go to the right place.
+?	Manually add the Service now to the service list by running, as Administrator, SC create JourneyTimeAdapter binpath= "C:\JourneyTimeAdapter\AdapterService -n JourneyTimeAdapter".
+?	Check that the service is in the service list and start up.
+How it Works?
+      In a simplistic description it depends on vehicle registration information being put into the table CCTV_ANPR_VRN_DYNAMIC the average for each vehicle on each route is then calculated and then published to table TL_ANPR_DYNAMIC. 
+This is of course much more complicated than this.
+In order for this to work it depends on several tables in the database:
+Database Table	Reason
+TL_DEFINITION	Tl system code
+tl_anpr_calculation	Entry period, exit period, algorithm type, publish freq.
+tl_anpr_configuration	Link id and length
+tl_anpr_lanes	Link entry or exit
+cctv_lane_configuration	Lane numbers, vehicle direction
+cctv_anpr_vrn_dynamic	Vehicle registration captured by the ANPR
+TL_ANPR_ALGORITHM_TYPEID	Algorithm used
+TL_ANPR_DYNAMIC	Publish result too.
+
+The JourneyTimeAdapter dll depends on event generated when an insert in the cctv_anpr_vrn_dynamic table the event for these happen through the adapter service the main point of entry to the adapter service is through a defined interface class called ?ASPlugin?. The main running entry point is called ?OnEvent? 
+Initlaisation to the CCTV_ANPR_VRN_DYNAMIC database table is the one of the first operation the JourneyTimeAdapter code has to do and that?s done through a call back function ?addSubscription? which is extended to the JTA through the ?ASManger? interface class.
+The JTA will periodically publish result to TL_ANPR_DYNAMIC table, if results available, based on a 5s timer.
+The general running of the code is best described with a couple of flow diagrams. It is a lot more complicated than described in here and for more details the reader should go study the code.
+
+ 
+Figure 1 OnEvent Process
+ 
+
+Figure 2 Publish Event
+
+
+\\10.164.114.30\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\GZipEncoder\GZipMessageEncoderFactory.cs
+
+SubscriberService/GZipEncoder/GZipMessageEncoderFactory.cs
+
+ SoapUI Tests/SubscriberService-soapui-project.xml
+
+\\10.164.114.30\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+error MSB8013: This project doesn't contain the Configuration and Platform combination of Debug|Win32.
+
+omniORB420_rt.lib
+
+420
+
+omniORB413_rt.lib
+
+lib\x86_win32
+
+omnithread
+
+libboost_date_time-vc100-mt-1_59.lib
+
+C:\boost_1_59_0\lib32-msvc-10.0
+
+CutlSqlExceptions::addError
+
+C:\Secure\SourceNew\workarea\Lib_VS2010_x86
+
+C:\Secure\SourceNew\workarea\Release_VS2010_x86
+
+C:\Secure\SourceNew\workarea\Lib_VS2010_x86
+
+C:\Secure\SourceNew\workarea\Release_VS2010_x86
+
+C:\Secure\SourceNew\workarea\Lib_VS2010_x86
+
+C:\Secure\SourceNew\workarea\Release_VS2010_x86\CutlData
+
+CutlSqlExceptions
+
+ error LNK2001
+
+C:\Secure\SourceNew\workarea\Lib_VS2010_x86
+
+C:\Secure\SourceNew\workarea\Release_VS2010_x86\CutlData\CutlData.lib
+
+C:\Secure\SourceNew\workarea\Release_VS2010_x86\CutlasBase\CutlasBase.lib
+
+C:\Secure\SourceNew\workarea\Release_VS2010_x86\CutlData\CutlData.lib
+
+C:\Secure\SourceNew\Core\Toolkits\UTMCClient
+
+C:\Secure\SourceNew\Core\Toolkits\UTMCClient.sln
+
+C:\Secure\SourceLatest\Core\Toolkits\UTMCClient
+
+C:\Secure\SourceLatest\Core\Toolkits\UTMCClient.sln
+
+C:\Secure\SourceNew\Core\version\version.h
+
+TL_ANPR_ALGORITHM_TYPEID
+
+ error LNK2001: unresolved external symbol "__declspec(dllimport)
+
+declspec
+
+C:\Secure\SourceNew\Core
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JourneyTimeAdapter\algorithmrepository
+
+back_inserter
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JourneyTimeAdapter\loghelper.h
+
+C:\Secure\SourceNew\Core\Adapter_VS10\JTAlgorithmUnitTest\JTAlgorithmTest\JTAlgorithmTest\stdafx.h
+
+S:\dan\JourneyTimeAdapter.dll
+
+S:\dan\Mo\JourneyTimeAdapter.dll
+
+remove_copy_if
+
+ AlgorithmJTIF *m_algorithm;
+
+ AlgorithmResult algorithmResult;
+
+AdvanceDeviationAlgorithm
+
+data->push_back(1);
+
+ AdvanceDeviationAlgorithm::seed 
+
+  vector<int> seed;
+          for ( int j = 0; j < 3; ++j )
+          {
+            seed.push_back( defaultSeed );
+          }
+          algorithm->seed( seed );
+
+  m_algorithm->seed( seed );
+
+C:\Temp\DatexIIAdapter\bin\SubscriberWebService.dll
+
+C:\Temp\DatexIIAdapter.zip
+
+m_defaultSeedDivisor
+
+fulllength
+
+8>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\atlmfc\include\atlsocket.inl(130) : error C2065: 'IPPROTO_IPV6' : undeclared identifier
+
+
+IPPROTO_IPV6
+

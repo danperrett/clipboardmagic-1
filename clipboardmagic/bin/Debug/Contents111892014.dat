@@ -1,0 +1,275 @@
+  C:\Users\dan.perrett\AppData\Local\Temp\WER9F1.tmp.WERInternalMetadata.xml
+
+
+  C:\Users\dan.perrett\AppData\Local\Temp\WERA814.tmp.mdmp
+
+
+72000 
+
+72089
+
+Praveen Bandakli
+
+Clear Results Data
+
+ CReportToMMI::ReportSilent("Opening PESQ Score file");
+
+PB_DEBUGLOG
+
+CReportToMMI::ReportSilent
+
+WM_SAS_SILENT_MESSAGE
+
+OnSASSilentMessage
+
+SILENT_MESSAGE_MT
+
+WM_MMI_RTT
+
+RTTLog
+
+religion 
+
+bool res = true;
+
+ struct  Palindrome 
+            { 
+                public string palindrome; 
+                public int index;
+            };
+
+Palindrome
+
+ mylist.Insert(x, new Palindrome(pal_str, n));
+
+PalindromList
+
+                        }
+
+
+Console.WriteLine("Text: " + PalindromList[n].palindrome + ", Index: " + PalindromList[n].index + ", Length: " + PalindromList[n].Length);
+
+foreach(KeyValuePair<string, string> entry in MyDic)
+
+Palindrome
+
+PalindromList
+
+User_Prompt_Response
+
+Evaluator_PreprocessExpression
+
+result = False
+
+Updated String variable
+
+RESPONSE:[
+
+AUTOMATION YES/NO PROMPT:
+
+SASMsgQueue
+
+Verify Authorization header in SIP REGISTER message
+
+Verify SIP SUBSCRIBE
+
+Verify Authorization header in SIP REGISTER message
+
+Verify SIP SUBSCRIBE message
+
+Verify that DUT includes P-Access-Network-Info header in SIP REGISTER message
+
+MESSAGE TEXT="Verify that DUT includes P-Access-Network-Info header in SIP REGISTER message, with 'access-type' and 'access-info'."> -<EXTERNALAPP DELAYBEFOREEXTAPP="0" HIDEWINDOW="false" WAITTILLFINISH="true" PATH="C:\Program Files\Anite\IMS Simulator\Automation\imsctl.exe"> <EXPECTEDRESPONSE TEXT="0" EXPECTEDRESCHK="false"/> -<RESPONSETOCLIENT> <DEFAULTRESPONSE> </DEFAULTRESPONSE> -<RESPONSEASEXPECTED> <SPECIFICRESPONSE>Yes</SPECIFICRESPONSE> </RESPONSEASEXPECTED> -<RESPONSENOTASEXPECTED> <SPECIFICRESPONSE>No</SPECIFICRESPONSE>
+
+Verify that DUT includes P-Access-Network-Info header in SIP REGISTER message
+
+
+<MESSAGE TEXT="Verify that DUT includes P-Access-Network-Info header in SIP REGISTER message, with 'access-type' and 'access-info'.">
+      <EXTERNALAPP PATH="C:\Program Files\Anite\IMS Simulator\Automation\imsctl.exe" WAITTILLFINISH="true" HIDEWINDOW="false" DELAYBEFOREEXTAPP="0">
+        <EXPECTEDRESPONSE TEXT="0" EXPECTEDRESCHK="false" />
+        <RESPONSETOCLIENT>
+          <DEFAULTRESPONSE>
+          </DEFAULTRESPONSE>
+          <RESPONSEASEXPECTED>
+            <SPECIFICRESPONSE>Yes</SPECIFICRESPONSE>
+          </RESPONSEASEXPECTED>
+          <RESPONSENOTASEXPECTED>
+            <SPECIFICRESPONSE>No</SPECIFICRESPONSE>
+          </RESPONSENOTASEXPECTED>
+        </RESPONSETOCLIENT>
+
+PalindromeListText
+
+StringToNumber
+
+Verify that DUT includes P-Access-Network-Info header in SIP REGISTER message
+
+
+StringToNumber
+
+PreprocessExpression
+
+Updating operand and operator patterns for String expression
+
+EXCEPTION
+
+OptimalExpressionEvaluation
+
+Updating operand and operator patterns for String expression
+
+OptimalExpressionEvaluation
+
+ConvertStringToUInt64
+
+SASDebugLogger.InfoLog("ConvertStringToUInt64 Hex Value");
+
+71754
+
+99 ? ? ?298.964 ? ? ? ? ? ? ? ? ? ? ? ? ? ? MANUAL OK PROMPT:[Please press 'OK' then trigger a manual CSG search using "Search for AT&T MicroCell" menu.], RESPONSE:[OK] ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+??100 ? ? ?298.964 ? ? ? ? ? ? ? ? ? ? ? ? ? ? COMMENT [Trigger a manual CSG search using "Search for AT&T MicroCell" menu.] ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+??101 ? ? ?298.978 ? ? ? ? ? ? ? ? ? ? ? ? ? ? BEGIN INLINE SUB-SCRIPT - Search_Microcell ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+??142 ? ? ?314.027 ? ? ? ? ? ? ? ? ? ? ? ? ? ? Sub-Script Failed - [Uplink Message Timer Expired] ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+??142 ? ? ?314.027 ? ? ? ? ? ? ? ? ? ? ? ? ? ? Search_Microcell = false ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+??142 ? ? ?314.027 ? ? ? ? ? ? ? ? ? ? ? ? ? ? END INLINE SUB-SCRIPT - Search_Microcell ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?
+??143 ? ? ?494.047 ? ?E-Cell A ? ? ? ? ? ? ? ? NO MESSAGE RECEIVED ? ? ? ? ? ? ?
+
+After discussion with Mick O'Gara we have chosen to use the word "Terminated" to indicate that the Sub Script has Failed.
+
+62603
+
+72029
+
+  new ConvertFrom_V15_0_to_V15_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.1");
+                new ConvertFrom_V15_1_to_V15_2(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.2");
+
+  if (m_SAS_46_3_Converters == null)
+            {
+                m_SAS_46_3_Converters = new ConvertDictInfo();
+                m_SAS_46_3_Converters.Converters = new Dictionary<string, ConvertFromBase>();
+                m_SAS_46_3_Converters.Versions = new List<string>();
+
+                m_SAS_46_3_Converters.StartVersion = "14.8";
+                m_SAS_46_3_Converters.Versions.Add("14.8");
+                new ConvertFrom_V14_8_to_V14_9(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("14.9");
+                new ConvertFrom_V14_9_to_V15_1(m_SAS_46_3_Converters.Converters);
+                m_SAS_46_3_Converters.Versions.Add("15.1");
+
+                m_SAS_46_3_Converters.EndVersion = "15.1";
+
+                ConverterDictionaryInfos.Add(m_SAS_46_3_Converters);
+            }
+
+ static ConvertDictInfo m_SAS_46_3_Converters = null;
+
+Anite.Script.Utils
+
+ new ConvertFrom_V15_0_to_V15_1(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.1");
+                new ConvertFrom_V15_1_to_V15_2(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("15.2");
+
+70743 
+
+Giri, Raghunath 
+
+editScriptToolStripMenuItem
+
+"C:\Program Files\4M Wireless\LTEST100\A2.3.2.5\Bin\ps100_UE.exe"
+
+C:\Program Files\4M Wireless\LTEST100\A2.3.2.5\Bin"
+
+Puikys, Audrius <Audrius.Puikys@anite.com>
+
+CC CA 
+
+  sasCallBackSink.LteMeasurementReport += new LTEMeasurementReport(sasCallBackSink_LteMeasurementReport);
+
+
+sasCallBackSink_LteMeasurementReport
+
+  sasCallBackSink.LteMeasurementReport -= new LTEMeasurementReport(sasCallBackSink_LteMeasurementReport);
+
+
+sasCallBackSink_LteMeasurementReport
+
+ /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cellID"></param>
+        /// <param name="list"></param>
+        void sasCallBackSink_LteMeasurementReport(string cellID, string[] list)
+        {
+            outputWindow.addItemToRunTimeStatus("Cell ID : " + cellID, false);
+            outputWindow.addItemToRunTimeStatus("RSRP", false);
+            outputWindow.addItemToRunTimeStatus("RSRQ", false);
+
+
+            byte rsrp = Convert.ToByte(list[2]);
+            byte rsrq = Convert.ToByte(list[3]);
+            rsrq >>= 2;
+
+
+            outputWindow.updateRunTimeInforomation("RSRP", rsrp.ToString());
+            outputWindow.updateRunTimeInforomation("RSRQ", rsrq.ToString());
+        }
+
+
+   public event LTEMeasurementReport measurementReport;
+
+   /// <summary>
+        /// Measurement Report back to GUI side
+        /// </summary>
+        /// <param name="cellID"></param>
+        /// <param name="list"></param>
+        public void MeasurementReport(string cellID, string[] list)  //list contains rsrp rsrp first is always serving cell followed by neighbour
+        {
+            if (measurementReport != null)
+            {
+                measurementReport(cellID, list);
+            }
+        }
+
+ abstract public void Call_LTEMeasurementReport(string cellID, string[] list);
+
+  public event LTEMeasurementReport LteMeasurementReport;
+        
+
+  /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cellID"></param>
+        /// <param name="list"></param>
+        public override void Call_LTEMeasurementReport(string cellID, string[] list)
+        {
+            if (LteMeasurementReport != null)
+            {
+                LteMeasurementReport(cellID, list);
+            }
+        }
+
+   m_Interactive_Driver.measurementReport += new LTEMeasurementReport(m_SASLTEInteractiveEventCallback.Call_LTEMeasurementReport);
+
+         m_Interactive_Driver.measurementReport += new LTEMeasurementReport(m_SASLTEInteractiveEventCallback.Call_LTEMeasurementReport);
+
+
+S:\SAS\14 - Test Logs\14.02 - Regression Tests\47.0\VQT
+
+S:\SAS\18 - Scripts\01 - Cingular SAS scripts\Releases\To Customers\V10.6 Update 2.0\External
+
+LTEMeasurementReport
+
+63919
+
+Environment.GetCommandLineArgs()
+
+outputWindow.addItemToRunTimeStatus("RSRP", false);
+            outputWindow.addItemToRunTimeStatus("RSRQ", false);
+
+outputWindow.updateRunTimeInforomation("RSRP", rsrp.ToString());
+            outputWindow.updateRunTimeInforomation("RSRQ", rsrq.ToString());
+
+:" + (n-3)
+

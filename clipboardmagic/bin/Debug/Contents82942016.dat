@@ -1,0 +1,38 @@
+C:\Secure\Source\cutlas\Core
+
+.connect(recv);
+
+boost::thread
+
+SocketConnector.cpp:96:1: error: expected ?}? at end of input
+
+public
+
+CDBXmlInterface.h:29:48: error: expected class-name before ?,? token
+
+SocketConnector
+
+CDBXmlInterface.cpp:48:32: error: no matching function for call to ?CDBXmlInterface::Connect(std::string&, int)?
+
+CDBXmlInterface.cpp:45:6: note:   candidate expects 3 arguments, 2 provided
+
+sigReceived
+
+(int length, unsigned char* data)
+
+CDBXmlInterface.cpp:48:37: error: invalid use of non-static member function
+
+SocketConnector.h:46:10: note: initializing argument 1 of ?void SocketConnector::Subscribe(recievedRawData)?
+
+void Recv(int length, unsigned char* data);
+
+   /* boost::thread recvThread;
+    volatile bool running;
+    int connectionID;
+    tcp::endpoint* endpoint;
+    boost::asio::io_service* io_service;
+    tcp::socket *socket;
+    tcp::acceptor* acceptor;
+    bool serverorclient;
+    string endServer;*/
+

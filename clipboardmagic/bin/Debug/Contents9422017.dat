@@ -1,0 +1,466 @@
+Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>; Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>
+
+Accessibility recovered
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.dll
+
+28228
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.tlb
+
+SetAdapterStatus
+
+this->adapterStatus->SetStatus("Waiting to Start Monitoring");
+
+SetStatus
+
+vms_configuration 
+
+CONFIG_TABLE
+
+VMS_COMMAND_TABLE
+
+VMS_COMMANDS
+
+vms_configuration 
+
+CONFIG_TABLE
+
+CONFIGURATIONDATE 
+
+ route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+
+C:\Program Files (x86)\Imtech\ImCity\Adapters\VMSAdapte
+
+ route add 192.168.16.102 mask 255.255.255.0 192.168.16.1 IF 2
+
+
+C:\cctvadapter\omniORB413_vc8_rtd.dll
+
+C:\cctvadapter\omnithread34_vc8_rt.dll
+
+C:\cctvadapter\omnithread34_vc8_rtd.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rt.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rtd.dll
+
+C:\cctvadapter\omniORB413_vc8_rt.dll
+
+10.164.114.182
+
+C:\cctvadapter\omniORB413_vc8_rtd.dll
+
+C:\cctvadapter\omnithread34_vc8_rt.dll
+
+C:\cctvadapter\omnithread34_vc8_rtd.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rt.dll
+
+C:\cctvadapter\omniDynamic413_vc8_rtd.dll
+
+C:\cctvadapter\omniORB413_vc8_rt.dll
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+
+
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+C:\VMSAdapter\VMSAsynAdapter.exe
+
+Msvsmon.exe
+
+C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\Remote Debugger
+
+10.164.114.182
+
+29920
+
+Sent-Resent-Failed
+
+select * from vms_configuration where SYSTEMCODENUMBER='VMS031' and CONFIGURATIONDATE = ( select max(CONFIGURATIONDATE) from vms_configuration where SYSTEMCODENUMBER='VMS031'); 
+
+char queryCode[400] = {0}; 
+
+    sprintf(queryCode, "UPDATE SUBSYSTEM_STATUS set STATUS='%s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='%s'", Status, AdapterSCN);
+
+std::vector< DeviceObject *> objectSet 
+
+CheckCurrentAndPrevious(DeviceEntry* device, std::vector< DeviceObject *> objectSet)
+
+select * from vms_configuration where SYSTEMCODENUMBER='VMS030' and CONFIGURATIONDATE = ( select max(CONFIGURATIONDATE) from vms_configuration where SYSTEMCODENUMBER='VMS030'); 
+
+DeviceObject *obj
+
+CheckCurrentAndPreviousConfig
+
+
+URL http://www.bbc.co.uk/sport/live/football/38571746
+
+ vector<DeviceObject *> dob
+
+ vector<DeviceObject *> dob = query(queryCode);
+	if(dob.size() > 0)
+	{
+		int num = 0;
+		if(dob[dob.size()-1]->attributes().size() > 0)
+		{	
+			const char* val = dob[dob.size()-1]->attributes()[0]->value();
+			num = atoi(val);
+		}
+		if(num == 0)return false;
+	}
+
+ vector<DeviceObject *> dob =
+
+LANTERNSAVAILABLE
+
+obj->setAttribute(  "HEIGHT" , "(null)" );
+  obj->setAttribute(  "WIDTH", "(null)" );
+  obj->setAttribute(  "FONTSPACING" , "(null)" );
+  obj->setAttribute(  "FONTWIDTH" , "(null)" );
+  obj->setAttribute(  "FONTHEIGHT" , "(null)" );
+
+dob[0]
+
+dob[0]->getAttribute("LANTERNSAVAILABLE")
+
+dob[0]->getAttribute( "HEIGHT" );
+
+dob[0]->getAttribute( "WIDTH" )
+
+(strcmp(dob[0]->getAttribute( "WIDTH" ), obj->getAttribute( "WIDTH" ) != 0) ||
+
+CheckCurrentAndPreviousConfig
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+sprintf(debug, "%s, %s, %s, %s, %s, %s\0"
+
+obj->getAttribute("LANTERNSAVAILABLE")
+
+obj->getAttribute( "HEIGHT" )
+
+obj->getAttribute( "WIDTH" )
+
+obj->getAttribute( "FONTSPACING" )
+
+obj->getAttribute( "FONTWIDTH" )
+
+obj->getAttribute( "FONTHEIGHT" )
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+if(dob[dob.size()-1]->attributes().size() > 0)
+		{	
+			const char* val = dob[dob.size()-1]->attributes()[0]->value();
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+device
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+lanterns
+
+height
+
+width
+
+fontspace
+
+fontwidth
+
+fontheight
+
+C:\Secure\Source\cutlas\Core\Release\VMSAdapter\VMSAsynAdapter.exe
+
+createCommsFault
+
+item->GetScn()
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+clearFault
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '8', '0');
+00341: commit;
+
+
+http://www.bbc.co.uk/news/uk-politics-38813629
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '2', '0');
+commit;
+
+
+INSERT INTO "ADMINUTMC"."TBLSUBSYSTEMFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) values (0,1,'Tyco DVTel Server Offline',1261);
+INSERT INTO "ADMINUTMC"."TBLSUBSYSTEMFAULTTYPES" (FAULTTYPE, FAULTSEVERITY, FAULTDESCRIPTION, DATASOURCE_TYPEID) values (1,1,'DVTel CCTV Adapter Internal Fault',1261);
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+10.164.114
+
+RequestSetPreset
+
+processCommand
+
+30534
+
+processCommand
+
+cdbManager
+
+CDBInterfaceManager
+
+1.03 barg
+
+parameterReq
+
+szParameter
+
+parameters
+
+incidentType
+
+incidentSCN
+
+incidentSCN = "";
+		incidentType = "";
+
+SetParameters
+
+parameters
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+
+m_collectionPeriod
+
+collectionPeriod
+
+C:\Program Files (x86)\Imtech\Imcity\Adapters\JourneyTimeAdapter
+
+C:\\Program Files (x86)\\Imtech\\Imcity\\Adapters
+
+it->c_str()
+
+pair
+
+ bool loadConfig(string scn);
+
+bool loadConfig(string scn);
+
+bool loadConfig(string scn)
+
+Camera::
+
+ //Now attempt to load the plugin dll
+  if ( !loadPlugin() )
+  {
+    return false;
+  }
+
+21445
+
+CameraParameter_t
+
+string usernam, string password, int collectionPeriod
+
+C:\Program Files\AStyle\bin
+
+if ( !file.read( scn.c_str(), "UpdatePeriod", m_updatePeriod, defaultUpdatePeriod ) )
+  {
+    LogHandler::log( "Error:  No update period specified!" );
+    return false;
+  }
+
+  map<string, CameraParameter_t> cameraParameter;
+
+typedef struct
+{
+	string username;
+	string password;
+	int collectionperiod;
+}CameraParameter_t;
+
+CameraParameter_t
+
+const char* inifile
+
+ //Attempt to load the settings from the ini file for this camera
+    CutlasIniFile file( m_inifile );
+
+ unsigned long updatePeriod = 1;
+    if ( !file.read( scn, "UpdatePeriod", updatePeriod, 1 ) )
+    {
+        log( "Error:  No update period specified!" );
+        return false;
+    }
+
+ //Read the camera username
+    if ( !file.read( scn, "CameraUsername", m_CameraUsername ) )
+    {
+        sprintf( output, "Tyco Camera failed to read the username for camera '%s'", scn );
+        log( output );
+        return false;
+    }
+
+file.read( scn, "CameraPassword", m_CameraPassword, "" );
+
+ CameraParameter_t cameraparameter;
+    cameraparameter.collectionperiod = updatePeriod;
+    cameraparameter.username = m_CameraUsername;
+    cameraparameter.password = m_CameraPassword;
+
+cameraParameters
+
+this->cameraParameters.insert(make_pair(string(scn), cameraparameter));
+
+
+ char output[512];
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+No Transport Links obtained from database
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+
+
+UpdatePeriod=1
+
+UpdatePeriod=2
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+cameraPort
+
+CameraAccessPort
+
+cameraPort
+
+file.read( scn, "CameraAccessPort", cameraPort, 80);
+
+h.pires@gilroyandbrookes.co.uk
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Accident~223456', '0');
+commit;
+
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+C:\cctvadapter
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release
+
+%SystemRoot%\Microsoft.NET\Framework
+
+SET PATH = "%PATH%;
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+D:\Oracle\product\11.2.0\dbhome_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Utils;C:\Utils\SysInternals;%CUTLAS_HOME%\Common Files;C:\Program Files\Java\jre1.8.0_101\bin;;C:\Program Files (x86)\NTP\bin
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+Costa Laguna Park
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+C:\cctvadapter\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package
+
+C:\Users\Administrator\Desktop\Release
+
+f
+
+C:\Users\Administrator\Desktop\Release
+
+C:\Users\Daniel.Perrett\Desktop\Latitude_Update_7.0.0.5762.exe
+
+
+
+
+C:\Users\Administrator\Desktop\Release
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '1', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '3', '0');
+commit;
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Accident~223456', '0');
+commit;
+
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_preset', '4', '0');
+commit;
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+writeToLog
+

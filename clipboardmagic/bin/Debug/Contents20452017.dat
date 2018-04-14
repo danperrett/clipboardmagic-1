@@ -1,0 +1,49 @@
+     xmpp.OnMessage +=
+
+C:\Program Files\AG-Software\agsXMPP SDK\samples\VS2008\SendMessage\bin\Debug\agsXMPP.dll
+
+using agsXMPP;
+using agsXMPP.protocol.client;
+
+ xmpp.Open(jidSender.User, PASSWORD);            
+            xmpp.OnLogin += delegate(object o) { xmpp.Send(new Message(new Jid(JID_RECEIVER), MessageType.chat, "Hello world, how are you?")); };
+
+
+   xmpp.OnLogin += delegate (object o) { xmpp.Send(new Message(new Jid(JID_RECEIVER), MessageType.chat, "Hello world, how are you?")); };
+
+XmppInterface
+
+using System;
+using NAudio.Wave;
+
+public class FOO
+{
+    static WaveIn s_WaveIn;
+
+    static void Main(string[] args)
+    {
+        init();
+        while (true) /* Yeah, this is bad, but just for testing.... */
+            System.Threading.Thread.Sleep(3000);
+    }
+
+    public static void init()
+    {
+        s_WaveIn = new WaveIn();
+        s_WaveIn.WaveFormat = new WaveFormat(44100, 2);
+
+        s_WaveIn.BufferMilliseconds = 1000;
+        s_WaveIn.DataAvailable += new EventHandler<WaveInEventArgs>(SendCaptureSamples);
+        s_WaveIn.StartRecording();
+    }
+
+    static void SendCaptureSamples(object sender, WaveInEventArgs e)
+    {
+        Console.WriteLine("Bytes recorded: {0}", e.BytesRecorded);
+    }
+}
+
+System.Text.Encoding.UTF8.GetString
+
+Decode
+

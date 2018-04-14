@@ -1,0 +1,524 @@
+adminutmc.tbltransportlinkdefinition
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+
+ private void GetDBQueryString(string scn = "")
+        {
+            // check if m_sqlQuery string is already created
+            if (m_sqlQuery != null)
+            {
+                return;
+            }
+
+            StringBuilder sql = new StringBuilder("");
+            sql.Append(@"with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = ");
+            sql.Append(m_datasourceTypeID);
+            sql.Append(@" and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)))) ");
+
+            if (scn.Length != 0)
+            {
+                string xscn = EscapeSqlString(scn, BaseManager.EscapeSize.SCN_NAME);
+                sql.Append(@" and a.systemcodenumber= 
+                    case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                        when '[]' then '");
+                sql.Append(xscn);
+                sql.Append(@"else region.globalisescn('");
+                sql.Append(xscn);
+                sql.Append(@"', (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) ) end)  ");
+            }
+
+            sql.Append(@" ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def");
+
+
+            m_sqlQuery = sql.ToString();
+        }
+
+adminutmc
+
+ select * from adminutmc.tl_anpr_dynamic;              
+               
+ with def as 
+                ( 
+                select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from tl_definition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3)  
+                select systemcodenumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+;
+
+select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from tl_definition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3
+
+with definition as 
+(
+    select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from tl_anpr_dynamic
+                  where systemcodenumber = a.systemcodenumber ) as maxLastupdated
+    from tl_definition a
+    where deletiondate is null
+    and datasource_typeid = 3
+)
+select
+    def.SystemCodeNumber as SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference,
+    dyn.lastupdated as lastupdated, dyn.linktraveltime as linktraveltime
+from definition def, tl_anpr_dynamic dyn
+where def.systemcodenumber = dyn.systemcodenumber
+and dyn.lastupdated = maxLastupdated
+;
+
+
+    select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from tl_anpr_dynamic
+                  where systemcodenumber = a.systemcodenumber ) as maxLastupdated
+    from tl_definition a
+    where deletiondate is null
+    and datasource_typeid = 3
+
+
+
+with definition as 
+(
+    select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from tl_anpr_dynamic
+                  where systemcodenumber = a.systemcodenumber ) as maxLastupdated
+    from tl_definition a
+    where deletiondate is null
+    and datasource_typeid = 3
+)
+select
+    def.SystemCodeNumber as SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference,
+    dyn.lastupdated as lastupdated, dyn.linktraveltime as linktraveltime
+from definition def, tl_anpr_dynamic dyn
+where def.systemcodenumber = dyn.systemcodenumber
+and dyn.lastupdated = maxLastupdated
+;
+
+
+select
+    def.SystemCodeNumber as SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference,
+    dyn.lastupdated as lastupdated, dyn.linktraveltime as linktraveltime
+from tl_definition def, tl_anpr_dynamic dyn
+where def.deletiondate is null
+and def.datasource_typeid = 3
+and def.systemcodenumber = dyn.systemcodenumber
+and dyn.lastupdated = ( select max( lastupdated ) from tl_anpr_dynamic where systemcodenumber = def.systemcodenumber )
+;
+
+
+ max(lastupdated) 
+
+from tl_anpr_dynamic
+
+systemcodenumber
+
+select count(*) from tl_anpr_dynamic;
+
+
+norovirus
+
+GetDBQueryString
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def
+
+with def as 
+                ( select SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, 
+                ( select max( lastupdated ) from adminutmc.tl_anpr_dynamic 
+                where systemcodenumber = a.systemcodenumber ) as lastupdated 
+                from adminutmc.tbltransportlinkdefinition a 
+                where a.deletiondate is null 
+                and a.datasource_typeid = 3 and ( (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null 
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference, LastUpdated, 
+                cast( ( select linktraveltime from adminutmc.tl_anpr_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) 
+                as number(10) ) as LinkTravelTime from def;
+
+select
+    systemCodeNumber as SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference
+from tl_definition def
+where def.deletiondate is null
+and def.datasource_typeid = 3
+;
+
+select systemCodeNumber as SystemCodeNumber, ShortDescription, LongDescription, TypeID, DataSource_TypeID, Northing, Easting, NorthingEnd, EastingEnd, NetworkPathReference from tl_definition def where def.deletiondate is null and def.datasource_typeid = 3;
+
+GetDBQueryString
+
+with def as
+                ( select systemcodenumber, shortdescription, longdescription, typeid, datasource_typeid, northing, easting,
+                ( select max( lastupdated ) from flow_dynamic
+                where systemcodenumber = a.systemcodenumber ) as flowLastUpdated,
+                ( select max( lastupdated ) from occupancy_dynamic
+                where systemcodenumber = a.systemcodenumber ) as occupancyLastUpdated,
+                ( select max( lastupdated ) from speed_dynamic
+                where systemcodenumber = a.systemcodenumber ) as speedLastUpdated
+                from detector_definition a where a.datasource_typeid=3 and a.deletiondate is null and  
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                shortdescription, longdescription, typeid, datasource_typeid, northing, easting, flowLastUpdated, 
+                cast ( ( select totalflow from flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as totalflow, 
+                cast ( ( select Class1Count from flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class1Count, 
+                cast ( ( select Class2Count from flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class2Count, 
+                cast ( ( select Class3Count from flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class3Count, 
+                cast ( ( select Class4Count from flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class4Count, 
+                speedLastUpdated,
+                ( select speed from speed_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.speedLastUpdated ) as speed, 
+                occupancyLastUpdated,
+                ( select occupancy from occupancy_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.occupancyLastUpdated ) as occupancy
+                from def
+
+     StringBuilder sql = new StringBuilder("");
+            sql.Append(@"with def as
+                ( select systemcodenumber, shortdescription, longdescription, typeid, datasource_typeid, northing, easting,
+                ( select max( lastupdated ) from adminutmc.flow_dynamic
+                where systemcodenumber = a.systemcodenumber ) as flowLastUpdated,
+                ( select max( lastupdated ) from adminutmc.occupancy_dynamic
+                where systemcodenumber = a.systemcodenumber ) as occupancyLastUpdated,
+                ( select max( lastupdated ) from adminutmc.speed_dynamic
+                where systemcodenumber = a.systemcodenumber ) as speedLastUpdated
+                from adminutmc.tbldetectordefinition a where a.datasource_typeid=");
+            sql.Append(m_datasourceTypeID);
+
+            if (scn.Length != 0)
+            {
+                string xscn = EscapeSqlString(scn, BaseManager.EscapeSize.SCN_NAME);
+                sql.Append(@" and a.systemcodenumber= 
+                    case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition 
+                    where lower(systemcodenumber) = lower(user)) when '[]' then '");
+                sql.Append(xscn);
+                sql.Append(@"' else region.globalisescn('");
+                sql.Append(xscn);
+                sql.Append(@"', (select regionid from adminutmc.tbluserdefinition 
+                    where lower(systemcodenumber) = lower(user)) ) end ");
+            }
+
+            sql.Append(@" and a.deletiondate is null and (
+                (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null or
+                (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))) ) )
+                select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                shortdescription, longdescription, typeid, datasource_typeid, northing, easting, flowLastUpdated, 
+                cast ( ( select totalflow from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as totalflow, 
+                cast ( ( select Class1Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class1Count, 
+                cast ( ( select Class2Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class2Count, 
+                cast ( ( select Class3Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class3Count, 
+                cast ( ( select Class4Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class4Count, 
+                speedLastUpdated,
+                ( select speed from adminutmc.speed_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.speedLastUpdated ) as speed, 
+                occupancyLastUpdated,
+                ( select occupancy from adminutmc.occupancy_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.occupancyLastUpdated ) as occupancy
+                from def");
+
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+DatexIIAdapter_20161103
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+108609
+
+syits_datex02
+
+TL_ANPR_DYNAMIC
+
+30071670
+
+6975
+
+select * from tl_definition where longdescription like '%Shape for Network Link%';
+
+adminutmc
+
+log.Info("Check that the definition exist: " + item.m_scn);
+
+select * from tl_definition where longdescription like '%Shape for Network Link%' and systemcodenumber like '%300%';
+
+Shape for Network Link
+
+select * from tl_anpr_dynamic where systemcodenumber in (select systemcodenumber from tl_definition where longdescription like 'Shape%')
+
+ XmlSerializer xmlSerializer = new XmlSerializer(toSerialize.GetType());
+
+putDatex2DataRequest
+
+ using(StringWriter textWriter = new StringWriter())
+    {
+
+xmlSerializer.Serialize(textWriter, toSerialize);
+
+ using (StreamWriter sw = File.CreateText(path)) 
+            {
+
+C:\Temp\DatexR2
+
+AppendText
+
+sw.WriteLine
+
+sw.WriteLine("*********************************************************************************************");
+
+sw.WriteLine("NEW *********************************************************************************************");
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+putDatex2DataRequest request
+
+XmlSerializer xmlSerializer = new XmlSerializer(typeof(putDatex2DataRequest));
+            using (StringWriter textWriter = new StringWriter())
+            {
+                xmlSerializer.Serialize(textWriter, request);
+                using (StreamWriter sw = File.AppendText(@"C:\Temp\DatexR2\input.dump"))
+                {
+                    sw.WriteLine("Input *********************************************************************************************");
+                    sw.WriteLine(textWriter.ToString());
+                    sw.WriteLine("End *********************************************************************************************");
+                }
+            }
+
+filename
+
+writeInputDupToFile
+
+C:\Temp\DatexR2
+
+if ((dumpinput & 0x1) == 1)
+                        {
+                            writeInputDupToFile(request, @"C:\Temp\DatexR2\ANPRInput.dump");
+                        }
+
+if ((dumpinput & 0x2) == 1)
+                        {
+                            writeInputDupToFile(request, @"C:\Temp\DatexR2\MIDASInput.dump");
+                        }
+
+if ((dumpinput & 0x4) == 1)
+                        {
+                            writeInputDupToFile(request, @"C:\Temp\DatexR2\TMUInput.dump");
+                        }
+
+if ((dumpinput & 0x16) == 1)
+                        {
+                            writeInputDupToFile(request, @"C:\Temp\DatexR2\FusedFVDandSensorPTDInput.dump");
+                        }
+
+ if (dumpinput == 5)
+                        {
+                            writeInputDupToFile(request, @"C:\Temp\DatexR2\FusedFVDandSensorPTDInput.dump");
+                        }
+
+ConfigurationManager.AppSettings
+
+dumpinput
+
+InputDataDump
+
+traceSOAP
+
+InputDataDump
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+ <add key="InputDataDump" value="1"/>
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from adminutmc.vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from adminutmc.vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from adminutmc.tblvmsdefinition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) and ((select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) 
+                end as systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from adminutmc.vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from adminutmc.vms_definition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) ) select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def;
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from adminutmc.vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from adminutmc.vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from adminutmc.tblvmsdefinition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) and ((select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null
+                or (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))))  ) select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) 
+                end as systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from adminutmc.vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from adminutmc.vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from adminutmc.vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from vms_definition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) ) select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def;
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from adminutmc.vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from adminutmc.vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from vms_definition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from adminutmc.vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from adminutmc.vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from adminutmc.vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from vms_definition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) ) select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def;
+
+with def as
+                ( select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing,
+                ( select max( lastupdated ) from adminutmc.vms_dynamic where systemcodenumber = a.systemcodenumber ) as lastupdated,
+                ( select max( configurationdate ) from adminutmc.vms_configuration where systemcodenumber = a.systemcodenumber ) 
+                as configurationdate from vms_definition a
+                where a.deletiondate is null
+                and a.datasource_typeid=3 and a.typeid in ( 4, 5, 6, 8  ) select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing, 
+                cast ( ( select Width from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Width, 
+                cast ( ( select Height from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as number(10) ) as Height, 
+                ( select Delimiter from adminutmc.vms_configuration where systemcodenumber=def.systemcodenumber and configurationdate=def.configurationdate ) as Delimiter, 
+                ( select MsgTxt from adminutmc.vms_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.lastupdated ) as MsgTxt, LastUpdated 
+                from def
+
+adminutmc.
+
+with def as
+                ( select systemcodenumber, shortdescription, longdescription, typeid, datasource_typeid, northing, easting,
+                ( select max( lastupdated ) from adminutmc.flow_dynamic
+                where systemcodenumber = a.systemcodenumber ) as flowLastUpdated,
+                ( select max( lastupdated ) from adminutmc.occupancy_dynamic
+                where systemcodenumber = a.systemcodenumber ) as occupancyLastUpdated,
+                ( select max( lastupdated ) from adminutmc.speed_dynamic
+                where systemcodenumber = a.systemcodenumber ) as speedLastUpdated
+                from adminutmc.tbldetectordefinition a where a.datasource_typeid=3 and a.deletiondate is null and (
+                (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) is null or
+                (a.regionid = (select regionid from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user))) ) )
+                select case (select nvl(regionid, '[]') from adminutmc.tbluserdefinition where lower(systemcodenumber) = lower(user)) 
+                when '[]' then def.systemcodenumber else region.regionalisescn(def.systemcodenumber) end as systemcodenumber, 
+                shortdescription, longdescription, typeid, datasource_typeid, northing, easting, flowLastUpdated, 
+                cast ( ( select totalflow from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as totalflow, 
+                cast ( ( select Class1Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class1Count, 
+                cast ( ( select Class2Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class2Count, 
+                cast ( ( select Class3Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class3Count, 
+                cast ( ( select Class4Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class4Count, 
+                speedLastUpdated,
+                ( select speed from adminutmc.speed_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.speedLastUpdated ) as speed, 
+                occupancyLastUpdated,
+                ( select occupancy from adminutmc.occupancy_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.occupancyLastUpdated ) as occupancy
+                from def
+
+18/20 Great Hollands Square
+Bracknell
+Berks
+RG12 8UX
+
+01344 488853
+
+with def as
+                ( select systemcodenumber, shortdescription, longdescription, typeid, datasource_typeid, northing, easting,
+                ( select max( lastupdated ) from adminutmc.flow_dynamic
+                where systemcodenumber = a.systemcodenumber ) as flowLastUpdated,
+                ( select max( lastupdated ) from adminutmc.occupancy_dynamic
+                where systemcodenumber = a.systemcodenumber ) as occupancyLastUpdated,
+                ( select max( lastupdated ) from adminutmc.speed_dynamic
+                where systemcodenumber = a.systemcodenumber ) as speedLastUpdated
+                from detector_definition a where a.datasource_typeid=3 and a.deletiondate is null select systemcodenumber, 
+                shortdescription, longdescription, typeid, datasource_typeid, northing, easting, flowLastUpdated, 
+                cast ( ( select totalflow from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as totalflow, 
+                cast ( ( select Class1Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class1Count, 
+                cast ( ( select Class2Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class2Count, 
+                cast ( ( select Class3Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class3Count, 
+                cast ( ( select Class4Count from adminutmc.flow_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.flowLastUpdated ) as number(10) ) as Class4Count, 
+                speedLastUpdated,
+                ( select speed from adminutmc.speed_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.speedLastUpdated ) as speed, 
+                occupancyLastUpdated,
+                ( select occupancy from adminutmc.occupancy_dynamic where systemcodenumber=def.systemcodenumber and lastupdated=def.occupancyLastUpdated ) as occupancy
+                from def
+
+\\10.164.114.30\daniel.perrett\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+SubscriberService/SubscriberWebService/Core/AnprManager.cs
+
+SubscriberService/SubscriberWebService/WebServiceSubscriber.svc.cs
+

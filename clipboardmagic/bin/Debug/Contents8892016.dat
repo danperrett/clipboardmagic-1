@@ -1,0 +1,2903 @@
+C:\CAJTMSFault
+
+/home/daniel.perrett/workspaceneon/Axis2WSTest/WebContent/JTMSDiagnosticsFeed.old.wsdl
+
+/home/daniel.perrett/workspaceneon/Axis2WSTest/WebContent/wsdl/JTMSDiagnosticsFeedold.wsdl
+
+C:\CAJTMSFault\JTMSDiagnosticsFeed.wsdl
+
+/home/daniel.perrett/development/CAJTMSFault/JTMSDiagnosticsFeed.wsdl
+
+http://www.bbc.co.uk/news/business-36854293
+
+package CASoapClient;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}UserName"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}UserPassword"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}StartTimestamp"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EndTimestamp"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "userName",
+    "userPassword",
+    "startTimestamp",
+    "endTimestamp"
+})
+@XmlRootElement(name = "DiagnosticDataLogin")
+public class DiagnosticDataLogin {
+
+    @XmlElement(name = "UserName", required = true)
+    protected String userName;
+    @XmlElement(name = "UserPassword", required = true)
+    protected String userPassword;
+    @XmlElement(name = "StartTimestamp", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar startTimestamp;
+    @XmlElement(name = "EndTimestamp", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar endTimestamp;
+
+    /**
+     * Gets the value of the userName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    /**
+     * Sets the value of the userName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setUserName(String value) {
+        this.userName = value;
+    }
+
+    /**
+     * Gets the value of the userPassword property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    /**
+     * Sets the value of the userPassword property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setUserPassword(String value) {
+        this.userPassword = value;
+    }
+
+    /**
+     * Gets the value of the startTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getStartTimestamp() {
+        return startTimestamp;
+    }
+
+    /**
+     * Sets the value of the startTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setStartTimestamp(XMLGregorianCalendar value) {
+        this.startTimestamp = value;
+    }
+
+    /**
+     * Gets the value of the endTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEndTimestamp() {
+        return endTimestamp;
+    }
+
+    /**
+     * Sets the value of the endTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEndTimestamp(XMLGregorianCalendar value) {
+        this.endTimestamp = value;
+    }
+
+}
+
+package mockJTMSDiagnosticFeedBinding;
+
+public class DiagnosticDataLogin {
+
+}
+
+
+package CASoapClient;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}DiagnosticData" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "diagnosticData"
+})
+@XmlRootElement(name = "DiagnosticDataArray")
+public class DiagnosticDataArray {
+
+    @XmlElement(name = "DiagnosticData")
+    protected List<DiagnosticData> diagnosticData;
+
+    /**
+     * Gets the value of the diagnosticData property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the diagnosticData property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDiagnosticData().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link DiagnosticData }
+     * 
+     * 
+     */
+    public List<DiagnosticData> getDiagnosticData() {
+        if (diagnosticData == null) {
+            diagnosticData = new ArrayList<DiagnosticData>();
+        }
+        return this.diagnosticData;
+    }
+
+}
+
+package mockJTMSDiagnosticFeedBinding;
+
+public class DiagnosticDataArray {
+
+}
+
+
+package CASoapClient;
+
+import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultID"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EquipmentType"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EquipmentID"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}EquipmentSCN"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultType"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultSubType"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}FaultDescription"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}StartedTimestamp"/>
+ *         &lt;element ref="{http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding}ClearedTimestamp" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "faultID",
+    "equipmentType",
+    "equipmentID",
+    "equipmentSCN",
+    "faultType",
+    "faultSubType",
+    "faultDescription",
+    "startedTimestamp",
+    "clearedTimestamp"
+})
+@XmlRootElement(name = "DiagnosticData")
+public class DiagnosticData {
+
+    @XmlElement(name = "FaultID", required = true)
+    @XmlSchemaType(name = "unsignedLong")
+    protected BigInteger faultID;
+    @XmlElement(name = "EquipmentType", required = true)
+    protected String equipmentType;
+    @XmlElement(name = "EquipmentID")
+    @XmlSchemaType(name = "unsignedInt")
+    protected long equipmentID;
+    @XmlElement(name = "EquipmentSCN", required = true)
+    protected String equipmentSCN;
+    @XmlElement(name = "FaultType", required = true)
+    protected String faultType;
+    @XmlElement(name = "FaultSubType")
+    @XmlSchemaType(name = "unsignedInt")
+    protected long faultSubType;
+    @XmlElement(name = "FaultDescription", required = true)
+    protected String faultDescription;
+    @XmlElement(name = "StartedTimestamp", required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar startedTimestamp;
+    @XmlElement(name = "ClearedTimestamp")
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar clearedTimestamp;
+
+    /**
+     * Gets the value of the faultID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getFaultID() {
+        return faultID;
+    }
+
+    /**
+     * Sets the value of the faultID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setFaultID(BigInteger value) {
+        this.faultID = value;
+    }
+
+    /**
+     * Gets the value of the equipmentType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEquipmentType() {
+        return equipmentType;
+    }
+
+    /**
+     * Sets the value of the equipmentType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEquipmentType(String value) {
+        this.equipmentType = value;
+    }
+
+    /**
+     * Gets the value of the equipmentID property.
+     * 
+     */
+    public long getEquipmentID() {
+        return equipmentID;
+    }
+
+    /**
+     * Sets the value of the equipmentID property.
+     * 
+     */
+    public void setEquipmentID(long value) {
+        this.equipmentID = value;
+    }
+
+    /**
+     * Gets the value of the equipmentSCN property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEquipmentSCN() {
+        return equipmentSCN;
+    }
+
+    /**
+     * Sets the value of the equipmentSCN property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEquipmentSCN(String value) {
+        this.equipmentSCN = value;
+    }
+
+    /**
+     * Gets the value of the faultType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaultType() {
+        return faultType;
+    }
+
+    /**
+     * Sets the value of the faultType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaultType(String value) {
+        this.faultType = value;
+    }
+
+    /**
+     * Gets the value of the faultSubType property.
+     * 
+     */
+    public long getFaultSubType() {
+        return faultSubType;
+    }
+
+    /**
+     * Sets the value of the faultSubType property.
+     * 
+     */
+    public void setFaultSubType(long value) {
+        this.faultSubType = value;
+    }
+
+    /**
+     * Gets the value of the faultDescription property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFaultDescription() {
+        return faultDescription;
+    }
+
+    /**
+     * Sets the value of the faultDescription property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFaultDescription(String value) {
+        this.faultDescription = value;
+    }
+
+    /**
+     * Gets the value of the startedTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getStartedTimestamp() {
+        return startedTimestamp;
+    }
+
+    /**
+     * Sets the value of the startedTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setStartedTimestamp(XMLGregorianCalendar value) {
+        this.startedTimestamp = value;
+    }
+
+    /**
+     * Gets the value of the clearedTimestamp property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getClearedTimestamp() {
+        return clearedTimestamp;
+    }
+
+    /**
+     * Sets the value of the clearedTimestamp property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setClearedTimestamp(XMLGregorianCalendar value) {
+        this.clearedTimestamp = value;
+    }
+
+}
+
+package mockJTMSDiagnosticFeedBinding;
+
+public class DiagnosticData {
+
+}
+
+  public DiagnosticDataArray getDiagnosticData(
+        @WebParam(name = "DiagnosticDataLogin", targetNamespace = "http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding", partName = "DiagnosticDataLogin")
+        DiagnosticDataLogin diagnosticDataLogin);
+
+}
+
+public interface JTMSDiagnosticsFeedPortType {
+
+
+JTMSDiagnosticsFeedPortType
+
+ public DiagnosticDataArray getDiagnosticData(
+        @WebParam(name = "DiagnosticDataLogin", targetNamespace = "http://CAJTMS.merseygateway.co.uk:8088/mockJTMSDiagnosticsFeedBinding", partName = "DiagnosticDataLogin")
+        DiagnosticDataLogin diagnosticDataLogin);
+
+}
+
+JTMSDiagnosticFeedBinding
+
+The Drakewell data (joinery time for link) should be accompanied by the number of matches seen so that low number of matches can be ignored as possibly not representative.
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150023_UTMS_Mersey_Gateway_HR/trunk/05_System_Test_Specification/Template_for_Test_Report_Mersey_Gateway_Project_V01.docx
+
+C:10000	M	ImCity must automatically connect to the Clearview system.
+
+C:10000
+
+C:10010
+
+. Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online.
+
+3.3.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the xmpp server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the xmpp server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online.
+Actual result	
+Pass / Fail	
+
+
+1.1.1	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the xmpp server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the xmpp server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online.
+Actual result	
+Pass / Fail	
+
+
+
+       try
+
+ C10050
+
+A fault shall be automatically cleared in ImCity when the equipment is no longer reported as faulty.
+
+ImCity must log the lack of ability to connect to the Clearview system as a sub-system fault (just once per occasion please).
+
+Loss of connection to the Clearview system shall be made apparent to an operator within 5 minutes.
+
+XMPP 
+
+Extensible Messaging and Presence Protocol
+
+tenvis
+
+C:12000	M	ImCity must automatically connect to the CA system.
+
+C:12010	M	ImCity must log the lack of ability to connect to the CA system as a sub-system fault (just once per occasion please).
+
+
+
+C:12020	M	Loss of connection to the CA system shall be made apparent to an operator within 5 minutes.
+
+C:11040	M	It must be possible to display faults against specific camera (icons).
+
+C:11050	M	A specific fault is to be identified for cameras suspected as being out of alignment.
+
+C:12060	M	A fault shall be automatically cleared in ImCity when the equipment is no longer reported as faulty.
+
+C:12000
+
+C:12010
+
+C:12020
+
+C:11040
+
+4.1.2	TC002
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	After a period of running turn of the SOAP UI server. The adapter is polling every minute, this will fail and an error will get logged. After a couple of minute turn back on the SOAP UI.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+
+C:11050
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+CAJTMS.merseygateway.co.uk
+
+/home/dperrett/development
+
+  <moc:DiagnosticData>
+            <moc:FaultID>1</moc:FaultID>
+            <moc:EquipmentType>CCTV</moc:EquipmentType>
+            <moc:EquipmentID>1</moc:EquipmentID>
+            <moc:EquipmentSCN>EVE1</moc:EquipmentSCN>
+            <moc:FaultType>Hardware</moc:FaultType>
+            <moc:FaultSubType>13</moc:FaultSubType>
+            <moc:FaultDescription>There is a problem with Camera 1</moc:FaultDescription>
+            <moc:StartedTimestamp>04-08-2016 12:00:01</moc:StartedTimestamp>
+         </moc:DiagnosticData>
+
+  <moc:FaultID>1</moc:FaultID>
+            <moc:EquipmentType>CCTV</moc:EquipmentType>
+            <moc:EquipmentID>1</moc:EquipmentID>
+            <moc:EquipmentSCN>EVE1</moc:EquipmentSCN>
+            <moc:FaultType>Hardware</moc:FaultType>
+            <moc:FaultSubType>13</moc:FaultSubType>
+            <moc:FaultDescription>There is a problem with Camera 1</moc:FaultDescription>
+            <moc:StartedTimestamp>04-08-2016 12:00:01</moc:StartedTimestamp>
+
+04-08-2016 12:00:01
+
+CAAdapter
+
+C:\imtech\myadapter\temp
+
+C:\imtech\myadapter\config
+
+pt-sr-uk-tt-047.peek.prv
+
+ XMLGregorianCalendar gregEnd;
+
+ GregorianCalendar gcalEnd = new GregorianCalendar();
+
+ XMLGregorianCalendar xmlCalender=null;
+    GregorianCalendar calender = new GregorianCalendar();
+    calender.setTime(Util.stringToJavaDate(date));
+    xmlCalender = DatatypeFactory.newInstance().newXMLGregorianCalendar(calender);
+
+ GregorianCalendar gcalEnd = new GregorianCalendar();
+		 XMLGregorianCalendar gregEnd ;
+
+ date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).parse(sDate);    
+
+sDate
+
+toLocaleString()
+
+Console.
+		
+
+Console.out.println()
+
+2016-08-10T15:30:30.622+01:00
+
+https://www.microsoft.com/en-us/download/details.aspx?id=14632
+
+2016-08-10T15:30:30.622+01:00
+
+NETWORKREFERENCE 
+
+Camera
+
+ create table blog (id INT unsigned auto_increment primary key,  username VARCHAR(50), date DATE, text TEXT);
+
+2650
+
+CUTLAS_SERVICES_KEY
+
+serviceKey
+
+#include <iostream>
+#include <fstream>
+
+ofstream myfile;
+
+myfile.open ("example.txt");
+
+ofstream myfile;
+	myfile.open ("c:\temp\example.txt");
+
+myfile.
+
+C:\Secure\SourceNew\Core\OperatorStation\Config\OperatorStation_x64.reg
+
+C:\Secure\SourceNew\Core\CDBServer\Config\Services_x64.reg
+
+10.164.114.181
+
+static void registerAllNameServices()
+  {
+    map < string , string>  nameServices ;
+    vector < string > utmcServices ;
+    char nameServiceReference[256];
+    char nameServiceLocation[256];
+
+    // get information on all the services
+    CutlasRegistry services = CutlasRegistry::applicationKey( "SERVICES" ) ;
+    services.getEntries( utmcServices ) ;
+    for ( int i = 0 ; i < utmcServices.size() ; ++i )
+    {
+      CutlasRegistry serviceNode = CutlasRegistry::serviceKey( utmcServices[i].c_str() ) ;
+      if ( serviceNode.read( "NameServiceRef" ,nameServiceReference ) ) 
+      {
+        if ( serviceNode.read( "NameServiceLoc" ,nameServiceLocation  ) ) 
+        {
+          nameServices[nameServiceReference]= nameServiceLocation ;
+        }
+      }
+    }
+
+    // build up the argument string 
+    map < string, string >::iterator itr = nameServices.begin() ;
+
+    while ( itr != nameServices.end() ) 
+    {
+      stringstream str;
+      str << itr->first << "=" << itr->second;
+      m_args.push_back(strdup("-ORBInitRef"));
+      m_args.push_back(strdup(str.str().c_str()));
+
+      ++itr;
+    }
+
+    if ( m_args.size() > 0 ) 
+    {
+      addCmdArguments();
+    }
+  }
+
+CutlasNameService
+
+mymultimap.insert ( std::pair<char,int>('a',100) );
+  mymultimap.insert ( std::pair<char,int>('z',150) );
+
+nameServiceReference
+
+nameServiceLocation
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification
+
+ofstream myfile;
+	myfile.open ("c:\\temp\\example.txt");
+
+writeToMyTestFile
+
+The test list is not finalised and is extendable.
+4.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010, C:10020
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the XMPP server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the XMPP server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online. Further checks can be done be monitoring the Detector Faults VIEW  in the database with SQL developer.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+The test list is not finalised and is extendable.
+1.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+1.1.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010, C:10020
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the XMPP server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the XMPP server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online. Further checks can be done be monitoring the Detector Faults VIEW  in the database with SQL developer.
+Actual result	
+Pass / Fail	
+
+1.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+The test list is not finalised and is extendable.
+4.1.1	TC001
+Name	Description
+Summary	Test the Adapter will connect to the SOAP Service simulator.
+Ref requirements	C:12000, C:12010
+Pre-condition	SOAP UI test Simulator is running on the localhost
+Test description	Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the SOAP UI simulator
+Expected result	Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	After a period of running turn of the SOAP UI server. The adapter is polling every minute, this will fail and an error will get logged. After a couple of minute turn back on the SOAP UI.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	General logging of faults coming from the simulator
+Ref requirements	C:11040
+Pre-condition	TC001 and a constant flow of faults
+Test description	Let the Server and adapter run for about 10 min, check the SQL developer views
+Expected result	Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+Actual result	
+Pass / Fail	
+
+
+4.1.4	TC004
+Name	Description
+Summary	Verify that an out of alignment is reported back to the database.
+Ref requirements	C:11050
+Pre-condition	TDB
+Test description	TDB
+Expected result	TDB
+Actual result	
+Pass / Fail	
+
+
+
+The test list is not finalised and is extendable.
+1.1.1	TC001
+Name	Description
+Summary	Test the Adapter will connect to the SOAP Service simulator.
+Ref requirements	C:12000, C:12010
+Pre-condition	SOAP UI test Simulator is running on the localhost
+Test description	Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the SOAP UI simulator
+Expected result	Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+Actual result	
+Pass / Fail	
+1.1.2	TC002
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	After a period of running turn of the SOAP UI server. The adapter is polling every minute, this will fail and an error will get logged. After a couple of minute turn back on the SOAP UI.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+1.1.3	TC003
+Name	Description
+Summary	General logging of faults coming from the simulator
+Ref requirements	C:11040
+Pre-condition	TC001 and a constant flow of faults
+Test description	Let the Server and adapter run for about 10 min, check the SQL developer views
+Expected result	Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+Actual result	
+Pass / Fail	
+
+
+1.1.4	TC004
+Name	Description
+Summary	Verify that an out of alignment is reported back to the database.
+Ref requirements	C:11050
+Pre-condition	TDB
+Test description	TDB
+Expected result	TDB
+Actual result	
+Pass / Fail	
+
+
+
+org.apache.logging.log4j.Level logLevel = org.apache.logging.log4j.Level.ALL;
+	
+
+ClearviewCounterFaultInputManager inputObject, int id
+
+private void startClient() 
+	{
+
+/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+Initialisation
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-jid-0.4.1-alpha1.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-util-cache-0.2.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\kxml2-2.3.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\xmlpull_1_0_5.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-core-0.3.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-core-0.4.1.jar
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface
+
+22700
+
+fault.diagnosticData.getFaultType()
+
+switch(fault.diagnosticData.getFaultType())
+		{
+		case "Hardware
+		}
+
+pt-sr-uk-tt-048
+
+C:\Secure\SourceNew\workarea\Bin_x64\WebService\Envitia.ITS.Web.XmlService.dll
+
+C:\Secure\SourceNew\workarea\Bin_x64\WebService\Envitia.ITS.Web.XmlService.dll.working
+
+C:\Secure\SourceNew\workarea\Bin_x64\WebService\OraOLEDB11.dll
+
+C:\Secure\SourceNew\workarea\Bin_x64\WebService\Envitia.ITS.Web.XmlService.dll
+
+startAt=2015-Dec-01-12-00-00&endAt=2015-Dec-02-12-00-00
+
+/report.asmx?startAt=2015-Dec-01-12-00-00&endAt=2015-Dec-02-12-00-00
+
+ System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\WriteLines.txt", lines);
+
+System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\WriteLines.txt", lines);
+
+string[] lines = { "First line", "Second line", "Third line" };
+
+      System.IO.File.WriteAllLines(@"WriteLines.txt", lines);
+
+
+C:\Secure\SourceNew\workarea\Bin_x64\WebService\Envitia.ITS.Web.XmlService.dll
+
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319>
+
+.\aspnet_regiis.exe -i
+
+C:\Secure\SourceNew\workarea\Bin_x64\WebService\Envitia.ITS.Web.XmlService.dll
+
+getEquipmentType
+
+isSubfault
+
+GetFaultType
+
+setFaultSubType
+
+INSERT INTO CCTV_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('EVE2', TO_DATE('09-08-2016 03:30:30', 'YYYY-MM-DD HH24:MI:SS'), 13, 1723, '12345', 'y', 'n')
+
+INSERT INTO CCTV_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('EVE1', TO_DATE('2016-08-10 03:30:30', 'YYYY-MM-DD HH24:MI:SS'), 13, 1723, '12345', 'y', 'n')
+
+fault.datasourceTypeID
+
+fault.diagnosticData.getEquipmentSCN()
+
+INSERT INTO CCTV_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('1723', TO_DATE('2016-08-10 03:30:30', 'YYYY-MM-DD HH24:MI:SS'), 13, EVE1, '12345', 'y', 'n')
+
+FaultInformation
+
+INSERT INTO CCTV_FAULTS (SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, SUPPLIERFAULTNUMBER, EQUIPMENTFAULT, COMMUNICATIONSFAULT) VALUES ('1723', TO_DATE('2016-08-10 03:30:30', 'YYYY-MM-DD HH24:MI:SS'), 13, EVE1, '12345', 'y', 'n')
+
+JTMSCA001
+
+fault.datasourceTypeID
+
+diagnosticData
+
+getEquipmentSCN
+
+pt-sr-uk-tt-047.peek.prv
+
+ <moc:DiagnosticData>
+           <moc:FaultID>1</moc:FaultID>
+            <moc:EquipmentType>Camera</moc:EquipmentType>
+            <moc:EquipmentID>1</moc:EquipmentID>
+            <moc:EquipmentSCN>JTMSCA001</moc:EquipmentSCN>
+            <moc:FaultType>Hardware</moc:FaultType>
+            <moc:FaultSubType>13</moc:FaultSubType>
+            <moc:FaultDescription>There is a problem with Camera 1</moc:FaultDescription>
+            <moc:StartedTimestamp>2016-08-10T15:30:30.622+01:00</moc:StartedTimestamp>
+            <moc:ClearedTimestamp>2016-08-10T16:30:30.622+01:00</moc:ClearedTimestamp>
+         </moc:DiagnosticData>
+
+  <moc:DiagnosticData>
+            <moc:FaultID>1</moc:FaultID>
+            <moc:EquipmentType>Camera</moc:EquipmentType>
+            <moc:EquipmentID>1</moc:EquipmentID>
+            <moc:EquipmentSCN>JTMSCA002</moc:EquipmentSCN>
+            <moc:FaultType>Hardware</moc:FaultType>
+            <moc:FaultSubType>13</moc:FaultSubType>
+            <moc:FaultDescription>There is a problem with Camera 1</moc:FaultDescription>
+            <moc:StartedTimestamp>2016-08-09T15:30:30.622+01:00</moc:StartedTimestamp>
+         </moc:DiagnosticData>
+
+CA-ANPR-JTMS
+
+(SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID)
+
+VALUES ('%2$s', TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS'), %4$d, %5$s)", cdbTableName, fault.diagnosticData.getEquipmentSCN() , startdateString, faulttype, fault.datasourceTypeID);
+
+Software
+
+CATestProject/
+
+fault.getFaultType()
+
+(int) fault.getFaultSubType();
+
+getEquipmentType().equals("Camera")
+
+GetFaultType
+
+faulttype = GetFaultType(fault.diagnosticData);
+
+fault.diagnosticData
+
+getFaultID
+
+(int)fault.diagnosticData.getFaultID().intValue()
+
+ (int)fault.diagnosticData.getFaultID().intValue()
+
+INSERT INTO SUBSYSTEM_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID) VALUES (3, 'JTMSSystem', TO_DATE('2016-08-09 03:30:30', 'YYYY-MM-DD HH24:MI:SS'), 3, 1723)
+
+(int)fault.diagnosticData.getFaultID().intValue()
+
+https://drakewell01.drakewell.com/datex2/datex2_predefinedlocations.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP[
+
+drakewell01.drakewell.com
+
+85.116.169.116
+
+https://drakewell01.drakewell.com/datex2/datex2_predefinedlocations.asp?v=2.2&node=ROTH_JT&locationtype=r&bsp=SQWLDP[
+
+interpretANPR: Managed Exception
+
+The remote server returned an error: (401) Unauthorized
+
+http://datex2.tistrafficinfo.com/England/TrafficData/metadata.xml'
+
+http://datex2.tistrafficinfo.com/England/TrafficData/metadata.xml
+
+datex2.tistrafficinfo.com/England/TrafficData/metadata.xml
+
+datex2.tistrafficinfo.com
+
+getDBQueryString
+
+reading to elaboratedData
+
+Traffic Data Manager loading data fil
+
+Traffic Data Manager processing detectors
+
+Looping to next m_nextUpdate value
+
+Collecting new data
+
+Poke: Exception
+
+hasLastUpdateChanged
+
+Failed to read metadata at
+
+Failed to get data from DatexII site
+
+logger.log(logLevel,
+
+private final static Logger logger = LogManager.getLogger(CACDBServiceAdapter.class);
+
+CAANPRAdapterSOAPInterface
+
+logger.log(logLevel
+
+logger.log(logLevel, 
+
+private org.apache.logging.log4j.Level logLevel = org.apache.logging.log4j.Level.ALL;
+
+logger.log(logLevel, "HttpTimer Constructor Called");
+
+logger.log(logLevel, "username: " + username + " password: " + password);
+
+			logger.log(logLevel, "Process Faults");
+
+logger.log(logLevel, "Process Faults: Add to Local List");
+
+getFaultDescription
+
+fault.getFaultDescription()
+
+git@wilmut.peek.prv:instation/datexiipushadapter.git
+
+GZipEncoder.dll 
+
+WebServiceSubscriber.svc
+
+
+
+
+
+
+
+
+c/Users/Daniel.Perrett/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Daniel.Perrett/.ssh/id_rsa.pub.
+The key fingerprint is:
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOoxFPNs0ILUGYvlShXQo3BzwfzI42QgC72AH5xfkCAfl7ylvS2HL9OVclVqUzmIw5rD0ZLtW2JfHPMpsQFpd3Oz0h4I6BVJ4Yv0tqM6jaWTwlnyr7LqQ8EQGnctjZOxy3GbNo50thzz54KkKqRXCSkw4TxcHrNFD1m3ni3GJZ4F68f6MR29iZJv3w2aX/ERtxLG9eItmek/0JjEaQqv/HCXpA0qfSefLoWcINEtR7RLfYbhd4wE8mnBo4PCETMeUVc0IP7lmGIRm4iZBzCW/1hjUoKRxuBb5VBi4pEmBtJ3RN0LtLxakP5vI4vFzL7j23iLUWINx2C2/tNRkZVtwT daniel.perrett@UKLT1086
+
+
+
+
+
+git@wilmut.peek.prv:instation/datexiipushadapter.git
+
+NETWORKREFERENCE
+
+NETWORKPATHREFERENCE
+
+SHORTDESCRIPTION
+
+CAAdapter
+
+diagnosticData
+
+fault.diagnosticData.getFaultDescription()
+
+INSERT INTO SUBSYSTEM_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION) VALUES (3, 'JTMSSystem', TO_DATE('2016-08-09 03:30:30', 'YYYY-MM-DD HH24:MI:SS'), 3, 1723, 'There is a problem with th JTMS')
+
+CA-ANPR-JTMS
+
+FaultInformation fault
+
+sqlCommand = 
+				String.format("INSERT INTO %1$s (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION) VALUES (%2$d, '%3$s', TO_DATE('%4$s', 'YYYY-MM-DD HH24:MI:SS'), %5$d, %6$s, '%7$s')",
+						      cdbTableName,
+						      (int)fault.diagnosticData.getFaultID().intValue(),
+						      fault.diagnosticData.getEquipmentSCN(), 
+						      startdateString, 
+						      faulttype, 
+						      fault.datasourceTypeID,
+						      fault.diagnosticData.getFaultDescription());
+
+Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		formatter.setTimeZone(calendar.getTimeZone());
+		String startdateString = formatter.format(calendar.getTime());
+		int faulttype = 0;
+		
+		String sqlCommand = "";
+		faulttype = GetFaultType(fault.diagnosticData);
+
+CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+
+logger.log(logLevel, sqlCommand);
+
+if(GetErrorWarning(c, queryResults) != "") return false;
+
+int c = 0;
+
+WHERE SYSTEMCODENUMBER='%2$s' AND CREATIONDATE=TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=%4$d"
+
+isPresentInDatabase
+
+sqlCommand = 
+				String.format("SELECT * FROM %1$s WHERE SYSTEMCODENUMBER='%2$s' AND CREATIONDATE=TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=%4$d",
+						      databasetable,
+						      fault.diagnosticData.getEquipmentSCN(), 
+						      startdateString, 
+						      faulttype);
+
+faulttype = GetFaultType(fault.diagnosticData);
+
+!isSubfault(fault.diagnosticData)
+
+isPresentInDatabase(incomingfault, databasefault) == true
+
+ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+		for(ResultSet _r: _res)
+		{
+
+Astra 
+
+logger.log(logLevel, "Error updating fault: " + incomingfault.diagnosticData.getFaultDescription());
+
+sqlCommand = 
+				String.format("SELECT * FROM %1$s WHERE SYSTEMCODENUMBER='%2$s' AND CREATIONDATE=TO_DATE('%3$s', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=%4$d",
+						      databasetable,
+						      fault.diagnosticData.getEquipmentSCN(), 
+						      startdateString, 
+						      faulttype); 
+
+databasetable
+
+numberOfMinutes
+
+ Integer.parseInt("1234");
+
+CAPollInterval
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\export.xml
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\fullbuild.xml
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\log.properties
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\myAdapterExportDescriptor.jardesc
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\.settings
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\bin
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\deploy
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\documentation
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\META-INF
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\plugins
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\src
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\test-output
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\.classpath
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\.project
+
+D:\3-Workspace\ImCityAdapters\CAANPRFaultInterface\build.properties
+
+http://jenkins.urban.prv:8080/
+
+/svnserver.infra.imtech.nl
+
+Interfacespec between ImCity and CA JTMS Faults
+
+CreateTemplate
+
+PrintWriter writer
+
+GeneratedFaults
+
+GeneratedFaults.dat
+
+
+		} 
+
+	inboundQueue = InboundFaultQueue.GetInstance();
+
+22847
+
+http://ftse.richardallen.co.uk/#ftse100
+
+GeneratedFaults.dat
+
+PrintWriter
+
+new FileOutputStream(
+    new File("persons.txt")
+
+PrintWriter
+
+new FileOutputStream(
+    new File("persons.txt")
+
+writer.println("New Run");
+    			writer.close();
+
+try {
+				writer = new PrintWriter(new FileWriter("/home/daniel.perrett/GeneratedFaults.dat", true));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	writer.println("</Faults>");
+        	writer.println("</New Run>");
+        	writer.close();
+
+  String inputLine;
+    		        while ((inputLine = in.readLine()) != null)
+    		        {
+    		            System.out.println(inputLine);
+    		        }
+
+:
+
+ublic interface StatusUpdateEvent
+{
+	void UpdateEvent();
+}
+
+StatusUpdateEvent
+
+e
+
+StatusUpdateEvent
+
+ if (_listeners == null)
+            _listeners = new Vector();
+
+
+import antlr.collections.impl.Vector;
+
+ if (_listeners != null && _listeners.isEmpty())
+        {
+            Enumeration e = _listeners.elements();
+            while (e.hasMoreElements())
+            {
+                MetronomeEvent e = (MetronomeEvent)e.nextElement();
+                e.Tick(new Date());
+            }
+        }
+
+import java.util.Enumeration;
+
+sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND CREATIONDATE=TO_DATE('%4$s', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=%5$d", cdbTableName, fault.EndTime, fault.Device, fault.Time, fault.type.ordinal());
+
+InsightDetector
+
+%2$s
+
+logger.log(logLevel, )
+
+// TODO Auto-generated method stub
+		
+
+queryResults.getUpdateCount().value.length
+
+queryResults.getUpdateCount().value
+
+logger.log(logLevel, sqlCommand);
+
+adapterStatus.setStatus("Running");
+
+updateSUbSystemStatus
+
+adapterStatus.setStatus("
+
+Running
+
+  adapterStatus.setStatus("Loggin into XMPP Server");
+
+
+					Fa
+
+proxmox5.hosted.urban.prv
+
+
+					process = true;
+
+40-340981
+
+anObject
+
+ daniel.perrett
+
+2385
+
+TL_DEFINITION
+
+http://localhost:15513/WebServiceSubscriber.svc
+
+The magic number in GZip header is not correct. Make sure you are passing in a GZip stream
+
+stream.Seek(0,SeekOrigin.Begin)
+
+https://trafficengland.info/app/ntismodel/currentmodel
+
+cdb-peek-02.peek.prv
+
+Network model
+
+SQL
+
+D:\Temp\DatexIIV2\zips
+
+542501
+
+<?xml
+
+EASTINGEND
+
+Pete.Radford@nisjv.com 
+
+DatexII version 2 
+
+https://trafficengland.info/app/ntismodel/currentmodel
+
+ERROR - There is an error in XML document (5830013, 45).
+System.InvalidOperationException: There is an error in XML document (5830013, 45). ---> System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 5830013, position 45.
+
+<?xml
+
+  </d2lm:measurementSiteRecord>
+		  			  </d2lm:measurementSiteTable><?xml version="1.0" encoding="UTF-8"?>
+<d2lm:d2LogicalModel modelBaseVersion="2" xmlns:d2lm="http://datex2.eu/schema/2/2_0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" extensionName="NTIS Published Services" extensionVersion="2.0">
+
+TYPEID
+
+Hi Daniel,
+
+When we released our data v4.70 on 27 July 2016, one of our servers that generates the network model files was running at high CPU due to a software issue and the network model generation failed. We restarted the server and initiated the process to generate the network model files a second time and it completed. Several days later we realised that the network model files had been concatenated with the second run. I was on a course during the first week in August so we had not devised a process to fix it by the time new data v4.80 was released on 9 August 2016.
+
+We believe the issue was a one-off but we have implemented a manual process to check the files soon after generation.
+
+Regards,
+
+Pete Radford
+Integration and Test Engineer 
+
+  
+A Mouchel and Thales joint venture company
+
+3 Ridgeway, Quinton Business Park, Quinton, Birmingham B32 1AF
+T +44 (0)121 245 4851 | M +44 (0)7814 058208 | E pete.radford@nisjv.com 
+The information in this e-mail is confidential and may be legally privileged. It is intended solely for the addressee. Access to this email by anyone else is unauthorised. Any views or opinions expressed in this e-mail may be solely those of the author and are not necessarily those of Network Information Services Limited, Registered in England at 2 Dashwood Lang Road, Addlestone, Nr Weybridge, Surrey KT15 2NX  Registered No : 07647453
+
+Please consider the environment before printing this e-mail
+
+
+
+From: Perrett, Daniel - UK [mailto:Daniel.Perrett@dynniq.co.uk] 
+Sent: 25 August 2016 09:55
+To: Peter Radford
+Cc: Turner, Tina - UK
+Subject: RE: DatexII version 2 NTIS model update problem (xml tags double defined)
+
+
+Hi Pete,
+       Let me introduce myself I am Daniel Perrett a Software Engineer working at Dynniq (formally Imtech) I have taken over Shailesh?s role who I think you might have had dealing with in the past.
+Recently we?ve  had a problem with our DatexII adapter, in particular the area of NTIS model Update and I?m hoping that you might be able to shine some light on the issue.
+We have a problem on the 27th July, after downloading the zip files (attached) from https://trafficengland.info/app/ntismodel/currentmodel and we get an error:
+ERROR - There is an error in XML document (5830013, 45).
+System.InvalidOperationException: There is an error in XML document (5830013, 45). ---> System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 5830013, position 45.
+
+And if you look closely at the xml file in question, you can clearly see that the xml tags have been defined twice hence the issue we have.
+About line 542501:
+
+  </d2lm:measurementSiteRecord>
+                                                                                  </d2lm:measurementSiteTable><?xml version="1.0" encoding="UTF-8"?>
+<d2lm:d2LogicalModel modelBaseVersion="2" xmlns:d2lm="http://datex2.eu/schema/2/2_0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" extensionName="NTIS Published Services" extensionVersion="2.0">
+
+Do you think that this was a one of error in the xml file generated? 
+
+Is it something that we should account for in the future?
+
+Regards
+Dan.
+
+Regards
+
+Daniel Perrett 
+Senior Software Engineer 
+T. +44(0) 1256 891814  | E. daniel.perrett@dynniq.co.uk
+ 
+Dynniq UK Ltd | Hazelwood House | Lime Tree Way | Chineham Business Park | Basingstoke | RG24 8WZ
+T  +44 1256  891800 | www.dynniq.co.uk 
+
+
+
+There seemed to be a problem with the NTIS model update on the 27/7/2016.
+this may be separate to the issues we are seeing here but it somewhere to note them.
+in questioning to these issues Pete Radford from NIS sent this response:
+
+Hi Daniel,
+
+When we released our data v4.70 on 27 July 2016, one of our servers that generates the network model files was running at high CPU due to a software issue and the network model generation failed. We restarted the server and initiated the process to generate the network model files a second time and it completed. Several days later we realised that the network model files had been concatenated with the second run. I was on a course during the first week in August so we had not devised a process to fix it by the time new data v4.80 was released on 9 August 2016.
+
+We believe the issue was a one-off but we have implemented a manual process to check the files soon after generation.
+
+Regards,
+
+Pete Radford
+Integration and Test Engineer 
+
+ 
+
+
+A Mouchel and Thales joint venture company
+
+3 Ridgeway, Quinton Business Park, Quinton, Birmingham B32 1AF
+T +44 (0)121 245 4851 | M +44 (0)7814 058208 | E pete.radford@nisjv.com
+
+
+The information in this e-mail is confidential and may be legally privileged. It is intended solely for the addressee. Access to this email by anyone else is unauthorised. Any views or opinions expressed in this e-mail may be solely those of the author and are not necessarily those of Network Information Services Limited, Registered in England at 2 Dashwood Lang Road, Addlestone, Nr Weybridge, Surrey KT15 2NX  Registered No : 07647453
+
+Please consider the environment before printing this e-mail
+
+
+
+From: Perrett, Daniel - UK [mailto:Daniel.Perrett@dynniq.co.uk] 
+Sent: 25 August 2016 09:55
+To: Peter Radford
+Cc: Turner, Tina - UK
+Subject: RE: DatexII version 2 NTIS model update problem (xml tags double defined)
+
+
+Hi Pete,
+       Let me introduce myself I am Daniel Perrett a Software Engineer working at Dynniq (formally Imtech) I have taken over Shailesh?s role who I think you might have had dealing with in the past.
+Recently we?ve  had a problem with our DatexII adapter, in particular the area of NTIS model Update and I?m hoping that you might be able to shine some light on the issue.
+We have a problem on the 27th July, after downloading the zip files (attached) from https://trafficengland.info/app/ntismodel/currentmodel and we get an error:
+ERROR - There is an error in XML document (5830013, 45).
+System.InvalidOperationException: There is an error in XML document (5830013, 45). ---> System.Xml.XmlException: Unexpected XML declaration. The XML declaration must be the first node in the document, and no white space characters are allowed to appear before it. Line 5830013, position 45.
+
+And if you look closely at the xml file in question, you can clearly see that the xml tags have been defined twice hence the issue we have.
+About line 542501:
+
+  </d2lm:measurementSiteRecord>
+                                                                                  </d2lm:measurementSiteTable><?xml version="1.0" encoding="UTF-8"?>
+<d2lm:d2LogicalModel modelBaseVersion="2" xmlns:d2lm="http://datex2.eu/schema/2/2_0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" extensionName="NTIS Published Services" extensionVersion="2.0">
+
+Do you think that this was a one of error in the xml file generated? 
+
+Is it something that we should account for in the future?
+
+Regards
+Dan.
+
+Regards
+
+Daniel Perrett 
+Senior Software Engineer 
+T. +44(0) 1256 891814  | E. daniel.perrett@dynniq.co.uk
+ 
+Dynniq UK Ltd | Hazelwood House | Lime Tree Way | Chineham Business Park | Basingstoke | RG24 8WZ
+T  +44 1256  891800 | www.dynniq.co.uk 
+
+
+
+  </d2lm:measurementSiteRecord>
+		  			  </d2lm:measurementSiteTable><?xml version="1.0" encoding="UTF-8"?>
+<d2lm:d2LogicalModel modelBaseVersion="2" xmlns:d2lm="http://datex2.eu/schema/2/2_0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" extensionName="NTIS Published Services" extensionVersion="2.0">
+
+PredefinedLocationsPublication
+
+There seemed to be a problem with the NTIS model update on the 27/7/2016.
+this may be separate to the issues we are seeing here but it somewhere to note them.
+in questioning to these issues Pete Radford from NIS sent this response:
+
+Hi Daniel,
+
+When we released our data v4.70 on 27 July 2016, one of our servers that generates the network model files was running at high CPU due to a software issue and the network model generation failed. We restarted the server and initiated the process to generate the network model files a second time and it completed. Several days later we realised that the network model files had been concatenated with the second run. I was on a course during the first week in August so we had not devised a process to fix it by the time new data v4.80 was released on 9 August 2016.
+
+We believe the issue was a one-off but we have implemented a manual process to check the files soon after generation.
+
+Regards,
+
+Pete Radford
+Integration and Test Engineer 
+
+ 
+
+
+A Mouchel and Thales joint venture company
+
+3 Ridgeway, Quinton Business Park, Quinton, Birmingham B32 1AF
+T +44 (0)121 245 4851 | M +44 (0)7814 058208 | E pete.radford@nisjv.com
+
+
+
+
+cutlas2
+
+d2lm:value
+
+Number of Locations
+
+idField
+
+PredefinedLocation
+
+40-340981
+
+ClearviewCounterAdapter
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+X:\development\imtech\myadapter\config\myAdapter.ini
+
+X:\development\imtech\myadapter\config\ClearviewCounterAdapter.ini
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-sasl-provided-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-sasl-provided-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-tcp-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-tcp-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-tcp-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\wrapper-3.1.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\xmlpull_1_0_5.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\antlr-2.7.2.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\commons-logging-1.1.2.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\idl.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\ImCityCDB_1_0_0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\ImCityCORBA_1_0_0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jacorb.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jacorb-omgapi.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jacorb-services.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jacorb-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jxmpp-core-0.3.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jxmpp-core-0.4.1.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jxmpp-jid-0.4.1-alpha1.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\jxmpp-util-cache-0.2.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\kxml2-2.3.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\log4j-api-2.0.2.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\log4j-core-2.0.2.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\org.apache.commons.httpclient_3.1.0.v201012070820.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\picocontainer-1.2.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\slf4j-api-1.6.4.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\slf4j-jdk14-1.6.4.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-core-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-core-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-core-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-extensions-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-extensions-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-extensions-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-im-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-im-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-im-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-java7-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-java7-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-java7-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-sasl-javax-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-sasl-javax-4.1.7-javadoc.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-sasl-javax-4.1.7-sources.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\plugins\smack-sasl-provided-4.1.7.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\xmlpull_1_0_5.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-core-0.4.1.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-jid-0.4.1-alpha1.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\jxmpp-util-cache-0.2.0.jar
+
+X:\development\imcitydevelopment\3-Workspace\ImCityAdapters\kxml2-2.3.0.jar
+
+X:\development\imtech\myadapter\config\ClearviewCounterAdapter.ini
+
+PredefinedLocation
+
+NTIS_Network_Nodes
+
+J?aimerais vous inviter ? rejoindre mon r?seau professionnel sur LinkedIn
+
+ <d2lm:predefinedLocationContainer xsi:type="d2lm:PredefinedNonOrderedLocationGroup" version="4.70" id="NTIS_Network_Nodes" >
+		
+						
+			<d2lm:predefinedLocation version="4.70" id="1100291">
+			    <d2lm:location xsi:type="d2lm:Point">
+			      <d2lm:pointByCoordinates>
+			        <d2lm:pointCoordinates>
+			          <d2lm:latitude>52.3760757140677</d2lm:latitude>
+			          <d2lm:longitude>-2.70224931691928</d2lm:longitude>
+			        </d2lm:pointCoordinates>
+			      </d2lm:pointByCoordinates>
+			    </d2lm:location>
+			 </d2lm:predefinedLocation>
+
+video/livesp.asp#
+
+@echo off
+REM
+REM Start the ImCity MeteoAdapter
+REM
+REM Setup environment
+set logdate=%date:~6,4%%date:~3,2%%date:~0,2%_%time:~0,2%_%time:~3,2%_%time:~6,2%
+set ImtechHome=C:\Imtech
+set AdapterHome=%ImtechHome%\MeteoAdapter
+set AdapterLog=D:\Logs\MeteoAdapter
+set AdapterLogFile=%AdapterLog%\JVM-%logdate%.log
+set AdapterJar=MeteoAdapter_1.0.0.jar
+set AdapterMain=dynniq.imcity.MeteoAdapter.MeteoAdapterMain
+REM
+REM Setup the JAVA environment
+set "JAVA=%ImtechHome%\jre7_40\bin\java"
+set "JAVA_OPTS=-Xms64M -Xmx512M -XX:MaxPermSize=512M"
+set "JAVA_OPTS=%JAVA_OPTS% -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000"
+set "JAVA_OPTS=%JAVA_OPTS% -Ddeployment.trace.level=all"
+set USER_JPI_PROFILE=%AdapterLog%
+REM
+REM Start the Adapter
+echo on
+%JAVA% %JAVA_OPTS% -jar %AdapterJar% > %AdapterLogFile% 
+
+ClearviewCounte
+
+dynniq.imcity.clearview
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\ClearviewCounterAdapter.bat
+
+D:\3-Workspace\ClearviewCounterAdapter.bat
+
+D:/Logs/
+
+X:\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\datexIIadapter.zip
+
+X:\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+X:\development\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\GZipEncoder.dll
+
+http://localhost:15513/WebServiceSubscriber.svc
+
+Stop
+
+DatexIIAdapterV2
+
+http://cdb-peek-02.peek.prv:15513/WebServiceSubscriber.svc?wsdl
+
+http://www.codinggain.com/
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter
+
+ClearviewCounterAdapter
+
+ClearviewCounterAdapter.ini
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\ClearviewCounterAdapter.ini
+
+xmpp.utms.uk
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+ClearviewCounterAdapter.bat
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\ClearviewCounterAdapter.bat
+
+C:\imtech\ClearviewCounterAdapter
+
+ClearviewCounterAdapter.bat
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\ClearviewCounterAdapter.bat
+
+C:\imtech\ClearviewCounterAdapter.zip
+
+D
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+C:\Imtech\ClearviewCounterAdapter
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+<zipfileset excludes="META-INF/*.SF" src="D:/3-Workspace/ImCityAdapters/ClearviewCounterAdapter/plugins/jxmpp-util-cache-0.2.0.jar"/>
+
+kxml2-2.3.0.jar
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+l
+
+
+		String sqlCommand = 
+
+ClearviewCounterAdapter
+
+myAdapter
+
+not-authorized
+
+pt-sr-uk-tt-047
+
+XMPPTCPConnection
+
+if(connection.isConnected())
+        	{
+        		connection.
+ 
+
+ls -l /var/lib/prosody/*/accounts/*
+
+/etc/prosody/certs/codinggain.key
+
+merseygateway
+
+dan
+
+xmpp%2eutms%2euk
+
+ChatMessageListener
+
+2.43 3MJTMS Adapter 
+
+1.1 3MJTMS Adapter 
+
+Create the adapter log file directory D:\Logs\Adapters\3MJTMSAdapter
+Extract the adapter files from the ImCity Core distribution folder
+Release Files\Program Files\Imtech\ImCity\Adapters\3MJTMSAdapter.zip to C:\Imtech
+
+
+2.43.1 Operating Configuration
+The operating configuration is in the 3MJTMSAdapter.ini file. This file has the following parameters:
+Parameter Name	Description
+cdbusername	ImCity user account name
+cdbuserpass	ImCity user account password
+corbaloc	This is the CORBA location URL for the ImCity database.
+This can be either type of IOR format.
+heartbeat	The CORBA heartbeat interval for ImCity data access
+Default is 30 seconds. Suggested maximum is 60 seconds.
+service*	A number of parameters beginning with the text service.
+The CORBA service details for ImCity connections, defaults are applied.
+verb	Output verbosity ? controls diagnostic levels of output.
+Default value is 1 which is sufficient for basic operating reports (any error is always reported)
+
+
+CDBTableName
+
+datasourcetypeid
+
+CDBTableName
+
+XMPPFromJID
+
+XMPPFromDevice
+
+XMPPServiceName
+
+XMPPServiceName
+
+
+XMPPServer
+
+XMPPUserName
+
+XMPPPassWord
+
+XMPPPort
+
+ClearviewUr
+
+2.43.2 Adapter Start-up
+The adapter start-up file is located in the installation root as file 3MJTMSAdapterStartup.bat.
+The start-up file can be set up as a scheduled task (at boot time with delay and dependent upon the CDBServer service) **, or it can be run as a console application.
+** This is the recommended start-up method.
+
+
+Create the adapter log file directory D:\Logs\Adapters\ClearviewCounterAdapter
+Extract the adapter files from the ImCity Core distribution folder
+Release Files\Program Files\Imtech\ImCity\Adapters\ClearviewCounterAdapter.zip to C:\Imtech
+ 
+
+
+Parameter Name	Description
+cdbusername	ImCity user account name
+cdbuserpass	ImCity user account password
+corbaloc	This is the CORBA location URL for the ImCity database.
+This can be either type of IOR format.
+heartbeat	The CORBA heartbeat interval for ImCity data access
+Default is 30 seconds. Suggested maximum is 60 seconds.
+service*	A number of parameters beginning with the text service.
+The CORBA service details for ImCity connections, defaults are applied.
+verb	Output verbosity ? controls diagnostic levels of output.
+Default value is 1 which is sufficient for basic operating reports (any error is always reported)
+datasourcetypeid	Type ID of the data source, for clearview counter this is 1724
+
+
+2.44.1 Operating Configuration
+The operating configuration is in the ClearviewCounterAdapter.ini file. This file has the following parameters:
+Parameter Name	Description
+cdbusername	ImCity user account name
+cdbuserpass	ImCity user account password
+corbaloc	This is the CORBA location URL for the ImCity database.
+This can be either type of IOR format.
+heartbeat	The CORBA heartbeat interval for ImCity data access
+Default is 30 seconds. Suggested maximum is 60 seconds.
+service*	A number of parameters beginning with the text service.
+The CORBA service details for ImCity connections, defaults are applied.
+verb	Output verbosity ? controls diagnostic levels of output.
+Default value is 1 which is sufficient for basic operating reports (any error is always reported)
+datasourcetypeid	Type ID of the data source, for clearview counter this is 1724
+
+
+1.1.1 Operating Configuration
+The operating configuration is in the ClearviewCounterAdapter.ini file. This file has the following parameters:
+Parameter Name	Description
+cdbusername	ImCity user account name
+cdbuserpass	ImCity user account password
+corbaloc	This is the CORBA location URL for the ImCity database.
+This can be either type of IOR format.
+heartbeat	The CORBA heartbeat interval for ImCity data access
+Default is 30 seconds. Suggested maximum is 60 seconds.
+service*	A number of parameters beginning with the text service.
+The CORBA service details for ImCity connections, defaults are applied.
+verb	Output verbosity ? controls diagnostic levels of output.
+Default value is 1 which is sufficient for basic operating reports (any error is always reported)
+datasourcetypeid	Type ID of the data source, for clearview counter this is 1724
+
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff006e323a5601000ea80000000000000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000ef1d3a5601000524 MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e3000000001000000000000007c000000010102001b00000073796974732d6364622e686f737465642e757262616e2e7072760000fa0a000018000000ff4355544c4153353130fe1d89c5570100007000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff006e323a5601000ea80000000000000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000ef1d3a5601000524 MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e3000000001000000000000006c000000010102000e0000003139322e3136382e35302e343100fa0a18000000ff4355544c4153353130fe8189c55701000d0c00000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00658ec5570100135c0000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000658ec5570100135c MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000068000000010102000a00000073796974732d63646200fa0a18000000ff4355544c4153353130fe6d8ec5570100113000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb.hosted.urban.prv
+
+syits-cdb-syits.hosted.urban.prv
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00e290c557010007a80000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000e290c557010007a8 MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee890c5570100120400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00658ec5570100135c0000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000658ec5570100135c MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000068000000010102000a00000073796974732d63646200fa0a18000000ff4355544c4153353130fe6d8ec5570100113000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000658ec5570100135c CUTLAS UTMC ncontext IOR:010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00658ec5570100135c0000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000658ec5570100135c
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000e290c557010007a8 CUTLAS UTMC ncontext IOR:010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00e290c557010007a80000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000e290c557010007a8
+
+syits-cdb-syits
+
+192.168.107.10 
+
+CAUrl
+
+CDBTableName
+
+Table to report faults to in the Oracle database 
+
+CAUrl
+
+2.44.2 Adapter Start-up
+The adapter start-up file is located in the installation root as file ClearviewCounterAdapterStartup.bat.
+The start-up file can be set up as a scheduled task (at boot time with delay and dependent upon the CDBServer service) **, or it can be run as a console application.
+** This is the recommended start-up method.
+
+
+1.1.1 Adapter Start-up
+The adapter start-up file is located in the installation root as file ClearviewCounterAdapterStartup.bat.
+The start-up file can be set up as a scheduled task (at boot time with delay and dependent upon the CDBServer service) **, or it can be run as a console application.
+** This is the recommended start-up method.
+
+
+Brierley, Samuel - UK <samuel.brierley@dynniq.co.uk>
+
+http://cdb-peek-02.peek.prv:15513/WebServiceSubscriber.svc?wsdl
+
+https://community.igniterealtime.org/thread/43789
+
+http://cdb-peek-02.peek.prv:15513/WebServiceSubscriber.svc?wsdl
+
+cdb-peek-02.peek.prv
+
+http://176.57.250.120:15513/WebServiceSubscriber.svc?wsdl
+
+regentry
+
+giopAddress
+
+..\..\include;"..\IDLCore-OmniOrb";"..\..\ThirdParty\omniORB-4.1.3\include";..\DBConnection\utmcdbif
+
+"$(CutlasCore)\ThirdParty\boost\boost_1_42\lib";"$(CutlasCore)\ThirdParty\omniORB-4.1.3\lib\x86_win32";..\..\lib
+
+IORLocation
+
+MAX_COMPUTERNAME_LENGTH
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00658ec5570100135c0000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000658ec5570100135c MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000068000000010102000a00000073796974732d63646200fa0a18000000ff4355544c4153353130fe6d8ec5570100113000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb
+
+cdb
+
+http://rmbc-ada.utms.uk:15513/WebServiceSubscriber.svc?wsdl
+
+MAX_COMPUTERNAME_LENGTH
+
+giopAddress
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000b193c5570100136c CUTLAS UTMC ncontext IOR:010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00b193c5570100136c0000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000b193c5570100136c
+
+8453
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00d792c657010003600000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000d792c65701000360 MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000070000000010102000f0000003139322e3136382e3130372e31300000fa0a000018000000ff4355544c4153353130fe2c93c6570100048800000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000d792c65701000360 CUTLAS UTMC ncontext IOR:010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00d792c657010003600000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000d792c65701000360
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff006b94c6570100091c0000000100000300000000000000080000000100000000545441010000001c0000000100000001000100010000000100010509010100010000000901010003545441080000006b94c6570100091c MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000068000000010102000a00000073796974732d63646200fa0a18000000ff4355544c4153353130fe6b94c65701000e7400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff002397c6570100120c0000000100000300000000000000080000000100000000545441010000001c0000000100000001000100010000000100010509010100010000000901010003545441080000002397c6570100120c MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000070000000010102001000000073796974732d6364622d737969747300fa0a000018000000ff4355544c4153353130fe3897c657010011e000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb-syits.hosted.urban.prv
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff00ab9ac657010013600000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000354544108000000ab9ac65701001360 MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130feb29ac657010009f000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+D:\ior
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130feeea7c6570100111000000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb-syits.hosted.urban.prv
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000068000000010102000a00000073796974732d63646200fa0a18000000ff4355544c4153353130fe33a9c6570100117800000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdbwww
+
+syits-cdbwwwwww
+
+syits-cdb-syits
+
+192.168.107.10     syits-cdb-syit
+
+syits-cdb-syit
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff0039aac65701000dfc0000000100000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000039aac65701000dfc MANAGER2 OBJECT nobject IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000070000000010102000f00000073796974732d6364622d737969740000fa0a000018000000ff4355544c4153353130fe88abc65701000d7400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb-syits.hosted.urban.prv
+
+123.123.123.123
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fe09aec657010009c800000000010200000000000000080000000100000000545441010000001c00000001000000
+
+C:\inetpub\wwwroot\ior
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee5afc65701000fc400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee5afc65701000fc400000000010200000000000000080000000100000000545441010000001c0000000100000001000100010000000100010509010100010000000901010
+
+IOR:010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee5afc65701000fc400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+syits-cdb-syits.hosted.urban.prv
+
+syits-cdb-syits.hosted.urban.prv/ior/ior.txt
+
+http://syits-cdb-syits.hosted.urban.prv/ior/ior.txt
+
+ip.host == 10.232.1.10 && tcp.port==2809
+
+8660
+
+http://syits-cdb-syits.hosted.urban.prv/ior/ior.txt
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee5afc65701000fc400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+D:\Logs\NameService
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff0009aec65701000de80000000100000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee5afc65701000fc400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff0009aec65701000de80000000100000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+010000002200000049444c3a53657373696f6e4d616e6167656d656e742f4d616e616765723a312e30000000010000000000000080000000010102002100000073796974732d6364622d73796974732e686f737465642e757262616e2e7072760000fa0a18000000ff4355544c4153353130fee5afc65701000fc400000000010200000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff0009aec65701000de80000000100000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
++IDL:omg.org/CosNaming/NamingContextExt:1.0t192.168.107.10?
+
+NameServiceTTA		TTA	??W
+?
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
++IDL:omg.org/CosNaming/NamingContextExt:1.0t192.168.107.10?
+
+NameServiceTTA		TTA	??W
+?
+
++IDL:omg.org/CosNaming/NamingContextExt:1.0t192.168.107.10?
+
+NameServiceTTA		TTA	??W
+?
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff0009aec65701000de80000000100000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+   +   IDL:omg.org/CosNaming/NamingContextExt:1.0         t       192.168.107.10  ??
+   NameService               TTA               	    	 TTA   	?W 
+
+   +   IDL:omg.org/CosNaming/NamingContextExt:1.0         x       192.168.107.10  ??   ??? 
+?                 TTA               	    	 TTA   	?W 
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000074000000010102000f0000003139322e3136382e3130372e31300000f90a00000b0000004e616d6553657276696365000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+010000002b00000049444c3a6f6d672e6f72672f436f734e616d696e672f4e616d696e67436f6e746578744578743a312e300000010000000000000078000000010102000f0000003139322e3136382e3130372e31300000f90a00000e000000ff0009aec65701000de80000000100000300000000000000080000000100000000545441010000001c00000001000000010001000100000001000105090101000100000009010100035454410800000009aec65701000de8
+
+>${timestamp
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+Calendar cal = Calendar.getInstance();
+context.timestamp = formatter.format(cal.getTime());
+
+
+LastLogTimeStamp
+
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+Random rand = new Random((new Date()).getTime());
+
+rand.nextInt(5)
+
+Devices = { "CLC001", 
+							    "CLC002",
+							    "CLC003",
+							    "CLC004",
+							    "CLC005",
+							    "CLC006"};
+
+JTMSCA002
+
+ String device = Devices[rand.nextInt(5)];
+
+equipmentSCN
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+
+Calendar cal = Calendar.getInstance();
+context.timestamp = formatter.format(cal.getTime());
+
+
+equipmentSCN
+
+${equipmentSCN}
+
+def project = mockRunner.getMockService().getProject()
+
+ mockOperation.mockService.project.getPropertyValue('RegNO')
+
+/var/lib/prosody/xmpp.utms.uk.cnf
+
+/var/lib/prosody/
+
+xmpp.utms.uk.key
+
+C:\Imtech\ClearviewCounterAdapter
+
+u
+
+String databasefault = (isSubfault(incomingfault.diagnosticData))? "SUBSYSTEM_FAULTS" : "CCTV_FAULTS";
+
+cdbTableName
+
+String cdbTableName
+
+subsystemFault
+
+connectionAttempts
+
+FaultInformation fault = new FaultInformation();
+
+ConnectionSubsystemFaultSent
+
+ConnectionSubsystemFault
+
+connectionSubsystemFaultSent
+
+ReceivedMessage
+
+subsystemFault
+
+createUnavailableFault
+
+unavailableFaultRaised
+
+clearUnavailableFault
+
+unavailableFaultRaised
+
+connectionAttempts++;
+
+FaultMessageType.CreateFault
+
+subsystemFault
+
+unavailableFault.messageType = FaultMessageType.CreateFault;
+
+Description
+
+inputManager.ReceivedMessage(unavailableFault, id);
+
+InsightDetector
+
+logger.log(logLevel
+
+cw.errorCode + ":" + cw.detailMessage
+
+	 logger.log(logLevel, cw.errorCode + ":" + cw.detailMessage);
+
+fault.Fault = datasourcetypeid;
+
+unavailableFault.Fault = datasourcetypeid;
+
+configBuilder.setSecurityMode
+
+
+        	 if(!connection.isConnected())
+        	 {
+
+configBuilder.setSecurityMode(XMPPTCPConnectionConfiguration.SecurityMode.disabled);
+
+SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
+				_date = sdf.format(FiveMinPrevious);
+
+Date time = new Date();
+
+date
+
+AIzaSyBc4-71uG2UowhNwZ-EYdfkRcBYSajsZdk
+
+https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood4&key=YOUR_API_KEY
+
+AIzaSyBc4-71uG2UowhNwZ-EYdfkRcBYSajsZdk
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+185.119.174.126
+
+prosody.log.1
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+alerts@insight.clearviewtraffic.com
+
+46.231.185.224
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\deploy\Plugins\ClearviewCounterAdapter_1.0.0.jar
+
+C:\imtech\ClearviewCounterAdapter.zip
+
+(incomingfault.subsystemFault)?
+
+char e = (incomingfault.subsystemFault)?'n':'y';
+
+type
+
+ FaultTypeTable.NotConnected;
+
+Pete Richardson
+
+${equipmentSCN1}
+
+13317
+
+${equipmentSCN1}
+
+${timestamp1}
+
+rand = new Random((new Date()).getTime());
+context.equipmentSCN1 = Devices[rand.nextInt(5)];
+
+when going to the post office to have my passport photocopy certified I asked why you not put "this is a Tru likeness" on there. she said back to me they dont do that. I come back to work only to read the instructions that that is what they do and what I pay for!
+
+27303
+
+SELECT * FROM CCTV_FAULTS WHERE SYSTEMCODENUMBER='JTMSCA005' AND CREATIONDATE=TO_DATE('2016-09-02 14:22:00', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=13
+
+IStatusUpdateEvent.java
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\src\dynniq\imcity\clearview\IStatusUpdateEvent.java
+
+ClearviewAdapterStatus.java
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\src\dynniq\imcity\clearview\ClearviewAdapterStatus.java
+
+IStatusUpdateEvent
+
+26903
+
+C:\Temp\DatexIIAdapter.zip
+
+private ClearviewAdapterStatus adapterStatus = ClearviewAdapterStatus.GetInstance();
+
+private CAAdapterStatus adapterStatus = CAAdapterStatus.GetInstance();
+
+s.whatsapp.net
+
+private CAAdapterStatus adapterStatus = CAAdapterStatus.GetInstance();
+
+adapterStatus
+
+setStatus
+
+adapterStatus.setStatus("Error ")
+
+adapterStatus.setStatus("OK");
+
+	/*
+	 * 
+	 */
+	void updateSUbSystemStatus()
+	{
+		String status = adapterStatus.GetStatus();
+		String sqlCommand = String.format("UPDATE SUBSYSTEM_STATUS set STATUS='%1$s', LASTUPDATED=SYSDATE WHERE SYSTEMCODENUMBER='InsightDetector'", status);
+		logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+		int updateCount = 0;
+		if((queryResults.getUpdateCount().value != null) && (queryResults.getUpdateCount().value.length > 0))
+		{
+			updateCount = queryResults.getUpdateCount().value[0];
+		}
+		
+		if((GetErrorWarning(1, queryResults) == "") && (updateCount > 0))return;
+		sqlCommand = 
+				String.format("INSERT INTO SUBSYSTEM_STATUS (SYSTEMCODENUMBER, STATUS) VALUES ('%1$s', '%2$s')", "InsightDetector", status);
+		logger.log(logLevel, sqlCommand);
+		queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+		if(!GetErrorWarning(1, queryResults).equals(""))
+		{
+			logger.log(logLevel, "Error in the insertion of Status");
+		}
+	}
+	
+
+private CAAdapterStatus adapterStatus = CAAdapterStatus.GetInstance();
+
+if(statusCount++ == 60) //1 minute
+				{
+					statusCount = 0;   //reset
+					updateSUbSystemStatus();
+					
+				}
+
+ int statusCount = 0;
+		    updateSUbSystemStatus();
+
+CA-ANPR-JTMS
+
+adapterStatus.setStatus("
+
+C:\Temp\DatexIIAdapter.zip
+
+ReceivedInformation
+
+DiagnosticData
+
+setFaultID
+
+equipmentSCN
+
+setEquipmentSCN
+
+CA-ANPR-JTMS
+
+XMLGregorianCalendar
+
+ GregorianCalendar gcalStart = new GregorianCalendar();
+
+Date time = new Date();
+			    long now = time.getTime();
+			    String _date;
+
+gregEnd =  DatatypeFactory.newInstance().newXMLGregorianCalendar(gcalEnd);
+
+ XMLGregorianCalendar gregStart;
+
+ DatatypeFactory.newInstance().newXMLGregorianCalendar(gcalEnd);
+
+setStartedTimestamp
+
+gregStart
+
+XMLGregorianCalendar gregStart;
+
+DiagnosticData subSystemAdapterFault = new DiagnosticData();
+
+	subSystemAdapterFault.setStartedTimestamp(gregStart);
+
+setEquipmentType
+
+subSystemAdapterFault.
+
+setFaultDescription
+
+ReceivedInformation(fault);
+
+subSystemAdapterFault
+
+ DiagnosticData subSystemAdapterFault 
+
+		DiagnosticData subSystemAdapterFault = null; 
+
+Select TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS')
+
+able.OutputStream $out = _request ("registerHeartbeat", true);
+
+Select TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS')
+
+Select TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS') from dual
+
+logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+		int updateCount = 0;
+
+ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+		for(ResultSet _r: _res)
+		{
+			
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+
+checkserverTime
+
+Timestamp[] timestamp = _c.values.timestampValues();
+
+2440587.5
+
+2498142.5
+
+2400000.5
+
+2457555.5
+
+2400000.5
+
+2440587.5
+
+C:\Secure\Everest_2\05_System_Test_Specification\TestResults_Iteration_1\Test_Result_For_Clearview_Adapter_I1.docx
+
+C:\Secure\Everest_2\05_System_Test_Specification\TestResults_Iteration_1\Test_Result_For_CA_Adapter_I1.docx
+
+4.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+
+
+Check the database to ensure that a Subsystem fault has been logged. Check the Subsystem Status it should still indicate ?Connecting To the XMPP Server? as that?s what it?s trying to do.
+
+4.1.4	TC004
+Name	Description
+Summary	Ensure that the Adapter cannot connect to the XMPP server and hence raises a sub system fault. Ensure that the Sub ?System status does not get updated to OK
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Run the installation batch file on system 047 or 048.
+Expected result	Check the database to ensure that a Subsystem fault has been logged. Check the Subsystem Status it should still indicate ?Connecting To the XMPP Server? as that?s what it?s trying to do. And will continue to try and do until connected of the process has ended.
+Actual result	
+Pass / Fail	
+
+
+1.1.1	TC004
+Name	Description
+Summary	Ensure that the Adapter cannot connect to the XMPP server and hence raises a sub system fault. Ensure that the Sub ?System status does not get updated to OK
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Run the installation batch file on system 047 or 048.
+Expected result	Check the database to ensure that a Subsystem fault has been logged. Check the Subsystem Status it should still indicate ?Connecting To the XMPP Server? as that?s what it?s trying to do. And will continue to try and do until connected of the process has ended.
+Actual result	
+Pass / Fail	
+
+
+(Run through urban network)
+
+InsightDetector
+
+Lost Contect with the Clearview Service
+
+Clearview Presence has Disappeared
+
+4.1.4	TC004
+Name	Description
+Summary	Ensure that the Adapter cannot connect to the XMPP server and hence raises a sub system fault. Ensure that the Sub ?System status does not get updated to OK
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Run the installation batch file on system 047 or 048.
+Expected result	Check the database to ensure that a Subsystem fault has been logged. Check the Subsystem Status it should still indicate ?Connecting To the XMPP Server? as that?s what it?s trying to do. And will continue to try and do until connected of the process has ended.
+Actual result	
+Pass / Fail	
+?
+
+
+1.1.1	TC004
+Name	Description
+Summary	Ensure that the Adapter cannot connect to the XMPP server and hence raises a sub system fault. Ensure that the Sub ?System status does not get updated to OK
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Run the installation batch file on system 047 or 048.
+Expected result	Check the database to ensure that a Subsystem fault has been logged. Check the Subsystem Status it should still indicate ?Connecting To the XMPP Server? as that?s what it?s trying to do. And will continue to try and do until connected of the process has ended.
+Actual result	
+Pass / Fail	
+?
+
+
+\\10.164.114.30\daniel.perrett\GeneratedFaults.dat
+
+XMPP server must be up and running
+
+4.1.5	TC005
+Name	Description
+Summary	Check that the Status of the adapter get updated in the database.
+Ref requirements	None
+Pre-condition	XMPP server must be up and running, currently preferable on the urban network as we can see ?OK? status reached. 
+Test description	Once the Clearview Adapter is up and running you should be able to check the appropriate database (047, 048) that the Status has been updated.
+Expected result	Should see and entry ?OK? and device ?InsightDetector? with time stamp in the Subsystem_Status table of your database.
+Actual result	
+Pass / Fail	
+
+
+Tables to check Detector Faults, Subsystem Faults, Subsystem Status.
+
+CA-ANPR-JTMS
+
+(Test current under review)
+
+4.1.5	TC005
+Name	Description
+Summary	Check that the Status of the adapter get updated in the database.
+Ref requirements	None
+Pre-condition	XMPP server must be up and running, currently preferable on the urban network as we can see ?OK? status reached. 
+Test description	Once the Clearview Adapter is up and running you should be able to check the appropriate database (047, 048) that the Status has been updated.
+Expected result	Should see and entry ?OK? and device ?InsightDetector? with time stamp in the Subsystem_Status table of your database.
+Actual result	
+Pass / Fail	
+
+
+CA-ANPR-JTMS
+
+4.1.5	TC005
+Name	Description
+Summary	Check that the Status of the adapter get updated in the database.
+Ref requirements	None
+Pre-condition	XMPP server must be up and running, currently preferable on the urban network as we can see ?OK? status reached. 
+Test description	Once the CA Adapter is up and running you should be able to check the appropriate database (047, 048) that the Status has been updated.
+Expected result	Should see and entry ?OK? and device ?CA-ANPR-JTMS? with time stamp in the Subsystem_Status table of your database.
+Actual result	
+Pass / Fail	
+
+
+Run the adapter in the eclipse debugger. 
+
+
+			writer = new PrintWriter(new FileWriter("/home/daniel.perrett/GeneratedFaults.dat", true));
+
+PrintWriter
+
+http://cdb-peek-02.peek.prv:15513/WebServiceSubscriber.svc?wsdl
+
+http://localhost:15513/WebServiceSubscriber.svc
+
+git@wilmut.peek.prv:instation/datexiipushadapter
+
+http://cdb-peek-02.peek.prv:15513
+
+context.equipmentSCN1
+
+context.timestamp
+
+context.equipmentSCN2
+
+writer.println(context.timestamp);
+
+WebServiceSubscriber
+
+"UTF-8"
+
+Calendar cal = Calendar.getInstance();
+context.timestamp1 = formatter.format(cal.getTime());
+
+FileInputStream fis = new FileInputStream(fin);
+
+"C:\\TEMP\\GeneratedFaults.dat"
+
+//Construct BufferedReader from InputStreamReader
+	BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+ 
+	String line = null;
+	while ((line = br.readLine()) != null) {
+		System.out.println(line);
+	}
+
+equipmentSCN
+
+while ((line = br.readLine()) != null)
+
+context.equipmentSCN1 = info[0];
+
+context.timestamp1 = info[1];
+
+ <moc:DiagnosticData>
+           <moc:FaultID>1</moc:FaultID>
+            <moc:EquipmentType>Camera</moc:EquipmentType>
+            <moc:EquipmentID>1</moc:EquipmentID>
+            <moc:EquipmentSCN>${equipmentSCN1}</moc:EquipmentSCN>
+            <moc:FaultType>Hardware</moc:FaultType>
+            <moc:FaultSubType>13</moc:FaultSubType>
+            <moc:FaultDescription>There is a problem with Camera 1</moc:FaultDescription>
+            <moc:StartedTimestamp>${timestamp1}</moc:StartedTimestamp>
+            <moc:ClearedTimestamp>2016-08-10T16:30:30.622+01:00</moc:ClearedTimestamp>
+         </moc:DiagnosticData>
+
+void checkserverTime()
+
+void checkserverTime()
+	{
+		String sqlCommand = "Select TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 00:30:30', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'),TO_CHAR(TO_DATE('2016-06-16 01:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD HH24:MI:SS') from dual";
+		logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+		ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+		for(ResultSet _r: _res)
+		{
+			
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+				try
+				{
+				Timestamp[] timestamp = _c.values.timestampValues();
+				System.out.println(timestamp.toString());
+				}
+				catch(Exception ex)
+				{
+					
+				}
+			}
+		}
+		
+	}
+
+void checkserverTime()
+
+checkserverTime();
+
+178.22.62.56
+
+178.22.62.56:
+
+000000000000000100000000000000010000000000000027000100000000000d3137382e32322e36322e353600000af90000000b4e616d6553657276696365
+
+178.22.62.56
+
+ousi4Gm7MdhgDH
+
+178.22.62.56
+
+org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+
+ring.split(":")[0];
+					int pxyPort = Integer.pars
+
+
+178.22.62.56
+
+178.22.62.56
+
+7451
+
+22216
+
+I check the CDB Server on 178.22.62.56 and initially it cam back with 57554, the problem described above. But I swapped the CDBServer.exe for the one I found on 47, tried again and it now returns 57555.
+
+
+			}
+
+dateToMJD
+
+sprintf ( output, "%02d//%02d//%d %02d//%02d/%02d", 
+      st.wDay, st.wMonth, st.wYear, st.wHour, st.wMinute, st.wSecond );
+
+#include <iostream>
+#include <fstream>
+
+ofstream myfile;
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+
+22572
+
+ myfile.open("C:\\Temp\\CDBServerTest.dat");
+
+std::ios_base::app
+
+myfile << utctime << std::endl;
+
+myfile << julian_date << std::endl;
+
+ myfile.open("C:\\Temp\\CDBServerTest.dat", std::ios_base::app);
+
+cout << std::endl;
+
+#include <iostream>
+#include <fstream>
+
+
+  ofstream myfile;
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+
+ ofstream myfile;
+	   myfile.open("C:\\Temp\\CDBServerTest.dat", std::ios_base::app);
+
+cout << "*******" << std::endl;
+
+myfile
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+
+sprintf(buffer, "%lf", julian_date);
+
+char buffer[10] = {0};
+
+sprintf(buffer, "%lf\0", julian_date);
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+
+00
+
+myfile << buffer << std::endl;
+
+sprintf ( buffer, "%02d/%02d/%d %02d:%02d:%02d\0", 
+      st.wDay, st.wMonth, st.wYear, st.wHour, st.wMinute, st.wSecond );
+
+ts.tm_mday
+
+ts.tm_mon
+
+ts.tm_year
+
+ts.tm_hour
+
+ts.tm_min
+
+ts.tm_sec
+
+myfile << "st Time: " << buffer << std::endl;
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+
+23891
+
+2440587.5
+
+2400000.5
+
+1466029830
+
+// Get the timezone info.
+TIME_ZONE_INFORMATION TimeZoneInfo;
+GetTimeZoneInformation( &TimeZoneInfo );
+
+CDBUtility::
+
+AdjustForLocalTime(double input)
+
+AdjustForLocalTime
+
+VariantTimeToSystemTime
+
+  myfile.open("C:\\Temp\\CDBServerTest.dat", std::ios_base::app);
+
+  ofstream myfile;
+
+AdjustForLocalTime
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+
+myfile.close();
+
+C:\Secure\SourceNew\Core\Release\CDBService\CDBService.exe
+

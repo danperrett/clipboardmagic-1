@@ -1,0 +1,664 @@
+tinyxml2.lib
+
+ LIBCMTD.lib
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\tinyxml2-master\tinyxml2\bin\Win32-Release-Lib\tinyxml2.lib
+
+ITERATOR_DEBUG_LEVEL
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\tinyxml2-master\tinyxml2\bin\Win32-Debug-Lib\tinyxml2.lib
+
+MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _strncmp already defined in LIBCMTD.lib(strncmp.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _isalpha already defined in LIBCMTD.lib(_ctype.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _isdigit already defined in LIBCMTD.lib(_ctype.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _isspace already defined in LIBCMTD.lib(_ctype.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _sscanf_s already defined in LIBCMTD.lib(sscanf.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _fclose already defined in LIBCMTD.lib(fclose.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _fopen_s already defined in LIBCMTD.lib(fopen.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: ___iob_func already defined in LIBCMTD.lib(_file.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _printf already defined in LIBCMTD.lib(printf.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: __vscprintf already defined in LIBCMTD.lib(vsprintf.obj)
+1>MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _vfprintf already defined in LIBCMTD.lib(vfprintf.obj)
+
+MSVCRTD.lib(MSVCR100D.dll) : error LNK2005: _strncmp already defined in LIBCMTD.lib(strncmp.obj)
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\tinyxml2-master\tinyxml2\bin\Win32-Debug-Lib\tinyxml2.lib
+
+/******************************************************************************
+* void decodeBodyElement(XMLElement *body, Message_t *message)
+* in the down link we just need to decode the Interlocking part
+******************************************************************************/
+
+void decodeTimeElement(XMLElement *time, Time_t *time_t)
+
+/******************************************************************************
+* void decodeTimeElement(XMLElement *time, Time_t *time_t);
+*
+******************************************************************************/
+
+void decodeVersionElement(XMLElement *version, Version_t *version_t)
+
+/******************************************************************************
+* void decodeVersionElement(XMLElement *version, Version_t *version_t)
+*
+******************************************************************************/
+
+XMLDocument doc;
+	doc.Parse( xml );
+
+input
+
+XML_SUCCESS
+
+Message_t  message
+
+ XMLElement *Message = doc.FirstChildElement();
+   
+    XMLElement* HeaderElement = Message->FirstChildElement("Header");
+    
+
+if(HeaderElement != NULL)
+    {    
+        decodeHeaderElement(HeaderElement, &message);
+    }
+    
+    XMLElement* BodyElement = Message->FirstChildElement("Body");
+    if(BodyElement != NULL)
+    {
+        decodeBodyElement(BodyElement, &message);
+    }
+
+/******************************************************************************
+* 
+*
+******************************************************************************/
+
+void decodeHeaderElement(XMLElement *header, Message_t *message)
+
+WORD StartDecode(const char* input, Message_t  &message)
+
+Message mess = new Message();
+
+StartDecode
+
+MemoryStream memoryStream = new MemoryStream ( );
+
+XmlTextWriter xmlTextWriter = new XmlTextWriter ( memoryStream, Encoding.UTF8 );
+
+xmlTextWriter
+
+string result = Encoding.UTF8.GetString(memoryStream .ToArray());
+
+string result
+
+NetworkStream stream = client.GetStream();
+
+NetworkStream stream
+
+XmlSerializer ser = new XmlSerializer(typeof(MyObject));
+StringWriter writer = new StringWriter();
+ser.Serialize(writer, myObject);
+serializedValue = writer.ToString();
+
+		error	XML_ERROR_PARSING_ELEMENT	tinyxml2::XMLError
+
+
++		request	0x01344558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T13:35:10.4350638+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message"	const char *
+
+
+<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T13:35:10.4350638+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message
+
++		szHistory	0x01344558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T13:48:56.149627+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message"	char [100000]
+
+
+		result	"<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<Message xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Header>\r\n    <Version>\r\n      <MessageFormat>message-v0.1</MessageFormat>\r\n      <Data>data-v0.1</Data>\r\n      <Software>software-v1</Software>\r\n    </Version>\r\n    <Time>\r\n      <Current>2015-09-02T13:48:56.149627+01:00</Current>\r\n      <TimeStatus>SYNCHRONISED</TimeStatus>\r\n      <Monotonic>1436175143</Monotonic>\r\n    </Time>\r\n    <SequenceNumber>1</SequenceNumber>\r\n    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>\r\n    <LogicalSourceID>ICONIS-1</LogicalSourceID>\r\n    <SourceStatus>MASTER</SourceStatus>\r\n    <SourceLinkStatus>UP</SourceLinkStatus>\r\n    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>\r\n    <LogicalDestinationID>SRIF-1</LogicalDestinationID>\r\n  </Header>\r\n  <Body>\r\n    <Interlocking>\r\n      <UniqueID>UK/York/IXL/001</UniqueID>\r\n      <SSIID>0F</SSIID>\r\n      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>\r\n      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>\r\n    </Interlocking>\r\n    <Interlocking>\r\n      <UniqueID>UK/York/IXL/001</UniqueID>\r\n      <SSIID>0F</SSIID>\r\n      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>\r\n      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>\r\n    </Interlocking>\r\n  </Body>\r\n</Message>"	string
+
+
++		szHistory	0x01304558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T13:52:25.9656065+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message"	char [100000]
+
+
++		szHistory	0x004b4558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T13:53:53.3933484+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>"	char [100000]
+
+
+linkStatus
+
+GetTickCount
+
+GetTickCount();
+
+connectionInformation->SequenceNumber
+
+connectionInformation->PreviousNumber = connectionInformation->SequenceNumber;
+
+connectionInformation->SequenceNumber = message.Header.SequenceNumber;
+
+connectionInformation->TimeOfLastReceive = GetTickCount();
+            
+            connectionInformation->PreviousNumber = connectionInformation->SequenceNumber;
+            connectionInformation->SequenceNumber = message.Header.SequenceNumber;
+            
+
++		szHistory	0x01174558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T14:38:06.9986824+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message><?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T14:38:06.9986824+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <So	char [100000]
+
+
++		szHistory	0x01174558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T14:38:06.9986824+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>"	char [100000]
+
+
+Body.Interlocking
+
+ free(message.Body.Interlocking);
+
++		request	0x01354558 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T15:22:23.3732933+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message><?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-02T15:22:23.3732933+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <So	const char *
+
+
+recv(Socket, (char*)szHistory, sizeof(szHistory)/sizeof(szHistory[0]), 0)
+
+int ttt 
+
+  mess.Header = new Header();
+            mess.Body = new Body();
+
+            mess.Header.Version = new Version();
+            mess.Header.Version.MessageFormat = "message-v0.1";
+            mess.Header.Version.Data = "data-v0.1";
+            mess.Header.Version.Software = "software-v1";
+            mess.Header.Time = new Time();
+            mess.Header.Time.Current = DateTime.Now;
+            mess.Header.Time.TimeStatus = timeStatus.SYNCHRONISED;
+            mess.Header.Time.Monotonic = 1436175143;
+            mess.Header.SequenceNumber = 1;
+            mess.Header.SourceUnitID = "ICONIS-1-Unit-A";
+            mess.Header.LogicalSourceID = "ICONIS-1";
+            mess.Header.SourceStatus = unitStatus.MASTER;
+            mess.Header.SourceLinkStatus = sourceLinkStatus.UP;
+            mess.Header.DestinationUnitID = "SRIF-1-Unit-A";
+            mess.Header.LogicalDestinationID = "SRIF-1";
+            
+
+            mess.Body.Interlocking = new Interlocking[2];
+            for (int n = 0; n < 2; n++)
+            {
+                mess.Body.Interlocking[n] = new Interlocking();
+            }
+
+            mess.Body.Interlocking[0].UniqueID = "UK/York/IXL/001";
+            mess.Body.Interlocking[0].SSIID = "0F";
+            mess.Body.Interlocking[0].ControlRequests = ASCIIEncoding.ASCII.GetBytes("1234567890123456");
+            mess.Body.Interlocking[0].ARSSubAreaStatus = ASCIIEncoding.ASCII.GetBytes("1234567890123456");
+
+
+            mess.Body.Interlocking[1].UniqueID = "UK/York/IXL/001";
+            mess.Body.Interlocking[1].SSIID = "0F";
+            mess.Body.Interlocking[1].ControlRequests = ASCIIEncoding.ASCII.GetBytes("1234567890123456");
+            mess.Body.Interlocking[1].ARSSubAreaStatus = ASCIIEncoding.ASCII.GetBytes("1234567890123456");
+
+            XmlSerializer ser = new XmlSerializer(typeof(Message));
+            StringWriter writer = new StringWriter();
+            ser.Serialize(writer, mess);
+            result = writer.ToString();
+      
+
+EncodeMessage
+
+recv(Socket, (char*)szHistory, sizeof(szHistory)/sizeof(szHistory[0]), 0)
+
+ConvertFourBytesToInt
+
+nt ConvertFourBytesToInt(char *input)
+
+char length[4];
+                int Length = 0;
+                //recieve header first 
+                recv(Socket, (char *)length, 4, 0);
+                int temp = 0;
+                Length = ConvertFourBytesToInt(length);
+                
+                
+                inDataLength = recv(Socket, (char*)szHistory, sizeof(szHistory)/sizeof(szHistory[0]), 0);
+                ttt = recv(Socket, (char*)szHistory, sizeof(szHistory)/sizeof(szHistory[0]), MSG_PEEK);
+
+recievedbytes
+
++= recv(Socket, temp, 2000, 0)
+
+receiveFromSocket
+
+DWORD receiveFromSocket(SOCKET Socket, char *recievedbytes)
+
+recievedbytes
+
+extern void SendTextToWindow(const char * text);
+
+connectionInformation->SequenceNumber
+
+strcpy(connectionInformation->SourceUnitID.value
+
+  recv(Socket, (char *)length, 4, 0);
+    Length = ConvertFourBytesToInt(length);
+
+ char length[4];
+    int Length = 0;
+    int inDataLength = 0;
+    //recieve header first 
+    recv(Socket, (char *)length, 4, 0);
+    Length = ConvertFourBytesToInt(length);
+
+ while(inDataLength  < Length)
+    {
+        int location = inDataLength;
+        inDataLength += recv(Socket, tempc, Length, 0);
+        memcpy(&recievedbytes[location], tempc, inDataLength);
+    }    
+
+int Length = 0;
+
+StartLocation
+
+controlBuffer
+
+static int ptrStart = 0;
+static int ptrEnd = 0;
+
+LENGTH_OF_BUFFER
+
+ptrStart
+
+LENGTH_OF_BUFFER
+
+whatsLeft
+
+copyToCircularBuffer
+
+void copyToCircularBuffer(const char* from, int length)
+
+void copyFromCircularBuffer(char to, int length)
+
+int diff = LENGTH_OF_BUFFER - length;
+            int whatsLeft  = length - diff;
+
+copyFromCircularBuffer
+
+copyFromCircularBuffer(controlBuffer, Length)
+
++		input	0x0055d188 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-03T16:29:37.2831722+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>0</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLinkStatus>
+    <DestinationUnitID>SRIF-1-Unit-A</DestinationUnitID>
+    <LogicalDestinationID>SRIF-1</LogicalDestinationID>
+  </Header>
+  <Body>
+    <Interlocking>
+      <UniqueID>UK/York/IXL/001</UniqueID>
+      <SSIID>0F</SSIID>
+      <ControlRequests>MTIzNDU2Nzg5MDEyMzQ1Ng==</ControlRequests>
+      <ARSSubAreaStatus>MTIzNDU2Nzg5MDEyMzQ1Ng==</ARSSubAreaStatus>
+    </Interlocking>
+  </Body>
+</Message>???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????"	const char *
+
+
+  ZeroMemory(szHistory, 10000);
+
+LENGTH_OF_BUFFER
+
+WhatsStillIntTheCircularBuffer
+
+LENGTH_OF_BUFFER
+
+WhatsStillInTheCircularBuffer
+
+(length + ptrEnd)
+
+(ptrStart + length)
+
+WhatsStillInTheCircularBuffer
+
++		input	0x0030cf28 "<?xml version="1.0" encoding="utf-16"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <Version>
+      <MessageFormat>message-v0.1</MessageFormat>
+      <Data>data-v0.1</Data>
+      <Software>software-v1</Software>
+    </Version>
+    <Time>
+      <Current>2015-09-04T08:35:54.5964883+01:00</Current>
+      <TimeStatus>SYNCHRONISED</TimeStatus>
+      <Monotonic>1436175143</Monotonic>
+    </Time>
+    <SequenceNumber>1</SequenceNumber>
+    <SourceUnitID>ICONIS-1-Unit-A</SourceUnitID>
+    <LogicalSourceID>ICONIS-1</LogicalSourceID>
+    <SourceStatus>MASTER</SourceStatus>
+    <SourceLinkStatus>UP</SourceLi"	const char *
+
+

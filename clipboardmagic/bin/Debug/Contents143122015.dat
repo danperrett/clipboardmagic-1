@@ -1,0 +1,31 @@
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+connectionStatus
+
+pCAC_Env
+
+PrintDebugToScreen
+
+PrintDebugToScreen("
+
+ZeroMemory(connectionStatus, 10);
+
+PrintDebugToScreen("MASTER", ALWAYS);
+
+mate_watchdog_fail
+
+SetConnected
+
+ZeroMemory(connectionStatus, 10);
+                PrintDebugToScreen("STANDBY", ALWAYS);
+                strcpy(connectionStatus, "STANDBY");
+                connected = 0;
+
+ if(connected != 0)
+           {
+
+ ZeroMemory(connectionStatus, 10);
+                PrintDebugToScreen("STANDBY", ALWAYS);
+                strcpy(connectionStatus, "STANDBY");
+                connected = 0;
+

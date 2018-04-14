@@ -1,0 +1,351 @@
+tycoInterface.setupCameraCredentials("admin", "9999");
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"><s:Header><VsDebuggerCausalityData xmlns="http://schemas.microsoft.com/vstudio/diagnostics/servicemodelsink">uIDPox29IzdwNK9GtWR5wJImivMAAAAAapLeIcnIM0qhgqDOqeKCI4VyUN9OF6VNqixHEwMBD5sACQAA</VsDebuggerCausalityData></s:Header><s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><GetSnapshotUri xmlns="http://www.onvif.org/ver10/media/wsdl"><ProfileToken>2</ProfileToken></GetSnapshotUri></s:Body></s:Envelope>
+
+<s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>{0}</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">{1}</wsse:Password></wsse:UsernameToken></wsse:Security></s:Header>
+
+string param = "";
+               if (string.IsNullOrEmpty(username))
+               {
+                   param = string.Format("<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>{0}</ProfileToken></GetSnapshotUri></s:Body></s:Envelope>", profile);
+               }
+               else
+               {
+
+cameradetails
+
+
+	Month	November	Tina	Dan	Mo
+hrs	October	Week 39-43	39,5	31	15
+hrs	November	Week 44	27,5	15	3,5
+hrs	November	Week 45	34,5	7,5	3,5
+hrs	November	Week 46	27	2,5	37,5
+hrs	November	Week 47	7	27,5	0
+hrs	November	Week 48	24	37,5	37,5
+hrs	December	Week 49	19		33,5
+hrs	December	Week 50	4		37,5
+hrs	December	Week 51	14		37,5
+hrs	December	Week 52	0		26,5
+hrs	January	Week 1			
+hrs	January	Week 2			
+hrs	January	Week 3			
+hrs	January	Week 4			
+hrs	February	Week 5			
+hrs	February	Week 6			
+hrs	February	Week 7			
+hrs	February	Week 8		0	
+Total:					
+
+
+INCIDENT_DEFINITION
+
+INSERT INTO INCIDENT_DEFINITION
+
+	Month	November	Tina	Dan	Mo
+hrs	October	Week 39-43	39,5	31	15
+hrs	November	Week 44	27,5	15	3,5
+hrs	November	Week 45	34,5	7,5	3,5
+hrs	November	Week 46	27	2,5	37,5
+hrs	November	Week 47	7	27,5	0
+hrs	November	Week 48	24	37,5	37,5
+hrs	December	Week 49	19	30	33,5
+hrs	December	Week 50	4	30	37,5
+hrs	December	Week 51	14	25	37,5
+hrs	December	Week 52	0	25	26,5
+hrs	January	Week 1		30	
+hrs	January	Week 2		25	
+hrs	January	Week 3		30	
+hrs	January	Week 4		37.5	
+hrs	February	Week 5		33.5	
+hrs	February	Week 6		33	
+hrs	February	Week 7		30	
+hrs	February	Week 8		0	
+Total:					
+
+
+192.168.50.41
+
+C:\Users\Daniel.Perrett\Downloads\WindowsGrep23.exe
+
+192.168.114.50:
+
+Executing SQL
+
+
+
+
+992323
+
+We are just not interested in this event
+
+MediaONVIFSoapInterface
+
+  private string GetSnapShotURL(int cam, string username, string password, int port, string profile,  string ipaddress = null)
+        {
+            string url = "";
+            string param = "";
+            if (string.IsNullOrEmpty(username))
+            {
+                param = string.Format("<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>{0}</ProfileToken></GetSnapshotUri></s:Body></s:Envelope>", profile);
+            }
+            else
+            {
+                //string param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>admin</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest\">04AS3htQZBGxoPCNDBTvOIXoSlY=</wsse:Password><wsse:Nonce>SXEY/A+4IzbpLBRs8r/LTbwQZWajLmBo3NPiwjlhMFo=</wsse:Nonce><wsu:Created>2016-12-22T13:14:49Z</wsu:Created></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>main</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>");
+                param = string.Format("<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\"><s:Header xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\"><wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\"><wsse:UsernameToken><wsse:Username>{0}</wsse:Username><wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText\">{1}</wsse:Password></wsse:UsernameToken></wsse:Security></s:Header><soap:Body><GetSnapshotUri xmlns=\"http://www.onvif.org/ver10/media/wsdl\"><ProfileToken>{2}</ProfileToken></GetSnapshotUri></soap:Body></soap:Envelope>", username, password, profile);
+            }
+            string result = "";
+            using (WebClient client = new WebClient())
+            {
+                client.Headers[HttpRequestHeader.UserAgent] = "Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 4.0.30319.42000)";
+                client.Headers[HttpRequestHeader.ContentType] = "application/soap+xml; charset=utf-8; action=\"http://www.onvif.org/ver10/media/wsdl/GetSnapshotUri\"";
+                if(ipaddress == null)
+                {
+                    ipaddress = ipAddress[cam];
+                }
+                result = client.UploadString(string.Format("http://{0}/onvif/services", ipaddress), param);
+            }
+            if(result.Contains("GetSnapshotUriResponse"))
+            {
+                int index = result.IndexOf(":Uri>");
+                int end = result.LastIndexOf(":Uri");
+                url = result.Substring(index+ 5, end - index - 9);
+            }
+            
+            return url;
+        }
+
+using System.Net;
+using System.ServiceModel.Channels;
+using System.ServiceModel;
+
+D:\3-Workspace\ImCityAdapters\ClearviewCounterAdapter\src\dynniq\imcity\clearview\ClearviewXMPPTigaseClientInterface.java
+
+cajtmsfaults.co.uk
+
+Http Timer TimedOut
+
+initialiseSoapService
+
+webService
+
+initialiseSoapService();
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+http://93.95.10.169:18080/
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+oService.war
+dperrett@ubuntu-512mb-lon1-01:~$ wget http://93.95.10.169
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+cajtmsfaults.co.uk
+
+fault.diagnosticData.getFaultID(
+
+setFaultID
+
+C:\imtech\CAFaultAdapter\CAFaultAdapter_1.0.0.jar
+
+subSystemAdapterFault
+
+setClearedTimestamp
+
+ReceivedInformation(subSystemAdapterFault);
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('2017-03-02 13:29:03', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0 AND CLEARDATE=null
+
+CLEAREDDATE
+
+SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0 AND CLEAREDDATE=NULL;
+
+String
+
+CORBAQuery
+
+int c = 0;
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('2017-03-02 13:43:33', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0 AND CLEAREDDATE is null
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/04 System Design Specification/ClearviewAdapter/Insight XMPP.pdf 
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('2017-03-02 14:17:47', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0 AND CLEAREDDATE is null
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('2017-03-02 15:12:06', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('2017-03-02 15:22:09', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('2017-03-02 15:27:34', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='CA-ANPR-JTMS' AND FAULTTYPE=0
+
+datasourceTypeId
+
+C:\imtech\CAFaultAdapter\CAFaultAdapter_1.0.0.jar
+
+MediaONVIFSoapInterface
+
+  if(ipaddress == null)
+                {
+                    ipaddress = ipAddress[cam];
+                }
+
+http://192.168.16.106/snap.jpg?JpegCam=1
+
+WebClient
+
+Stream data = client.OpenRead (args[0]);
+        StreamReader reader = new StreamReader (data);
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release\ManagedDll.tlb
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\TycoTestProject\bin\x86\Release\ManagedDll.dll
+
+ file.read(scn "CameraType", cameraType, "Predator");
+
+cameraType
+
+char cameraType[128];
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\ManagedDll.tlb
+
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+
+
+SharedObject=CCTV010
+
+CameraType
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+Order no.: 	65287644
+External transaction nr: 	osp#8828742
+Transaction date: 	2017-03-03 13:07:48
+Ovh transaction no.: 	CreditCardOsp#8828742
+
+37.187.97.171
+
+BDvBwkTtzc51
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+ns3069374.ip-37-187-97.eu
+
+37.187.97.171
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+CameraType
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+clearFault(SNAPSHOT_ERROR, item->GetScn())
+
+clearFaults
+
+clearFault(SNAPSHOT_ERROR, item->GetScn()
+
+cameraParameters
+
+map<string, CameraParameter_t>
+
+cameraParameters
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+#include "AdapterStatus.h"
+
+this->adapterStatus = AdapterStatus::GetInstance();
+
+AdapterStatus* adapterStatus;
+
+   this->adapterStatus = AdapterStatus::GetInstance();
+
+SCNName
+
+clearFaults
+
+ registry.read("AdapterSCN", SCNName, "VMSAdapter");
+  registry.read("SubsystemTypeID", TypeID, 1200);
+
+AdapterStatus
+
+this->adapterStatus->Initialise(SCNName, TypeID, m_pmanager->m_cdbManager);
+
+ char SCNName[256] = {0};
+  long TypeID = 1200;
+
+CDBInterfaceManager
+
+   AdapterStatus* adapterStatus;
+
+    reg.read("AdapterSCN", SCNName, "VMSAdapter");
+    reg.read("SubsystemTypeID", TypeID, 1200);
+
+    this->adapterStatus = AdapterStatus::GetInstance();
+    this->adapterStatus->Initialise(SCNName, TypeID, manager->m_cdbManager);
+
+rootRegistry
+
+#include "AdapterStatus.h"
+
+    char deffile[255] = "";
+    char SCNName[256] = {0};
+
+ char SCNName[256] = {0};
+
+  long TypeID = 1200;
+
+m_pmanager->
+
+  this->adapterStatus->Initialise(SCNName, TypeID, m_pmanager->m_cdbManager);
+
+37.187.97.171
+
+this->adapterStatus->SetStatus("Initialisation");
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+this->adapterStatus->SetStatus("OK");
+
+this->adapterStatus->SetStatus("
+
+ this->adapterStatus->SetStatus("Waiting to Start Monitoring.");
+
+fireClearedFault
+
+clearSnapShotFault
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\cctvadapter\cctvadapter.ini
+
+C:\cctvadapter\DVtelAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+404737.78
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+

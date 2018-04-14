@@ -1,0 +1,678 @@
+Ali Mahdmina 
+
+.im/
+
+package dynniq.imcity.myAdapter;
+
+import imtech.imcity.cdb.CDBConstant;
+
+	private final static Logger logger = LogManager.getLogger(myAdapterMain.class);
+
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Stand alone task.
+ * 
+ * This class is intended to be the pattern by which objects are marshaled into documents.
+ * 
+ */
+package dynniq.imcity.myAdapter;
+
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBUtility;
+import dynniq.imcity.myAdapter.support.AdapterConstant;
+import dynniq.imcity.myAdapter.support.AdapterUtility;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
+ImCityCORBA_1_0_0.jar
+
+D:\myAdapter\plugins\ImCityCORBA_1_0_0.jar
+
+D:\myAdapter
+
+ClearviewCounterAdapter
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
+
+public ProcessorActionThread(Properties configArgsIn) 
+		{
+			configArgsThread = configArgsIn;
+		}
+
+ClearviewFaultThread
+
+FaultInformation
+
+InboundQueueInstance
+
+YYYY-MM-DD HH:MM::SS
+
+InboundFaultQueue
+
+	public String From = "";
+	public String To = "";
+	public int ID = 0;
+	public String Device = "";
+	public String Fault = "";
+    public FaultTypeTable type = FaultTypeTable.NotConnected;
+    public String Time = ""; //YYYY-MM-DD HH:MM::SS
+    public String EndTime = ""; //YYYY-MM-DD HH:MM::SS
+
+(String From, 
+			         String To, 
+			         int ID, 
+			         String Device, 
+			         String Fault, 
+			         FaultTypeTable type, 
+			         String Time, //YYYY-MM-DD HH:MM::SS
+                     String EndTime //YYYY-MM-DD HH:MM::SS
+                     )
+
+InboundFaultQueue
+
+if(lock.tryLock())
+			{
+
+ClearviewFaultThread
+
+InboundFaultQueue
+
+	private final Logger loggerT = LogManager.getLogger(ProcessorActionThread.class);
+
+ClearviewFaultThread
+
+InboundFaultQueue
+
+inboundQueue
+
+InboundFaultQueue
+
+clearviewFaultThread
+
+CDBConstant.MAINHTREADPRIORITY
+
+clearviewFaultThread.
+
+(Properties configArgsIn)
+
+ClearviewFaultXMPPInterface
+
+@Override
+		public void run() 
+		{
+			startClient();
+		}
+
+private void startClient() 
+		{
+			boolean startClient = true;
+			while (isRunState()) 
+			{
+
+configArgs
+
+// This thread BLOCKS in the adapter class
+				if (startClient) 
+				{
+
+CDBUtility.sleeping(CDBConstant.IDLEWAIT);
+
+startClient = false;
+					cdbClient = new ClearviewCDBServiceAdapter(configArgsThread);
+
+	private ClearviewCDBServiceAdapter cdbClient = null;
+
+ClearviewFaultXMPPInterface
+
+(Properties configArgsIn) 
+
+configArgs
+
+CounterXmppClient
+
+try {
+   // thread to sleep for 1000 milliseconds
+   Thread.sleep(1000);
+   } catch (Exception e) {
+   System.out.println(e);
+   }
+   }
+
+Set Reset 
+
+QueueNotEmpty
+
+} catch (org.omg.CORBA.COMM_FAILURE e) {
+			AdapterUtility.ps(logger, "CORBA communication Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.OBJECT_NOT_EXIST e) {
+			AdapterUtility.ps(logger, "CORBA object does not exist Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.MARSHAL e) {
+			AdapterUtility.ps(logger, "CORBA marshal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_PARAM e) {
+			AdapterUtility.ps(logger, "CORBA bad parameter Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_OPERATION e) {
+			AdapterUtility.ps(logger, "CORBA bad operation Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.INTERNAL e) {
+			AdapterUtility.ps(logger, "CORBA internal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (NullPointerException e) {
+			AdapterUtility.ps(logger, "Null Pointer Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, "" + e);
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (Exception e) {
+			// Any other exception
+			AdapterUtility.ps(logger, "Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		}
+
+MainLoop
+
+InboundFaultQueue
+
+QueueNotEmpty
+
+inboundQueue
+
+waitForXmppMessage
+
+import dynniq.imcity.myAdapter.support.FaultInformation;
+import dynniq.imcity.myAdapter.support.FaultTypeTable;
+
+FaultInformation(String From, 
+			         String To, 
+			         int ID, 
+			         String Device, 
+			         String Fault, 
+			         FaultTypeTable type, 
+			         String Time, //YYYY-MM-DD HH:MM::SS
+                     String EndTime //YYYY-MM-DD HH:MM::SS
+                     )
+
+inboundQueue
+
+108300 
+
+carParkFaults
+
+java.util.Date
+
+inboundFault
+
+InboundFaultQueue
+
+ inboundFault = InboundFaultQueue.GetInstance();
+
+ inboundFault = InboundFaultQueue.GetInstance();
+	  classname = inboundFault.getClass().getName();
+
+@Test
+  public void pop() {
+  
+  }
+
+  @Test
+  public void QueueNotEmpty() {
+  
+  }
+
+
+  @Test
+  public void InboundFaultQueue() {
+  
+  }
+
+
+
+System.out.println("GetInstance");
+
+ throw new RuntimeException("Test not implemented");
+
+class name not equal
+
+ System.out.println("GetInstance");
+
+pushStringStringintStringStringFaultTypeTableStringString
+
+System.out.println("
+
+pushFaultInformation
+
+System.out.println("
+
+(priority=1)
+
+Random rand = new Random();
+				 Thread.sleep(1000 * (rand.nextInt(20) + 1));
+				 FaultInformation  fault = new FaultInformation("From", "To", rand.nextInt(10), "Me", "Broken", FaultTypeTable.ChargerFailure, "", "");
+				 inboundQueue.push(fault);
+
+inboundFault
+
+  throw new RuntimeException("class name not equal");
+
+randomId
+
+Random rand = new Random();
+	
+
+inboundFault
+
+System.out.println("pop");
+
+ FaultInformation  fault
+
+randomId
+
+throw new RuntimeException("Queue  Not Empty");
+
+
+import dynniq.imcity.myAdapter.support.FaultInformation;
+import dynniq.imcity.myAdapter.support.FaultTypeTable;
+
+InboundFaultQueue inboundFault = null;
+
+ inboundFault = InboundFaultQueue.GetInstance();
+
+ClearviewCDBServiceAdapter adapter
+
+ClearviewCDBServiceAdapter
+
+ProcessorActionThread
+
+configArgs = getConfig();
+
+private static Properties configArgs;
+
+private static Properties getConfig() 
+	{
+		String configHome = AdapterConstant.iniFile;
+		File cfgFile = new File(configHome);
+		Properties props = new Properties();
+		
+		// Clear the running state
+		setRunState(false);
+
+		try 
+		{
+			FileInputStream fin = new FileInputStream(cfgFile);
+			props.load( fin );
+			fin.close();
+
+			setRunState(true);
+
+		}
+		catch (FileNotFoundException e) 
+		{
+			AdapterUtility.ps(logger, "Configuration file not found " + e.getMessage());
+		}
+		catch (IOException e) 
+		{
+			AdapterUtility.ps(logger, "Configuration file I/O Exception " + e.getMessage());
+		}
+
+		return props;
+	}
+
+new ClearviewCDBServiceAdapter(configArgsThread, inboundQueue);
+
+configArgs
+
+inboundFault
+
+dynniq.imcity.myAdapter.ClearviewCounterAdapterMain.
+
+class ClearviewFaultThread extends Thread
+
+ClearviewCDBServiceAdapter
+
+@Override
+	public void run() 
+	{
+
+TestThread
+
+Random rand = new Random();
+
+FaultInformation  fault = new FaultInformation("From", "To", rand.nextInt(10), "Me", "Broken", FaultTypeTable.ChargerFailure, "", "");
+
+  FaultInformation  fault = new FaultInformation("From", "To", rand.nextInt(10), "Me", "Broken", FaultTypeTable.ChargerFailure, "", "");
+			  System.out.println("" + fault.ID);
+			  randomId[n] = fault.ID;
+		  	  inboundFault.push(fault);
+
+carParkFaults
+
+CDBConstant
+
+DETECTOR_FAULTS
+
+"INSERT INTO
+
+"(SYSTEMCODENUMBER,COMMANDFORMAT,DATASOURCE_TYPEID,COMMAND,PRIORITY,REQTIME) VALUES (";
+
+SQLINSERT
+
+SQLSELECT
+
+String sqlCommand = "SELECT systemcodenumber FROM VMS_DEFINITION where DATASOURCE_TYPEID=1200";
+			CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+
+	String sqlCommand = "SELECT systemcodenumber FROM VMS_DEFINITION where DATASOURCE_TYPEID=1200";
+			CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+				
+
+// Update changes to existing device if INSERT failed
+			if ( queryResults.getWarnings() != null ) {
+				if ( queryResults.getWarnings().value.length > 0 ) {
+					CorbaSQLWarning[] warning = queryResults.getWarnings().value;
+					for (CorbaSQLWarning cw : warning) {
+						int code = cw.errorCode;
+						if ( code == AdapterConstant.ONE) {
+							// Perform Update as Insert failed
+						}
+					}
+				}
+
+ResultSetsHolder
+
+executeSQL
+
+CDBConstant
+
+"sqlCommand"	 (pending)	
+
+
+TO_DATE('06/06/2006', 'mm/dd/yyyy')
+
+INSERT INTO DETECTOR_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION, EQUIPMENTFAULT) VALUES ("1", "111", TO_DATE('06/06/2006', 'mm/dd/yyyy'), 2, 3, "test", 1, )
+
+INSERT INTO DETECTOR_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION, EQUIPMENTFAULT) VALUES ("1", "111", TO_DATE('06/06/2006', 'mm/dd/yyyy'), 2, 3, "test", 2);
+
+INSERT INTO DETECTOR_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE, DATASOURCE_TYPEID, DESCRIPTION) VALUES ("1", "111", TO_DATE('06/06/2006', 'mm/dd/yyyy'), 2, 3, "test");
+
+TO_DATE('06/06/2006', 'mm/dd/yyyy')
+
+INSERT INTO DETECTOR_FAULTS (FAULTID, SYSTEMCODENUMBER, CREATIONDATE, FAULTTYPE) VALUES ('2', '104039301', TO_DATE('06/06/2006', 'mm/dd/yyyy'), 3);
+
+public enum FaultMessageType
+{
+	CreateFault,
+	ClearFault
+}
+
+package dynniq.imcity.myAdapter.support;
+
+
+public enum FaultMessageType
+{
+	CreateFault,
+	ClearFault
+}
+
+FaultMessageType
+
+ClearviewCounterFaultInput
+
+IClearviewFaultInterface[] interfaces
+
+IClearviewFaultInterface
+
+interfaces
+
+merseybridge
+
+XKxEff8fUxQ9XVn
+
+185.123.112.14
+
+https://insight.clearviewtraffic.com/api/feed/1623/json?username=merseybridge&password=XKxEff8fUxQ9XVn&start_time=20160320010000&end_time=20160322010000
+
+http://www.tigase.net/portfolio/xmpp-web-client
+
+portfolio/xmpp-web-client
+
+http://bbc.co.uk/
+
+tigase.im
+
+{"err_code":0,"err_msg":"","rows":[[{"site_name":"M720_Insight","time":"2016-03-20 00:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 00:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 03:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 03:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 05:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 05:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 08:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 08:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 11:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 11:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 13:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 13:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 16:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 16:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 19:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 19:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 21:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 21:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 00:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 00:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 02:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 02:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 05:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 05:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 07:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 07:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 10:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 10:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 10:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 10:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 13:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 13:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 15:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 15:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 18:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 18:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 20:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 20:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 23:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 23:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 23:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 23:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-22 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-22 00:00:00","channel":"2","count":"2794"}]],"totals":{"site_name":"","time":"","channel":1,"count":2794},"averages":{"site_name":"","time":"","channel":1,"count":2794}}
+
+{"err_code":0,"err_msg":"","rows":[[{"site_name":"M720_Insight","time":"2016-03-10 00:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 00:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 03:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 03:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 03:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 03:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 05:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 05:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 06:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 06:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 08:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 08:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 11:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 11:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 13:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 13:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 16:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 16:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 16:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 16:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 19:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 19:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-10 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 21:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 21:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-10 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-10 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 00:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 00:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 02:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 02:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 05:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 05:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 05:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 05:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 07:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 07:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 10:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 10:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 13:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 13:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 15:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 15:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 18:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 18:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-11 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 23:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-11 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-11 23:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 02:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 02:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 04:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 04:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 05:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 05:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 07:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 07:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 07:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 07:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 08:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 08:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 10:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 10:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 12:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 12:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 15:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 15:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 15:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 15:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 17:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 17:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 18:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 18:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 18:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 18:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 20:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 20:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 20:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 20:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-12 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 23:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-12 23:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-12 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 01:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 01:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 04:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 04:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 04:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 04:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 06:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 06:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 07:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 07:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 08:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 08:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 09:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 09:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 09:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 09:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 12:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 12:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 14:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 14:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 17:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 17:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 17:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 17:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 18:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 18:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 19:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 19:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 20:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 20:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-13 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 22:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 22:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-13 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-13 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 01:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-14 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 01:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-14 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 03:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 03:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 06:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 06:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 06:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 06:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 08:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 08:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 09:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 09:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 11:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-14 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 11:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-14 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 14:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-14 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 14:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-14 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 16:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 16:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 17:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 17:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 18:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 18:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 19:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 19:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 19:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 19:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 22:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 22:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-14 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-14 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 00:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 00:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 03:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 03:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 05:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 05:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 06:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 06:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 08:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 08:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 11:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 11:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 13:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 13:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 16:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 16:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 16:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-15 16:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 19:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 19:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 21:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 21:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-15 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-15 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 00:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 00:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 02:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 02:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 05:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 05:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 05:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 05:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 07:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 07:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 10:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 10:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 10:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 10:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 13:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 13:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 15:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 15:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 18:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 18:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 20:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 20:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-16 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 23:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-16 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-16 23:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 02:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 02:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 04:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 04:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 07:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 07:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 07:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 07:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 08:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 08:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 09:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 09:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 10:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 10:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 12:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 12:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 15:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 15:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-17 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 17:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 17:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 18:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 18:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 20:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 20:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 20:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 20:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 23:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-17 23:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-17 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 01:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 01:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 04:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 04:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 06:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 06:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 07:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 07:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 08:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 08:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 09:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 09:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 09:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 09:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 12:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 12:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 14:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 14:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 17:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 17:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 17:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-18 17:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 18:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 18:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 19:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 19:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 20:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 20:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 22:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 22:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 22:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 22:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-18 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-18 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 01:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 01:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 03:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 03:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 06:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 06:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 06:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 06:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 08:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 08:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 08:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 08:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 09:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 09:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 11:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 11:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 11:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 11:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 14:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 14:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 16:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 16:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-19 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 18:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 18:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 19:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 19:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 19:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 19:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 21:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 21:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 21:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 21:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 22:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 22:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-19 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-19 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 00:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 00:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 00:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 02:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 03:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 03:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 05:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 05:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 05:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 05:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 07:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 08:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 08:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 10:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 11:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 11:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 13:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 13:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 13:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 13:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 15:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 16:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 16:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-20 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 18:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 18:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 19:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 19:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 20:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 21:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 21:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-20 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-20 23:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 00:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 00:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 00:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 00:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 01:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 02:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 02:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 02:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 02:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 03:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 03:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 03:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 03:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 04:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 05:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 05:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 05:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 05:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 06:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 07:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 07:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 07:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 07:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 08:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 08:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 08:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 08:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 09:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 10:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 10:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 10:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 10:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 11:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 11:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 11:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 11:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 12:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 13:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 13:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 13:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 13:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 14:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 15:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 15:00:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 15:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 15:30:00","channel":"2","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 16:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 16:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 16:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 16:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 17:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 18:00:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 18:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 18:30:00","channel":"1","count":"2792"},{"site_name":"M720_Insight","time":"2016-03-21 18:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 19:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 19:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 19:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 19:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 20:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 20:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 20:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 20:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 21:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 21:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 21:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 21:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:00:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:30:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 22:30:00","channel":"2","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-21 23:00:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 23:00:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 23:30:00","channel":"1","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-21 23:30:00","channel":"2","count":"2793"},{"site_name":"M720_Insight","time":"2016-03-22 00:00:00","channel":"1","count":"2794"},{"site_name":"M720_Insight","time":"2016-03-22 00:00:00","channel":"2","count":"2794"}]],"totals":{"site_name":"","time":"","channel":1,"count":2794},"averages":{"site_name":"","time":"","channel":1,"count":2794}}
+
+To enable XMPP messages the user selects ?My Account? from the ?System? menu and enters their XMPP name and selects the error level.
+
+up 
+
+10.164.114.30 
+
+https://www.pidgin.im/download/
+
+46.231.185.224
+
+merseybridge
+
+XKxEff8fUxQ9XVn
+
+https://insight.clearviewtraffic.com/api/feed/1623/json?username=merseybridge&password=XKxEff8fUxQ9XVn&start_time=20160320&end_time=20160322
+
+merseybridge
+
+XKxEff8fUxQ9XVn
+
+16025
+
+https://wiki.debian.org/InstallingProsody
+
+public static void main(String[] args)
+	{
+
+x
+
+import java.util.*;
+import java.io.*;
+
+import org.jivesoftware.smack.Chat;
+import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.MessageListener;
+import org.jivesoftware.smack.Roster;
+import org.jivesoftware.smack.RosterEntry;
+import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.packet.Message;
+
+import java.io.*;
+
+ConnectionConfiguration
+
+import java.util.*;
+import java.io.*;
+ 
+import org.jivesoftware.smack.Chat;
+import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.MessageListener;
+import org.jivesoftware.smack.Roster;
+import org.jivesoftware.smack.RosterEntry;
+import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.packet.Message;
+ 
+public class JabberSmackAPI implements MessageListener{
+ 
+    XMPPConnection connection;
+ 
+    public void login(String userName, String password) throws XMPPException
+    {
+    ConnectionConfiguration config = new ConnectionConfiguration("im.server.here",5222, "Work");
+    connection = new XMPPConnection(config);
+ 
+    connection.connect();
+    connection.login(userName, password);
+    }
+ 
+    public void sendMessage(String message, String to) throws XMPPException
+    {
+    Chat chat = connection.getChatManager().createChat(to, this);
+    chat.sendMessage(message);
+    }
+ 
+    public void displayBuddyList()
+    {
+    Roster roster = connection.getRoster();
+    Collection<RosterEntry> entries = roster.getEntries();
+ 
+    System.out.println("\n\n" + entries.size() + " buddy(ies):");
+    for(RosterEntry r:entries)
+    {
+    System.out.println(r.getUser());
+    }
+    }
+ 
+    public void disconnect()
+    {
+    connection.disconnect();
+    }
+ 
+    public void processMessage(Chat chat, Message message)
+    {
+    if(message.getType() == Message.Type.chat)
+    System.out.println(chat.getParticipant() + " says: " + message.getBody());
+    }
+ 
+    public static void main(String args[]) throws XMPPException, IOException
+    {
+    // declare variables
+    JabberSmackAPI c = new JabberSmackAPI();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    String msg;
+ 
+ 
+    // turn on the enhanced debugger
+    XMPPConnection.DEBUG_ENABLED = true;
+ 
+ 
+    // Enter your login information here
+    c.login("[B]username[/B]", "[B]password[/B]");
+ 
+    c.displayBuddyList();
+ 
+    System.out.println("-----");
+ 
+    System.out.println("Who do you want to talk to? - Type contacts full email address:");
+    String talkTo = br.readLine();
+ 
+    System.out.println("-----");
+    System.out.println("All messages will be sent to " + talkTo);
+    System.out.println("Enter your message in the console:");
+    System.out.println("-----\n");
+ 
+    while( !(msg=br.readLine()).equals("bye"))
+    {
+        c.sendMessage(msg, talkTo);
+    }
+ 
+    c.disconnect();
+    System.exit(0);
+    }
+ 
+}
+
+JabberSmackAPI
+
+ConnectionConfiguration
+
+System.out.println("Hello World");
+		ConnectionConfiguration config = new ConnectionConfiguration("localhost", 5222);
+		
+		
+
+XMPPTCPConnectionConfiguration
+
+AbstractXMPPConnection
+
+// Create the configuration for this new connection
+XMPPTCPConnectionConfiguration.Builder configBuilder = XMPPTCPConnectionConfiguration.builder();
+configBuilder.setUsernameAndPassword("username", "password");
+configBuilder.setResource("SomeResource");
+configBuilder.setServiceName("jabber.org");
+
+AbstractXMPPConnection connection = new XMPPTCPConnection(configBuilder.build());
+// Connect to the server
+connection.connect();
+// Log into the server
+connection.login();
+
+try
+		{
+			conn1.connect();
+		}
+		catch(Exception ex)
+		{
+			
+		}
+
+XMPPTCPConnectionConfiguration.builder
+
+try
+		{
+
+23953
+
+XMPPTCPConnectionConfiguration.Builder configBuilder = XMPPTCPConnectionConfiguration.builder();
+
+connection = new XMPPConnection("myxmppserver.com");
+
+
+ConnectionConfiguration config =
+2
+     new ConnectionConfiguration(serverHost, serverPort);
+3
+XMPPConnection connection = new XMPPConnection(config);
+4
+connection.connect();
+5
+connection.login("myuser", "mypass");
+
+
+try
+		{
+			// Create the configuration for this new connection
+			XMPPTCPConnectionConfiguration.Builder configBuilder = XMPPTCPConnectionConfiguration.builder();
+			configBuilder.setUsernameAndPassword("username", "password");
+			configBuilder.setResource("SomeResource");
+			configBuilder.setServiceName("jabber.org");
+
+			AbstractXMPPConnection connection = new XMPPTCPConnection(configBuilder.build());
+		
+			//Connect to the server
+			connection.connect();
+			//Log into the server
+			connection.login();
+		}
+		catch(Exception ex)
+		{
+			
+		}
+

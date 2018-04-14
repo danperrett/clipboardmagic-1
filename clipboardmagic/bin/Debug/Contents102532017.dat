@@ -1,0 +1,4536 @@
+not
+
+NameServiceRef
+
+corbaloc::192.168.50.107:2809/NameService
+
+CutlasNameService
+
+NameServiceLoc
+
+corbaloc::192.168.50.107:2809/NameService
+
+contextKind
+
+UTMC
+
+contextName
+
+CUTLAS
+
+resolve_initial_references
+
+serviceName
+
+MANAGER2
+
+resolve_initial_references
+
+utmcServices
+
+serviceName
+
+nameServiceReference
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+1.1.1.1 
+ 	NOTE
+A DLL needs to be installed and configured by Tyco to enable the Tyco agent software to operate.
+
+For each Camera section in the cctvadapter.ini file that acquires data from a Tyco server, edit the INI file with the following keys and values:
+Entry	Description	Value
+Plugin	DLL name	TycoAgent.dll
+CameraID 	The network ID of the camera, either an IP address or network name.	
+Username	Optional username to use when connecting to the PIPS server.	
+Password	Optional password to use when connecting to the PIPS server.	
+
+
+
+ServerIPAddress
+
+ServerUsername
+
+CameraAccessPort
+
+CameraType
+
+CameraUsername
+
+CameraPassword
+
+SharedObject
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+appSettings
+
+InputDataDump
+
+m62
+
+ORA-00911: invalid character
+
++
+  "from dss_fin_user.acq_dashboard_src_load_success " 
+
+vmsUnitReference
+
+ New VMSTrafficData
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+select systemcodenumber, ShortDescription, TypeId, DataSource_TypeID, Easting, Northing from vms_definition where deletiondate is null and datasource_typeid = 3 and typeid in ( 4, 5, 6, 8  );
+
+GetTableFromDB
+
+\\192.168.11.210\danperrett\datexIIadapter\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+CFB613DE7D9A3254E0433CC411ACFD01
+
+SubscriberService/SubscriberWebService/Core/EventManager.cs
+
+wilmut.peek.prv
+
+GetDBQueryString
+
+CREATEDBY,
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\ReadImagesAgent\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\ReadImagesAgent.dll
+
+C:\CCTVForBackwardComaptibility\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+DVTelWrapperLibrary
+
+..\..\..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+..\..\..\..\..\..\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+@echo off
+
+@echo ***************************************************
+@echo ***************************************************
+@echo Filename: Start_Build_VS10_x64.bat
+@echo Description: Starts the build of ImCity for 2010 solutions
+@echo ---------------------------------------------------
+@echo Created by: Daniel Perrett	Date: May 2016
+@echo ---------------------------------------------------
+@echo ---------------------------------------------------
+
+REM Establish a build root
+cd C:\secure\Source\cutlas
+
+devenv "C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln"
+
+devenv "Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll.sln" /Clean
+
+%1 /OUT "build_%1_VS2010_x64.log" > nul
+
+ %1 /OUT "build_%1_VS2010_x64.log"  > nul
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject
+
+sudo adduser -m -d /home/codinggain codinggain
+
+
+\Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary
+
+regasm /tlb /codebase Core\Release\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+Core\%1\CCTVAdapter\DVTelAgent\DVTelWrapperLibrary\ManagedDll
+
+Core\Adapters\cctvAdapter\Plugins\DVTelAgent
+
+0
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+My First Heading
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild
+
+..\..\Release\Helpers
+
+$(SolutionDir)..\Release
+
+$(OutDir)/
+
+$(SolutionDir)..\Debug\Helpers
+
+Camera CCTV001
+
+Camera CCTV002
+
+getClipboardText?username=danperre
+
+https://en.wikipedia.org/wiki/Component_Object_Model
+
+Component Object Model
+
+bool GotoPreset(int cameraNum, int presetnum);
+
+bool Logon(string server, string username, string password);
+
+ void Initialise(string config);
+
+ public bool Logon(string server, string username, string password)
+
+int InitiliseNumberOfCameras();
+
+public int GetCameraNumberFromName(string name)
+
+GetCameraNumberFromName
+
+ bool GotoPreset(int cameraNum, int presetnum);
+
+ bool Bookmark(int cam, string name, string description);
+
+ byte[] GetSnapshot(int camerNum, ref long length, ref int preset, string username, string password, int port, string cameraType = null);
+
+2755466/2/r8R/665
+
+Open Network Video Interface Forum
+
+DVTel Agent
+
+Blow is a list of command and parameters that have to be enabled by the :
+
+Whytrumpisgreat.com
+
+SharedObject=
+
+[CCTV001]
+UpdatePeriod=2
+Plugin=DVTelAgent.dll
+ServerIPAddress=192.168.11.121
+ServerUsername=admin
+CameraAccessPort=80
+CameraType=Bosch
+
+[CCTV010]
+UpdatePeriod=2
+SharedObject=CCTV001
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV011]
+SharedObject=CCTV001
+UpdatePeriod=3
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+[CCTV012]
+SharedObject=CCTV001
+UpdatePeriod=4
+CameraUsername=admin
+CameraPassword=9999
+CameraAccessPort=80
+CameraType=Predator
+
+4845
+
+??
+
+4845
+
+?????????????????????????????????????????????????????????????????????????????????????????
+
+, says the Tate.
+
+URL http://www.bbc.co.uk/news/entertainment-arts-39219709
+
+********************
+
+Source bbc-news
+
+Title Title: West Indies v England - Hales starring on return
+
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/Everest/trunk
+
+C:\Users\Daniel.Perrett\Documents\DVTelCCTVAdapter.docx
+
+g
+
+http://93.95.10.169:18080/
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification
+
+https://www.youtube.com/watch?v=GwbO_PdwK_4
+
+/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+
+	/*
+	 * updateFaultInDatabase
+	 */
+	boolean updateFaultInDatabase(FaultInformation fault, String databasetable)
+	{
+		Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		formatter.setTimeZone(calendar.getTimeZone());
+		String startdateString = formatter.format(calendar.getTime());
+		int faulttype = GetFaultType(fault.diagnosticData);
+		int c = 0;
+		String sqlCommand = 
+				String.format("SELECT * FROM %1$s WHERE SYSTEMCODENUMBER='%2$s' AND FAULTTYPE=%3$d",
+					      databasetable,
+					      fault.diagnosticData.getEquipmentSCN(), 
+					      faulttype); 
+		
+		logger.log(logLevel, sqlCommand);
+		CORBAQuery queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		
+		if(GetErrorWarning(c, queryResults) != "") return false;
+		
+		ResultSetsHolder resultset = queryResults.getResultSets();
+		ResultSet[] _res = resultset.value;
+	/*	for(ResultSet _r: _res)
+		{
+			boolean ignoreflag = false;
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+				switch(_c.name)
+				{
+				
+					
+				case "CLEAREDDATE":
+					Timestamp[] timestamp = _c.values.timestampValues();
+					if(timestamp != null)
+					{
+						if(timestamp.length > 0)
+						{
+							if(timestamp[0].dateValue != 0)
+							{
+								logger.log(logLevel, "Its Already been Cleared!");
+								return false;
+							}
+						}
+					}
+					break;
+				}
+			}
+			
+		}
+		*/
+		calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+		sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+		
+		logger.log(logLevel, sqlCommand);
+		queryResults = AdapterUtility.executeSQL(logger, corbaSessionObjRef, sqlCommand, getDiagInt() );
+		return GetErrorWarning(c, queryResults) == "";
+	}
+	
+
+anperrett.com:8000/getProjectsAndIds?id=danperre&pro_id=437
+
+clearUnavailableFault
+
+	logger.log(logLevel, "Error connection to server");
+        	connected = false;
+        	connectionAttempts++;
+        	if(connectionAttempts >= 3 && !unavailableFaultRaised)
+        	{
+        		createUnavailableFault("Cannot connect to the xmpp server!");
+        		
+        		connectionAttempts = 0;
+        	}
+
+  adapterStatus.setStatus("Succesfully Logged onto XMPP Server");
+            connectionAttempts = 0;
+            if(unavailableFaultRaised)
+            {
+            	unavailableFaultRaised = false;
+            	clearUnavailableFault();
+            }
+
+clearUnavailableFault
+
+c
+
+	sqlCommand = String.format("UPDATE %1$s set CLEAREDDATE=TO_DATE('%2$s', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='%3$s' AND FAULTTYPE=%4$d AND CLEAREDDATE is null AND DATASOURCE_TYPEID=%5$s", 
+				databasetable, 
+				enddateString, 
+				fault.diagnosticData.getEquipmentSCN(),
+				faulttype,
+				datasourceTypeId);
+
+cdbTableName
+
+fault.EndTime
+
+fault.Device
+
+fault.type.ordinal()
+
+unavailableFaultRaised
+
+unavailableFault = new FaultInformation();
+
+InsightDetector
+
+unavailableFault.Device = "InsightDetector";
+
+logger.log(logLevel, "Error in the insertion of Status");
+
+TO_DATE('Fri Mar 10 11:37:57 GMT 2017', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='InsightDetector'
+
+UPDATE SUBSYSTEM_FAULTS set CLEAREDDATE=TO_DATE('Fri Mar 10 11:37:57 GMT 2017', 'YYYY-MM-DD HH24:MI:SS') WHERE SYSTEMCODENUMBER='InsightDetector' AND FAULTTYPE=0 AND CLEAREDDATE is null AND DATASOURCE_TYPEID=1724
+
+SELECT * FROM SUBSYSTEM_FAULTS WHERE SYSTEMCODENUMBER='InsightDetector' AND CREATIONDATE=TO_DATE('', 'YYYY-MM-DD HH24:MI:SS') AND FAULTTYPE=0
+
+calendar = fault.diagnosticData.getClearedTimestamp().toGregorianCalendar();
+		formatter.setTimeZone(calendar.getTimeZone());
+		String enddateString = formatter.format(calendar.getTime());
+
+Calendar calendar = fault.diagnosticData.getStartedTimestamp().toGregorianCalendar();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+Calendar calendar
+
+fault.EndTime,
+
+Calendar
+
+fault.EndTime
+
+SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
+			Date time = new Date();
+			date = sdf.format(time);
+
+String date = "";
+
+fault.EndTime
+
+CORBAQuery
+
+int c = 0;
+
+54.246.187.36
+
+adapter 
+
+
+
+
+Hodge, Andrew - UK <andrew.hodge@dynniq.co.uk>; Turner, Tina  - UK <Tina.Turner@dynniq.co.uk>
+
+ReceiveMail
+
+    import java.io.IOException;  
+    import java.util.Properties;  
+    import javax.mail.Folder;  
+    import javax.mail.Message;  
+    import javax.mail.MessagingException;  
+    import javax.mail.NoSuchProviderException;  
+    import javax.mail.Session;  
+    import com.sun.mail.pop3.POP3Store;  
+      
+    public class ReceiveMail{  
+      
+     public static void receiveEmail(String pop3Host, String storeType,  
+      String user, String password) {  
+      try {  
+       //1) get the session object  
+       Properties properties = new Properties();  
+       properties.put("mail.pop3.host", pop3Host);  
+       Session emailSession = Session.getDefaultInstance(properties);  
+         
+       //2) create the POP3 store object and connect with the pop server  
+       POP3Store emailStore = (POP3Store) emailSession.getStore(storeType);  
+       emailStore.connect(user, password);  
+      
+       //3) create the folder object and open it  
+       Folder emailFolder = emailStore.getFolder("INBOX");  
+       emailFolder.open(Folder.READ_ONLY);  
+      
+       //4) retrieve the messages from the folder in an array and print it  
+       Message[] messages = emailFolder.getMessages();  
+       for (int i = 0; i < messages.length; i++) {  
+        Message message = messages[i];  
+        System.out.println("---------------------------------");  
+        System.out.println("Email Number " + (i + 1));  
+        System.out.println("Subject: " + message.getSubject());  
+        System.out.println("From: " + message.getFrom()[0]);  
+        System.out.println("Text: " + message.getContent().toString());  
+       }  
+      
+       //5) close the store and folder objects  
+       emailFolder.close(false);  
+       emailStore.close();  
+      
+      } catch (NoSuchProviderException e) {e.printStackTrace();}   
+      catch (MessagingException e) {e.printStackTrace();}  
+      catch (IOException e) {e.printStackTrace();}  
+     }  
+      
+     public static void main(String[] args) {  
+      
+      String host = "mail.javatpoint.com";//change accordingly  
+      String mailStoreType = "pop3";  
+      String username= "sonoojaiswal@javatpoint.com";  
+      String password= "xxxxx";//change accordingly  
+      
+      receiveEmail(host, mailStoreType, username, password);  
+      
+     }  
+    }  
+
+
+public class ReceiveMail {
+
+}
+
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+mail.javatpoint.com
+
+Daniel.Perrett@dynniq.co.uk
+
+
+ public static void main(String[] args) {  
+
+ pop.mail.yahoo.com
+
+Daniel.Perrett@dynniq.co.uk
+
+String host = "mail.javatpoint.com";//change accordingly  
+  String mailStoreType = "pop3";  
+  String username= "sonoojaiswal@javatpoint.com";  
+  String password= "xxxxx";//change accordingly  
+
+ String host = " pop.mail.yahoo.com";//change accordingly  
+  String mailStoreType = "pop3";  
+  String username= "danperrett07087@yahoo.com";  
+  String password= "M0nkeybra1ns";//change accordingly  
+  
+
+ pop.mail.yahoo.com
+
+sonoojaiswal@javatpoint.com
+
+ Properties properties = System.getProperties();
+    Session session = Session.getDefaultInstance(properties);
+    Store store = session.getStore("pop3");
+    store.connect(host, user, password);
+    Folder inbox = store.getFolder("Inbox");
+    inbox.open(Folder.READ_ONLY);
+
+@yahoo.com
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+op.mail.yahoo.com
+
+// get the list of inbox messages
+    Message[] messages = inbox.getMessages();
+
+	    
+
+ // get the list of inbox messages
+    Message[] messages = inbox.getMessages();
+
+
+g
+
+??
+
+if (messages.length == 0) System.out.println("No messages found.");
+
+x
+
+pop.gmail.com
+
+danperrett07087
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+pop.gmail.com
+
+/usr/bin/synergys -f --no-tray --debug INFO --name ukdt0348 -c /tmp/qt_temp.U19215 --address :24800
+
+acad2fc5-7557-4365-b65b-d6345c87912a@dynniq.co.uk
+
+Daniel.Perrett@dynniq.co.uk
+
+dperrett1969
+
+Errors were encountered while processing:
+ tomcat7
+
+
+sudo cp /etc/squirrelmail/apache.conf /etc/apache2/sites-available/squirrelmail.conf
+
+sudo a2ensite squirrelmail.conf
+
+.com/squirrelmail.
+
+ sudo mkdir -p /var/www/html
+
+usermod -m -d /var/www/html/
+
+Error: Failed to autocreate mailbox INBOX: Internal error occurred. Refer to server log for more information
+
+10777610
+
+23492
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+10862231010
+
+10860935182
+
+http://www.tecmint.com/setup-postfix-mail-server-in-ubuntu-debian/
+
+https://webmail.dynniq.co.uk/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fwebmail.dynniq.co.uk%2fowa%2f
+
+http://www.bbc.co.uk/news/world-europe-39248188
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification/
+
+23866
+
+SOAP Request
+
+
+4.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+1.1.1	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	The Simulator will randomly pipe out, faults pick out a fixed list.  The ID?s will also be picked out from a Fixed list. Clear or create is randomly chosen.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+C:\Users\Daniel.Perrett\Documents\CATestDesign.vsdx
+
+C:\Users\Daniel.Perrett\Documents\ClearViewModuleTestingPhase1.vsdx
+
+93.95.10.169
+
+http://cajtmsfaults.co.uk:18080/JTMSDiagnosticFeed.wsdl
+
+93.95.10.169
+
+http://93.95.10.169:18080/JTMSDiagnosticFeed.wsdl
+
+C:6090	M	For each PTZ CCTV camera it must be possible to define on the map a number of zones of coverage. For each zone of coverage a camera pre-set position can be defined.	2.34.37. The objective is to be able to automatically point a CCTV camera at the site of an incident that falls within a zone of coverage.
+
+C:6095	M	When automatically creating (Incident Detection) or manually creating/editing an Incident it shall be possible to trigger all PTZ cameras which have a zone of coverage that includes the geo-location of the incident, to point at the incident.	2.34.37
+
+4.1.1	TC001
+
+C:6260	M	Creating a new Incident shall result in an automatic flag being created for all CCTV cameras in the system. The associated text shall be the Incident reference.	SDD pt 1 Issue 2 section 4.1.1.1
+
+C:6400	M	The following fault states must be available from the CCTV sub-system and stored in the CDB
+?	Per camera
+o	camera fault
+o	loss of connection
+?	Loss of connection to the CCTV sub-system. In this event ImCity must indicate all cameras as status unknown and prevent user interface operation.	Common sense.
+
+
+
+
+
+
+3.14.23 8th bullet
+
+
+C:6410	M	Clearance of a fault must result in all relevant faults being automatically cleared in ImCity (without manual intervention). 
+
+C:6080	W	It must be possible to bring up a full resolution moving image from the camera in a separate window.	Not actually stated anywhere but an obvious requirement for ImCity and CCTV. Solution to be discussed (note C:1812 that requires a single frame to be displayed on camera selection). Not a MG MCS requirement and project cannot afford ?extras?.
+
+TC002
+
+4.1.3	TC003
+Name	Description
+Summary	
+Ref requirements	
+Pre-condition	
+Test description	
+Expected result	
+Actual result	
+Pass / Fail	
+
+
+C:6090
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+Num	CCTV_COMMAND
+1	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+2	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+3	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '3', '0')
+4	INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+5	INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '2', '0')
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+
+C:6260
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+TC002
+
+TC001
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+vmsRecord
+
+http://datex2.eu/schema/2/2_0
+
+http://www.datex2.eu/schema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+Webclientinterface
+
+delegate string 
+
+D2LogicalModel
+
+   if (gotinfo != null)
+            { 
+
+             }
+
+https://datex2.stratostraffic.com/vms/definition
+
+new NetworkCredential("username", "password");
+
+    string htmlCode = client.DownloadString("http://domain.loc/testpage.aspx");
+
+https://datex2.stratostraffic.com/vms/definition
+
+url
+
+namespace DatexIIv2PullAdapterLib
+
+using DatexIIv2PullAdapterLib;
+
+MainInterface
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+https://datex2.stratostraffic.com/vms/definition
+
+GetWebContent.Start();
+
+GetWebContent.Elapsed
+
+GetWebContent_Elapsed
+
+GetWebContent.Elapsed += GetWebContent_Elapsed;
+
+D2LogicalModel
+
+TextWriter writer = new StringWriter(sb)
+
+TextReader reader = new StringReader(operationXML)
+
+htmlCode
+
+reader
+
+D2LogicalModel
+
+PayloadPublication
+
+Test that the PTZ camera will go to a predefined pre-set
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+C:6090, C:6095
+
+C:6260
+
+'Incident~245436'
+
+C:6410
+
+The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_Clearview_Adapter_I2.docx
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_CA_Adapter_I2.docx
+
+http://wilmut.peek.prv/instation/datexiipushadapter.git
+
+git@wilmut.peek.prv:instation/datexiipushadapter.git
+
+TestResults_Iteration_5
+
+http://wilmut.peek.prv/instation/datexiipushadapter.git
+
+\\192.168.11.210\danperrett\datexIIadapter_latest\datexiipushadapter\SubscriberService\SubscriberWebService\bin\log4net.dll
+
+\\192.168.11.210\danperrett\datexIIadapter_latest\datexiipushadapter\SubscriberService\SubscriberWebService\bin\SubscriberWebService.dll
+
+\\192.168.11.210\danperrett\datexIIadapter_latest\datexiipushadapter\SubscriberService\SubscriberWebService\bin\GZipEncoder.dll
+
+old
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_Clearview_Adapter_I2.docx
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\TestResults_Iteration_2\Test_Result_For_CA_Adapter_I2.docx
+
+1.	INTRODUCTION	3
+1.1	Objective of this document	3
+1.2	Audience and advice for the reader	3
+1.3	Glossary	3
+1.4	References	3
+2.	TEST ENVIRONMENT	4
+2.1	Clearview Adapter Development Testing	4
+2.2	Equipment and tools	5
+3.	REQUIREMENTS	6
+3.1	Functional	6
+4.	FUNCTIONAL TESTS	7
+4.1.1	TC001	7
+4.1.2	TC002	7
+4.1.3	TC003	7
+1.	INTRODUCTION
+Purpose of this document is to describe the Test report for the CA adapter module.
+
+1.1	Objective of this document
+The objective of this document is to provide some clarification over the module testing of the CA adapter. 
+
+1.2	Audience and advice for the reader
+This document has been written for:
+?	Product manager
+?	Engineering
+?	Additional stakeholders
+
+1.3	Glossary
+	
+	
+CDB	Common Database
+SOAP	Simple Object Access Protocol
+	
+
+1.4	References
+Ref.	Title/Author/Publisher	Version	Date/Year 
+& 1 
+P31001-0004 MCS Development Test Plan 1d (Draft).docx		08.08.2016
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+2.	TEST ENVIRONMENT
+Figure 1 describes the environment for the developer testing of the CA Adapter. Use of Eclipse for development and SQL developer is paramount to this testing. The Tests are devised to ensure that the adapter receives, decode and logs a correct error in the database.
+As no access has been made available to Dynniq for testing purposes. We have to simulate the SOAP interface using a tool called SOAP UI.
+
+
+2.1	CA Adapter Development Testing
+
+ 
+Figure 1  Testing Setup for CA testing.
+
+
+?
+2.2	Equipment and tools
+Equipment and tools required for testing are listed in the following table:
+
+Item	Product	Availability
+Java VM	1.8	Available
+Database	Oracle	Available
+Operating System	Windows 7/Linux	Available
+Essential software	Eclipse IDE, SQL Developer	Available
+Simulators	SOAP UI/Custom	Available.
+Other Equipment	Laptop/PC 	Available
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.	REQUIREMENTS
+3.1	Functional
+
+#	MoSCoW	Functional Requirements	Test Case
+C:12000	M	ImCity must automatically connect to the CA system.	TC001
+C:12010	M	ImCity must log the lack of ability to connect to the CA system as a sub-system fault (just once per occasion please).	TC001
+C:12020	M	Loss of connection to the CA system shall be made apparent to an operator within 5 minutes.	TC002
+C:11040	M	It must be possible to display faults against specific camera (icons).	TC003
+C:11050	M	A specific fault is to be identified for cameras suspected as being out of alignment.	TC004
+C:12060	M	A fault shall be automatically cleared in ImCity when the equipment is no longer reported as faulty.	TC003
+
+ 
+
+4.	FUNCTIONAL TESTS
+The test list is not finalised and is extendable.
+4.1.1	TC001
+Name	Description
+Summary	Test the Adapter will connect to the SOAP Service simulator.
+Ref requirements	C:12000, C:12010
+Pre-condition	Fault Simulator is running on a PC/Linux box
+Test description	Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the CA Simulator
+Expected result	Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	Verify that the host name and IP address is correct in the file C:Windows\System32\Drivers\etc\host.
+After a period of running change the IP address to something incorrect in the above file.
+Wait 5 min.
+Change the IP address back to the correct one.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	General logging of faults coming from the simulator
+Ref requirements	C:11040
+Pre-condition	TC001 and a constant flow of faults
+Test description	Let the Server and adapter run for about 10 min, check the SQL developer views
+Expected result	Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+The faults should be a mixture of faults as these are randomly generated by the simulator.
+Actual result	
+Pass / Fail	
+
+
+
+
+
+
+4.1.4	TC004
+Name	Description
+Summary	Check that the Status of the adapter get updated in the database.
+Ref requirements	None
+Pre-condition	Run the adapter in the eclipse debugger.
+Test description	Once the CA Adapter is up and running you should be able to check the appropriate database (047, 048) that the Status has been updated.
+Expected result	Should see and entry ?OK? and device ?CA-ANPR-JTMS? with time stamp in the Subsystem_Status table of your database.
+Actual result	
+Pass / Fail	
+
+
+Muirfield
+
+Name	Description
+Summary	Test the Adapter will connect to the SOAP Service simulator.
+Ref requirements	C:12000, C:12010
+Pre-condition	Fault Simulator is running on a PC/Linux box
+Test description	Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the CA Simulator
+Expected result	Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+Actual result	
+Pass / Fail	
+
+
+Set appropriate break points in Eclipse code. Run the code in the eclipse debugger. Verify that the break points are hit. Step through the appropriate code making sure you can connect to the CA Simulator
+
+Clear steps through the code can be taken with positive results. No exception is thrown.
+Any failure to connect is logged as a Sub System Error. Any logon Authentication is logged as an Authentication Error.
+
+
+Name	Description
+Summary	Verify that after a period of normal running any loss or trouble connecting to the SOAP Service is logged.
+Ref requirements	C:12020
+Pre-condition	TC001 is running and that there is a constant flow of faults/clearing
+Test description	Verify that the host name and IP address is correct in the file C:Windows\System32\Drivers\etc\host.
+After a period of running change the IP address to something incorrect in the above file.
+Wait 5 min.
+Change the IP address back to the correct one.
+Expected result	Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+Actual result	
+Pass / Fail	
+
+
+Verify that the host name and IP address is correct in the file C:Windows\System32\Drivers\etc\host.
+After a period of running change the IP address to something incorrect in the above file.
+Wait 5 min.
+Change the IP address back to the correct one.
+
+
+Check that a sub system error has been logged in SQL developer and then subsequently cleared.
+
+
+	
+	
+	
+	
+	
+	
+	
+Pass / Fail	
+
+
+
+
+Name	Description
+Summary	General logging of faults coming from the simulator
+Ref requirements	C:11040
+Pre-condition	TC001 and a constant flow of faults
+Test description	Let the Server and adapter run for about 10 min, check the SQL developer views
+Expected result	Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+The faults should be a mixture of faults as these are randomly generated by the simulator.
+Actual result	
+Pass / Fail	
+
+
+Each of the faults should appear within the views some not all will have unique SCN?s and some may or may not be cleared.
+The faults should be a mixture of faults as these are randomly generated by the simulator.
+
+
+
+4.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010, C:10020
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the XMPP server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the XMPP server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online. Further checks can be done be monitoring the Detector Faults VIEW  in the database with SQL developer.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the Clearview internal system.
+Test description	Create several random faults using the Clearview provided simulator. This does have to be done by hand.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+4.1.4	TC004
+Name	Description
+Summary	When the Adapter goes off line it must receive missed faults
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	Run the adapter to start with, simulating several faults using the Clearview simulation tool.
+Make sure these are received by the adapter and go into the database.
+Take the adapter down, ensuing it is not running anywhere! 
+Again generate several fault using the clearview simulator.
+Start up the adapter again, ensuing that it connects to the xmpp server.
+Expected result	When the Adapter start and logs on to the xmpp server you should see all the faults being sent to it.
+Actual result	
+Pass / Fail	
+
+?
+
+
+
+1.1.1	TC001
+Name	Description
+Summary	Ensure that the Adapter connects to the XMPP server, ready to receive push notifications. We are not connecting to the Clearview system directly but via an XMPP server of our choice.
+Ref requirements	C:10000, C:10010
+Pre-condition	XMPP server must be up and running, debug in eclipse test environment.
+Test description	Set break points to critical points in the code (connection and logon). Step through the code
+Expected result	Stepping through the code should result in positive behaviour and connected flag should be set to true. If cannot connect a fault is raised.
+Actual result	
+Pass / Fail	
+1.1.2	TC002
+Name	Description
+Summary	Ensure that a subsystem fault is raised when the presence of the Clearview/simulator disappears
+Ref requirements	C:10010, C:10020
+Pre-condition	The Adapter and the simulator must be running and connected.
+Test description	Run TC001, make sure that adapter connects to your CDB server of choice. 
+Make sure the simulator has connected to the XMPP server.
+Disconnect the Simulator (turning off).  A presence change notification should be sent by the XMPP server.
+Expected result	Put a break point in this code when the indication is sent. A fault should be raise when the server goes offline and then cleared when the server comes back online. Further checks can be done be monitoring the Detector Faults VIEW  in the database with SQL developer.
+Actual result	
+Pass / Fail	
+
+1.1.3	TC003
+Name	Description
+Summary	Reporting fault to the database.
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the Clearview internal system.
+Test description	Create several random faults using the Clearview provided simulator. This does have to be done by hand.
+Expected result	Upon receiving these push notifications the adapter should raise or clear the faults in the database be generating the appropriate SQL code and sending it to the CDB Server of choice. Check the appropriate VIEW in the database using SQL developer
+Actual result	
+Pass / Fail	
+
+
+
+1.1.4	TC004
+Name	Description
+Summary	When the Adapter goes off line it must receive missed faults
+Ref requirements	C:10040, C10050
+Pre-condition	The adapter must be connected to the CDB server and also the XMPP server.
+The simulator must be up and running and connected to the XMPP server.
+Test description	Run the adapter to start with, simulating several faults using the Clearview simulation tool.
+Make sure these are received by the adapter and go into the database.
+Take the adapter down, ensuing it is not running anywhere! 
+Again generate several fault using the clearview simulator.
+Start up the adapter again, ensuing that it connects to the xmpp server.
+Expected result	When the Adapter start and logs on to the xmpp server you should see all the faults being sent to it.
+Actual result	
+Pass / Fail	
+
+?
+
+
+C:\Secure\Everest\PJH3150022_UTMS_Mersey_Gateway_UK\trunk\05_System_Test_Specification\Test_Plan_For_Tyco_DVTEL_CCTV_Adapter.docx
+
+
+4.1.1	TC001
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set
+Ref requirements	C:6090, C:6095
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run through commands 1 to 3 of Table 1 in sql developer, ensuring hat with in the adapter dialog we see a command acknowledge and a complete message, this might take up to 30 seconds before a complete message is seen. You can view the camera move on the Control Center software in the TYCO system.
+Expected result	Using Oracle SQL developer you should see a Response result of 2 being written to the CCTV_COMMANDS table. In WebOs you should see the image change.
+Actual result	
+Pass / Fail	
+4.1.2	TC002
+Name	Description
+Summary	Test that the CCTV video get marked correctly.
+Ref requirements	C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Execute command 4 of Table 1 in sql developer environment. Ensure a complete message is seen in the cctv dialog box.
+Expected result	Checking the result does require access the TYCO DVTel server system, where Control Center should be up and running.
+Actual result	
+Pass / Fail	
+
+4.1.3	TC003
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set, and book mark the video at the same time.
+Ref requirements	C:6090, C:6095, C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run command 5 in Table 1.
+Expected result	Check the camera has moved using the Control Center, check a book mark for  'Incident~245436' has been registered. Check WebOs to see if the image has changed
+Actual result	
+Pass / Fail	
+
+
+4.1.4	TC004
+Name	Description
+Summary	Test a fault will be raised if the camera is disconnected.
+Ref requirements	C:6410
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Unplug one of your cameras.
+Expected result	A faults will be generated either, firstly from the fact that a Snap shot cannot now be taken, secondly the DVTel Software will raise an error indicating that there is a fault.
+Actual result	
+Pass / Fail	
+
+
+
+
+
+
+
+1.1.1	TC001
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set
+Ref requirements	C:6090, C:6095
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run through commands 1 to 3 of Table 1 in sql developer, ensuring hat with in the adapter dialog we see a command acknowledge and a complete message, this might take up to 30 seconds before a complete message is seen. You can view the camera move on the Control Center software in the TYCO system.
+Expected result	Using Oracle SQL developer you should see a Response result of 2 being written to the CCTV_COMMANDS table. In WebOs you should see the image change.
+Actual result	
+Pass / Fail	
+1.1.2	TC002
+Name	Description
+Summary	Test that the CCTV video get marked correctly.
+Ref requirements	C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Execute command 4 of Table 1 in sql developer environment. Ensure a complete message is seen in the cctv dialog box.
+Expected result	Checking the result does require access the TYCO DVTel server system, where Control Center should be up and running.
+Actual result	
+Pass / Fail	
+
+1.1.3	TC003
+Name	Description
+Summary	Test that the PTZ camera will go to a predefined pre-set, and book mark the video at the same time.
+Ref requirements	C:6090, C:6095, C:6260
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Run command 5 in Table 1.
+Expected result	Check the camera has moved using the Control Center, check a book mark for  'Incident~245436' has been registered. Check WebOs to see if the image has changed
+Actual result	
+Pass / Fail	
+
+
+1.1.4	TC004
+Name	Description
+Summary	Test a fault will be raised if the camera is disconnected.
+Ref requirements	C:6410
+Pre-condition	The adapter is up and running and connected to the Tyco Server, with no faults being indicated.
+Test description	Unplug one of your cameras.
+Expected result	A faults will be generated either, firstly from the fact that a Snap shot cannot now be taken, secondly the DVTel Software will raise an error indicating that there is a fault.
+Actual result	
+Pass / Fail	
+
+
+
+
+
+
+C:\Secure\Source\cutlas\Core\Adapters\AdapterCore
+
+C:\Secure\Source\cutlas\Core\Adapters
+
+http://www.datex2.eu/schema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+[ERROR] (Related to above error) This is the other declaration.
+
+
+chema/2/2_3/DATEXIISchema_2_2_3.xsd
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDPVqA6_gyAJgD6uUbioQ1bp7oYA2zwfIg
+
+My Project
+
+pi/geocode
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDktsvtCxugmtcFNmlJ3W1lXlWkD7WUVo8
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package
+
+C:\Users\Daniel.Perrett\Desktop\Latitude_Update_7.0.0.5762.exe
+
+".\Release Files\program files\Imtech\ImCity\adapters\CCTVAdapter\"
+
+copy $(TargetPath) $(SolutionDir)..\bin\$(TargetFileName)
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild
+
+TycoCriticalSection
+
+devenv ".\Core\Adapters\CCTVAdapter.sln" /rebuild Release > cctv.txt
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter.sln
+
+mkdir ".\Release Files\Program files\Imtech\ImCity\Adapters\CCTVAdapter\Support"
+
+DVTelInterfaceLibrary
+
+copy ".\Core\
+
+cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release
+
+Adapters\C
+
+".\Release Files\Program files\Imtech\ImCity\Adapters\CCTVAdapter\DVTelInterfaceLibrary"
+
+@echo ---------------------------------------------------
+
+https://console.developers.google.com/apis/api/geocoding_backend
+
+51.306460, -0.783426
+
+40.714224,-73.961452
+
+51.307682, -0.785225
+
+51.306460, -0.783426
+
+51.309382, -0.789817
+
+51.307682, -0.785225
+
+39.666381, 8.926839
+
+51.309382, -0.789817
+
+37.393636, 14.041117
+
+39.666381, 8.926839
+
+10.765542, 122.580153
+
+37.393636, 14.041117
+
+https://maps.googleapis.com/maps/api/geocode/json?latlng=10.765542,%20122.580153&key=AIzaSyDktsvtCxugmtcFNmlJ3W1lXlWkD7WUVo8
+
+50
+
+C:\Secure\Source\cutlas\Core\ThirdParty\DVTelFLIRPackages
+
+C:\Users\Daniel.Perrett\Downloads\Latitude 7.0 Installation Package.zip
+
+C:\Secure\Source\cutlas\Core\ThirdParty\DVTelFLIRPackages
+
+51.308054, -0.776788
+
+51.48, 0
+
+maps/web/
+
+maps/
+
+8000
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.MCore.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Server.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Tracing.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.SDK.Samples.Base.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.SystemManager.SystemObjects.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Application.common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Common.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Alarms.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Alarms.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Incidents.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Logical.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Logical.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Physical.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.Physical.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemObjects.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemObjects.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemSettings.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.Entities.SystemSettings.Localization.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.SDK.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.API.UpdateServices.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.AssemblyLoader.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Configuration.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.CsharpUtils.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.DataAccess.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.DVComm.Common.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.DVComm.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Encryption.dll
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\ManagedDll\bin\x86\Release\DVTel.Common.Infrastructure.dll
+
+DatexIIUtility::latLong2OSGB
+
+const TSLCoordinateSystem* DatexIIUtility::m_coordSystem = 0;
+
+if ( !m_coordSystem )
+  {
+    //tsltransforms.dat
+    if ( TSLCoordinateSystem::loadCoordinateSystems( m_transformsFileLoc.c_str() ) )
+    {
+      m_coordSystem = TSLCoordinateSystem::findByName( "British National Grid (OSGB 1936)" );
+    }
+  }
+
+  if ( m_coordSystem )
+  {
+    m_coordSystem->latLongToMU( latitude, longitude, &easting, &northing, true );
+    return;
+  }
+
+static const TSLCoordinateSystem* m_coordSystem;
+
+  webclientif = new Webclientinterface(username, password, url, interval);
+            webclientif.gotinfo += Webclientif_gotinfo;
+            webclientif.Start();
+
+
+        Webclientinterface webclientif = null;
+
+          if(model != null)
+            {
+                PayloadPublication publication = model.payloadPublication;
+                VmsTablePublication vmsTable = publication as VmsTablePublication;
+                if(vmsTable != null)
+                {
+                    
+                }
+            }
+
+VmsStratoDefinitions
+
+"https://datex2.stratostraffic.com/vms/definition"
+
+https://datex2.stratostraffic.com/vms/status
+
+
+            webclientif = new Webclientinterface(username, password, url, interval);
+            webclientif.gotinfo += Webclientif_gotinfo;
+            webclientif.Start();
+
+static const TSLCoordinateSystem* m_coordSystem;
+
+ Webclientinterface webclientif = null;
+
+BaseConnection
+
+C:\Secure\Source\cutlas\Core\Adapters\cctvAdapter\Plugins\DVTelAgent\DVTelInterfaceProject\DVTelLibrariesUsed
+
+Z:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\ClearviewCounterAdapter.zip
+
+Z:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CAFaultAdapter.zip
+
+10.164.114.182
+
+93.95.10.169       cajtmsfaults.co.u
+
+93.95.10.169
+
+10.164.114.182
+
+jre1.8.0_60
+
+C:\Imtech\jre1.8.0_60\bin\java
+
+S
+
+ClearviewXMPPInterface
+
+XMPPServiceName=insight.clearviewtraffic.com
+XMPPServer=insight.clearviewtraffic.com
+XMPPUserName=merseygateway@insight.clearviewtraffic.com
+
+IClearviewFaultInterface
+
+Enumeration<?> en = config.keys();
+		//get right config for this 
+		while (en.hasMoreElements()) 
+		{
+			String key  = (String) en.nextElement();
+			String keyStr = config.getProperty(key);
+			System.out.println(key + ":" + keyStr);
+			switch(key)
+			{
+
+case "datasourcetypeid":
+					datasourcetypeid =  keyStr;
+					break;
+
+XmppInterfaceType
+
+TBB100550
+
+Tony Cottee
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Users\Daniel.Perrett\ownCloud\share\ImCity\ImCity Test Versions\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\ClearviewCounterAdapter.zip
+
+C:\Users\Daniel.Perrett\ownCloud\share\ImCity\ImCity Test Versions\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CAFaultAdapter.zip
+
+jre1.8.0_60
+
+insight.clearviewtraffic.com
+
+46.231.185.224
+
+insight.clearviewtraffic.com
+
+46.231.185.224 insight.clearviewtraffic.com
+
+54.246.187.36
+
+C:\Users\Daniel.Perrett\Downloads\PortBlocker.zip
+
+   public void ConvertLatLong2OSGB(float lat, float lon, ref double easting, ref double northing)
+        {
+            // FIXME calculation is wrong lat=50.83848, long=-1.086215
+            // FIXME this should give x=464440 y=104726
+            // FIXME but this gives   x=464336 y=104789
+            const double deg2rad = Math.PI / 180;
+
+            // This will only work with lats and longs in decimal degrees.
+            double latitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lat));
+            double longitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lon));
+
+            double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+            //double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+            double F0 = 0.9996012717; // NatGrid scale factor on central meridian
+            double lat0 = deg2rad * 49;
+            double lon0 = deg2rad * -2; // NatGrid true origin
+            double N0 = -100000; // northing true origin, metres
+            double E0 = 400000; // easting of true origin, metres
+            double e2 = 1 - (b * b) / (a * a); // eccentricity squared
+            double n = (a - b) / (a + b), n2 = n * n, n3 = n * n * n;
+
+            double cosLat = Math.Cos(latitude), sinLat = Math.Sin(latitude);
+            double nu = a * F0 / Math.Sqrt(1 - e2 * sinLat * sinLat); // transverse radius of curvature
+            double rho = a * F0 * (1 - e2) / Math.Pow(1 - e2 * sinLat * sinLat, 1.5); // meridional radius of curvature
+
+            double eta2 = nu / rho - 1;
+
+            double Ma = (1 + n + (5 / 4) * n2 + (5 / 4) * n3) * (latitude - lat0);
+            double Mb = (3 * n + 3 * n * n + (21 / 8) * n3) * Math.Sin(latitude - lat0) * Math.Cos(latitude + lat0);
+            double Mc = ((15 / 8) * n2 + (15 / 8) * n3) * Math.Sin(2 * (latitude - lat0)) * Math.Cos(2 * (latitude + lat0));
+            double Md = (35 / 24) * n3 * Math.Sin(3 * (latitude - lat0)) * Math.Cos(3 * (latitude + lat0));
+            double M = b * F0 * (Ma - Mb + Mc - Md); // meridional arc
+
+            double cos3lat = cosLat * cosLat * cosLat;
+            double cos5lat = cos3lat * cosLat * cosLat;
+            double tan2lat = Math.Tan(latitude) * Math.Tan(latitude);
+            double tan4lat = tan2lat * tan2lat;
+
+            double I = M + N0;
+            double II = (nu / 2) * sinLat * cosLat;
+            double III = (nu / 24) * sinLat * cos3lat * (5 - tan2lat + 9 * eta2);
+            double IIIA = (nu / 720) * sinLat * cos5lat * (61 - 58 * tan2lat + tan4lat);
+            double IV = nu * cosLat;
+            double V = (nu / 6) * cos3lat * (nu / rho - tan2lat);
+            double VI = (nu / 120) * cos5lat * (5 - 18 * tan2lat + tan4lat + 14 * eta2 - 58 * tan2lat * eta2);
+
+            double dLon = longitude - lon0;
+            double dLon2 = dLon * dLon, dLon3 = dLon2 * dLon, dLon4 = dLon3 * dLon, dLon5 = dLon4 * dLon, dLon6 = dLon5 * dLon;
+
+            northing = Math.Round(I + II * dLon2 + III * dLon4 + IIIA * dLon6, 3);
+            easting = Math.Round(E0 + IV * dLon + V * dLon3 + VI * dLon5, 3);
+        }
+
+ConvertLatLong2OSGB
+
+latLong2OSGB
+
+ const double deg2rad = 0.0174532925;  
+
+  double phi = latitude * deg2rad;
+  // convert latitude to radians
+  double lam = longitude * deg2rad;    // convert doubleitude to radians
+  double a = 6377563.396;              // OSGB semi-major axis
+  double b = 6356256.91;               // OSGB semi-minor axis
+  double e0 = 400000;                  // easting of false origin
+  double n0 = -100000;                 // northing of false origin
+  double f0 = 0.9996012717;            // OSGB scale factor on central meridian
+  double e2 = 0.0066705397616;         // OSGB eccentricity squared
+  double lam0 = -0.034906585039886591; // OSGB false east
+  double phi0 = 0.85521133347722145;   // OSGB false north
+  double af0 = a * f0;
+  double bf0 = b * f0;
+  // easting
+  double slat2 = sin(phi) * sin(phi);
+  double nu = af0 / (sqrt(1 - (e2 * (slat2))));
+  double rho = (nu * (1 - e2)) / (1 - (e2 * slat2));
+  double eta2 = (nu / rho) - 1;
+  double p = lam - lam0;
+  double IV = nu * cos(phi);
+  double clat3 = pow(cos(phi), 3);
+  double tlat2 = tan(phi) * tan(phi);
+  double V = (nu / 6) * clat3 * ((nu / rho) - tlat2);
+  double clat5 = pow(cos(phi), 5);
+  double tlat4 = pow(tan(phi), 4);
+  double VI = (nu / 120) * clat5 * ((5 - (18 * tlat2)) + tlat4 + (14 * eta2) - (58 * tlat2 * eta2));
+  double east = e0 + (p * IV) + (pow(p, 3) * V) + (pow(p, 5) * VI);
+  // northing     
+  double n = (af0 - bf0) / (af0 + bf0);
+  double M = Marc(bf0, n, phi0, phi);
+  double I = M + (n0);
+  double II = (nu / 2) * sin(phi) * cos(phi);
+  double III = ((nu / 24) * sin(phi) * pow(cos(phi), 3)) * (5 - pow(tan(phi), 2) + (9 * eta2));
+  double IIIA = ((nu / 720) * sin(phi) * clat5) * (61 - (58 * tlat2) + tlat4);
+  double north = I + ((p * p) * II) + (pow(p, 4) * III)	+ (pow(p, 6) * IIIA);     // make whole number values
+
+  easting = floor( east );   // round to whole number
+  northing = floor( north ); // round to whole number
+}
+
+
+  const double deg2rad = Math.PI / 180;
+
+            // This will only work with lats and longs in decimal degrees.
+            double latitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lat));
+            double longitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lon));
+
+            double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+            //double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+            double F0 = 0.9996012717; // NatGrid scale factor on central meridian
+            double lat0 = deg2rad * 49;
+            double lon0 = deg2rad * -2; // NatGrid true origin
+            double N0 = -100000; // northing true origin, metres
+            double E0 = 400000; // easting of true origin, metres
+            double e2 = 1 - (b * b) / (a * a); // eccentricity squared
+            double n = (a - b) / (a + b), n2 = n * n, n3 = n * n * n;
+
+            double cosLat = Math.Cos(latitude), sinLat = Math.Sin(latitude);
+            double nu = a * F0 / Math.Sqrt(1 - e2 * sinLat * sinLat); // transverse radius of curvature
+            double rho = a * F0 * (1 - e2) / Math.Pow(1 - e2 * sinLat * sinLat, 1.5); // meridional radius of curvature
+
+            double eta2 = nu / rho - 1;
+
+            double Ma = (1 + n + (5 / 4) * n2 + (5 / 4) * n3) * (latitude - lat0);
+            double Mb = (3 * n + 3 * n * n + (21 / 8) * n3) * Math.Sin(latitude - lat0) * Math.Cos(latitude + lat0);
+            double Mc = ((15 / 8) * n2 + (15 / 8) * n3) * Math.Sin(2 * (latitude - lat0)) * Math.Cos(2 * (latitude + lat0));
+            double Md = (35 / 24) * n3 * Math.Sin(3 * (latitude - lat0)) * Math.Cos(3 * (latitude + lat0));
+            double M = b * F0 * (Ma - Mb + Mc - Md); // meridional arc
+
+            double cos3lat = cosLat * cosLat * cosLat;
+            double cos5lat = cos3lat * cosLat * cosLat;
+            double tan2lat = Math.Tan(latitude) * Math.Tan(latitude);
+            double tan4lat = tan2lat * tan2lat;
+
+            double I = M + N0;
+            double II = (nu / 2) * sinLat * cosLat;
+            double III = (nu / 24) * sinLat * cos3lat * (5 - tan2lat + 9 * eta2);
+            double IIIA = (nu / 720) * sinLat * cos5lat * (61 - 58 * tan2lat + tan4lat);
+            double IV = nu * cosLat;
+            double V = (nu / 6) * cos3lat * (nu / rho - tan2lat);
+            double VI = (nu / 120) * cos5lat * (5 - 18 * tan2lat + tan4lat + 14 * eta2 - 58 * tan2lat * eta2);
+
+            double dLon = longitude - lon0;
+            double dLon2 = dLon * dLon, dLon3 = dLon2 * dLon, dLon4 = dLon3 * dLon, dLon5 = dLon4 * dLon, dLon6 = dLon5 * dLon;
+
+            northing = Math.Round(I + II * dLon2 + III * dLon4 + IIIA * dLon6, 3);
+            easting = Math.Round(E0 + IV * dLon + V * dLon3 + VI * dLon5, 3);
+
+ClearViewAdapter
+
+device_notifier unavailable
+
+subscribeTo
+
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Net;
+using System.Threading;
+using System.Net.Sockets;
+
+  static bool stop = false;
+        static int startPort;
+        static int endPort;
+
+        static List<int> openPorts = new List<int>();
+
+        static object consoleLock = new object();
+
+        static int waitingForResponses;
+
+        static int maxQueriesAtOneTime = 100;
+
+ begin:
+            Console.WriteLine("Enter the IP Address of the target:");
+            string ip = Console.ReadLine();
+
+            IPAddress ipAddress;
+
+            if (!IPAddress.TryParse(ip, out ipAddress))
+                goto begin;
+
+        startP:
+
+            Console.WriteLine("Enter the starting port to start scanning on:");
+            string sp = Console.ReadLine();
+
+            if (!int.TryParse(sp, out startPort))
+                goto startP;
+
+        endP:
+
+            Console.WriteLine("Enter the end port:");
+            string ep = Console.ReadLine();
+
+            if (!int.TryParse(ep, out endPort))
+                goto endP;
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine("Press any key to stop scanning...");
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            ThreadPool.QueueUserWorkItem(StartScan, ipAddress);
+
+            Console.ReadKey();
+
+            stop = true;
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+
+ static void StartScan(object o)
+        {
+            IPAddress ipAddress = o as IPAddress;
+
+            for (int i = startPort; i < endPort; i++)
+            {
+                lock (consoleLock)
+                {
+                    int top = Console.CursorTop;
+
+                    Console.CursorTop = 7;
+                    Console.WriteLine("Scanning port: {0}    ",  i);
+
+                    Console.CursorTop = top;
+                }
+
+                while (waitingForResponses >= maxQueriesAtOneTime)
+                    Thread.Sleep(0);
+
+                if (stop)
+                    break;                
+
+                try
+                {
+                    Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                    s.BeginConnect(new IPEndPoint(ipAddress, i), EndConnect, s);
+
+                    Interlocked.Increment(ref waitingForResponses);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
+  static void EndConnect(IAsyncResult ar)
+        {
+            try
+            {
+                DecrementResponses();
+
+                Socket s = ar.AsyncState as Socket;
+
+                s.EndConnect(ar);
+
+                if (s.Connected)
+                {
+                    int openPort = Convert.ToInt32(s.RemoteEndPoint.ToString().Split(':')[1]);
+
+                    openPorts.Add(openPort);
+                    
+                    lock (consoleLock)
+                    {
+                        Console.WriteLine("Connected TCP on port: {0}", openPort);
+                    }                
+
+                    s.Disconnect(true);
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        static void IncrementResponses()
+        {
+            Interlocked.Increment(ref waitingForResponses);
+
+            PrintWaitingForResponses();
+        }        
+
+        static void DecrementResponses()
+        {
+            Interlocked.Decrement(ref waitingForResponses);
+
+            PrintWaitingForResponses();
+        }
+
+        static void PrintWaitingForResponses()
+        {
+            lock (consoleLock)
+            {
+                int top = Console.CursorTop;
+
+                Console.CursorTop = 8;
+                Console.WriteLine("Waiting for responses from {0} sockets       ", waitingForResponses);
+
+                Console.CursorTop = top;
+            }
+        }
+
+54.246.187.36
+
+waitingForResponses
+
+EndConnect
+
+ static void StartScan(object o)
+        {
+            IPAddress ipAddress = o as IPAddress;
+
+            for (int i = startPort; i < endPort; i++)
+            {
+                lock (consoleLock)
+                {
+                    int top = Console.CursorTop;
+
+                    Console.CursorTop = 7;
+                    Console.WriteLine("Scanning port: {0}    ",  i);
+
+                    Console.CursorTop = top;
+                }
+
+                while (waitingForResponses >= maxQueriesAtOneTime)
+                    Thread.Sleep(0);
+
+                if (stop)
+                    break;                
+
+                try
+                {
+                    Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                    s.BeginConnect(new IPEndPoint(ipAddress, i), EndConnect, s);
+
+                    Interlocked.Increment(ref waitingForResponses);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
+Error connection to server
+
+C:\Users\Daniel.Perrett\Desktop\DeviceSimulator
+
+System.in.re
+
+Scanner reader = new Scanner(System.in); 
+
+System.console().readLine();
+
+Scanner reader = new Scanner(System.in);
+
+System.out.println(count + " " + device);
+
+int fault
+
+int faultTypeID = 1;
+
+CreateFault
+
+device + "'," +  faultTypeID + "," + subSystemFault + ", '" + FaultType + "'";
+
+String sql = "insert into diagnostics.Faults (EquipmentTypeID, EquipmentID, EquipmentSCN, FaultTypeID, FaultSubTypeID, FaultDescription, StartedTimestamp) VALUES(0, 1, '" + mess + ", GETDATE())";
+
+CAConnection
+
+
+	        		   OpenSqlConnection();
+	        		   if(!CAConnection.isClosed())
+	        		   {
+	        			   try
+	        			   {
+	        				   Statement stmt =  CAConnection.createStatement();
+	        				   boolean b = stmt.execute(sql);
+	        			   }
+	        			   catch(Exception ex)
+	        			   {
+	        				   ex.printStackTrace();
+	        			   }
+	        			   
+	        			 /*  sql = "select * from diagnostics.Faults";
+	        			   Statement stmt =  CAConnection.createStatement();
+	        			   ResultSet rs = stmt.executeQuery(sql);
+        				   while (rs.next()) 
+        				   {
+                               System.out.println(rs.getString(4) + " " + rs.getString(5));
+                           }*/
+	        			   CloseSqlConnection();
+	        		
+
+System.out.println("To get back exit program!");
+
+C:\Oracle\product\11.2.0\client_1;C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc100;C:\Program Files (x86)\Codejock Software\MFC\Xtreme ToolkitPro v15.3.1\Bin\vc80;C:\Inprise\vbroker\bin;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;C:\cygwin64\bin;%USERPROFILE%\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;%MAPL_PATH%;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Java\jdk1.7.0_79\bin;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files\AStyle\bin
+
+OpenSqlConnection();
+    		try
+    		{
+				if(!CAConnection.isClosed())
+				{
+					   try
+					   {
+						   Statement stmt =  CAConnection.createStatement();
+						   boolean b = stmt.execute(sql);
+					   }
+					   catch(Exception ex)
+					   {
+						   ex.printStackTrace();
+					   }
+					   
+			
+					   CloseSqlConnection();
+	               }
+			} 
+    		catch (SQLException e) 
+    		{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+select * from diagnostics.Faults where ClearedTimestamp is NULL;
+
+  String sql = "select * from diagnostics.Faults where ClearedTimestamp is NULL;";
+						   Statement stmt =  CAConnection.createStatement();
+						   boolean b = stmt.execute(sql);
+
+columnIndex
+
+	Scanner reader = new Scanner(System.in);
+
+select * from diagnostics.Faults;
+
+pointByCoordinates
+
+predefinedItineraryName
+
+   public void ConvertLatLong2OSGB(float lat, float lon, ref double easting, ref double northing)
+        {
+            // FIXME calculation is wrong lat=50.83848, long=-1.086215
+            // FIXME this should give x=464440 y=104726
+            // FIXME but this gives   x=464336 y=104789
+            const double deg2rad = Math.PI / 180;
+
+            // This will only work with lats and longs in decimal degrees.
+            double latitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lat));
+            double longitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lon));
+
+            //double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+            double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+            double F0 = 0.9996012717; // NatGrid scale factor on central meridian
+            double lat0 = deg2rad * 49;
+            double lon0 = deg2rad * -2; // NatGrid true origin
+            double N0 = -100000; // northing true origin, metres
+            double E0 = 400000; // easting of true origin, metres
+            double e2 = 1 - (b * b) / (a * a); // eccentricity squared
+            double n = (a - b) / (a + b), n2 = n * n, n3 = n * n * n;
+
+            double cosLat = Math.Cos(latitude), sinLat = Math.Sin(latitude);
+            double nu = a * F0 / Math.Sqrt(1 - e2 * sinLat * sinLat); // transverse radius of curvature
+            double rho = a * F0 * (1 - e2) / Math.Pow(1 - e2 * sinLat * sinLat, 1.5); // meridional radius of curvature
+
+            double eta2 = nu / rho - 1;
+
+            double Ma = (1 + n + (5 / 4) * n2 + (5 / 4) * n3) * (latitude - lat0);
+            double Mb = (3 * n + 3 * n * n + (21 / 8) * n3) * Math.Sin(latitude - lat0) * Math.Cos(latitude + lat0);
+            double Mc = ((15 / 8) * n2 + (15 / 8) * n3) * Math.Sin(2 * (latitude - lat0)) * Math.Cos(2 * (latitude + lat0));
+            double Md = (35 / 24) * n3 * Math.Sin(3 * (latitude - lat0)) * Math.Cos(3 * (latitude + lat0));
+            double M = b * F0 * (Ma - Mb + Mc - Md); // meridional arc
+
+            double cos3lat = cosLat * cosLat * cosLat;
+            double cos5lat = cos3lat * cosLat * cosLat;
+            double tan2lat = Math.Tan(latitude) * Math.Tan(latitude);
+            double tan4lat = tan2lat * tan2lat;
+
+            double I = M + N0;
+            double II = (nu / 2) * sinLat * cosLat;
+            double III = (nu / 24) * sinLat * cos3lat * (5 - tan2lat + 9 * eta2);
+            double IIIA = (nu / 720) * sinLat * cos5lat * (61 - 58 * tan2lat + tan4lat);
+            double IV = nu * cosLat;
+            double V = (nu / 6) * cos3lat * (nu / rho - tan2lat);
+            double VI = (nu / 120) * cos5lat * (5 - 18 * tan2lat + tan4lat + 14 * eta2 - 58 * tan2lat * eta2);
+
+            double dLon = longitude - lon0;
+            double dLon2 = dLon * dLon, dLon3 = dLon2 * dLon, dLon4 = dLon3 * dLon, dLon5 = dLon4 * dLon, dLon6 = dLon5 * dLon;
+
+            northing = Math.Round(I + II * dLon2 + III * dLon4 + IIIA * dLon6, 3);
+            easting = Math.Round(E0 + IV * dLon + V * dLon3 + VI * dLon5, 3);
+        }
+
+NtisModelManager
+
+GenericPublication
+
+C:\Temp\DatexR2\zips\NTISModel-2016-12-14-v5.14
+
+NTISModel-PredefinedLocations-2016-12-14-v5.14.xml
+
+GenericPublication
+
+NtisModelVersionInformation
+
+XmlSerializer serialiser = new XmlSerializer(typeof(D2LogicalModel));
+                        TextReader reader = new StringReader(htmlCode);
+                        D2LogicalModel d2Logic = (D2LogicalModel)serialiser.Deserialize(reader);
+
+using System.Xml;
+using System.Xml.Serialization;
+
+ if (ptype == typeof(MeasurementSiteTablePublication))
+                    {
+                        MeasurementSiteTablePublication measurementSiteTablePublication = (MeasurementSiteTablePublication)model.payloadPublication;
+                        if (measurementSiteTablePublication != null)
+                        {
+                            ExtractMeasurementSiteData(measurementSiteTablePublication);
+                        }
+                    }
+                    else if (ptype == typeof(PredefinedLocationsPublication))
+                    {
+                        PredefinedLocationsPublication predefinedLocationsPublication = (PredefinedLocationsPublication)model.payloadPublication;
+                        if (predefinedLocationsPublication != null)
+                        {
+                            LocationManager locationManager = new LocationManager();
+                            locationManager.ProcessLocationData(predefinedLocationsPublication);
+                        }
+                    }
+                    else if (ptype == typeof(VmsTablePublication))
+                    {
+                        VmsTablePublication vmsTablePublication = (VmsTablePublication)model.payloadPublication;
+                        if (vmsTablePublication != null)
+                        {
+                            VmsManager vmsManager = new VmsManager();
+                            vmsManager.ProcessVmsTableData(vmsTablePublication);
+                        }
+                    }
+                    else
+                    {
+                        log.WarnFormat("Xml file contains unused ***{0}*** type", ptype);
+                    }
+
+ Type ptype = model.payloadPublication.GetType();
+
+Type ptype = d2Logic.payloadPublication.GetType();
+
+d2Logic
+
+  if(predefined != null)
+                {
+                    foreach(PredefinedItinerary itiner in predefined.predefinedLocationContainer)
+                    {
+
+                    }
+                }
+
+predefined
+
+ string[] text = pi.id.Split('_');
+            string scn = text.Last();
+
+itiner
+
+ bool pointOrReference = false;
+
+ Type ptype = pl.location.GetType();
+                if (ptype == typeof(Point))
+                {
+                    Point pt = (Point)pl.location;
+                    PointCoordinates pc = (PointCoordinates)pt.pointByCoordinates.pointCoordinates;
+                    ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting, ref m_northing);
+                    m_description = str + " " + scn;
+                }
+                else if (ptype == typeof(Linear))
+                {
+                    m_description = GetLocationDescription(pl.predefinedLocationName);
+                }
+                else
+                {
+
+LocationConverter
+
+itiner
+
+PredefinedLocation
+
+ foreach (PredefinedLocation pl in pnlg.predefinedLocation)
+                {
+
+NTISModel-VMSTables-2016-12-14-v5.14.xml
+
+NTISModel-2016-12-14-v5.14
+
+ VmsTablePublication vmsTablePublication = (VmsTablePublication)model.payloadPublication;
+                        if (vmsTablePublication != null)
+                        {
+
+VmsUnitTable
+
+  foreach (VmsUnitRecord vmsUnit in table.vmsUnitRecord)
+                {
+
+ VmsRecord rec = vmsUnit.vmsRecord[0].vmsRecord;
+
+  VmsRecord rec = vmsUnit.vmsRecord[0].vmsRecord;
+                m_height = rec.vmsDisplayHeight;
+                m_width = rec.vmsDisplayWidth;
+
+                PointCoordinates pc = rec.vmsLocation.locationForDisplay;
+                ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting, ref m_northing);
+
+  //double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+            double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+6377563.396
+
+6356256.910;
+
+double a = 6378137.0, b = 6356752.314245;
+
+WGS84
+
+LocationConverter converter1 = new LocationConverter("WGS84");
+
+converter.ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting, ref m_northing);
+
+double m_easting = 0, m_northing = 0;
+
+using System.Data;
+using System.Data.OracleClient;
+
+using System.Data;
+using System.Data.OracleClient;
+using System.Diagnostics;
+
+private static string GetConnectionString()
+    {
+        String connString = "host= serverName;database=myDatabase;uid=userName;pwd=passWord";
+        return connString;
+    }
+
+  private string GetConnectionString()
+    {
+        String connString = "host= serverName;database=myDatabase;uid=userName;pwd=passWord";
+        return connString;
+    }
+
+ private static void ConnectingToOracle()
+    {
+        string connectionString = GetConnectionString();
+        using (OracleConnection connection = new OracleConnection())
+        {
+            connection.ConnectionString = connectionString;
+            connection.Open();
+            Console.WriteLine("State: {0}", connection.State);
+            Console.WriteLine("ConnectionString: {0}",
+                              connection.ConnectionString);
+
+            OracleCommand command = connection.CreateCommand();
+            string sql = "SELECT * FROM myTableName";
+            command.CommandText = sql;
+
+            OracleDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string myField = (string)reader["MYFIELD"];
+                Console.WriteLine(myField);
+            }
+        }
+    }
+
+"Data Source=10.164.114.181/CUTLAS2;User Id=imtech01;Password=imtech01;"
+
+connectionString
+
+OracleDataBaseConnection
+
+ConnectingToOracle
+
+OracleConnection
+
+m_connectionString
+
+Data Source=10.164.114.182/CUTLAS2;User Id=syits_datex02;Password=syits_datex02;
+
+  using (OracleConnection cnn = new OracleConnection(m_connectionString))
+                {
+
+connectionString
+
+Data Source=10.164.114.182/CUTLAS2;User Id=syits_datex02;Password=syits_datex02;
+
+updateVMSLocation
+
+SELECT * FROM VMS_DEFINITIONS where SYSTEMCODENUMBER=F1CED9AAA84116DCE0438DC611AC6AA4
+
+
+        public string EscapeSqlString(string strin, EscapeSize size)
+        {
+            try
+            {
+                int maxLength = (int)size;
+                StringBuilder strout = new StringBuilder("", maxLength);
+
+                if (strin != null)
+                {
+                    if (strin.Length > maxLength)
+                    {
+                        strout.Append(strin.Substring(0, maxLength));
+                    }
+                    else
+                    {
+                        strout.Append(strin);
+                    }
+                    strout.Replace("'", "''");
+                }
+
+                return strout.ToString();
+            }
+            catch (Exception e)
+            {
+                log.Error(e.Message, e);
+            }
+
+            return null;
+        }
+
+F1CED9AAA84116DCE0438DC611AC6AA4
+
+  OracleCommand cmd = new OracleCommand(sqlquery, cnn);
+
+ExecuteNonQuery
+
+ connection.Open();
+
+jre1.8.0_60
+
+C:\Imtech\jre1.8.0_60\bin\java
+
+ while (reader.Read())
+            {
+                string myField = (string)reader["MYFIELD"];
+                Console.WriteLine(myField);
+            }
+
+TBB100550
+
+system will process your payment soon.
+
+
+After you have completed your order, the invoice will be sent to the billing contact for this service.
+
+
+Below you will find the information related to your order.
+Please store this information somewhere safe as you may be asked for it in the future.
+
+
+Information about the payment
+Order no.: 	65760430
+External transaction nr: 	osp#9042247
+Transaction date: 	2017-03-20 14:13:15
+Ovh transaction no.: 	CreditCardOsp#9042247
+
+
+INSERT INTO CCTV_COMMANDS (COMMANDID, SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES (245, 'CCTV010', '0', '1261', 'set_preset', '1', '0')
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\dvtelagent\DVtelAgent.dll
+
+processCommand
+
+INSERT INTO CCTV_COMMANDS (SYSTEMCODENUMBER, COMMANDFORMAT, DATASOURCE_TYPEID, COMMAND, PARAMETERS, PRIORITY) VALUES ('CCTV010', '0', '1261', 'set_marker', 'Incident~123456', '0');
+
+nameServices[nameServiceReference]= nameServiceLocation ;
+
+obj = tos_orb->resolve_initial_references( nameServiceReference );
+
+C:\Secure\Source\cutlas\Core\Debug\CCTVAdapter\cctvAdapterd.exe
+
+C:\cctvadapter\DVtelAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\cctvAdapter.exe
+
+C:\Secure\Source\cutlas\Core\Release\CCTVAdapter\DVTelAgent\DVTelAgent.dll
+
+C:\cctvadapter\DVtelAgent.dll
+
+C:\cctvadapter\cctvAdapter.exe
+
+S:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CCTVAdapter\TycoAgent.dll
+
+S:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CCTVAdapter\cctvAdapter.exe
+
+S:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CCTVAdapter\DVTelAgent.dll
+
+S:\TinaTurner\ImCity Version 3.0.1\Program Files\Imtech\ImCity\Adapters\CCTVAdapter\cctvAdapter.exe
+
+NTISModel-MeasurementSites-2017-03-09-v5.17.xml
+
+NTISModel-VMSTables-2017-03-09-v5.17.xml
+
+NTISModel-2017-03-09-v5.17
+
+?????????????????
+
+NTISModel-MeasurementSites-2017-03-09-v5.17.xml
+
+  private void ExtractMeasurementSiteData(MeasurementSiteTablePublication msTablePublication)
+        {
+            log.Info("New MeasurementSiteTablePublication received.");
+            MeasurementSiteTable[] measurementSiteTables = msTablePublication.measurementSiteTable;
+            foreach (MeasurementSiteTable table in measurementSiteTables)
+            {
+                string id = table.id;
+                log.Info("Number of sites in " + id + " : " + table.measurementSiteRecord.Length);
+
+                if ((id.CompareTo("NTIS_TAME_Measurement_Sites") == 0) ||
+                    (id.CompareTo("NTIS_MIDAS_Measurement_Sites") == 0) ||
+                    (id.CompareTo("NTIS_TMU_Measurement_Sites") == 0))
+                {
+                    DetectorManager detectorManager = new DetectorManager();
+                    detectorManager.UpdateDetectorSites(table, msTablePublication.publicationTime);
+                }
+                else if (id.CompareTo("NTIS_ANPR_Measurement_Sites") == 0)
+                {
+                    AnprManager anprManager = new AnprManager();
+                    anprManager.UpdateAnprSites(table, msTablePublication.publicationTime);
+                }
+                else
+                {
+                    log.Error("MeasurementSiteTablePublication contains unknown table : " + id);
+                }
+            }
+            log.Info("MeasurementSiteTablePublication: Processing Completed");
+        }
+
+  ExtractMeasurementSiteData(measurementSiteTablePublication);
+
+ExtractMeasurementSiteData
+
+  public void UpdateDetectorSites(MeasurementSiteTable table, DateTime creationdate)
+        {
+            try
+            {
+                if (InitRecords())
+                {
+                    // NOTE - this code processes over 12K records and MUST be fast
+                    string desc = table.id.Replace('_', ' ');
+                    foreach (MeasurementSiteRecord rec in table.measurementSiteRecord)
+                    {
+                        string[] text = rec.id.Split('_');
+                        string scn = text.Last();
+
+ Point p = (Point)rec.measurementSiteLocation;
+                            if (areasOfInterest.CheckLocationPoint(p.locationForDisplay))
+                            {
+                                m_sqlList.Add(InsertDetectorDefinition(item));
+                            }
+
+C6ED3C0233073F7DE0433CC411AC7306
+
+ LocationConverter converter1 = new LocationConverter("WGS84");
+                        LocationConverter converter2 = new LocationConverter("Airy");
+
+   double m_easting1 = 0, m_northing1 = 0;
+                                double m_easting2 = 0, m_northing2 = 0;
+
+    PointCoordinates pc = rec.vmsLocation.locationForDisplay;
+                                converter1.ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting1, ref m_northing1);
+                                converter2.ConvertLatLong2OSGB(pc.latitude, pc.longitude, ref m_easting2, ref m_northing2);
+
+  OracleDataBaseConnection oracle = new OracleDataBaseConnection();
+
+   public  bool updateVMSLocation(string scn, double easting, double northing)
+        {
+
+  try
+            {
+                string connectionString = GetConnectionString();
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    //    connection.ConnectionString = connectionString;
+                    connection.Open();
+                 
+
+                    OracleCommand command = connection.CreateCommand();
+                    string escn = EscapeSqlString(scn, 32);
+                    string sql = "SELECT * FROM VMS_DEFINITION where SYSTEMCODENUMBER='" + escn + "'";
+                    command.CommandText = sql;
+
+                    OracleDataReader reader = command.ExecuteReader();
+
+DETECTOR_DEFINITION
+
+updateMeasurementSiteLocation
+
+(Exception ex)
+            {
+
+    while (reader.Read())
+                    {
+                        break;
+                        string myField = (string)reader["MYFIELD"];
+                        Console.WriteLine(myField);
+                    }
+
+C6ED3C0236823F7DE0433CC411AC7306
+
+C6ED3C0237CA3F7DE0433CC411AC7306
+
+C:\Temp\DatexR2\zips\NTISModel-2016-04-13-v4.2
+
+NTISModel-MeasurementSites-2016-04-13-v4.2.xml
+
+C:\Temp\DatexR2\zips\NTISModel-2016-05-10-v4.3
+
+NTISModel-MeasurementSites-2016-05-10-v4.3.xml
+
+37E803F1074E0AFFE0536A2011AC64A0
+
+C:\Temp\DatexR2\zips\NTISModel-2016-08-09-v4.80
+
+NTISModel-VMSTables-2016-08-09-v4.80.xml
+
+ and DELETIONDATE is null
+
+37E803F1074E0AFFE0536A2011AC64A0
+
+http://www.sricam.com/article/id/7420c0f522b14d63898878b0581e80df.html
+
+37E803F1074E0AFFE0536A2011AC64A0
+
+D2509501FB0B7952E0433CC411ACA994
+
+D25095020EA97952E0433CC411ACA994
+
+ string myField = (string)reader["MYFIELD"];
+                Console.WriteLine(myField);
+
+
+                    wh
+
+runningeastingPercentage
+
+percentage = ((easting - east) / easting) * 100;
+
+Console.WriteLine("Easing Percentage difference = " + percentage);
+
+ double runningeastingPercentage = 0;
+
+static double runningeastingPercentage = 0;
+
+runningnorthingPercentage
+
+Convert.ToDouble(ob);
+
+runningeastingPercentage
+
+runningnorthingPercentage
+
+printAverages
+
+OracleDataBaseConnection
+
+count++;
+
+0.0009884
+
+0.010971
+
+clearUnavailableFault
+
+numberOfconnectionattemps
+
+Integer.parseInt(keyStr);
+
+numberOfconnectionattemps
+
+createUnavailableFault
+
+	private int numberOfconnectionattemps = 3;
+
+presenceFault
+
+unavailableFaultRaised
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+NumAttempsb4Error
+
+adapterStatus.setStatus("
+
+Cannot connect to the xmpp server!");
+
+NumAttempsb4Error=1
+
+Connect
+
+ if(unavailableFaultRaised)
+			        {
+			           	clearUnavailableFault();
+			           	unavailableFaultRaised = false;
+			        }
+
+adapterStatus.setStatus("
+
+ @Override
+  public void finalize() {
+
+@Override
+  public void finalize() {
+
+finalize
+
+setStatus
+
+ClearviewCounterFaultInputManager
+
+xmppInterface
+
+Close
+
+CounterXmppClient
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+http://www.geograph.org.uk/latlong.php?lat=53.2742425&long=-0.9754907&From=convert
+
+Airy 1830
+
+https://www.gridreferencefinder.com/
+
+LatLng 
+
+ // create an OS grid reference object
+      OSRef osRef = new OSRef(535598, 182120);
+      Console.WriteLine("OS reference is " + osRef.ToString());
+      Console.WriteLine("Grid reference is " + osRef.ToSixFigureString());
+
+      LatLng latLng = osRef.ToLatLng();
+      Console.WriteLine("Lat/long using OSGB36 datum is " + latLng.ToString());
+
+      latLng.ToWGS84();
+      Console.WriteLine("Lat/long using WGS84 datum is " + latLng.ToString());
+
+      MGRSRef mgrsRef = latLng.ToMGRSRef();
+      Console.WriteLine("MGRS reference is " + mgrsRef.ToString());
+
+      UTMRef utmRef = mgrsRef.ToUTMRef();
+      Console.WriteLine("UTM reference is " + utmRef.ToString());
+
+      Console.ReadLine();
+
+DotNetCoords
+
+http://svnserver.infra.imtech.nl/ImCity/Projects/PJH3150022_UTMS_Mersey_Gateway_UK/trunk/05_System_Test_Specification/System test JIRAs_UK.xlsx
+
+From accountCODINGGAIN LIMITED 20-61-82 13973956To accountGilroy & Brookes40-26-12 42162113Amount?1,011.40Processing TimeImmediate payment
+ Tell me more about payments Payment ReferenceCodinggain ltd accInstruction received at22 March 2017 10:16:02
+
+ Console.WriteLine("Lat/long using WGS84 datum is " + latLng.ToString());
+
+ltlg
+
+ os.Northing
+
+ ltlg.ToWGS84();
+
+Core\ThirdParty\DVTelFLIRPackages\DVTelLibrariesUsed
+
+clearviewFaultThread
+
+close
+
+C:\imtech\ClearviewCounterAdapter\ClearviewCounterAdapter_1.0.0.jar
+
+WGS84Ellipsoid
+
+8080/Codinggain/GetBlog.jsp?name=dan
+
+Having been given some co-ordinates from ND.
+I'm not 100% the new WGS84 is correct.
+using the web site:www.geograph.org.uk
+for lat 53.2742425, long -0.9754907
+http://www.geograph.org.uk/latlong.php?lat=53.2742425&long=-0.9754907&From=convert
+gives: easting 468417 northing 375740
+where as if we use our calculations for WGS84 we get easting 468317.802 and northing 375814.646
+and for  Airy 1830 we get easting 468311 northing 375772.9 
+so neither are on the spot.
+using a different web site, https://www.gridreferencefinder.com/, yields the same results.
+
+D2LogicalModel
+
+String url = "http://www.google.com/search?q=httpClient";
+
+HttpClient client = HttpClientBuilder.create().build();
+HttpGet request = new HttpGet(url);
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+   HttpURLConnection http = null;
+
+
+ String Url = "";
+                URL url = null;
+
+
+  url = new URL(Url);
+                                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+
+ HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+connection.setRequestMethod("GET");
+
+                            connection.setReadTimeout(15*1000);
+
+
+HttpURLConnection
+
+MainInterface
+
+PasswordAuthentication ("username", "password".toCharArray());
+
+"Dynniq_Barnsley"
+
+R2K+nfcaNPbo0Oa
+
+String encoded = Base64.getEncoder().encodeToString((username+":"+password).getBytes(StandardCharsets.UTF_8));  //Java 8
+connection.setRequestProperty("Authorization", "Basic "+encoded);
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+ connection.connect();
+
+
+ connection.connect();
+
+https://datex2.stratostraffic.com/vms/definition
+
+ reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                              stringBuilder = new StringBuilder();
+
+                              String line = null;
+                              while ((line = reader.readLine()) != null)
+                              {
+                                stringBuilder.append(line + "\n");
+                              }
+
+
+BufferedReader reader = null;
+                StringBuilder stringBuilder;
+
+
+XStream xstream = new XStream();
+
+xstream.fromXML(xml);
+
+D2LogicalModel
+
+D:\3-Workspace\ImCityAdapters\CAFaultAdapter\plugins\kxml2-2.3.0.jar
+
+xception in thread "main" com.thoughtworks.xstream.mapper.CannotResolveClassException:
+
+./imcitydevelopment/3-Workspace/ImCityAdapters/CAANPRFaultInterface/src/dynniq/imcity/myAdapter/CAANPRAdapterHttpInterface.java
+
+PayloadPublication
+
+xstream.alias("d2LogicalModel", D2LogicalModel.class);
+
+PayloadPublication
+
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><supplierIdentification><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></supplierIdentification></exchange><payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en" xsi:type="VmsTablePublication"><feedType>Stratos Model - VMS Table</feedType><publicationTime>2017-03-22T15:10:01.183Z</publicationTime><publicationCreator><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></publicationCreator><headerInformation><confidentiality>restrictedToAuthoritiesTrafficOperatorsAndPublishers</confidentiality><informationStatus>real</informationStatus></headerInformation><vmsUnitTable id="Stratos_VMS_Units" version="3.1"><vmsUnitRecord id="8572399" version="3.1"><vmsUnitIdentifier>V017</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A637 Barnsley Rd - Darton (I/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5814164898455</latitude><longitude>-1.53054636011888</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572400" version="3.1"><vmsUnitIdentifier>V018</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Whinby Rd (M1 Jct.37 O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5484970958048</latitude><longitude>-1.51797268769684</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572397" version="3.1"><vmsUnitIdentifier>V015</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Wilthorpe Rd (O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.565691</latitude><longitude>-1.5099393</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572398" version="3.1"><vmsUnitIdentifier>V016</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Pontefract Rd - Town (O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.551905</latitude><longitude>-1.4743566</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572395" version="3.1"><vmsUnitIdentifier>V013</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Sheffield Rd (Alhambra Roundabou</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5495986349395</latitude><longitude>-1.47593579993057</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572396" version="3.1"><vmsUnitIdentifier>V014</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Wilthorpe Road (I/B) </value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.565666</latitude><longitude>-1.5102265</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572393" version="3.1"><vmsUnitIdentifier>V011</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Park Road (Dobie St)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5464022801653</latitude><longitude>-1.47694719073792</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572394" version="3.1"><vmsUnitIdentifier>V012</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">West Way (Morrisons)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.549883160987</latitude><longitude>-1.48134317479935</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572391" version="3.1"><vmsUnitIdentifier>V002</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Shambles St/ Townend R'bout</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.553162691877</latitude><longitude>-1.48538364047548</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572392" version="3.1"><vmsUnitIdentifier>V010</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Broadway (Woodland Drive)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5480245898641</latitude><longitude>-1.5047476558197</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572389" version="3.1"><vmsUnitIdentifier>V009</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Wombwell Ln (Tesco)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.540916</latitude><longitude>-1.4320147</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572390" version="3.1"><vmsUnitIdentifier>V004</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Old Mill Ln/ ASDA</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5596948460539</latitude><longitude>-1.47315035826645</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572387" version="3.1"><vmsUnitIdentifier>V006</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Sheffield Rd (M1 Jnc 36)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.4986636737247</latitude><longitude>-1.47590241719666</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572388" version="3.1"><vmsUnitIdentifier>V008</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Doncaster Rd (St Pauls Para</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.546021</latitude><longitude>-1.4299694</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572386" version="3.1"><vmsUnitIdentifier>V005</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Sheffield Rd/ Mt Vernon Rd</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5445637505107</latitude><longitude>-1.47265011534424</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572384" version="3.1"><vmsUnitIdentifier>V003</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Wakefield Rd / Bar Ln</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.581796</latitude><longitude>-1.4856466</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572385" version="3.1"><vmsUnitIdentifier>V007</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Pontefract Rd</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5715414394277</latitude><longitude>-1.42846746812288</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572383" version="3.1"><vmsUnitIdentifier>V001</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Dodworth Rd (M1 Jnc 37)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.549096465422</latitude><longitude>-1.51443240244674</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord></vmsUnitTable></payloadPublication></d2LogicalModel>
+
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><supplierIdentification><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></supplierIdentification></exchange>
+<payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en" xsi:type="VmsTablePublication">
+</payloadPublication></d2LogicalModel>
+
+XmlMapper mapper = new XmlMapper();
+
+D:\3-Workspace\ImCityAdapters\DatexIIREST\plugins\jackson-xml-databind-0.5.0.jar
+
+ XmlMapper xmlMapper = new XmlMapper();
+    xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, Boolean.FALSE);
+    xmlMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, Boolean.TRUE);
+    xmlMapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, Boolean.TRUE);
+    xmlMapper.configure(DeserializationFeature.FAIL_ON_INVALID_SUBTYPE, Boolean.FALSE);
+
+DeserializationFeature
+
+xmlMapper.readValue(
+
+xmlMapper.readValue
+
+http://org.codehaus.jackson/
+
+D2LogicalModel
+
+str
+
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><supplierIdentification><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></supplierIdentification></exchange><payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en" xsi:type="VmsTablePublication"><feedType>Stratos Model - VMS Table</feedType><publicationTime>2017-03-22T16:23:52.157Z</publicationTime><publicationCreator><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></publicationCreator><headerInformation><confidentiality>restrictedToAuthoritiesTrafficOperatorsAndPublishers</confidentiality><informationStatus>real</informationStatus></headerInformation><vmsUnitTable id="Stratos_VMS_Units" version="3.1"><vmsUnitRecord id="8572399" version="3.1"><vmsUnitIdentifier>V017</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A637 Barnsley Rd - Darton (I/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5814164898455</latitude><longitude>-1.53054636011888</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572400" version="3.1"><vmsUnitIdentifier>V018</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Whinby Rd (M1 Jct.37 O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5484970958048</latitude><longitude>-1.51797268769684</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572397" version="3.1"><vmsUnitIdentifier>V015</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Wilthorpe Rd (O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.565691</latitude><longitude>-1.5099393</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572398" version="3.1"><vmsUnitIdentifier>V016</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Pontefract Rd - Town (O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.551905</latitude><longitude>-1.4743566</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572395" version="3.1"><vmsUnitIdentifier>V013</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Sheffield Rd (Alhambra Roundabou</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5495986349395</latitude><longitude>-1.47593579993057</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572396" version="3.1"><vmsUnitIdentifier>V014</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Wilthorpe Road (I/B) </value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.565666</latitude><longitude>-1.5102265</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572393" version="3.1"><vmsUnitIdentifier>V011</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Park Road (Dobie St)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5464022801653</latitude><longitude>-1.47694719073792</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572394" version="3.1"><vmsUnitIdentifier>V012</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">West Way (Morrisons)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.549883160987</latitude><longitude>-1.48134317479935</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572392" version="3.1"><vmsUnitIdentifier>V010</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Broadway (Woodland Drive)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5480245898641</latitude><longitude>-1.5047476558197</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572390" version="3.1"><vmsUnitIdentifier>V004</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Old Mill Ln/ ASDA</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5596948460539</latitude><longitude>-1.47315035826645</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572391" version="3.1"><vmsUnitIdentifier>V002</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Shambles St/ Townend R'bout</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.553162691877</latitude><longitude>-1.48538364047548</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572388" version="3.1"><vmsUnitIdentifier>V008</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Doncaster Rd (St Pauls Para</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.546021</latitude><longitude>-1.4299694</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572389" version="3.1"><vmsUnitIdentifier>V009</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Wombwell Ln (Tesco)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.540916</latitude><longitude>-1.4320147</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572386" version="3.1"><vmsUnitIdentifier>V005</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Sheffield Rd/ Mt Vernon Rd</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5445637505107</latitude><longitude>-1.47265011534424</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572387" version="3.1"><vmsUnitIdentifier>V006</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Sheffield Rd (M1 Jnc 36)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.4986636737247</latitude><longitude>-1.47590241719666</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572384" version="3.1"><vmsUnitIdentifier>V003</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Wakefield Rd / Bar Ln</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.581796</latitude><longitude>-1.4856466</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572385" version="3.1"><vmsUnitIdentifier>V007</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Pontefract Rd</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5715414394277</latitude><longitude>-1.42846746812288</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572383" version="3.1"><vmsUnitIdentifier>V001</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Dodworth Rd (M1 Jnc 37)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.549096465422</latitude><longitude>-1.51443240244674</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord></vmsUnitTable></payloadPublication></d2LogicalModel>
+
+CountryEnum from String value 'gb': value not one of declared Enum instance names
+
+CountryEnum
+
+CountryEnum from String value 'gb': value not one of declared Enum instance names
+
+ProcessXMLtoObjects
+
+D:\3-Workspace\ImCityAdapters\DatexIIREST\src\eu\datex2\reference
+
+DATEXIISchema_2_2_1.xsd
+
+stringBuilder
+
+getDatexIIMessage
+
+e1.printStackTrace();
+
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" modelBaseVersion="2"><exchange><supplierIdentification><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></supplierIdentification></exchange><payloadPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en" xsi:type="VmsTablePublication"><feedType>Stratos Model - VMS Table</feedType><publicationTime>2017-03-23T09:21:50.430Z</publicationTime><publicationCreator><country>gb</country><nationalIdentifier>Siemens Stratos</nationalIdentifier></publicationCreator><headerInformation><confidentiality>restrictedToAuthoritiesTrafficOperatorsAndPublishers</confidentiality><informationStatus>real</informationStatus></headerInformation><vmsUnitTable id="Stratos_VMS_Units" version="3.1"><vmsUnitRecord id="8572399" version="3.1"><vmsUnitIdentifier>V017</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A637 Barnsley Rd - Darton (I/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5814164898455</latitude><longitude>-1.53054636011888</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572400" version="3.1"><vmsUnitIdentifier>V018</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Whinby Rd (M1 Jct.37 O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5484970958048</latitude><longitude>-1.51797268769684</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572397" version="3.1"><vmsUnitIdentifier>V015</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Wilthorpe Rd (O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.565691</latitude><longitude>-1.5099393</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572398" version="3.1"><vmsUnitIdentifier>V016</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Pontefract Rd - Town (O/B)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.551905</latitude><longitude>-1.4743566</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572396" version="3.1"><vmsUnitIdentifier>V014</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Wilthorpe Road (I/B) </value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.565666</latitude><longitude>-1.5102265</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572394" version="3.1"><vmsUnitIdentifier>V012</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">West Way (Morrisons)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.549883160987</latitude><longitude>-1.48134317479935</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572395" version="3.1"><vmsUnitIdentifier>V013</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Sheffield Rd (Alhambra Roundabou</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5495986349395</latitude><longitude>-1.47593579993057</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572392" version="3.1"><vmsUnitIdentifier>V010</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Broadway (Woodland Drive)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5480245898641</latitude><longitude>-1.5047476558197</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572393" version="3.1"><vmsUnitIdentifier>V011</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Park Road (Dobie St)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5464022801653</latitude><longitude>-1.47694719073792</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572390" version="3.1"><vmsUnitIdentifier>V004</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Old Mill Ln/ ASDA</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5596948460539</latitude><longitude>-1.47315035826645</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572391" version="3.1"><vmsUnitIdentifier>V002</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Shambles St/ Townend R'bout</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.553162691877</latitude><longitude>-1.48538364047548</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572388" version="3.1"><vmsUnitIdentifier>V008</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A635 Doncaster Rd (St Pauls Para</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.546021</latitude><longitude>-1.4299694</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572389" version="3.1"><vmsUnitIdentifier>V009</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">Wombwell Ln (Tesco)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.540916</latitude><longitude>-1.4320147</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572386" version="3.1"><vmsUnitIdentifier>V005</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Sheffield Rd/ Mt Vernon Rd</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5445637505107</latitude><longitude>-1.47265011534424</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572387" version="3.1"><vmsUnitIdentifier>V006</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Sheffield Rd (M1 Jnc 36)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.4986636737247</latitude><longitude>-1.47590241719666</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572384" version="3.1"><vmsUnitIdentifier>V003</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A61 Wakefield Rd / Bar Ln</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.581796</latitude><longitude>-1.4856466</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572385" version="3.1"><vmsUnitIdentifier>V007</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Pontefract Rd</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.5715414394277</latitude><longitude>-1.42846746812288</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord><vmsUnitRecord id="8572383" version="3.1"><vmsUnitIdentifier>V001</vmsUnitIdentifier><vmsRecord vmsIndex="0"><vmsRecord><vmsDescription><values><value lang="en">A628 Dodworth Rd (M1 Jnc 37)</value></values></vmsDescription><vmsLocation xsi:type="Point"><locationForDisplay><latitude>53.549096465422</latitude><longitude>-1.51443240244674</longitude></locationForDisplay></vmsLocation></vmsRecord></vmsRecord></vmsUnitRecord></vmsUnitTable></payloadPublication></d2LogicalModel>
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+supplierIdentification
+
+unmarshal
+
+eu.datex2.D2LogicalModel
+
+messageCollection = (eu.datex2.D2LogicalModel) a;
+
+ Class<?> clazz = x.getClass();
+    Field field = clazz.getField("fieldName"); //Note, this can throw an exception if the field doesn't exist.
+    Object fieldValue = field.get(x);
+
+  Class<?> clazz = x.getClass();
+
+D2LogicalModel
+
+java.lang.ClassCastException: javax.xml.bind.JAXBElement cannot be cast to eu.datex2.D2LogicalModel
+
+JAXBContext jc = JAXBContext.newInstance("eu.datex2");
+
+D2LogicalModel
+
+= new Timer();
+
+httpT = new Timer()
+
+	public class SOAPTimer extends TimerTask
+	{
+
+.schedule(new SOAPTimer(url, username, password), 0, 60*1000*numberOfMinutes);
+
+HTTPTimer
+
+interval
+
+httpT
+
+getdatex2Content
+
+ URL url = null;
+         BufferedReader reader = null;
+         StringBuilder stringBuilder;
+
+  	     HttpURLConnection http = null;
+  	     try {
+			url = new URL(Url);
+		    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+		    String encoded = Base64.getEncoder().encodeToString(("Dynniq_Barnsley:R2K+nfcaNPbo0Oa").getBytes(StandardCharsets.UTF_8));  //Java 8
+		    connection.setRequestProperty("Authorization", "Basic "+encoded);
+		    connection.setRequestMethod("GET");
+		   
+
+            connection.setReadTimeout(15*1000);
+            
+            connection.connect();
+
+            reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            stringBuilder = new StringBuilder();
+
+            String line = null;
+            while ((line = reader.readLine()) != null)
+            {
+              stringBuilder.append(line);
+            }
+            String str = stringBuilder.toString();
+
+} catch (JsonParseException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (JsonMappingException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
+IDateXHandler
+
+import eu.datex2.D2LogicalModel;
+
+
+public interface IDateXHandler 
+{
+	public abstract void HandleData(D2LogicalModel data);
+}
+
+
+IDataXHandler
+
+VmsStratosDefinitionDataHandler
+
+WebInterface
+
+"https://datex2.stratostraffic.com/vms/definition"
+
+	webTimer.schedule(new HTTPTimer(interval), 0, 60*1000*interval);
+
+ StringBuffer strb = new StringBuffer(str);
+            try
+            {
+            	ProcessXMLtoObjects process = new ProcessXMLtoObjects(strb, "D:\\3-Workspace\\ImCityAdapters\\DatexIIREST\\src\\eu\\datex2\\reference\\DATEXIISchema_2_2_1.xsd", "C:\\Temp",1);
+            	D2LogicalModel d2logicalModel = process.getDatexIIMessage();
+            	
+            }
+            catch(Exception ex)
+            {
+            	ex.printStackTrace();
+            }
+
+dataHandler
+
+HandleData
+
+d2logicalModel
+
+VmsTablePublication
+
+getPayloadPublication
+
+VmsStratosDefinitionDataHandler
+
+"Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+  while(true)
+            {
+            	try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            
+            }
+
+  foreach (VmsUnitTable vms in vmsTablePublication.vmsUnitTable)
+                        {
+                            foreach (VmsUnitRecord vmsUnit in vms.vmsUnitRecord)
+                            {
+                                double m_easting1 = 0, m_northing1 = 0;
+                                double m_easting2 = 0, m_northing2 = 0;
+                                VmsRecord rec = vmsUnit.vmsRecord[0].vmsRecord;
+                                string scn = vmsUnit.id;
+
+getVmsUnitTable
+
+getVmsUnitRecord
+
+getVmsRecord
+
+ PointCoordinates pc = rec.vmsLocation.locationForDisplay;
+
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBUtility;
+import dynniq.imcity.clearview.support.AdapterConstant;
+import dynniq.imcity.clearview.support.AdapterUtility;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBUtility;
+
+D:\myAdapter\plugins\log4j-core-2.0.2.jar
+
+D:\myAdapter\plugins\commons-logging-1.1.2.jar
+
+D:\myAdapter\plugins\log4j-api-2.0.2.jar
+
+private final static Logger logger = LogManager.getLogger(myAdapterMain.class);
+
+	private static int diagInt;
+	private static Properties configArgs;
+
+	static ProcessorActionThread serviceThread;
+	
+	/**
+	 * runState - true - enable the server for operation; false - disable server operation
+	 */
+	private static boolean runState;
+
+public static class ProcessorActionThread extends Thread {
+
+public static class ProcessorActionThread extends Thread {
+
+		private final Logger loggerT = LogManager.getLogger(ProcessorActionThread.class);
+
+		private myAdapter cdbClient = null;
+		private Properties configArgsThread;
+		private int status = CDBConstant.INITIAL;
+
+		public ProcessorActionThread(Properties configArgsIn) {
+			configArgsThread = configArgsIn;
+		}
+
+		@Override
+		public void run() {
+			startClient();
+		}
+		
+		private void startClient() {
+			boolean startClient = true;
+			while (isRunState()) {
+				// This thread BLOCKS in the adapter class
+				if (startClient) {
+					AdapterUtility.ps(loggerT, "Starting Adapter");
+					setStatus( CDBConstant.RUNNING );
+					startClient = false;
+					cdbClient = new myAdapter(configArgsThread);
+				} else {
+					CDBUtility.sleeping(CDBConstant.IDLEWAIT);
+				}
+
+				// Give other threads a chance to run
+				yield();
+
+				// Restart the Processor if it has stopped - allow a delay before retrying connection
+				if (getCdbClient().getStatus() != CDBConstant.RUNNING) {
+					// Ensure that the client is closed down
+					getCdbClient().closeDown();
+					if (cdbClient.getStatus() == CDBConstant.FINISHED) {
+						AdapterUtility.ps(loggerT, "Starting Adapter in " + (CDBConstant.RESTARTWAIT / 1000)
+								+ " seconds");
+						CDBUtility.sleeping(CDBConstant.RESTARTWAIT);
+					} else {
+						AdapterUtility.ps(loggerT, "Starting Adapter in " + (CDBConstant.RESTARTWAITERROR / 1000)
+								+ " seconds");
+						CDBUtility.sleeping(CDBConstant.RESTARTWAITERROR);
+					}
+					startClient = true;
+				}
+			}
+		}
+		
+		
+		public void closeDown() {
+			AdapterUtility.ps(loggerT, "Stopping Adapter");
+			if (getCdbClient() != null) {
+				cdbClient.closeDown();
+			}
+			setRunState(false);
+		}
+
+		/**
+		 * @return the cdbClient
+		 */
+		public myAdapter getCdbClient() {
+			return cdbClient;
+		}
+
+		/**
+		 * @param cdbClientIn
+		 *            the cdbClient to set
+		 */
+		public void setCdbClient(myAdapter cdbClientIn) {
+			cdbClient = cdbClientIn;
+		}
+
+		/**
+		 * @return the status
+		 */
+		public int getStatus() {
+			if (getCdbClient() != null) {
+				status = getCdbClient().getStatus();
+			}
+			return status;
+		}
+
+		/**
+		 * @param statusIn
+		 *            the status to set
+		 */
+		public void setStatus(int statusIn) {
+			status = statusIn;
+		}
+	}
+}
+
+
+import imtech.imcity.cdb.CDBConfig;
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBHeartBeat;
+import imtech.imcity.cdb.CDBUtility;
+import imtech.imcity.cdb.CORBAQuery;
+import imtech.imcity.cdb.subdata.CCTVSubscriptionData;
+import imtech.imcity.cdb.submanagers.CCTVSubscriptionManager;
+import imtech.imcity.corba.Query.CorbaSQLWarning;
+import imtech.imcity.corba.SessionManagement.Manager;
+import imtech.imcity.corba.SessionManagement.ManagerHelper;
+import imtech.imcity.corba.SessionManagement.Session;
+import dynniq.imcity.myAdapter.support.AdapterConstant;
+import dynniq.imcity.myAdapter.support.AdapterUtility;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.omg.CORBA.ORB;
+import org.omg.CosNaming.NameComponent;
+import org.omg.CosNaming.NamingContextExt;
+import org.omg.CosNaming.NamingContextExtHelper;
+
+DatexIICDBAdapterInterface
+
+
+import imtech.imcity.cdb.CDBConfig;
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBHeartBeat;
+import imtech.imcity.cdb.CDBUtility;
+import imtech.imcity.cdb.CORBAQuery;
+import imtech.imcity.cdb.subdata.CCTVSubscriptionData;
+import imtech.imcity.cdb.submanagers.CCTVSubscriptionManager;
+import imtech.imcity.corba.Query.CorbaSQLWarning;
+import imtech.imcity.corba.SessionManagement.Manager;
+import imtech.imcity.corba.SessionManagement.ManagerHelper;
+import imtech.imcity.corba.SessionManagement.Session;
+import dynniq.imcity.myAdapter.support.AdapterConstant;
+import dynniq.imcity.myAdapter.support.AdapterUtility;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.omg.CORBA.ORB;
+import org.omg.CosNaming.NameComponent;
+import org.omg.CosNaming.NamingContextExt;
+import org.omg.CosNaming.NamingContextExtHelper;
+
+	private final static Logger logger = LogManager.getLogger(myAdapter.class);
+
+	private String cdbUserName;
+	private String cdbUserPass;
+	private String corbaloc;
+	private int cdbHeartbeat;
+
+	private Properties args;
+	private String cdbservice;
+	private String cdbserviceKind;
+	private String cdbserviceName;
+	private String cdbcontextName;
+	private String cdbcontextKind;
+	private String datasourceTypeId;
+	
+	private int sampleInterval;
+	private int keepAlive;
+
+	public String inputFilePath;
+	public String processedFilePath;
+	public String resultFilePath;
+
+	private int diagInt;
+
+	private int status;
+
+	private ORB orb = null;
+	private Manager cdbManager = null;
+	private Session cdbSession = null;
+	private org.omg.CORBA.Object corbaObjRef = null;
+	private boolean nameServiceMethod;
+
+	private boolean hbId;
+	private CDBHeartBeat hbt;
+	private CDBHeartBeat heartBeatThread;
+
+	private String proxyString;
+    private String proxyUsername;
+    private String proxyPassword;
+
+	private CCTVSubscriptionManager cctvsubmgr;
+	private CCTVSubscriptionData cctvsubdata;
+	private CDBConfig cdbCfg;
+	
+	private ArrayList<String> views;
+
+DatexIICDBAdapterInterface
+
+	public myAdapter(Properties argsIn) {
+		setStatus(CDBConstant.INITIAL);
+		args = argsIn;
+
+		// Defaults
+		cdbUserName = AdapterConstant.utmcUser;
+		cdbUserPass = AdapterConstant.utmcPsw;
+		corbaloc = AdapterConstant.corbaloc;
+		cdbHeartbeat = AdapterConstant.HEARTBEATINTERVAL;
+		cdbservice = AdapterConstant.CDBservice;
+		cdbserviceKind = AdapterConstant.CDBserviceKind;
+		cdbserviceName = AdapterConstant.CDBserviceName;
+		cdbcontextName = AdapterConstant.CDBcontextName;
+		cdbcontextKind = AdapterConstant.CDBcontextKind;
+		sampleInterval = AdapterConstant.SampleInterval;
+		keepAlive = AdapterConstant.HEARTBEATINTERVAL;
+		datasourceTypeId = AdapterConstant.DATASOURCETYPEID;
+		proxyString = AdapterConstant.BLANK;
+		proxyUsername = AdapterConstant.BLANK;
+		proxyPassword = AdapterConstant.BLANK;
+		views = new ArrayList<String>();
+		views.add("CCTV_FAULTS");
+		
+
+		setDiagInt(0);
+
+		// Overlay defaults with configuration file values
+		parseProps(args);
+		
+		// Now running
+		setStatus(CDBConstant.RUNNING);
+
+		// Anticipate Exceptions from here
+		try {
+			
+			// Check for IOR access method - default is Name Service
+			if ( corbaloc.contains("http://")) {
+				nameServiceMethod = false;
+			}
+			nameServiceMethod = true;
+			AdapterUtility.ps(logger, "Diagnostic level " + getDiagInt());
+			if (testDiagInt(AdapterConstant.DIAGNOSTIC_T)) {
+				AdapterUtility.ps(logger, "CORBA location " + corbaloc);
+			}
+
+			// Setup the ORB strings and properties
+			String[] orbString = new String[2];
+			Properties orbProps = new Properties();
+
+			// Create and Initialise the Object Request Broker
+			if ( nameServiceMethod ) {
+				orbString[0] = AdapterConstant.MinusORBInitRef;
+				orbString[1] = cdbservice + "=" + corbaloc;
+
+				orbProps.setProperty(AdapterConstant.ORBInitRef, cdbservice + "=" + corbaloc);
+				orbProps.setProperty(AdapterConstant.ORBInitialPort, getCorbalocPort(corbaloc));
+				orbProps.setProperty(AdapterConstant.ORBInitialHost, getCorbalocAddress(corbaloc));
+					
+				if (testDiagInt(AdapterConstant.TRACE_T)) {
+					OutputStreamWriter defaultStream = new OutputStreamWriter ( new ByteArrayOutputStream () );
+					String sysenc = defaultStream.getEncoding();
+					AdapterUtility.ps(logger, "CDB Service name " + cdbservice);
+					AdapterUtility.ps(logger, "Object Request Broker configuration:");
+					AdapterUtility.ps(logger, "orbStrings '" + orbString[0] + "' '" + orbString[1] + "'");
+					AdapterUtility.ps(logger, "orbProps '" + orbProps.toString() + "'");
+					AdapterUtility.ps(logger, "Codeset '" + sysenc + "'");
+				}
+
+				orb = ORB.init(orbString, orbProps);
+
+				// Initialise the RootPOA - the CDB service name - aka root context
+				// Use NamingContextExt instead of NamingContext. This is part of the Interoperable naming Service.
+				corbaObjRef = orb.resolve_initial_references(cdbservice);
+				if (testDiagInt(AdapterConstant.TRACE_T)) {
+					AdapterUtility.ps(logger, "CORBA Service configuration:");
+					AdapterUtility.ps(logger, "Service Name '" + cdbserviceName + "' Kind '" + cdbserviceKind + "'");
+					AdapterUtility.ps(logger, "Context Name '" + cdbcontextName + "' Kind '" + cdbcontextKind + "'");
+				}
+				NamingContextExt rootContext = NamingContextExtHelper.narrow(corbaObjRef);
+				NameComponent[] contextName = new NameComponent[2];
+				contextName[0] = new NameComponent(cdbcontextName, cdbcontextKind);
+				contextName[1] = new NameComponent(cdbserviceName, cdbserviceKind);
+
+				// Create a CDB Manager
+				cdbManager = ManagerHelper.narrow(rootContext.resolve(contextName));
+			} else {
+				int bypasscacheInt = AdapterConstant.ONE + (int)(Math.random() * AdapterConstant.HUNDRED);
+				corbaloc = corbaloc + "?" + bypasscacheInt;
+				Proxy pxy = null;
+				if ( !proxyString.equalsIgnoreCase(AdapterConstant.BLANK)) {
+					String pxyAddr = proxyString.split(":")[0];
+					int pxyPort = Integer.parseInt(proxyString.split(":")[1]);
+					pxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(pxyAddr, pxyPort));
+					if (testDiagInt(AdapterConstant.TRACE_T)) {
+						AdapterUtility.ps(logger, "HTTP proxy configuration: " + proxyString);
+					}
+				}
+				URL corbaUrl = new URL(corbaloc);
+				URLConnection httpConnection = null;
+				if ( pxy != null ) {
+					httpConnection = corbaUrl.openConnection(pxy);
+				} else {
+					httpConnection = corbaUrl.openConnection();					
+				}
+				InputStream is = httpConnection.getInputStream();
+				BufferedReader corbaIORDocument = new BufferedReader( new InputStreamReader(is) );
+				String corbaIOR = "";
+				while ( !corbaIOR.contains("IOR:") ) {
+					corbaIOR = corbaIORDocument.readLine();
+					if (testDiagInt(AdapterConstant.TRACE_T)) {
+						AdapterUtility.ps(logger, "Recieved IOR '" + corbaIOR + "'");
+					}
+				}
+				corbaIORDocument.close();
+
+				// instantiate the ORB using stringified IOR
+				orbString[0] = "";
+				orbString[1] = "";
+				if (testDiagInt(AdapterConstant.TRACE_T)) {
+					orbString[0] = "-ORBDebug subcontractDebugFlag=true";
+				}
+					
+				orb = ORB.init(orbString,null);
+					
+				corbaObjRef = orb.string_to_object(corbaIOR);
+					
+				// Create a CDB Manager
+				cdbManager = ManagerHelper.unchecked_narrow(corbaObjRef);
+			}
+
+			if (testDiagInt(AdapterConstant.TRACE_T)) {
+				AdapterUtility.ps(logger, "Starting authenticated session");
+			}
+
+			// Create an authenticated session
+			if (testDiagInt(AdapterConstant.DIAGNOSTIC_T)) {
+				AdapterUtility.ps(logger, "Adapter main thread logging in " + cdbUserName);
+			}
+			cdbSession = null;
+			while (cdbSession == null ) {
+				// Create a session to the CDB
+				cdbSession = cdbManager.createSession(cdbUserName, cdbUserPass);
+				if ( cdbSession == null ) {
+					AdapterUtility.ps(logger, "Adapter main thread login failed for " + cdbUserName);
+					AdapterUtility.sleeping(AdapterConstant.RESTARTWAITERROR);
+				}
+			}
+			if (testDiagInt(AdapterConstant.DIAGNOSTIC_T)) {
+				AdapterUtility.ps(logger, "Adapter main thread logged in");
+			}
+
+			// Register connection details with the CDBServer
+			cdbSession.registerInformation(AdapterConstant.ADAPTERNAME);
+
+			// Setup session heart beat and monitor
+			hbId = cdbSession.registerHeartbeat(cdbHeartbeat);
+			heartBeatThread = new CDBHeartBeat(cdbSession, cdbHeartbeat, getStatus());
+			heartBeatThread.setPriority(AdapterConstant.BACKGROUNDPRIORITY);
+			heartBeatThread.setStatus(getStatus());
+			heartBeatThread.start();
+
+			// Short wait for session to establish ?
+			AdapterUtility.sleeping(AdapterConstant.IDLEWAIT);
+
+			// Alter SQL session date format
+			CDBUtility.AlterSQLSession(cdbSession, getDiagInt());
+
+			// Create a CDB Subscription Manager for VMS objects
+			cctvsubmgr = new CCTVSubscriptionManager();
+
+			// Create CDB Configuration
+			cctvsubdata = new CCTVSubscriptionData(cctvsubmgr, cdbManager, cdbUserName, cdbUserPass, keepAlive, getStatus(), getDiagInt(), views);
+			cctvsubdata.setPriority(AdapterConstant.BACKGROUNDPRIORITY);
+			
+			
+			/*{
+
+				@Override
+				public void cctvCommandUpdate(ArrayList<VMSCommands> vmsCommands, boolean deleted) 
+				{
+					
+					if ( !deleted ) 
+					{
+						for(VMSCommands cmd : vmsCommands)
+						{
+							if(cmd.getDatasourceTypeId() == Integer.parseInt(datasourceTypeId))
+							{
+								
+								if(cmd.getAcknowledgeTime() != null)
+								{
+									Date _time = new Date();
+									//cmd.setAcknowledgeTime(_time);
+								}
+							}
+						}
+					}
+				}
+				
+				@Override
+				public void vmsDefinitionUpdate(ArrayList<VMSDefinition> vmsDefinition, boolean deleted) {
+					// TODO
+					// TODO Process a change in VMS_DEFINITION view here
+					// TODO
+					if ( !deleted ) 
+					{
+						for(VMSDefinition def : vmsDefinition)
+						{
+							if(def.getDatasourceTypeId() == Integer.parseInt(datasourceTypeId))
+							{
+							 	
+							}
+							
+						}
+					}
+				}
+
+				@Override
+				public void vmsConfigurationUpdate( ArrayList<VMSConfiguration> vmsConfiguration, boolean deleted) {
+					// TODO Auto-generated method stub
+				}
+
+				@Override
+				public void vmsDataUpdate(ArrayList<VMSData> vmsData, boolean deleted) {
+					// TODO Auto-generated method stub
+				}
+
+				@Override
+				public void vmsDynamicUpdate(ArrayList<VMSDynamic> vmsDynamic, boolean deleted) {
+				}
+
+				@Override
+				public void vmsFaultsUpdate(ArrayList<VMSFaults> vmsFaults, boolean deleted) {
+					// TODO Auto-generated method stub
+				}
+			};
+			*/
+			// Add subscription handler to the subscription manager
+		
+
+			// FIXME example to use SQL with ImCity database ...
+			String sqlCommand = "SELECT systemcodenumber FROM VMS_DEFINITION where DATASOURCE_TYPEID=1200";
+			CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+				
+			// Update changes to existing device if INSERT failed
+			if ( queryResults.getWarnings() != null ) {
+				if ( queryResults.getWarnings().value.length > 0 ) {
+					CorbaSQLWarning[] warning = queryResults.getWarnings().value;
+					for (CorbaSQLWarning cw : warning) {
+						int code = cw.errorCode;
+						if ( code == AdapterConstant.ONE) {
+							// Perform Update as Insert failed
+						}
+					}
+				}
+			}
+
+			// MAIN LOOP
+			// ... some work to do getting data from Street ...
+			while (getStatus() == CDBConstant.RUNNING) {
+				// TODO
+				// TODO
+				// TODO
+
+				// Wait for the next sample
+				CDBUtility.sleeping( sampleInterval *1000 );				
+			}
+
+			setStatus(CDBConstant.FINISHED);
+
+			// The following generic CORBA exceptions are possible see
+			// http://docs.oracle.com/javase/7/docs/technotes/guides/idl/jidlExceptions.html
+		} catch (org.omg.CORBA.COMM_FAILURE e) {
+			AdapterUtility.ps(logger, "CORBA communication Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.OBJECT_NOT_EXIST e) {
+			AdapterUtility.ps(logger, "CORBA object does not exist Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.MARSHAL e) {
+			AdapterUtility.ps(logger, "CORBA marshal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_PARAM e) {
+			AdapterUtility.ps(logger, "CORBA bad parameter Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_OPERATION e) {
+			AdapterUtility.ps(logger, "CORBA bad operation Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.INTERNAL e) {
+			AdapterUtility.ps(logger, "CORBA internal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (NullPointerException e) {
+			AdapterUtility.ps(logger, "Null Pointer Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, "" + e);
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (Exception e) {
+			// Any other exception
+			AdapterUtility.ps(logger, "Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		}
+	}
+
+
+DatexIICDBAdapterInterface
+
+/**
+	 * Parse argument string array for operating values.
+	 * 
+	 * @param args
+	 */
+	private void parseProps(Properties appProps) {
+		AdapterUtility.ps(logger, "Parsing arguments");
+		if (appProps.getProperty("cdbusername") != null) {
+			cdbUserName = appProps.getProperty("cdbusername");
+			AdapterUtility.ps(logger, "CDB Username " + cdbUserName);
+		}
+		// Password
+		if (appProps.getProperty("cdbuserpass") != null) {
+			cdbUserPass = appProps.getProperty("cdbuserpass");
+			AdapterUtility.ps(logger, "CDB User password " + cdbUserPass);
+		}
+		// CORBA location
+		if (appProps.getProperty("corbaloc") != null) {
+			corbaloc = appProps.getProperty("corbaloc");
+			AdapterUtility.ps(logger, "CDB Corba location " + corbaloc);
+		}
+		// CDB KeepAlive interval
+		if (appProps.getProperty("heartbeat") != null) {
+			String mkaStr = appProps.getProperty("heartbeat");
+			int proposedheartbeat = AdapterUtility.StringToInt(mkaStr);
+			if (proposedheartbeat >= 0) {
+				cdbHeartbeat = proposedheartbeat;
+				AdapterUtility.ps(logger, "CDB CORBA Heartbeat Interval is " + cdbHeartbeat + " (s)");
+			} else {
+				cdbHeartbeat = AdapterConstant.HEARTBEATINTERVAL;
+				AdapterUtility.ps(logger, "CDB CORBA Heartbeat Interval is disabled");
+			}
+		}
+		// CDB Service name location
+		if (appProps.getProperty("serviceRef") != null) {
+			cdbservice = appProps.getProperty("serviceRef");
+			AdapterUtility.ps(logger, "CDB Service " + cdbservice);
+		}
+		// CORBA service Name
+		if (appProps.getProperty("serviceName") != null) {
+			cdbserviceName = appProps.getProperty("serviceName");
+			AdapterUtility.ps(logger, "CDB ServiceName " + cdbserviceName);
+		}
+		// CORBA service Kind
+		if (appProps.getProperty("serviceKind") != null) {
+			cdbserviceKind = appProps.getProperty("serviceKind");
+			AdapterUtility.ps(logger, "CDB ServiceKind " + cdbserviceKind);
+		}
+		// CORBA context Name
+		if (appProps.getProperty("contextName") != null) {
+			cdbcontextName = appProps.getProperty("contextName");
+			AdapterUtility.ps(logger, "CDB ContextName " + cdbcontextName);
+		}
+		// CORBA context Kind
+		if (appProps.getProperty("contextKind") != null) {
+			cdbcontextKind = appProps.getProperty("contextKind");
+			AdapterUtility.ps(logger, "CDB ContextKind " + cdbcontextKind);
+		}
+		// Directory scan sampling interval
+		if (appProps.getProperty("sampleInterval") != null) {
+			String sampleInt = appProps.getProperty("sampleInterval");
+			int proposedInterval = AdapterUtility.StringToInt(sampleInt);
+			if ( (proposedInterval <= AdapterConstant.MAX_SAMPLE_INTERVAL) && ( proposedInterval >= 0 ) ) {
+				sampleInterval = proposedInterval;
+				AdapterUtility.ps(logger, "Data sampling interval (seconds) " + sampleInterval);
+			}
+		}
+		if (appProps.getProperty("datasourcetypeid") != null) {
+			datasourceTypeId = appProps.getProperty("datasourcetypeid");
+			AdapterUtility.ps(logger, "Datasource Type Id " + datasourceTypeId);
+		}
+		// Output verbosity
+		if (appProps.getProperty("verb") != null) {
+			String diagText = appProps.getProperty("verb");
+			diagInt = AdapterUtility.StringToInt(diagText);
+			AdapterUtility.ps(logger, "Using diagnostic level " + diagText);
+		}
+	}
+
+	// Extract the port number from the CorbaLocation string
+	private String getCorbalocPort(String corbalocIn) {
+		// Format of string is "corbaloc::10.164.114.47:2809/NameService"
+		String result = "";
+		if (validateCorbaloc(corbalocIn)) {
+			String[] remains = corbalocStrings(corbalocIn);
+			String[] tailend = remains[3].split("/");
+			result = tailend[0];
+		}
+		return result;
+	}
+
+	// Extract the IP address number from the CorbaLocation string
+	private String getCorbalocAddress(String corbalocIn) 
+	{
+		String result = "";
+		if (validateCorbaloc(corbalocIn)) {
+			String[] remains = corbalocStrings(corbalocIn);
+			result = remains[2];
+		}
+		return result;
+	}
+
+	// Validate format of the CorbaLocation string
+	private boolean validateCorbaloc(String corbalocIn) {
+		return corbalocIn.startsWith("corbaloc");
+	}
+
+	private String[] corbalocStrings(String corbalocIn) {
+		String[] result = corbalocIn.split(":");
+		return result;
+	}
+
+	/**
+	 * Close down all CORBA sessions and exit.
+	 */
+	public void closeDown() {
+		// Close down the threads
+		if (hbt != null) {
+			hbt.setStatus(CDBConstant.FINISHED);
+		}
+
+		// Give threads time to run down
+		CDBUtility.sleeping(CDBConstant.IDLEWAIT);
+
+		// Close the session, the manager, the object and the ORB
+		if (cdbSession != null) {
+			cdbSession._release();
+		}
+		if (cdbManager != null) {
+			cdbManager._release();
+		}
+		if (corbaObjRef != null) {
+			corbaObjRef._release();
+		}
+		setStatus(CDBConstant.FINISHED);
+	}
+	
+	/**
+	 * @param level
+	 * @return TRUE if the diagnostic level is enabled
+	 */
+	public boolean testDiagInt(int level) {
+		int match = getDiagInt() & level;
+		return (match == level);
+	}
+
+	/**
+	 * @return the diagInt
+	 */
+	public int getDiagInt() {
+		return diagInt;
+	}
+
+	/**
+	 * @param diagIntIn
+	 *            the diagInt to set
+	 */
+	public void setDiagInt(int diagIntIn) {
+		diagInt = diagIntIn;
+	}
+
+	/**
+	 * @return the status
+	 */
+	public int getStatus() {
+		return status;
+	}
+
+	/**
+	 * @param statusIn
+	 *            the status to set
+	 */
+	public void setStatus(int statusIn) {
+		status = statusIn;
+	}
+
+
+AdapterConstant.java
+AdapterUtility.java
+
+D:\myAdapter\src\dynniq\imcity\myAdapter\support\AdapterUtility.java
+
+D:\myAdapter\src\dynniq\imcity\myAdapter\support\AdapterConstant.java
+
+package dynniq.imcity.DatexII.support;
+
+
+dynniq.imcity.DatexII.support;
+
+DatexIICDBAdapterInterface
+
+DatexIIV2PullAdapter
+
+DatexIICDBAdapterInterface
+
+/**
+	 * @return the runState
+	 */
+	public static boolean isRunState() {
+		return runState;
+	}
+
+	/**
+	 * @param runStateIn
+	 *            set or clear the runState
+	 */
+	public static void setRunState(boolean runStateIn) {
+		runState = runStateIn;
+	}
+	
+	/**
+	 * @return the diagInt
+	 */
+	public static int getDiagInt() {
+		return diagInt;
+	}
+
+	/**
+	 * @param diagIntIn
+	 *            the diagInt to set
+	 */
+	public static void setDiagInt(int diagIntIn) {
+		diagInt = diagIntIn;
+	}
+	
+	/**
+	 * AdapterThread is the thread class where the Adapter operates.
+	 */
+
+DatexIICDBAdapterInterface
+
+isRunState
+
+/**
+	 * @return the runState
+	 */
+	public static boolean isRunState() {
+		return runState;
+	}
+
+/**
+	 * Parse Adapter initialisation file for operating values.
+	 * @return
+	 */
+	private static Properties getConfig() 
+	{
+		String configHome = AdapterConstant.iniFile;
+		File cfgFile = new File(configHome);
+		Properties props = new Properties();
+		
+		// Clear the running state
+		setRunState(false);
+
+		try {
+			FileInputStream fin = new FileInputStream(cfgFile);
+			props.load( fin );
+			fin.close();
+
+			setRunState(true);
+
+		} catch (FileNotFoundException e) {
+			AdapterUtility.ps(logger, "Configuration file not found " + e.getMessage());
+		} catch (IOException e) {
+			AdapterUtility.ps(logger, "Configuration file I/O Exception " + e.getMessage());
+		}
+
+		return props;
+	}
+
+	private static boolean localCheckConnection() {
+		boolean result = false;
+
+		if (isRunState()) {
+			if (serviceThread != null) {
+				result = (serviceThread.getStatus() == CDBConstant.RUNNING);
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * @return the runState
+	 */
+	public static boolean isRunState() {
+		return runState;
+	}
+
+	/**
+	 * @param runStateIn
+	 *            set or clear the runState
+	 */
+	public static void setRunState(boolean runStateIn) {
+		runState = runStateIn;
+	}
+	
+	/**
+	 * @return the diagInt
+	 */
+	public static int getDiagInt() {
+		return diagInt;
+	}
+
+	/**
+	 * @param diagIntIn
+	 *            the diagInt to set
+	 */
+	public static void setDiagInt(int diagIntIn) {
+		diagInt = diagIntIn;
+	}
+
+AdapterUtility.ps(logger, "Processor Starting");
+
+		// Enable the diagnostic levels by default
+		setDiagInt( CDBConstant.REPORT_T + CDBConstant.DIAGNOSTIC_T );
+
+		// The initialisation file is G1G2Processor.ini, in the config file
+		// wherever the G1G2Processor adapter is installed.   It contains various
+		// parameters and filenames expected to be present.
+		AdapterUtility.ps(logger, "Parsing initialisation file");
+		configArgs = getConfig();
+
+		// Step through the operating parameters found in the ini file
+		AdapterUtility.ps(logger, "Operating values");
+		Enumeration<?> en = configArgs.keys();
+		while (en.hasMoreElements()) 
+		{
+			String key  = (String) en.nextElement();
+			String keyStr = key + " = '" + configArgs.getProperty(key);
+			AdapterUtility.ps(logger, "\t'" + keyStr + "'");
+		}
+
+		
+		serviceThread = new ProcessorActionThread(configArgs);
+		serviceThread.setPriority(CDBConstant.MAINHTREADPRIORITY);
+		
+		serviceThread.start();
+		
+		// Pause to let the thread get started
+		CDBUtility.sleeping(CDBConstant.RESTARTWAITERROR);
+		
+		// Hang around here until there is no longer a connection
+		while ( localCheckConnection() ) {
+			CDBUtility.sleeping(CDBConstant.RESTARTWAITERROR);
+		}
+		// Clear the running state
+		setRunState(false);
+
+		AdapterUtility.ps(logger, "Processor closed down");
+
+Properties config
+
+Enumeration<?> en = config.keys();
+		//get right config for this 
+		while (en.hasMoreElements()) 
+		{
+			String key  = (String) en.nextElement();
+			String keyStr = config.getProperty(key);
+			System.out.println(key + ":" + keyStr);
+			switch(key)
+			{
+
+case "datasourcetypeid":
+
+datasourcetypeid =  keyStr;
+
+Integer.parseInt(keyStr);
+
+VmsStratosDefinitionDataHandler vmsDataHandler = new VmsStratosDefinitionDataHandler("Dynniq_Barnsley", "R2K+nfcaNPbo0Oa", 1);
+		vmsDataHandler.Initialise();
+
+configArgs
+
+C:\\Imtech\\DatexIIV2PullAdapter\\
+
+DatexIIV2PullAdapter
+
+config
+
+#
+# ImCity myAdapter configuration
+#
+# Access Username and password
+cdbusername=imtech01
+cdbuserpass=imtech01
+#
+# Output verbosity
+# This is logical OR bitwise setting
+# Diagnostic level
+# 1  = Basic Reports (errors are always reported) (default)
+# 2  = Code Flow Diagnostic
+# 4  = Report working details
+verb=3
+#
+# ImCity Database CORBA Configuration
+#
+# CORBA Location
+corbaloc=corbaloc::192.168.50.107:2809/NameService
+#
+# CORBA Heartbeat interval (seconds)
+heartbeat=30
+#
+# CORBA Name Service
+serviceRef=CutlasNameService
+#
+# CORBA Connection
+serviceName=MANAGER2
+serviceKind=OBJECT
+contextName=CUTLAS
+contextKind=UTMC
+#
+# ImCity CDB Adapter data source ID - Value reserved to Imtech
+# For example, Antares class starship, USS Hermes designated NCC-10376 - formed part of the tachyon blockade during the Klingon Civil War
+datasourcetypeid=1723
+CDBTableName=CCTV_FAULTS
+URLWsdlLocation=file:/C:/imtech/CAFaultAdapter/config/JTMSDiagnosticsFeed.wsdl
+CAUserName=TestName
+CAPassword=TestPwd
+CAPollInterval=1
+#hours
+InitialSearchPeriod=72
+
+C:\imtech\CAFaultAdapter\config\CAFaultAdapter.ini
+
+DatexIIAdapter
+
+Dynniq_Barnsley
+
+R2K+nfcaNPbo0Oa
+
+https://datex2.stratostraffic.com/vms/definition
+https://datex2.stratostraffic.com/vms/status
+https://datex2.stratostraffic.com/traveltime/definition
+https://datex2.stratostraffic.com/traveltime/status
+
+
+VmsDefinitionUrl
+
+    //double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+        double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+ConvertLatLong2OSGB
+
+  if(type == "Airy")
+            {
+                a = 6377563.396;
+                b = 6356256.910;
+            }
+            else
+            {
+                a = 6378137.0;
+                b = 6356752.314245;
+            }
+
+           // FIXME calculation is wrong lat=50.83848, long=-1.086215
+            // FIXME this should give x=464440 y=104726
+            // FIXME but this gives   x=464336 y=104789
+            const double deg2rad = Math.PI / 180;
+
+            // This will only work with lats and longs in decimal degrees.
+            double latitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lat));
+            double longitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lon));
+
+            //double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+            //double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+            double F0 = 0.9996012717; // NatGrid scale factor on central meridian
+            double lat0 = deg2rad * 49;
+            double lon0 = deg2rad * -2; // NatGrid true origin
+            double N0 = -100000; // northing true origin, metres
+            double E0 = 400000; // easting of true origin, metres
+            double e2 = 1 - (b * b) / (a * a); // eccentricity squared
+            double n = (a - b) / (a + b), n2 = n * n, n3 = n * n * n;
+
+            double cosLat = Math.Cos(latitude), sinLat = Math.Sin(latitude);
+            double nu = a * F0 / Math.Sqrt(1 - e2 * sinLat * sinLat); // transverse radius of curvature
+            double rho = a * F0 * (1 - e2) / Math.Pow(1 - e2 * sinLat * sinLat, 1.5); // meridional radius of curvature
+
+            double eta2 = nu / rho - 1;
+
+            double Ma = (1 + n + (5 / 4) * n2 + (5 / 4) * n3) * (latitude - lat0);
+            double Mb = (3 * n + 3 * n * n + (21 / 8) * n3) * Math.Sin(latitude - lat0) * Math.Cos(latitude + lat0);
+            double Mc = ((15 / 8) * n2 + (15 / 8) * n3) * Math.Sin(2 * (latitude - lat0)) * Math.Cos(2 * (latitude + lat0));
+            double Md = (35 / 24) * n3 * Math.Sin(3 * (latitude - lat0)) * Math.Cos(3 * (latitude + lat0));
+            double M = b * F0 * (Ma - Mb + Mc - Md); // meridional arc
+
+            double cos3lat = cosLat * cosLat * cosLat;
+            double cos5lat = cos3lat * cosLat * cosLat;
+            double tan2lat = Math.Tan(latitude) * Math.Tan(latitude);
+            double tan4lat = tan2lat * tan2lat;
+
+            double I = M + N0;
+            double II = (nu / 2) * sinLat * cosLat;
+            double III = (nu / 24) * sinLat * cos3lat * (5 - tan2lat + 9 * eta2);
+            double IIIA = (nu / 720) * sinLat * cos5lat * (61 - 58 * tan2lat + tan4lat);
+            double IV = nu * cosLat;
+            double V = (nu / 6) * cos3lat * (nu / rho - tan2lat);
+            double VI = (nu / 120) * cos5lat * (5 - 18 * tan2lat + tan4lat + 14 * eta2 - 58 * tan2lat * eta2);
+
+            double dLon = longitude - lon0;
+            double dLon2 = dLon * dLon, dLon3 = dLon2 * dLon, dLon4 = dLon3 * dLon, dLon5 = dLon4 * dLon, dLon6 = dLon5 * dLon;
+
+            northing = Math.Round(I + II * dLon2 + III * dLon4 + IIIA * dLon6, 3);
+            easting = Math.Round(E0 + IV * dLon + V * dLon3 + VI * dLon5, 3);
+
+   protected static readonly ILog log = LogManager.GetLogger(typeof(AreaOfInterestManager));
+
+        public double m_northBoundLatitude = 60.85;
+        public double m_westBoundLongitude = -9.23;
+        public double m_southBoundLatitude = 49.84;
+        public double m_eastBoundLongitude = 2.69;
+        private int numberOfSpecificAreas = 0;
+
+        class AreaOfInterests
+        {
+            public double northBoundLatitude = 0.0;
+            public double westBoundLongitude = 0.0;
+            public double southBoundLatitude = 0.0;
+            public double eastBoundLongitude = 0.0;
+        };
+
+        List<AreaOfInterests> areaOfInterest = new List<AreaOfInterests>();
+
+        public AreaOfInterestManager()
+        {
+            string temp = ConfigurationManager.AppSettings["NorthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("NorthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_northBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse NorthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["NorthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["SouthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("SouthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_southBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse SouthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["SouthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["EastBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("EastBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_eastBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse EastBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["EastBoundLongitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["WestBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("WestBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_westBoundLongitude))
+            {
+            }
+
+            temp = ConfigurationManager.AppSettings["AreasOfInterest"];
+            if (temp == null)
+            {
+                if (numberOfSpecificAreas > 0)
+                {
+                    log.Error("No Areas of specific interest defined!");
+                }
+            }
+            else
+            {
+                string[] areas = temp.Split(';');
+                if (areas.Length > 0)
+                {
+                    foreach (string area in areas)
+                    {
+                        string[] coor = area.Trim().Split(',');
+                        try
+                        {
+                            AreaOfInterests iArea = new AreaOfInterests();
+                            iArea.northBoundLatitude = double.Parse(coor[0]);
+                            iArea.westBoundLongitude = double.Parse(coor[1]);
+                            iArea.southBoundLatitude = double.Parse(coor[2]);
+                            iArea.eastBoundLongitude = double.Parse(coor[3]);
+                            areaOfInterest.Add(iArea);
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+                else
+                {
+                    log.Error("trouble getting the defined Area!");
+                }
+            }
+        }
+
+        public bool AreaOfInterest(PointCoordinates from, PointCoordinates to)
+        {
+            log.Info(string.Format("To({0}, {1}) From({2}, {3})", to.latitude, to.longitude, from.latitude, from.longitude));
+
+            if ((from.latitude <= m_northBoundLatitude) && (from.latitude >= m_southBoundLatitude) &&
+                (from.longitude <= m_eastBoundLongitude) && (from.longitude >= m_westBoundLongitude))
+            {
+
+                // check that the to information is sensible
+                if ((to.latitude > 49.766809) && (to.longitude > -7.55))  //just off scilly islands point as Dec 2016
+                {
+                    return true;
+                }
+                else
+                {
+                    log.Info(string.Format("To points are incorrect: {0}, {1}", to.latitude, to.longitude));
+                    return false;
+                }
+            }
+
+            log.Info("One end is out side the boundry area");
+
+            if ((to.latitude <= m_northBoundLatitude) && (to.latitude >= m_southBoundLatitude) &&
+                (to.longitude <= m_eastBoundLongitude) && (to.longitude >= m_westBoundLongitude))
+            {
+                if ((from.latitude > 49.766809) && (from.longitude > -7.55))  //just of scilly islands point as Dec 2016
+                {
+                    return true;
+                }
+                else
+                {
+                    log.Info(string.Format("From points are incorrect: {0}, {1}", from.latitude, from.longitude));
+                    return false;
+                }
+            }
+
+            log.Info("Both ends are outside of the boundry area");
+
+            return false;
+        }
+
+        public bool CheckLocationPoint(PointCoordinates point)
+        {
+            if ((point.latitude <= m_northBoundLatitude) && (point.latitude >= m_southBoundLatitude) &&
+             (point.longitude <= m_eastBoundLongitude) && (point.longitude >= m_westBoundLongitude))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool CheckSpecificArea(PointCoordinates point)
+        {
+            foreach (AreaOfInterests area in areaOfInterest)
+            {
+                if ((point.latitude <= area.northBoundLatitude) && (point.latitude >= area.southBoundLatitude) &&
+                (point.longitude <= area.eastBoundLongitude) && (point.longitude >= area.westBoundLongitude))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool CheckSpecificArea(PointCoordinates point, int pointnumber)
+        {
+            if ((point.latitude <= areaOfInterest[pointnumber].northBoundLatitude) && (point.latitude >= areaOfInterest[pointnumber].southBoundLatitude) &&
+            (point.longitude <= areaOfInterest[pointnumber].eastBoundLongitude) && (point.longitude >= areaOfInterest[pointnumber].westBoundLongitude))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool CheckSpecificArea(PointCoordinates point, string areas)
+        {
+            if (!string.IsNullOrEmpty(areas))
+            {
+                if (areas == "all")
+                {
+                    return CheckSpecificArea(point);
+                }
+                else
+                {
+                    try
+                    {
+                        string[] area = areas.Split(',');
+                        foreach (string a in area)
+                        {
+                            int a_i = Int32.Parse(a);
+                            if(CheckSpecificArea(point, a_i))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        log.Info("Cannot seperate specific areas into single areas!");
+                    }
+                }
+            }
+
+            return false; 
+        }
+    }
+
+AreaOfInterest
+
+Integer.parseInt(
+
+Properties config
+
+Enumeration<?> en = config.keys();
+		//get right config for this 
+		while (en.hasMoreElements()) 
+		{
+			String key  = (String) en.nextElement();
+			String keyStr = config.getProperty(key);
+			System.out.println(key + ":" + keyStr);
+			switch(key)
+			{
+
+Integer.parseInt(keyStr);
+
+m_northBoundLatitude
+
+= Double.parseDouble(keyStr);
+
+m_westBoundLongitude
+
+= Double.parseDouble(keyStr);
+
+m_southBoundLatitude
+
+ = Double.parseDouble(keyStr);
+
+m_eastBoundLongitude
+
+NorthBoundLatitude
+
+53.91
+
+WestBoundLongitude" value="-2.09"/>
+    <add key="SouthBoundLatitude" value="53.06"/>
+    <add key="EastBoundLongitude" value="-0.34"/>
+
+AreaOfInterestManager
+
+areaOfInterest =
+
+config
+
+areaOfInterest
+
+areasOfInterest
+
+CheckLocationPoint
+
+VMS_DEFINITION
+
+ private string InsertVmsDefinition(VmsItem item)
+        {
+            string escn = EscapeSqlString(item.m_scn, BaseManager.EscapeSize.SCN_NAME);
+            string desc = EscapeSqlString(item.m_description, BaseManager.EscapeSize.SCN_NAME);
+
+            return string.Format("INSERT INTO VMS_DEFINITION ( SYSTEMCODENUMBER, SHORTDESCRIPTION, CREATIONDATE, EASTING, NORTHING, DATASOURCE_TYPEID, TYPEID ) VALUES ( '{0}', '{1}', {2}, {3}, {4}, {5}, {6} )",
+                escn, desc, item.GetLastDBTime, item.m_easting, item.m_northing, item.m_datasourceTypeID, item.m_typeID);
+        }
+
+cdbClient
+
+	VmsStratosDefinitionDataHandler vmsDataHandler =
+
+VmsStratosDefinitionDataHandler vmsDataHandler = new VmsStratosDefinitionDataHandler(configArgs);
+		vmsDataHandler.Initialise();
+
+DatexIICDBAdapterInterface
+
+VmsStratosDefinitionDataHandler vmsDataHandler = null;
+
+
+	vmsDataHandler = new VmsStratosDefinitionDataHandler(configArgs);
+					vmsDataHandler.Initialise();
+
+Properties configArgsIn
+
+	vmsDataHandler.Initialise();
+
+DatexIIHandler
+
+dataHandler
+
+DatexIIHandler
+
+synchronized
+
+DatexIIHandler
+
+dataHandler
+
+executeSQL
+
+"INSERT INTO VMS_DEFINITION ( SYSTEMCODENUMBER, SHORTDESCRIPTION, CREATIONDATE, EASTING, NORTHING, DATASOURCE_TYPEID, TYPEID ) VALUES ( '{0}', '{1}', {2}, {3}, {4}, {5}, {6} )",
+
+ %1$s
+
+datasourcetypeid
+
+DatexIICDBAdapterInterface
+
+} catch (org.omg.CORBA.COMM_FAILURE e) {
+			AdapterUtility.ps(logger, "CORBA communication Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.OBJECT_NOT_EXIST e) {
+			AdapterUtility.ps(logger, "CORBA object does not exist Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.MARSHAL e) {
+			AdapterUtility.ps(logger, "CORBA marshal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_PARAM e) {
+			AdapterUtility.ps(logger, "CORBA bad parameter Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_OPERATION e) {
+			AdapterUtility.ps(logger, "CORBA bad operation Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.INTERNAL e) {
+			AdapterUtility.ps(logger, "CORBA internal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (NullPointerException e) {
+			AdapterUtility.ps(logger, "Null Pointer Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, "" + e);
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (Exception e) {
+			// Any other exception
+			AdapterUtility.ps(logger, "Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		}
+
+CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+		// Update changes to existing device if INSERT failed
+		if ( queryResults.getWarnings() != null ) 
+		{
+			if ( queryResults.getWarnings().value.length > 0 ) 
+			{
+				CorbaSQLWarning[] warning = queryResults.getWarnings().value;
+				for (CorbaSQLWarning cw : warning) 
+				{
+					int code = cw.errorCode;
+					logger.log(logLevel, cw.errorCode + ":" + cw.detailMessage);
+					if ( code == AdapterConstant.ONE) 
+					{
+						// Perform Update as Insert failed
+					}
+				}
+			}
+		}
+
+	private org.apache.logging.log4j.Level logLevel = org.apache.logging.log4j.Level.ALL;
+
+	String GetErrorWarning(int code, CORBAQuery queryResults)
+	{
+		if ( queryResults.getWarnings() != null ) 
+		{
+			if ( queryResults.getWarnings().value.length > 0 ) 
+			{
+				CorbaSQLWarning[] warning = queryResults.getWarnings().value;
+				for (CorbaSQLWarning cw : warning) 
+				{
+					 logger.log(logLevel, cw.errorCode + ":" + cw.detailMessage);
+					 return "" + cw.errorCode + ":" + cw.detailMessage;
+				}
+			}
+		}
+		return "";
+	}
+
+GetErrorWarning
+
+//ResultSetsHolder resultset = queryResults.getResultSets();
+		//ResultSet[] _res = resultset.value;
+		/*for(ResultSet _r: _res)
+		{
+			
+			Column[] columns = _r.columns;
+			for(Column _c: columns)
+			{
+				switch(_c.name)
+				{
+				case "CLEAREDDATE":
+					Timestamp[] timestamp = _c.values.timestampValues();
+					if(timestamp != null)
+					{
+						if(timestamp.length > 0)
+						{
+							if(timestamp[0].dateValue != 0)
+							{
+								return false;
+							}
+						}
+					}
+					break;
+				}
+			}
+			
+		}*/
+
+import imtech.imcity.corba.TabularResults.Column;
+import imtech.imcity.corba.TabularResults.ResultSet;
+import imtech.imcity.corba.TabularResults.ResultSetsHolder;
+
+_c.values.
+
+MainLoop
+
+getColumnClassName
+
+_c.values.binaryValues()
+
+if(_c.values.binaryValues() != null)
+					{
+						result += _c.values.binaryValues();
+					}
+					else if(_c.values.booleanValues() != null)
+					{
+					
+					}
+					else if(_c.values.dateValues() != null)
+					{
+					
+					}
+					else if(_c.values.decimalValues() != null)
+					{
+						
+					}
+					else if(_c.values.doubleValues() != null)
+					{
+						
+					}
+					else if(_c.values.floatValues() != null)
+					{
+						
+					}
+					else if(_c.values.longValues() != null)
+					{
+						
+					}
+					else if(_c.values.octetValues() != null)
+					{
+						
+					}
+					else if(_c.values.shortValues() != null)
+					{
+						
+					}
+					else if(_c.values.stringValues() != null)
+					{
+					
+					}
+
+getColumnValue
+
+__uninitialized
+
+discriminator
+
+___binaryValues
+
+discriminator != imtech.imcity.corba.TabularResults.TYPE_BINARY.value
+
+imtech.imcity.corba.TabularResults.TYPE_
+
+imtech.imcity.corba.TabularResults.TYPE_BIT.value
+
+imtech.imcity.corba.TabularResults.TYPE_DATE.value
+
+imtech.imcity.corba.TabularResults.TYPE_BIGINT.value
+
+imtech.imcity.corba.TabularResults.TYPE_BIT.value
+
+___booleanValues
+
+toString
+
+e.printStackTrace();
+

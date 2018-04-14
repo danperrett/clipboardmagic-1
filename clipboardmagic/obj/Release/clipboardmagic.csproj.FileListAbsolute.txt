@@ -1,0 +1,15 @@
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\bin\Release\clipboardmagic.exe.config
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\bin\Release\clipboardmagic.exe
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\bin\Release\clipboardmagic.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.DisplayText.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.MainDialog.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.Options.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.Properties.Resources.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.UserCredentials.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.csproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.exe
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.pdb
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.UploadSchedule.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.SearchDatabase.resources
+C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Release\clipboardmagic.DownloadClipboard.resources

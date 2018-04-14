@@ -1,0 +1,344 @@
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+currentMiliseconds
+
+connection->connectionInformation.TimeOfLastReceive
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+IconisReceiveTimeout=550
+
+[InterMachineLink]
+IPAddress1=192.168.1.101
+IPAddress2=192.168.2.101
+Port=5312
+
+NumberOfConncetions
+
+bShuttingDown
+
+SendTextToWindow
+
+LOGMASK_TCP
+
+The Receive difference is out side of the allowed tolerence
+
+LOGMASK_TCP
+
+WM_SETTEXT
+
+LOGMASK_TCP
+
+AppInit
+
+AppInit.IMLPort
+
+(i)	Check that the decode of the Received XML message is correct.
+
+(ii)	Check that the information about the connection has been updated and that if it?s a good decode that connection is moved to UP.
+
+(iii)	If it?s a bad decode the XML message is ignored and the connection is set to DOWN
+
+connectionInformation
+
+LOGMASK_TCP
+
+connectionInformation->connectionInformation.ConnectionID, LOGMASK_TCP);
+
+LOGSTRINT("Test 2(I):
+
+ LOGMASK_TCP);
+
+   LOGGER("Test 2(II): Message Just Sent OK", "",  LOGMASK_TCP);
+
+LOGMASK_ICONISIF
+
+LOGSTRINT("Test 2(III): Failed to send data for connection", n, LOGMASK_ICONISIF);
+
+LOGSTRINT("Test 3(i): information is correct
+
+LOGMASK_ICONISIF
+
+connectionInformation
+
+ LOGSTRINT("Test 3(II): Setting link status to UP", connectionInformation->connectionInformation.ConnectionID, LOGMASK_ICONISIF);
+
+a
+
+(i)	Check that the function decodes the signature of the XML message correctly. Check that we have 128 bytes for the RSA-SHA1 information and 20 bytes for the SHA1 information.
+
+LOGMASK_SIGNING
+
+(ii)	Check that the SHA1 matches with what is expected.
+
+LOGMASK_SIGNING
+
+a
+
+(iii)	Check that the SHA1 does not match in a fail case and fall out with exception.
+
+(iv)	Check that the RSA ?SHA1 signature value matches in good case
+
+(v)	Check that the RSA-SHA1 signature does not match in a corrupted case.
+
+LOGGER("Test 4(I)
+
+LOGMASK_SIGNING
+
+(vi)	check that the certificate has been decoded correctly and marked good if its correct
+
+LOGMASK_SIGNING
+
+a
+
+(i)	Verify that the SHA1 digest is correct, manually take Canicalized xml data and verify it by hand.
+
+(ii)	Check that the RSA-SHA signature is encoded correctly. Again check the canonicalization by hand
+
+(iii)	No fail case for Encoding
+
+LOGMASK_SIGNING
+
+LOGGER("Test 5(I):
+
+    LOGGER("Test 5(I): XML Canicalised OK", "", LOGMASK_SIGNING);
+
+(i)	Check that header can be decoded and that the body can be decoded correctly
+
+LOGMASK_ICONISIF
+
+LOGSTRINT("***** Dropped the link as the sequence number is not correct ", message->Header.SequenceNumber, ALWAYS);
+
+LOGMASK_ICONISIF
+
+LOGGER("Test 6(I) a: header element decoded correctly", "", LOGMASK_ICONISIF);
+
+(ii)	Check that the sequence number is greater than the previous sequence number, if not then the decode will fail and drop the connection.
+
+(iii)	Check that the body decodes correctly and the NVFB3 decoder get invoked afterward
+
+(iv)	Check if there is a bad decode the connection get terminated
+
+a
+
+LOGMASK_ICONISIF
+
+(i)	Verify all data is consistent and we have gathered all data pending for transmit.
+
+a
+
+LOGMASK_ICONISIF
+
+(ii)	Verify that the sequence number gets incremented
+
+LOGMASK_ICONISIF
+
+(iii)	Verify that the xml signing gets added to the Signature Element within the element.
+
+ LOGGER("Test 7(II
+
+LOGGER("Test 7(II
+
+LOGMASK_ICONISIF
+
+(iv)	Verify that all connections are serviced with the same information
+
+(iv)	Verify that all connections are serviced with the same information. (NVF3 counter will be different)
+
+LOGMASK_ICONISIF
+
+LOGSTRINT("Test 7(IV)
+
+LOGMASK_ICONISIF);
+
+
+(v)	Upon Receipt of the XML message the ICONIS simulator should decode and verify signatureOK
+
+a
+
+Appendix 1 
+
+- Logfile extract from test run of MCS I/F tests 2-9
+
+16:40:33:25    :ICONISIF: Test 7(III): Added Signed Element 
+16:40:33:27    :TCP: Test 2(I): Length added  3952
+16:40:33:28    :TCP: Test 2(II): Message Just Sent OK 
+16:40:33:28    :ICONISIF: Test 2(III): succes sending data for connection 0
+16:40:33:29    :ICONISIF: Test 7(II): Sequence number incremented 
+16:40:33:264    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+16:40:33:264    :ICONISIF: Test 7(IV) b: Sequence number as reference 10004
+16:40:33:266    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+16:40:33:267    :ICONISIF: Tx Sequence Number:  10004
+16:40:33:269    :SIGNING: Test 5(I): XML Canicalised OK 
+16:40:33:270    :SIGNING: Test 5(I): ZTp+SE9jtgCqk3BY6sp6ZtQw848=
+16:40:33:272    :SIGNING: DoRSASignature 
+16:40:33:273    :SIGNING: Signature Info Canalization 
+16:40:33:273    :SIGNING: Transmit RSA Digest moIYCN7cdWWz0YtFp0HbU1WH1UY=
+16:40:33:275    :ICONISIF: ticks taken to encode signature is 18350
+16:40:33:275    :ICONISIF: Encode Min ticks is  15697
+16:40:33:275    :ICONISIF: Encode Max ticks is  385668
+16:40:33:275    :ICONISIF: Test 7(III): Added Signed Element 
+16:40:33:276    :TCP: Test 2(I): Length added  3952
+16:40:33:276    :TCP: Test 2(II): Message Just Sent OK 
+16:40:33:277    :ICONISIF: Test 2(III): succes sending data for connection 0
+16:40:33:277    :ICONISIF: Test 7(II): Sequence number incremented 
+16:40:33:377    :TCP: DoTCPSocketCode 
+16:40:33:377    :TCP: Connection for  127.0.0.1
+16:40:33:378    :TCP: The Length Of Receive is  3596
+16:40:33:378    :TCP: Test 1(I): Received All Data from TCP Connection 0
+16:40:33:378    :ICONISIF: HandleIncomingDataStream for  588
+16:40:33:379    :ICONISIF: Test 3(I): information is correct 0
+16:40:33:379    :SIGNING: Test 5(I): XML Canicalised OK 
+16:40:33:380    :SIGNING: Test 4(I) a: Digest length OK 
+16:40:33:380    :SIGNING: Test 4(II) a: TheCalculated DIGEST value is  
+16:40:33:380    :SIGNING: Test 4(II) b:  dP6UtXvH3oIvIehwB3gIRpqSQrQ=
+16:40:33:381    :SIGNING: Test 4(II) c: Match 
+16:40:33:381    :SIGNING: Test 4(VI): Certificate is Good 
+16:40:33:381    :SIGNING: Test 4(I) b: Their signedinfoDigest is  CDVbNVxVbYrgOhYRPHX/yzdTELQ=
+16:40:33:381    :SIGNING: Test 4(IV) : The Signature has been decoded correctly 
+16:40:33:382    :ICONISIF: ticks taken to decode signature is 7881
+16:40:33:382    :ICONISIF: Min ticks is  7881
+16:40:33:382    :ICONISIF: Max ticks is  7881
+16:40:33:382    :ICONISIF: Received sequence Number 10000
+16:40:33:383    :ICONISIF: Test 6(I) a: header element decoded correctly 
+16:40:33:383    :ICONISIF: Decode Body For sequence 10000
+16:40:33:383    :ICONISIF: Decode InterLocking  0
+16:40:33:384    :ICONISIF: decodeInterlockingElement 
+16:40:33:384    :ICONISIF: Test 6(III): SEND NVFB3 Data to be decoded, sequence number 10000
+16:40:33:384    :NVFB3: Decode the NVFB3 data for sequence Number  10000
+16:40:33:384    :NVFB3: Decode Control Request Keighley
+16:40:33:385    :NVFB3: Received TimeCounter value of  2966453973
+16:40:33:385    :ALWAYS: msg timecounter not valid
+16:40:33:385    :NVFB3: Sequence Correctness failed
+16:40:33:385    :NVFB3: NVFB3 decode failure in incoming control request
+16:40:33:386    :NVFB3: 15 : Control Request Received but FAILED to decode numberof=0
+16:40:33:387    :NVFB3: Failed to decode data for sequence Number  10000
+16:40:33:387    :NVFB3: Received TimeCounter value of  2966453974
+16:40:33:387    :NVFB3: Received TimeCounter value of  2966453974
+16:40:33:387    :ALWAYS: msg timecounter not valid
+16:40:33:388    :NVFB3: Sequence Correctness failed
+16:40:33:388    :NVFB3: NVFB3 decode failed of response message
+16:40:33:388    :NVFB3: Received TimeCounter value of  2966453974
+16:40:33:388    :NVFB3: Received TimeCounter value of  2966453974
+16:40:33:389    :ALWAYS: msg timecounter not valid
+16:40:33:389    :NVFB3: Sequence Correctness failed
+16:40:33:389    :NVFB3: NVFB3 decode failed of response message
+16:40:33:389    :NVFB3: Received TimeCounter value of  2966453974
+16:40:33:390    :NVFB3: Received TimeCounter value of  2966453974
+16:40:33:390    :ALWAYS: msg timecounter not valid
+16:40:33:390    :NVFB3: Sequence Correctness failed
+16:40:33:390    :NVFB3: NVFB3 decode failed of response message
+16:40:33:391    :ICONISIF: Test 6(I) b: body element decoded correctly 
+16:40:33:391    :ALWAYS: Sending link alarm to Iconis DOWN
+16:40:33:391    :MCSIF: Queueing received MCS message for XML use:  DIA@SRIF-1@Keighley@DOWN
+16:40:33:391    :ALWAYS: Sending link alarm to Iconis DOWN
+16:40:33:392    :MCSIF: Queueing received MCS message for XML use:  DIA@SRIF-1@Horsforth@DOWN
+16:40:33:392    :ICONISIF: Test 3(II): Setting link status to UP 0
+16:40:33:392    :ICONISIF: SequenceNumber: 10000, TimeDifference: 0, SourceUnit ICONIS-1-Unit-c
+16:40:33:393    :TCP: Test 1(IV) Data decoded for connection ID 0
+16:40:33:393    :TCP: DoTCPSocketCode 
+16:40:33:393    :TCP: Connection for  127.0.0.1
+16:40:33:394    :TCP: DoTCPSocketCode 
+16:40:33:394    :TCP: Connection for  127.0.0.1
+16:40:33:514    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+16:40:33:515    :ICONISIF: Test 7(IV) b: Sequence number as reference 10005
+16:40:33:516    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+16:40:33:517    :ICONISIF: Tx Sequence Number:  10005
+16:40:33:518    :SIGNING: Test 5(I): XML Canicalised OK 
+16:40:33:519    :SIGNING: Test 5(I): HHpK366mCoko9inf8s6iceTaD7E=
+16:40:33:520    :SIGNING: DoRSASignature 
+16:40:33:520    :SIGNING: Signature Info Canalization 
+16:40:33:521    :SIGNING: Transmit RSA Digest wOFwOq/QufyLyQ2N1wQ2fGy9+lc=
+16:40:33:524    :ICONISIF: ticks taken to encode signature is 19691
+16:40:33:524    :ICONISIF: Encode Min ticks is  15697
+16:40:33:525    :ICONISIF: Encode Max ticks is  385668
+16:40:33:526    :ICONISIF: Test 7(III): Added Signed Element 
+16:40:33:527    :TCP: Test 2(I): Length added  4132
+16:40:33:528    :TCP: Test 2(II): Message Just Sent OK 
+
+16:46:11:615    :ICONISIF: Test 7(III): Added Signed Element 
+16:46:11:618    :TCP: Test 2(I): Length added  3954
+16:46:11:619    :TCP: Test 2(II): Message Just Sent OK 
+16:46:11:619    :ICONISIF: Test 2(III): succes sending data for connection 0
+16:46:11:620    :ICONISIF: Test 7(II): Sequence number incremented 
+16:46:11:745    :TCP: DoTCPSocketCode 
+16:46:11:747    :TCP: Connection for  127.0.0.1
+16:46:11:748    :TCP: The Length Of Receive is  3687
+16:46:11:750    :TCP: Test 1(I): Received All Data from TCP Connection 0
+16:46:11:751    :ICONISIF: HandleIncomingDataStream for  516
+16:46:11:753    :ICONISIF: Test 3(I): information is correct 0
+16:46:11:755    :SIGNING: Test 5(I): XML Canicalised OK 
+16:46:11:757    :SIGNING: Test 4(I) a: Digest length OK 
+16:46:11:759    :SIGNING: Test 4(II) a: TheCalculated DIGEST value is  
+16:46:11:761    :SIGNING: Test 4(II) b:  se5KySVNpOXqOmgu6qgAJu0U7uQ=
+16:46:11:762    :SIGNING: Test 4(II) c: Match 
+16:46:11:765    :SIGNING: Test 4(I) b: Their signedinfoDigest is  XCeMq67ZwmRb0LYyz/Tqji03PqQ=
+16:46:11:766    :SIGNING: Test 4(IV) : The Signature has been decoded correctly 
+16:46:11:768    :ICONISIF: ticks taken to decode signature is 42633
+16:46:11:770    :ICONISIF: Min ticks is  6503
+16:46:11:772    :ICONISIF: Max ticks is  48938
+16:46:11:773    :ICONISIF: Received sequence Number 10048
+16:46:11:775    :ICONISIF: Test 6(I) a: header element decoded correctly 
+16:46:11:777    :ICONISIF: Decode Body For sequence 10048
+16:46:11:779    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:781    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:783    :NVFB3: Got EmergencyAlarmsResponse
+16:46:11:784    :ICONISIF: Decode InterLocking  0
+16:46:11:785    :ICONISIF: decodeInterlockingElement 
+16:46:11:785    :ICONISIF: Test 6(III): SEND NVFB3 Data to be decoded, sequence number 10048
+16:46:11:786    :NVFB3: Decode the NVFB3 data for sequence Number  10048
+16:46:11:786    :NVFB3: Decode Control Request Keighley
+16:46:11:787    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:787    :ALWAYS: BIT MAP IS EMPTY BUT RETURN 1 any way 
+16:46:11:788    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:788    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:789    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:789    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:790    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:790    :NVFB3: Received TimeCounter value of  2966792986
+16:46:11:791    :ICONISIF: Test 6(I) b: body element decoded correctly 
+16:46:11:791    :ICONISIF: SequenceNumber: 10048, TimeDifference: 281, SourceUnit ICONIS-1-Unit-c
+16:46:11:792    :TCP: Test 1(IV) Data decoded for connection ID 0
+16:46:11:793    :TCP: DoTCPSocketCode 
+16:46:11:793    :TCP: Connection for  127.0.0.1
+16:46:11:820    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+16:46:11:821    :ICONISIF: Test 7(IV) b: Sequence number as reference 10080
+16:46:11:822    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+16:46:11:823    :ICONISIF: Tx Sequence Number:  10080
+16:46:11:824    :SIGNING: Test 5(I): XML Canicalised OK 
+16:46:11:825    :SIGNING: Test 5(I): 3rsvb0284ous3R+8xptXmYf4N6A=
+16:46:11:826    :SIGNING: DoRSASignature 
+16:46:11:827    :SIGNING: Signature Info Canalization 
+16:46:11:828    :SIGNING: Transmit RSA Digest 0b6FnhAlqLZDfgCwpF66Eacc47k=
+16:46:11:832    :ICONISIF: ticks taken to encode signature is 29003
+16:46:11:833    :ICONISIF: Encode Min ticks is  8697
+16:46:11:834    :ICONISIF: Encode Max ticks is  420374
+16:46:11:835    :ICONISIF: Test 7(III): Added Signed Element 
+16:46:11:838    :TCP: Test 2(I): Length added  3954
+16:46:11:838    :TCP: Test 2(II): Message Just Sent OK 
+16:46:11:839    :ICONISIF: Test 2(III): succes sending data for connection 0
+16:46:11:840    :ICONISIF: Test 7(II): Sequence number incremented 
+16:46:12:10    :TCP: DoTCPSocketCode 
+16:46:12:12    :TCP: Connection for  127.0.0.1
+16:46:12:13    :TCP: The Length Of Receive is  3687
+16:46:12:15    :TCP: Test 1(I): Received All Data from TCP Connection 0
+16:46:12:16    :ICONISIF: HandleIncomingDataStream for  516
+16:46:12:18    :ICONISIF: Test 3(I): information is correct 0
+16:46:12:20    :SIGNING: Test 5(I): XML Canicalised OK 
+16:46:12:22    :SIGNING: Test 4(I) a: Digest length OK 
+16:46:12:24    :SIGNING: Test 4(II) a: TheCalculated DIGEST value is  
+16:46:12:25    :SIGNING: Test 4(II) b:  CQOHxuvuKVfBT+eOoviZlVMZ1hM=
+16:46:12:26    :ALWAYS: Test 4(III) : Digest Comparision Failed Failed Check and Exit
+16:46:12:26    :ALWAYS: Test (VIII): Decode Signature failure drop link Failed Check and Exit
+16:46:12:28    :ICONISIF: Test 3(III): Bad decode setting the Status to DOWN 0
+
+Test 3
+
+CloseAConnection((DWORD)wParam);
+
+48SA022E-SPE-0003
+
+canonicalizes
+
+Date:  18 December 2015
+

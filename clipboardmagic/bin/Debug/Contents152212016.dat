@@ -1,0 +1,1249 @@
+a
+
+5.2.1.7.11
+
+6 Craigs Court,
+Whitehall
+SWIA 2DB
+
+	
+BT IT Services
+Whitehall TE
+
+C:\Users\502525009\Documents\GE10023-281215.pdf
+
+C:\Users\502525009\Documents\GE10023-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10024-040116.pdf
+
+C:\Users\502525009\Documents\GE10024-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10025-110116.pdf
+
+C:\Users\502525009\Documents\GE10025-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10018-231115.pdf
+
+C:\Users\502525009\Documents\GE10018-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10019-301115.pdf
+
+C:\Users\502525009\Documents\GE10019-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10020-071215.pdf
+
+C:\Users\502525009\Documents\GE10020-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10021-141215.pdf
+
+C:\Users\502525009\Documents\GE10021-Invoice.pdf
+
+C:\Users\502525009\Documents\GE10022-211215.pdf
+
+C:\Users\502525009\Documents\GE10022-Invoice.pdf
+
+0aa502000c0011bca563a5d49163aa550c00010000004883061f6ac0006050000080000000000400a1ab
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig-20Interlockings.xml
+
+SendMessageTimeoutA
+
+Euclid numbers
+
+https://en.wikipedia.org/wiki/Cowboy_coding#Advantages
+
+8:41:22:337    :TCP: Initialising the TCP connection
+ 8:50:10:151    :TCP: DoTCPSocketCode 
+ 8:50:10:152    :TCP: 14 : Client Connected: 127.0.0.1: Socket number: 596
+ 8:50:10:153    :TCP: Client Connected: 127.0.0.1: Socket number: 596
+ 8:50:10:154    :ICONISIF: Create new connection for  596
+ 8:50:10:155    :ICONISIF: Create connection in array number  0
+ 8:50:10:337    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+ 8:50:10:338    :ICONISIF: Test 7(IV) b: Sequence number as reference 10001
+ 8:50:10:341    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+ 8:50:10:345    :ICONISIF: Tx Sequence Number:  10001
+ 8:50:10:348    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:10:350    :SIGNING: Test 5(I): tDKDoVzKCMGeEDXMvFZyMynPyOg=
+ 8:50:10:352    :SIGNING: DoRSASignature 
+ 8:50:10:355    :SIGNING: Signature Info Canalization 
+ 8:50:10:356    :SIGNING: Transmit RSA Digest z32/JLOwkw1TtIRl4YiXmreL5M8=
+ 8:50:10:511    :ICONISIF: ticks taken to encode signature is 526094
+ 8:50:10:511    :ICONISIF: Encode Min ticks is  526094
+ 8:50:10:511    :ICONISIF: Encode Max ticks is  526094
+ 8:50:10:512    :ICONISIF: Test 7(III): Added Signed Element 
+ 8:50:10:512    :TCP: Test 2(I): Length added  3952
+ 8:50:10:513    :TCP: Test 2(II): Message Just Sent OK 
+ 8:50:10:513    :ICONISIF: Test 2(III): succes sending data for connection 0
+ 8:50:10:513    :ICONISIF: Test 7(II): Sequence number incremented 
+ 8:50:10:587    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+ 8:50:10:587    :ICONISIF: Test 7(IV) b: Sequence number as reference 10002
+ 8:50:10:588    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+ 8:50:10:588    :ICONISIF: Tx Sequence Number:  10002
+ 8:50:10:589    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:10:589    :SIGNING: Test 5(I): 6vb9pCOqKUHEIj3GuN4AMenEgvI=
+ 8:50:10:589    :SIGNING: DoRSASignature 
+ 8:50:10:590    :SIGNING: Signature Info Canalization 
+ 8:50:10:590    :SIGNING: Transmit RSA Digest ZcCh6R8pcZBNBg/gtBNQdja5b3w=
+ 8:50:10:591    :ICONISIF: ticks taken to encode signature is 8853
+ 8:50:10:592    :ICONISIF: Encode Min ticks is  8853
+ 8:50:10:592    :ICONISIF: Encode Max ticks is  526094
+ 8:50:10:592    :ICONISIF: Test 7(III): Added Signed Element 
+ 8:50:10:593    :TCP: Test 2(I): Length added  3952
+ 8:50:10:593    :TCP: Test 2(II): Message Just Sent OK 
+ 8:50:10:594    :ICONISIF: Test 2(III): succes sending data for connection 0
+ 8:50:10:594    :ICONISIF: Test 7(II): Sequence number incremented 
+ 8:50:10:837    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+ 8:50:10:840    :ICONISIF: Test 7(IV) b: Sequence number as reference 10003
+ 8:50:10:846    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+ 8:50:10:852    :ICONISIF: Tx Sequence Number:  10003
+ 8:50:10:858    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:10:862    :SIGNING: Test 5(I): lXBlRUMAHgr3hnKUTHpWcqbKiQ0=
+ 8:50:10:865    :SIGNING: DoRSASignature 
+ 8:50:10:868    :SIGNING: Signature Info Canalization 
+ 8:50:10:868    :SIGNING: Transmit RSA Digest ER2QvO6SCMr0xhdoCRa76Hk0Qvw=
+ 8:50:10:871    :ICONISIF: ticks taken to encode signature is 43171
+ 8:50:10:871    :ICONISIF: Encode Min ticks is  8853
+ 8:50:10:872    :ICONISIF: Encode Max ticks is  526094
+ 8:50:10:872    :ICONISIF: Test 7(III): Added Signed Element 
+ 8:50:10:874    :TCP: Test 2(I): Length added  3952
+ 8:50:10:875    :TCP: Test 2(II): Message Just Sent OK 
+ 8:50:10:875    :ICONISIF: Test 2(III): succes sending data for connection 0
+ 8:50:10:876    :ICONISIF: Test 7(II): Sequence number incremented 
+ 8:50:11:87    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+ 8:50:11:87    :ICONISIF: Test 7(IV) b: Sequence number as reference 10004
+ 8:50:11:88    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+ 8:50:11:89    :ICONISIF: Tx Sequence Number:  10004
+ 8:50:11:90    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:11:91    :SIGNING: Test 5(I): PZ2OG94E0y85mh7JxxgCyakqikI=
+ 8:50:11:92    :SIGNING: DoRSASignature 
+ 8:50:11:93    :SIGNING: Signature Info Canalization 
+ 8:50:11:93    :SIGNING: Transmit RSA Digest 8tMpUQM4LAFwXtMtPgHMTRhfKxQ=
+ 8:50:11:96    :ICONISIF: ticks taken to encode signature is 19105
+ 8:50:11:97    :ICONISIF: Encode Min ticks is  8853
+ 8:50:11:97    :ICONISIF: Encode Max ticks is  526094
+ 8:50:11:98    :ICONISIF: Test 7(III): Added Signed Element 
+ 8:50:11:99    :TCP: Test 2(I): Length added  3952
+ 8:50:11:100    :TCP: Test 2(II): Message Just Sent OK 
+ 8:50:11:101    :ICONISIF: Test 2(III): succes sending data for connection 0
+ 8:50:11:102    :ICONISIF: Test 7(II): Sequence number incremented 
+ 8:50:11:337    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+ 8:50:11:338    :ICONISIF: Test 7(IV) b: Sequence number as reference 10005
+ 8:50:11:341    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+ 8:50:11:343    :ICONISIF: Tx Sequence Number:  10005
+ 8:50:11:346    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:11:348    :SIGNING: Test 5(I): YkDxBnXFSonN+MMxbYdXEa0amS0=
+ 8:50:11:350    :SIGNING: DoRSASignature 
+ 8:50:11:351    :SIGNING: Signature Info Canalization 
+ 8:50:11:351    :SIGNING: Transmit RSA Digest THhi26NOsYf7oCyl99lGfUrLDx0=
+ 8:50:11:354    :ICONISIF: ticks taken to encode signature is 25812
+ 8:50:11:354    :ICONISIF: Encode Min ticks is  8853
+ 8:50:11:355    :ICONISIF: Encode Max ticks is  526094
+ 8:50:11:355    :ICONISIF: Test 7(III): Added Signed Element 
+ 8:50:11:357    :TCP: Test 2(I): Length added  3952
+ 8:50:11:357    :TCP: Test 2(II): Failed To Send Message 
+ 8:50:11:358    :ICONISIF: Test 2(III): succes sending data for connection 0
+ 8:50:11:358    :ICONISIF: Test 7(II): Sequence number incremented 
+ 8:50:11:587    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+ 8:50:11:587    :ICONISIF: Test 7(IV) b: Sequence number as reference 10006
+ 8:50:11:588    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+ 8:50:11:588    :ICONISIF: Tx Sequence Number:  10006
+ 8:50:11:589    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:11:589    :SIGNING: Test 5(I): CPItp0iRL7Cua7dxx6FJ2Ltr71s=
+ 8:50:11:589    :SIGNING: DoRSASignature 
+ 8:50:11:590    :SIGNING: Signature Info Canalization 
+ 8:50:11:590    :SIGNING: Transmit RSA Digest hRtTpOwgbaKgplq0lhKCmlnSwcs=
+ 8:50:11:591    :ICONISIF: ticks taken to encode signature is 9280
+ 8:50:11:592    :ICONISIF: Encode Min ticks is  8853
+ 8:50:11:592    :ICONISIF: Encode Max ticks is  526094
+ 8:50:11:592    :ICONISIF: Test 7(III): Added Signed Element 
+ 8:50:11:593    :TCP: Test 2(I): Length added  3952
+ 8:50:11:593    :TCP: Test 2(II): Message Just Sent OK 
+ 8:50:11:593    :ICONISIF: Test 2(III): succes sending data for connection 0
+ 8:50:11:594    :ICONISIF: Test 7(II): Sequence number incremented 
+ 8:50:11:663    :TCP: DoTCPSocketCode 
+ 8:50:11:663    :TCP: Connection for  127.0.0.1
+ 8:50:11:664    :TCP: The Length Of Receive is  4027
+ 8:50:11:664    :TCP: Test 1(I): Received All Data from TCP Connection 0
+ 8:50:11:664    :ICONISIF: HandleIncomingDataStream for  596
+ 8:50:11:665    :ICONISIF: Test 3(I): information is correct 0
+ 8:50:11:665    :SIGNING: Test 5(I): XML Canicalised OK 
+ 8:50:11:666    :SIGNING: Test 4(I) a: Digest length OK 
+ 8:50:11:666    :SIGNING: Test 4(II) a: TheCalculated DIGEST value is  
+ 8:50:11:666    :SIGNING: Test 4(II) b:  s7InEz2nroJEfMf1IldbiDzmfh8=
+ 8:50:11:667    :SIGNING: Test 4(II) c: Match 
+ 8:50:11:667    :SIGNING: Test 4(VI): Certificate is Good 
+ 8:50:11:667    :SIGNING: Test 4(I) b: Their signedinfoDigest is  pLp/hz4CB3waLFaQ/xNVho2vF2k=
+ 8:50:11:667    :SIGNING: Test 4(IV) : The Signature has been decoded correctly 
+ 8:50:11:668    :ICONISIF: ticks taken to decode signature is 7870
+
+13: 5:53:765    :TCP: Initialising the TCP connection
+13: 6:50:155    :TCP: DoTCPSocketCode 
+13: 6:50:157    :TCP: 14 : Client Connected: 127.0.0.1: Socket number: 572
+13: 6:50:160    :TCP: Client Connected: 127.0.0.1: Socket number: 572
+13: 6:50:162    :ICONISIF: Create new connection for  572
+13: 6:50:164    :ICONISIF: Create connection in array number  0
+13: 6:50:265    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:50:270    :ICONISIF: Test 7(IV) b: Sequence number as reference 10001
+13: 6:50:277    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:50:285    :ICONISIF: Tx Sequence Number:  10001
+13: 6:50:290    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:50:294    :SIGNING: Test 5(I): hBhEEVqbbDkxbL0lkBKshaEXwVw=
+13: 6:50:301    :SIGNING: DoRSASignature 
+13: 6:50:306    :SIGNING: Signature Info Canalization 
+13: 6:50:308    :SIGNING: Transmit RSA Digest /TnQHlwjvCe1xiubdO5B87dNUs0=
+13: 6:50:489    :ICONISIF: ticks taken to encode signature is 641262
+13: 6:50:489    :ICONISIF: Encode Min ticks is  641262
+13: 6:50:489    :ICONISIF: Encode Max ticks is  641262
+13: 6:50:490    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:50:490    :TCP: Test 2(I): Length added  3952
+13: 6:50:491    :TCP: Test 2(II): Message Just Sent OK 
+13: 6:50:491    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:50:492    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:50:515    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:50:515    :ICONISIF: Test 7(IV) b: Sequence number as reference 10002
+13: 6:50:515    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:50:516    :ICONISIF: Tx Sequence Number:  10002
+13: 6:50:516    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:50:517    :SIGNING: Test 5(I): FEXEGVCSzh1zXPjaBORqK3gwgBA=
+13: 6:50:517    :SIGNING: DoRSASignature 
+13: 6:50:518    :SIGNING: Signature Info Canalization 
+13: 6:50:518    :SIGNING: Transmit RSA Digest Qklr3pWwBJ1LSZ18gfzUlNWXVo4=
+13: 6:50:519    :ICONISIF: ticks taken to encode signature is 8648
+13: 6:50:519    :ICONISIF: Encode Min ticks is  8648
+13: 6:50:520    :ICONISIF: Encode Max ticks is  641262
+13: 6:50:520    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:50:521    :TCP: Test 2(I): Length added  3952
+13: 6:50:521    :TCP: Test 2(II): Message Just Sent OK 
+13: 6:50:521    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:50:522    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:50:765    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:50:774    :ICONISIF: Test 7(IV) b: Sequence number as reference 10003
+13: 6:50:779    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:50:782    :ICONISIF: Tx Sequence Number:  10003
+13: 6:50:787    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:50:790    :SIGNING: Test 5(I): GPG4zT4DdSPA07B2lktqXXZ4iFM=
+13: 6:50:792    :SIGNING: DoRSASignature 
+13: 6:50:794    :SIGNING: Signature Info Canalization 
+13: 6:50:795    :SIGNING: Transmit RSA Digest tYKT8nJaZFZHDKv+Pj9KmrQ3CUo=
+13: 6:50:796    :ICONISIF: ticks taken to encode signature is 32110
+13: 6:50:796    :ICONISIF: Encode Min ticks is  8648
+13: 6:50:797    :ICONISIF: Encode Max ticks is  641262
+13: 6:50:797    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:50:798    :TCP: Test 2(I): Length added  3952
+13: 6:50:799    :TCP: Test 2(II): Message Just Sent OK 
+13: 6:50:799    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:50:799    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:51:15    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:51:15    :ICONISIF: Test 7(IV) b: Sequence number as reference 10004
+13: 6:51:16    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:51:16    :ICONISIF: Tx Sequence Number:  10004
+13: 6:51:16    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:51:17    :SIGNING: Test 5(I): aZeFrZHv6L/T7wqh8hqj+O2hfcg=
+13: 6:51:17    :SIGNING: DoRSASignature 
+13: 6:51:17    :SIGNING: Signature Info Canalization 
+13: 6:51:18    :SIGNING: Transmit RSA Digest Bj2CDVVSVNPvkVnXisvQXawHP8A=
+13: 6:51:19    :ICONISIF: ticks taken to encode signature is 8235
+13: 6:51:19    :ICONISIF: Encode Min ticks is  8235
+13: 6:51:19    :ICONISIF: Encode Max ticks is  641262
+13: 6:51:20    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:51:20    :TCP: Test 2(I): Length added  3952
+13: 6:51:20    :TCP: Test 2(II): Message Just Sent OK 
+13: 6:51:21    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:51:21    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:51:265    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:51:265    :ICONISIF: Test 7(IV) b: Sequence number as reference 10005
+13: 6:51:267    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:51:269    :ICONISIF: Tx Sequence Number:  10005
+13: 6:51:270    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:51:271    :SIGNING: Test 5(I): qVkzMIPP2pRfPp/FlsMj2To6cGQ=
+13: 6:51:273    :SIGNING: DoRSASignature 
+13: 6:51:274    :SIGNING: Signature Info Canalization 
+13: 6:51:274    :SIGNING: Transmit RSA Digest DbQwZjy/GnTIPnNXRZF7bBzpLFw=
+13: 6:51:275    :ICONISIF: ticks taken to encode signature is 17309
+13: 6:51:276    :ICONISIF: Encode Min ticks is  8235
+13: 6:51:276    :ICONISIF: Encode Max ticks is  641262
+13: 6:51:276    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:51:277    :TCP: Test 2(I): Length added  3952
+13: 6:51:277    :TCP: Test 2(II): Failed To Send Message 
+13: 6:51:277    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:51:277    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:51:515    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:51:516    :ICONISIF: Test 7(IV) b: Sequence number as reference 10006
+13: 6:51:517    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:51:518    :ICONISIF: Tx Sequence Number:  10006
+13: 6:51:519    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:51:520    :SIGNING: Test 5(I): W4lvIsczjiIFmKKpKxzsU9axenA=
+13: 6:51:521    :SIGNING: DoRSASignature 
+13: 6:51:522    :SIGNING: Signature Info Canalization 
+13: 6:51:523    :SIGNING: Transmit RSA Digest X+RG/LgXi7Lfr7LbfWuzhhn2ixs=
+13: 6:51:525    :ICONISIF: ticks taken to encode signature is 21084
+13: 6:51:526    :ICONISIF: Encode Min ticks is  8235
+13: 6:51:527    :ICONISIF: Encode Max ticks is  641262
+13: 6:51:528    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:51:529    :TCP: Test 2(I): Length added  3952
+13: 6:51:530    :TCP: Test 2(II): Failed To Send Message 
+13: 6:51:531    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:51:532    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:51:765    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+13: 6:51:766    :ICONISIF: Test 7(IV) b: Sequence number as reference 10007
+13: 6:51:768    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+13: 6:51:770    :ICONISIF: Tx Sequence Number:  10007
+13: 6:51:772    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:51:773    :SIGNING: Test 5(I): 9Ha9GONoD+X4RDyBBxPkW8njYt0=
+13: 6:51:774    :SIGNING: DoRSASignature 
+13: 6:51:775    :SIGNING: Signature Info Canalization 
+13: 6:51:775    :SIGNING: Transmit RSA Digest J2XFkBVkaZ9JmHxKB+kilTYMZ0Q=
+13: 6:51:776    :ICONISIF: ticks taken to encode signature is 15924
+13: 6:51:777    :ICONISIF: Encode Min ticks is  8235
+13: 6:51:777    :ICONISIF: Encode Max ticks is  641262
+13: 6:51:777    :ICONISIF: Test 7(III): Added Signed Element 
+13: 6:51:778    :TCP: Test 2(I): Length added  3952
+13: 6:51:778    :TCP: Test 2(II): Message Just Sent OK 
+13: 6:51:778    :ICONISIF: Test 2(III): succes sending data for connection 0
+13: 6:51:779    :ICONISIF: Test 7(II): Sequence number incremented 
+13: 6:51:858    :TCP: DoTCPSocketCode 
+13: 6:51:858    :TCP: Connection for  127.0.0.1
+13: 6:51:859    :TCP: The Length Of Receive is  4027
+13: 6:51:859    :TCP: Test 1(I): Received All Data from TCP Connection 0
+13: 6:51:859    :ICONISIF: HandleIncomingDataStream for  572
+13: 6:51:860    :ICONISIF: Test 3(I): information is correct 0
+13: 6:51:860    :SIGNING: Test 5(I): XML Canicalised OK 
+13: 6:51:860    :SIGNING: Test 4(I) a: Digest length OK 
+13: 6:51:861    :SIGNING: Test 4(II) a: TheCalculated DIGEST value is  
+13: 6:51:861    :SIGNING: Test 4(II) b:  am+PPeUWXSGYTN9N0Uqt1V3QVl8=
+13: 6:51:861    :SIGNING: Test 4(II) c: Match 
+13: 6:51:861    :SIGNING: Test 4(VI): Certificate is Good 
+13: 6:51:862    :SIGNING: Test 4(I) b: Their signedinfoDigest is  prPQyILHuWmXLKO7jVG9SKqdqg0=
+13: 6:51:862    :SIGNING: Test 4(IV) : The Signature has been decoded correctly 
+13: 6:51:862    :ICONISIF: ticks taken to decode signature is 7385
+13: 6:51:863    :ICONISIF: Min ticks is  7385
+13: 6:51:863    :ICONISIF: Max ticks is  7385
+13: 6:51:863    :ICONISIF: Received sequence Number 10000
+13: 6:51:863    :ICONISIF: Test 6(I) a: header element decoded correctly 
+13: 6:51:864    :ICONISIF: Decode Body For sequence 10000
+13: 6:51:864    :ICONISIF: Decode InterLocking  0
+13: 6:51:864    :ICONISIF: decodeInterlockingElement 
+13: 6:51:865    :ICONISIF: Test 6(III): SEND NVFB3 Data to be decoded, sequence number 10000
+13: 6:51:865    :NVFB3: Decode the NVFB3 data for sequence Number  10000
+13: 6:51:865    :NVFB3: Decode Control Request Keighley
+13: 6:51:865    :NVFB3: Received TimeCounter value of  1769064270
+13: 6:51:866    :ALWAYS: Context timecounter not valid
+13: 6:51:866    :ALWAYS: Sequence Failed on channel:  3
+13: 6:51:866    :NVFB3: NVFB3 decode failure in incoming control request
+13: 6:51:867    :NVFB3: 15 : Control Request Received but FAILED to decode numberof=0
+13: 6:51:868    :NVFB3: Failed to decode data for sequence Number  10000
+13: 6:51:868    :NVFB3: Received TimeCounter value of  1769064278
+13: 6:51:868    :NVFB3: Received TimeCounter value of  1769064278
+13: 6:51:868    :ALWAYS: Context timecounter not valid
+13: 6:51:869    :ALWAYS: Sequence Failed on channel:  5
+13: 6:51:869    :NVFB3: NVFB3 decode failed of response message
+13: 6:51:869    :NVFB3: Received TimeCounter value of  1769064277
+13: 6:51:869    :NVFB3: Received TimeCounter value of  1769064277
+13: 6:51:869    :ALWAYS: Context timecounter not valid
+13: 6:51:870    :ALWAYS: Sequence Failed on channel:  2
+13: 6:51:870    :NVFB3: NVFB3 decode failed of response message
+13: 6:51:870    :NVFB3: Received TimeCounter value of  1769064283
+13: 6:51:870    :NVFB3: Received TimeCounter value of  1769064283
+13: 6:51:871    :ALWAYS: Context timecounter not valid
+13: 6:51:871    :ALWAYS: Sequence Failed on channel:  1
+13: 6:51:871    :NVFB3: NVFB3 decode failed of response message
+
+Interlockings]
+NumInterlockings=20
+Interlocking_00_SSIID=O4
+Interlocking_00_UniqueID=Keighley
+Interlocking_00_MCSID=19
+Interlocking_01_SSIID=21
+Interlocking_01_UniqueID=Horsforth
+Interlocking_01_MCSID=21
+Interlocking_02_SSIID=03
+Interlocking_02_UniqueID=aHorsforth
+Interlocking_02_MCSID=03
+Interlocking_03_SSIID=01
+Interlocking_03_UniqueID=cHorsforth
+Interlocking_03_MCSID=01
+Interlocking_04_SSIID=05
+Interlocking_04_UniqueID=kHorsforth
+Interlocking_04_MCSID=05
+Interlocking_05_SSIID=06
+Interlocking_05_UniqueID=zHorsforth
+Interlocking_05_MCSID=06
+Interlocking_06_SSIID=07
+Interlocking_06_UniqueID=yHorsforth
+Interlocking_06_MCSID=07
+Interlocking_07_SSIID=08
+Interlocking_07_UniqueID=eHorsforth
+Interlocking_07_MCSID=08
+Interlocking_08_SSIID=09
+Interlocking_08_UniqueID=xHorsforth
+Interlocking_08_MCSID=09
+Interlocking_09_SSIID=10
+Interlocking_09_UniqueID=wHorsforth
+Interlocking_09_MCSID=10
+Interlocking_10_SSIID=11
+Interlocking_10_UniqueID=vHorsforth
+Interlocking_10_MCSID=11
+Interlocking_11_SSIID=12
+Interlocking_11_UniqueID=uHorsforth
+Interlocking_11_MCSID=12
+Interlocking_12_SSIID=13
+Interlocking_12_UniqueID=tHorsforth
+Interlocking_12_MCSID=13
+Interlocking_13_SSIID=14
+Interlocking_13_UniqueID=sHorsforth
+Interlocking_13_MCSID=14
+Interlocking_14_SSIID=15
+Interlocking_14_UniqueID=rHorsforth
+Interlocking_14_MCSID=15
+Interlocking_15_SSIID=16
+Interlocking_15_UniqueID=qHorsforth
+Interlocking_15_MCSID=16
+Interlocking_16_SSIID=17
+Interlocking_16_UniqueID=pHorsforth
+Interlocking_16_MCSID=17
+Interlocking_17_SSIID=18
+Interlocking_17_UniqueID=oHorsforth
+Interlocking_17_MCSID=18
+Interlocking_18_SSIID=19
+Interlocking_18_UniqueID=nHorsforth
+Interlocking_18_MCSID=19
+Interlocking_19_SSIID=20
+Interlocking_19_UniqueID=mHorsforth
+Interlocking_19_MCSID=20
+;keighley nvfb3 config
+InterlockingControl_00_IconisAddress=2
+InterlockingControl_00_SRIFAddress=12
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=3
+InterlockingARS_00_SRIFAddress=13
+InterlockingARS_00_AppDomain=10
+InterlockingSignalMap_00_IconisAddress=5
+InterlockingSignalMap_00_SRIFAddress=15
+InterlockingSignalMap_00_AppDomain=10
+InterlockingIndications_00_IconisAddress=1
+InterlockingIndications_00_SRIFAddress=11
+InterlockingIndications_00_AppDomain=10
+InterlockingStatusByte_00_IconisAddress=4
+InterlockingStatusByte_00_SRIFAddress=14
+InterlockingStatusByte_00_AppDomain=10
+;horsforth nvfb3 config
+InterlockingControl_01_IconisAddress=22
+InterlockingControl_01_SRIFAddress=32
+InterlockingControl_01_AppDomain=10
+InterlockingARS_01_IconisAddress=23
+InterlockingARS_01_SRIFAddress=33
+InterlockingARS_01_AppDomain=10
+InterlockingSignalMap_01_IconisAddress=25
+InterlockingSignalMap_01_SRIFAddress=35
+InterlockingSignalMap_01_AppDomain=10
+InterlockingIndications_01_IconisAddress=21
+InterlockingIndications_01_SRIFAddress=31
+InterlockingIndications_01_AppDomain=10
+InterlockingStatusByte_01_IconisAddress=24
+InterlockingStatusByte_01_SRIFAddress=34
+InterlockingStatusByte_01_AppDomain=10
+
+InterlockingControl_02_IconisAddress=2
+InterlockingControl_02_SRIFAddress=12
+InterlockingControl_02_AppDomain=10
+InterlockingARS_02_IconisAddress=3
+InterlockingARS_02_SRIFAddress=13
+InterlockingARS_02_AppDomain=10
+InterlockingSignalMap_02_IconisAddress=5
+InterlockingSignalMap_02_SRIFAddress=15
+InterlockingSignalMap_02_AppDomain=10
+InterlockingStatusByte_02_IconisAddress=4
+InterlockingStatusByte_02_SRIFAddress=14
+InterlockingStatusByte_02_AppDomain=10
+InterlockingIndications_02_IconisAddress=1
+InterlockingIndications_02_SRIFAddress=11
+InterlockingIndications_02_AppDomain=10
+
+InterlockingIndications_03_IconisAddress=1
+InterlockingIndications_03_SRIFAddress=11
+InterlockingIndications_03_AppDomain=10
+InterlockingStatusByte_03_IconisAddress=4
+InterlockingStatusByte_03_SRIFAddress=14
+InterlockingStatusByte_03_AppDomain=10
+InterlockingControl_03_IconisAddress=2
+InterlockingControl_03_SRIFAddress=12
+InterlockingControl_03_AppDomain=10
+InterlockingARS_03_IconisAddress=3
+InterlockingARS_03_SRIFAddress=13
+InterlockingARS_03_AppDomain=10
+InterlockingSignalMap_03_IconisAddress=5
+InterlockingSignalMap_03_SRIFAddress=15
+InterlockingSignalMap_03_AppDomain=10
+
+InterlockingIndications_04_IconisAddress=1
+InterlockingIndications_04_SRIFAddress=11
+InterlockingIndications_04_AppDomain=10
+InterlockingStatusByte_04_IconisAddress=4
+InterlockingStatusByte_04_SRIFAddress=14
+InterlockingStatusByte_04_AppDomain=10
+InterlockingControl_04_IconisAddress=2
+InterlockingControl_04_SRIFAddress=12
+InterlockingControl_04_AppDomain=10
+InterlockingARS_04_IconisAddress=3
+InterlockingARS_04_SRIFAddress=13
+InterlockingARS_04_AppDomain=10
+InterlockingSignalMap_04_IconisAddress=5
+InterlockingSignalMap_04_SRIFAddress=15
+InterlockingSignalMap_04_AppDomain=10
+
+InterlockingIndications_05_IconisAddress=1
+InterlockingIndications_05_SRIFAddress=11
+InterlockingIndications_05_AppDomain=10
+InterlockingStatusByte_05_IconisAddress=4
+InterlockingStatusByte_05_SRIFAddress=14
+InterlockingStatusByte_05_AppDomain=10
+InterlockingControl_05_IconisAddress=2
+InterlockingControl_05_SRIFAddress=12
+InterlockingControl_05_AppDomain=10
+InterlockingARS_05_IconisAddress=3
+InterlockingARS_05_SRIFAddress=13
+InterlockingARS_05_AppDomain=10
+InterlockingSignalMap_05_IconisAddress=5
+InterlockingSignalMap_05_SRIFAddress=15
+InterlockingSignalMap_05_AppDomain=10
+
+InterlockingIndications_06_IconisAddress=1
+InterlockingIndications_06_SRIFAddress=11
+InterlockingIndications_06_AppDomain=10
+InterlockingStatusByte_06_IconisAddress=4
+InterlockingStatusByte_06_SRIFAddress=14
+InterlockingStatusByte_06_AppDomain=10
+InterlockingControl_06_IconisAddress=2
+InterlockingControl_06_SRIFAddress=12
+InterlockingControl_06_AppDomain=10
+InterlockingARS_06_IconisAddress=3
+InterlockingARS_06_SRIFAddress=13
+InterlockingARS_06_AppDomain=10
+InterlockingSignalMap_06_IconisAddress=5
+InterlockingSignalMap_06_SRIFAddress=15
+InterlockingSignalMap_06_AppDomain=10
+
+InterlockingIndications_07_IconisAddress=1
+InterlockingIndications_07_SRIFAddress=11
+InterlockingIndications_07_AppDomain=10
+InterlockingStatusByte_07_IconisAddress=4
+InterlockingStatusByte_07_SRIFAddress=14
+InterlockingStatusByte_07_AppDomain=10
+InterlockingControl_07_IconisAddress=2
+InterlockingControl_07_SRIFAddress=12
+InterlockingControl_07_AppDomain=10
+InterlockingARS_07_IconisAddress=3
+InterlockingARS_07_SRIFAddress=13
+InterlockingARS_07_AppDomain=10
+InterlockingSignalMap_07_IconisAddress=5
+InterlockingSignalMap_07_SRIFAddress=15
+InterlockingSignalMap_07_AppDomain=10
+
+InterlockingIndications_08_IconisAddress=1
+InterlockingIndications_08_SRIFAddress=11
+InterlockingIndications_08_AppDomain=10
+InterlockingStatusByte_08_IconisAddress=4
+InterlockingStatusByte_08_SRIFAddress=14
+InterlockingStatusByte_08_AppDomain=10
+InterlockingControl_08_IconisAddress=2
+InterlockingControl_08_SRIFAddress=12
+InterlockingControl_08_AppDomain=10
+InterlockingARS_08_IconisAddress=3
+InterlockingARS_08_SRIFAddress=13
+InterlockingARS_08_AppDomain=10
+InterlockingSignalMap_08_IconisAddress=5
+InterlockingSignalMap_08_SRIFAddress=15
+InterlockingSignalMap_08_AppDomain=10
+InterlockingIndications_09_IconisAddress=1
+InterlockingIndications_09_SRIFAddress=11
+InterlockingIndications_09_AppDomain=10
+InterlockingStatusByte_09_IconisAddress=4
+InterlockingStatusByte_09_SRIFAddress=14
+InterlockingStatusByte_09_AppDomain=10
+InterlockingControl_09_IconisAddress=2
+InterlockingControl_09_SRIFAddress=12
+InterlockingControl_09_AppDomain=10
+InterlockingARS_09_IconisAddress=3
+InterlockingARS_09_SRIFAddress=13
+InterlockingARS_09_AppDomain=10
+InterlockingSignalMap_09_IconisAddress=5
+InterlockingSignalMap_09_SRIFAddress=15
+InterlockingSignalMap_09_AppDomain=10
+InterlockingIndications_10_IconisAddress=1
+InterlockingIndications_10_SRIFAddress=11
+InterlockingIndications_10_AppDomain=10
+InterlockingStatusByte_10_IconisAddress=4
+InterlockingStatusByte_10_SRIFAddress=14
+InterlockingStatusByte_10_AppDomain=10
+InterlockingControl_10_IconisAddress=2
+InterlockingControl_10_SRIFAddress=12
+InterlockingControl_10_AppDomain=10
+InterlockingARS_10_IconisAddress=3
+InterlockingARS_10_SRIFAddress=13
+InterlockingARS_10_AppDomain=10
+InterlockingSignalMap_10_IconisAddress=5
+InterlockingSignalMap_10_SRIFAddress=15
+InterlockingSignalMap_10_AppDomain=10
+InterlockingIndications_11_IconisAddress=1
+InterlockingIndications_11_SRIFAddress=11
+InterlockingIndications_11_AppDomain=10
+InterlockingStatusByte_11_IconisAddress=4
+InterlockingStatusByte_11_SRIFAddress=14
+InterlockingStatusByte_11_AppDomain=10
+InterlockingControl_11_IconisAddress=2
+InterlockingControl_11_SRIFAddress=12
+InterlockingControl_11_AppDomain=10
+InterlockingARS_11_IconisAddress=3
+InterlockingARS_11_SRIFAddress=13
+InterlockingARS_11_AppDomain=10
+InterlockingSignalMap_11_IconisAddress=5
+InterlockingSignalMap_11_SRIFAddress=15
+InterlockingSignalMap_11_AppDomain=10
+InterlockingIndications_12_IconisAddress=1
+InterlockingIndications_12_SRIFAddress=11
+InterlockingIndications_12_AppDomain=10
+InterlockingStatusByte_12_IconisAddress=4
+InterlockingStatusByte_12_SRIFAddress=14
+InterlockingStatusByte_12_AppDomain=10
+InterlockingControl_12_IconisAddress=2
+InterlockingControl_12_SRIFAddress=12
+InterlockingControl_12_AppDomain=10
+InterlockingARS_12_IconisAddress=3
+InterlockingARS_12_SRIFAddress=13
+InterlockingARS_12_AppDomain=10
+InterlockingSignalMap_12_IconisAddress=5
+InterlockingSignalMap_12_SRIFAddress=15
+InterlockingSignalMap_12_AppDomain=10
+InterlockingIndications_13_IconisAddress=1
+InterlockingIndications_13_SRIFAddress=11
+InterlockingIndications_13_AppDomain=10
+InterlockingStatusByte_13_IconisAddress=4
+InterlockingStatusByte_13_SRIFAddress=14
+InterlockingStatusByte_13_AppDomain=10
+InterlockingControl_13_IconisAddress=2
+InterlockingControl_13_SRIFAddress=12
+InterlockingControl_13_AppDomain=10
+InterlockingARS_13_IconisAddress=3
+InterlockingARS_13_SRIFAddress=13
+InterlockingARS_13_AppDomain=10
+InterlockingSignalMap_13_IconisAddress=5
+InterlockingSignalMap_13_SRIFAddress=15
+InterlockingSignalMap_13_AppDomain=10
+InterlockingIndications_14_IconisAddress=1
+InterlockingIndications_14_SRIFAddress=11
+InterlockingIndications_14_AppDomain=10
+InterlockingStatusByte_14_IconisAddress=4
+InterlockingStatusByte_14_SRIFAddress=14
+InterlockingStatusByte_14_AppDomain=10
+InterlockingControl_14_IconisAddress=2
+InterlockingControl_14_SRIFAddress=12
+InterlockingControl_14_AppDomain=10
+InterlockingARS_14_IconisAddress=3
+InterlockingARS_14_SRIFAddress=13
+InterlockingARS_14_AppDomain=10
+InterlockingSignalMap_14_IconisAddress=5
+InterlockingSignalMap_14_SRIFAddress=15
+InterlockingSignalMap_14_AppDomain=10
+InterlockingIndications_15_IconisAddress=1
+InterlockingIndications_15_SRIFAddress=11
+InterlockingIndications_15_AppDomain=10
+InterlockingStatusByte_15_IconisAddress=4
+InterlockingStatusByte_15_SRIFAddress=14
+InterlockingStatusByte_15_AppDomain=10
+InterlockingControl_15_IconisAddress=2
+InterlockingControl_15_SRIFAddress=12
+InterlockingControl_15_AppDomain=10
+InterlockingARS_15_IconisAddress=3
+InterlockingARS_15_SRIFAddress=13
+InterlockingARS_15_AppDomain=10
+InterlockingSignalMap_15_IconisAddress=5
+InterlockingSignalMap_15_SRIFAddress=15
+InterlockingSignalMap_15_AppDomain=10
+InterlockingIndications_16_IconisAddress=1
+InterlockingIndications_16_SRIFAddress=11
+InterlockingIndications_16_AppDomain=10
+InterlockingStatusByte_16_IconisAddress=4
+InterlockingStatusByte_16_SRIFAddress=14
+InterlockingStatusByte_16_AppDomain=10
+InterlockingControl_16_IconisAddress=2
+InterlockingControl_16_SRIFAddress=12
+InterlockingControl_16_AppDomain=10
+InterlockingARS_16_IconisAddress=3
+InterlockingARS_16_SRIFAddress=13
+InterlockingARS_16_AppDomain=10
+InterlockingSignalMap_16_IconisAddress=5
+InterlockingSignalMap_16_SRIFAddress=15
+InterlockingSignalMap_16_AppDomain=10
+InterlockingIndications_17_IconisAddress=1
+InterlockingIndications_17_SRIFAddress=11
+InterlockingIndications_17_AppDomain=10
+InterlockingStatusByte_17_IconisAddress=4
+InterlockingStatusByte_17_SRIFAddress=14
+InterlockingStatusByte_17_AppDomain=10
+InterlockingControl_17_IconisAddress=2
+InterlockingControl_17_SRIFAddress=12
+InterlockingControl_17_AppDomain=10
+InterlockingARS_17_IconisAddress=3
+InterlockingARS_17_SRIFAddress=13
+InterlockingARS_17_AppDomain=10
+InterlockingSignalMap_17_IconisAddress=5
+InterlockingSignalMap_17_SRIFAddress=15
+InterlockingSignalMap_17_AppDomain=10
+InterlockingIndications_18_IconisAddress=1
+InterlockingIndications_18_SRIFAddress=11
+InterlockingIndications_18_AppDomain=10
+InterlockingStatusByte_18_IconisAddress=4
+InterlockingStatusByte_18_SRIFAddress=14
+InterlockingStatusByte_18_AppDomain=10
+InterlockingControl_18_IconisAddress=2
+InterlockingControl_18_SRIFAddress=12
+InterlockingControl_18_AppDomain=10
+InterlockingARS_18_IconisAddress=3
+InterlockingARS_18_SRIFAddress=13
+InterlockingARS_18_AppDomain=10
+InterlockingSignalMap_18_IconisAddress=5
+InterlockingSignalMap_18_SRIFAddress=15
+InterlockingSignalMap_18_AppDomain=10
+InterlockingIndications_19_IconisAddress=1
+InterlockingIndications_19_SRIFAddress=11
+InterlockingIndications_19_AppDomain=10
+InterlockingStatusByte_19_IconisAddress=4
+InterlockingStatusByte_19_SRIFAddress=14
+InterlockingStatusByte_19_AppDomain=10
+InterlockingControl_19_IconisAddress=2
+InterlockingControl_19_SRIFAddress=12
+InterlockingControl_19_AppDomain=10
+InterlockingARS_19_IconisAddress=3
+InterlockingARS_19_SRIFAddress=13
+InterlockingARS_19_AppDomain=10
+InterlockingSignalMap_19_IconisAddress=5
+InterlockingSignalMap_19_SRIFAddress=15
+InterlockingSignalMap_19_AppDomain=10
+EmergencyAlarm_IconisAddress=26
+EmergencyAlarm_SRIFAddress=16
+EmergencyAlarm_AppDomain=10
+
+[NVFB3]
+
+C:\Windows\MCSCORUN_bak.INI
+
+[Interlockings]
+NumInterlockings=20
+Interlocking_00_SSIID=O4
+Interlocking_00_UniqueID=Keighley
+Interlocking_00_MCSID=19
+Interlocking_01_SSIID=21
+Interlocking_01_UniqueID=Horsforth
+Interlocking_01_MCSID=21
+Interlocking_02_SSIID=03
+Interlocking_02_UniqueID=aHorsforth
+Interlocking_02_MCSID=03
+Interlocking_03_SSIID=01
+Interlocking_03_UniqueID=cHorsforth
+Interlocking_03_MCSID=01
+Interlocking_04_SSIID=05
+Interlocking_04_UniqueID=kHorsforth
+Interlocking_04_MCSID=05
+Interlocking_05_SSIID=06
+Interlocking_05_UniqueID=zHorsforth
+Interlocking_05_MCSID=06
+Interlocking_06_SSIID=07
+Interlocking_06_UniqueID=yHorsforth
+Interlocking_06_MCSID=07
+Interlocking_07_SSIID=08
+Interlocking_07_UniqueID=eHorsforth
+Interlocking_07_MCSID=08
+Interlocking_08_SSIID=09
+Interlocking_08_UniqueID=xHorsforth
+Interlocking_08_MCSID=09
+Interlocking_09_SSIID=10
+Interlocking_09_UniqueID=wHorsforth
+Interlocking_09_MCSID=10
+Interlocking_10_SSIID=11
+Interlocking_10_UniqueID=vHorsforth
+Interlocking_10_MCSID=11
+Interlocking_11_SSIID=12
+Interlocking_11_UniqueID=uHorsforth
+Interlocking_11_MCSID=12
+Interlocking_12_SSIID=13
+Interlocking_12_UniqueID=tHorsforth
+Interlocking_12_MCSID=13
+Interlocking_13_SSIID=14
+Interlocking_13_UniqueID=sHorsforth
+Interlocking_13_MCSID=14
+Interlocking_14_SSIID=15
+Interlocking_14_UniqueID=rHorsforth
+Interlocking_14_MCSID=15
+Interlocking_15_SSIID=16
+Interlocking_15_UniqueID=qHorsforth
+Interlocking_15_MCSID=16
+Interlocking_16_SSIID=17
+Interlocking_16_UniqueID=pHorsforth
+Interlocking_16_MCSID=17
+Interlocking_17_SSIID=18
+Interlocking_17_UniqueID=oHorsforth
+Interlocking_17_MCSID=18
+Interlocking_18_SSIID=19
+Interlocking_18_UniqueID=nHorsforth
+Interlocking_18_MCSID=19
+Interlocking_19_SSIID=20
+Interlocking_19_UniqueID=mHorsforth
+Interlocking_19_MCSID=20
+;keighley nvfb3 config
+InterlockingControl_00_IconisAddress=2
+InterlockingControl_00_SRIFAddress=12
+InterlockingControl_00_AppDomain=10
+InterlockingARS_00_IconisAddress=3
+InterlockingARS_00_SRIFAddress=13
+InterlockingARS_00_AppDomain=10
+InterlockingSignalMap_00_IconisAddress=5
+InterlockingSignalMap_00_SRIFAddress=15
+InterlockingSignalMap_00_AppDomain=10
+InterlockingIndications_00_IconisAddress=1
+InterlockingIndications_00_SRIFAddress=11
+InterlockingIndications_00_AppDomain=10
+InterlockingStatusByte_00_IconisAddress=4
+InterlockingStatusByte_00_SRIFAddress=14
+InterlockingStatusByte_00_AppDomain=10
+;horsforth nvfb3 config
+InterlockingControl_01_IconisAddress=22
+InterlockingControl_01_SRIFAddress=32
+InterlockingControl_01_AppDomain=10
+InterlockingARS_01_IconisAddress=23
+InterlockingARS_01_SRIFAddress=33
+InterlockingARS_01_AppDomain=10
+InterlockingSignalMap_01_IconisAddress=25
+InterlockingSignalMap_01_SRIFAddress=35
+InterlockingSignalMap_01_AppDomain=10
+InterlockingIndications_01_IconisAddress=21
+InterlockingIndications_01_SRIFAddress=31
+InterlockingIndications_01_AppDomain=10
+InterlockingStatusByte_01_IconisAddress=24
+InterlockingStatusByte_01_SRIFAddress=34
+InterlockingStatusByte_01_AppDomain=10
+
+InterlockingControl_02_IconisAddress=2
+InterlockingControl_02_SRIFAddress=12
+InterlockingControl_02_AppDomain=10
+InterlockingARS_02_IconisAddress=3
+InterlockingARS_02_SRIFAddress=13
+InterlockingARS_02_AppDomain=10
+InterlockingSignalMap_02_IconisAddress=5
+InterlockingSignalMap_02_SRIFAddress=15
+InterlockingSignalMap_02_AppDomain=10
+InterlockingStatusByte_02_IconisAddress=4
+InterlockingStatusByte_02_SRIFAddress=14
+InterlockingStatusByte_02_AppDomain=10
+InterlockingIndications_02_IconisAddress=1
+InterlockingIndications_02_SRIFAddress=11
+InterlockingIndications_02_AppDomain=10
+
+InterlockingIndications_03_IconisAddress=1
+InterlockingIndications_03_SRIFAddress=11
+InterlockingIndications_03_AppDomain=10
+InterlockingStatusByte_03_IconisAddress=4
+InterlockingStatusByte_03_SRIFAddress=14
+InterlockingStatusByte_03_AppDomain=10
+InterlockingControl_03_IconisAddress=2
+InterlockingControl_03_SRIFAddress=12
+InterlockingControl_03_AppDomain=10
+InterlockingARS_03_IconisAddress=3
+InterlockingARS_03_SRIFAddress=13
+InterlockingARS_03_AppDomain=10
+InterlockingSignalMap_03_IconisAddress=5
+InterlockingSignalMap_03_SRIFAddress=15
+InterlockingSignalMap_03_AppDomain=10
+
+InterlockingIndications_04_IconisAddress=1
+InterlockingIndications_04_SRIFAddress=11
+InterlockingIndications_04_AppDomain=10
+InterlockingStatusByte_04_IconisAddress=4
+InterlockingStatusByte_04_SRIFAddress=14
+InterlockingStatusByte_04_AppDomain=10
+InterlockingControl_04_IconisAddress=2
+InterlockingControl_04_SRIFAddress=12
+InterlockingControl_04_AppDomain=10
+InterlockingARS_04_IconisAddress=3
+InterlockingARS_04_SRIFAddress=13
+InterlockingARS_04_AppDomain=10
+InterlockingSignalMap_04_IconisAddress=5
+InterlockingSignalMap_04_SRIFAddress=15
+InterlockingSignalMap_04_AppDomain=10
+
+InterlockingIndications_05_IconisAddress=1
+InterlockingIndications_05_SRIFAddress=11
+InterlockingIndications_05_AppDomain=10
+InterlockingStatusByte_05_IconisAddress=4
+InterlockingStatusByte_05_SRIFAddress=14
+InterlockingStatusByte_05_AppDomain=10
+InterlockingControl_05_IconisAddress=2
+InterlockingControl_05_SRIFAddress=12
+InterlockingControl_05_AppDomain=10
+InterlockingARS_05_IconisAddress=3
+InterlockingARS_05_SRIFAddress=13
+InterlockingARS_05_AppDomain=10
+InterlockingSignalMap_05_IconisAddress=5
+InterlockingSignalMap_05_SRIFAddress=15
+InterlockingSignalMap_05_AppDomain=10
+
+InterlockingIndications_06_IconisAddress=1
+InterlockingIndications_06_SRIFAddress=11
+InterlockingIndications_06_AppDomain=10
+InterlockingStatusByte_06_IconisAddress=4
+InterlockingStatusByte_06_SRIFAddress=14
+InterlockingStatusByte_06_AppDomain=10
+InterlockingControl_06_IconisAddress=2
+InterlockingControl_06_SRIFAddress=12
+InterlockingControl_06_AppDomain=10
+InterlockingARS_06_IconisAddress=3
+InterlockingARS_06_SRIFAddress=13
+InterlockingARS_06_AppDomain=10
+InterlockingSignalMap_06_IconisAddress=5
+InterlockingSignalMap_06_SRIFAddress=15
+InterlockingSignalMap_06_AppDomain=10
+
+InterlockingIndications_07_IconisAddress=1
+InterlockingIndications_07_SRIFAddress=11
+InterlockingIndications_07_AppDomain=10
+InterlockingStatusByte_07_IconisAddress=4
+InterlockingStatusByte_07_SRIFAddress=14
+InterlockingStatusByte_07_AppDomain=10
+InterlockingControl_07_IconisAddress=2
+InterlockingControl_07_SRIFAddress=12
+InterlockingControl_07_AppDomain=10
+InterlockingARS_07_IconisAddress=3
+InterlockingARS_07_SRIFAddress=13
+InterlockingARS_07_AppDomain=10
+InterlockingSignalMap_07_IconisAddress=5
+InterlockingSignalMap_07_SRIFAddress=15
+InterlockingSignalMap_07_AppDomain=10
+
+InterlockingIndications_08_IconisAddress=1
+InterlockingIndications_08_SRIFAddress=11
+InterlockingIndications_08_AppDomain=10
+InterlockingStatusByte_08_IconisAddress=4
+InterlockingStatusByte_08_SRIFAddress=14
+InterlockingStatusByte_08_AppDomain=10
+InterlockingControl_08_IconisAddress=2
+InterlockingControl_08_SRIFAddress=12
+InterlockingControl_08_AppDomain=10
+InterlockingARS_08_IconisAddress=3
+InterlockingARS_08_SRIFAddress=13
+InterlockingARS_08_AppDomain=10
+InterlockingSignalMap_08_IconisAddress=5
+InterlockingSignalMap_08_SRIFAddress=15
+InterlockingSignalMap_08_AppDomain=10
+InterlockingIndications_09_IconisAddress=1
+InterlockingIndications_09_SRIFAddress=11
+InterlockingIndications_09_AppDomain=10
+InterlockingStatusByte_09_IconisAddress=4
+InterlockingStatusByte_09_SRIFAddress=14
+InterlockingStatusByte_09_AppDomain=10
+InterlockingControl_09_IconisAddress=2
+InterlockingControl_09_SRIFAddress=12
+InterlockingControl_09_AppDomain=10
+InterlockingARS_09_IconisAddress=3
+InterlockingARS_09_SRIFAddress=13
+InterlockingARS_09_AppDomain=10
+InterlockingSignalMap_09_IconisAddress=5
+InterlockingSignalMap_09_SRIFAddress=15
+InterlockingSignalMap_09_AppDomain=10
+InterlockingIndications_10_IconisAddress=1
+InterlockingIndications_10_SRIFAddress=11
+InterlockingIndications_10_AppDomain=10
+InterlockingStatusByte_10_IconisAddress=4
+InterlockingStatusByte_10_SRIFAddress=14
+InterlockingStatusByte_10_AppDomain=10
+InterlockingControl_10_IconisAddress=2
+InterlockingControl_10_SRIFAddress=12
+InterlockingControl_10_AppDomain=10
+InterlockingARS_10_IconisAddress=3
+InterlockingARS_10_SRIFAddress=13
+InterlockingARS_10_AppDomain=10
+InterlockingSignalMap_10_IconisAddress=5
+InterlockingSignalMap_10_SRIFAddress=15
+InterlockingSignalMap_10_AppDomain=10
+InterlockingIndications_11_IconisAddress=1
+InterlockingIndications_11_SRIFAddress=11
+InterlockingIndications_11_AppDomain=10
+InterlockingStatusByte_11_IconisAddress=4
+InterlockingStatusByte_11_SRIFAddress=14
+InterlockingStatusByte_11_AppDomain=10
+InterlockingControl_11_IconisAddress=2
+InterlockingControl_11_SRIFAddress=12
+InterlockingControl_11_AppDomain=10
+InterlockingARS_11_IconisAddress=3
+InterlockingARS_11_SRIFAddress=13
+InterlockingARS_11_AppDomain=10
+InterlockingSignalMap_11_IconisAddress=5
+InterlockingSignalMap_11_SRIFAddress=15
+InterlockingSignalMap_11_AppDomain=10
+InterlockingIndications_12_IconisAddress=1
+InterlockingIndications_12_SRIFAddress=11
+InterlockingIndications_12_AppDomain=10
+InterlockingStatusByte_12_IconisAddress=4
+InterlockingStatusByte_12_SRIFAddress=14
+InterlockingStatusByte_12_AppDomain=10
+InterlockingControl_12_IconisAddress=2
+InterlockingControl_12_SRIFAddress=12
+InterlockingControl_12_AppDomain=10
+InterlockingARS_12_IconisAddress=3
+InterlockingARS_12_SRIFAddress=13
+InterlockingARS_12_AppDomain=10
+InterlockingSignalMap_12_IconisAddress=5
+InterlockingSignalMap_12_SRIFAddress=15
+InterlockingSignalMap_12_AppDomain=10
+InterlockingIndications_13_IconisAddress=1
+InterlockingIndications_13_SRIFAddress=11
+InterlockingIndications_13_AppDomain=10
+InterlockingStatusByte_13_IconisAddress=4
+InterlockingStatusByte_13_SRIFAddress=14
+InterlockingStatusByte_13_AppDomain=10
+InterlockingControl_13_IconisAddress=2
+InterlockingControl_13_SRIFAddress=12
+InterlockingControl_13_AppDomain=10
+InterlockingARS_13_IconisAddress=3
+InterlockingARS_13_SRIFAddress=13
+InterlockingARS_13_AppDomain=10
+InterlockingSignalMap_13_IconisAddress=5
+InterlockingSignalMap_13_SRIFAddress=15
+InterlockingSignalMap_13_AppDomain=10
+InterlockingIndications_14_IconisAddress=1
+InterlockingIndications_14_SRIFAddress=11
+InterlockingIndications_14_AppDomain=10
+InterlockingStatusByte_14_IconisAddress=4
+InterlockingStatusByte_14_SRIFAddress=14
+InterlockingStatusByte_14_AppDomain=10
+InterlockingControl_14_IconisAddress=2
+InterlockingControl_14_SRIFAddress=12
+InterlockingControl_14_AppDomain=10
+InterlockingARS_14_IconisAddress=3
+InterlockingARS_14_SRIFAddress=13
+InterlockingARS_14_AppDomain=10
+InterlockingSignalMap_14_IconisAddress=5
+InterlockingSignalMap_14_SRIFAddress=15
+InterlockingSignalMap_14_AppDomain=10
+InterlockingIndications_15_IconisAddress=1
+InterlockingIndications_15_SRIFAddress=11
+InterlockingIndications_15_AppDomain=10
+InterlockingStatusByte_15_IconisAddress=4
+InterlockingStatusByte_15_SRIFAddress=14
+InterlockingStatusByte_15_AppDomain=10
+InterlockingControl_15_IconisAddress=2
+InterlockingControl_15_SRIFAddress=12
+InterlockingControl_15_AppDomain=10
+InterlockingARS_15_IconisAddress=3
+InterlockingARS_15_SRIFAddress=13
+InterlockingARS_15_AppDomain=10
+InterlockingSignalMap_15_IconisAddress=5
+InterlockingSignalMap_15_SRIFAddress=15
+InterlockingSignalMap_15_AppDomain=10
+InterlockingIndications_16_IconisAddress=1
+InterlockingIndications_16_SRIFAddress=11
+InterlockingIndications_16_AppDomain=10
+InterlockingStatusByte_16_IconisAddress=4
+InterlockingStatusByte_16_SRIFAddress=14
+InterlockingStatusByte_16_AppDomain=10
+InterlockingControl_16_IconisAddress=2
+InterlockingControl_16_SRIFAddress=12
+InterlockingControl_16_AppDomain=10
+InterlockingARS_16_IconisAddress=3
+InterlockingARS_16_SRIFAddress=13
+InterlockingARS_16_AppDomain=10
+InterlockingSignalMap_16_IconisAddress=5
+InterlockingSignalMap_16_SRIFAddress=15
+InterlockingSignalMap_16_AppDomain=10
+InterlockingIndications_17_IconisAddress=1
+InterlockingIndications_17_SRIFAddress=11
+InterlockingIndications_17_AppDomain=10
+InterlockingStatusByte_17_IconisAddress=4
+InterlockingStatusByte_17_SRIFAddress=14
+InterlockingStatusByte_17_AppDomain=10
+InterlockingControl_17_IconisAddress=2
+InterlockingControl_17_SRIFAddress=12
+InterlockingControl_17_AppDomain=10
+InterlockingARS_17_IconisAddress=3
+InterlockingARS_17_SRIFAddress=13
+InterlockingARS_17_AppDomain=10
+InterlockingSignalMap_17_IconisAddress=5
+InterlockingSignalMap_17_SRIFAddress=15
+InterlockingSignalMap_17_AppDomain=10
+InterlockingIndications_18_IconisAddress=1
+InterlockingIndications_18_SRIFAddress=11
+InterlockingIndications_18_AppDomain=10
+InterlockingStatusByte_18_IconisAddress=4
+InterlockingStatusByte_18_SRIFAddress=14
+InterlockingStatusByte_18_AppDomain=10
+InterlockingControl_18_IconisAddress=2
+InterlockingControl_18_SRIFAddress=12
+InterlockingControl_18_AppDomain=10
+InterlockingARS_18_IconisAddress=3
+InterlockingARS_18_SRIFAddress=13
+InterlockingARS_18_AppDomain=10
+InterlockingSignalMap_18_IconisAddress=5
+InterlockingSignalMap_18_SRIFAddress=15
+InterlockingSignalMap_18_AppDomain=10
+InterlockingIndications_19_IconisAddress=1
+InterlockingIndications_19_SRIFAddress=11
+InterlockingIndications_19_AppDomain=10
+InterlockingStatusByte_19_IconisAddress=4
+InterlockingStatusByte_19_SRIFAddress=14
+InterlockingStatusByte_19_AppDomain=10
+InterlockingControl_19_IconisAddress=2
+InterlockingControl_19_SRIFAddress=12
+InterlockingControl_19_AppDomain=10
+InterlockingARS_19_IconisAddress=3
+InterlockingARS_19_SRIFAddress=13
+InterlockingARS_19_AppDomain=10
+InterlockingSignalMap_19_IconisAddress=5
+InterlockingSignalMap_19_SRIFAddress=15
+InterlockingSignalMap_19_AppDomain=10
+EmergencyAlarm_IconisAddress=26
+EmergencyAlarm_SRIFAddress=16
+EmergencyAlarm_AppDomain=10
+
+[NVFB3]
+
+Test
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+<Envelope><Message><Header><Version><MessageFormat>message-v01</MessageFormat><Data>data-v01</Data><Software>softwarev1007</Software></Version><Time><Current>2016-01-22T14:21:17Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1773531687</Monotonic></Time><SequenceNumber>10106</SequenceNumber><SourceUnitID>SRIF-1-Unit-1</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-c</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><Interlocking><UniqueID>Keighley</UniqueID><SSIID>O4</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aWXxtWmqVRAAAQAAAIoi8dwV2AAAAAAAAAAAAAAAAAAAAAB3ug==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aWXxtWmqVcABAQAAAHKC3oPhEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMww==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aWXxtWmqVQAAAQAAADZTYCfI2DMb</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aWXxtWmqVQEAAQAAAGCrD0KnhADEXA==</StatusByte></Interlocking><Interlocking><UniqueID>Horsforth</UniqueID><SSIID>21</SSIID><SPAD><SignalMap>CqMjABkAJfK1aWXxtWmqVRAAAQAAAFdEgmQmiwAAAAAAAAAAAAAAAAAAAAAZJg==</SignalMap></SPAD><Indications>CqMfABUAJfK1aWXxtWmqVcABAQAAAHOVhL2FuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADV4Q==</Indications><ControlRequestsResponse>CqMgABYAJfK1aWXxtWmqVQAAAQAAAL+53u5RSpGw</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMhABcAJfK1aQAAAAClpQAAAQAAADB+vgVjNXdZ</ARSSubAreaStatusResponse><StatusByte>CqMiABgAJfK1aWXxtWmqVQEAAQAAADhBFd/SfwBM2A==</StatusByte></Interlocking><Interlocking><UniqueID>Test1</UniqueID><SSIID>22</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test2</UniqueID><SSIID>23</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test3</UniqueID><SSIID>24</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test4</UniqueID><SSIID>25</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test5</UniqueID><SSIID>26</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test6</UniqueID><SSIID>27</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test7</UniqueID><SSIID>28</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test8</UniqueID><SSIID>29</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test9</UniqueID><SSIID>30</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test10</UniqueID><SSIID>31</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test11</UniqueID><SSIID>32</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test12</UniqueID><SSIID>33</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test13</UniqueID><SSIID>34</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test14</UniqueID><SSIID>35</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test15</UniqueID><SSIID>36</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test16</UniqueID><SSIID>37</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test17</UniqueID><SSIID>38</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><Interlocking><UniqueID>Test18</UniqueID><SSIID>39</SSIID><SPAD><SignalMap>CqMPAAUAJfK1aQAAAAClpRAAAQAAAJKKAgd6CgAAAAAAAAAAAAAAAAAAAABCkw==</SignalMap></SPAD><Indications>CqMLAAEAJfK1aQAAAAClpcABAQAAAE45E/91KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Kw==</Indications><ControlRequestsResponse>CqMMAAIAJfK1aQAAAAClpQAAAQAAAH4q5iRXXzJo</ControlRequestsResponse><ARSSubAreaStatusResponse>CqMNAAMAJfK1aQAAAAClpQAAAQAAALmUAMz6p9Xy</ARSSubAreaStatusResponse><StatusByte>CqMOAAQAJfK1aQAAAAClpQEAAQAAAPS6Btg20AAgFg==</StatusByte></Interlocking><EmergencyAlarms>CqMQABoAJfK1aQAAAAClpRQAAQAAABbR+c4pXQAAAAAAAAAAAAAAAAAAAAAAAAAAprE=</EmergencyAlarms></Body></Message><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>DrvWeymrKX/Blpy32K6Ln9iPHZM=</DigestValue></Reference></SignedInfo><SignatureValue>aNrURGuAOAZ1QMvushzCiWQsJ0urQ2n+NntPODTcQbEnFhZgphg3rblRZZl/Se9V9IxvDNvq5KJ5QBro+792LlcsTq5ARty9G1JI96kIQsTVGRBUuPuN2vNJBplvzwfw+ml/vckwa40UVa1QVqIz5Cjv14A+VebUYATPrOhmaiY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod><DigestValue>W5iT+MvYMbyt3VEJFzPEsEClXhE=</DigestValue></Reference></SignedInfo><SignatureValue>aXWCiQqn8Wr1nthIoHMbGwwmfCJRg1e+rfqECu+4MwT4l8NaOmN1Fq5OH4VvLPmhINln3SsHJ5XwMDCAJYCUE4D973YSgvCWy4gtS5NofezfYIIqbsl6h1o0kyuzhijgV0SI7hdfjDbkBfHckM2+M/xqSZ0GolPZra5rLh1NeSs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4I5JMTdZH6B4sz3OR2TsmFJjFttMWK/NeHDqvdPrklGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>lGZqXH0mDS8JT3wO9gCSZdx2flUvee7YLqcDBDvsBq9qn9jebmjixjJiTfIw4tE7MbdVtYqLJ2NDr6ojleJo0nazecxQ/ZgfpbLCiPZaL1w5EzRQrtxClXnCUEvlbPbFL0=</Modulus><Exponent>AQAB
+</Exponent></RSAKeyValue></KeyValue></KeyInfo></Signature></Envelope>
+
+C:\srif\Win32Srif4_3\minyEncoder\bin\Debug\lastconfig.xml
+
+14:43: 8:169    :TCP: Initialising the TCP connection
+14:44:33:498    :TCP: DoTCPSocketCode 
+14:44:33:500    :TCP: 14 : Client Connected: 127.0.0.1: Socket number: 576
+14:44:33:502    :TCP: Client Connected: 127.0.0.1: Socket number: 576
+14:44:33:504    :ICONISIF: Create new connection for  576
+14:44:33:505    :ICONISIF: Create connection in array number  0
+14:44:33:669    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+14:44:33:670    :ICONISIF: Test 7(IV) b: Sequence number as reference 10001
+14:44:33:674    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+14:44:33:679    :ICONISIF: Tx Sequence Number:  10001
+14:44:33:685    :SIGNING: Test 5(I): XML Canicalised OK 
+14:44:33:687    :SIGNING: Test 5(I): Jene8Zvv0y5mMcoDscGneDZDcsY=
+14:44:33:691    :SIGNING: DoRSASignature 
+14:44:33:693    :SIGNING: Signature Info Canalization 
+14:44:33:694    :SIGNING: Transmit RSA Digest 2vTK1ebi0LbL+y1RcnHBjWJSrrg=
+14:44:33:864    :ICONISIF: ticks taken to encode signature is 583544
+14:44:33:865    :ICONISIF: Encode Min ticks is  583544
+14:44:33:865    :ICONISIF: Encode Max ticks is  583544
+14:44:33:865    :ICONISIF: Test 7(III): Added Signed Element 
+14:44:33:867    :TCP: Test 2(I): Length added  23617
+14:44:33:867    :TCP: Test 2(II): Message Just Sent OK 
+14:44:33:868    :ICONISIF: Test 2(III): succes sending data for connection 0
+14:44:33:868    :ICONISIF: Test 7(II): Sequence number incremented 
+14:44:33:919    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+14:44:33:919    :ICONISIF: Test 7(IV) b: Sequence number as reference 10002
+14:44:33:920    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+14:44:33:920    :ICONISIF: Tx Sequence Number:  10002
+14:44:33:926    :SIGNING: Test 5(I): XML Canicalised OK 
+14:44:33:926    :SIGNING: Test 5(I): FnQ5VLp0AYNymitZurxyGb+Hjrs=
+14:44:33:927    :SIGNING: DoRSASignature 
+14:44:33:927    :SIGNING: Signature Info Canalization 
+14:44:33:927    :SIGNING: Transmit RSA Digest j47LTjSp5Vhw77xCYMyAJQkT4Sg=
+14:44:33:929    :ICONISIF: ticks taken to encode signature is 13442
+14:44:33:929    :ICONISIF: Encode Min ticks is  13442
+14:44:33:929    :ICONISIF: Encode Max ticks is  583544
+14:44:33:930    :ICONISIF: Test 7(III): Added Signed Element 
+14:44:33:931    :TCP: Test 2(I): Length added  23617
+14:44:33:932    :TCP: Test 2(II): Message Just Sent OK 
+14:44:33:932    :ICONISIF: Test 2(III): succes sending data for connection 0
+14:44:33:932    :ICONISIF: Test 7(II): Sequence number incremented 
+14:44:34:169    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+14:44:34:169    :ICONISIF: Test 7(IV) b: Sequence number as reference 10003
+14:44:34:171    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+14:44:34:173    :ICONISIF: Tx Sequence Number:  10003
+14:44:34:187    :SIGNING: Test 5(I): XML Canicalised OK 
+14:44:34:188    :SIGNING: Test 5(I): nnKYKn1j5OPsQUtnZwGOHkKPc+M=
+14:44:34:189    :SIGNING: DoRSASignature 
+14:44:34:190    :SIGNING: Signature Info Canalization 
+14:44:34:191    :SIGNING: Transmit RSA Digest BRAByPGZFlZG23uzLhTKQSCfuRw=
+14:44:34:194    :ICONISIF: ticks taken to encode signature is 29962
+14:44:34:194    :ICONISIF: Encode Min ticks is  13442
+14:44:34:195    :ICONISIF: Encode Max ticks is  583544
+14:44:34:196    :ICONISIF: Test 7(III): Added Signed Element 
+14:44:34:200    :TCP: Test 2(I): Length added  23617
+14:44:34:201    :TCP: Test 2(II): Failed To Send Message 
+14:44:34:202    :ICONISIF: Test 2(III): succes sending data for connection 0
+14:44:34:202    :ICONISIF: Test 7(II): Sequence number incremented 
+14:44:34:419    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+14:44:34:419    :ICONISIF: Test 7(IV) b: Sequence number as reference 10004
+14:44:34:420    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+14:44:34:420    :ICONISIF: Tx Sequence Number:  10004
+14:44:34:424    :SIGNING: Test 5(I): XML Canicalised OK 
+14:44:34:424    :SIGNING: Test 5(I): e5OWeOtMbvPcQkB7Vn9vZHZQ+fQ=
+14:44:34:424    :SIGNING: DoRSASignature 
+14:44:34:425    :SIGNING: Signature Info Canalization 
+14:44:34:425    :SIGNING: Transmit RSA Digest c8pqQrZLVghQ9E0gSgjIppYfy/g=
+14:44:34:427    :ICONISIF: ticks taken to encode signature is 15330
+14:44:34:427    :ICONISIF: Encode Min ticks is  13442
+14:44:34:428    :ICONISIF: Encode Max ticks is  583544
+14:44:34:428    :ICONISIF: Test 7(III): Added Signed Element 
+14:44:34:430    :TCP: Test 2(I): Length added  23617
+14:44:34:431    :TCP: Test 2(II): Failed To Send Message 
+14:44:34:431    :ICONISIF: Test 2(III): succes sending data for connection 0
+14:44:34:432    :ICONISIF: Test 7(II): Sequence number incremented 
+14:44:34:669    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+14:44:34:670    :ICONISIF: Test 7(IV) b: Sequence number as reference 10005
+14:44:34:673    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+14:44:34:674    :ICONISIF: Tx Sequence Number:  10005
+14:44:34:676    :TCP: DoTCPSocketCode 
+14:44:34:677    :TCP: Connection for  127.0.0.1
+14:44:34:677    :TCP: The Length Of Receive is  4027
+14:44:34:677    :TCP: Test 1(I): Received All Data from TCP Connection 0
+14:44:34:677    :ICONISIF: HandleIncomingDataStream for  576
+14:44:34:678    :ICONISIF: Test 3(I): information is correct 0
+14:44:34:678    :SIGNING: Test 5(I): XML Canicalised OK 
+14:44:34:679    :SIGNING: Test 4(I) a: Digest length OK 
+14:44:34:679    :SIGNING: Test 4(II) a: TheCalculated DIGEST value is  
+14:44:34:679    :SIGNING: Test 4(II) b:  wkI7PNgscn1aPtYKzR4f9EHcGfU=
+14:44:34:680    :SIGNING: Test 4(II) c: Match 
+14:44:34:680    :SIGNING: Test 4(VI): Certificate is Good 
+14:44:34:680    :SIGNING: Test 4(I) b: Their signedinfoDigest is  XJXM65yhLOZlKjv/DrqQphpbRrQ=
+14:44:34:681    :SIGNING: Test 4(IV) : The Signature has been decoded correctly 
+
+C:\Windows\MCSCORUN.INI
+
+14:55: 5:444    :ICONISIF: Test 7(IV) a: Servicing for connection 0
+14:55: 5:444    :ICONISIF: Test 7(IV) b: Sequence number as reference 10028
+14:55: 5:445    :ICONISIF: Test 7(I): Gathered all data conserning this connection information 
+14:55: 5:445    :ICONISIF: Tx Sequence Number:  10028
+14:55: 5:446    :SIGNING: Test 5(I): XML Canicalised OK 
+14:55: 5:447    :SIGNING: Test 5(I): YeovMtocKOrN9kurWjEE7J3eI6o=
+14:55: 5:448    :SIGNING: DoRSASignature 
+14:55: 5:448    :SIGNING: Signature Info Canalization 
+14:55: 5:449    :SIGNING: Transmit RSA Digest xixsTZiYcEDw71PCGKmwJCvPmcw=
+14:55: 5:450    :ICONISIF: ticks taken to encode signature is 13406
+14:55: 5:451    :ICONISIF: Encode Min ticks is  8707
+14:55: 5:451    :ICONISIF: Encode Max ticks is  422350
+14:55: 5:451    :ICONISIF: Test 7(III): Added Signed Element 
+14:55: 5:453    :TCP: Test 2(I): Length added  3954
+14:55: 5:453    :TCP: Test 2(II): Message Just Sent OK 
+14:55: 5:454    :ICONISIF: Test 2(III): succes sending data for connection 0
+14:55: 5:454    :ICONISIF: Test 7(II): Sequence number incremented 
+14:55: 5:637    :TCP: DoTCPSocketCode 
+14:55: 5:637    :TCP: Connection for  127.0.0.1
+14:55: 5:638    :ALWAYS: *** Error with the received Length *** 
+14:55: 5:639    :TCP: Test 1(II) Test1(III) Unknown or Error with Receive length 
+14:55: 5:639    :TCP: DoTCPSocketCode 
+14:55: 5:640    :TCP: Connection for  127.0.0.1
+14:55: 5:641    :ALWAYS: *** Error with the received Length *** 
+14:55: 5:641    :TCP: Test 1(II) Test1(III) Unknown or Error with Receive length 
+14:55: 5:681    :TCP: DoTCPSocketCode 
+14:55: 5:683    :TCP: Connection for  127.0.0.1
+14:55: 5:684    :ALWAYS: *** Error with the received Length *** 
+14:55: 5:686    :TCP: Test 1(II) Test1(III) Unknown or Error with Receive length 
+14:55: 5:687    :TCP: DoTCPSocketCode 
+14:55: 5:688    :TCP: Connection for  127.0.0.1
+14:55: 5:690    :ALWAYS: *** Error with the received Length *** 
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\exampleWin32Proj\Debug\SSLSRIF.exe
+
+http://codility.com/demo/take-sample-test
+

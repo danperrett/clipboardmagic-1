@@ -1,0 +1,119 @@
+ interactiveEvents.NotifyGenericeLTEEvent("Attach Request", currentCell.CellID);
+
+InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+
+ InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+            interactiveEvents.NotifyGenericeLTEEvent("PDN Connectivity Request", currentCell.CellID);
+
+ //signal to MMI that we have received this
+                InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+                interactiveEvents.NotifyGenericeLTEEvent("PDN Connectivity Request", currentCell.CellID);
+
+cellWrapper
+
+GUIMessageString
+
+string GUIMessageString = msg.MsgType.ToString().Replace('_', ' ');
+
+ InteractiveNotifyEvents interactiveEvents = InteractiveNotifyEvents.GetInstance();
+                interactiveEvents.NotifyGenericeLTEEvent(GUIMessageString, cellWrapper.CellConfiguration.CellID);
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+TestStatus
+
+TestVerdict
+
+ TestStatus = TESTSTATUS.CODE_SUCCESS;
+            TestVerdict = TESTVERDICTS.PASS_VERDICT;
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+P:\Today\DanP\LteInteractive.zip
+
+m_SASProcess
+
+C:\Users\dan.perrett\Documents\Visual Studio 2008\Projects\SAS2G3GSimulation\SAS2G3GSimulation\bin\Debug
+
+SAS2G3GSimulation.exe
+
+PROCEDURE complete LOCATION UPDATE MO G Cell G
+
+
+C:\Program Files\BORLAND\CBuilder6\Bin;C:\Program Files\BORLAND\CBuilder6\Projects\Bpl;C:\Program Files\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files\Microsoft Visual Studio\Common\Tools;C:\Program Files\Microsoft Visual Studio\VC98\bin;C:\Program Files\Microsoft Visual Studio\VC98\MFC\Include;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;c:\Program Files\Microsoft SQL Server\90\Tools\binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Anite\LogViewer\ALV2;C:\Program Files\Anite\Shared Components;C:\Program Files\Anite\UTRA\PT UTRAN\Bin;C:\Program Files\Anite\GERAN\PT GERAN\components;C:\Program Files\Anite\Development Toolset\Bin;C:\Program Files\Anite\GERAN\sat_6103\Util
+
+ MessageComboBox.Items.Add("Loading ");
+            MessageComboBox.Items.Add("Status ready ");
+            MessageComboBox.Items.Add("PROCEDURE complete GPRS ATTACH  U Cell A");
+            MessageComboBox.Items.Add("PROCEDURE complete GPRS DETACH  U Cell A");
+            MessageComboBox.Items.Add("PROCEDURE complete COMBINED CS/PS REGISTRATION MO U Cell H");
+            MessageComboBox.Items.Add("RRC STATE 0");
+            MessageComboBox.Items.Add("TrxRatio complete 2U 2G");
+            MessageComboBox.Items.Add("CELL ACTIVATION complete  U Cell H");
+            MessageComboBox.Items.Add("Verdict : (PASS)");
+            MessageComboBox.Items.Add("Verdict : (FAIL)");
+            MessageComboBox.Items.Add("Verdict : PASS");
+            MessageComboBox.Items.Add("Verdict : FAIL");
+            MessageComboBox.Items.Add("CELL ACTIVATION complete  U Cell H+PROCEDURE complete GPRS ATTACH  U Cell H");
+            MessageComboBox.Items.Add("PROCEDURE complete COMBINED CS/PS REGISTRATION MO U Cell A");
+            MessageComboBox.Items.Add("CELL ACTIVATION complete  U Cell A");
+            MessageComboBox.Items.Add("CELL ACTIVATION complete  G Cell F");
+            MessageComboBox.Items.Add("PROCEDURE complete SMS MT U Cell A");
+            MessageComboBox.Items.Add("PROCEDURE complete COMBINED CS/PS ROUTING AREA UPDATE MO U Cell A");
+            MessageComboBox.Items.Add("PROCEDURE complete USER DEFINED PROCEDURE MT U Cell A");
+            MessageComboBox.Items.Add("RRC STATE 4");
+            MessageComboBox.Items.Add("RRC STATE 0");
+
+    string GUIMessageString = msg.MsgType.ToString().Replace('_', ' ');
+
+  string GUIMessageString = msg.MsgType.ToString().Replace('_', ' ');
+
+sendTextToRealTimeTrace
+
+loopCount[loopIndexIndex]
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+interactiveEvents.NotifyGenericeLTEEvent("Tracking Area Update Request", currentCell.CellID);
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+P:\Today\DanP\Run04.zip
+
+C:\Development\SASSandboxes\LTE-Interactive-47.1-B\Code\LteInteractive.zip
+
+L3PPipeMessageHandler 
+
+	Line 152:     3.082305 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=NotWaiting message Status ready V47.1.666
+	Line 161:     3.749181 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=TrxRatioWaiting message TrxRatio complete 1U 1G
+	Line 182:    10.544454 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=TrxRatioWaiting message TrxRatio complete 1U 1G
+	Line 186:    16.073748 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=LoadScenarioWaiting message Load Scenario complete
+	Line 289:    67.182109 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=CellActivationWaiting message CELL ACTIVATION complete  U Cell I
+	Line 304:    68.075308 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=CellActivationWaiting message CELL ACTIVATION complete  G Cell L
+	Line 938:   172.115473 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=WaitForProcedureWaiting message RRC STATE 0
+	Line 955:   172.901090 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=NotWaiting message PROCEDURE complete COMBINED CS/PS REGISTRATION MO U Cell I
+	Line 968:   172.904006 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=NotWaiting message Generated User Prompt Please switch on the UE.
+	Line 984:   182.915596 : (ThrdId 014) : INFO        : L3PPipeMessageHandler state=WaitForProcedureWaiting message PROCEDURE complete SIGNALLING CONNECTION RELEASE INDICATION MO U Cell I
+
+
+20141105170017708
+
+1	Enable 3G cell at target power level and 2G cell at very low power and power on the UE	-
+2	Confirm that the UE selects 3G	SEV-1
+3	Confirm that the UE attempts 4 LOCATION UPDATE procedures which are ignored? 	-
+4	During the attempts, ramp 2G cell to target power level	-
+5	"Let the test continue to run for 45 minutes with 3G and 2G cells set to ignore all LOCATION UPDATE attempts.
+Note: All attempts on 3G and 2G will be counted."	-
+		
+		
+6	At the end of the test duration, deactivate all cells and power off the UE	-
+7	"Confirm that the total number of LOCATION UPDATE attempts on 3G and 2G is greater than or equal to 8 but less than or equal to 24.? 
+(8 ? (SUM of LU attempts on 3G & 2G) ? 24)"	SEV-1
+		
+		
+8	"Calculate time interval between each LOCATION UPDATE attempt, and find the longest time interval between two consecutive LOCATION UPDATE attempts..?
+If the Maximum Time is < 27 Minutes, then SEV-1"	SEV-1
+		
+		
+
+

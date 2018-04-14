@@ -1,0 +1,398 @@
+Ali Mahdmina 
+
+.im/
+
+package dynniq.imcity.myAdapter;
+
+import imtech.imcity.cdb.CDBConstant;
+
+	private final static Logger logger = LogManager.getLogger(myAdapterMain.class);
+
+
+/*
+ * Copyright Imtech Traffic & Infra. 2014                           
+ * All rights reserved
+ */
+/**
+ * Stand alone task.
+ * 
+ * This class is intended to be the pattern by which objects are marshaled into documents.
+ * 
+ */
+package dynniq.imcity.myAdapter;
+
+import imtech.imcity.cdb.CDBConstant;
+import imtech.imcity.cdb.CDBUtility;
+import dynniq.imcity.myAdapter.support.AdapterConstant;
+import dynniq.imcity.myAdapter.support.AdapterUtility;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
+ImCityCORBA_1_0_0.jar
+
+D:\myAdapter\plugins\ImCityCORBA_1_0_0.jar
+
+D:\myAdapter
+
+ClearviewCounterAdapter
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.Properties;
+
+public ProcessorActionThread(Properties configArgsIn) 
+		{
+			configArgsThread = configArgsIn;
+		}
+
+ClearviewFaultThread
+
+FaultInformation
+
+InboundQueueInstance
+
+YYYY-MM-DD HH:MM::SS
+
+InboundFaultQueue
+
+	public String From = "";
+	public String To = "";
+	public int ID = 0;
+	public String Device = "";
+	public String Fault = "";
+    public FaultTypeTable type = FaultTypeTable.NotConnected;
+    public String Time = ""; //YYYY-MM-DD HH:MM::SS
+    public String EndTime = ""; //YYYY-MM-DD HH:MM::SS
+
+(String From, 
+			         String To, 
+			         int ID, 
+			         String Device, 
+			         String Fault, 
+			         FaultTypeTable type, 
+			         String Time, //YYYY-MM-DD HH:MM::SS
+                     String EndTime //YYYY-MM-DD HH:MM::SS
+                     )
+
+InboundFaultQueue
+
+if(lock.tryLock())
+			{
+
+ClearviewFaultThread
+
+InboundFaultQueue
+
+	private final Logger loggerT = LogManager.getLogger(ProcessorActionThread.class);
+
+ClearviewFaultThread
+
+InboundFaultQueue
+
+inboundQueue
+
+InboundFaultQueue
+
+clearviewFaultThread
+
+CDBConstant.MAINHTREADPRIORITY
+
+clearviewFaultThread.
+
+(Properties configArgsIn)
+
+ClearviewFaultXMPPInterface
+
+@Override
+		public void run() 
+		{
+			startClient();
+		}
+
+private void startClient() 
+		{
+			boolean startClient = true;
+			while (isRunState()) 
+			{
+
+configArgs
+
+// This thread BLOCKS in the adapter class
+				if (startClient) 
+				{
+
+CDBUtility.sleeping(CDBConstant.IDLEWAIT);
+
+startClient = false;
+					cdbClient = new ClearviewCDBServiceAdapter(configArgsThread);
+
+	private ClearviewCDBServiceAdapter cdbClient = null;
+
+ClearviewFaultXMPPInterface
+
+(Properties configArgsIn) 
+
+configArgs
+
+CounterXmppClient
+
+try {
+   // thread to sleep for 1000 milliseconds
+   Thread.sleep(1000);
+   } catch (Exception e) {
+   System.out.println(e);
+   }
+   }
+
+Set Reset 
+
+QueueNotEmpty
+
+} catch (org.omg.CORBA.COMM_FAILURE e) {
+			AdapterUtility.ps(logger, "CORBA communication Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.OBJECT_NOT_EXIST e) {
+			AdapterUtility.ps(logger, "CORBA object does not exist Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.MARSHAL e) {
+			AdapterUtility.ps(logger, "CORBA marshal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_PARAM e) {
+			AdapterUtility.ps(logger, "CORBA bad parameter Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.BAD_OPERATION e) {
+			AdapterUtility.ps(logger, "CORBA bad operation Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (org.omg.CORBA.INTERNAL e) {
+			AdapterUtility.ps(logger, "CORBA internal Exception: " + e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (NullPointerException e) {
+			AdapterUtility.ps(logger, "Null Pointer Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, "" + e);
+			setStatus(CDBConstant.ERROREXIT);
+		} catch (Exception e) {
+			// Any other exception
+			AdapterUtility.ps(logger, "Exception: " + e.getMessage());
+			AdapterUtility.ps(logger, e.toString());
+			setStatus(CDBConstant.ERROREXIT);
+		}
+
+MainLoop
+
+InboundFaultQueue
+
+QueueNotEmpty
+
+inboundQueue
+
+waitForXmppMessage
+
+import dynniq.imcity.myAdapter.support.FaultInformation;
+import dynniq.imcity.myAdapter.support.FaultTypeTable;
+
+FaultInformation(String From, 
+			         String To, 
+			         int ID, 
+			         String Device, 
+			         String Fault, 
+			         FaultTypeTable type, 
+			         String Time, //YYYY-MM-DD HH:MM::SS
+                     String EndTime //YYYY-MM-DD HH:MM::SS
+                     )
+
+inboundQueue
+
+108300 
+
+carParkFaults
+
+java.util.Date
+
+inboundFault
+
+InboundFaultQueue
+
+ inboundFault = InboundFaultQueue.GetInstance();
+
+ inboundFault = InboundFaultQueue.GetInstance();
+	  classname = inboundFault.getClass().getName();
+
+@Test
+  public void pop() {
+  
+  }
+
+  @Test
+  public void QueueNotEmpty() {
+  
+  }
+
+
+  @Test
+  public void InboundFaultQueue() {
+  
+  }
+
+
+
+System.out.println("GetInstance");
+
+ throw new RuntimeException("Test not implemented");
+
+class name not equal
+
+ System.out.println("GetInstance");
+
+pushStringStringintStringStringFaultTypeTableStringString
+
+System.out.println("
+
+pushFaultInformation
+
+System.out.println("
+
+(priority=1)
+
+Random rand = new Random();
+				 Thread.sleep(1000 * (rand.nextInt(20) + 1));
+				 FaultInformation  fault = new FaultInformation("From", "To", rand.nextInt(10), "Me", "Broken", FaultTypeTable.ChargerFailure, "", "");
+				 inboundQueue.push(fault);
+
+inboundFault
+
+  throw new RuntimeException("class name not equal");
+
+randomId
+
+Random rand = new Random();
+	
+
+inboundFault
+
+System.out.println("pop");
+
+ FaultInformation  fault
+
+randomId
+
+throw new RuntimeException("Queue  Not Empty");
+
+
+import dynniq.imcity.myAdapter.support.FaultInformation;
+import dynniq.imcity.myAdapter.support.FaultTypeTable;
+
+InboundFaultQueue inboundFault = null;
+
+ inboundFault = InboundFaultQueue.GetInstance();
+
+ClearviewCDBServiceAdapter adapter
+
+ClearviewCDBServiceAdapter
+
+ProcessorActionThread
+
+configArgs = getConfig();
+
+private static Properties configArgs;
+
+private static Properties getConfig() 
+	{
+		String configHome = AdapterConstant.iniFile;
+		File cfgFile = new File(configHome);
+		Properties props = new Properties();
+		
+		// Clear the running state
+		setRunState(false);
+
+		try 
+		{
+			FileInputStream fin = new FileInputStream(cfgFile);
+			props.load( fin );
+			fin.close();
+
+			setRunState(true);
+
+		}
+		catch (FileNotFoundException e) 
+		{
+			AdapterUtility.ps(logger, "Configuration file not found " + e.getMessage());
+		}
+		catch (IOException e) 
+		{
+			AdapterUtility.ps(logger, "Configuration file I/O Exception " + e.getMessage());
+		}
+
+		return props;
+	}
+
+new ClearviewCDBServiceAdapter(configArgsThread, inboundQueue);
+
+configArgs
+
+inboundFault
+
+dynniq.imcity.myAdapter.ClearviewCounterAdapterMain.
+
+class ClearviewFaultThread extends Thread
+
+ClearviewCDBServiceAdapter
+
+@Override
+	public void run() 
+	{
+
+TestThread
+
+Random rand = new Random();
+
+FaultInformation  fault = new FaultInformation("From", "To", rand.nextInt(10), "Me", "Broken", FaultTypeTable.ChargerFailure, "", "");
+
+  FaultInformation  fault = new FaultInformation("From", "To", rand.nextInt(10), "Me", "Broken", FaultTypeTable.ChargerFailure, "", "");
+			  System.out.println("" + fault.ID);
+			  randomId[n] = fault.ID;
+		  	  inboundFault.push(fault);
+
+carParkFaults
+
+CDBConstant
+
+DETECTOR_FAULTS
+
+"INSERT INTO
+
+"(SYSTEMCODENUMBER,COMMANDFORMAT,DATASOURCE_TYPEID,COMMAND,PRIORITY,REQTIME) VALUES (";
+
+SQLINSERT
+
+SQLSELECT
+
+String sqlCommand = "SELECT systemcodenumber FROM VMS_DEFINITION where DATASOURCE_TYPEID=1200";
+			CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+
+	String sqlCommand = "SELECT systemcodenumber FROM VMS_DEFINITION where DATASOURCE_TYPEID=1200";
+			CORBAQuery queryResults = AdapterUtility.executeSQL(logger, cdbSession, sqlCommand, getDiagInt() );
+				
+
+// Update changes to existing device if INSERT failed
+			if ( queryResults.getWarnings() != null ) {
+				if ( queryResults.getWarnings().value.length > 0 ) {
+					CorbaSQLWarning[] warning = queryResults.getWarnings().value;
+					for (CorbaSQLWarning cw : warning) {
+						int code = cw.errorCode;
+						if ( code == AdapterConstant.ONE) {
+							// Perform Update as Insert failed
+						}
+					}
+				}
+

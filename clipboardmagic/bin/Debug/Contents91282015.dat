@@ -1,0 +1,69 @@
+ShowText
+
+WM_UDPmsg
+
+NXINITCMD
+
+C:\\Windows\\MCSCORUN.INI
+
+OpenMace_DIOseg
+
+AllocateDIO
+
+strncpy(buffer, "\0", 30);
+
+if(AppDIO->DO_1 != NULL)
+		{
+			sprintf(buffer, "D01=0x%08x   ", *(AppDIO->DO_1));
+			ShowText(D5, buffer);
+			strncpy(buffer, "\0", 30);
+		}
+
+DO1,
+
+if(AppDIO->DO_1 != NULL)
+		{
+			sprintf(buffer, "D01=0x%08x   ", *(AppDIO->DO_1));
+			ShowText(DO1, buffer);
+			strncpy(buffer, "\0", 30);
+		}
+
+	if(AppDIO->DO_1 != NULL)
+		{
+			sprintf(buffer, "D01=0x%08x   ", *(AppDIO->DO_1));
+			ShowText(DO1, buffer);
+			strncpy(buffer, "\0", 30);
+		}
+
+END_OF_DISPLAY
+
+DEBUG_LINES_END
+
+makeDOPseg
+
+DO_1
+
+PrintDebugToScreen(name);
+
+DO_6
+
+strncpy(buffer, "\0", 30);
+					sprintf(buffer, "D1=DDI:0x%8x", flpMapAddress);
+					PrintDebugToScreen(buffer);
+
+strncpy(buffer, "\0", 30);
+					sprintf(buffer, "D6=DDI:0x%8x", flpMapAddress);
+					PrintDebugToScreen(buffer);
+
+OpenMACE_DIOseg
+
+APP_DIO_MAP
+
+OpenMACE_DIOseg
+
+GetTickCount
+
+*(AppSeg->App_lpAppWD)
+
+WndProc
+

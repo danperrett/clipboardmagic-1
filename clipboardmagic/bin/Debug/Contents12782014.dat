@@ -1,0 +1,233 @@
+Arrecife Lanzarote - London Stansted
+
+Date:	25 Aug 2014
+Leaves:	Arrecife Lanzarote 07:25
+Leaves:	London Stansted 11:30
+Airline	Ryanair
+Flight number	FR8286
+
+London Stansted - Arrecife Lanzarote
+
+Dates	15 Aug 2014
+Leaves:	London Stansted 12:10
+Arrives:	Arrecife Lanzarote 16:25
+Airline	Ryanair
+Flight number	FR8288
+Lcf
+
+Galeon Playa Costa Teguise, Lanzarote, Canaries 
+
+C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\xsd.exe
+
+$(ProjectDir)Schema\ScriptSchema.xsd  /c /n:Anite.Sequencer  /out:$(ProjectDir)Schema
+
+L3PPipeMessageHandler
+
+
+
+
+L3PPipeMessageHandler
+
+L3PPipeMessageProcess
+
+m_EarlyL3MessageThread
+
+ProcessEarlyL3Message
+
+finish Scheduling elements
+
+I believe Colin would like to hand this over to me.
+
+HandleUnexpectedEventV2
+
+95.172.225.192
+
+L3PPipeMessageHandler
+
+HandleUnexpectedEventV2
+
+\\myanite\telecoms\ODCShare\SAS\18 - Scripts\11 - Projects\03 - SAS UL message handling\SAS Enhancement - UL Message Handling_v[latest].docx
+
+58405
+
+m_Ignore_Event_type
+
+                UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+
+
+UtranGeranEventObtained2Param
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", false);
+                        reportToRTT = "IGNORE - " + message.Trim();
+                        LogMessageToRTT(reportToRTT, false);
+                        SASDebugLogger.InfoLog("UtranGeran: IGNORING Unexpected Event Message: " + message.Trim());
+                    }
+                    else
+                    {
+                        // When this function is called before the WaitFor processing don't terminate the script if there is no match
+                        // When this function is called as default processing do terminate the script if there is no match
+                        if (_TerminateTheScript)
+                        {
+                            SASDebugLogger.InfoLog("UtranGeran: Unexpected Event Message: " + message.Trim());
+                            UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+                        }
+                    }
+
+Unexpected
+
+indiscretion
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", false);
+                        reportToRTT = "IGNORE - " + message.Trim();
+                        LogMessageToRTT(reportToRTT, false);
+                        SASDebugLogger.InfoLog("UtranGeran: IGNORING Unexpected Event Message: " + message.Trim());
+                    }
+                    else
+                    {
+                        // When this function is called before the WaitFor processing don't terminate the script if there is no match
+                        // When this function is called as default processing do terminate the script if there is no match
+                        if (_TerminateTheScript)
+                        {
+                            SASDebugLogger.InfoLog("UtranGeran: Unexpected Event Message: " + message.Trim());
+                            UtranGeranEventObtained2Param(EventQueueUtranGeranEventType.UnexpectedWaitForProcedure, -1);
+                        }
+                    }
+
+
+ if (found)
+                    {
+                        LogMessageToRTT("Ignore event according to script step", 
+
+(m_Ignore_Event_type == Ignore_Event_type.IgnoreSelectedEvents)
+
+ if (m_Ignore_Event_type == Ignore_Event_type.IgnoreSelectedEvents)
+
+Ignore_Event_type.IgnoreNoEvents
+
+70883
+
+SAS Sequencer, Script not failing on unexpected messages from 2G3G.
+
+L3PPipeMessageProcess
+
+   public bool SendNotification(int _ElementIndex, string cellID, string message)
+        {
+            bool triggerOk = IsInitialised();
+            if (triggerOk)
+            {
+                triggerOk = noProcedureWaiting();
+            }
+
+            try
+            {
+                if (triggerOk)
+                {
+                    string _message = "General Notification of event:" + cellID.Replace(' ', '-') + " " + message;
+                    triggerOk = m_pipeManager.SendControl(_message, 10);
+                    if (!triggerOk) m_lastErrorMessage = "failed to send trigger";
+                }
+            }
+            catch
+            {
+                triggerOk = false;
+                m_lastErrorMessage = "exception in Trigger";
+            }
+
+            return triggerOk;
+        }
+
+  catch
+            {
+                triggerOk = false;
+                m_lastErrorMessage = "exception in Trigger";
+            }
+
+            return triggerOk;
+        }
+
+
+70883
+
+<SAS-MKS-Check-In> : <Trunk> : <SAS2G3G> : IR <69968>
+
+K, Kanagaraj <kanagaraj.k@anite.com>
+
+70259
+
+AutoResetEvent
+
+70259
+
+SharedView 
+
+SEQ-REQ3
+
+?	2G3G-REQ3
+
+ConvertFrom_V14_7_to_V14_8.cs
+
+/*****************************************************************************
+ *
+ * (C) Anite Telecoms Ltd, 2011. Commercially Confidential.
+ *
+ * $Author: Clwyd Jones (cjones) $
+ * $Date: 2014/07/17 14:52:06BST $
+ * $Revision: 1.1 $
+ * $Source: SequencerGUI/Schema/Conversions/ConvertFrom_V14_7_to_V14_8.cs $
+ *
+ ****************************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Collections;
+
+using Anite.Sequencer.Utils;
+
+namespace Anite.Sequencer
+{
+    class ConvertFrom_V14_7_to_V14_8 : ConvertFromBase
+    {
+        public ConvertFrom_V14_7_to_V14_8(Dictionary<string, ConvertFromBase> _ConverterDict)
+            : base("14.7", "14.8", new Anite.SASProtocolFieldValueMapperUtil.CoreSoftwareVersion() { Previous = "CS 23.0 {0160} SAS43", Current = "CS 23.0 {0160} SAS43" }, _ConverterDict)
+        {
+        }
+
+        override protected void UpdateScriptInformationSpecifics(ScriptInformation _ScriptInformation)
+        {
+            // nothing to do
+        }
+
+        override protected ScriptElement[] UpdateScriptElementsSpecifics(List<ScriptElement> _ScriptElementList)
+        {
+            ScriptElement[] scriptElements = null;
+
+            if (_ScriptElementList != null)
+            {
+                scriptElements = _ScriptElementList.ToArray();
+            }
+
+            return scriptElements;
+        }
+    }
+}
+
+
+ConvertFrom_V14_8_to_V15_0
+
+  new ConvertFrom_V14_7_to_V14_8(m_Trunk_Converter_Info.Converters);
+                m_Trunk_Converter_Info.Versions.Add("14.8");
+
+
+68682
+
+TMO project needs to check if they want more than delivered in SAS46 and, if not, what extra they need.
+
+IR70259 
+
+IR70259
+
+doProcessGenNotificationSASUtranGeranElement
+

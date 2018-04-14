@@ -1,0 +1,696 @@
+N:\Software Dev Team\Win32API
+
+GetStockObject
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\TestSharedMemory\TestSharedMemory\SRIFmainA4.cpp
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\TestSharedMemory\TestSharedMemory\RIFMain.h
+
+#include "RIFMain.h"
+
+APP_CAC_APP *AppSeg;
+APP_DIO_MAP * AppDIO; 
+AHRIF_INI *AppInit;
+
+void initialiseSharedMemory()
+{
+	AppSeg = new APP_CAC_APP();
+	AppDIO = new APP_DIO_MAP();
+	AppInit = new AHRIF_INI();
+
+	LPCWSTR name = _T("TestSegment");
+	int size = 64;
+
+	if(Is_CAC_Created(name) == 0)
+	{
+		CreateApplication_MACE_CAC_SEG(name, size, AppSeg);
+	}
+	name = _T("DIOSegment");
+
+	Initialise_DIO(AppInit, AppDIO);
+
+	OpenMACE_DIOseg(name, 5, 0xFFFF, AppDIO); 
+}
+
+
+initialiseSharedMemory
+
+DWORD myThreadID;
+
+HANDLE myHandle = CreateThread(0, 0, myThread, &myCounter, 0, &myThreadID);
+
+DWORD WINAPI myThread(LPVOID lpParameter)
+{
+	unsigned int& myCounter = *((unsigned int*)lpParameter);
+	while(myCounter < 0xFFFFFFFF) ++myCounter;
+	return 0;
+}
+
+unsigned int myCounter = 0;
+
+App_lpMapAddres
+
+AppSeg->App_lpMapAddres
+
+*(AppSeg->App_lpMapAddres)
+
+PrintDebugToScreen("Test 123");
+
+*(AppSeg->App_lpMapAddres)
+
+DWORD WINAPI myThread(LPVOID lpParameter)
+{
+
+unsigned int& myCounter = *((unsigned int*)lpParameter);
+	while(myCounter < 0xFFFFFFFF) 
+	{
+		while(*(AppSeg->App_lpMapAddres) == 0)::Sleep(100);
+
+*(AppSeg->App_lpMapAddres) 
+
+DWORD myThreadID;
+unsigned int myCounter = 0;
+
+	HANDLE myHandle = CreateThread(0, 0, myThread, &myCounter, 0, &myThreadID);
+
+*(AppSeg->App_lpMapAddres)
+
+printToMemoryLocation
+
+AppSeg->App_lpMapAddres
+
+C:\Users\502525009\Documents\Visual Studio 2010\Projects\TestSharedMemoryWin\Debug\TestSharedMemoryWin.exe
+
+startCount
+
+CreateThread
+
+GetStockObject
+
+SelectObject
+
+CreateApplication_MACE_CAC_SEG
+
+//=------------------------------------------------------------------------
+'//=Compiler & version No. PBWIN 9.05
+'//=
+'//=Date 29/05/14
+'//=
+'//=FUNCTION: Create_MACE_CAC_SEG
+'//=
+'//=
+'//=DESCRIPTION:
+'//= Creates shared memory segment
+'//=
+'//=
+'//=PARAMETERS:
+'//= SegmentName = string containing shared memory object name eg. MACE_CAC_ENV
+'//= SegmentSize = DWORD size of segment in bytes
+'//= BlockTye = Block type identifier 0 = reserved  1 = Environment  2 = Application 3 = reserved
+'//=                                  4 = EFA  5 = Digital input  6 = Digital Output
+'//= Returns 0 if function fails
+'//= Returns 1 if funtion succeeds
+'//= Returns handle to memory object if memory object already exists
+'//=LIMITATIONS:
+'//= N/A
+'//=
+'//=NOTES:
+'//=
+'//= SCE Type (struct) must be declared prior to calling eg. GLOBAL SCE AS SHELL_CAC_ENV
+
+MapViewOfFile
+
+'//=------------------------------------------------------------------------
+'//=Compiler & version No.
+'//=
+'//=Date
+'//=
+'//=Code style SDK/DDT
+'//=
+'//=Resource editor(s)/ Code generators:
+'//=
+'//=
+'//=Graphics apps used:
+'//=
+'//=
+'//=FUNCTION:
+'//=
+'//=
+'//=DESCRIPTION:
+'//=
+'//=
+'//=
+'//=PARAMETERS:
+'//=
+'//=
+'//=LIMITATIONS:
+'//=
+'//=
+'//=NOTES:
+'//=
+'//=
+'//=------------------------------------------------------------------------
+
+FUNCTION GetCACaddr ALIAS "GetCACaddr"(BYVAL ObjectName AS ASCIIZ * 32)EXPORT AS DWORD
+    LOCAL hFile AS DWORD
+    LOCAL lpMapAddress AS DWORD PTR
+    LOCAL IP1 AS DWORD
+    LOCAL IP2 AS DWORD
+
+    HOST ADDR(1) TO ip1
+    HOST ADDR(2) TO ip2
+
+    hFile = OpenFileMapping(%FILE_MAP_ALL_ACCESS, %FALSE,ObjectName)
+
+    SELECT CASE hFile
+        CASE 0
+            'OutBuffer = "ssm" + TIME$ +" DXP @ " + GetDottedIP(IP2) + " / " + GetDottedIP(IP1) + " Failed file mapping " + ObjectName
+            'UDP SEND #hUdp,AT TechIP,%Uport,Outbuffer
+            FUNCTION = 0
+        CASE ELSE
+            lpMapAddress = MapViewOfFile(hFile,%FILE_MAP_ALL_ACCESS,0,0,0)
+            SELECT CASE lpMapAddress
+                CASE 0
+                    'OutBuffer = "ssm" + TIME$ +" DXP @ " + GetDottedIP(IP2) + " / " + GetDottedIP(IP1) + " Failed file map view " + ObjectName
+                    'UDP SEND #hUdp,AT TechIP,%Uport,Outbuffer
+                    FUNCTION = 0
+                CASE ELSE
+                    FUNCTION = lpMapAddress
+            END SELECT
+    END SELECT
+
+END FUNCTION
+
+DWORD GetCACaddr(char* objectName)
+{
+	HANDLE hFile;
+	DWORD* lpMapAddress;
+
+	hFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, objectName);
+
+	if(hFile == NULL)
+	{
+		return 0;
+	}
+	else
+	{
+		lpMapAddress = (DWORD*)MapViewOfFile(hFile, FILE_MAP_ALL_ACCESS, 0, 0, 0);
+		if(lpMapAddress == NULL)
+		{
+			return 0;
+		}
+		else
+		{
+			return (DWORD)lpMapAddress;
+		}
+	}
+}
+
+AllocateDIO
+
+Initialise_DIO
+
+GetCACaddr
+
+N:\Software Dev Team\C Sources\ReadIni.c
+
+void ReadIni(const char* iniFilename)
+{
+	char value[256];
+	unsigned int byte1, byte2, byte3, byte4;
+
+	GetPrivateProfileString("EMBEDDED", "TECHIP", "0.0.0.0", value, sizeof(value), iniFilename);
+	sscanf_s(value, "%d.%d.%d.%d", &byte1, &byte2, &byte3, &byte4);
+
+	AppInit.TechIP = ((byte1 << 24) + (byte3 << 16) + (byte2 << 8) + byte1); // GetDWIP(byte1, byte2, byte3, byte4);
+
+	GetPrivateProfileString("EMBEDDED", "TCP", "999", value, sizeof(value), iniFilename);
+	AppInit.TCPport = atol(value);
+
+	GetPrivateProfileString("EMBEDDED", "UDP", "16001", value, sizeof(value), iniFilename);
+	AppInit.UDPport = atol(value);
+
+	GetPrivateProfileString("EMBEDDED", "TRANCEIVERS", "0", value, sizeof(value), iniFilename);
+	AppInit.TXRXnum = atol(value);
+
+	GetPrivateProfileString("EMBEDDED", "MACEID", "NULL", AppInit.MACEID1, sizeof(AppInit.MACEID1), iniFilename);
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN01", "NX1HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran1.TXRXhandle = atoi(value);
+
+	GetPrivateProfileString("TRAN01", "NX1CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran1.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN01", "NX1DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran1.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN01", "NX1MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran1.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN01", "NX1SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran1.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN01", "UDP1", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran1.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN02", "NX2HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran2.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN02", "NX2CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran2.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN02", "NX2DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran2.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN02", "NX2MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran2.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN02", "NX2SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran2.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN02", "UDP2", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran2.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN03", "NX3HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran3.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN03", "NX3CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran3.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN03", "NX3DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran3.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN03", "NX3MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran3.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN03", "NX3SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran3.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN03", "UDP3", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran3.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN04", "NX4HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran4.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN04", "NX4CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran4.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN04", "NX4DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran4.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN04", "NX4MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran4.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN04", "NX4SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran4.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN04", "UDP4", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran4.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN05", "NX5HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran5.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN05", "NX5CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran5.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN05", "NX5DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran5.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN05", "NX5MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran5.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN05", "NX5SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran5.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN05", "UDP5", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran5.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN06", "NX6HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran6.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN06", "NX6CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran6.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN06", "NX6DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran6.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN06", "NX6MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran6.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN06", "NX6SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran6.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN06", "UDP6", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran6.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN07", "NX7HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran7.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN07", "NX7CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran7.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN07", "NX7DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran7.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN07", "NX7MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran7.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN07", "NX7SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran7.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN07", "UDP7", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran7.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN08", "NX8HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran8.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN08", "NX8CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran8.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN08", "NX8DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran8.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN08", "NX8MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran8.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN08", "NX8SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran8.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN08", "UDP8", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran8.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN09", "NX9HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran9.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN09", "NX9CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran9.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN09", "NX9DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran9.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN09", "NX9MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran9.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN09", "NX9SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran9.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN09", "UDP9", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran9.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+	GetPrivateProfileString("TRAN010", "NX10HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran10.TXRXhandle = atoi(value);
+
+	GetPrivateProfileString("TRAN010", "NX10CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran10.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN010", "NX10DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran10.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN010", "NX10MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran10.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN010", "NX10SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran10.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN010", "UDP10", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran10.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN011", "NX11HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran11.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN011", "NX11CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran11.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN011", "NX11DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran11.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN011", "NX11MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran11.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN011", "NX11SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran11.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN011", "UDP11", "16002", value, sizeof(value), iniFilename);
+	AppInit.Tran11.UDPport = atol(value);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("TRAN12", "NX12HNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran12.TXRXhandle = atol(value);
+
+	GetPrivateProfileString("TRAN12", "NX12CTYPE", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran12.TXRXcomtype = atol(value);
+
+	GetPrivateProfileString("TRAN12", "NX12DF", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran12.TXRXdatafield = atol(value);
+
+	GetPrivateProfileString("TRAN12", "NX12MCG", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran12.TXRXMCG = atol(value);
+
+	GetPrivateProfileString("TRAN12", "NX12SRCHNDL", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran12.TXRXsrcHndl = atol(value);
+
+	GetPrivateProfileString("TRAN12", "UDP12", "0", value, sizeof(value), iniFilename);
+	AppInit.Tran12.UDPport = atol(value);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("CACNAME", "CAC", "MACE_CAC_ENV", AppInit.SegName, sizeof(AppInit.SegName), iniFilename);
+
+	GetPrivateProfileString("CACNAME", "APPCAC", "MACE_CAC_RIF1", AppInit.AppSegName, sizeof(AppInit.AppSegName), iniFilename);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+	GetPrivateProfileString("APPDIO", "DDI", "0", value, sizeof(value), iniFilename);
+	AppInit.NumDDI = atoi(value);
+
+	GetPrivateProfileString("APPDIO", "DDO", "0", value, sizeof(value), iniFilename);
+	AppInit.NumDDO = atoi(value);
+
+	GetPrivateProfileString("APPDIO", "A1D1TYPE", "NULL", AppInit.A1D1_Type, sizeof(AppInit.A1D1_Type), iniFilename);
+
+	GetPrivateProfileString("APPDIO", "A1D2TYPE", "NULL", AppInit.A1D2_Type, sizeof(AppInit.A1D2_Type), iniFilename);
+
+	GetPrivateProfileString("APPDIO", "A1D3TYPE", "NULL", AppInit.A1D3_Type, sizeof(AppInit.A1D3_Type), iniFilename);
+
+	GetPrivateProfileString("APPDIO", "A1D4TYPE", "NULL", AppInit.A1D4_Type, sizeof(AppInit.A1D4_Type), iniFilename);
+
+	GetPrivateProfileString("APPDIO", "A1D5TYPE", "NULL", AppInit.A1D5_Type, sizeof(AppInit.A1D5_Type), iniFilename);
+
+	GetPrivateProfileString("APPDIO", "A1D6TYPE", "NULL", AppInit.A1D6_Type, sizeof(AppInit.A1D6_Type), iniFilename);
+}
+
+
+CM_START
+
+GetPrivateProfileString
+
+GETPRIVATEPROFILESTRING
+
+sscanf_s
+
+AHRIF_INI
+
+ReadIni
+
+AHRIF_INI
+
+typedef struct TRAN
+{
+	DWORD TXRXhandle;		// NX-hndl
+	DWORD TXRXcomtype;		// NX com type
+	DWORD TXRXdatafield;	// NX datafield DF
+	DWORD TXRXMCG;				// NX multicast group
+	DWORD TXRXsrcHndl;		// NX source handle
+	DWORD ProcessID;			// this instance procID
+	DWORD UDPport;				// UDP port number
+	WORD  TXRXmsgID;			// msgID for this data stream
+	LONG  MsgType;				// Message type. see msg type constants
+
+} TRAN;
+
+typedef struct AHRIF_INI
+{
+	DWORD TechIP;		// IP address of remote terminal /logger
+	DWORD TXRXnum;	// number of nx dlink transmitters
+	DWORD UDPport;	// UDP port number, RIF core UDPport number
+	DWORD TCPport;	// TCP port number, CE link
+
+	TRAN  Tran1;
+	TRAN  Tran2;
+	TRAN  Tran3;
+	TRAN  Tran4;
+	TRAN  Tran5;
+	TRAN  Tran6;
+	TRAN  Tran7;
+	TRAN  Tran8;
+	TRAN  Tran9;
+	TRAN  Tran10;
+	TRAN  Tran11;
+	TRAN  Tran12;
+
+	DWORD TotDDI;		// total number of DDI modules in system
+	DWORD TotDD0;		// total number of DDO modules in system
+	DWORD NumDDI;		// number of DDI modules allocated to this application
+	DWORD NumDDO;		// number of DDO modules allocated to this application
+	char A1D1_Type[4]; //       AS ASCIIZ * 4  'Application 1 digital I/O slot D1 module type
+	char A1D2_Type[4]; //       AS ASCIIZ * 4  'Application 1 digital I/O slot D2 module type
+	char A1D3_Type[4]; //       AS ASCIIZ * 4  'Application 1 digital I/O slot D3 module type
+	char A1D4_Type[4]; //       AS ASCIIZ * 4  'Application 1 digital I/O slot D4 module type
+	char A1D5_Type[4]; //       AS ASCIIZ * 4  'Application 1 digital I/O slot D5 module type
+	char A1D6_Type[4]; //      AS ASCIIZ * 4  'Application 1 digital I/O slot D6 module type
+
+	char MACEID1[256]; // AS ASCIIZ * 256             'application memory segment name
+	char SegName[256]; // AS ASCIIZ * 256
+	char AppSegName[256]; // AS ASCIIZ * 256
+
+} AHRIF_INI;
+
+ReadIni
+
+AHRIF_INI AppInit;
+
+INI_filename
+
+MCSCORUN.INI
+
+\\192.168.1.80\srif\MCSCORUN.INI
+
+INI_filename
+
+char *INI_filename = "C:\Windows\MCSCORUN.INI";
+
+INI_filename
+
+void ReadIni(const char* iniFilename)
+
+SHELL
+
+#include "shellapi.h"
+
+hTimer
+
+hTimer AS LONG
+
+SHELLEXECUTEINFO shExecInfo;
+
+ shExecInfo.cbSize = sizeof(SHELLEXECUTEINFO);
+
+
+C:\NX\DLINK\BIN\NXINITCMD.exe
+
+ shExecInfo.fMask = NULL;
+      shExecInfo.hwnd = NULL;
+      shExecInfo.lpVerb = L"runas";
+      shExecInfo.lpFile = L"regasm.exe";
+
+"C:\NX\DLINK\BIN\NXINITCMD.exe";
+
+shExecInfo.lpDirectory = NULL;
+      shExecInfo.nShow = SW_NORMAL;
+      shExecInfo.hInstApp = NULL;
+
+      ShellExecuteEx(&shExecInfo);
+
+
+"C:\NX\DLINK\BIN\NXINITCMD.exe"
+
+AppName
+
+" Starting NXD: Waiting to attach "
+
+PrintDebugToScreen
+
+			strcat(AppName, " Starting NXD: Waiting to attach ");
+
+
+PrintDebugToScreen
+
+char *AppName 
+
+" Starting NXD: Waiting to attach "
+
+ztemp AS ASCIIZ * 32
+
+ztemp = "Waiting to attach: attempt " + STR$(tcount)
+
+sprintf
+
+sprint
+
+#include <stdio.h>
+
+WM_SETTEXT
+
+Do_Status_Bar
+
+FUNCTION Do_Status_Bar(hParent AS LONG) AS LONG
+    LOCAL ztest AS ASCIIZ * 32
+    DIM sbParts(1) AS GLOBAL LONG
+
+    hndl& = CreateStatusWindow(%WS_CHILD OR %WS_VISIBLE OR _
+                               %SBS_SIZEGRIP,BYVAL %NULL,hParent, 200)
+
+    sbParts(0) =  160
+    sbParts(1) = -1
+
+    rv& = SendMessage(hndl&,%SB_SETPARTS, 2,BYVAL VARPTR(sbParts(0)))
+    'ztest = "testing"
+    'call SendMessage (hndl&, %WM_SETTEXT,makdwd(0,1),varptr(ztest))
+    'SendMessage(hndl&,%SB_SIMPLE , 1,0)
+    'SB_SIMPLE
+'wParam = (WPARAM) (BOOL) fSimple;
+'lParam = 0;
+
+    FUNCTION = hndl&
+
+END FUNCTION
+
+CreateStatusWindow
+
+CreateWindow(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, hInstance, NULL);
+
+Do_Status_Bar
+
+PrintDebugToScreen
+
+lParam
+
+::SendMessageA(hWnd, WM_SETTEXT, 0, 
+
+LPARAM
+
+::SendMessageA(hWnd, WM_SETTEXT, 0, (LPARAM)buffer);
+
+MaxWaitCount
+
+nx_at_fm
+
+CM_START
+
+hWnd, 0x0000FFED
+

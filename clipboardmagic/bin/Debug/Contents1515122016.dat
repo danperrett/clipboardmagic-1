@@ -1,0 +1,550 @@
+void Pan(int cameraNum, int movement)
+
+C:\Users\Daniel.Perrett\Pictures\$_35.JPG
+
+ThumbnailsSession
+
+ThumbnailIsAvailable 
+
+IThumbnailsSession
+
+-	Thumbnail search returns the original images from the recorded video, so their size is the same as in the recording (no resizing is being done).
+
+public void Pan(int cameraNum, int movement)
+        {
+            IDeviceAPI deviceAPI = cameras[cameraNum].DvtelSystem.GetAPI<IDeviceAPI>();
+            IVideoInSceneEntity scene = cameras[cameraNum] as IVideoInSceneEntity;
+            m_ptzClient = deviceAPI.AcquirePTZControl(scene);
+
+            if(m_ptzClient != null)
+            {
+                if (movement < 0)
+                {
+                    m_ptzClient.Pan(PanAction.Left, 20);
+                }
+                else
+                {
+                    m_ptzClient.Pan(PanAction.Right, 20);
+                }
+                int seconds = (movement < 0)? (-1*movement):movement;
+
+                Thread.Sleep(seconds * 1000);
+                m_ptzClient.Pan(PanAction.Stop, 10);
+            }
+
+void Tilt(int cameraNum, int movement)
+
+Hi Dan,
+
+The Player sample should be a fully working example demonstrating usage of the thumbnail retrieval feature of the Playback API.
+We would recommend to review that sample and step into it. Indeed the following event m_ThumbnailsSession.ThumbnailIsAvailable should allow you to register to a method callback providing the thumbnail Bitmaps. If you encounter any issues where this sample is failing on a client machine that has a properly working ControlCenter client, please let us know.
+
+Some additional information about the feature that may be useful:
+-	Thumbnail search returns the original images from the recorded video, so their size is the same as in the recording (no resizing is being done).
+-	Thumbnail search gets the closest key frame, so the interval between thumbnails is blocked by the key frame interval that was set on the camera.
+We have managed to get thumbnails every second, after reducing the key frame interval to 1. 
+Otherwise, your minimal interval will depend on the key frame interval for that camera.
+-	Most of the work that thumbnail search requires, runs on the client side. The Archiver is hardly affected.
+
+Dan, we just wanted to make you aware that we currently have 7.5H of recorded SDK support usage out of your current 10H support package.
+
+Regards,
+
+
+  DateTime timeend = DateTime.Now;
+                        //DateTime timestart = DateTime.Now.Subtract(new TimeSpan(0, 0, 10));
+                        DateTime timestart = DateTime.Now.Add(new TimeSpan(0, 0, 10));
+                        IThumbnailsSession thumbs = recordingAPI.CreateThumbnailsSession(scene as IVideoInSceneEntity, timeend, timestart);
+                        
+                        thumbs.ThumbnailIsAvailable += thumbs_ThumbnailIsAvailable;
+                        thumbs.ThumbnailsRetrievalCompleted += thumbs_ThumbnailsRetrievalCompleted;
+                        thumbs.FailRetrievingThumbnail += thumbs_FailRetrievingThumbnail;
+                        
+                        thumbs.GetThumbnails(timeend, new TimeSpan(0, 0, 2), 1);
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll
+
+  DateTime timeend = DateTime.Now;
+                        //DateTime timestart = DateTime.Now.Subtract(new TimeSpan(0, 0, 10));
+                        DateTime timestart = DateTime.Now.Add(new TimeSpan(0, 0, 10));
+                        IThumbnailsSession thumbs = recordingAPI.CreateThumbnailsSession(scene as IVideoInSceneEntity, timeend, timestart);
+                        
+                        thumbs.ThumbnailIsAvailable += thumbs_ThumbnailIsAvailable;
+                        thumbs.ThumbnailsRetrievalCompleted += thumbs_ThumbnailsRetrievalCompleted;
+                        thumbs.FailRetrievingThumbnail += thumbs_FailRetrievingThumbnail;
+                        
+                        thumbs.GetThumbnails(timeend, new TimeSpan(0, 0, 2), 1);
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.dll
+
+C:\Users\Daniel.Perrett\Documents\Visual Studio 2015\Projects\ManagedDll\ManagedDll\bin\x86\Debug\ManagedDll.tlb
+
+shot
+
+NorthBoundLatitude
+
+<add value>
+			<name="AreaOfInterest" value = "53.91, 53.06, -2.09, -0.34"/>
+		</add>
+
+ <ArrayOfEndPoint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<name="AreaOfInterest" value="53.91, 53.06, -2.09, -0.34"/>
+			<name="AreaOfInterest" value="53.91, 53.06, -2.09, -0.34"/>
+			<name="AreaOfInterest" value="53.91, 53.06, -2.09, -0.34"/>
+
+NorthBoundLatitude
+
+WestBoundLongitude
+
+SouthBoundLatitude
+
+EastBoundLongitude
+
+<Area>
+				<NorthBoundLatitude>53.91</NorthBoundLatitude>
+				<WestBoundLongitude>-2.09</WestBoundLongitude>
+				<SouthBoundLatitude>53.06</SouthBoundLatitude>
+				<EastBoundLongitude>-0.34</EastBoundLongitude>
+			</Area>
+
+https://santatracker.google.com/village.html
+
+<setting name="MyEndPoints"
+          serializeAs="Xml">
+
+"AreasOfInterest"
+
+53.46
+
+-1.57
+
+53.32
+
+-1.30
+
+53.56
+
+-1.25
+
+53.45
+
+-0.99
+
+m_northBoundLatitude
+
+NumberOfSpecificAreas
+
+ temp = ConfigurationManager.AppSettings["PublishVms"];
+
+numberOfSpecificAreas
+
+AreasOfInterest
+
+ ConfigurationManager.AppSettings[
+
+private double m_northBoundLatitude = 60.85;
+        private double m_westBoundLongitude = -9.23;
+        private double m_southBoundLatitude = 49.84;
+        private double m_eastBoundLongitude = 2.69;
+
+areaOfInterest
+
+log.Error("No Areas of specific interest defined!");
+
+public double northBoundLatitude = 0.0;
+            public double westBoundLongitude = 0.0;
+            public double southBoundLatitude = 0.0;
+            public double eastBoundLongitude = 0.0;
+
+iArea.
+
+Int32.Parse(coor[0]);
+
+Int32.Parse(coor[0]); 
+
+Int32.Parse(coor[2])
+
+areaOfInterest
+
+if ((point.latitude <= m_northBoundLatitude) && (point.latitude >= m_southBoundLatitude) &&
+             (point.longitude <= m_eastBoundLongitude) && (point.longitude >= m_westBoundLongitude))
+            {
+                return true;
+            }
+
+vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay
+
+helsea and Middlesbrough v Liverpool, gossip and debate.
+
+double
+
+NTISModel-2016-11-01-v5.11.zip
+
+ private double m_northBoundLatitude = 60.85;
+        private double m_westBoundLongitude = -9.23;
+        private double m_southBoundLatitude = 49.84;
+        private double m_eastBoundLongitude = 2.69;
+
+
+        class AreaOfInterest
+        {
+            public double northBoundLatitude = 0.0;
+            public double westBoundLongitude = 0.0;
+            public double southBoundLatitude = 0.0;
+            public double eastBoundLongitude = 0.0;
+        };
+
+        List<AreaOfInterest> areaOfInterest = new List<AreaOfInterest>();
+
+ string temp = ConfigurationManager.AppSettings["NorthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("NorthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_northBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse NorthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["NorthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["SouthBoundLatitude"];
+            if (temp == null)
+            {
+                log.Error("SouthBoundLatitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_southBoundLatitude))
+            {
+                log.Error(string.Format("Failed to parse SouthBoundLatitude({0}) in Web.config", ConfigurationManager.AppSettings["SouthBoundLatitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["EastBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("EastBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_eastBoundLongitude))
+            {
+                log.Error(string.Format("Failed to parse EastBoundLongitude({0}) in Web.config", ConfigurationManager.AppSettings["EastBoundLongitude"].ToString()));
+            }
+
+            temp = ConfigurationManager.AppSettings["WestBoundLongitude"];
+            if (temp == null)
+            {
+                log.Error("WestBoundLongitude does not exist in Web.config");
+            }
+            else if (!double.TryParse(temp.ToString(), out m_westBoundLongitude))
+            {
+            }
+
+using System.Configuration;
+
+ protected static readonly ILog log = LogManager.GetLogger(typeof(BaseManager));
+
+using log4net;
+
+AreaOfInterestManager
+
+  temp = ConfigurationManager.AppSettings["AreasOfInterest"];
+            if (temp == null)
+            {
+                if (numberOfSpecificAreas > 0)
+                {
+                    log.Error("No Areas of specific interest defined!");
+                }
+            }
+            else
+            {
+                string[] areas = temp.Split(';');
+                if (areas.Length > 0)
+                {
+                    foreach (string area in areas)
+                    {
+                        string[] coor = area.Trim().Split(',');
+                        try
+                        {
+                            AreaOfInterest iArea = new AreaOfInterest();
+                            iArea.northBoundLatitude = double.Parse(coor[0]);
+                            iArea.westBoundLongitude = double.Parse(coor[1]);
+                            iArea.southBoundLatitude = double.Parse(coor[2]);
+                            iArea.eastBoundLongitude = double.Parse(coor[3]);
+                            areaOfInterest.Add(iArea);
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                }
+                else
+                {
+                    log.Error("trouble getting the defined Area!");
+                }
+            }
+
+  private int numberOfSpecificAreas = 0;
+
+   private bool CheckLocationPoint(PointCoordinates point)
+        {
+            if ((point.latitude <= m_northBoundLatitude) && (point.latitude >= m_southBoundLatitude) &&
+             (point.longitude <= m_eastBoundLongitude) && (point.longitude >= m_westBoundLongitude))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+   private bool CheckLocationPoint(PointCoordinates point)
+        {
+            if ((point.latitude <= m_northBoundLatitude) && (point.latitude >= m_southBoundLatitude) &&
+             (point.longitude <= m_eastBoundLongitude) && (point.longitude >= m_westBoundLongitude))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool CheckSpecificArea(PointCoordinates point)
+        {
+            foreach(AreaOfInterest area in areaOfInterest)
+            {
+                if ((point.latitude <= area.northBoundLatitude) && (point.latitude >= area.southBoundLatitude) &&
+                (point.longitude <= area.eastBoundLongitude) && (point.longitude >= area.westBoundLongitude))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+  public bool CheckSpecificArea(PointCoordinates point)
+        {
+
+    if ((point.latitude <= area.northBoundLatitude) && (point.latitude >= area.southBoundLatitude) &&
+                (point.longitude <= area.eastBoundLongitude) && (point.longitude >= area.westBoundLongitude))
+                {
+                    return true;
+                }
+
+areaOfInterest[pointnumber]
+
+AreaOfInterestManager
+
+areaOfInterestManager
+
+CheckSpecificArea
+
+areaOfInterestManager.CheckSpecificArea(
+
+ if (areaOfInterestManager.CheckLocationPoint(vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay))
+                                {
+                                    if (areaOfInterestManager.CheckSpecificArea(vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay))
+                                    {
+
+  if (areaOfInterestManager.CheckLocationPoint(vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay))
+                    {
+                        if (areaOfInterestManager.CheckSpecificArea(vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay))
+                        {
+
+(Vms vms
+
+vmsUnit.vms[0].vms
+
+CheckSpecificArea
+
+ if (vmsUnit.vmsRecord.Length > 0) //why wouldnt this always be greater than zero? what if its more than 1?
+                            {
+                                if (areaOfInterestManager.CheckLocationPoint(vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay))
+                                {
+                                    if (areaOfInterestManager.CheckSpecificArea(vmsUnit.vmsRecord[0].vmsRecord.vmsLocation.locationForDisplay))
+                                    {
+
+VMSSpecificArea
+
+useSpecificArea
+
+areaOfInterestManager
+
+  public bool CheckSpecificArea(PointCoordinates point)
+        {
+
+useSpecificArea
+
+m_northBoundLatitude
+
+areasOfInterest
+
+  private bool AreaOfInterest(PointCoordinates from, PointCoordinates to)
+        {
+            log.Info(string.Format("To({0}, {1}) From({2}, {3})", to.latitude, to.longitude, from.latitude, from.longitude));
+
+            if ((from.latitude <= m_northBoundLatitude) && (from.latitude >= m_southBoundLatitude) &&
+                (from.longitude <= m_eastBoundLongitude) && (from.longitude >= m_westBoundLongitude))
+                return true;
+
+            log.Info("One end is out side the boundry area");
+
+            if ((to.latitude <= m_northBoundLatitude) && (to.latitude >= m_southBoundLatitude) &&
+                (to.longitude <= m_eastBoundLongitude) && (to.longitude >= m_westBoundLongitude))
+                return true;
+
+            log.Info("Both ends are outside of the boundry area");
+
+            return false;
+        }
+
+AreaOfInterest
+
+areaOfInterest
+
+EventSpecificArea
+
+specificAreas
+
+areaOfInterest
+
+AreaOfInterestManager
+
+   bool useSpecificArea = false;
+        string specificAreas = "all";
+
+ bool CheckSpecificArea(PointCoordinates pc)
+        {
+            if(useSpecificArea)
+            {
+                areaOfInterest.CheckSpecificArea(pc, specificAreas);
+            }
+            return true;
+        }
+
+  bool CheckSpecificArea(PointCoordinates pc)
+        {
+            if(useSpecificArea)
+            {
+                return areaOfInterest.CheckSpecificArea(pc, specificAreas);
+            }
+            return true;
+        }
+
+log.Info("We are just not interested in this event!");
+                        return;
+
+ bool CheckSpecificArea(PointCoordinates pc)
+        {
+            if(useSpecificArea)
+            {
+                return areaOfInterest.CheckSpecificArea(pc, specificAreas);
+            }
+            return true;
+        }
+
+
+ bool useSpecificArea = false;
+        string specificAreas = "all";
+
+
+areasOfInterest
+
+  temp = ConfigurationManager.AppSettings["EventSpecificArea"];
+            useSpecificArea = (temp != null);
+            if(temp != null)
+            {
+                specificAreas = temp;
+            }
+
+log.Info(string.Format("This is out of the Area of Interest ({0}, {1}, {2}, {3})", from.latitude, from.longitude, to.latitude, to.longitude));
+                return false;
+
+ m_sqlList.Add(InsertRoute(item));
+
+	<add key="NumberOfSpecificAreas" value="2"/>
+	<add key="AreasOfInterest" value="53.46, -1.57, 53.32, -1.30; 
+									  53.56, -1.25, 53.45, -0.99"/>
+	<add key="VMSSpecificArea" value="all"/>
+	<add key="EventSpecificArea" value="all"/>
+
+http://gizmodo.com/the-sad-reality-of-the-magic-mouse-2-1746949289
+
+50.83848, long=-1.086215
+
+ if ((item.m_northing != 0) && (item.m_northingEnd != 0) &&
+                                (item.m_easting != 0) && (item.m_eastingEnd != 0))
+                            {
+
+49.766809,-7.5571598
+
+   const double deg2rad = Math.PI / 180;
+
+            // This will only work with lats and longs in decimal degrees.
+            double latitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lat));
+            double longitude = deg2rad * Convert.ToDouble(Convert.ToDecimal(lon));
+
+            double a = 6377563.396, b = 6356256.910; // Airy 1830 major & minor semi-axes
+            //double a = 6378137.0, b = 6356752.314245; // WGS84 major & minor semi-axes
+
+            double F0 = 0.9996012717; // NatGrid scale factor on central meridian
+            double lat0 = deg2rad * 49;
+            double lon0 = deg2rad * -2; // NatGrid true origin
+            double N0 = -100000; // northing true origin, metres
+            double E0 = 400000; // easting of true origin, metres
+            double e2 = 1 - (b * b) / (a * a); // eccentricity squared
+            double n = (a - b) / (a + b), n2 = n * n, n3 = n * n * n;
+
+            double cosLat = Math.Cos(latitude), sinLat = Math.Sin(latitude);
+            double nu = a * F0 / Math.Sqrt(1 - e2 * sinLat * sinLat); // transverse radius of curvature
+            double rho = a * F0 * (1 - e2) / Math.Pow(1 - e2 * sinLat * sinLat, 1.5); // meridional radius of curvature
+
+            double eta2 = nu / rho - 1;
+
+            double Ma = (1 + n + (5 / 4) * n2 + (5 / 4) * n3) * (latitude - lat0);
+            double Mb = (3 * n + 3 * n * n + (21 / 8) * n3) * Math.Sin(latitude - lat0) * Math.Cos(latitude + lat0);
+            double Mc = ((15 / 8) * n2 + (15 / 8) * n3) * Math.Sin(2 * (latitude - lat0)) * Math.Cos(2 * (latitude + lat0));
+            double Md = (35 / 24) * n3 * Math.Sin(3 * (latitude - lat0)) * Math.Cos(3 * (latitude + lat0));
+            double M = b * F0 * (Ma - Mb + Mc - Md); // meridional arc
+
+            double cos3lat = cosLat * cosLat * cosLat;
+            double cos5lat = cos3lat * cosLat * cosLat;
+            double tan2lat = Math.Tan(latitude) * Math.Tan(latitude);
+            double tan4lat = tan2lat * tan2lat;
+
+            double I = M + N0;
+            double II = (nu / 2) * sinLat * cosLat;
+            double III = (nu / 24) * sinLat * cos3lat * (5 - tan2lat + 9 * eta2);
+            double IIIA = (nu / 720) * sinLat * cos5lat * (61 - 58 * tan2lat + tan4lat);
+            double IV = nu * cosLat;
+            double V = (nu / 6) * cos3lat * (nu / rho - tan2lat);
+            double VI = (nu / 120) * cos5lat * (5 - 18 * tan2lat + tan4lat + 14 * eta2 - 58 * tan2lat * eta2);
+
+            double dLon = longitude - lon0;
+            double dLon2 = dLon * dLon, dLon3 = dLon2 * dLon, dLon4 = dLon3 * dLon, dLon5 = dLon4 * dLon, dLon6 = dLon5 * dLon;
+
+            northing = Math.Round(I + II * dLon2 + III * dLon4 + IIIA * dLon6, 3);
+            easting = Math.Round(E0 + IV * dLon + V * dLon3 + VI * dLon5, 3);
+
+   AreaOfInterestManager areasOfInterest = new AreaOfInterestManager();
+
+areasOfInterest
+
+ if ((item.m_northing != 0) && (item.m_northingEnd != 0) &&
+                    (item.m_easting != 0) && (item.m_eastingEnd != 0))  // it has to have some sort of sensible values
+                {
+
+49.766809
+
+-7.55
+
+if ((to.latitude > 49.766809) && (to.longitude > -7.55))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+log.Info(string.Format("To points are incorrect: {0}, {1}", to.latitude, to.longitude);
+

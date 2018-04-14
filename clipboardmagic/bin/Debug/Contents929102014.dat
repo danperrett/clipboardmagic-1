@@ -1,0 +1,42 @@
+C:\Development\SASSandboxes\SAS-48.0-A\Code\NS\SAS.zip
+
+S:\SAS\07 - Test and Development Builds\SAS2g3g
+
+DoLayer3Sequence
+
+C:\Development\SASSandboxes\SAS-47.1\Code\NS\SAS471.zip
+
+m_pCommonFormControls->m_PlaybackInfo.ErrorOccurred
+
+DoRun
+
+J:\Temp\_1028144300_001.pdf
+
+LOCATION UPDATE failed due to a timeout
+
+failed due to a timeout
+
+Unexpected Uplink Message
+
+   if (m_pCommonFormControls->CellManagerThreadRunning)
+    {
+        SendMsg(TID_CELL_MANAGER, TID_MMI_MAIN, WM_ABORT_L3_SEQUENCE, 0, NULL);
+    }
+
+  if (CommandObject->RecordType == SAS_L3P)
+        {
+
+ if (m_pCommonFormControls->CellManagerThreadRunning)
+    {
+
+
+SendMsg(TID_CELL_MANAGER, TID_MMI_MAIN, WM_ABORT_L3_SEQUENCE, 0, NULL);
+
+C:\Development\SASSandboxes\SAS-47.1\Code\NS\SAS471.zip
+
+WM_ABORT_L3_SEQUENCE
+
+FailLayer3Sequence
+
+m_PlaybackInfo.supressL3Failure
+

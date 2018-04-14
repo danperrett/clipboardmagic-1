@@ -1,0 +1,20 @@
+updateDifference(text);
+
+<Envelope><Message><Header><Version><MessageFormat>message-v0.1</MessageFormat><Data>data-v0.1</Data><Software>software-v1</Software></Version><Time><Current>2015-01-18T14:54:23.423Z</Current><TimeStatus>SYNCHRONISED</TimeStatus><Monotonic>1436175143</Monotonic></Time><SequenceNumber>746</SequenceNumber><SourceUnitID>SRIF-1-Unit-A</SourceUnitID><LogicalSourceID>SRIF-1</LogicalSourceID><SourceStatus>MASTER</SourceStatus><SourceLinkStatus>UP</SourceLinkStatus><DestinationUnitID>ICONIS-1-Unit-A</DestinationUnitID><LogicalDestinationID>ICONIS-1</LogicalDestinationID></Header><Body><DiagnosticAlarms><Link><From>SRIF-1</From><To>IXL-1</To><Status>UP</Status></Link><Link><From>SRIF-1</From><To>IXL-2</To><Status>DOWN</Status></Link></DiagnosticAlarms><Interlocking><UniqueID>UK/York/IXL/001</UniqueID><SSIID>0F</SSIID><SPAD><SignalMap>MTIzNDU2Nzg5MDEyMzQ1Ng==</SignalMap></SPAD><Indications>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3OA==</Indications><StatusByte>Ng==</StatusByte></Interlocking><EmergencyAlarms>MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=</EmergencyAlarms></Body></Message></Envelope>
+
+static public byte[] Encryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
+{
+ try
+ {
+ byte[] encryptedData;
+ using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+   {
+    RSA.ImportParameters(RSAKey);            encryptedData = RSA.Encrypt(Data, DoOAEPPadding);    }   return encryptedData;
+ }
+ catch (CryptographicException e)
+ {
+ Console.WriteLine(e.Message);
+ return null;
+ }
+} 
+
