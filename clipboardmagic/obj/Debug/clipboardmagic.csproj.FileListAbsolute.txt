@@ -54,3 +54,23 @@ C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardma
 C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.UploadSchedule.resources
 C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.SearchDatabase.resources
 C:\Users\Daniel\Documents\Visual Studio 2015\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DownloadClipboard.resources
+\\192.168.0.25\dperrett\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csprojAssemblyReference.cache
+\\192.168.0.25\dperrett\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+\\192.168.0.25\dperrett\Projects\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe.config
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.exe
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\bin\Debug\clipboardmagic.pdb
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DisplayText.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.MainDialog.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Options.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.Properties.Resources.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.SearchDatabase.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.DownloadClipboard.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.UploadSchedule.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.UserCredentials.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csproj.GenerateResource.cache
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.csproj.CoreCompileInputs.cache
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.exe
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.pdb
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.ScratchPad.resources
+C:\Users\dperrett\Documents\Visual Studio 2017\clipboardmagic\clipboardmagic\obj\Debug\clipboardmagic.ScratchTab.resources

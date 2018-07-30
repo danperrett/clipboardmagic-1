@@ -64,6 +64,7 @@
     <Compile Include="DisplayText.Designer.cs">
       <DependentUpon>DisplayText.cs</DependentUpon>
     </Compile>
+    <Compile Include="EncoderDecoder.cs" />
     <Compile Include="MainDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ScratchPad.resx">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScratchTab.resx">
+      <DependentUpon>ScratchTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SearchDatabase.resx">
       <DependentUpon>SearchDatabase.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +125,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ScratchPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScratchPad.Designer.cs">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScratchTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScratchTab.Designer.cs">
+      <DependentUpon>ScratchTab.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchDatabase.cs">
       <SubType>Form</SubType>
@@ -157,7 +176,7 @@
     <Compile Include="webclient.cs">
       <SubType>Component</SubType>
     </Compile>
-    <None Include="Service References\ClipboardServiceTest\ClipboardInterface.wsdl" />
+    <None Include="Service References\ClipboardServiceTest\ClipboardInterface1.wsdl" />
     <None Include="Service References\ClipboardServiceTest\clipboardmagic.ClipboardServiceTest.EncryptionData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -167,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FOLDER.ICO" />
+    <None Include="Service References\ClipboardServiceTest\clipboardmagic.ClipboardServiceTest.ScratchDataInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ClipboardServiceTest\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -178,6 +200,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\CodinggainClipboardService\clipboardmagic.CodinggainClipboardService.ReturnInterface.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CodinggainClipboardService\clipboardmagic.CodinggainClipboardService.ScratchDataInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\CodinggainClipboardService\Reference.svcmap">

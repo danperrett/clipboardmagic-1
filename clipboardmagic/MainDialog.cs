@@ -38,6 +38,7 @@ namespace clipboardmagic
         char[] compare2 = null;
         UploadPeriod uploadPeriod = UploadPeriod.EveryFive;
         int MaxUploadSize = 100000;
+        ScratchPad scratchPad = new ScratchPad();
 
         public MainDialog()
         {
@@ -371,6 +372,8 @@ namespace clipboardmagic
             base.OnLoad(e);
             try
             {
+                scratchPad.FormClosed += ScratchPad_FormClosed;
+                scratchPad.Show();
                 if (File.Exists("userinfo.dat"))
                 {
                     XmlSerializer ser = new XmlSerializer(typeof(User));
@@ -393,12 +396,19 @@ namespace clipboardmagic
                     }
                     remoteClipboard.Close();
                 }
+                scratchPad.LoadScratchDates();
             }
             catch(Exception ex)
             {
 
             }
         }
+
+        private void ScratchPad_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
@@ -726,6 +736,7 @@ namespace clipboardmagic
                 uploadTimer.Start();
             }
         }
+
         delegate bool SendToServer(string text);
 
         private bool sendtoServer(string text)

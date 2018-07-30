@@ -18,10 +18,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.0.10:8080/ClipboardConnection/services/ClipboardInterface?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.0.87:8080/ClipboardConnection/services/ClipboardInterface?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ClipboardInterface.wsdl" MetadataType="Wsdl" ID="ebf09e4b-efac-42e6-880a-4386012c4b4e" SourceId="1" SourceUrl="http://192.168.0.10:8080/ClipboardConnection/services/ClipboardInterface?wsdl" />
+    <MetadataFile FileName="ClipboardInterface1.wsdl" MetadataType="Wsdl" ID="619d2ed0-c0e6-49e5-9b79-332d79170861" SourceId="1" SourceUrl="http://192.168.0.87:8080/ClipboardConnection/services/ClipboardInterface?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
