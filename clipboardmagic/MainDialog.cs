@@ -374,6 +374,7 @@ namespace clipboardmagic
             {
                 scratchPad.FormClosed += ScratchPad_FormClosed;
                 scratchPad.Show();
+                enabledToolStripMenuItem.Checked = true;
                 if (File.Exists("userinfo.dat"))
                 {
                     XmlSerializer ser = new XmlSerializer(typeof(User));
@@ -406,7 +407,7 @@ namespace clipboardmagic
 
         private void ScratchPad_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
+            enabledToolStripMenuItem.Checked = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -905,6 +906,17 @@ namespace clipboardmagic
             catch
             {
 
+            }
+        }
+
+        private void enabledToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(!enabledToolStripMenuItem.Checked)
+            {
+                ScratchPad scratchPad = new ScratchPad();
+                scratchPad.FormClosed += ScratchPad_FormClosed;
+                scratchPad.Show();
+                enabledToolStripMenuItem.Checked = true;
             }
         }
     }

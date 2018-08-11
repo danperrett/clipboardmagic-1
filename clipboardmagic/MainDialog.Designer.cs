@@ -61,6 +61,8 @@
             this.uploadlabel = new System.Windows.Forms.Label();
             this.OutputLength = new System.Windows.Forms.Label();
             this.LoadButton = new System.Windows.Forms.Button();
+            this.scratchPadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enabledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.ContextMenu.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +104,8 @@
             this.fileToolStripMenuItem,
             this.optionsToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.searchToolStripMenuItem});
+            this.searchToolStripMenuItem,
+            this.scratchPadToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(483, 24);
@@ -223,7 +226,7 @@
             // displayTextToolStripMenuItem
             // 
             this.displayTextToolStripMenuItem.Name = "displayTextToolStripMenuItem";
-            this.displayTextToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.displayTextToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.displayTextToolStripMenuItem.Text = "DisplayText";
             this.displayTextToolStripMenuItem.Click += new System.EventHandler(this.displayTextToolStripMenuItem_Click);
             // 
@@ -325,6 +328,21 @@
             this.LoadButton.UseVisualStyleBackColor = true;
             this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
+            // scratchPadToolStripMenuItem
+            // 
+            this.scratchPadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enabledToolStripMenuItem});
+            this.scratchPadToolStripMenuItem.Name = "scratchPadToolStripMenuItem";
+            this.scratchPadToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.scratchPadToolStripMenuItem.Text = "ScratchPad";
+            // 
+            // enabledToolStripMenuItem
+            // 
+            this.enabledToolStripMenuItem.Name = "enabledToolStripMenuItem";
+            this.enabledToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enabledToolStripMenuItem.Text = "Enabled";
+            this.enabledToolStripMenuItem.Click += new System.EventHandler(this.enabledToolStripMenuItem_Click);
+            // 
             // MainDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +407,8 @@
         private System.Windows.Forms.ToolStripMenuItem uploadScheduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scratchPadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enabledToolStripMenuItem;
     }
 }
 

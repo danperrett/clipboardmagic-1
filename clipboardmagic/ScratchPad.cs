@@ -141,5 +141,16 @@ namespace clipboardmagic
             sendData();
             SaveButton.Enabled = true;
         }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            SaveButton.Enabled = false;
+            SelectButton.Enabled = false;
+            ScratchPadTextBox.ReadOnly = true;
+            ScratchPadTextBox.Text = "";
+            SaveButton.Enabled = true;
+            SelectButton.Enabled = true;
+            ScratchPadTextBox.ReadOnly = false;
+        }
     }
 }
