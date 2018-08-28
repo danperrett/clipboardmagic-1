@@ -92,6 +92,7 @@ namespace clipboardmagic
                 string str = encoder.Encode(ScratchPadTextBox.Text, (byte)enData.encrypt_key);
                 currentContent = ScratchPadTextBox.Text;
                 int id = remoteClipboard.putScratchPad(store.Username, store.getPassword(r), str, enData.access_key_id, r);
+                LoadScratchDates();
             }
         }
 
