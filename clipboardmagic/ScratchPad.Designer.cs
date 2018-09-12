@@ -35,6 +35,7 @@
             this.SelectButton = new System.Windows.Forms.Button();
             this.SelectComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ImportantCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.ImportantCheckBox);
             this.groupBox1.Controls.Add(this.ClearButton);
             this.groupBox1.Controls.Add(this.SaveButton);
             this.groupBox1.Controls.Add(this.SelectButton);
@@ -118,6 +120,16 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
+            // ImportantCheckBox
+            // 
+            this.ImportantCheckBox.AutoSize = true;
+            this.ImportantCheckBox.Location = new System.Drawing.Point(414, 21);
+            this.ImportantCheckBox.Name = "ImportantCheckBox";
+            this.ImportantCheckBox.Size = new System.Drawing.Size(70, 17);
+            this.ImportantCheckBox.TabIndex = 4;
+            this.ImportantCheckBox.Text = "Important";
+            this.ImportantCheckBox.UseVisualStyleBackColor = true;
+            // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +141,7 @@
             this.ShowIcon = false;
             this.Text = "Scratch Pad";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -143,5 +156,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.CheckBox ImportantCheckBox;
     }
 }

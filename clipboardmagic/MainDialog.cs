@@ -21,6 +21,7 @@ namespace clipboardmagic
         ClipBoardPoller poler = new ClipBoardPoller();
         Timer _fileTimer = new Timer();
         Timer uploadTimer = new Timer();
+        System.Threading.Thread backGroundTimer;
         string backupToServer = "";
         string LastText = "";
         bool _updateDifference = true;
@@ -50,10 +51,30 @@ namespace clipboardmagic
 
             uploadTimer.Tick += UploadTimer_Tick;
             poler.newTextHandler += new ClipBoardPoller.NewText(poler_newTextHandler);
-            client.uploadComplete += new Webclient.UploadComplete(client_uploadComplete);     
+            client.uploadComplete += new Webclient.UploadComplete(client_uploadComplete);
+
+            backGroundTimer = new System.Threading.Thread(BackHaulThread);
+            backGroundTimer.Start();
          }
 
       
+        void BackHaulThread()
+        {
+            Random rand = new Random();
+            while (true)
+            {
+                int r = rand.Next();
+                UserCredentialsStore store = UserCredentialsStore.GetInstance();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.getPassword(r), true, r);
+                String clip = remoteClipboard.checkForClip(store.Username, store.getPassword(r), enData.access_key_id, r);
+                if(!string.IsNullOrEmpty(clip))
+                {
+                    update(clip);
+                }
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
 
         void client_uploadComplete(string text)
         {
@@ -84,7 +105,6 @@ namespace clipboardmagic
             
             decodedString = ByteArrayToString(data, bytesstream);
             
-
             inputLengthLabel.Text = text.Length.ToString();
             OutputLength.Text = data.Length.ToString();
             updateDifference(decodedString);
@@ -398,6 +418,7 @@ namespace clipboardmagic
                     remoteClipboard.Close();
                 }
                 scratchPad.LoadScratchDates();
+                scratchPad.intialise();
             }
             catch(Exception ex)
             {
@@ -916,6 +937,7 @@ namespace clipboardmagic
                 ScratchPad scratchPad = new ScratchPad();
                 scratchPad.FormClosed += ScratchPad_FormClosed;
                 scratchPad.Show();
+                scratchPad.intialise();
                 enabledToolStripMenuItem.Checked = true;
             }
         }

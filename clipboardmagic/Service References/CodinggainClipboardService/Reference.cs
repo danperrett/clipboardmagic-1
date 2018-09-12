@@ -17,8 +17,8 @@ namespace clipboardmagic.CodinggainClipboardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="checkCredantialsReturn")]
-        bool checkCredantials(string username, string password, int random_access);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="checkForClipReturn")]
+        string checkForClip(string username, string password, int access_key_id, int random_access);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -54,7 +54,17 @@ namespace clipboardmagic.CodinggainClipboardService {
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="putScratchPadReturn")]
-        int putScratchPad(string username, string password, string content, int access_key_id, int random_access);
+        int putScratchPad(string username, string password, string content, bool important, bool reminder, int access_key_id, int random_access, int lastFileId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="checkCredantialsReturn")]
+        bool checkCredantials(string username, string password, int random_access);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="searchClipboardReturn")]
+        clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -70,15 +80,10 @@ namespace clipboardmagic.CodinggainClipboardService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="getClipboardContentReturn")]
         clipboardmagic.CodinggainClipboardService.ReturnInterface getClipboardContent(string username, string password, string from, string to, int access_key_id, int random_access);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="searchClipboardReturn")]
-        clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3130.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -180,7 +185,7 @@ namespace clipboardmagic.CodinggainClipboardService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3130.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -268,7 +273,7 @@ namespace clipboardmagic.CodinggainClipboardService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3130.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -457,8 +462,8 @@ namespace clipboardmagic.CodinggainClipboardService {
                 base(binding, remoteAddress) {
         }
         
-        public bool checkCredantials(string username, string password, int random_access) {
-            return base.Channel.checkCredantials(username, password, random_access);
+        public string checkForClip(string username, string password, int access_key_id, int random_access) {
+            return base.Channel.checkForClip(username, password, access_key_id, random_access);
         }
         
         public bool addNewUser(string username, string password, string email) {
@@ -496,8 +501,16 @@ namespace clipboardmagic.CodinggainClipboardService {
             return base.Channel.removeScratchPadItem(id, username, password, access_key_id, random_access);
         }
         
-        public int putScratchPad(string username, string password, string content, int access_key_id, int random_access) {
-            return base.Channel.putScratchPad(username, password, content, access_key_id, random_access);
+        public int putScratchPad(string username, string password, string content, bool important, bool reminder, int access_key_id, int random_access, int lastFileId) {
+            return base.Channel.putScratchPad(username, password, content, important, reminder, access_key_id, random_access, lastFileId);
+        }
+        
+        public bool checkCredantials(string username, string password, int random_access) {
+            return base.Channel.checkCredantials(username, password, random_access);
+        }
+        
+        public clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber) {
+            return base.Channel.searchClipboard(username, password, criteria, access_key_id, random_access, segmentnumber);
         }
         
         public int getMaxSize() {
@@ -510,10 +523,6 @@ namespace clipboardmagic.CodinggainClipboardService {
         
         public clipboardmagic.CodinggainClipboardService.ReturnInterface getClipboardContent(string username, string password, string from, string to, int access_key_id, int random_access) {
             return base.Channel.getClipboardContent(username, password, from, to, access_key_id, random_access);
-        }
-        
-        public clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber) {
-            return base.Channel.searchClipboard(username, password, criteria, access_key_id, random_access, segmentnumber);
         }
     }
 }

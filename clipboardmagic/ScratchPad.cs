@@ -27,10 +27,19 @@ namespace clipboardmagic
         {
             InitializeComponent();
             LoadScratchDates();
-
+            
             uploadTimer.Interval += 60*1000;
             uploadTimer.Tick += UploadTimer_Tick;
             uploadTimer.Start();
+        }
+
+        public void intialise()
+        {
+            if (dateList.Count > 0)
+            {
+                int id = dateList[dateList.Count - 1].id;
+                GetSetText(id);
+            }
         }
 
         public void LoadScratchDates()
@@ -74,6 +83,7 @@ namespace clipboardmagic
                         SelectComboBox.SelectedIndex = 0;
                         SelectComboBox.Text = dates[0].date;
                     }
+                   
                 }
             }
         }
@@ -91,7 +101,9 @@ namespace clipboardmagic
                 CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.getPassword(r), true, r);
                 string str = encoder.Encode(ScratchPadTextBox.Text, (byte)enData.encrypt_key);
                 currentContent = ScratchPadTextBox.Text;
-                int id = remoteClipboard.putScratchPad(store.Username, store.getPassword(r), str, enData.access_key_id, r);
+                int id = remoteClipboard.putScratchPad(store.Username, store.getPassword(r), str, ImportantCheckBox.Checked, false, enData.access_key_id, r, 0);
+                if (ImportantCheckBox.Checked)
+                    ImportantCheckBox.Checked = false;
                 LoadScratchDates();
             }
         }
@@ -113,10 +125,33 @@ namespace clipboardmagic
             }
         }
 
+        private void GetSetText(int id)
+        {
+            UserCredentialsStore store = UserCredentialsStore.GetInstance();
+            if (store.Valid)
+            {
+                Random rand = new Random();
+                int r = rand.Next();
+                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.getPassword(r), true, r);
+                CodinggainClipboardService.ScratchDataInfo data = remoteClipboard.getScratchData(store.Username, store.getPassword(r), id, enData.access_key_id, r);
+                if (data != null)
+                {
+                    if (data.containsdata)
+                    {
+                        currentContent = data.content;
+                        setScratchText(currentContent);
+                    }
+                }
+            }
+        }
+
         private void SelectButton_Click(object sender, EventArgs e)
         {
             int index = SelectComboBox.SelectedIndex;
             int id = dateList[index].id;
+            GetSetText(id);
+            /*
             UserCredentialsStore store = UserCredentialsStore.GetInstance();
             if(store.Valid)
             {
@@ -133,7 +168,7 @@ namespace clipboardmagic
                         setScratchText(currentContent);
                     }
                 }
-            }
+            }*/
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
