@@ -27,6 +27,7 @@ namespace clipboardmagic
         bool _updateDifference = true;
         bool DiffOrReplace = true;
         bool bytesstream = false;
+        bool running = true;
         string replace = "";
         string with = "";
         Webclient client = new Webclient();
@@ -57,20 +58,32 @@ namespace clipboardmagic
             backGroundTimer.Start();
          }
 
-      
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            running = false;
+        }
+
         void BackHaulThread()
         {
             Random rand = new Random();
-            while (true)
+            while (running)
             {
-                int r = rand.Next();
-                UserCredentialsStore store = UserCredentialsStore.GetInstance();
-                CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
-                CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.getPassword(r), true, r);
-                String clip = remoteClipboard.checkForClip(store.Username, store.getPassword(r), enData.access_key_id, r);
-                if(!string.IsNullOrEmpty(clip))
+                try
                 {
-                    update(clip);
+                    int r = rand.Next();
+                    UserCredentialsStore store = UserCredentialsStore.GetInstance();
+                    CodinggainClipboardService.ClipboardInterfaceClient remoteClipboard = new CodinggainClipboardService.ClipboardInterfaceClient();
+                    CodinggainClipboardService.EncryptionData enData = remoteClipboard.getAccessRights(store.Username, store.getPassword(r), true, r);
+                    String clip = remoteClipboard.checkForClip(store.Username, store.getPassword(r), enData.access_key_id, r);
+                    if (!string.IsNullOrEmpty(clip))
+                    {
+                        update(clip);
+                    }
+                }
+                catch
+                {
+
                 }
                 System.Threading.Thread.Sleep(1000);
             }

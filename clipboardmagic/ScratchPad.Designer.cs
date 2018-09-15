@@ -30,12 +30,12 @@
         {
             this.ScratchPadTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ImportantCheckBox = new System.Windows.Forms.CheckBox();
             this.ClearButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.SelectButton = new System.Windows.Forms.Button();
             this.SelectComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ImportantCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +45,7 @@
             this.ScratchPadTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ScratchPadTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScratchPadTextBox.Location = new System.Drawing.Point(3, 16);
             this.ScratchPadTextBox.Name = "ScratchPadTextBox";
             this.ScratchPadTextBox.Size = new System.Drawing.Size(770, 343);
@@ -66,6 +67,16 @@
             this.groupBox1.Size = new System.Drawing.Size(788, 60);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // ImportantCheckBox
+            // 
+            this.ImportantCheckBox.AutoSize = true;
+            this.ImportantCheckBox.Location = new System.Drawing.Point(414, 21);
+            this.ImportantCheckBox.Name = "ImportantCheckBox";
+            this.ImportantCheckBox.Size = new System.Drawing.Size(70, 17);
+            this.ImportantCheckBox.TabIndex = 4;
+            this.ImportantCheckBox.Text = "Important";
+            this.ImportantCheckBox.UseVisualStyleBackColor = true;
             // 
             // ClearButton
             // 
@@ -119,16 +130,6 @@
             this.groupBox2.Size = new System.Drawing.Size(776, 374);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            // 
-            // ImportantCheckBox
-            // 
-            this.ImportantCheckBox.AutoSize = true;
-            this.ImportantCheckBox.Location = new System.Drawing.Point(414, 21);
-            this.ImportantCheckBox.Name = "ImportantCheckBox";
-            this.ImportantCheckBox.Size = new System.Drawing.Size(70, 17);
-            this.ImportantCheckBox.TabIndex = 4;
-            this.ImportantCheckBox.Text = "Important";
-            this.ImportantCheckBox.UseVisualStyleBackColor = true;
             // 
             // ScratchPad
             // 
