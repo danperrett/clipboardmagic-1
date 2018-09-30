@@ -17,28 +17,13 @@ namespace clipboardmagic.CodinggainClipboardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="checkForClipReturn")]
-        string checkForClip(string username, string password, int access_key_id, int random_access);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="removeScratchPadItemReturn")]
+        bool removeScratchPadItem(int id, string username, string password, int access_key_id, int random_access);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="addNewUserReturn")]
-        bool addNewUser(string username, string password, string email);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="getAccessRightsReturn")]
-        clipboardmagic.CodinggainClipboardService.EncryptionData getAccessRights(string username, string password, bool encode, int random_access);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="putClipboardContentReturn")]
-        bool putClipboardContent(string username, string password, string content, int access_key_id, int random_access);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="getScratchDataReturn")]
-        clipboardmagic.CodinggainClipboardService.ScratchDataInfo getScratchData(string username, string password, int id, int access_key_id, int random_access);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="searchClipboardReturn")]
+        clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber);
         
         // CODEGEN: Parameter 'getScratchDatesReturn' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -48,13 +33,13 @@ namespace clipboardmagic.CodinggainClipboardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="removeScratchPadItemReturn")]
-        bool removeScratchPadItem(int id, string username, string password, int access_key_id, int random_access);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="getAccessRightsReturn")]
+        clipboardmagic.CodinggainClipboardService.EncryptionData getAccessRights(string username, string password, bool encode, int random_access);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="putScratchPadReturn")]
-        int putScratchPad(string username, string password, string content, bool important, bool reminder, int access_key_id, int random_access, int lastFileId);
+        int putScratchPad(string username, string password, string title, string content, bool important, bool reminder, int access_key_id, int random_access, int lastFileId);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -63,8 +48,13 @@ namespace clipboardmagic.CodinggainClipboardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="searchClipboardReturn")]
-        clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="addNewUserReturn")]
+        bool addNewUser(string username, string password, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="checkForClipReturn")]
+        string checkForClip(string username, string password, int access_key_id, int random_access);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -80,10 +70,108 @@ namespace clipboardmagic.CodinggainClipboardService {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="getClipboardContentReturn")]
         clipboardmagic.CodinggainClipboardService.ReturnInterface getClipboardContent(string username, string password, string from, string to, int access_key_id, int random_access);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="putClipboardContentReturn")]
+        bool putClipboardContent(string username, string password, string content, int access_key_id, int random_access);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="getScratchDataReturn")]
+        clipboardmagic.CodinggainClipboardService.ScratchDataInfo getScratchData(string username, string password, int id, int access_key_id, int random_access);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3130.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ClipboardConnection.codinggain.org")]
+    public partial class ReturnInterface : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool successField;
+        
+        private string contentField;
+        
+        private System.Nullable<System.DateTime> dateField;
+        
+        private int numberOfSegmentsField;
+        
+        private int segmentNumberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public bool success {
+            get {
+                return this.successField;
+            }
+            set {
+                this.successField = value;
+                this.RaisePropertyChanged("success");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string content {
+            get {
+                return this.contentField;
+            }
+            set {
+                this.contentField = value;
+                this.RaisePropertyChanged("content");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public System.Nullable<System.DateTime> date {
+            get {
+                return this.dateField;
+            }
+            set {
+                this.dateField = value;
+                this.RaisePropertyChanged("date");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int numberOfSegments {
+            get {
+                return this.numberOfSegmentsField;
+            }
+            set {
+                this.numberOfSegmentsField = value;
+                this.RaisePropertyChanged("numberOfSegments");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int segmentNumber {
+            get {
+                return this.segmentNumberField;
+            }
+            set {
+                this.segmentNumberField = value;
+                this.RaisePropertyChanged("segmentNumber");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -185,95 +273,7 @@ namespace clipboardmagic.CodinggainClipboardService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3130.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ClipboardConnection.codinggain.org")]
-    public partial class ReturnInterface : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool successField;
-        
-        private string contentField;
-        
-        private System.Nullable<System.DateTime> dateField;
-        
-        private int numberOfSegmentsField;
-        
-        private int segmentNumberField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public bool success {
-            get {
-                return this.successField;
-            }
-            set {
-                this.successField = value;
-                this.RaisePropertyChanged("success");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
-        public string content {
-            get {
-                return this.contentField;
-            }
-            set {
-                this.contentField = value;
-                this.RaisePropertyChanged("content");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
-        public System.Nullable<System.DateTime> date {
-            get {
-                return this.dateField;
-            }
-            set {
-                this.dateField = value;
-                this.RaisePropertyChanged("date");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public int numberOfSegments {
-            get {
-                return this.numberOfSegmentsField;
-            }
-            set {
-                this.numberOfSegmentsField = value;
-                this.RaisePropertyChanged("numberOfSegments");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public int segmentNumber {
-            get {
-                return this.segmentNumberField;
-            }
-            set {
-                this.segmentNumberField = value;
-                this.RaisePropertyChanged("segmentNumber");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3130.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -289,6 +289,8 @@ namespace clipboardmagic.CodinggainClipboardService {
         private bool containsdataField;
         
         private string contentField;
+        
+        private string titleField;
         
         private int prev_idField;
         
@@ -355,7 +357,19 @@ namespace clipboardmagic.CodinggainClipboardService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+                this.RaisePropertyChanged("title");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
         public int prev_id {
             get {
                 return this.prev_idField;
@@ -367,7 +381,7 @@ namespace clipboardmagic.CodinggainClipboardService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
         public int next_id {
             get {
                 return this.next_idField;
@@ -462,24 +476,12 @@ namespace clipboardmagic.CodinggainClipboardService {
                 base(binding, remoteAddress) {
         }
         
-        public string checkForClip(string username, string password, int access_key_id, int random_access) {
-            return base.Channel.checkForClip(username, password, access_key_id, random_access);
+        public bool removeScratchPadItem(int id, string username, string password, int access_key_id, int random_access) {
+            return base.Channel.removeScratchPadItem(id, username, password, access_key_id, random_access);
         }
         
-        public bool addNewUser(string username, string password, string email) {
-            return base.Channel.addNewUser(username, password, email);
-        }
-        
-        public clipboardmagic.CodinggainClipboardService.EncryptionData getAccessRights(string username, string password, bool encode, int random_access) {
-            return base.Channel.getAccessRights(username, password, encode, random_access);
-        }
-        
-        public bool putClipboardContent(string username, string password, string content, int access_key_id, int random_access) {
-            return base.Channel.putClipboardContent(username, password, content, access_key_id, random_access);
-        }
-        
-        public clipboardmagic.CodinggainClipboardService.ScratchDataInfo getScratchData(string username, string password, int id, int access_key_id, int random_access) {
-            return base.Channel.getScratchData(username, password, id, access_key_id, random_access);
+        public clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber) {
+            return base.Channel.searchClipboard(username, password, criteria, access_key_id, random_access, segmentnumber);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -497,20 +499,24 @@ namespace clipboardmagic.CodinggainClipboardService {
             return retVal.getScratchDatesReturn;
         }
         
-        public bool removeScratchPadItem(int id, string username, string password, int access_key_id, int random_access) {
-            return base.Channel.removeScratchPadItem(id, username, password, access_key_id, random_access);
+        public clipboardmagic.CodinggainClipboardService.EncryptionData getAccessRights(string username, string password, bool encode, int random_access) {
+            return base.Channel.getAccessRights(username, password, encode, random_access);
         }
         
-        public int putScratchPad(string username, string password, string content, bool important, bool reminder, int access_key_id, int random_access, int lastFileId) {
-            return base.Channel.putScratchPad(username, password, content, important, reminder, access_key_id, random_access, lastFileId);
+        public int putScratchPad(string username, string password, string title, string content, bool important, bool reminder, int access_key_id, int random_access, int lastFileId) {
+            return base.Channel.putScratchPad(username, password, title, content, important, reminder, access_key_id, random_access, lastFileId);
         }
         
         public bool checkCredantials(string username, string password, int random_access) {
             return base.Channel.checkCredantials(username, password, random_access);
         }
         
-        public clipboardmagic.CodinggainClipboardService.ReturnInterface searchClipboard(string username, string password, string criteria, int access_key_id, int random_access, int segmentnumber) {
-            return base.Channel.searchClipboard(username, password, criteria, access_key_id, random_access, segmentnumber);
+        public bool addNewUser(string username, string password, string email) {
+            return base.Channel.addNewUser(username, password, email);
+        }
+        
+        public string checkForClip(string username, string password, int access_key_id, int random_access) {
+            return base.Channel.checkForClip(username, password, access_key_id, random_access);
         }
         
         public int getMaxSize() {
@@ -523,6 +529,14 @@ namespace clipboardmagic.CodinggainClipboardService {
         
         public clipboardmagic.CodinggainClipboardService.ReturnInterface getClipboardContent(string username, string password, string from, string to, int access_key_id, int random_access) {
             return base.Channel.getClipboardContent(username, password, from, to, access_key_id, random_access);
+        }
+        
+        public bool putClipboardContent(string username, string password, string content, int access_key_id, int random_access) {
+            return base.Channel.putClipboardContent(username, password, content, access_key_id, random_access);
+        }
+        
+        public clipboardmagic.CodinggainClipboardService.ScratchDataInfo getScratchData(string username, string password, int id, int access_key_id, int random_access) {
+            return base.Channel.getScratchData(username, password, id, access_key_id, random_access);
         }
     }
 }

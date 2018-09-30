@@ -36,6 +36,8 @@
             this.SelectButton = new System.Windows.Forms.Button();
             this.SelectComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -46,9 +48,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ScratchPadTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScratchPadTextBox.Location = new System.Drawing.Point(3, 16);
+            this.ScratchPadTextBox.Location = new System.Drawing.Point(3, 59);
             this.ScratchPadTextBox.Name = "ScratchPadTextBox";
-            this.ScratchPadTextBox.Size = new System.Drawing.Size(770, 343);
+            this.ScratchPadTextBox.Size = new System.Drawing.Size(770, 300);
             this.ScratchPadTextBox.TabIndex = 0;
             this.ScratchPadTextBox.Text = "";
             // 
@@ -71,7 +73,7 @@
             // ImportantCheckBox
             // 
             this.ImportantCheckBox.AutoSize = true;
-            this.ImportantCheckBox.Location = new System.Drawing.Point(414, 21);
+            this.ImportantCheckBox.Location = new System.Drawing.Point(516, 23);
             this.ImportantCheckBox.Name = "ImportantCheckBox";
             this.ImportantCheckBox.Size = new System.Drawing.Size(70, 17);
             this.ImportantCheckBox.TabIndex = 4;
@@ -103,7 +105,7 @@
             // 
             // SelectButton
             // 
-            this.SelectButton.Location = new System.Drawing.Point(322, 19);
+            this.SelectButton.Location = new System.Drawing.Point(435, 19);
             this.SelectButton.Name = "SelectButton";
             this.SelectButton.Size = new System.Drawing.Size(75, 23);
             this.SelectButton.TabIndex = 1;
@@ -114,9 +116,9 @@
             // SelectComboBox
             // 
             this.SelectComboBox.FormattingEnabled = true;
-            this.SelectComboBox.Location = new System.Drawing.Point(17, 19);
+            this.SelectComboBox.Location = new System.Drawing.Point(17, 21);
             this.SelectComboBox.Name = "SelectComboBox";
-            this.SelectComboBox.Size = new System.Drawing.Size(299, 21);
+            this.SelectComboBox.Size = new System.Drawing.Size(402, 21);
             this.SelectComboBox.TabIndex = 0;
             // 
             // groupBox2
@@ -124,12 +126,30 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.TitleTextBox);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.ScratchPadTextBox);
             this.groupBox2.Location = new System.Drawing.Point(12, 76);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(776, 374);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // TitleTextBox
+            // 
+            this.TitleTextBox.Location = new System.Drawing.Point(44, 26);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.Size = new System.Drawing.Size(269, 20);
+            this.TitleTextBox.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Title";
             // 
             // ScratchPad
             // 
@@ -144,6 +164,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +179,7 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.CheckBox ImportantCheckBox;
+        private System.Windows.Forms.TextBox TitleTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

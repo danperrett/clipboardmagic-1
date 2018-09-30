@@ -21,7 +21,7 @@
     <MetadataSource Address="http://www.codinggain.com/ClipboardConnection/services/ClipboardInterface?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ClipboardInterface1.wsdl" MetadataType="Wsdl" ID="6712d485-e751-47e5-8594-1ec6564ebae8" SourceId="1" SourceUrl="http://www.codinggain.com/ClipboardConnection/services/ClipboardInterface?wsdl" />
+    <MetadataFile FileName="ClipboardInterface1.wsdl" MetadataType="Wsdl" ID="18cfbce4-5e44-4a06-ad54-78832aa088b0" SourceId="1" SourceUrl="http://www.codinggain.com/ClipboardConnection/services/ClipboardInterface?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
