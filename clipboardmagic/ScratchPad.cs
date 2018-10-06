@@ -12,6 +12,7 @@ namespace clipboardmagic
     public partial class ScratchPad : Form
     {
         Timer uploadTimer = new Timer();
+        int counter = 0;
         class DateListComboInfo
         {
             public string date = "";
@@ -121,6 +122,12 @@ namespace clipboardmagic
         private void UploadTimer_Tick(object sender, EventArgs e)
         {
             sendData();
+            if(counter%2 == 0)
+            {
+                LoadScratchDates();
+            }
+
+            counter++;
         }
 
         private void setScratchText(String text, string title)
